@@ -1,4 +1,140 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @import '_base.css';
+@import './_menu.css';
+
+.main-menu li {
+  position: relative;
+}
+@layer base {
+  .main-menu {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      text-align: left;
+      color: #fff;
+      text-transform: capitalize;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.menu-item-has-children {
+        position: relative;
+
+        &:after {
+          position: relative;
+          left: 9px;
+          top: -1px;
+          content: url('../../public/images/dropdown-down.svg');
+        }
+
+        &:hover {
+          .sub-menu.lvl-1 {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.current-menu-item > a {
+  text-decoration: underline;
+}
+
+.menu-main-menu-container {
+  @apply lg:w-8/12;
+}
+
+.sub-menu.lvl-1 {
+  @apply absolute p-0 bg-accent lg:bg-semiblue;
+  top: 100%;
+  min-width: 300px;
+  left: -5px;
+  display: none;
+
+  li {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px;
+  }
+
+  li.menu-item-has-children {
+    &::after {
+      transform: rotate(-90deg);
+      left: 0;
+    }
+    &:hover {
+      .sub-menu.lvl-2 {
+        display: block;
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: 17px;
+    display: block;
+    width: 100%;
+  }
+}
+
+.sub-menu.lvl-2 {
+  @apply absolute p-0 bg-semiblue;
+  top: -11px;
+  min-width: 300px;
+  left: 100%;
+  display: none;
+  @media (max-width: 1024px) {
+    left: 0;
+    top: 0;
+  }
+
+  li {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  a {
+    font-size: 17px;
+  }
+}
+
+.footer-menu {
+  padding-left: 0;
+  margin-left: 0;
+  padding-top: 40px;
+  border-top: 2px solid #ffe900;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  color: #f0efef;
+
+  li {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

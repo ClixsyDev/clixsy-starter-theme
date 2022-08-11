@@ -5,18 +5,26 @@ use App\Template;
 
 <?php get_header(); ?>
 
-
-
-    <div class="container pt-36 pb-24">
+<!-- Main Content -->
+<main>
+    <?php
+    $attorneys_archive = get_field('attorneys_archive', 'options');
+    
+    Template::load('_template-parts/components/hero-section.php', [
+        'img' => $attorneys_archive ? $attorneys_archive['hero_image'] : get_template_directory_uri() . '/_assets/public/images/home-hero.jpg',
+        'title' => $attorneys_archive ? $attorneys_archive['title'] : 'Phillips Law <br> Group',
+        'subtitle' => $attorneys_archive ? $attorneys_archive['hero_subtitle'] : '',
+    ]); ?>
+    <div class="container pt-24">
         <div class="grid grid-cols-12 gap-[30px]">
-            <div class="col-span-8 md:col-span-12">
-                <div class="grid grid-cols-2 lg:grid-cols-1 gap-[30px]">
+            <div class="col-span-12 md:col-span-12">
+                <div class="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-[30px]">
 
                     <?php if (have_posts()) : ?>
 
                         <!-- The Loop -->
                         <?php while (have_posts()) : the_post(); ?>
-                            <?php include(Template::locate('_template-parts/archive/_entry__archive--blog.php')); ?>
+                            <?php include(Template::locate('_template-parts/archive/_entry__archive--attorneys.php')); ?>
                         <?php endwhile; ?>
 
                     <?php else : ?>
@@ -37,5 +45,6 @@ use App\Template;
             </div>
         <?php } ?>
     </div>
+</main>
 
 <?php get_footer(); ?>

@@ -3,6 +3,9 @@
 // Setup Composer Autoload
 require_once ( 'vendor/autoload.php' );
 
+// Inlude taxonomy
+require_once ( '_core/taxonomy.php' );
+
 // Advanced Custom Fields Plugin
 // require_once ( '_inc/acf-include/acf-include.php' );
 
