@@ -25,7 +25,7 @@ function starter_scripts()
     // Main Stylesheet
     wp_enqueue_style(
         'starter-style',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/public/css/style.css',
+        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/css/index.css',
         [],
         $version
     );
@@ -40,7 +40,7 @@ function starter_scripts()
     // Main Script
     wp_enqueue_script(
         'starter-script',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/public/js/script.js',
+        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/script.js',
         [],
         $version,
         true

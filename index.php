@@ -6,7 +6,6 @@ use App\Template;
 <?php get_header(); ?>
 
 
-
     <div class="container pt-36 pb-24">
         <div class="grid grid-cols-12 gap-[30px]">
             <div class="col-span-8 md:col-span-12">
@@ -32,6 +31,7 @@ use App\Template;
         if ($published_posts > get_query_var('posts_per_page')) { ?>
             <div class="flex  justify-center pt-12">
                 <?php if (function_exists("pagination")) {
+
                     pagination();
                 } ?>
             </div>
