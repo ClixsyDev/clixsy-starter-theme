@@ -532,8 +532,379 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"4R5xk":[function(require,module,exports) {
-console.log("here is scripts");
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _menu = require("./menu");
+var _menuDefault = parcelHelpers.interopDefault(_menu);
+var _utils = require("./utils");
+(0, _utils.ready)(()=>{
+    (0, _menuDefault.default)();
+});
 
-},{}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"blFj3","./menu":"2uPGB"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"blFj3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ifSelectorExist", ()=>ifSelectorExist);
+parcelHelpers.export(exports, "getElement", ()=>getElement);
+parcelHelpers.export(exports, "getElements", ()=>getElements);
+parcelHelpers.export(exports, "style", ()=>style);
+parcelHelpers.export(exports, "css", ()=>css);
+parcelHelpers.export(exports, "ready", ()=>ready);
+parcelHelpers.export(exports, "stopAndPrevent", ()=>stopAndPrevent);
+parcelHelpers.export(exports, "slideUp", ()=>slideUp);
+parcelHelpers.export(exports, "slideDown", ()=>slideDown);
+parcelHelpers.export(exports, "slideToggle", ()=>slideToggle);
+parcelHelpers.export(exports, "off", ()=>off);
+parcelHelpers.export(exports, "humanDate", ()=>humanDate);
+parcelHelpers.export(exports, "setCookie", ()=>setCookie);
+parcelHelpers.export(exports, "getCookie", ()=>getCookie);
+parcelHelpers.export(exports, "eraseCookie", ()=>eraseCookie);
+parcelHelpers.export(exports, "windowsWidth", ()=>windowsWidth);
+parcelHelpers.export(exports, "scrollTo", ()=>scrollTo);
+parcelHelpers.export(exports, "fadeOut", ()=>fadeOut);
+parcelHelpers.export(exports, "fadeIn", ()=>fadeIn);
+const ifSelectorExist = (selector)=>{
+    if (selector !== null && selector !== undefined) return true;
+    else return false;
+};
+const getElement = (el, wrap = document)=>{
+    if (el == null) return undefined;
+    if (typeof el === "string") try {
+        return wrap.querySelector(el) || undefined;
+    } catch ({ message  }) {
+        console.error(message);
+        return undefined;
+    }
+};
+const getElements = (el, wrap = document)=>{
+    if (el == null) return undefined;
+    if (typeof el === "string") try {
+        return wrap.querySelectorAll(el) || undefined;
+    } catch ({ message  }) {
+        console.error(message);
+        return undefined;
+    }
+};
+const style = (el, property)=>window.getComputedStyle(el).getPropertyValue(property);
+const css = (el, css)=>{
+    Object.keys(css).forEach((prop)=>{
+        el.style[prop] = css[prop];
+    });
+};
+const ready = (callback)=>{
+    if (document.readyState !== "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+};
+const stopAndPrevent = (e)=>{
+    e.cancelable !== false && e.preventDefault();
+    e.stopPropagation();
+};
+const slideUp = (target, duration = 500)=>{
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + "ms";
+    target.style.boxSizing = "border-box";
+    target.style.height = target.offsetHeight + "px";
+    target.offsetHeight;
+    target.style.overflow = "hidden";
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(()=>{
+        target.style.display = "none";
+        target.style.removeProperty("height");
+        target.style.removeProperty("padding-top");
+        target.style.removeProperty("padding-bottom");
+        target.style.removeProperty("margin-top");
+        target.style.removeProperty("margin-bottom");
+        target.style.removeProperty("overflow");
+        target.style.removeProperty("transition-duration");
+        target.style.removeProperty("transition-property");
+    //alert("!");
+    }, duration);
+};
+const slideDown = (target, duration = 500, displayStyle = "block")=>{
+    target.style.removeProperty("display");
+    let display = window.getComputedStyle(target).display;
+    if (display === "none") display = displayStyle;
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = "hidden";
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = "border-box";
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + "ms";
+    target.style.height = height + "px";
+    target.style.removeProperty("padding-top");
+    target.style.removeProperty("padding-bottom");
+    target.style.removeProperty("margin-top");
+    target.style.removeProperty("margin-bottom");
+    window.setTimeout(()=>{
+        target.style.removeProperty("height");
+        target.style.removeProperty("overflow");
+        target.style.removeProperty("transition-duration");
+        target.style.removeProperty("transition-property");
+    }, duration);
+};
+const slideToggle = (target, duration = 500, displayStyle = "block")=>{
+    if (window.getComputedStyle(target).display === "none") return slideDown(target, duration, displayStyle);
+    else return slideUp(target, duration);
+};
+const off = function(event, elem, callback, capture) {
+    if (typeof elem === "function") {
+        capture = callback;
+        callback = elem;
+        elem = window;
+    }
+    capture = capture ? true : false;
+    elem = typeof elem === "string" ? document.querySelector(elem) : elem;
+    if (!elem) return;
+    elem.removeEventListener(event, callback, capture);
+};
+const humanDate = (date)=>{
+    let dateObj = void 0;
+    if (typeof date === "string") dateObj = new Date(date);
+    else dateObj = date;
+    let options = {
+        month: "long",
+        day: "numeric"
+    };
+    let dateYear = dateObj.toLocaleString("latn", {
+        year: "numeric"
+    });
+    let dateMonth = dateObj.toLocaleString("latn", {
+        month: "numeric"
+    });
+    let dateDay = dateObj.toLocaleString("latn", {
+        day: "numeric"
+    });
+    let dateHour = dateObj.getHours();
+    let dateMinute = dateObj.getMinutes();
+    let now = new Date();
+    let nowYear = now.toLocaleString("latn", {
+        year: "numeric"
+    });
+    let nowMonth = now.toLocaleString("latn", {
+        month: "numeric"
+    });
+    let nowDay = now.toLocaleString("latn", {
+        day: "numeric"
+    });
+    let nowHour = now.getHours();
+    let nowMinute = now.getMinutes();
+    // set year only if not the same year as now
+    if (dateYear !== nowYear) options.year = "numeric";
+    // if today, display relative time
+    if (dateYear === nowYear && dateMonth === nowMonth && dateDay === nowDay) {
+        let diffHour = nowHour - dateHour;
+        let diffMinute = Math.abs(nowMinute - dateMinute);
+        if (diffHour === 0 && diffMinute > 30) return "1 h";
+        else if (diffHour === 0) return diffMinute + " min";
+        else if (diffMinute >= 30) return diffHour + 1 + " h";
+        return diffHour + " h";
+    }
+    return dateObj.toLocaleString("latn", options);
+};
+const setCookie = (name, value, days)=>{
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + days * 86400000);
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+};
+const getCookie = (name)=>{
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(";");
+    for(let i = 0; i < ca.length; i++){
+        let c = ca[i];
+        while(c.charAt(0) == " ")c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+};
+const eraseCookie = (name)=>{
+    document.cookie = name + "=; Max-Age=-99999999;";
+};
+const windowsWidth = window.innerWidth;
+const scrollTo = (element, to, duration)=>{
+    if (duration <= 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
+};
+const fadeOut = (el)=>{
+    el.style.opacity = 1;
+    (function fade() {
+        if ((el.style.opacity -= 0.1) < 0) el.style.display = "none";
+        else requestAnimationFrame(fade);
+    })();
+};
+const fadeIn = (el, display)=>{
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += 0.1) >= 1)) {
+            if (!((val += 0.1) > 1)) {
+                el.style.opacity = val;
+                requestAnimationFrame(fade);
+            }
+        }
+    })();
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Main Menu
+var _utils = require("./utils");
+function mainMenu() {
+    const menuButton = (0, _utils.getElement)("#main-menu-button");
+    const menu = (0, _utils.getElement)("nav.main-menu");
+    function menuOpen() {
+        menu.classList.add("open");
+        menuButton.classList.add("open");
+        window.addEventListener("click", closeOnBackgroundClick);
+    }
+    function menuClose() {
+        menuButton.classList.remove("open");
+        menu.classList.remove("open");
+        setMenuLevel(0);
+        menuCloseSubmenus();
+        menu.scrollTo(0, 0);
+        (0, _utils.off)("click", window, closeOnBackgroundClick);
+    }
+    function setMenuLevel(n) {
+        menu.classList.remove("active-level-1", "active-level-2", "active-level-3");
+        function inArray(needle, haystack) {
+            if (haystack.indexOf(needle) !== -1) return true;
+            else return false;
+        }
+        if (inArray(n, [
+            1,
+            2,
+            3
+        ])) menu.classList.add("active-level-" + n);
+    }
+    function menuOpenSubmenu(submenuAlias) {
+        var submenu = menu.querySelector("[data-alias=" + submenuAlias + "]");
+        if (submenu.length !== null) {
+            var levelBlock = submenu.closest("div[data-level]");
+            levelBlock.classList.add("open");
+            if (levelBlock.querySelector("ul.visible") !== null) levelBlock.querySelector("ul.visible").classList.remove("visible");
+            submenu.classList.add("visible");
+        }
+    }
+    function menuCloseSubmenus(closeLevels) {
+        closeLevels = typeof closeLevels !== "undefined" ? closeLevels : 0;
+        var levelBlocks = menu.querySelectorAll("[class*=level-]");
+        Array.from(levelBlocks).forEach((elem)=>{
+            var levelBlock = elem;
+            if (closeLevels <= parseInt(levelBlock.getAttribute("data-level"))) {
+                levelBlock.classList.remove("open");
+                if (levelBlock.querySelector("ul.open") !== null) levelBlock.querySelector("ul.open").classList.remove("open");
+                if (levelBlock.querySelector(".o-sub.open")) levelBlock.querySelector(".o-sub.open").classList.remove("open");
+            }
+        });
+    }
+    menuButton.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        e.preventDefault();
+        if (menuButton.classList.contains("open")) menuClose();
+        else {
+            menuOpen();
+            setMenuLevel(1);
+        }
+    });
+    const subMenus = document.querySelectorAll(".o-sub[data-target-alias]");
+    // click on subMenu
+    if (subMenus !== null) Array.from(subMenus).forEach((link)=>{
+        link.addEventListener("click", function(event) {
+            let parentTitle = link.getAttribute("data-item-title");
+            let parentUrl = link.getAttribute("data-url");
+            if (parentTitle != null && parentTitle != undefined && parentUrl != undefined && parentUrl != null) {
+                let parentAlias = link.getAttribute("data-target-alias");
+                let levelTitle = document.querySelector(`[data-alias=${parentAlias}] .level-url`);
+                levelTitle.textContent = parentTitle;
+                levelTitle.setAttribute("href", parentUrl);
+            }
+            event.preventDefault();
+            event.stopPropagation();
+            let elementAlias = this.getAttribute("data-target-alias"), levelBlock = this.closest("div[class*=level-]");
+            if (this.classList.contains("open")) {
+                setMenuLevel(parseInt(levelBlock.getAttribute("data-level")));
+                this.classList.remove("open");
+                menuCloseSubmenus(parseInt(levelBlock.getAttribute("data-level")));
+            } else {
+                setMenuLevel(parseInt(levelBlock.getAttribute("data-level")) + 1);
+                menuCloseSubmenus(parseInt(levelBlock.getAttribute("data-level")));
+                menuOpenSubmenu(elementAlias);
+                if (levelBlock.querySelector(".o-sub[data-target-alias].open") !== null) levelBlock.querySelector(".o-sub[data-target-alias].open").classList.remove("open");
+                this.classList.add("open");
+            }
+        });
+    });
+    // Close menu by click on background
+    function closeOnBackgroundClick(e) {
+        if (e.target.closest("#main-menu-button") !== null && e.target.closest(".o-sub") !== null && e.target.closest("nav.main-menu") !== null || e.target.classList.contains("wrapper")) menuClose();
+    }
+    // Mobile back buttons
+    if (menu.querySelector(".evt-close-level") !== null) {
+        let closeSubmenuArrowSelector = menu.querySelectorAll(".evt-close-level");
+        Array.from(closeSubmenuArrowSelector).forEach((item)=>{
+            item.addEventListener("click", function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                var currentLevel = parseInt(item.getAttribute("data-current-level"));
+                setMenuLevel(currentLevel - 1);
+                menuCloseSubmenus(currentLevel - 1);
+            });
+        });
+    }
+}
+exports.default = mainMenu;
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map

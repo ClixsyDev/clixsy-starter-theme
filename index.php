@@ -5,7 +5,7 @@ use App\Template;
 
 <?php get_header(); ?>
 
-
+<main>
     <div class="container pt-36 pb-24">
         <div class="grid grid-cols-12 gap-[30px]">
             <div class="col-span-8 md:col-span-12">
@@ -37,5 +37,5 @@ use App\Template;
             </div>
         <?php } ?>
     </div>
-
+</main>
 <?php get_footer(); ?>

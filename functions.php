@@ -50,3 +50,5 @@ require_once ( '_core/plugins/_init.php' );
 
 // AJAX
 require_once ( '_core/ajax/_init.php' );
+
+require_once ( '_core/guttenberg-extend.php' );

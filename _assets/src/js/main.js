@@ -1,1 +1,6 @@
-console.log('here is scripts')
+import mainMenu from './menu';
+import {ready} from './utils'
+  
+ready(() => {
+    mainMenu()
+});
