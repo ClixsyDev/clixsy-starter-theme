@@ -40,7 +40,7 @@ function starter_scripts()
     // Main Script
     wp_enqueue_script(
         'starter-script',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/script.js',
+        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/js/main.js',
         [],
         $version,
         true

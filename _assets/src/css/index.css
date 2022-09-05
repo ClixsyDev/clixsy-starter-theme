@@ -1,4 +1,28 @@
+@import './_desktop-menu.css';
+@import './_mobile-menu.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --text-color: #333;
+  --link-color: #3f5ee4;
+  --accent-color: #48bb8b;
+  --border-color: #d4d4d4;
+}
+/* 
+body {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+  border-bottom: 1px solid var(--link-color);
+
+  &:hover {
+    color: $accent-color;
+    border-bottom: 1px solid var(--accent-color);
+  }
+} */
+
+body.logged-in{margin-top:20px;}
