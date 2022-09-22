@@ -1,7 +1,7 @@
 module.exports = {
   content: ['./clixsy_src/**/*.{js,ts,jsx,tsx}', '**/*.php'],
   corePlugins: {
-    container: false,
+    container: true,
   },
   theme: {
     fontSize: {
@@ -31,6 +31,7 @@ module.exports = {
     },
     fontFamily: {
       helvetica: ['Helvetica Neue', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica', 'Arial', 'Lucida Grande', 'sans-serif'],
+      avenir: ['Avenir'],
     },
     extend: {
       transitionProperty: {
@@ -40,9 +41,14 @@ module.exports = {
         siteWide: '0px 3px 6px rgba(0, 0, 0, 0.16)',
       },
       colors: {
+        kennySmoke: '#A5ACAF',
+        kennyGreen: '#69BE26',
+        kennyBlue: '#021A33',
+        kennyBlueSecond: '#002244',
+        kennyBlueThird: '#032241',
+        kennyGrayText: '#024',
         smoke: '#f4f2f2',
         bordercolor: '#f0eded',
-        smokedarker: '#b2b1b1',
         semiWhite: '#fdfdfd',
         semiblue: '#264c6d',
         darkblue: '#000261',
@@ -83,26 +89,21 @@ module.exports = {
         hero: '658px',
       },
     },
-  },
-  plugins: [
-    function ({ addComponents }) {
-      addComponents({
-        '.custom-container': {
-          maxWidth: '100%',
-          '@screen sm': {
-            maxWidth: '640px',
-          },
-          '@screen md': {
-            maxWidth: '768px',
-          },
-          '@screen lg': {
-            maxWidth: '1280px',
-          },
-          '@screen xl': {
-            maxWidth: '1400px',
-          },
-        },
-      });
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        xl: '1432px',
+      },
     },
-  ],
+    plugins: [
+      function ({ addVariant }) {
+          addVariant('child', '& > *');
+          addVariant('child-hover', '& > *:hover');
+      }
+    ],
+  },
 };
