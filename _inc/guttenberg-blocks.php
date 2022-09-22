@@ -67,6 +67,145 @@ foreach ($files as $file) {
  */
 function phillips_register_acf_block_types()
 {
+
+	acf_register_block_type(
+		array(
+			'name'            => 'welcome-banner',
+			'title'           => __('Welcome Banner', 'touchpoint'),
+			'description'	  => __('Welcome Banner', 'touchpoint'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'supports' => array(
+				'color' => true
+			),
+			'keywords' 		  => array('welcome', 'banner'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-preview/blog-image-with-description--preview.png',
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'awards',
+			'title'           => __('Awards', 'touchpoint'),
+			'description'	  => __('Awards', 'touchpoint'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/awards.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'supports' => array(
+				'color' => true
+			),
+			'keywords' 		  => array('awards'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-preview/blog-image-with-description--preview.png',
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'verdicts',
+			'title'           => __('Verdicts', 'touchpoint'),
+			'description'	  => __('Verdicts', 'touchpoint'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/verdicts.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'supports' => array(
+				'color' => true
+			),
+			'keywords' 		  => array('verdicts'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-preview/blog-image-with-description--preview.png',
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'how-can-help',
+			'title'           => __('How can help', 'touchpoint'),
+			'description'	  => __('How can help', 'touchpoint'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/how-can-help.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'supports' => array(
+				'color' => true
+			),
+			'keywords' 		  => array('How', 'can', 'help'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-preview/blog-image-with-description--preview.png',
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'cta',
+			'title'           => __('CTA', 'touchpoint'),
+			'description'	  => __('CTA', 'touchpoint'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/cta.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'supports' => array(
+				'color' => true
+			),
+			'keywords' 		  => array('cta'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-preview/blog-image-with-description--preview.png',
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'customer-service',
+			'title'           => __('Customer Service', 'touchpoint'),
+			'description'	  => __('Customer Service', 'touchpoint'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/customer-service.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'supports' => array(
+				'color' => true
+			),
+			'keywords' 		  => array('customer', 'service'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-preview/blog-image-with-description--preview.png',
+					),
+				)
+			)
+		)
+	);
+
 	acf_register_block_type(
 		array(
 			'name'            => 'image-with-description',
