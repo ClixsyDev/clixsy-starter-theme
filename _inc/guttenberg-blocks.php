@@ -1,13 +1,16 @@
 <?php
+
 /**
  * Register support for Gutenberg wide images
  * Adds support for editor color palette.
  */
-function jeffrey_theme_color_setup() {
-    add_theme_support( 'align-wide' );
+function jeffrey_theme_color_setup()
+{
+	add_theme_support('align-wide');
 
-	add_theme_support( 'editor-color-palette',
-		apply_filters( 'villen_gutenberg_palette', array(
+	add_theme_support(
+		'editor-color-palette',
+		apply_filters('villen_gutenberg_palette', array(
 			array(
 				'name'  => 'White',
 				'slug'  => 'white',
@@ -33,10 +36,10 @@ function jeffrey_theme_color_setup() {
 				'slug'  => 'dark-gray',
 				'color'	=> '#232E3F',
 			),
-		) )
+		))
 	);
 }
-add_action( 'after_setup_theme', 'jeffrey_theme_color_setup' );
+add_action('after_setup_theme', 'jeffrey_theme_color_setup');
 
 /**
  * Include pretty background script
@@ -57,9 +60,9 @@ add_action( 'after_setup_theme', 'jeffrey_theme_color_setup' );
  */
 $files = glob(get_template_directory() . '/blocks/*.php');
 foreach ($files as $file) {
-    if (file_exists($file)) {
-        require_once $file;
-    }
+	if (file_exists($file)) {
+		require_once $file;
+	}
 }
 
 /**
@@ -271,7 +274,7 @@ function phillips_register_acf_block_types()
 			)
 		)
 	);
-	
+
 
 	acf_register_block_type(
 		array(
@@ -293,4 +296,6 @@ function phillips_register_acf_block_types()
 		)
 	);
 }
+
+
 add_action('acf/init', 'phillips_register_acf_block_types');
