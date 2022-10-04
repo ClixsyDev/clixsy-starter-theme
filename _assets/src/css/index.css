@@ -1,5 +1,6 @@
 @import './_desktop-menu.css';
 @import './_mobile-menu.css';
+@import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,5 +25,81 @@ a {
     border-bottom: 1px solid var(--accent-color);
   }
 } */
+
+
+h2 span {
+  color: #69BE26;
+}
+
+/* .step-block.top::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 30px solid white;
+    border-right: 1400px solid #f4f2f2;
+    width: 0;
+} */
+
+/* .step-block.bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 30px solid white;
+  border-left: 1400px solid #f4f2f2;
+  width: 0;
+} */
+
+.triangle {
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-bottom: 0;
+  border-top: 25px solid #f4f2f2;
+}
+
+.triangle.white {
+  border-top: 25px solid white;
+  z-index: 1;
+  top: 100%;
+}
+
+@media (max-width: 768px) {
+  .triangle.white {
+    top: 104%;
+  }
+}
+
+.open-faq {
+  background-color: #69be26;
+}
+
+.open-faq h3 {
+  color: white;
+}
+
+.title-faq h3::after {
+  content: url('../../../assets/img/icon-plus.svg');
+  position: absolute;
+  right: 2%;
+  top: 34%;
+}
+
+.open-faq h3::after {
+  content: url('../../../assets/img/icon-minus.svg');
+  top: 6%;
+}
+
+@media (max-width: 1024px) {
+  .open-faq h3::after {
+    top: 27%;
+  }
+}
+
+.glide__bullet--active {
+  @apply bg-kennyBlueSecond;
+}
+
 
 body.logged-in{margin-top:20px;}

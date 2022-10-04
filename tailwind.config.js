@@ -32,6 +32,7 @@ module.exports = {
     fontFamily: {
       helvetica: ['Helvetica Neue', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica', 'Arial', 'Lucida Grande', 'sans-serif'],
       avenir: ['Avenir'],
+      noto_serif: ['Noto Serif'],
     },
     extend: {
       transitionProperty: {
@@ -46,6 +47,7 @@ module.exports = {
         kennyBlue: '#021A33',
         kennyBlueSecond: '#002244',
         kennyBlueThird: '#032241',
+        kennyBlueFourth: '#001A34',
         kennyGrayText: '#024',
         smoke: '#f4f2f2',
         bordercolor: '#f0eded',
@@ -58,6 +60,7 @@ module.exports = {
         lightBlueOpacity: 'rgba(255, 255, 255, 0.1)',
         whiteOpacity: 'rgba(255, 255, 255, 0.9)',
         caseSubtitle: 'rgba(4, 30, 66, 0.28)',
+        kennyGray: 'rgba(165, 172, 175, 0.7)',
       },
       width: {
         '1/24': '4.1666667%',
@@ -88,6 +91,14 @@ module.exports = {
       height: {
         hero: '658px',
       },
+      inset: {
+        '11%': '11%',
+        '25%': '25%',
+        '10%': '10%',
+        '55%': '55%',
+        '57%': '57%',
+        '58%': '58%',
+      },
     },
     container: {
       center: true,
@@ -96,7 +107,8 @@ module.exports = {
         sm: '600px',
         md: '728px',
         lg: '984px',
-        xl: '1432px',
+        xl: '1240px',
+        '2xl': '1496px',
       },
     },
     plugins: [
