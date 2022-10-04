@@ -88,7 +88,7 @@ h2 span {
 
 .open-faq h3::after {
   content: url('../../../assets/img/icon-minus.svg');
-  top: 6%;
+  top: 19%;
 }
 
 @media (max-width: 1024px) {
