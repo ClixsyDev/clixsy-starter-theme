@@ -27,3 +27,21 @@ let faqOpen = () => {
     })
   };
 faqOpen();
+
+let faqMore = () => {
+  let hiddenBlock = document.querySelector(".hidden-faqs");
+  let btn = document.querySelector(".more-btn-faq");
+  
+  btn.addEventListener('click', () => {
+    hiddenBlock.classList.toggle('hidden');
+    event.preventDefault();
+
+    if (hiddenBlock.classList.contains('hidden')) {
+      btn.textContent = '+more';
+    } else {
+      btn.textContent = 'less';
+    }
+  })
+
+};
+faqMore();
