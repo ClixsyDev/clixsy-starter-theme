@@ -292,5 +292,110 @@ function phillips_register_acf_block_types()
 			)
 		)
 	);
+
+
+	acf_register_block_type(
+		array(
+			'name'            => 'start-process-today',
+			'title'           => __('Start process today', 'phillips'),
+			'description'	  => __('Start process today blocks', 'phillips'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/start-process-today.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
+					),
+				)
+			)
+		)
+	);
+
+
+	acf_register_block_type(
+		array(
+			'name'            => 'habetz-info',
+			'title'           => __('Habetz info', 'phillips'),
+			'description'	  => __('Habetz info', 'phillips'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/habetz-info.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
+					),
+				)
+			)
+		)
+	);
+
+
+	acf_register_block_type(
+		array(
+			'name'            => 'injures-info',
+			'title'           => __('Injures info', 'phillips'),
+			'description'	  => __('Injures info', 'phillips'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/injures-info.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'faq',
+			'title'           => __('Faq', 'phillips'),
+			'description'	  => __('Faq', 'phillips'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/faq.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
+						$faq_repeater = get_field('faq_repeater')
+					),
+				)
+			)
+		)
+	);
+
+	acf_register_block_type(
+		array(
+			'name'            => 'testimonials',
+			'title'           => __('Testimonials', 'phillips'),
+			'description'	  => __('Testimonials', 'phillips'),
+			'render_template' => '_template-parts/guttenberg-extend-templates/testimonials.php',
+			'icon'            => 'groups',
+			'category'        => 'touchpoint',
+			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
+			'example'  => array(
+				'attributes' => array(
+					'mode' => 'preview',
+					'data' => array(
+						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
+						$faq_repeater = get_field('faq_repeater')
+					),
+				)
+			)
+		)
+	);
 }
 add_action('acf/init', 'phillips_register_acf_block_types');
