@@ -55,5 +55,11 @@ function starter_scripts()
 // Update CSS within in Admin
 function admin_style() {
     wp_enqueue_style('admin-styles', get_stylesheet_directory_uri().'/_assets/public/css/admin.css');
+    wp_enqueue_style(
+        'starter-style',
+        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/css/index.css',
+        [],
+        $version
+    );
   }
   add_action('admin_enqueue_scripts', 'admin_style');
