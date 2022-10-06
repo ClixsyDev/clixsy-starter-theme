@@ -1,5 +1,6 @@
 @import './_desktop-menu.css';
 @import './_mobile-menu.css';
+@import './_footer.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
 @tailwind base;
@@ -59,7 +60,7 @@ h2 span {
 
 .open-faq h3::after {
   content: url('../../../assets/img/icon-minus.svg');
-  top: 6%;
+  top: 19%;
 }
 
 @media (max-width: 1024px) {

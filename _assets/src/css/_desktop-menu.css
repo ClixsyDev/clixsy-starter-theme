@@ -44,10 +44,6 @@
   }
 }
 
-.current-menu-item > a {
-  text-decoration: underline;
-}
-
 .menu-main-menu-container {
   @apply lg:w-8/12;
 }
@@ -105,4 +101,24 @@
   a {
     font-size: 17px;
   }
+}
+
+.footer-menu {
+  margin-top: 15px;
+}
+
+.footer-menu li {
+  color: white;
+  font-family: Avenir;
+  font-size: 17px;
+  padding-left: 12px;
+}
+
+.footer-menu li:first-child {
+  line-height: 1px;
+  margin-bottom: 10px;
+}
+
+.footer-menu {
+  border-left: 4px solid #69BE26;
 }
