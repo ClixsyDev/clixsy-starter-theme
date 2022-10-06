@@ -120,7 +120,7 @@ export default function mainMenu() {
   }
 
   // Mobile back buttons
-  if (menu.querySelector('.evt-close-level') !== null) {
+  if (menu != null && menu != undefind && menu.querySelector('.evt-close-level') != null) {
     let closeSubmenuArrowSelector = menu.querySelectorAll('.evt-close-level');
     Array.from(closeSubmenuArrowSelector).forEach((item) => {
       item.addEventListener('click', function (e) {
