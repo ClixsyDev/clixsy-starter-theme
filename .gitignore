@@ -1,7 +1,8 @@
 .DS_Store
 
 node_modules
-
+.parcel-cache/*
+.parcel-cache
 vendor/*
 !vendor/composer
 vendor/composer/installed.php
