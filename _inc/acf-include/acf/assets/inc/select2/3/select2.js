@@ -3480,7 +3480,7 @@ the specific language governing permissions and limitations under the Apache Lic
         shouldFocusInput: function (instance) {
             // Attempt to detect touch devices
             var supportsTouchEvents = (('ontouchstart' in window) ||
-                                       (navigator.msMaxTouchPoints > 0));
+                                       (navigator.msMaxclixsys > 0));
 
             // Only devices which support touch events should be special cased
             if (!supportsTouchEvents) {
