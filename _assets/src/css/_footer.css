@@ -1,0 +1,23 @@
+@tailwind base;
+
+@layer {
+    .background-image-footer {
+        @apply bg-[url('../../../assets/img/background-footer.png')];
+    }
+}
+
+.cf7-input-subscribe {
+    @apply py-1.5 px-4 rounded-md focus:outline-none sm:w-full;
+}
+
+.submit-subscribe-cf7 {
+    @apply uppercase font-avenir !bg-kennyGreen text-white font-bold text-base py-1.5 px-6 rounded-full md:text-base md:px-10 sm:w-2/4 sm:m-auto;
+}
+
+.subscribe-form-wrapper {
+    @apply flex gap-3 sm:flex-col sm:gap-0;
+}
+
+.wpcf7-response-output {
+    @apply hidden;
+}
