@@ -34,6 +34,14 @@ function csme_gutenberg_palette($palette)
 }
 add_filter('villen_gutenberg_palette', 'csme_gutenberg_palette');
 
+add_filter( 'render_block', 'wrap_table_block', 10, 2 );
+function wrap_table_block( $block_content, $block ) {
+  if ( 'core/paragraph' === $block['blockName'] ) {
+    $block_content = '<div class="container">' . $block_content . '</div>';
+  }
+  return $block_content;
+}
+
 function theme_customize_register($wp_customize)
 {
     // Text color

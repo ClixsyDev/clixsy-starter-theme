@@ -7,8 +7,7 @@ if ($is_preview && !empty($previewImage)) {
 
     return;
 } else {
-    $guttenberg_single_button = get_field('guttenberg_single_button');
-    $guttenberg_single_button_hover = get_field('guttenberg_single_button_hover');
+    $guttenberg_single_button = get_field('button_link');
 ?>
     <div class="!my-6">
         <?php 
