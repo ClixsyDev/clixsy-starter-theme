@@ -1,6 +1,8 @@
 @import './_desktop-menu.css';
 @import './_mobile-menu.css';
 @import './_footer.css';
+@import './_bio-page.css';
+@import './_awards-slider.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @tailwind base;
 @tailwind components;
@@ -12,6 +14,13 @@
   --accent-color: #48bb8b;
   --border-color: #d4d4d4;
 }
+
+@layer {
+  .background-image {
+      @apply bg-[url('../../../assets/img/background-awards-slider.jpg')];
+  }
+}
+
 /* 
 body {
   color: var(--text-color);
