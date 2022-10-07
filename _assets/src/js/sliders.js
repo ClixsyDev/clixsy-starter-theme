@@ -17,6 +17,12 @@ if (document.querySelector(awardsSlider) != undefined && document.querySelector(
     type: 'carousel',
     autoplay: 3000,
     breakpoints: {
+      1100: {
+        perView: 5
+      },
+      768: {
+        perView: 3
+      }
     }
   }).mount();
 }
@@ -28,6 +34,15 @@ if (document.querySelector(verdictsSlider) != undefined && document.querySelecto
     type: 'carousel',
     autoplay: 3000,
     breakpoints: {
+      1100: {
+        perView: 3
+      },
+      768: {
+        perView: 2
+      },
+      640: {
+        perView: 1
+      }
     }
   }).mount();
 }
@@ -39,6 +54,12 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
     type: 'carousel',
     autoplay: 3000,
     breakpoints: {
+      1100: {
+        perView: 2
+      },
+      768: {
+        perView: 1
+      }
     }
   }).mount();
 }

@@ -668,7 +668,7 @@ function mainMenu() {
         if (e.target.closest("#main-menu-button") !== null && e.target.closest(".o-sub") !== null && e.target.closest("nav.main-menu") !== null || e.target.classList.contains("wrapper")) menuClose();
     }
     // Mobile back buttons
-    if (menu != null && menu != undefind && menu.querySelector(".evt-close-level") != null) {
+    if (menu != null && menu != undefined && menu.querySelector(".evt-close-level") != null) {
         let closeSubmenuArrowSelector = menu.querySelectorAll(".evt-close-level");
         Array.from(closeSubmenuArrowSelector).forEach((item)=>{
             item.addEventListener("click", function(e) {
@@ -953,21 +953,45 @@ if (document.querySelector(awardsSlider) != undefined && document.querySelector(
     perView: 8,
     type: "carousel",
     autoplay: 3000,
-    breakpoints: {}
+    breakpoints: {
+        1100: {
+            perView: 5
+        },
+        768: {
+            perView: 3
+        }
+    }
 }).mount();
 const verdictsSlider = ".verdicts_slider";
 if (document.querySelector(verdictsSlider) != undefined && document.querySelector(verdictsSlider) != null) new (0, _glideDefault.default)(verdictsSlider, {
     perView: 4,
     type: "carousel",
     autoplay: 3000,
-    breakpoints: {}
+    breakpoints: {
+        1100: {
+            perView: 3
+        },
+        768: {
+            perView: 2
+        },
+        640: {
+            perView: 1
+        }
+    }
 }).mount();
 const grSlider = ".google_reviews_slider";
 if (document.querySelector(grSlider) != undefined && document.querySelector(grSlider) != null) new (0, _glideDefault.default)(grSlider, {
     perView: 3,
     type: "carousel",
     autoplay: 3000,
-    breakpoints: {}
+    breakpoints: {
+        1100: {
+            perView: 2
+        },
+        768: {
+            perView: 1
+        }
+    }
 }).mount();
 
 },{"@glidejs/glide":"cS4lK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
