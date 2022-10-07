@@ -1,8 +1,11 @@
 .DS_Store
 
 node_modules
-.parcel-cache/*
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
 .parcel-cache
+
 vendor/*
 !vendor/composer
 vendor/composer/installed.php
