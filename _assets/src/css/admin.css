@@ -1,0 +1,6 @@
+@import './components/buttons.css';
+.acf-block-preview {
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+}

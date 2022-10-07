@@ -4,6 +4,7 @@
 @import './_bio-page.css';
 @import './_awards-slider.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
+@import './components/buttons.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,30 +37,14 @@ a {
   }
 } */
 
-
-h2 span {
-  color: #69BE26;
+body.logged-in {
+  margin-top: 0px !important;
 }
 
-/* .step-block.top::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-bottom: 30px solid white;
-    border-right: 1400px solid #f4f2f2;
-    width: 0;
-} */
+h2 span {
+  color: #69be26;
+}
 
-/* .step-block.bottom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-top: 30px solid white;
-  border-left: 1400px solid #f4f2f2;
-  width: 0;
-} */
 
 .triangle {
   width: 0;
@@ -111,5 +96,6 @@ h2 span {
   @apply bg-kennyBlueSecond;
 }
 
-
-body.logged-in{margin-top:20px;}
+body.logged-in {
+  margin-top: 20px;
+}
