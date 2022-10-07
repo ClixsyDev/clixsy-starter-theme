@@ -1102,13 +1102,13 @@
   "resolved" "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   "version" "0.0.1"
 
-"concurrently@^7.3.0":
-  "integrity" "sha512-IiDwm+8DOcFEInca494A8V402tNTQlJaYq78RF2rijOrKEk/AOHTxhN4U1cp7GYKYX5Q6Ymh1dLTBlzIMN0ikA=="
-  "resolved" "https://registry.npmjs.org/concurrently/-/concurrently-7.3.0.tgz"
-  "version" "7.3.0"
+"concurrently@^7.4.0":
+  "integrity" "sha512-M6AfrueDt/GEna/Vg9BqQ+93yuvzkSKmoTixnwEJkH0LlcGrRC2eCmjeG1tLLHIYfpYJABokqSGyMcXjm96AFA=="
+  "resolved" "https://registry.npmjs.org/concurrently/-/concurrently-7.4.0.tgz"
+  "version" "7.4.0"
   dependencies:
     "chalk" "^4.1.0"
-    "date-fns" "^2.16.1"
+    "date-fns" "^2.29.1"
     "lodash" "^4.17.21"
     "rxjs" "^7.0.0"
     "shell-quote" "^1.7.3"
@@ -1192,10 +1192,10 @@
   dependencies:
     "css-tree" "^1.1.2"
 
-"date-fns@^2.16.1":
-  "integrity" "sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw=="
-  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.29.1.tgz"
-  "version" "2.29.1"
+"date-fns@^2.29.1":
+  "integrity" "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.29.3.tgz"
+  "version" "2.29.3"
 
 "debug@^2.2.0":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
@@ -2285,9 +2285,9 @@
     "symbol-observable" "1.0.1"
 
 "rxjs@^7.0.0":
-  "integrity" "sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw=="
-  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.5.6.tgz"
-  "version" "7.5.6"
+  "integrity" "sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA=="
+  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.5.7.tgz"
+  "version" "7.5.7"
   dependencies:
     "tslib" "^2.1.0"
 
