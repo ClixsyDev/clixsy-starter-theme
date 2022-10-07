@@ -6,7 +6,7 @@
     "clean:output": "rimraf dist",
     "browsersync": "browser-sync start --proxy 'http://gokennyparcel.local/' --files '**/*.php'",
     "connc": "concurrently --kill-others",
-    "watch": "concurrently --kill-others  'npm run browsersync' 'npx parcel _assets/src/css/index.css _assets/src/js/main.js --dist-dir _assets/dist'",
+    "watch": "concurrently --kill-others  'npm run browsersync' 'npx parcel _assets/src/css/index.css _assets/src/css/admin.css _assets/src/js/main.js --dist-dir _assets/dist'",
     "build": "npx parcel build _assets/src/css/index.css _assets/src/js/main.js --dist-dir _assets/dist"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "postcss-custom-media": "^8.0.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.1.0",
+    "postcss-partial-import": "^4.1.0",
     "rimraf": "^3.0.2",
     "tailwindcss": "^3.1.8"
   },
