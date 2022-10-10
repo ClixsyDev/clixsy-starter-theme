@@ -23,6 +23,7 @@ module.exports = {
     },
     screens: {
       xxl: { max: '1630px' },
+      '2xl': { max: '1496px' },
       xl: { max: '1280px' },
       lg: { max: '1024px' },
       mdt: { max: '992px' },
