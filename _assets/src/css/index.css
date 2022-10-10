@@ -41,6 +41,7 @@ body.logged-in{margin-top:20px;}
     textarea {
       @apply focus:text-white w-full h-16  lg:h-28 pt-4 pl-5 mt-3 border-kennyBlueSecond border-2  focus:outline-none focus:border-white;
     }
+    
     [type='submit'] {
       @apply my-6 mx-auto xl:mt-6 xl:mb-8 md:my-5 bg-kennyGreen w-64 rounded-full  h-16 xl:h-12 text-xl flex items-center justify-center hover:bg-kennyGreen hover:text-white font-avenir font-bold transition duration-300;
     }

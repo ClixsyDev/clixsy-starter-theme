@@ -219,74 +219,10 @@
                 </div>
             </div>
 
-            <div class="hidden-faqs">
-
-
-                <div class="hidden-faqs hidden">
-                    <div class="faq-block">
-                        <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                            <h3>How Much Does a Personal Injury Lawyer Cost?3</h3>
-                            <p>+</p>
-                        </div>
-                        <div class="pt-3 pb-5 px-11 hidden hidden-part">
-                            <p>When you contact our firm, we will work with you to schedule a free, no obligation consultation to talk with a member of our intake team about your claim. </p>
-                        </div>
-                    </div>
-                    <div class="faq-block">
-                        <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                            <h3>How Much Does a Personal Injury Lawyer Cost?3</h3>
-                            <p>+</p>
-                        </div>
-                        <div class="pt-3 pb-5 px-11 hidden hidden-part">
-                            <p>When you contact our firm, we will work with you to schedule a free, no obligation consultation to talk with a member of our intake team about your claim. </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="text-end font-avenir font-bold text-xl pt-7">
-                <button class="more-btn-faq">+more</button>
-            </div>
         </div>
 </section>
 
 
-
-<!-- <div class="py-24">
-    <div class="container">
-        <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4">title</h2>
-        <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
-        <div class="flex justify-center gap-2 w-11/12 m-auto md:block">
-
-
-            <div class="w-15/24 md:w-full">
-                <div class="mt-1.5 faq-block relative">
-                    <div>
-                        <div class="title-faq text-kennyBlueFourth flex justify-between relative bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                            <h3>titleeee</h3>
-                        </div>
-                        <div class="pt-3 pb-5 px-11 hidden-part hidden">
-                            fescriptiooon
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden hidden-faqs mt-1.5 faq-block relative">
-                    <div>
-                        <div class="title-faq text-kennyBlueFourth flex justify-between relative bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                            <h3>hidden title</h3>
-                        </div>
-                        <div class="pt-3 pb-5 px-11 hidden-part hidden">
-                            hidden description
-                        </div>
-                    </div>
-                </div>
-                <div class="text-end font-avenir font-bold text-xl pt-7">
-                    <button class="more-btn-faq">+more</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 
 <!-- Contact us page (blocks that don't exist) -->
