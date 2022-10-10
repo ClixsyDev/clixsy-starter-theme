@@ -1,6 +1,7 @@
 import mainMenu from './menu';
 import {getElement, ready} from './utils';
 import testimonialSlider from './sliders';
+import testimonialSlider from './sliders';
 
 ready(() => {
     mainMenu();
@@ -31,17 +32,22 @@ faqOpen();
 let btnMore = () => {
   let hiddenBlock = document.querySelector(".hidden-text");
   let btn = document.querySelector(".more-btn");
+let faqMore = () => {
+  let hiddenBlock = document.querySelector(".hidden-faqs");
+  let btn = document.querySelector(".more-btn-faq");
+  if(btn) {
+    btn.addEventListener('click', () => {
+      hiddenBlock.classList.toggle('hidden');
+      event.preventDefault();
   
-  btn.addEventListener('click', () => {
-    hiddenBlock.classList.toggle('hidden');
-    event.preventDefault();
-
-    if (hiddenBlock.classList.contains('hidden')) {
-      btn.textContent = '+more';
-    } else {
-      btn.textContent = 'less';
-    }
-  })
+      if (hiddenBlock.classList.contains('hidden')) {
+        btn.textContent = '+more';
+      } else {
+        btn.textContent = 'less';
+      }
+    })
+  }
+  
 
 };
 btnMore();

@@ -15,6 +15,22 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-TF8CHB6');</script> -->
     <!-- End Google Tag Manager -->
+    <style>
+        <?php $theme_colors = get_field('theme_colors', 'option');
+        if ($theme_colors) {
+            foreach ($theme_colors as $color) {
+                ?>
+                .bg-<?= $color['name'] ?> {
+                    background-color: <?= $color['color'] ?> !important;
+                }
+                .text-<?= $color['name'] ?> {
+                    color: <?= $color['color'] ?> !important;
+                }
+                <?php
+            }
+        }
+        ?>
+    </style>
 </head>
 
 <body <?php body_class('font-helvetica body'); ?>>
