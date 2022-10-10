@@ -1,8 +1,8 @@
 <div class="pb-12">
-    <div class="max-w-[1920px] m-auto">
+    <div class="max-w-[1920px] m-auto md:max-w-none">
         <div class="background-image py-10">
             <h2 class="text-kennyBlueSecond text-2xl text-center font-bold font-avenir">Some of the awards and recognitions Kenny has received as he fights for his clients</h2>
-            <div class="awardsSlider glide relative mt-7 px-10">
+            <div class="awardsSlider glide relative mt-7 px-10 md:px-0">
                 <div class="glide__track" data-glide-el="track">
                     <div class="glide__slides overflow-visible">
                         <div class="glide__slide">
