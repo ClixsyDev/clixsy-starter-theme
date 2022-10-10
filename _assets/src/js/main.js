@@ -47,8 +47,7 @@ let faqMore = () => {
       }
     })
   }
-  
-
+}
 };
 btnMore();
 
@@ -66,6 +65,5 @@ let btnMoreEducation = () => {
       btn.textContent = 'less';
     }
   })
-
 };
 btnMoreEducation();
