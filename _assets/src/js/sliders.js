@@ -18,6 +18,15 @@ if (document.querySelector(awardsSlider) != undefined && document.querySelector(
     type: 'carousel',
     autoplay: 2500,
     breakpoints: {
+      1024: {
+        perView: 4.5,
+      },
+      768: {
+        perView: 3.5,
+      },
+      540: {
+        perView: 2.5,
+      },
     }
   }).mount();
 }
@@ -43,7 +52,7 @@ const lifeSlider = '.lifeSlider';
 if (document.querySelector(lifeSlider) != undefined && document.querySelector(lifeSlider) != null) {
   new Glide(lifeSlider, {
     perView: 1,
-    type: 'slider',
+    type: 'carousel',
     breakpoints: {
     }
   }).mount();
