@@ -22,6 +22,7 @@ module.exports = {
       '12xl': '125px',
     },
     screens: {
+      '2xl': { max: '1432px' },
       xl: { max: '1280px' },
       lg: { max: '1024px' },
       mdt: { max: '992px' },
@@ -58,6 +59,7 @@ module.exports = {
         lightBlueOpacity: 'rgba(255, 255, 255, 0.1)',
         whiteOpacity: 'rgba(255, 255, 255, 0.9)',
         caseSubtitle: 'rgba(4, 30, 66, 0.28)',
+        
       },
       width: {
         '1/24': '4.1666667%',
@@ -84,6 +86,7 @@ module.exports = {
         '22/24': '91.666666667%',
         '23/24': '95.833333333%',
         '24/24': '100%',
+       
       },
       height: {
         hero: '658px',
