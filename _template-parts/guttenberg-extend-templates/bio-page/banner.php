@@ -4,7 +4,7 @@
             <div class="z-[1] xxl:w-14/24 xl:w-12/24 mdt:w-17/24 md:w-21/24 sm:w-full">
                 <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/bio-banner.png" class="" alt="">
             </div>
-            <div class="bg-kennyGreen w-17/24 py-8 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-58% sm:top-50% xs:top-45% xs:w-22/24">
+            <div class="bg-kennyGreen w-17/24 py-8 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-50% sm:top-50% xs:top-[40%] xs:w-22/24">
                 <h1 class="font-avenir font-bold uppercase text-white text-8xl leading-[80px] text-end xxl:text-6xl mdt:text-center mdt:text-5xl mdt:leading-none xs:text-3xl">KENNY HABETZ</h1>
                 <p class="font-avenir text-kennyWhite text-3xl text-end font-bold xxl:text-2xl mdt:text-center mdt:text-xl">Attorney & Founder</p>
                 <div class="flex justify-end gap-5 mdt:justify-center mdt:py-2 xs:items-center">
