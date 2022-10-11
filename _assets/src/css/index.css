@@ -39,10 +39,6 @@ a {
   }
 } */
 
-body.logged-in{margin-top:20px;}
-
-
-
 body.logged-in {
   margin-top: 0px !important;
 }

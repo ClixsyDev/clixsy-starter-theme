@@ -218,7 +218,7 @@ function phillips_register_acf_block_types()
 		)
 	);
 
-	
+
 
 	acf_register_block_type(
 		array(
