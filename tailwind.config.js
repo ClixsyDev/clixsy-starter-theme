@@ -45,14 +45,13 @@ module.exports = {
       },
       colors: {
         kennySmoke: '#A5ACAF',
-        kennyGreen: '#69BE26',
-        kennyBlue: '#021A33',
-        kennyWhite: '#FFFEFE',
-        kennyBlueSecond: '#002244',
-        kennyBlueThird: '#032241',
-        kennyBlueFourth: '#001A34',
+        kennyGreen: '#69BE26', // bg-accent
+        kennyBlue: '#021A33', // bg-headings_second
+        kennyBlueSecond: '#002244', //bg-headings
+        kennyBlueThird: '#032241', //bg-headings
+        kennyBlueFourth: '#001A34', //bg-headings_second
         kennyGrayText: '#024',
-        smoke: '#f4f2f2',
+        smoke: '#f4f2f2', // bg-smoke
         bordercolor: '#f0eded',
         semiWhite: '#fdfdfd',
         semiblue: '#264c6d',
@@ -91,6 +90,7 @@ module.exports = {
         '22/24': '91.666666667%',
         '23/24': '95.833333333%',
         '24/24': '100%',
+       
       },
       height: {
         hero: '658px',

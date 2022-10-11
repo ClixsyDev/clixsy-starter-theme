@@ -29,10 +29,23 @@
                 <?php
             }
         }
+        $site_colors = get_field('site_colors', 'option');
+        if ($site_colors) {
+            foreach ($site_colors as $color_name => $color_value) {
+                ?>
+                .bg-<?= $color_name ?> {
+                    background-color: <?= $color_value ? $color_value : '#fff' ?> !important;
+                }
+                .text-<?= $color_name ?> {
+                    color: <?= $color_value ? $color_value : '#fff' ?> !important;
+                }
+                <?php
+            }
+        }
         ?>
     </style>
 </head>
-
+<?php var_dump($site_colors); ?>
 <body <?php body_class('font-helvetica body'); ?>>
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"
@@ -41,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- testing mega menu -->
 
-    <header class="bg-kennyBlue sticky top-0 w-full z-50 h-40 py-8">
+    <header class="bg-headings_second sticky top-0 w-full z-50 h-40 py-8">
         <div class="container flex justify-between items-center">
             <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="">
             <?php main_menu(); ?>
@@ -83,7 +96,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class=" text-2xl leading-none">
                     855-GO-KENNY
                 </div>
-                <a class=" flex justify-center items-center bg-kennyGreen px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
+                <a class=" flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
                     Call Now
                 </a>
             </div>

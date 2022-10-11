@@ -4,7 +4,7 @@
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides overflow-visible flex justify-around gap-3 items-center">
                 <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1">
-                    <div class="text-kennyGreen text-5xl leading-none 2xl:text-3xl">
+                    <div class="text-accent text-5xl leading-none 2xl:text-3xl">
                         $2.25 MILLION
                     </div>
                     <div class=" text-[40px] 2xl:text-[25px]">
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1">
-                    <div class="text-kennyGreen text-5xl leading-none 2xl:text-3xl">
+                    <div class="text-accent text-5xl leading-none 2xl:text-3xl">
                         $2.25 MILLION
                     </div>
                     <div class=" text-[40px] 2xl:text-[25px]">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1">
-                    <div class="text-kennyGreen text-5xl leading-none 2xl:text-3xl">
+                    <div class="text-accent text-5xl leading-none 2xl:text-3xl">
                         $2.25 MILLION
                     </div>
                     <div class=" text-[40px] 2xl:text-[25px]">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1">
-                    <div class="text-kennyGreen text-5xl leading-none 2xl:text-3xl">
+                    <div class="text-accent text-5xl leading-none 2xl:text-3xl">
                         $2.25 MILLION
                     </div>
                     <div class=" text-[40px] 2xl:text-[25px]">

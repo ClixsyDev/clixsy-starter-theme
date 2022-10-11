@@ -1,6 +1,6 @@
-<div class="bg-kennyBlueSecond px-4 pt-10 pb-8 ">
-    <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">A law firm dedicated to <span class=" text-kennyGreen">helping people.</span></h2>
-    <hr class="bg-kennyGreen border-none mx-auto h-1 w-[596px] max-w-full mb-6">
+<div class="bg-headings px-4 pt-10 pb-8 ">
+    <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">A law firm dedicated to <span class=" text-accent">helping people.</span></h2>
+    <hr class="bg-accent border-none mx-auto h-1 w-[596px] max-w-full mb-6">
     <div class="awards_slider glide relative">
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides overflow-visible flex justify-around gap-3 items-center">
