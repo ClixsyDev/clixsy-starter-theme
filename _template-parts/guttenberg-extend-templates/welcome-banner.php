@@ -4,8 +4,8 @@
         <div class="flex flex-col items-center">
             <div class="flex flex-col mb-16 items-center text-kennyBlue lg:mb-10">
                 <div class="relative text-3xl leading-tight 
-                        before:block before:absolute before:bg-kennyGreen before:right-full before:w-40 before:h-1 before:top-1/2 before:mr-4
-                        after:block after:absolute after:bg-kennyGreen after:left-full after:w-40 after:h-1 after:top-1/2 after:ml-4
+                        before:block before:absolute before:bg-accent before:right-full before:w-40 before:h-1 before:top-1/2 before:mr-4
+                        after:block after:absolute after:bg-accent after:left-full after:w-40 after:h-1 after:top-1/2 after:ml-4
                         xl:text-2xl">
                     KENNY HAS WON
                 </div>
@@ -13,13 +13,13 @@
                     MILLIONS
                 </div>
                 <div class="relative text-3xl leading-tight
-                        before:block before:absolute before:bg-kennyGreen before:right-full before:w-40 before:h-1 before:top-1/2 before:mr-4
-                        after:block after:absolute after:bg-kennyGreen after:left-full after:w-40 after:h-1 after:top-1/2 after:ml-4
+                        before:block before:absolute before:bg-accent before:right-full before:w-40 before:h-1 before:top-1/2 before:mr-4
+                        after:block after:absolute after:bg-accent after:left-full after:w-40 after:h-1 after:top-1/2 after:ml-4
                         xl:text-2xl">
                     FOR HIS CLIENTS
                 </div>
             </div>
-            <a href="#" class=" h-[75px] px-14 flex justify-center items-center bg-kennyGreen rounded-full text-4xl leading-none text-white uppercase xl:text-3xl">
+            <a href="#" class=" h-[75px] px-14 flex justify-center items-center bg-accent rounded-full text-4xl leading-none text-white uppercase xl:text-3xl">
                 Free case review
             </a>
         </div>

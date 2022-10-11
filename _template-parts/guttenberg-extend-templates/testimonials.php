@@ -7,7 +7,7 @@ $testimonials = get_field('testimonials');
     <div class="container">
         <?php if ($title) { ?>
             <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
-            <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+            <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <?php } ?>
         <div class="testmonialsSlider glide relative">
             <div class="glide__track" data-glide-el="track">
