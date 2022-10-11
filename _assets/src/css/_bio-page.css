@@ -1,0 +1,7 @@
+@tailwind base;
+
+@layer {
+    .background-image-bio {
+        @apply bg-[url('../../../assets/img/background-bio.jpg')];
+    }
+}

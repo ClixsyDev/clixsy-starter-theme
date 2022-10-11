@@ -6,7 +6,7 @@ function starter_scripts()
     $version = '5.0.0';
 
     add_action('wp_enqueue_scripts', 'admin_stylesheet');
-    wp_enqueue_style( 'style-name', get_stylesheet_uri() );
+    wp_enqueue_style('style-name', get_stylesheet_uri());
 
     if (!is_admin()) {
         wp_deregister_script('jquery');
@@ -53,7 +53,8 @@ function starter_scripts()
 
 
 // Update CSS within in Admin
-function admin_style() {
+function admin_style()
+{
     $version = '5.0.0';
     wp_enqueue_style(
         'starter-style',
@@ -61,5 +62,5 @@ function admin_style() {
         [],
         $version
     );
-  }
-  add_action('admin_enqueue_scripts', 'admin_style');
+}
+add_action('admin_enqueue_scripts', 'admin_style');

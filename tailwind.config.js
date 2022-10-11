@@ -22,6 +22,7 @@ module.exports = {
       '12xl': '125px',
     },
     screens: {
+      xxl: { max: '1630px' },
       '2xl': { max: '1496px' },
       xl: { max: '1280px' },
       lg: { max: '1024px' },
@@ -46,6 +47,7 @@ module.exports = {
         kennySmoke: '#A5ACAF',
         kennyGreen: '#69BE26',
         kennyBlue: '#021A33',
+        kennyWhite: '#FFFEFE',
         kennyBlueSecond: '#002244',
         kennyBlueThird: '#032241',
         kennyBlueFourth: '#001A34',
@@ -60,6 +62,7 @@ module.exports = {
         yellow: '#ffe900',
         lightBlueOpacity: 'rgba(255, 255, 255, 0.1)',
         whiteOpacity: 'rgba(255, 255, 255, 0.9)',
+        whiteOpacitySecond: 'rgba(255, 254, 254, 0.62)',
         caseSubtitle: 'rgba(4, 30, 66, 0.28)',
         kennyGray: 'rgba(165, 172, 175, 0.7)',
       },
@@ -88,17 +91,25 @@ module.exports = {
         '22/24': '91.666666667%',
         '23/24': '95.833333333%',
         '24/24': '100%',
+       
       },
       height: {
         hero: '658px',
       },
       inset: {
+        '7%': '7%',
         '11%': '11%',
+        '17%': '17%',
         '25%': '25%',
         '10%': '10%',
         '55%': '55%',
+        '45%': '45%',
+        '50%': '50%',
         '57%': '57%',
         '58%': '58%',
+      },
+      content: {
+        'content-dedicat': 'url("/assets/img/quote_dedicated.png")',
       },
     },
     container: {
@@ -116,7 +127,7 @@ module.exports = {
       function ({ addVariant }) {
           addVariant('child', '& > *');
           addVariant('child-hover', '& > *:hover');
-      }
+      },
     ],
   },
 };
