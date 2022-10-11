@@ -54,7 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- testing mega menu -->
 
-    <header class="bg-kennyBlue sticky top-0 w-full z-50 h-40 py-8">
+    <header class="bg-headings_second sticky top-0 w-full z-50 h-40 py-8">
         <div class="container flex justify-between items-center">
             <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="">
             <?php main_menu(); ?>
