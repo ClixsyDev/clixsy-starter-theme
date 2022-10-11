@@ -33,7 +33,7 @@ $image = get_field('image');
                 <?php if ($image) { ?>
                     <?php echo wp_get_attachment_image($image, 'full', "", ["class" => ""]); ?>
                 <?php } ?>
-                <hr class="bg-kennyGreen absolute left-[-5%] border-none mx-auto h-1 w-full ml-5 md:left-0 md:ml-0">
+                <hr class="bg-accent absolute left-[-5%] border-none mx-auto h-1 w-full ml-5 md:left-0 md:ml-0">
                 <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/small-logo.png" class="absolute right-[15%] bottom-[3%]" alt="">
             </div>
         </div>
