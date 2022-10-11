@@ -52,4 +52,5 @@ require_once('_core/plugins/_init.php');
 require_once('_core/ajax/_init.php');
 
 require_once('_core/guttenberg-extend.php');
+
 require_once('_inc/guttenberg-blocks.php');

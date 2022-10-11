@@ -7,7 +7,7 @@
     }
     
     .contact-page__hero__img-wrapper {
-        @apply container mx-auto justify-around lg:justify-center h-full flex mdt:flex-wrap items-end;
+        @apply container mx-auto justify-around lg:justify-center h-full flex mdt:flex-wrap items-end mdt:pt-9;
     }
     
     .contact-page__hero__form-wrapper {

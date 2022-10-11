@@ -2,6 +2,11 @@
 @import './_mobile-menu.css';
 @import './_case-types.css';
 
+@import './_footer.css';
+@import './_bio-page.css';
+@import './_awards-slider.css';
+@import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
+@import './components/buttons.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +17,13 @@
   --accent-color: #48bb8b;
   --border-color: #d4d4d4;
 }
+
+@layer {
+  .background-image {
+      @apply bg-[url('../../../assets/img/background-awards-slider.jpg')];
+  }
+}
+
 /* 
 body {
   color: var(--text-color);
@@ -28,6 +40,71 @@ a {
 } */
 
 body.logged-in{margin-top:20px;}
+
+
+
+body.logged-in {
+  margin-top: 0px !important;
+}
+
+h2 span {
+  color: #69be26;
+}
+
+
+.triangle {
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-bottom: 0;
+  border-top: 25px solid #f4f2f2;
+}
+
+.triangle.white {
+  border-top: 25px solid white;
+  z-index: 1;
+  top: 100%;
+}
+
+@media (max-width: 768px) {
+  .triangle.white {
+    top: 104%;
+  }
+}
+
+.open-faq {
+  background-color: #69be26;
+}
+
+.open-faq h3 {
+  color: white;
+}
+
+.title-faq h3::after {
+  content: url('../../../assets/img/icon-plus.svg');
+  position: absolute;
+  right: 2%;
+  top: 34%;
+}
+
+.open-faq h3::after {
+  content: url('../../../assets/img/icon-minus.svg');
+  top: 19%;
+}
+
+@media (max-width: 1024px) {
+  .open-faq h3::after {
+    top: 27%;
+  }
+}
+
+.glide__bullet--active {
+  @apply bg-kennyBlueSecond;
+}
+
+body.logged-in {
+  margin-top: 20px;
+}
 
 
 @layer components {

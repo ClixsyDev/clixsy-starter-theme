@@ -26,7 +26,7 @@
             </div>
 
             <div class="w-full flex justify-center ">
-                <a href="#" class="text-white bg-kennyGreen w-[580px] 2xl:w-[300px] h-20 flex justify-center items-center text-4xl 2xl:text-2xl font-bold rounded-full">FREE CASE REVIEW</a>
+                <a href="#" class="text-white bg-kennyGreen w-[580px] 2xl:w-[300px] h-20 flex justify-center items-center text-4xl  xxl:text-2xl  font-bold rounded-full">FREE CASE REVIEW</a>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="w-full flex justify-center mb-16">
-                        <a href="#" class="text-white bg-kennyGreen w-[490px] 2xl:w-[300px] h-20 flex justify-center items-center text-4xl 2xl:text-2xl font-bold rounded-full">FREE CASE REVIEW</a>
+                        <a href="#" class="text-white bg-kennyGreen w-[490px] 2xl:w-[300px] h-20 flex justify-center items-center text-2xl  font-bold rounded-full">FREE CASE REVIEW</a>
                     </div>
                 </div>
             </div>
@@ -187,31 +187,31 @@
     </div>
 
     <div>
-        <img class=" object-cover mx-auto w-[60%] h-[487px] 2xl:h-64 md:h-52" src="<?php echo get_template_directory_uri() ?>/_assets/src/img/placeholder.jpg" alt="Case Type img">
-        <div class="mx-auto w-[60%]">
+        <img class=" object-cover mx-auto w-[60%] mdt:w-[80%]  md:w-full h-[487px] 2xl:h-64 md:h-52" src="<?php echo get_template_directory_uri() ?>/_assets/src/img/placeholder.jpg" alt="Case Type img">
+        <div class="mx-auto w-[60%] mdt:w-[80%] md:w-full ">
             <div>
                 <div class="pb-2 faq-block">
-                    <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
+                    <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl xl:text-lg p-4 lg:text-base relative xs:px-7">
                         <h3>How Much Does a Personal Injury Lawyer Cost?1</h3>
-                        <p class="plus">+</p>
+
                     </div>
-                    <div class="pt-3 pb-5 px-11 hidden-part">
+                    <div class="pt-3 pb-5 px-11 hidden hidden-part">
                         <p>When you contact our firm, we will work with you to schedule a free, no obligation consultation to talk with a member of our intake team about your claim. During your consultation, we will gather details about your accident and injury and attempt to answer any questions you may have. We will provide you with an initial assessment of your claim, which will help us determine if you have a case and are entitled to compensation. You will not be charged for your consultation and there is no obligation in speaking with us.</p>
                     </div>
                 </div>
                 <div class="pb-2 faq-block">
-                    <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
+                    <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 xl:text-lg lg:text-base relative xs:px-7">
                         <h3>How Much Does a Personal Injury Lawyer Cost?2</h3>
-                        <p>+</p>
+
                     </div>
                     <div class="pt-3 pb-5 px-11 hidden hidden-part">
                         <p>When you contact our firm, we will work with you to schedule </p>
                     </div>
                 </div>
                 <div class="pb-2 faq-block">
-                    <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
+                    <div class="title-faq text-kennyBlueSecond flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 xl:text-lg lg:text-base relative xs:px-7">
                         <h3>How Much Does a Personal Injury Lawyer Cost?3</h3>
-                        <p>+</p>
+
                     </div>
                     <div class="pt-3 pb-5 px-11 hidden hidden-part">
                         <p>When you contact our firm, we will work with you to schedule a free, no obligation consultation to talk with a member of our intake team about your claim. </p>
@@ -230,7 +230,7 @@
 <!-- contact us hero section -->
 <section class="contact-page__hero-wrapper " style="background-image: url(<?php echo get_template_directory_uri() ?>/_assets/src/img/contact-page-bg.png);">
     <div class="contact-page__hero__img-wrapper">
-        <img class="block  2xl:w-full w-5/12" src="<?php echo get_template_directory_uri() ?>/_assets/src/img/kenny.png" alt="Kenny" />
+        <img class="block  2xl:w-full w-5/12" src="<?php echo get_template_directory_uri() ?>/_assets/src/img/kenny-contact-us.png" alt="Kenny" />
         <div class="contact-page__form contact-page__hero__form-wrapper">
             <h2 class="text-white text-center text-[40px] mdt:text-4xl md:text-[28px] sm:text-2xl my-10 sm:my-5">How can Kenny <span class="text-kennyGreen">help?</span> </h2>
             <p class=" pb-7">Tell us a little about what happened, and our team will contact you soon to listen to your story and review your case for FREE.</p>
