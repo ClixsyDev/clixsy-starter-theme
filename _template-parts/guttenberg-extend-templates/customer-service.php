@@ -10,7 +10,7 @@
 
                 </div>
                 <div><span>Clear</span> Process</div>
-                <div class=" bg-kennyBlue">
+                <div class=" bg-headings_second">
                     We are dedicated to ensuring the process is clear and you never have to guess what the next step is.
                 </div>
             </div>
@@ -19,7 +19,7 @@
 
                 </div>
                 <div><span>Clear</span> Process</div>
-                <div class=" bg-kennyBlue">
+                <div class=" bg-headings_second">
                     We are dedicated to ensuring the process is clear and you never have to guess what the next step is.
                 </div>
             </div>
@@ -28,7 +28,7 @@
 
                 </div>
                 <div><span>Clear</span> Process</div>
-                <div class=" bg-kennyBlue">
+                <div class=" bg-headings_second">
                     We are dedicated to ensuring the process is clear and you never have to guess what the next step is.
                 </div>
             </div>
