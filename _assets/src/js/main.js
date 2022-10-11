@@ -40,6 +40,9 @@ let faqOpen = () => {
   };
 faqOpen();
 
+let btnMore = () => {
+  let hiddenBlock = document.querySelector(".hidden-text");
+  let btn = document.querySelector(".more-btn");
 let faqMore = () => {
   let hiddenBlock = document.querySelector(".hidden-faqs");
   let btn = document.querySelector(".more-btn-faq");
@@ -55,7 +58,23 @@ let faqMore = () => {
       }
     })
   }
-  
-
+}
 };
-faqMore();
+btnMore();
+
+let btnMoreEducation = () => {
+  let hiddenBlock = document.querySelector(".hidden-text-education");
+  let btn = document.querySelector(".more-btn-education");
+  
+  btn.addEventListener('click', () => {
+    hiddenBlock.classList.toggle('hidden');
+    event.preventDefault();
+
+    if (hiddenBlock.classList.contains('hidden')) {
+      btn.textContent = '+more';
+    } else {
+      btn.textContent = 'less';
+    }
+  })
+};
+btnMoreEducation();

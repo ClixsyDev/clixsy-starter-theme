@@ -98,6 +98,7 @@ module.exports = {
         hero: '658px',
       },
       inset: {
+        '7%': '7%',
         '11%': '11%',
         '17%': '17%',
         '25%': '25%',
@@ -107,6 +108,9 @@ module.exports = {
         '50%': '50%',
         '57%': '57%',
         '58%': '58%',
+      },
+      content: {
+        'content-dedicat': 'url("/assets/img/quote_dedicated.png")',
       },
     },
     container: {
