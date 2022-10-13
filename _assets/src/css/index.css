@@ -3,6 +3,7 @@
 @import './_footer.css';
 @import './_bio-page.css';
 @import './_awards-slider.css';
+@import './_about-us.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
 @tailwind base;
@@ -43,6 +44,10 @@ body.logged-in {
 
 h2 span {
   color: #69be26;
+}
+
+h1 span {
+  color: white;
 }
 
 

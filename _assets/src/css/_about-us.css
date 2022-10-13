@@ -1,0 +1,7 @@
+@tailwind base;
+
+@layer {
+    .background-image-about-us {
+        @apply bg-[url('../../../assets/img/background-about.jpg')] bg-no-repeat bg-cover;
+    }
+}

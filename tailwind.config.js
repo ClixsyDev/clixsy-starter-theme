@@ -45,6 +45,7 @@ module.exports = {
       },
       colors: {
         kennySmoke: '#A5ACAF',
+        kennySmokeSecond: '#F3F3F3',
         kennyGreen: '#69BE26',
         kennyBlue: '#021A33',
         kennyWhite: '#FFFEFE',
@@ -109,7 +110,19 @@ module.exports = {
       },
       content: {
         'content-dedicat': 'url("/assets/img/quote_dedicated.png")',
+        'content-about-before': 'url("/assets/img/about-quote-before.png")',
+        'content-about-after': 'url("/assets/img/about-quote-after.png")',
       },
+      height: {
+        'about-us': '900px',
+      },
+      dropShadow: {
+        '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
+        '4xl': [
+            '0 35px 35px rgba(0, 0, 0, 0.25)',
+            '0 45px 65px rgba(0, 0, 0, 0.15)'
+        ]
+      }
     },
     container: {
       center: true,
