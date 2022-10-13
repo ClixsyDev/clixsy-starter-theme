@@ -1,6 +1,6 @@
 <div class="py-16 background-image">
     <div class="container">
-        <h2 class="text-kennyBlue font-medium text-5xl text-center leading-tight pb-4">In The <span>Community</span></h2>
+        <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4">In The <span>Community</span></h2>
         <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <div class="w-21/24 m-auto text-lg mt-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
