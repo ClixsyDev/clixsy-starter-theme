@@ -25,6 +25,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex items-center relative mdt:justify-center">
                 <?php if ($personal_banner_design_one__persone) { ?>
                     <div class="z-[1] xxl:w-14/24 xl:w-12/24 mdt:w-17/24 md:w-21/24 sm:w-full">
+                        
                         <?php echo wp_get_attachment_image($personal_banner_design_one__persone, 'full') ?>
                     </div>
                 <?php } ?>
