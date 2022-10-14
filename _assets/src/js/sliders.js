@@ -91,7 +91,8 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
   new Glide(grSlider, {
     perView: 3,
     type: 'carousel',
-    autoplay: 3000,
+    autoplay: 5000,
+    gap: 0,
     breakpoints: {
       1100: {
         perView: 2

@@ -55,7 +55,7 @@
                 </div>
                 <div class="glide__arrows" data-glide-el="controls">
                     <button class="glide__arrow glide__arrow--left absolute top-52 left-0 lg:top-36 md:top-80 md:-left-[2%] xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png"></button>
-                    <button class="glide__arrow glide__arrow--right absolute top-52 right-7 md:-right-[2%] lg:top-36 md:top-80 xs:top-[46%]" data-glide-dir=">"><img class="w-9/12 xs:h-5" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
+                    <button class="glide__arrow glide__arrow--right absolute top-52 right-7 md:-right-[2%] lg:top-36 md:top-80 xs:top-[46%]" data-glide-dir="&gt;"><img class="w-9/12 xs:h-5" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
                 </div>
             </div> 
         </div>

@@ -66,6 +66,19 @@ if (function_exists('acf_add_local_field_group')) {
                 'preview_size' => 'thumbnail',
             ),
             array(
+                'key' => 'welcome_hero__contact_form_title',
+                'name' => 'welcome_hero__contact_form_title',
+                'type' => 'text',
+                'label' => 'Form title',
+                'instructions' => 'If you wrap words in <b>span</b> tag words will be highlighted with accent color',
+            ),
+            array(
+                'key' => 'welcome_hero__contact_form_description',
+                'name' => 'welcome_hero__contact_form_description',
+                'type' => 'textarea',
+                'label' => 'Form description',
+            ),
+            array(
                 'key' => 'welcome_hero__contact_form_select',
                 'name' => 'welcome_hero__contact_form_select',
                 'label' => 'Select form',
@@ -81,9 +94,10 @@ if (function_exists('acf_add_local_field_group')) {
             ),
             array(
                 'key' => 'welcome_hero__contact_running_repeater',
-                'label' => 'welcome_hero__contact_running_repeater',
-                'name' => 'Running items',
+                'name' => 'welcome_hero__contact_running_repeater',
+                'label' => 'Running line items',
                 'type' => 'repeater',
+                'layout' => 'table',
                 'sub_fields' => array(
                     array(
                         'key' => 'field_6345f20f58b9c',
@@ -98,6 +112,7 @@ if (function_exists('acf_add_local_field_group')) {
                         'type' => 'image',
                         'return_format' => 'id',
                         'preview_size' => 'thumbnail',
+                        'library' => 'all',
                     ),
                 ),
             ),

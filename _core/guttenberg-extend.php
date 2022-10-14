@@ -182,3 +182,16 @@ function theme_enqueue_styles()
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
+
+
+add_filter( 'block_categories_all' , function( $categories ) {
+
+    // Adding a new category.
+	$categories[] = array(
+		'slug'  => 'clixsy',
+		'title' => 'Clixsy blocks'
+	);
+
+	return array_reverse($categories);
+} );
+

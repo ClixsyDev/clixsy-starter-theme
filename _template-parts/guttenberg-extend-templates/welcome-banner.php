@@ -1,6 +1,6 @@
 <div class="welcome_banner relative h-[780px] 2xl:h-[560px] mdt:h-auto">
     <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/welcome_bg.jpg" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
-    <div class="container relative z-10 flex flex-col h-full justify-center items-end relative mdt:items-center mdt:py-4">
+    <div class="container relative z-10 flex flex-col h-full justify-center items-end  mdt:items-center mdt:py-4">
         <div class="flex flex-col items-center">
             <div class="flex flex-col mb-16 items-center text-kennyBlue lg:mb-10">
                 <div class="relative text-3xl leading-tight 

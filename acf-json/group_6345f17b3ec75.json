@@ -3,10 +3,10 @@
     "title": "Testing fields",
     "fields": [
         {
-            "key": "field_6345f20558b9b",
-            "label": "Repeater",
-            "name": "repeater",
-            "type": "repeater",
+            "key": "field_63489704e8f21",
+            "label": "color example",
+            "name": "color_example",
+            "type": "color_picker",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,56 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_6345f20f58b9c",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_6345f21458b9d",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                }
-            ]
+            "default_value": ""
         }
     ],
     "location": [
@@ -72,7 +23,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/welcome-banner--contact-new"
+                "value": "acf\/blog-button"
             }
         ]
     ],
@@ -84,5 +35,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1665528988
+    "modified": 1665701652
 }

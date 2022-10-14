@@ -7,6 +7,7 @@
 @import './_awards-slider.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
+@import './components/_headings.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,27 +25,14 @@
   }
 }
 
-/* 
-body {
-  color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
-  border-bottom: 1px solid var(--link-color);
-
-  &:hover {
-    color: $accent-color;
-    border-bottom: 1px solid var(--accent-color);
-  }
-} */
-
 body.logged-in {
   margin-top: 0px !important;
 }
 
-h2 span {
-  color: #69be26;
+.span-change_color_1 {
+  span {
+    @apply text-kennyBlue;
+  }
 }
 
 

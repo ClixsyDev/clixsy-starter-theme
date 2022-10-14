@@ -54,7 +54,7 @@ $image = get_field('image');
                     <?php } ?>
                     <?php if ($faq_repeater_hidden) { ?>
                         <div class="text-end font-avenir font-bold text-xl pt-7">
-                            <a href="" class="more-btn">+more</a>
+                            <a href="" class="more-btn">+ read more...</a>
                         </div>
                     <?php } ?>
                 </div>

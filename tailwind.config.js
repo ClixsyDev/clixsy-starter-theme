@@ -42,6 +42,7 @@ module.exports = {
       },
       boxShadow: {
         siteWide: '0px 3px 6px rgba(0, 0, 0, 0.16)',
+        reviews: '3px 3px 15px rgba(141, 141, 141, 0.47)',
       },
       colors: {
         kennySmoke: '#A5ACAF',
@@ -90,7 +91,6 @@ module.exports = {
         '22/24': '91.666666667%',
         '23/24': '95.833333333%',
         '24/24': '100%',
-       
       },
       height: {
         hero: '658px',
@@ -124,9 +124,12 @@ module.exports = {
     },
     plugins: [
       function ({ addVariant }) {
-          addVariant('child', '& > *');
-          addVariant('child-hover', '& > *:hover');
+        addVariant('child', '& > *');
+        addVariant('child-hover', '& > *:hover');
       },
     ],
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
