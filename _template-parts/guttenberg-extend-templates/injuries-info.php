@@ -8,7 +8,7 @@ $description = get_field('description');
     <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/verdicts_bg.svg" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
     <div class="container relative">
         <?php if ($title) { ?>
-            <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
+            <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
         <?php } ?>
         <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <?php if ($subtitle) { ?>

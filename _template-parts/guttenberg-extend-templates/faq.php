@@ -6,7 +6,7 @@ $image = get_field('image');
 
 <div class="py-24">
     <div class="container">
-        <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?= get_field('title') ?></h2>
+        <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= get_field('title') ?></h2>
         <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <div class="flex justify-center gap-2 w-11/12 m-auto md:block">
             <?php if ($image) { ?>
@@ -21,7 +21,7 @@ $image = get_field('image');
                             <div class="mt-1.5 faq-block relative">
                                 <div>
                                     <?php if ($item['title']) { ?>
-                                        <div class="title-faq text-headings_second flex justify-between relative bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
+                                        <div class="title-faq text-headings_second flex justify-between relative bg-process_smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
                                             <h3><?php echo $item['title'] ?></h3>
                                         </div>
                                     <?php } ?>

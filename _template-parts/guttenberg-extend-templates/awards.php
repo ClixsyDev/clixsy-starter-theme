@@ -1,39 +1,21 @@
+<?php 
+$fields = get_fields();
+?>
 <div class="bg-headings px-4 pt-10 pb-8 ">
-    <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">A law firm dedicated to <span class=" text-accent">helping people.</span></h2>
+    <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl"><?= $fields['title'] ?></h2>
     <hr class="bg-accent border-none mx-auto h-1 w-[596px] max-w-full mb-6">
-    <div class="awards_slider glide relative">
+    <div class="awards_slider glide relative max-w-[1920px] mx-auto">
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides overflow-visible flex justify-around gap-3 items-center">
-                <div class="glide__slide">
-                    <a class="h-24 w-full mx-auto flex justify-center" href="http://thenationaltriallawyers.org" target="_blank">
-                        <img class="h-[98px] w-full object-contain mx-auto" alt="The National Trial Lawyers" src="https://thenationaltriallawyers.org/images/NTL-top-100-member-seal.png" width="75" height="75">
-                    </a>
-                </div>
-                <div class="glide__slide">
-                    <a class="h-24 w-full mx-auto flex justify-center" href="https://www.expertise.com/la/lafayette/car-accident-lawyers" style="display:inline-block; border:0;" />
-                    <img class="h-[98px] w-full object-contain mx-auto" width="200" height="160" src="https://res.cloudinary.com/expertise-com/image/upload/f_auto,fl_lossy,q_auto/w_auto/remote_media/awards/la_lafayette_car-accident-lawyers_2022_inverse.svg" alt="Top Car Accident Lawyer in Lafayette" />
-                    </a>
-                </div>
-                <div class="glide__slide">
-                    <a class="h-24 w-full mx-auto flex justify-center" href="https://www.bbb.org/us/la/lafayette/profile/personal-injury-lawyer/kenny-habetz-injury-law-1045-90022465/#sealclick" target="_blank" rel="nofollow">
-                        <img class="h-[98px] w-full object-contain mx-auto" src="https://seal-acadiana.bbb.org/seals/blue-seal-120-70-bbb-90022465.png" style="border: 0;" alt="Kenny Habetz Injury Law BBB Business Review" />
-                    </a>
-                </div>
-                <div class="glide__slide">
-                    <a class="h-24 w-full mx-auto flex justify-center" href="https://www.expertise.com/la/lafayette/personal-injury-attorney" style="display:inline-block; border:0;" />
-                    <img class="h-[98px] w-full object-contain mx-auto" width="200" height="160" src="https://res.cloudinary.com/expertise-com/image/upload/f_auto,fl_lossy,q_auto/w_auto/remote_media/awards/la_lafayette_personal-injury-attorney_2022_inverse.svg" alt="Top Personal Injury Lawyer in Lafayette" />
-                    </a>
-                </div>
-                <div class="glide__slide">
-                    <a class="h-24 w-full mx-auto flex justify-center" href="http://thenationaltriallawyers.org" target="_blank">
-                        <img class="h-[98px] w-full object-contain mx-auto" alt="The National Trial Lawyers" src="https://thenationaltriallawyers.org/images/NTL-top-40-40-member.png" width="75" height="75">
-                    </a>
-                </div>
-                <div class="glide__slide">
-                    <a class="h-24 w-full mx-auto flex justify-center" href="https://www.expertise.com/la/lafayette/workers-comp-lawyer" style="display:inline-block; border:0;" />
-                        <img class="h-[98px] w-full object-contain mx-auto" width="200" height="160" src="https://res.cloudinary.com/expertise-com/image/upload/f_auto,fl_lossy,q_auto/w_auto/remote_media/awards/la_lafayette_workers-comp-lawyer_2022_inverse.svg" alt="Top Workers Compensation Attorney in Lafayette" />
-                    </a>
-                </div>
+                <?php 
+                foreach ($fields['awards_items'] as $item) {
+                    ?>
+                    <div class="glide__slide">
+                        <?= $item['award_html'] ?>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>

@@ -1,12 +1,12 @@
 <?php
 $title = get_field('title'); 
-$testimonials = get_field('testimonials');
+$testimonials = get_field('testimonials_items');
 ?>
 
 <div class="py-24">
     <div class="container">
         <?php if ($title) { ?>
-            <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
+            <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <?php } ?>
         <div class="testmonialsSlider glide relative">
