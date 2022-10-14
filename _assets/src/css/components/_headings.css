@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  h2 span {
+    color: #69be26;
+  }
+  .form-heading {
+    @apply text-white text-center text-[40px] mdt:text-4xl md:text-[28px] sm:text-2xl my-10 sm:my-5;
+    span {
+      color: #69be26;
+    }
+  }
+}

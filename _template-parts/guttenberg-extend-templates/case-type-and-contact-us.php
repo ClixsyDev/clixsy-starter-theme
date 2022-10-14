@@ -56,7 +56,7 @@
         </div>
         <div class="w-full bg-[#C0C4C7] mt-[400px]">
             <div class="container grid">
-                <div class="w-[65%] md:w-full mx-auto inline-block -mt-72 bg-headings_secondThird p-11 2xl:p-6">
+                <div class="w-[65%] md:w-full mx-auto inline-block -mt-72 bg-headings_second p-11 2xl:p-6">
                     <div class=" text-white text-xl leading-tight contact-page__form ">
                         <p class=" text-4xl 2xl:text-3xl pb-5 font-bold">How can Kenny <span class="text-accent">help?</span></p>
                         <p class="pb-5">Tell us a little about what happened, and a representative will contact you soon to listen to your story and review your case for free.</p>
@@ -98,7 +98,7 @@
                 </div>
 
             </div>
-            <div class="w-[35%] 2xl:w-[45%] bg-headings_secondThird p-11 2xl:p-6">
+            <div class="w-[35%] 2xl:w-[45%] bg-headings_second p-11 2xl:p-6">
                 <div class=" text-white text-xl leading-tight contact-page__form ">
                     <p class=" text-4xl 2xl:text-3xl pb-5 font-bold">How can Kenny <span class="text-accent">help?</span></p>
                     <p class="pb-5">Tell us a little about what happened, and a representative will contact you soon to listen to your story and review your case for free.</p>

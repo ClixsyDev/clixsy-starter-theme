@@ -172,7 +172,6 @@ function phillips_register_acf_block_types()
 					'mode' => 'preview',
 					'data' => array(
 						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
-						$faq_repeater = get_field('faq_repeater')
 					),
 				)
 			)

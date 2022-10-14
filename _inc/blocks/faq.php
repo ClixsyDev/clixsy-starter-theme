@@ -15,7 +15,7 @@ function register_faq()
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
-                'name'            => 'faq',
+                'name'            => 'faq_design_one',
                 'title'           => __('FAQ', 'clixsy'),
                 'description'	  => __('FAQ', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/faq.php',
@@ -24,7 +24,7 @@ function register_faq()
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords' 		  => array('welcome', 'banner'),
+                'keywords' 		  => array('faq', 'questions', 'answers'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -49,7 +49,7 @@ if (function_exists('acf_add_local_field_group')) {
                 array(
                     'param' => 'block',
                     'operator' => '==',
-                    'value' => 'acf/faq',
+                    'value' => 'acf/faq_design_one',
                 ),
             ),
         ),

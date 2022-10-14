@@ -29,8 +29,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="">
             <?php main_menu(); ?>
             <div class="menu-row-wrapper lg:hidden">
-                <a href="<?php echo home_url('/') ?>" class="logo-link-wrapper">
-                    <img src="<?php echo get_template_directory_uri() ?>/_assets/public/images/logo.webp" alt="" class="block w-full h-auto transform transition-all ">
+                <a href="<?php echo home_url('/') ?>" class="logo-link-wrapper hidden">
+                    <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="" class="block w-full h-auto transform transition-all ">
                 </a>
                 <?php wp_nav_menu([
                     'menu'                 => 'Main Menu',
@@ -56,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="ico-c close-menu"></span>
                 </button>
                 <a href="<?php echo home_url('/') ?>">
-                    <img src="<?php echo get_template_directory_uri() ?>/_assets/public/images/logo.webp" alt="" class="block w-20 h-auto transform transition-all my-0 mx-auto mobile-logo">
+                    <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="" class="block w-20 h-auto transform transition-all my-0 mx-auto mobile-logo">
                 </a>
             </div>
             <div class="flex justify-center items-center flex-col text-white font-avenir gap-2 ">

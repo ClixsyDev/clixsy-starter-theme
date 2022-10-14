@@ -572,8 +572,8 @@ let btnMore = ()=>{
         if (btn) btn.addEventListener("click", ()=>{
             hiddenBlock.classList.toggle("hidden");
             event.preventDefault();
-            if (hiddenBlock.classList.contains("hidden")) btn.textContent = "+more";
-            else btn.textContent = "less";
+            if (hiddenBlock.classList.contains("hidden")) btn.textContent = "read more...";
+            else btn.textContent = "show less...";
         });
     };
 };
@@ -581,11 +581,11 @@ btnMore();
 let btnMoreEducation = ()=>{
     let hiddenBlock = document.querySelector(".hidden-text-education");
     let btn = document.querySelector(".more-btn-education");
-    btn.addEventListener("click", ()=>{
+    if ((0, _utils.ifSelectorExist)(btn) && (0, _utils.ifSelectorExist)(hiddenBlock)) btn.addEventListener("click", ()=>{
         hiddenBlock.classList.toggle("hidden");
         event.preventDefault();
-        if (hiddenBlock.classList.contains("hidden")) btn.textContent = "+more";
-        else btn.textContent = "less";
+        if (hiddenBlock.classList.contains("hidden")) btn.textContent = "read more...";
+        else btn.textContent = "show less...";
     });
 };
 btnMoreEducation();
@@ -1030,7 +1030,8 @@ const grSlider = ".google_reviews_slider";
 if (document.querySelector(grSlider) != undefined && document.querySelector(grSlider) != null) new (0, _glideDefault.default)(grSlider, {
     perView: 3,
     type: "carousel",
-    autoplay: 3000,
+    autoplay: 5000,
+    gap: 0,
     breakpoints: {
         1100: {
             perView: 2
