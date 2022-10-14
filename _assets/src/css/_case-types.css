@@ -11,7 +11,7 @@
     }
     
     .contact-page__hero__form-wrapper {
-        @apply bg-kennyBlueSecond text-white relative z-10 top-14 mdt:-top-36  px-8 w-1/3 2xl:w-[65%] mdt:w-[90%] sm:w-full;
+        @apply bg-headings text-white relative z-10 top-14 mdt:-top-36  px-8 w-1/3 2xl:w-[65%] mdt:w-[90%] sm:w-full;
     }
     
     

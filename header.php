@@ -15,37 +15,7 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-TF8CHB6');</script> -->
     <!-- End Google Tag Manager -->
-    <style>
-        <?php $theme_colors = get_field('theme_colors', 'option');
-        if ($theme_colors) {
-            foreach ($theme_colors as $color) {
-                ?>
-                .bg-<?= $color['name'] ?> {
-                    background-color: <?= $color['color'] ?> !important;
-                }
-                .text-<?= $color['name'] ?> {
-                    color: <?= $color['color'] ?> !important;
-                }
-                <?php
-            }
-        }
-        $site_colors = get_field('site_colors', 'option');
-        if ($site_colors) {
-            foreach ($site_colors as $color_name => $color_value) {
-                ?>
-                .bg-<?= $color_name ?> {
-                    background-color: <?= $color_value ? $color_value : '#fff' ?> !important;
-                }
-                .text-<?= $color_name ?> {
-                    color: <?= $color_value ? $color_value : '#fff' ?> !important;
-                }
-                <?php
-            }
-        }
-        ?>
-    </style>
 </head>
-<?php var_dump($site_colors); ?>
 <body <?php body_class('font-helvetica body'); ?>>
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"

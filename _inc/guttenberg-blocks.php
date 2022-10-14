@@ -54,54 +54,20 @@ foreach ($files as $file) {
 /**
  * Register Gutenberg Block with ACF
  */
+
+require_once('blocks/welcome-banner.php');
+require_once('blocks/awards.php');
+require_once('blocks/how-can-help.php');
+require_once('blocks/cta.php');
+require_once('blocks/customer-service.php');
+require_once('blocks/start-process-today.php');
+require_once('blocks/habetz-info.php');
+require_once('blocks/testimonials.php');
+require_once('blocks/cases-we-handle.php');
+require_once('blocks/injuries-info.php');
+
 function phillips_register_acf_block_types()
 {
-
-	acf_register_block_type(
-		array(
-			'name'            => 'welcome-banner',
-			'title'           => __('Welcome Banner', 'clixsy'),
-			'description'	  => __('Welcome Banner', 'clixsy'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'supports' => array(
-				'color' => true
-			),
-			'keywords' 		  => array('welcome', 'banner'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
-					),
-				)
-			)
-		)
-	);
-
-	acf_register_block_type(
-		array(
-			'name'            => 'awards',
-			'title'           => __('Awards', 'clixsy'),
-			'description'	  => __('Awards', 'clixsy'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/awards.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'supports' => array(
-				'color' => true
-			),
-			'keywords' 		  => array('awards'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
-					),
-				)
-			)
-		)
-	);
 
 	acf_register_block_type(
 		array(
@@ -115,75 +81,6 @@ function phillips_register_acf_block_types()
 				'color' => true
 			),
 			'keywords' 		  => array('verdicts'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
-					),
-				)
-			)
-		)
-	);
-
-	acf_register_block_type(
-		array(
-			'name'            => 'how-can-help',
-			'title'           => __('How can help', 'clixsy'),
-			'description'	  => __('How can help', 'clixsy'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/how-can-help.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'supports' => array(
-				'color' => true
-			),
-			'keywords' 		  => array('How', 'can', 'help'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
-					),
-				)
-			)
-		)
-	);
-
-	acf_register_block_type(
-		array(
-			'name'            => 'cta',
-			'title'           => __('CTA', 'clixsy'),
-			'description'	  => __('CTA', 'clixsy'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/cta.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'supports' => array(
-				'color' => true
-			),
-			'keywords' 		  => array('cta'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
-					),
-				)
-			)
-		)
-	);
-
-	acf_register_block_type(
-		array(
-			'name'            => 'customer-service',
-			'title'           => __('Customer Service', 'clixsy'),
-			'description'	  => __('Customer Service', 'clixsy'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/customer-service.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'supports' => array(
-				'color' => true
-			),
-			'keywords' 		  => array('customer', 'service'),
 			'example'  => array(
 				'attributes' => array(
 					'mode' => 'preview',
@@ -261,69 +158,6 @@ function phillips_register_acf_block_types()
 		)
 	);
 
-
-	acf_register_block_type(
-		array(
-			'name'            => 'start-process-today',
-			'title'           => __('Start process today', 'phillips'),
-			'description'	  => __('Start process today blocks', 'phillips'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/start-process-today.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
-					),
-				)
-			)
-		)
-	);
-
-
-	acf_register_block_type(
-		array(
-			'name'            => 'habetz-info',
-			'title'           => __('Habetz info', 'phillips'),
-			'description'	  => __('Habetz info', 'phillips'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/habetz-info.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
-					),
-				)
-			)
-		)
-	);
-
-
-	acf_register_block_type(
-		array(
-			'name'            => 'injures-info',
-			'title'           => __('Injures info', 'phillips'),
-			'description'	  => __('Injures info', 'phillips'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/injures-info.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
-					),
-				)
-			)
-		)
-	);
-
 	acf_register_block_type(
 		array(
 			'name'            => 'faq',
@@ -345,27 +179,8 @@ function phillips_register_acf_block_types()
 		)
 	);
 
-	acf_register_block_type(
-		array(
-			'name'            => 'testimonials',
-			'title'           => __('Testimonials', 'phillips'),
-			'description'	  => __('Testimonials', 'phillips'),
-			'render_template' => '_template-parts/guttenberg-extend-templates/testimonials.php',
-			'icon'            => 'groups',
-			'category'        => 'clixsy',
-			'keywords' 		  => array('jeffrey', 'verdicts', 'Settlements'),
-			'example'  => array(
-				'attributes' => array(
-					'mode' => 'preview',
-					'data' => array(
-						'preview_image' => get_stylesheet_directory_uri() . '/_assets/public/images/guttenberg-previews/guttenberg-verdicts-preview.png',
-						$faq_repeater = get_field('faq_repeater')
-					),
-				)
-			)
-		)
-	);
 }
 
 
 add_action('acf/init', 'phillips_register_acf_block_types');
+

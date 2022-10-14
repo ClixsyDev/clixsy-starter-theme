@@ -49,7 +49,7 @@
 }
 
 .sub-menu.lvl-1 {
-  @apply absolute p-0 bg-accent lg:bg-semiblue;
+  @apply absolute p-0 bg-accent lg:bg-bg_second;
   top: 100%;
   min-width: 300px;
   left: -5px;
@@ -84,7 +84,7 @@
 }
 
 .sub-menu.lvl-2 {
-  @apply absolute p-0 bg-semiblue;
+  @apply absolute p-0 bg-bg_second;
   top: -11px;
   min-width: 300px;
   left: 100%;

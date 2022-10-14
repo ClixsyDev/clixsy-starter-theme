@@ -1,3 +1,4 @@
+const colors = require('./tailwind-colors');
 module.exports = {
   content: ['./clixsy_src/**/*.{js,ts,jsx,tsx}', '**/*.php'],
   corePlugins: {
@@ -43,28 +44,7 @@ module.exports = {
       boxShadow: {
         siteWide: '0px 3px 6px rgba(0, 0, 0, 0.16)',
       },
-      colors: {
-        kennySmoke: '#A5ACAF',
-        kennyGreen: '#69BE26', // bg-accent
-        kennyBlue: '#021A33', // bg-headings_second
-        kennyBlueSecond: '#002244', //bg-headings
-        kennyBlueThird: '#032241', //bg-headings
-        kennyBlueFourth: '#001A34', //bg-headings_second
-        kennyGrayText: '#024',
-        smoke: '#f4f2f2', // bg-smoke
-        bordercolor: '#f0eded',
-        semiWhite: '#fdfdfd',
-        semiblue: '#264c6d',
-        darkblue: '#000261',
-        accent: '#041e42',
-        reviewText: '#707070',
-        yellow: '#ffe900',
-        lightBlueOpacity: 'rgba(255, 255, 255, 0.1)',
-        whiteOpacity: 'rgba(255, 255, 255, 0.9)',
-        whiteOpacitySecond: 'rgba(255, 254, 254, 0.62)',
-        caseSubtitle: 'rgba(4, 30, 66, 0.28)',
-        kennyGray: 'rgba(165, 172, 175, 0.7)',
-      },
+      colors: colors,
       width: {
         '1/24': '4.1666667%',
         '2/24': '8.3333333%',
@@ -129,4 +109,4 @@ module.exports = {
       },
     ],
   },
-};
+}

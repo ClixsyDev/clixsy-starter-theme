@@ -8,3 +8,45 @@ License: GNU General Public License V2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: starter
 */
+
+.how_can_help_form form input:not([type="submit"]),
+.how_can_help_form form textarea {
+    width: 100%;
+    background: #fff;
+    font-size: 17px;
+    text-align: left;
+    color: #707070;
+    padding: 10px 15px;
+}
+.how_can_help_form form textarea.wpcf7-not-valid,
+.how_can_help_form form input:not([type="submit"]).wpcf7-not-valid {
+    border: 3px solid #da2020;
+}
+.how_can_help_form form textarea {
+    height: 140px;
+}
+.how_can_help_form form input:not([type="submit"]) {
+    height: 45.8px;
+    display: flex;
+    align-items: center;
+}
+.how_can_help_form form p.disclaimer {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: left;
+    color: #fff;
+    margin: 23px 0 18px;
+}
+.how_can_help_form form input[type="submit"] {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    padding: 8px 35px;
+    border-radius: 21.58px;
+    background: #69be26;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+}
