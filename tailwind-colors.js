@@ -1,0 +1,1 @@
+module.exports = {smoke: '#a5acaf', process_smoke: '#f4f2f2', white_opacity_zero_six: '#fffefe', accent: '#69BE26', accent_hover: '#69d62a', accent_second: '#0f0f0f', accent_second_hover: '#e8e8e8', headings: '#024', headings_second: '#001a34', bg: '#777777', bg_second: '#c4c4c4', };

@@ -44,3 +44,29 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
+
+function save_tailwind_colors() {
+	$screen = get_current_screen();
+    
+    if (strpos($screen->id, "theme-general-settings") == true) {
+        $theme_colors = get_field('theme_colors', 'option');
+        $file_value = '';
+        $file_value = 'module.exports = {';
+        if ($theme_colors) {
+            foreach ($theme_colors as $color) {
+                $color_value = $color['color'] ? $color['color'] : '#FFFFFF';
+                $file_value .= $color['name'] . ": '" . $color_value . "', "; 
+            }
+        }
+        $site_colors = get_field('site_colors', 'option');
+        if ($site_colors) {
+            foreach ($site_colors as $color_name => $color_value) {
+                $color_value = $color_value ? $color_value : '#fff';
+                $file_value .= $color_name . ": '" . $color_value . "', "; 
+            }
+        }
+        $file_value .= '};';
+        file_put_contents(get_template_directory() . "/tailwind-colors.js",$file_value);
+    }
+}
+add_action('acf/save_post', 'save_tailwind_colors', 20);

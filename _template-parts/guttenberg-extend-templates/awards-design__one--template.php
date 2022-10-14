@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="max-w-[1920px] m-auto md:max-w-none">
             <div class="bg-cover py-10" style="background-image: url('<?php echo $awards_design_one__bg ?>');">
                 <?php if ($awards_design_one__title) { ?>
-                <h2 class="text-kennyBlueSecond text-2xl text-center font-bold font-avenir"><?php echo $awards_design_one__title ?></h2>
+                <h2 class="text-headings_second text-2xl text-center font-bold font-avenir"><?php echo $awards_design_one__title ?></h2>
                 <?php } ?>
                 <div class="awardsSlider glide relative mt-7 px-10 md:px-0">
                     <div class="glide__track" data-glide-el="track">
@@ -38,7 +38,7 @@ if ($is_preview && !empty($previewImage)) {
 
             <?php if ($awards_design_one__link) { ?>
                 <div class="text-center mt-12">
-                    <a href="<?php echo $awards_design_one__link['url'] ?>" class="font-avenir uppercase bg-kennyGreen text-white font-bold text-xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl"><?php echo $awards_design_one__link['title'] ?></a>
+                    <a href="<?php echo $awards_design_one__link['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl"><?php echo $awards_design_one__link['title'] ?></a>
                 </div>
             <?php } ?>
         </div>

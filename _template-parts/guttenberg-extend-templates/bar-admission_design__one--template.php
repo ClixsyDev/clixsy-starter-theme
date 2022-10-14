@@ -17,9 +17,9 @@ if ($is_preview && !empty($previewImage)) {
     <div class="py-12 lg:py-6">
         <div class="container">
             <?php if ($bar_admission_design_one__title) { ?>
-                <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?php echo $bar_admission_design_one__title ?></h2>
+                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $bar_admission_design_one__title ?></h2>
             <?php } ?>
-            <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+            <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class=" bg-gray-200 flex mt-24 lg:px-5 lg:gap-7 md:flex-col">
                 <?php if ($bar_admission_design_one__region) { ?>
                     <div class="mt-[-50px] w-12/24 md:w-full">

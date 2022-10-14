@@ -28,7 +28,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php echo wp_get_attachment_image($personal_banner_design_one__persone, 'full') ?>
                     </div>
                 <?php } ?>
-                <div class="bg-kennyGreen w-17/24 py-8 pb-16 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-50% sm:top-50% xs:top-[40%] xs:w-22/24">
+                <div class="bg-accent w-17/24 py-8 pb-16 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-50% sm:top-50% xs:top-[40%] xs:w-22/24">
                     <?php if ($personal_banner_design_one__title) { ?>
                         <h1 class="font-avenir font-bold uppercase text-white text-8xl leading-[80px] text-end xxl:text-6xl mdt:text-center mdt:text-5xl mdt:leading-none xs:text-3xl"><?php echo $personal_banner_design_one__title ?></h1>
                     <?php } ?>
@@ -38,11 +38,11 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($personal_banner_design_one__phone) { ?>
                         <div class="flex justify-end gap-5 mdt:justify-center mdt:py-2 xs:items-center">
                             <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/telephone-banner.png" class="object-contain xs:w-6" alt="">
-                            <h2 class="font-avenir text-kennyBlueFourth text-6xl text-end font-bold leading-[80px] xxl:text-5xl mdt:text-center mdt:text-4xl mdt:leading-none xs:text-2xl"><?php echo $personal_banner_design_one__phone ?></h2>
+                            <h2 class="font-avenir text-headings_secondFourth text-6xl text-end font-bold leading-[80px] xxl:text-5xl mdt:text-center mdt:text-4xl mdt:leading-none xs:text-2xl"><?php echo $personal_banner_design_one__phone ?></h2>
                         </div>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__mail) { ?>
-                        <a href="mailto:<?php echo $personal_banner_design_one__mail ?>" class="block font-avenir text-kennyBlueThird text-3xl font-bold text-end xxl:text-2xl mdt:text-center xs:text-xl"><?php echo $personal_banner_design_one__mail ?></a>
+                        <a href="mailto:<?php echo $personal_banner_design_one__mail ?>" class="block font-avenir text-headings_second text-3xl font-bold text-end xxl:text-2xl mdt:text-center xs:text-xl"><?php echo $personal_banner_design_one__mail ?></a>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__link) { ?>
                         <div class="text-end mt-5 xl:z-[1] mdt:text-center">

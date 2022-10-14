@@ -1,7 +1,7 @@
 :root {
   --bg-blue: #000261;
   --bg-darkblue: #041e42;
-  --bg-semiblue: #264c6d;
+  --bg-bg_second: #264c6d;
 }
 
 #main-menu-button {
@@ -224,7 +224,7 @@ nav.main-menu {
   }
 
   .level-3 {
-    background: var(--bg-semiblue);
+    background: var(--bg-bg_second);
     z-index: 5;
 
     li {
@@ -294,7 +294,7 @@ nav.main-menu.active-level-3 {
 }
 
 .level-3.open {
-  background: var(--bg-semiblue);
+  background: var(--bg-bg_second);
 }
 
 @media (max-width: 1200px) {

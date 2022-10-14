@@ -19,15 +19,15 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <section class="w-full pt-16 pb-20 font-avenir" style="background-image: url('<?php echo wp_get_attachment_image_url($location_design_one__background, 'full') ?>');">
         <div class="container">
-            <div class=" text-kennyBlueSecond text-5xl text-center relative pb-16">
+            <div class=" text-headings_second text-5xl text-center relative pb-16">
                 <?php if ($location_design_one__title) { ?>
                     <h2 class="font-bold"> <?php echo $location_design_one__title ?></h2>
                 <?php } ?>
-                <span class="bg-kennyGreen w-32 h-1 absolute left-0 right-0 mx-auto"></span>
+                <span class="bg-accent w-32 h-1 absolute left-0 right-0 mx-auto"></span>
             </div>
 
             <div class="flex flex-row mdt:flex-wrap justify-center w-full">
-                <div class="text-kennyBlueSecond text-4xl mdt:text-2xl mx-auto w-full  order-1 mdt:order-2 ">
+                <div class="text-headings_second text-4xl mdt:text-2xl mx-auto w-full  order-1 mdt:order-2 ">
                     <div class="w-[90%] mx-auto mdt:w-[80%] md:w-8/12 sm:w-full mdt:ml-0">
                         <p class="mb-6"><?php echo $location_design_one__description ?></p>
                         <?php if ($location_design_one__mail) { ?>

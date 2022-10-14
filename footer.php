@@ -9,7 +9,7 @@ $info_site = get_field('info_site', 'options');
 $bottom_links = get_field('bottom_links', 'options');
 ?>
 
-<footer class="pb-6 pt-40 bg-accent" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/img/background-footer.png')">
+<footer class="pb-6 pt-40 bg-headings" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/img/background-footer.png')">
     <div class="container">
         <div class="flex gap-64 items-center xl:flex-col xl:gap-10">
             <div class="flex pt-3">

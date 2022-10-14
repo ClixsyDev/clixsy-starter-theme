@@ -18,8 +18,8 @@ if ($is_preview && !empty($previewImage)) {
     <section class="pt-16 pb-28 sm:pb-16">
         <div class="container">
             <?php if ($education_design_one__title) { ?>
-                <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?php echo $education_design_one__title ?></h2>
-                <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $education_design_one__title ?></h2>
+                <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <div class="flex my-14 mdt:justify-center">
                 <div class="flex gap-12 justify-center lg:gap-0 mdt:flex-col">
@@ -33,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     <?php } ?>
                     <?php if ($education_design_one__description) { ?>
-                        <div class="w-14/24 border-l-4 border-kennyGreen pl-12 lg:pl-6 mdt:w-full mdt:hidden mdt:mt-5">
+                        <div class="w-14/24 border-l-4 border-accent pl-12 lg:pl-6 mdt:w-full mdt:hidden mdt:mt-5">
                             <div class="text-lg lg:text-base">
                                 <?php echo $education_design_one__description ?>
                             </div>
@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
             
             <?php if ($education_design_one__link) { ?>
             <div class="text-center mt-12">
-                <a href="<?php echo $education_design_one__link['url'] ?>" class="font-avenir uppercase bg-kennyGreen text-white font-bold text-xl py-2 px-12 rounded-full lg:py-3 lg:px-8 lg:text-base xs:text-2xl"><?php echo $education_design_one__link['title'] ?></a>
+                <a href="<?php echo $education_design_one__link['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-xl py-2 px-12 rounded-full lg:py-3 lg:px-8 lg:text-base xs:text-2xl"><?php echo $education_design_one__link['title'] ?></a>
             </div>
             <?php } ?>
         </div>

@@ -31,7 +31,7 @@ body.logged-in {
 
 .span-change_color_1 {
   span {
-    @apply text-kennyBlue;
+    @apply text-headings_second;
   }
 }
 
@@ -83,7 +83,7 @@ body.logged-in {
 }
 
 .glide__bullet--active {
-  @apply bg-kennyBlueSecond;
+  @apply bg-headings;
 }
 
 body.logged-in {
@@ -96,15 +96,15 @@ body.logged-in {
     [type='text'],
     [type='email'],
     [type='tel'] {
-      @apply focus:text-white  w-full h-12 py-4 pl-5 mb-3 mt-3 border-kennyBlueSecond border-2 focus:outline-none focus:border-kennyGreen active:border-kennyGreen;
+      @apply focus:text-white  w-full h-12 py-4 pl-5 mb-3 mt-3 border-headings border-2 focus:outline-none focus:border-accent active:border-accent;
     }
 
     textarea {
-      @apply focus:text-white w-full h-16  lg:h-28 pt-4 pl-5 mt-3 border-kennyBlueSecond border-2  focus:outline-none focus:border-white;
+      @apply focus:text-white w-full h-16  lg:h-28 pt-4 pl-5 mt-3 border-headings border-2  focus:outline-none focus:border-white;
     }
     
     [type='submit'] {
-      @apply my-6 mx-auto xl:mt-6 xl:mb-8 md:my-5 bg-kennyGreen w-64 rounded-full  h-16 xl:h-12 text-xl flex items-center justify-center hover:bg-kennyGreen hover:text-white font-avenir font-bold transition duration-300;
+      @apply my-6 mx-auto xl:mt-6 xl:mb-8 md:my-5 bg-accent w-64 rounded-full  h-16 xl:h-12 text-xl flex items-center justify-center hover:bg-accent hover:text-white font-avenir font-bold transition duration-300;
     }
 
     [type='text']::placeholder,

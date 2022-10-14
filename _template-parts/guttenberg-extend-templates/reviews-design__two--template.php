@@ -15,7 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="py-20 lg:py-16">
         <div class="container">
             <?php if ($reviews_design_two_title) { ?>
-                <h2 class="text-kennyBlue font-medium text-4xl text-center leading-tight pb-4"><?php echo $reviews_design_two_title ?></h2>
+                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $reviews_design_two_title ?></h2>
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <div class="testmonialsSlider glide relative">
@@ -30,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <div class="absolute -right-[10px] top-0">
                                         <div class="w-9/12 md:w-14/24">
                                             <svg class="block w-16" xmlns="http://www.w3.org/2000/svg" width="100.993" height="77.888" viewBox="0 0 100.993 77.888">
-                                                <path class="fill-kennyGreen" id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="matrix(-1, 0.017, -0.017, -1, 104.184, 81.293)" fill="#69be26" />
+                                                <path class="fill-accent" id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="matrix(-1, 0.017, -0.017, -1, 104.184, 81.293)" fill="#69be26" />
                                             </svg>
 
                                         </div>
@@ -40,7 +40,7 @@ if ($is_preview && !empty($previewImage)) {
                                     </div>
                                     <div class="absolute -left-[6%] top-0">
                                         <svg class="block w-16 " xmlns="http://www.w3.org/2000/svg" width="99.679" height="76.159" viewBox="0 0 99.679 76.159">
-                                            <path  class="fill-kennyGreen"id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
+                                            <path  class="fill-accent"id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
                                         </svg>
                                     </div>
                                     <div class="pb-14 text-lg leading-6 font-avenir font-normal">
@@ -69,7 +69,7 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                         <div class="glide__bullets" data-glide-el="controls[nav]">
                             <?php for ($i = 1; $i <= count($reviews_design_two_select); $i++) { ?>
-                                <button class="slider__bullet glide__bullet focus:border-none bg-kennySmoke focus:bg-darkOrange hover:bg-darkOrange w-7 h-1.5 rounded-none xs:h-1 xs:w-6" data-glide-dir="=<?php echo $i - 1 ?>"></button>
+                                <button class="slider__bullet glide__bullet focus:border-none bg-smoke focus:bg-darkOrange hover:bg-darkOrange w-7 h-1.5 rounded-none xs:h-1 xs:w-6" data-glide-dir="=<?php echo $i - 1 ?>"></button>
                             <?php } ?>
                         </div>
                         <div class="glide__arrows absolute left-[60%] top-11% w-max lg:left-55% md:left-57% xs:left-58%" data-glide-el="controls">
@@ -84,7 +84,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <?php if ($reviews_design_two_link) { ?>
                 <div class="text-center mt-10 lg:mt-8">
-                    <a href="<?php echo $reviews_design_two_link['url'] ?>" class="font-avenir bg-kennyGreen uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $reviews_design_two_link['title'] ?></a>
+                    <a href="<?php echo $reviews_design_two_link['url'] ?>" class="font-avenir bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $reviews_design_two_link['title'] ?></a>
                 </div>
             <?php } ?>
         </div>
