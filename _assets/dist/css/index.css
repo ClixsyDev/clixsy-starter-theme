@@ -6256,17 +6256,13 @@ img, video {
   background-color: rgb(196 196 196 / var(--tw-bg-opacity));
 }
 
+.bg-white\/60 {
+  background-color: #fff9;
+}
+
 .bg-white_opacity_zero_six {
   --tw-bg-opacity: 1;
   background-color: rgb(255 254 254 / var(--tw-bg-opacity));
-}
-
-.bg-white\/75 {
-  background-color: #ffffffbf;
-}
-
-.bg-white\/60 {
-  background-color: #fff9;
 }
 
 .bg-cover {
