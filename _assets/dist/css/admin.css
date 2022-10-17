@@ -6293,6 +6293,19 @@ h2 span {
   background-color: rgb(255 254 254 / var(--tw-bg-opacity));
 }
 
+.acf-block-preview .bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
+.acf-block-preview .bg-opacity-60 {
+  --tw-bg-opacity: .6;
+}
+
+.acf-block-preview .bg-opacity-70 {
+  --tw-bg-opacity: .7;
+}
+
 .acf-block-preview .bg-cover {
   background-size: cover;
 }

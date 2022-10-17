@@ -18,7 +18,7 @@ function register_welcome_banner__contact()
                 'name'            => 'welcome-banner--contact',
                 'title'           => __('Welcome hero with running line', 'clixsy'),
                 'description'      => __('Contact page version', 'clixsy'),
-                'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner__contact-template.php',
+                'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner__contact--template.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'keywords'           => array('welcome', 'hero', 'contact'),
