@@ -46,7 +46,7 @@ $testimonials = get_field('testimonials_items');
                     </div>
                     <div class="glide__bullets" data-glide-el="controls[nav]">
                         <?php for ($i = 1; $i <= count($testimonials); $i++) { ?>
-                            <button class="slider__bullet glide__bullet focus:border-none bg-kennySmoke focus:bg-darkOrange hover:bg-darkOrange w-7 h-1.5 rounded-none xs:h-1 xs:w-6" data-glide-dir="=<?php echo $i - 1 ?>"></button>
+                            <button class="slider__bullet glide__bullet focus:border-none bg-smoke focus:bg-darkOrange hover:bg-darkOrange w-7 h-1.5 rounded-none xs:h-1 xs:w-6" data-glide-dir="=<?php echo $i - 1 ?>"></button>
                         <?php } ?>
                     </div>
                     <div class="glide__arrows absolute left-[53%] top-11% w-max lg:left-55% md:left-57% xs:left-58%" data-glide-el="controls">

@@ -3,7 +3,7 @@ $fields = get_fields();
 ?>
 <div class="welcome_banner relative h-[780px] 2xl:h-[560px] mdt:h-auto">
     <img src="<?= wp_get_attachment_image_url( $fields['background_image'], 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
-    <div class="container relative z-10 flex flex-col h-full justify-center items-end relative mdt:items-center mdt:py-4">
+    <div class="container relative z-10 flex flex-col h-full justify-center items-end  mdt:items-center mdt:py-4">
         <div class="flex flex-col items-center">
             <div class="flex flex-col mb-16 items-center text-headings_second lg:mb-10 lg:px-3">
                 <div class="relative text-3xl leading-tight 

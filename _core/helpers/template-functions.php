@@ -67,7 +67,6 @@ function save_tailwind_colors() {
         }
         $file_value .= '};';
         file_put_contents(get_template_directory() . "/tailwind-colors.js",$file_value);
-        //file_put_contents(get_stylesheet_directory_uri() . "test.js","Hello World. Testing!");
     }
 }
 add_action('acf/save_post', 'save_tailwind_colors', 20);

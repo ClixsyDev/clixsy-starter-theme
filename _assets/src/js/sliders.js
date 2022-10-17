@@ -102,3 +102,30 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
     }
   }).mount();
 }
+
+const awardsSliderAbout = '.awardsSliderAbout';
+if (document.querySelector(awardsSliderAbout) != undefined && document.querySelector(awardsSliderAbout) != null) {
+  new Glide(awardsSliderAbout, {
+    perView: 8,
+    type: 'carousel',
+    autoplay: 2500,
+    breakpoints: {
+      540: {
+        perView: 4.5,
+      },
+    }
+  }).mount();
+}
+
+const communitySliderAbout = '.communitySliderAbout';
+if (document.querySelector(communitySliderAbout) != undefined && document.querySelector(communitySliderAbout) != null) {
+  new Glide(communitySliderAbout, {
+    perView: 2,
+    type: 'carousel',
+    breakpoints: {
+      540: {
+        perView: 1,
+      },
+    }
+  }).mount();
+}

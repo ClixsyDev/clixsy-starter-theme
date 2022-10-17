@@ -3,18 +3,18 @@
 @layer components {
   .btn {
     min-width: 290px;
-    @apply bg-yellow px-8 py-4 my-6 md:px-6 md:py-3 text-black  justify-center items-center transition-all duration-500 rounded-full text-center font-bold flex w-max text-xl;
+    @apply bg-accent px-8 py-4 my-6 md:px-6 md:py-3 text-black  justify-center items-center transition-all duration-500 rounded-full text-center font-bold flex w-max text-xl;
 
     @media (max-width: 540px) {
       min-width: 240px;
     }
 
-    &.yellow {
-      @apply bg-yellow;
+    &.accent {
+      @apply bg-accent;
     }
 
     &.white {
-      @apply bg-white border-2 border-yellow;
+      @apply bg-white border-2 border-accent;
     }
   }
 }

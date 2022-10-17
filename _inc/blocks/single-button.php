@@ -58,6 +58,7 @@ if (function_exists('acf_add_local_field_group')) {
                 'label' => 'Link',
                 'name' => 'button_link',
                 'return_format' => 'array',
+                'type' => 'link',
             ),
         )
     ));
