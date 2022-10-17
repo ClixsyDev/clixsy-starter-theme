@@ -1,6 +1,7 @@
 import mainMenu from './menu';
 import { getElement, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
+import Marquee from 'vanilla-marquee';
 
 ready(() => {
   mainMenu();
@@ -75,3 +76,18 @@ let btnMoreEducation = () => {
   }
 };
 btnMoreEducation();
+
+const marqueEl1 = document.getElementById('marquee');
+if (document.body.contains(marqueEl1)) {
+  const marqueOne = new Marquee(marqueEl1, {
+    css3easing: 'linear',
+    speed: window.innerWidth < 768 ? 60 : 100,
+    gap: 100,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+    duration: 5000,
+    startVisible: true,
+  });
+  marqueOne.resume();
+}

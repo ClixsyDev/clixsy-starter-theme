@@ -1,4 +1,4 @@
-<div class="bg-kennyBlue">
+<div class="bg-headings">
     <div class="container flex justify-evenly py-5">
         <div class="awardsSliderAbout glide relative px-10 md:px-0">
             <div class="glide__track" data-glide-el="track">
