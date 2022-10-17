@@ -108,7 +108,7 @@ if (document.querySelector(awardsSliderAbout) != undefined && document.querySele
   new Glide(awardsSliderAbout, {
     perView: 8,
     type: 'carousel',
-    // autoplay: 2500,
+    autoplay: 2500,
     breakpoints: {
       540: {
         perView: 4.5,
@@ -122,7 +122,6 @@ if (document.querySelector(communitySliderAbout) != undefined && document.queryS
   new Glide(communitySliderAbout, {
     perView: 2,
     type: 'carousel',
-    // autoplay: 2500,
     breakpoints: {
       540: {
         perView: 1,
