@@ -16,21 +16,26 @@
 	})(window,document,'script','dataLayer','GTM-TF8CHB6');</script> -->
     <!-- End Google Tag Manager -->
 </head>
+
 <body <?php body_class('font-helvetica body'); ?>>
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
+    <?php $logo = get_field('logo', 'options'); ?>
+
 
     <!-- testing mega menu -->
 
     <header class="bg-headings_second sticky top-0 w-full z-50 h-40 py-8">
         <div class="container flex justify-between items-center">
-            <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="">
+            <a href="<?php echo home_url() ?>">
+                <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => '']) ?>
+            </a>
             <?php main_menu(); ?>
             <div class="menu-row-wrapper lg:hidden">
                 <a href="<?php echo home_url('/') ?>" class="logo-link-wrapper hidden">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="" class="block w-full h-auto transform transition-all ">
+                    <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-full h-auto transform transition-all ']) ?>
                 </a>
                 <?php wp_nav_menu([
                     'menu'                 => 'Main Menu',
@@ -56,7 +61,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="ico-c close-menu"></span>
                 </button>
                 <a href="<?php echo home_url('/') ?>">
-                    <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="" class="block w-20 h-auto transform transition-all my-0 mx-auto mobile-logo">
+                    <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-20 h-auto transform transition-all my-0 mx-auto mobile-logo']) ?>
                 </a>
             </div>
             <div class="flex justify-center items-center flex-col text-white font-avenir gap-2 ">
