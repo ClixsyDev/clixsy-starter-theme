@@ -91,8 +91,7 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
   new Glide(grSlider, {
     perView: 3,
     type: 'carousel',
-    autoplay: 5000,
-    gap: 0,
+    autoplay: 3000,
     breakpoints: {
       1100: {
         perView: 2
@@ -100,6 +99,34 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
       768: {
         perView: 1
       }
+    }
+  }).mount();
+}
+
+const awardsSliderAbout = '.awardsSliderAbout';
+if (document.querySelector(awardsSliderAbout) != undefined && document.querySelector(awardsSliderAbout) != null) {
+  new Glide(awardsSliderAbout, {
+    perView: 8,
+    type: 'carousel',
+    // autoplay: 2500,
+    breakpoints: {
+      540: {
+        perView: 4.5,
+      },
+    }
+  }).mount();
+}
+
+const communitySliderAbout = '.communitySliderAbout';
+if (document.querySelector(communitySliderAbout) != undefined && document.querySelector(communitySliderAbout) != null) {
+  new Glide(communitySliderAbout, {
+    perView: 2,
+    type: 'carousel',
+    // autoplay: 2500,
+    breakpoints: {
+      540: {
+        perView: 1,
+      },
     }
   }).mount();
 }
