@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__page_icon = get_field('welcome_banner__page_icon');
 
 ?>
-    <div class="h-[900px] xl:h-[600px]" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__page_bg, 'full') ?>');">
+    <div class="h-[900px] xl:h-[600px] bg-cover" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__page_bg, 'full') ?>');">
         <div class="container h-full">
             <div class="flex flex-col items-center justify-center h-full">
                 <div class="flex flex-col gap-5 text-center bg-accent bg-opacity-70	 px-8 py-12 w-13/24 xl:w-16/24 mdt:w-18/24 md:w-21/24 sm:w-22/24 xs:py-8">
