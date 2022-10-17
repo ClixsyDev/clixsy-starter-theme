@@ -1030,13 +1030,34 @@ const grSlider = ".google_reviews_slider";
 if (document.querySelector(grSlider) != undefined && document.querySelector(grSlider) != null) new (0, _glideDefault.default)(grSlider, {
     perView: 3,
     type: "carousel",
-    autoplay: 5000,
-    gap: 0,
+    autoplay: 3000,
     breakpoints: {
         1100: {
             perView: 2
         },
         768: {
+            perView: 1
+        }
+    }
+}).mount();
+const awardsSliderAbout = ".awardsSliderAbout";
+if (document.querySelector(awardsSliderAbout) != undefined && document.querySelector(awardsSliderAbout) != null) new (0, _glideDefault.default)(awardsSliderAbout, {
+    perView: 8,
+    type: "carousel",
+    // autoplay: 2500,
+    breakpoints: {
+        540: {
+            perView: 4.5
+        }
+    }
+}).mount();
+const communitySliderAbout = ".communitySliderAbout";
+if (document.querySelector(communitySliderAbout) != undefined && document.querySelector(communitySliderAbout) != null) new (0, _glideDefault.default)(communitySliderAbout, {
+    perView: 2,
+    type: "carousel",
+    // autoplay: 2500,
+    breakpoints: {
+        540: {
             perView: 1
         }
     }
