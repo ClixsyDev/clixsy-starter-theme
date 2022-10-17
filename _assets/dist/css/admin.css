@@ -6092,6 +6092,10 @@ h2 span {
   gap: 2.75rem;
 }
 
+.acf-block-preview .gap-20 {
+  gap: 5rem;
+}
+
 .acf-block-preview .gap-12 {
   gap: 3rem;
 }
