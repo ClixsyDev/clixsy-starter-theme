@@ -34,6 +34,11 @@ body.logged-in {
     @apply text-headings_second;
   }
 }
+.span-change_color_2 {
+  span {
+    @apply block text-white;
+  }
+}
 
 
 .triangle {
