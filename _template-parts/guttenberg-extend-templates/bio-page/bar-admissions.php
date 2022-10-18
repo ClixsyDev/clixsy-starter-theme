@@ -2,7 +2,7 @@
     <div class="container">
         <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4">Bar <span>Admissions</span></h2>
         <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
-        <div class="bg-kennySmoke flex mt-32 lg:px-5 lg:gap-7 md:flex-col">
+        <div class="bg-smoke flex mt-32 lg:px-5 lg:gap-7 md:flex-col">
             <div class="mt-[-50px] w-12/24 md:w-full">
                 <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/bar-admissions-image.png" class="m-auto md:w-14/24" alt="">
             </div>

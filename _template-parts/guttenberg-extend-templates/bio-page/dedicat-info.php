@@ -14,13 +14,13 @@
                     <b>Simply put, I love to use my skills as a lawyer to make my client’s bad situation better.</b></p>
                     <p class="text-xl text-end font-avenir font-bold">-Kenny</p>
                 </div>
-                <div class="py-5 relative before:content-[''] before:bg-kennySmoke before:w-[280%] before:-left-[40%] before:top-0 before:h-full before:-z-[1] before:absolute mdt:before:h-[320%]">
+                <div class="py-5 relative before:content-[''] before:bg-smoke before:w-[280%] before:-left-[40%] before:top-0 before:h-full before:-z-[1] before:absolute mdt:before:h-[320%]">
                     <div class="gap-6 flex items-center lg:gap-3">
                         <div>
                             <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/hands.png" class="xxl:w-20/24" alt="">
                         </div>
                         <div class="w-16/24">
-                            <p class="font-avenir font-bold text-white text-2xl lg:text-lg">Habetz Law is a place where we prioritize customer satisfaction through <span class="text-headings_secondThird">clear process, collaborative work environment and client communication.</span> </p>
+                            <p class="font-avenir font-bold text-white text-2xl lg:text-lg">Habetz Law is a place where we prioritize customer satisfaction through <span class="text-headings_second">clear process, collaborative work environment and client communication.</span> </p>
                         </div>
                     </div>
                 </div>

@@ -50,6 +50,9 @@ function phillips_law_attorneys_cpt()
 		'rewrite' => array('slug' => 'videos'),
 	));
 
+
+
+
 	register_taxonomy('video_categories', 'videos', array(
 		"hierarchical" => true,
 		"label" => "Video Categories",

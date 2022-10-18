@@ -62,5 +62,13 @@ function admin_style()
         [],
         $version
     );
+     // Main Script
+     wp_enqueue_script(
+        'starter-script-admin',
+        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/js/main.js',
+        [],
+        $version,
+        true
+    );
 }
 add_action('admin_enqueue_scripts', 'admin_style');
