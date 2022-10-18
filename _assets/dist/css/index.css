@@ -5593,16 +5593,8 @@ img, video {
   visibility: visible;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .static {
   position: static;
-}
-
-.fixed {
-  position: fixed;
 }
 
 .absolute {
@@ -6123,10 +6115,6 @@ img, video {
 
 .grid {
   display: grid;
-}
-
-.contents {
-  display: contents;
 }
 
 .hidden {
