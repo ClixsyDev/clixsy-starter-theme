@@ -29,7 +29,7 @@ function register_cases_we_handle()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
+                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/cases_we_handle.png',
                         ),
                     )
                 )
