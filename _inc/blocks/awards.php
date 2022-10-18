@@ -15,9 +15,9 @@ function register_awards()
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
-                'name'            => 'awards',
-                'title'           => __('awards', 'clixsy'),
-                'description'      => __('awards', 'clixsy'),
+                'name'            => 'Awards',
+                'title'           => __('Awards', 'clixsy'),
+                'description'      => __('Awards', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/awards.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
@@ -29,7 +29,7 @@ function register_awards()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
+                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/awards.png',
                         ),
                     )
                 )
@@ -68,9 +68,18 @@ if (function_exists('acf_add_local_field_group')) {
                 'layout' => 'table',
                 'sub_fields' => array(
                     array(
-                        'key' => 'field_63486bf2bc65c',
-                        'label' => 'Award html',
-                        'name' => 'award_html',
+                        'key' => 'award_image',
+                        'label' => 'Award image',
+                        'name' => 'award_image',
+                        'type' => 'image',
+                        'return_format' => 'id',
+                        'preview_size' => 'medium',
+                        'library' => 'all',
+                    ),
+                    array(
+                        'key' => 'award_url',
+                        'label' => 'Award link',
+                        'name' => 'award_link',
                         'type' => 'textarea',
                     ),
                 ),

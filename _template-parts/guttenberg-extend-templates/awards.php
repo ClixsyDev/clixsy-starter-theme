@@ -1,5 +1,6 @@
 <?php 
 $fields = get_fields();
+var_dump($fields['awards_items']);
 ?>
 <div class="bg-headings px-4 pt-10 pb-8 ">
     <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl"><?= $fields['title'] ?></h2>
@@ -11,6 +12,9 @@ $fields = get_fields();
                 foreach ($fields['awards_items'] as $item) {
                     ?>
                     <div class="glide__slide">
+                        <a class="h-24 w-full mx-auto flex justify-center" href="<?= $item['award_link'] ?>" target="_blank">
+                            <img class="h-[98px] w-full object-contain mx-auto" src="<?= wp_get_attachment_image_url( $item['award_image'], 'full') ?>">
+                        </a>
                         <?= $item['award_html'] ?>
                     </div>
                     <?php
