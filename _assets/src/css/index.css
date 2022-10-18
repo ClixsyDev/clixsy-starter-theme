@@ -4,7 +4,6 @@
 
 @import './_footer.css';
 @import './_bio-page.css';
-@import './_awards-slider.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
 @import './components/_headings.css';
@@ -21,7 +20,7 @@
 
 @layer {
   .background-image {
-      @apply bg-[url('../../../assets/img/background-awards-slider.jpg')];
+    @apply bg-[url('../../../assets/img/background-awards-slider.jpg')];
   }
 }
 
@@ -34,7 +33,21 @@ body.logged-in {
     @apply text-headings_second;
   }
 }
+.span-change_color_2 {
+  span {
+    @apply block text-white;
+  }
+}
 
+.process_text_design__one {
+  span {
+    @apply font-bold text-accent;
+  }
+  b,
+  strong {
+    @apply text-headings;
+  }
+}
 
 .triangle {
   width: 0;
@@ -90,7 +103,6 @@ body.logged-in {
   margin-top: 20px;
 }
 
-
 @layer components {
   .contact-page__form {
     [type='text'],
@@ -102,7 +114,7 @@ body.logged-in {
     textarea {
       @apply focus:text-white w-full h-16  lg:h-28 pt-4 pl-5 mt-3 border-headings border-2  focus:outline-none focus:border-white;
     }
-    
+
     [type='submit'] {
       @apply my-6 mx-auto xl:mt-6 xl:mb-8 md:my-5 bg-accent w-64 rounded-full  h-16 xl:h-12 text-xl flex items-center justify-center hover:bg-accent hover:text-white font-avenir font-bold transition duration-300;
     }
@@ -127,5 +139,4 @@ body.logged-in {
       @apply text-sm;
     }
   }
-
 }
