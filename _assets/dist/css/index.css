@@ -1304,8 +1304,6 @@ img, video {
   }
 }
 
-
-
 .glide {
   width: 100%;
   box-sizing: border-box;
@@ -3841,6 +3839,8 @@ h2 span {
     margin-bottom: 0;
   }
 }
+
+
 
 *, :before, :after {
   box-sizing: border-box;

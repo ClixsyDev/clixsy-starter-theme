@@ -606,7 +606,7 @@ if (document.body.contains(marqueEl1)) {
     marqueOne.resume();
 }
 
-},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","vanilla-marquee":"aRzML","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
+},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","vanilla-marquee":"aRzML"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Main Menu
