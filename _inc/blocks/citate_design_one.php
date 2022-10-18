@@ -16,12 +16,12 @@ function register_citate_design__one()
         acf_register_block_type(
             array(
                 'name'            => 'citate-design-one',
-                'title'           => __('Slider with description', 'clixsy'),
-                'description'      => __('Design v1. One slide per scroll', 'clixsy'),
-                'render_template' => '_template-parts/guttenberg-extend-templates/citate_design__one--template.php',
+                'title'           => __('Citate', 'clixsy'),
+                'description'      => __('Design v1.', 'clixsy'),
+                'render_template' => '_template-parts/guttenberg-extend-templates/citate-design__one--template.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
-                'keywords'           => array('slider', 'description', 'image'),
+                'keywords'           => array('citate', 'quote', 'review'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -41,7 +41,7 @@ if (function_exists('acf_add_local_field_group')) :
     acf_add_local_field_group(
         array(
             'key' => $block_key . '16345f17b35',
-            'title' => 'Slider with description',
+            'title' => 'Community',
             'location' => array(
                 array(
                     array(
@@ -52,20 +52,20 @@ if (function_exists('acf_add_local_field_group')) :
                 ),
             ),
             'fields' => array(
-               array(
-               'key' => $block_key .'citate',
-               'name' => $block_key .'citate',
-               'type' => 'wysiwyg',
-               'label' => 'Citate',
-               'instructions' => '',
-               ),
-               array(
-               'key' => $block_key .'author',
-               'name' => $block_key .'author',
-               'type' => 'text',
-               'label' => 'Author',
-               'instructions' => '',
-               ),
+                array(
+                    'key' => $block_key . 'citate',
+                    'name' => $block_key . 'citate',
+                    'type' => 'wysiwyg',
+                    'label' => 'Citate',
+                    'instructions' => '',
+                ),
+                array(
+                    'key' => $block_key . 'author',
+                    'name' => $block_key . 'author',
+                    'type' => 'text',
+                    'label' => 'Author',
+                    'instructions' => '',
+                ),
             ),
 
         )

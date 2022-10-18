@@ -208,9 +208,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_6345d03157b06",
-                    "label": "Accent Color",
-                    "name": "accent",
+                    "key": "field_63112047a3b62",
+                    "label": "Main color",
+                    "name": "main_color",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -220,12 +220,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": ""
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
-                    "key": "field_6345d05757b0b",
-                    "label": "Accent Color Hover",
-                    "name": "accent_hover",
+                    "key": "field_6311208ea3b65",
+                    "label": "Main accent color",
+                    "name": "main_accent_color",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -235,12 +237,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": ""
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
-                    "key": "field_6345d05757b0a",
-                    "label": "Accent Second Color",
-                    "name": "accent_second",
+                    "key": "field_63112056a3b63",
+                    "label": "Button color",
+                    "name": "button_color",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -250,12 +254,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": ""
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 },
                 {
-                    "key": "field_6345d05657b09",
-                    "label": "Accent Second Color Hover",
-                    "name": "accent_second_hover",
+                    "key": "field_63112064a3b64",
+                    "label": "Button hover color",
+                    "name": "button_hover_color",
                     "type": "color_picker",
                     "instructions": "",
                     "required": 0,
@@ -265,67 +271,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": ""
-                },
-                {
-                    "key": "field_6345d05657b08",
-                    "label": "Headings Color",
-                    "name": "headings",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": ""
-                },
-                {
-                    "key": "field_6345d05557b07",
-                    "label": "Headings Second Color",
-                    "name": "headings_second",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": ""
-                },
-                {
-                    "key": "field_6345ce5305438",
-                    "label": "Bg Color",
-                    "name": "bg",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": ""
-                },
-                {
-                    "key": "field_6345ce9105439",
-                    "label": "Bg Second Color",
-                    "name": "bg_second",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": ""
+                    "default_value": "",
+                    "enable_opacity": false,
+                    "return_format": "string"
                 }
             ]
         },
@@ -502,7 +450,7 @@
             "key": "field_633dad7abb83f",
             "label": "Subscribe form",
             "name": "subscribe_form",
-            "type": "relationship",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -511,15 +459,14 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
-            "taxonomy": "",
-            "filters": [
-                "post_type"
+            "post_type": [
+                "wpcf7_contact_form"
             ],
-            "elements": "",
-            "min": "",
-            "max": "",
-            "return_format": "object"
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -539,6 +486,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1664991238
+    "modified": 1666119549
 }
