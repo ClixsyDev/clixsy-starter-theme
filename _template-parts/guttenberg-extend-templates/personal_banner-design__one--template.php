@@ -47,7 +47,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <?php if ($personal_banner_design_one__link) { ?>
                         <div class="text-end mt-5 xl:z-[1] mdt:text-center">
-                            <a href="<?php echo $personal_banner_design_one__link['url'] ?>" class="font-avenir bg-kennyGrayText uppercase text-white font-bold text-2xl py-2 px-10 rounded-full lg:px-8 lg:text-base xs:text-base mdt:text-xl mdt:py-3"><?php echo $personal_banner_design_one__link['title'] ?></a>
+                            <a href="<?php echo $personal_banner_design_one__link['url'] ?>" class="font-avenir  bg-headings uppercase text-white font-bold text-2xl py-2 px-10 rounded-full lg:px-8 lg:text-base xs:text-base mdt:text-xl mdt:py-3"><?php echo $personal_banner_design_one__link['title'] ?></a>
                         </div>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__social_icons) { ?>
