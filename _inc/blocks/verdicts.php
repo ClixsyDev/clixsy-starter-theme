@@ -55,8 +55,8 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields' => array(
             array(
-                'key' => 'verdicts',
-                'name' => 'verdicts',
+                'key' => $key . '_verdicts_repeater',
+                'name' => 'verdicts_repeater',
                 'label' => 'Verdicts',
                 'type' => 'repeater',
                 'layout' => 'table',
@@ -76,27 +76,27 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
             array(
-            'key' => 'testimonials',
-            'name' => 'testimonials',
-            'label' => 'Testimonials',
-            'type' => 'repeater',
-            'layout' => 'table',
-            'sub_fields' => array(
-                array(
-                    'key' => 'quote',
-                    'name' => 'text',
-                    'label' => 'Text',
-                    'type' => 'textarea',
-                ),
-                array(
-                    'key' => 'author',
-                    'name' => 'author',
-                    'label' => 'Author',
-                    'type' => 'text',
+                'key' => 'verdocts_testimonials',
+                'name' => 'verdicts_testimonials',
+                'label' => 'Testimonials',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'quote',
+                        'name' => 'text',
+                        'label' => 'Text',
+                        'type' => 'textarea',
+                    ),
+                    array(
+                        'key' => 'author',
+                        'name' => 'author',
+                        'label' => 'Author',
+                        'type' => 'text',
+                    ),
                 ),
             ),
-            ),
-           
+
         )
     ));
 }
