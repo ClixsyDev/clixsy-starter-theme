@@ -1,5 +1,6 @@
 import Glide from '@glidejs/glide';
 import { getElements } from './utils';
+import Marquee from 'vanilla-marquee';
 
 const testmonialsSlider = '.testmonialsSlider';
 if (document.querySelector(testmonialsSlider) != undefined && document.querySelector(testmonialsSlider) != null) {
@@ -146,4 +147,20 @@ if (document.querySelector(communitySliderAbout) != undefined && document.queryS
       },
     }).mount();
   });
+}
+
+
+const marqueEl1 = document.getElementById('marquee');
+if (document.body.contains(marqueEl1)) {
+  const marqueOne = new Marquee(marqueEl1, {
+    css3easing: 'linear',
+    speed: window.innerWidth < 768 ? 60 : 100,
+    gap: 100,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+    duration: 5000,
+    startVisible: true,
+  });
+  marqueOne.resume();
 }
