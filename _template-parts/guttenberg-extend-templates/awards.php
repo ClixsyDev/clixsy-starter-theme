@@ -1,6 +1,5 @@
 <?php 
 $fields = get_fields();
-var_dump($fields['awards_items']);
 ?>
 <div class="bg-headings px-4 pt-10 pb-8 ">
     <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl"><?= $fields['title'] ?></h2>
