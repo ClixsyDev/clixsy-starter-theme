@@ -20,3 +20,4 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </div>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

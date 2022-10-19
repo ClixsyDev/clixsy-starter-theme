@@ -56,14 +56,14 @@
 <div class="hidden py-12 background-image mdt:block">
     <div class="container">
         <h2 class="text-kennyBlue font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl xs:text-2xl">Are you <span>ready to win</span> your case?</h2>
-        <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+        <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <div class="text-kennyBlueFourth pt-8 w-22/24 m-auto text-lg lg:px-5 xs:p-0 xs:m-auto">
             <p class="mb-6">Kenny Habetz knows how to handle difficult injury cases inside and out. With more than 10 years of experience, he's familiar with the tricks that insurance companies use to avoid giving victims what they truly need. </p>
             <p class="mb-6">Habetz Injury Law is prepared with strategies and tactics to fight for his clients and get them compensation they deserve.</p>
             <p class="mb-6">Habetz Injury Law can help you pursue compensation for injury and wrongful death, as well as handle other types of personal injury cases like those involving car crashes, home accidents, medical malpractice and slip and falls. </p>
         </div>
         <div class="text-center mt-12">
-            <a href="#" class="font-avenir uppercase bg-kennyGreen text-white font-bold text-xl py-3 px-10 rounded-full">free case review</a>
+            <a href="#" class="font-avenir uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full">free case review</a>
         </div>
     </div>
 </div>

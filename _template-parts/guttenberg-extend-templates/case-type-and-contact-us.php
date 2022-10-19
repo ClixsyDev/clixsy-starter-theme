@@ -2,7 +2,7 @@
 
 <!-- hero section -->
 
-<section class="w-full relative">
+<!-- <section class="w-full relative">
     <img class=" object-cover h-[730px] w-full " src="<?php echo get_template_directory_uri() ?>/_assets/src/img/placeholder.jpg" alt="accident img">
     <div class="container h-full absolute left-0 right-0 top-0  mx-auto ">
         <div class=" translate-y-[20%] 2xl:translate-y-[30%] lg:translate-y-[20%] md:translate-y-[35%]">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 

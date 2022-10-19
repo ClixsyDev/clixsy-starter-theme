@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <?php if ($slider_description_design_two__description) { ?>
-                <p class="text-center text-lg text-headings_secondFourth"><?php echo $slider_description_design_two__description ?></p>
+                <p class="text-center text-lg text-headings_second"><?php echo $slider_description_design_two__description ?></p>
             <?php } ?>
             <div class="memorableSlider glide relative mt-10">
                 <div class="glide__track" data-glide-el="track">
@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <?php echo wp_get_attachment_image($slider_v2_item['image'], 'full', '', ['class' => 'm-auto']) ?>
                                     <?php if ($slider_v2_item['content']) { ?>
                                         <div class="absolute <?php echo $key % 2 == 0 ? 'top-0' : 'bottom-8' ?> ml-5 mt-10 mr-10 p-5 w-18/24 bg-white/60 xl:p-2 xs:ml-3 xs:mt-8">
-                                            <div class="font-avenir font-bold text-headings_second prose-xl lg:prose-lg"><?php echo $slider_v2_item['content'] ?></div>
+                                            <div class="font-avenir font-bold text-headings_second prose-xl lg:prose-lg leading-tight"><?php echo $slider_v2_item['content'] ?></div>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -66,3 +66,4 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </section>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

@@ -3,10 +3,10 @@
     "title": "Testing fields",
     "fields": [
         {
-            "key": "field_63489704e8f21",
-            "label": "color example",
-            "name": "color_example",
-            "type": "color_picker",
+            "key": "field_634f33db14dec",
+            "label": "Add citation icon?",
+            "name": "true_false_example",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,7 +15,11 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -35,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1665701652
+    "modified": 1666135037
 }

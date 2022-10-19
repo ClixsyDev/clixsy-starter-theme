@@ -11,8 +11,9 @@ if ($is_preview && !empty($previewImage)) {
     $reviews_design_two_select = get_field('reviews_design_two_select');
     $reviews_design_two_title = get_field('reviews_design_two_title');
     $reviews_design_two_link = get_field('reviews_design_two_link');
+    $reviews_design_two_bg = get_field('reviews_design_two_bg');
 ?>
-    <section class="py-20 lg:py-16">
+    <section class="py-20 lg:py-16 bg-cover" style="background-image: url('<?php echo $reviews_design_two_bg ? wp_get_attachment_image_url($reviews_design_two_bg, 'full') : '' ?>')">
         <div class="container">
             <?php if ($reviews_design_two_title) { ?>
                 <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $reviews_design_two_title ?></h2>
@@ -90,3 +91,4 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </section>
 <?php }
+if (!get_fields()) echo 'Fill block with content';
