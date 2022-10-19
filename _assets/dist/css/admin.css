@@ -6442,6 +6442,10 @@ h2 span {
   margin-bottom: .75rem;
 }
 
+.acf-block-preview .-mt-24 {
+  margin-top: -6rem;
+}
+
 .acf-block-preview .mt-1\.5 {
   margin-top: .375rem;
 }
@@ -6504,10 +6508,6 @@ h2 span {
 
 .acf-block-preview .-ml-20 {
   margin-left: -5rem;
-}
-
-.acf-block-preview .-mt-24 {
-  margin-top: -6rem;
 }
 
 .acf-block-preview .-ml-12 {
@@ -7260,6 +7260,11 @@ h2 span {
   background-color: rgb(165 172 175 / var(--tw-bg-opacity));
 }
 
+.acf-block-preview .bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .acf-block-preview .bg-process_smoke {
   --tw-bg-opacity: 1;
   background-color: rgb(244 242 242 / var(--tw-bg-opacity));
@@ -7272,11 +7277,6 @@ h2 span {
 
 .acf-block-preview .bg-white\/60 {
   background-color: #fff9;
-}
-
-.acf-block-preview .bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-opacity-70 {

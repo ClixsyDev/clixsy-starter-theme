@@ -1,7 +1,7 @@
 <div class="pt-20 pb-24 xs:pb-16">
     <div class="container md:p-0">
         <h2 class="text-headings font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl xs:text-2xl">Our <span>Process</span></h2>
-        <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+        <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <div class="flex md:flex-col">
             <div class="w-12/24 md:hidden">
                 <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/our-process.jpg" class="h-full" alt="">
