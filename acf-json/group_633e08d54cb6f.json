@@ -23,7 +23,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/welcome-banner"
+                "value": "acf\/single-button"
             }
         ]
     ],

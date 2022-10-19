@@ -24,12 +24,12 @@ function register_injuries_info()
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords' 		  => array('welcome', 'banner'),
+                'keywords' 		  => array('injuries', 'info'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
+                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/info_section.png',
                         ),
                     )
                 )
@@ -55,21 +55,30 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields' => array(
             array(
+                'key' => $key . '_background_image',
+                'label' => 'Background Image',
+                'name' => $key . '_background_image',
+                'type' => 'image',
+                'return_format' => 'id',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
+            array(
                 'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . '_title',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_subtitle',
                 'label' => 'Subtitle',
-                'name' => 'subtitle',
+                'name' => $key . '_subtitle',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_description',
                 'label' => 'Description',
-                'name' => 'description',
+                'name' => $key . '_description',
                 'type' => 'wysiwyg',
             ),
         )

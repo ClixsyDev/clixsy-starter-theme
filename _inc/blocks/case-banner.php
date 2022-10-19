@@ -13,28 +13,28 @@
 function register_case_banner()
 {
     if (function_exists('acf_register_block_type')) {
-        acf_register_block_type(
-            array(
-                'name'            => 'welcome-banner',
-                'title'           => __('Case Banner', 'clixsy'),
-                'description'	  => __('Case Banner', 'clixsy'),
-                'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner.php',
-                'icon'            => 'groups',
-                'category'        => 'clixsy',
-                'supports' => array(
-                    'color' => true
-                ),
-                'keywords' 		  => array('welcome', 'banner'),
-                'example'  => array(
-                    'attributes' => array(
-                        'mode' => 'preview',
-                        'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
-                        ),
-                    )
-                )
-            )
-        );
+        // acf_register_block_type(
+        //     array(
+        //         'name'            => 'welcome-banner',
+        //         'title'           => __('Case Banner', 'clixsy'),
+        //         'description'	  => __('Case Banner', 'clixsy'),
+        //         'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner.php',
+        //         'icon'            => 'groups',
+        //         'category'        => 'clixsy',
+        //         'supports' => array(
+        //             'color' => true
+        //         ),
+        //         'keywords' 		  => array('welcome', 'banner'),
+        //         'example'  => array(
+        //             'attributes' => array(
+        //                 'mode' => 'preview',
+        //                 'data' => array(
+        //                     'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
+        //                 ),
+        //             )
+        //         )
+        //     )
+        // );
     }
 }
 add_action('acf/init', 'register_case_banner');
@@ -49,7 +49,7 @@ if (function_exists('acf_add_local_field_group')) {
                 array(
                     'param' => 'block',
                     'operator' => '==',
-                    'value' => 'acf/welcome-banner',
+                    'value' => 'acf/case-banner',
                 ),
             ),
         ),

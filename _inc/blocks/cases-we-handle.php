@@ -55,12 +55,6 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields' => array(
             array(
-                'key' => $key . '_title',
-                'label' => 'Title',
-                'name' => $key . '_title',
-                'type' => 'text',
-            ),
-            array(
                 'key' => $key . '_items',
                 'name' => $key . '_items',
                 'label' => 'Cases',
@@ -89,6 +83,12 @@ if (function_exists('acf_add_local_field_group')) {
                         'library' => 'all',
                     ),
                 ),
+            ),
+            array(
+                'key' => $key . '_title',
+                'label' => 'Title',
+                'name' => $key . '_title',
+                'type' => 'text',
             ),
             array(
                 'key' => $key . '_button_1',

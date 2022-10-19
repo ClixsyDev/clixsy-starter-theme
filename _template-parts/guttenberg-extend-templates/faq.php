@@ -1,12 +1,25 @@
-<?php 
-$faq_repeater = get_field('faq_repeater');
-$faq_repeater_hidden = get_field('faq_repeater_hidden');
-$image = get_field('image');
-?>
+<?php
 
+use App\Template;
+
+$previewImage = @$block['data']['preview_image'];
+// back-end previews
+if ($is_preview && !empty($previewImage)) {
+    echo ("<img style='display: block; max-width: 100%; height: auto;'  src='{$block['data']['preview_image']}' alt='widget preview'");
+
+    return;
+} else {
+    $key = 'faq';
+    $title = get_field($key . '_title');
+    $faq_repeater = get_field($key . '_repeater');
+    $faq_repeater_hidden = get_field($key . '_repeater_hidden');
+    $image = get_field($key . '_image'); 
+?>
 <div class="py-24">
     <div class="container">
-        <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= get_field('title') ?></h2>
+        <?php if ($title) { ?>
+            <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= $title ?></h2>
+        <?php } ?>
         <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
         <div class="flex justify-center gap-2 w-11/12 m-auto md:block">
             <?php if ($image) { ?>
@@ -20,14 +33,14 @@ $image = get_field('image');
                         <?php foreach ($faq_repeater as $item) { ?>
                             <div class="mt-1.5 faq-block relative">
                                 <div>
-                                    <?php if ($item['title']) { ?>
+                                    <?php if ($item['faq_items_question']) { ?>
                                         <div class="title-faq text-headings_second flex justify-between relative bg-process_smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                                            <h3><?php echo $item['title'] ?></h3>
+                                            <h3><?php echo $item['faq_items_question'] ?></h3>
                                         </div>
                                     <?php } ?>
-                                    <?php if ($item['description']) { ?>
+                                    <?php if ($item['faq_items_answer']) { ?>
                                         <div class="pt-3 pb-5 px-11 hidden-part hidden">
-                                            <?php echo $item['description'] ?>
+                                            <?php echo $item['faq_items_answer'] ?>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -38,14 +51,14 @@ $image = get_field('image');
                         <?php foreach ($faq_repeater_hidden as $item_hidden) { ?>
                             <div class="hidden hidden-text mt-1.5 faq-block relative">
                                 <div>
-                                    <?php if ($item_hidden['title']) { ?>
+                                    <?php if ($item_hidden['faq_items_answer']) { ?>
                                         <div class="title-faq text-headings_second flex justify-between relative bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                                            <h3><?php echo $item_hidden['title'] ?></h3>
+                                            <h3><?php echo $item_hidden['faq_items_question'] ?></h3>
                                         </div>
                                     <?php } ?>
-                                    <?php if ($item_hidden['description']) { ?>
+                                    <?php if ($item_hidden['faq_items_answer']) { ?>
                                         <div class="pt-3 pb-5 px-11 hidden-part hidden">
-                                            <?php echo $item_hidden['description'] ?>
+                                            <?php echo $item_hidden['faq_items_answer'] ?>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -62,3 +75,4 @@ $image = get_field('image');
         </div>
     </div>
 </div>
+<?php }

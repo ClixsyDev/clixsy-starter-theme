@@ -24,7 +24,7 @@ function register_habetz_info()
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords' 		  => array('welcome', 'banner'),
+                'keywords' 		  => array('Short', 'Bio'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -57,7 +57,7 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_attorney_image',
                 'label' => 'Attorney Image',
-                'name' => 'image',
+                'name' => $key . '_attorney_image',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -66,7 +66,7 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_small_logo',
                 'label' => 'Small logo Image',
-                'name' => 'small_logo',
+                'name' => $key . '_small_logo',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -75,25 +75,25 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_attorney_description',
                 'label' => 'Attorney description',
-                'name' => 'description',
+                'name' => $key . '_attorney_description',
                 'type' => 'textarea',
             ),
             array(
                 'key' => $key . '_name',
                 'label' => 'Name',
-                'name' => 'name',
+                'name' => $key . '_name',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_position',
                 'label' => 'Position',
-                'name' => 'position',
+                'name' => $key . '_position',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_link',
                 'label' => 'Link',
-                'name' => 'link',
+                'name' => $key . '_link',
                 'type' => 'link',
             ),
         )
