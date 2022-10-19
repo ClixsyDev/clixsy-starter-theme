@@ -32,7 +32,8 @@ body.logged-in {
   span {
     @apply text-headings_second;
   }
-  b, strong {
+  b,
+  strong {
     @apply text-headings_second font-bold;
   }
 }
@@ -49,6 +50,15 @@ body.logged-in {
   b,
   strong {
     @apply text-headings;
+  }
+}
+
+.page-text-styles {
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
   }
 }
 

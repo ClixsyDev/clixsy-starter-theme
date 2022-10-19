@@ -4,9 +4,8 @@ use App\Template;
 ?>
 
 <?php get_header(); ?>
-
 <!-- Main Content -->
-<main>
+<main class="page-text-styles">
     <?php the_content() ?>
 </main>
 
