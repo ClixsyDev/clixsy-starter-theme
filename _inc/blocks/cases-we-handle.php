@@ -57,32 +57,32 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . '_title',
                 'type' => 'text',
             ),
             array(
-                'key' => 'cases',
-                'name' => 'cases',
+                'key' => $key . '_items',
+                'name' => $key . '_items',
                 'label' => 'Cases',
                 'type' => 'repeater',
                 'layout' => 'table',
                 'sub_fields' => array(
                     array(
-                        'key' => 'case_name',
-                        'name' => 'name',
+                        'key' => $key . '_case_name',
+                        'name' => $key . '_case_name',
                         'label' => 'Case Name',
                         'type' => 'text',
                     ),
                     array(
-                        'key' => 'case_link',
-                        'name' => 'case_link',
+                        'key' => $key . '_case_link',
+                        'name' => $key . '_case_link',
                         'label' => 'Case URL',
                         'type' => 'text',
                     ),
                     array(
                         'key' => $key . '_case_image',
                         'label' => 'Case Image',
-                        'name' => 'case_image',
+                        'name' => $key . '_case_image',
                         'type' => 'image',
                         'return_format' => 'id',
                         'preview_size' => 'medium',
@@ -93,13 +93,13 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_button_1',
                 'label' => 'Button 1',
-                'name' => 'button_1',
+                'name' => $key . '_button_1',
                 'type' => 'link',
             ),
             array(
                 'key' => $key . '_button_2',
                 'label' => 'Button 2',
-                'name' => 'button_2',
+                'name' => $key . '_button_2',
                 'type' => 'link',
             ),
         )
