@@ -29,7 +29,7 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="w-20/24 m-auto">
 
                     <div class="relative mdt:mb-10">
-                        <span class="absolute -left-[14%] -top-4">
+                        <span class="absolute -left-[9%] -top-4">
                             <?php if ($text_form_design_one__form_remove_citate_icon) { ?>
                                 <svg class=" w-12 " xmlns="http://www.w3.org/2000/svg" width="99.679" height="76.159" viewBox="0 0 99.679 76.159">
                                     <path class="fill-accent" id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
@@ -38,7 +38,7 @@ if ($is_preview && !empty($previewImage)) {
 
                         </span>
                         <?php if ($text_form_design_one__citation) { ?>
-                            <div class="text-headings_secondFourth font-avenir lg:pl-8 prose-xl lg:prose-lg">
+                            <div class="text-headings_second font-avenir lg:pl-8 prose-xl lg:prose-lg leading-snug">
                                 <?php echo $text_form_design_one__citation ?>
                             </div>
                         <?php } ?>
@@ -56,7 +56,7 @@ if ($is_preview && !empty($previewImage)) {
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
                                 <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24' ?>">
-                                    <div class="font-avenir font-bold text-white text-3xl lg:text-lg span-change_color_1">
+                                    <div class="font-avenir font-bold text-white text-3xl lg:text-lg span-change_color_1 leading-snug">
                                         <?php echo $text_form_design_one__description ?>
                                     </div>
                                 </div>
