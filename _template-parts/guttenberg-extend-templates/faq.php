@@ -62,3 +62,5 @@ $image = get_field('image');
         </div>
     </div>
 </div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';

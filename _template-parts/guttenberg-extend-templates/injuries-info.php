@@ -1,4 +1,4 @@
-<?php 
+<?php
 $title = get_field('title');
 $subtitle = get_field('subtitle');
 $description = get_field('description');
@@ -21,3 +21,5 @@ $description = get_field('description');
         <?php } ?>
     </div>
 </div>
+<?php
+if (!get_fields()) echo 'Fill block with content';

@@ -40,3 +40,5 @@ $small_logo = get_field('small_logo');
         </div>
     </div>
 </div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';

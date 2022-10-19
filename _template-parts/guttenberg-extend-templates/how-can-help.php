@@ -7,7 +7,7 @@ $fields = get_fields();
             <h2 class="absolute right-4 top-40 text-[60px] text-right leading-tight max-w-[367px] mdt:top-0 md:relative md:text-center md:text-4xl md:w-full md:m-0 md:left-0 md:right-0 md:mx-auto"><?= $fields['title'] ?></h2>
             <img src="<?= wp_get_attachment_image_url( $fields['attorney_image'], 'full') ?>" class="relative z-20 left-0 top-0 w-[60%] h-auto object-cover md:left-50% md:-translate-x-1/2" alt="">
             <div class="bg-headings absolute bottom-0 left-0 w-full h-72 z-0 md:h-32"></div>
-            <div class="absolute flex items-end bottom-0 left-0 w-full h-72 z-30 flex pt-9 px-5 pb-3 md:justify-center">
+            <div class="absolute flex items-end bottom-0 left-0 w-full h-72 z-30 pt-9 px-5 pb-3 md:justify-center">
                 <img class=" w-16 h-auto mr-11 md:w-10 md:mr-3" src="<?= wp_get_attachment_image_url( $fields['Company Logo'], 'full') ?>" alt="">
                 <img class="mdt:w-40 md:w-24" src="<?= wp_get_attachment_image_url( $fields['State Icon'], 'full') ?>" alt="">
                 <div class="text-white text-10xl leading-tight mb-6 2xl:text-8xl md:text-3xl">Louisiana</div>
@@ -21,3 +21,5 @@ $fields = get_fields();
         </div>
     </div>
 </div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';
