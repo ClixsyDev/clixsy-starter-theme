@@ -10,23 +10,23 @@
 
 
 
-function register_citate_design__one()
+function register_decorated_text_design__one()
 {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
-                'name'            => 'citate-design-one',
-                'title'           => __('Citate', 'clixsy'),
+                'name'            => 'decorated-text-design-one',
+                'title'           => __('Decorated text', 'clixsy'),
                 'description'      => __('Design v1.', 'clixsy'),
-                'render_template' => '_template-parts/guttenberg-extend-templates/citate-design__one--template.php',
+                'render_template' => '_template-parts/guttenberg-extend-templates/decorated_text-design__one--template.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
-                'keywords'           => array('citate', 'quote', 'review'),
+                'keywords'           => array('decorated text', 'text'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/citate-design__one.png',
+                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/decorated_text-design__one.png',
                         ),
                     )
                 )
@@ -34,37 +34,51 @@ function register_citate_design__one()
         );
     }
 }
-add_action('acf/init', 'register_citate_design__one');
+add_action('acf/init', 'register_decorated_text_design__one');
 
 if (function_exists('acf_add_local_field_group')) :
-    $block_key = 'citate_design_one__';
+    $block_key = 'decorated_text_design_one__';
     acf_add_local_field_group(
         array(
             'key' => $block_key . '16345f17b35',
-            'title' => 'Community',
+            'title' => 'Decorated text',
             'location' => array(
                 array(
                     array(
                         'param' => 'block',
                         'operator' => '==',
-                        'value' => 'acf/citate-design-one',
+                        'value' => 'acf/decorated-text-design-one',
                     ),
                 ),
             ),
             'fields' => array(
                 array(
-                    'key' => $block_key . 'citate',
-                    'name' => $block_key . 'citate',
-                    'type' => 'wysiwyg',
-                    'label' => 'Citate',
+                    'key' => $block_key . 'title',
+                    'name' => $block_key . 'title',
+                    'type' => 'text',
+                    'label' => 'Title',
                     'instructions' => '',
                 ),
                 array(
-                    'key' => $block_key . 'author',
-                    'name' => $block_key . 'author',
-                    'type' => 'text',
-                    'label' => 'Author',
+                    'key' => $block_key . 'description',
+                    'name' => $block_key . 'description',
+                    'type' => 'wysiwyg',
+                    'label' => 'Description',
                     'instructions' => '',
+                ),
+                array(
+                    'key' => $block_key . 'after_description',
+                    'name' => $block_key . 'after_description',
+                    'type' => 'wysiwyg',
+                    'label' => 'Text after description (bolder and bigger)',
+                    'instructions' => '',
+                ),
+                array(
+                    'key' => $block_key . 'button',
+                    'name' => $block_key . 'button',
+                    'label' => 'Button',
+                    'type' => 'link',
+                    'return_format' => 'array',
                 ),
             ),
 

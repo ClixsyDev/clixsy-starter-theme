@@ -8,28 +8,35 @@ if ($is_preview && !empty($previewImage)) {
     echo ("<img style='display: block; max-width: 100%; height: auto;'  src='{$block['data']['preview_image']}' alt='widget preview'");
     return;
 } else {
-    $citate_design_one__citate = get_field('citate_design_one__citate');
-    $citate_design_one__author = get_field('citate_design_one__author');
+    $decorated_text_design_one__title = get_field('decorated_text_design_one__title');
+    $decorated_text_design_one__button = get_field('decorated_text_design_one__button');
+    $decorated_text_design_one__description = get_field('decorated_text_design_one__description');
+    $decorated_text_design_one__after_description = get_field('decorated_text_design_one__after_description');
+
 ?>
-    <div class="py-20 mdt:py-14">
-        <div class="container text-center">
-            <div class="relative w-14/24 m-auto mdt:w-20/24">
-                <span class="absolute -top-[20%] -left-[6%] lg:-top-[5%] lg:-left-[11%] xs:-left-[13%]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="43.592" height="33.306" viewBox="0 0 43.592 33.306">
-                        <path id="quote_1_" data-name="quote (1)" d="M7.018,35.812A14.227,14.227,0,0,1,3.1,25.282C3.1,16.71,9.222,9.118,17.794,5.2L20,8.384C11.916,12.792,10.2,18.425,9.712,22.1a7.262,7.262,0,0,1,4.653-.735A8.553,8.553,0,0,1,22.2,29.935a9.663,9.663,0,0,1-2.449,6.122,8.123,8.123,0,0,1-6.122,2.449,9.632,9.632,0,0,1-6.612-2.694Zm24.49,0A14.227,14.227,0,0,1,27.59,25.282c0-8.571,6.122-16.163,14.694-20.082l2.2,3.184C36.406,12.792,34.692,18.425,34.2,22.1c1.225-.735,4.653-.735,4.653-.735s7.837,3.918,7.837,8.571a9.663,9.663,0,0,1-2.449,6.122,7.772,7.772,0,0,1-6.122,2.449,9.632,9.632,0,0,1-6.612-2.694Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
-                    </svg>
-                </span>
-                <div class="italic relative text-headings_second prose-xl xs:prose-base">
-                    <?php echo $citate_design_one__citate ?>
+    <div class="container -mt-24">
+        <div class="w-full bg-headings">
+            <?php if ($decorated_text_design_one__title) { ?>
+                <div class=" text-white text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-center relative pb-16 pt-28">
+                    <h2 class="font-bold process_text_design__one"><?php echo $decorated_text_design_one__title ?></h2>
+                    <span class="bg-accent w-32 h-1 absolute left-0 right-0 mx-auto"></span>
                 </div>
-                <span class="absolute -top-[20%] -right-[6%] lg:-top-[5%] lg:-right-[11%] xs:-right-[13%]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="43.592" height="33.306" viewBox="0 0 43.592 33.306">
-                        <path id="quote_1_" data-name="quote (1)" d="M42.774,35.812a14.227,14.227,0,0,0,3.918-10.531C46.692,16.71,40.57,9.118,32,5.2l-2.2,3.184c8.082,4.408,9.8,10.041,10.286,13.714a7.262,7.262,0,0,0-4.653-.735,8.553,8.553,0,0,0-7.837,8.571,9.663,9.663,0,0,0,2.449,6.122,8.123,8.123,0,0,0,6.122,2.449,9.632,9.632,0,0,0,6.612-2.694Zm-24.49,0A14.227,14.227,0,0,0,22.2,25.282C22.2,16.71,16.08,9.118,7.508,5.2L5.3,8.384C13.386,12.792,15.1,18.425,15.59,22.1c-1.224-.735-4.653-.735-4.653-.735S3.1,25.282,3.1,29.935a9.663,9.663,0,0,0,2.449,6.122,7.772,7.772,0,0,0,6.122,2.449,9.632,9.632,0,0,0,6.612-2.694Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
-                    </svg>
-                </span>
-            </div>
-            <?php if ($citate_design_one__author) { ?>
-                <h3 class="text-headings_second text-lg font-avenir font-bold mt-4">- <?php echo $citate_design_one__author ?> -</h3>
+            <?php } ?>
+
+            <?php if ($decorated_text_design_one__description || $decorated_text_design_one__after_description) { ?>
+                <div class="w-[820px] xl:w-full mx-auto text-white pb-16 xl:px-16 mdt:px-10">
+                    <div class="prose-xl">
+                        <?php echo $decorated_text_design_one__description ?>
+                    </div>
+                    <div class="text-4xl 2xl:text-3xl md:text-2xl">
+                        <?php echo $decorated_text_design_one__after_description ?>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php if ($decorated_text_design_one__button) { ?>
+                <div class="w-full flex justify-center pb-16">
+                    <a href="<?php echo $decorated_text_design_one__button['url'] ?>" class="text-white bg-accent w-96 lg:w-72 h-20  flex justify-center items-center text-4xl lg:text-2xl font-bold rounded-full"><?php echo $decorated_text_design_one__button['title'] ?></a>
+                </div>
             <?php } ?>
         </div>
     </div>
