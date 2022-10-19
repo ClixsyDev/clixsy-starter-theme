@@ -29,7 +29,7 @@ function register_customer_service()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/blog-image-with-description--preview.png',
+                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/customer_services.png',
                         ),
                     )
                 )
@@ -63,7 +63,7 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_company_logo',
                 'label' => 'Company Logo',
-                'name' => 'company_logo',
+                'name' => $key . '_company_logo',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -71,15 +71,15 @@ if (function_exists('acf_add_local_field_group')) {
             ),
             array(
                 'key' => $key . '_services',
-                'name' => 'services',
-                'label' => 'Services Items',
+                'name' => $key . '_services',
+                'label' => 'Services',
                 'type' => 'repeater',
                 'layout' => 'table',
                 'sub_fields' => array(
                     array(
                         'key' => $key . '_service_logo',
                         'label' => 'Service Logo',
-                        'name' => 'service_logo',
+                        'name' => $key . '_service_logo',
                         'type' => 'image',
                         'return_format' => 'id',
                         'preview_size' => 'medium',
@@ -88,13 +88,13 @@ if (function_exists('acf_add_local_field_group')) {
                     array(
                         'key' => $key . '_service_title',
                         'label' => 'Title',
-                        'name' => 'service_title',
+                        'name' => $key . '_service_title',
                         'type' => 'text',
                     ),
                     array(
                         'key' => $key . '_service_description',
                         'label' => 'Service Description',
-                        'name' => 'Service Description',
+                        'name' => $key . '_service_description',
                         'type' => 'textarea',
                     ),
                 ),
