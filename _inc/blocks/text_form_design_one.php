@@ -16,7 +16,7 @@ function register_text_form_design__one()
         acf_register_block_type(
             array(
                 'name'            => 'text-form-design-one',
-                'title'           => __('Text with form and citation', 'clixsy'),
+                'title'           => __('Text with form on the right side', 'clixsy'),
                 'description'      => __('', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/text-form-design__one--template.php',
                 'icon'            => 'groups',
@@ -86,6 +86,13 @@ if (function_exists('acf_add_local_field_group')) :
                 'instructions' => '',
             ),
             array(
+                'key' => $block_key . 'form_title',
+                'name' => $block_key . 'form_title',
+                'type' => 'text',
+                'label' => 'Form title',
+                'instructions' => 'Wrap with span tag to change color',
+            ),
+            array(
                 'key' => $block_key . 'form_description',
                 'name' => $block_key . 'form_description',
                 'type' => 'textarea',
@@ -105,6 +112,21 @@ if (function_exists('acf_add_local_field_group')) :
                     0 => 'search',
                 ),
                 'return_format' => 'id',
+            ),
+            array(
+                'key' => $block_key . 'remove_citate_icon',
+                'name' => $block_key . 'remove_citate_icon',
+                'label' => 'Add citate icon?',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+            ),
+            array(
+              'key' => $block_key .'button',
+              'name' => $block_key .'button',
+              'label' => 'Button',
+              'type' => 'link',
+              'return_format' => 'array',
             ),
         ),
 

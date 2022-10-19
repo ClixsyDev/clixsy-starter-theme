@@ -29,3 +29,5 @@ $fields = get_fields();
     </div>
     <img src="<?= wp_get_attachment_image_url( $fields['attorney_image'], 'full') ?>" class="absolute left-1/2 bottom-0 w-full h-full object-cover max-w-[1920px] mx-auto -translate-x-1/2 mdt:relative mdt:translate-0 mdt:mt-4" alt="">
 </div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';

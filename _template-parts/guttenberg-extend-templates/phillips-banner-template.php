@@ -30,3 +30,4 @@ if ($is_preview && !empty($previewImage)) {
         <a href="tel:<?php echo $jeffrey_phillips_banner_phone ?: '(202) 933-3379' ?>" class="text-center text-orange text-7xl block font-bold mt-5 !no-underline md:text-4xl"><?php echo $jeffrey_phillips_banner_phone ?: '(202) 933-3379' ?></a>
     </div>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

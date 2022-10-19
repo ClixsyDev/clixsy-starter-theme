@@ -5713,6 +5713,10 @@ h2 span {
   right: 11%;
 }
 
+.acf-block-preview .-left-\[40\%\] {
+  left: -40%;
+}
+
 .acf-block-preview .z-50 {
   z-index: 50;
 }
@@ -5737,7 +5741,7 @@ h2 span {
   z-index: 1;
 }
 
-.acf-block-preview .z-\[-1\] {
+.acf-block-preview .z-\[-1\], .acf-block-preview .-z-\[1\] {
   z-index: -1;
 }
 
@@ -6355,6 +6359,10 @@ h2 span {
 
 .acf-block-preview .w-1\/4 {
   width: 25%;
+}
+
+.acf-block-preview .w-\[280\%\] {
+  width: 280%;
 }
 
 .acf-block-preview .max-w-\[1920px\] {
@@ -8583,6 +8591,10 @@ html :where(.wp-block) {
 
   .mdt\:h-auto {
     height: auto;
+  }
+
+  .mdt\:h-\[320\%\] {
+    height: 320%;
   }
 
   .mdt\:w-full {

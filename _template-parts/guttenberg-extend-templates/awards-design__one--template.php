@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="max-w-[1920px] m-auto md:max-w-none">
             <div class="bg-cover py-10" style="background-image: url('<?php echo $awards_design_one__bg ?>');">
                 <?php if ($awards_design_one__title) { ?>
-                <h2 class="text-headings_second text-2xl text-center font-bold font-avenir"><?php echo $awards_design_one__title ?></h2>
+                    <h2 class="text-headings_second text-2xl text-center font-bold font-avenir"><?php echo $awards_design_one__title ?></h2>
                 <?php } ?>
                 <div class="awardsSlider glide relative mt-7 px-10 md:px-0">
                     <div class="glide__track" data-glide-el="track">
@@ -44,3 +44,4 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </div>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

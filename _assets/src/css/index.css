@@ -32,6 +32,9 @@ body.logged-in {
   span {
     @apply text-headings_second;
   }
+  b, strong {
+    @apply text-headings_second font-bold;
+  }
 }
 .span-change_color_2 {
   span {

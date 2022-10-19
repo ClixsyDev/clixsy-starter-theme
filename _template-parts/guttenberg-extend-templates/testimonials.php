@@ -61,3 +61,5 @@ $testimonials = get_field('testimonials_items');
         </div> 
     </div>
 </div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';

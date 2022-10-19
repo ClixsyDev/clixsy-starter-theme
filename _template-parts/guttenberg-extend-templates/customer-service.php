@@ -33,3 +33,5 @@ $fields = get_fields();
         <img class=" mt-11 mx-auto" src="<?= wp_get_attachment_image_url($fields['company_logo'], 'full') ?>" alt="">
     </div>
 </div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';
