@@ -543,6 +543,7 @@ var _slidersDefault = parcelHelpers.interopDefault(_sliders);
 var _formEntry = require("./form_entry");
 (0, _utils.ready)(()=>{
     (0, _menuDefault.default)();
+    (0, _headerDefault.default)();
     (0, _formEntry.formEntry)();
 });
 let faqOpen = ()=>{
@@ -596,8 +597,8 @@ let btnMoreEducation = ()=>{
     });
 };
 btnMoreEducation();
-},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0"}],"2uPGB":[function(require,module,exports) {
 
+},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0","./header":"9ZRJh"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Main Menu
@@ -4499,6 +4500,29 @@ const formEntry = (data)=>{
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ZRJh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Main Menu
+var _utils = require("./utils");
+function headerInit() {
+    const header = (0, _utils.getElement)("header");
+    let isSticked = false;
+    document.addEventListener("scroll", (e)=>{
+        console.log("scroll;");
+        console.log(window.scrollY);
+        if (!isSticked && window.scrollY >= 60) {
+            header.classList.add("sticked");
+            isSticked = true;
+        }
+        if (isSticked && window.scrollY <= 60) {
+            header.classList.remove("sticked");
+            isSticked = false;
+        }
+    });
+}
+exports.default = headerInit;
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map
