@@ -7,6 +7,8 @@
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
 @import './components/_headings.css';
+@import './components/form.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

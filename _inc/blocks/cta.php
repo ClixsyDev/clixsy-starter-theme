@@ -57,20 +57,14 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . '_title',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_button_title',
-                'label' => 'Button Title',
-                'name' => 'button_title',
-                'type' => 'text',
-            ),
-            array(
-                'key' => $key . '_button_link',
-                'label' => 'Button Link',
-                'name' => 'button_link',
-                'type' => 'text',
+                'label' => 'Button',
+                'name' => $key . '_button',
+                'type' => 'link',
             ),
         )
     ));

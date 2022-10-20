@@ -6022,8 +6022,16 @@ h2 span {
   visibility: visible;
 }
 
+.acf-block-preview .invisible {
+  visibility: hidden;
+}
+
 .acf-block-preview .static {
   position: static;
+}
+
+.acf-block-preview .fixed {
+  position: fixed;
 }
 
 .acf-block-preview .absolute {
@@ -6214,6 +6222,7 @@ h2 span {
   top: 95%;
 }
 
+<<<<<<< HEAD
 .acf-block-preview .-right-\[11\%\] {
   right: -11%;
 }
@@ -6226,6 +6235,8 @@ h2 span {
   left: 53%;
 }
 
+=======
+>>>>>>> parcel
 .acf-block-preview .-left-\[9\%\] {
   left: -9%;
 }
@@ -6570,6 +6581,10 @@ h2 span {
   display: grid;
 }
 
+.acf-block-preview .contents {
+  display: contents;
+}
+
 .acf-block-preview .hidden {
   display: none;
 }
@@ -6678,10 +6693,13 @@ h2 span {
   height: 900px;
 }
 
+<<<<<<< HEAD
 .acf-block-preview .max-h-\[27px\] {
   max-height: 27px;
 }
 
+=======
+>>>>>>> parcel
 .acf-block-preview .min-h-\[246px\] {
   min-height: 246px;
 }
@@ -6960,10 +6978,6 @@ h2 span {
 
 .acf-block-preview .max-w-\[170px\] {
   max-width: 170px;
-}
-
-.acf-block-preview .max-w-\[30px\] {
-  max-width: 30px;
 }
 
 .acf-block-preview .max-w-\[310px\] {
@@ -10062,10 +10076,6 @@ html :where(.wp-block) {
     height: 1.75rem;
   }
 
-  .xs\:max-h-\[21px\] {
-    max-height: 21px;
-  }
-
   .xs\:w-full {
     width: 100%;
   }
@@ -10100,10 +10110,6 @@ html :where(.wp-block) {
 
   .xs\:max-w-\[80px\] {
     max-width: 80px;
-  }
-
-  .xs\:max-w-\[24px\] {
-    max-width: 24px;
   }
 
   .xs\:items-center {

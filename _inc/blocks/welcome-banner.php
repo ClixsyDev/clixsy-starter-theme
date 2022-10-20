@@ -29,7 +29,7 @@ function register_welcome_banner()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/welcome_banner.png',
+                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/slider-description-design__two.png',
                         ),
                     )
                 )
@@ -57,50 +57,44 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_attorney_image',
                 'label' => 'Attorney Image',
-                'name' => 'attorney_image',
+                'name' => $key . '_attorney_image',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
                 'library' => 'all',
             ),
             array(
-                'key' => 'field_63483da0b29c1',
+                'key' => $key . '_background_image',
                 'label' => 'Background Image',
-                'name' => 'background_image',
+                'name' => $key . '_background_image',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
                 'library' => 'all',
             ),
             array(
-                'key' => 'field_63483dafb29c2',
+                'key' => $key . '_banner_text_line_1',
                 'label' => 'Banner Text line 1',
-                'name' => 'banner_text_line_1',
+                'name' => $key . '_banner_text_line_1',
                 'type' => 'text',
             ),
             array(
-                'key' => 'field_63483dbfb29c3',
+                'key' => $key . '_banner_text_line_2',
                 'label' => 'Banner Text line 2',
-                'name' => 'banner_text_line_2',
+                'name' => $key . '_banner_text_line_2',
                 'type' => 'text',
             ),
             array(
-                'key' => 'field_63483dc1b29c4',
+                'key' => $key . '_banner_text_line_3',
                 'label' => 'Banner Text line 3',
-                'name' => 'banner_text_line_3',
+                'name' => $key . '_banner_text_line_3',
                 'type' => 'text',
             ),
             array(
-                'key' => 'field_63483dcdb29c5',
-                'label' => 'Button text',
-                'name' => 'button_text',
-                'type' => 'text',
-            ),
-            array(
-                'key' => 'field_63483e2ab29c6',
-                'label' => 'Button url',
-                'name' => 'button_url',
-                'type' => 'text',
+                'key' => $key . '_button',
+                'label' => 'Button',
+                'name' => $key . '_button',
+                'type' => 'link',
             ),
         )
     ));

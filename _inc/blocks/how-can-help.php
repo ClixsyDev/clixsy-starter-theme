@@ -16,15 +16,15 @@ function register_how_can_help()
         acf_register_block_type(
             array(
                 'name'            => 'how-can-help',
-                'title'           => __('how can help', 'clixsy'),
-                'description'	  => __('how can help', 'clixsy'),
+                'title'           => __('How Can Help', 'clixsy'),
+                'description'      => __('How Can Help', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/how-can-help.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords' 		  => array('welcome', 'banner'),
+                'keywords'           => array('How', 'can', 'help'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -57,7 +57,7 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_attorney_image',
                 'label' => 'Attorney Image',
-                'name' => 'attorney_image',
+                'name' => $key . '_attorney_image',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -66,7 +66,7 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_company_logo',
                 'label' => 'Company Logo',
-                'name' => 'Company Logo',
+                'name' => $key . '_company_logo',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -75,29 +75,40 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_state_icon',
                 'label' => 'State Icon',
-                'name' => 'State Icon',
+                'name' => $key . '_state_icon',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
                 'library' => 'all',
             ),
             array(
+                'key' => $key . '_state_name',
+                'label' => 'State Name',
+                'name' => $key . '_state_name',
+                'type' => 'text',
+            ),
+            array(
                 'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . '_title',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_form_description',
                 'label' => 'Form Description',
-                'name' => 'Form Description',
+                'name' => $key . '_form_description',
                 'type' => 'textarea',
             ),
             array(
                 'key' => $key . '_form_shortcode',
-                'label' => 'Form Shortcode',
-                'name' => 'Form Shortcode',
-                'type' => 'text',
+                'label' => 'Form',
+                'name' => $key . '_form_shortcode',
+                'type' => 'post_object',
+                'post_type' => array(
+                    0 => 'wpcf7_contact_form',
+                ),
+                'return_format' => 'id',
+                'ui' => 1,
             ),
         )
     ));

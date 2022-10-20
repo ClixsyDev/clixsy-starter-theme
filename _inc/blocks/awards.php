@@ -55,14 +55,14 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields' => array(
             array(
-                'key' => $key . 'title',
+                'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . 'title',
                 'type' => 'text',
             ),
             array(
-                'key' => $key . 'awards_items',
-                'name' => 'awards_items',
+                'key' => $key . '_items',
+                'name' => $key . '_items',
                 'label' => 'Awards items',
                 'type' => 'repeater',
                 'layout' => 'table',
@@ -77,10 +77,10 @@ if (function_exists('acf_add_local_field_group')) {
                         'library' => 'all',
                     ),
                     array(
-                        'key' => 'award_url',
+                        'key' => 'award_link',
                         'label' => 'Award link',
                         'name' => 'award_link',
-                        'type' => 'textarea',
+                        'type' => 'text',
                     ),
                 ),
             ),

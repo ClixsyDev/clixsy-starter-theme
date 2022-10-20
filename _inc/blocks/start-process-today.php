@@ -57,13 +57,13 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . '_title',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_step_1_icon',
                 'label' => 'Step 1 icon',
-                'name' => 'step_1_icon',
+                'name' => $key . '_step_1_icon',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -72,19 +72,25 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_step_1_text',
                 'label' => 'Step 1 text',
-                'name' => 'step_1_text',
+                'name' => $key . '_step_1_text',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_step_1_phone',
                 'label' => 'Step 1 phone',
-                'name' => 'step_1_phone',
+                'name' => $key . '_step_1_phone',
                 'type' => 'text',
+            ),
+            array(
+                'key' => $key . '_step_1_link',
+                'label' => 'Step 1 link',
+                'name' => $key . '_step_1_link',
+                'type' => 'link',
             ),
             array(
                 'key' => $key . '_step_2_icon',
                 'label' => 'Step 2 icon',
-                'name' => 'step_2_icon',
+                'name' => $key . '_step_2_icon',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -93,13 +99,13 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_step_2_text',
                 'label' => 'Step 2 text',
-                'name' => 'step_2_text',
+                'name' => $key . '_step_2_text',
                 'type' => 'text',
             ),
             array(
                 'key' => $key . '_step_3_icon',
                 'label' => 'Step 3 icon',
-                'name' => 'step_3_icon',
+                'name' => $key . '_step_3_icon',
                 'type' => 'image',
                 'return_format' => 'id',
                 'preview_size' => 'medium',
@@ -108,20 +114,14 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $key . '_step_3_text',
                 'label' => 'Step 3 text',
-                'name' => 'step_3_text',
+                'name' => $key . '_step_3_text',
                 'type' => 'text',
             ),
             array(
-                'key' => $key . '_start_btn_text',
-                'label' => 'Start button text',
-                'name' => 'start_btn_text',
-                'type' => 'text',
-            ),
-            array(
-                'key' => $key . '_start_btn_url',
-                'label' => 'Start button url',
-                'name' => 'start_btn_url',
-                'type' => 'text',
+                'key' => $key . '_start_btn',
+                'label' => 'Start button',
+                'name' => $key . '_start_btn',
+                'type' => 'link',
             ),
         )
     ));
