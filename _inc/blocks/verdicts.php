@@ -77,12 +77,6 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
             array(
-                'key' => $key . '_display_testimonials',
-                'name' => $key . '_display_testimonials',
-                'label' => 'Display Testimonials',
-                'type' => 'true_false',
-            ),
-            array(
                 'key' => $key . '_background_image',
                 'label' => 'Background Image',
                 'name' => $key . '_background_image',

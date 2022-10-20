@@ -70,6 +70,15 @@ if (function_exists('acf_add_local_field_group')) {
                 'library' => 'all',
             ),
             array(
+                'key' => $key . '_background_image',
+                'label' => 'Background Image',
+                'name' => $key . '_background_image',
+                'type' => 'image',
+                'return_format' => 'id',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
+            array(
                 'key' => $key . '_services',
                 'name' => $key . '_services',
                 'label' => 'Services',
