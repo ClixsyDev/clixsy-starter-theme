@@ -21,11 +21,11 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($process_design_one__title) { ?>
                     <h2 class="text-headings font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl xs:text-2xl"><?php echo $process_design_one__title ?></h2>
                 <?php } ?>
-                <hr class="bg-kennyGreen border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+                <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
                 <div class="flex md:flex-col">
                     <?php if ($process_design_one__image) { ?>
                         <div class="w-12/24 md:hidden">
-                            <?php echo wp_get_attachment_image($process_design_one__image, 'full', '', ['class' => 'h-full']) ?>
+                            <?php echo wp_get_attachment_image($process_design_one__image, 'full', '', ['class' => 'h-full w-full object-cover']) ?>
                         </div>
                     <?php }
                     if ($process_design_one__image_mobile) { ?>

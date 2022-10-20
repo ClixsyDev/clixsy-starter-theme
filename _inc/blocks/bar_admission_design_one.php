@@ -41,7 +41,7 @@ if (function_exists('acf_add_local_field_group')) :
     acf_add_local_field_group(
         array(
             'key' => 'bar_admission_design_one_16345f17b35',
-            'title' => 'Text with form and citation',
+            'title' => 'Bar admission',
             'location' => array(
                 array(
                     array(

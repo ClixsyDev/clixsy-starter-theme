@@ -31,23 +31,23 @@ if ($is_preview && !empty($previewImage)) {
                 <?php } ?>
                 <div class="bg-accent w-17/24 py-8 pb-16 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-50% sm:top-50% xs:top-[40%] xs:w-22/24">
                     <?php if ($personal_banner_design_one__title) { ?>
-                        <h1 class="font-avenir font-bold uppercase text-white text-8xl leading-[80px] text-end xxl:text-6xl mdt:text-center mdt:text-5xl mdt:leading-none xs:text-3xl"><?php echo $personal_banner_design_one__title ?></h1>
+                        <h1 class="font-avenir font-bold uppercase text-white text-8xl  leading-none pt-4 text-end xxl:text-6xl mdt:text-center mdt:text-5xl mdt:leading-none xs:text-3xl"><?php echo $personal_banner_design_one__title ?></h1>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__role) { ?>
-                        <p class="font-avenir text-kennyWhite text-3xl text-end font-bold xxl:text-2xl mdt:text-center mdt:text-xl"><?php echo $personal_banner_design_one__role ?></p>
+                        <p class="font-avenir text-white text-3xl text-end font-bold -mt-2  xxl:text-2xl mdt:text-center mdt:text-xl"><?php echo $personal_banner_design_one__role ?></p>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__phone) { ?>
                         <div class="flex justify-end gap-5 mdt:justify-center mdt:py-2 xs:items-center">
                             <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/telephone-banner.png" class="object-contain xs:w-6" alt="">
-                            <h2 class="font-avenir text-headings_secondFourth text-6xl text-end font-bold leading-[80px] xxl:text-5xl mdt:text-center mdt:text-4xl mdt:leading-none xs:text-2xl"><?php echo $personal_banner_design_one__phone ?></h2>
+                            <h2 class="font-avenir text-headings leading-none text-6xl text-end font-bold leading-[80px] xxl:text-5xl mdt:text-center mdt:text-4xl mdt:leading-none xs:text-2xl"><?php echo $personal_banner_design_one__phone ?></h2>
                         </div>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__mail) { ?>
-                        <a href="mailto:<?php echo $personal_banner_design_one__mail ?>" class="block font-avenir text-headings_second text-3xl font-bold text-end xxl:text-2xl mdt:text-center xs:text-xl"><?php echo $personal_banner_design_one__mail ?></a>
+                        <a href="mailto:<?php echo $personal_banner_design_one__mail ?>" class="block font-avenir text-headings_second text-3xl font-bold -mt-5 text-end xxl:text-2xl mdt:text-center xs:text-xl"><?php echo $personal_banner_design_one__mail ?></a>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__link) { ?>
                         <div class="text-end mt-5 xl:z-[1] mdt:text-center">
-                            <a href="<?php echo $personal_banner_design_one__link['url'] ?>" class="font-avenir  bg-headings uppercase text-white font-bold text-2xl py-2 px-10 rounded-full lg:px-8 lg:text-base xs:text-base mdt:text-xl mdt:py-3"><?php echo $personal_banner_design_one__link['title'] ?></a>
+                            <a href="<?php echo $personal_banner_design_one__link['url'] ?>" class="font-avenir  bg-headings uppercase text-white font-bold text-4xl py-2 px-10 rounded-full lg:px-8 lg:text-base xs:text-base mdt:text-xl mdt:py-3"><?php echo $personal_banner_design_one__link['title'] ?></a>
                         </div>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__social_icons) { ?>
@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__logo) { ?>
-                        <div class="flex justify-end mt-6 -mb-32 xl:z-[1] lg:-mb-24 mdt:justify-center mdt:mb-0">
+                        <div class="flex justify-end mt-6 -mb-32 xl:z-[1] lg:-mb-24 mdt:justify-center mdt:mb-0 relative top-3">
                             <?php echo wp_get_attachment_image($personal_banner_design_one__logo, 'full', '', ['class' => 'lg:w-12/24']) ?>
                         </div>
                     <?php } ?>
@@ -69,3 +69,4 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </section>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

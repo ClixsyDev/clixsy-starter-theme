@@ -50,4 +50,6 @@ if ($is_preview && !empty($previewImage)) {
             <img class=" mt-11 mx-auto" src="<?= wp_get_attachment_image_url($company_logo, 'full') ?>" alt="">
         </div>
     </div>
-<?php } ?>
+</div>
+<?php }
+if (!get_fields()) echo 'Fill block with content';

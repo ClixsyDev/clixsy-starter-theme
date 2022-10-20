@@ -1,7 +1,4 @@
 <?php
-
-use App\Template;
-
 $previewImage = @$block['data']['preview_image'];
 // back-end previews
 if ($is_preview && !empty($previewImage)) {
@@ -32,4 +29,6 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
         </div>
     </div>
+</div>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

@@ -36,7 +36,7 @@ add_filter('villen_gutenberg_palette', 'csme_gutenberg_palette');
 
 add_filter( 'render_block', 'wrap_table_block', 10, 2 );
 function wrap_table_block( $block_content, $block ) {
-  if ( 'core/paragraph' === $block['blockName'] || 'core/heading' === $block['blockName'] ) {
+  if ( 'core/paragraph' === $block['blockName'] || 'core/heading' === $block['blockName'] ||  'core/list' === $block['blockName']) {
     $block_content = '<div class="container prose-lg">' . $block_content . '</div>';
   }
   return $block_content;

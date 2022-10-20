@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="max-w-[1920px] m-auto md:max-w-none">
             <div class="bg-cover py-10" style="background-image: url('<?php echo $awards_design_one__bg ?>');">
                 <?php if ($awards_design_one__title) { ?>
-                <h2 class="text-headings_second text-2xl text-center font-bold font-avenir"><?php echo $awards_design_one__title ?></h2>
+                    <h2 class="text-headings_second text-2xl text-center font-bold font-avenir"><?php echo $awards_design_one__title ?></h2>
                 <?php } ?>
                 <div class="awardsSlider glide relative mt-7 px-10 md:px-0">
                     <div class="glide__track" data-glide-el="track">
@@ -27,8 +27,9 @@ if ($is_preview && !empty($previewImage)) {
                             <?php foreach ($awards_design_one__repeater as $awards_item) { ?>
                                 <div class="glide__slide" style="background-color: <?php echo $awards_design_one__slide_bg ?: '' ?> ;">
                                     <div class="py-6 px-3 flex items-center justify-center w-full">
-                                        <?php echo wp_get_attachment_image($awards_item['icon'], 'full', '', ['class' => 'm-auto xxl:w-17/24']) ?>
+                                        <?php echo wp_get_attachment_image($awards_item['icon'], 'full', '', ['class' => 'm-auto xxl:w-17/24 object-contain h-44 block m-auto']) ?>
                                     </div>
+                                    <span class="m-auto xxl:w-17/24 object-contain h-44 hidden"></span>
                                 </div>
                             <?php } ?>
                         </div>
@@ -44,3 +45,4 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </div>
 <?php }
+if (!get_fields()) echo 'Fill block with content';

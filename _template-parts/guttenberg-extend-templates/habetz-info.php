@@ -51,4 +51,10 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+</div>
+<?php 
+if (!get_fields()) echo 'Fill block with content';
+=======
 <?php }
+>>>>>>> parcel_max

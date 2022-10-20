@@ -16,8 +16,8 @@ function register_reviews_design__two()
         acf_register_block_type(
             array(
                 'name'            => 'reviews-design-two',
-                'title'           => __('Reviews with rating', 'clixsy'),
-                'description'      => __('For clients reviews/verdicts/testimonials', 'clixsy'),
+                'title'           => __('Reviews with rating. One slide per time', 'clixsy'),
+                'description'      => __('For clients reviews/verdicts/testimonials.', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/reviews-design__two--template.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
@@ -84,6 +84,14 @@ if (function_exists('acf_add_local_field_group')) :
                 'label' => 'Button',
                 'type' => 'link',
                 'return_format' => 'array',
+            ),
+            array(
+                'key' => $block_key . 'bg',
+                'name' => $block_key . 'bg',
+                'type' => 'image',
+                'label' => 'Background image',
+                'return_format' => 'id',
+                'preview_size' => 'thumbnail'
             ),
 
         ),
