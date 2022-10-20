@@ -1,10 +1,27 @@
-<?php $fields = get_fields(); ?>
+<?php
+
+use App\Template;
+
+$previewImage = @$block['data']['preview_image'];
+// back-end previews
+if ($is_preview && !empty($previewImage)) {
+    echo ("<img style='display: block; max-width: 100%; height: auto;'  src='{$block['data']['preview_image']}' alt='widget preview'");
+
+    return;
+} else {
+    $key = 'contact_form';
+    $title = get_field($key . '_title');
+    $form = get_field($key . '_form_id');
+?>
 <div class="how_can_help_form">
     <div class="container translate-y-20">
-        <div class="w-[555px] max-w-full bg-headings pt-7 px-12 mx-auto md:px-4 ">
-            <h2 class=" text-4xl text-white text-center"><?= $fields['title'] ?></h2>
-            <?= do_shortcode($fields['form_shortcode']) ?>
+        <div class="form_elements_design_one w-[555px] max-w-full bg-headings pt-7 px-12 mx-auto md:px-4 ">
+            <?php if ($title) { ?>
+                <h2 class=" text-4xl text-white text-center"><?= $title ?></h2>
+            <?php } ?>
+            <?= do_shortcode('[contact-form-7 id="' . $form . '"]') ?>
         </div>
     </div>
 </div>
-<?php if (!get_fields()) echo 'Fill block with content';
+<?php }
+if (!get_fields()) echo 'Fill block with content';

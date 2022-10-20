@@ -52,16 +52,21 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields' => array(
             array(
-                'key' => $key . '_cf_title',
+                'key' => $key . '_title',
                 'label' => 'Title',
-                'name' => 'title',
+                'name' => $key . '_title',
                 'type' => 'text',
             ),
             array(
-                'key' => $key . '_shortcode',
-                'label' => 'Form Shortcode',
-                'name' => 'form_shortcode',
-                'type' => 'text',
+                'key' => $key . '_form_id',
+                'label' => 'Form',
+                'name' => $key . '_form_id',
+                'type' => 'post_object',
+                'post_type' => array(
+                    0 => 'wpcf7_contact_form',
+                ),
+                'return_format' => 'id',
+                'ui' => 1,
             ),
         )
     ));

@@ -32,14 +32,16 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                 </div>
             </div>
-            <div class="w-[35%] bg-headings p-11 how_can_help_form -mb-12 xl:w-full xl:max-w-2xl xl:my-0 xl:mx-auto md:p-4">
-                <div class=" text-white text-xl leading-tight">
-                    <?= $form_description ?>
-                </div>
+            <div class="w-[35%] form_elements_design_one bg-headings p-11 how_can_help_form -mb-12 xl:w-full xl:max-w-2xl xl:my-0 xl:mx-auto md:p-4">
+                <?php if ($form_description) { ?>
+                    <div class=text-white text-xl leading-tight">
+                        <?= $form_description ?>
+                    </div>
+                <?php } ?>
                 <?= do_shortcode('[contact-form-7 id="' . $form . '"]') ?>
             </div>
         </div>
     </div>
-</div>
+    </div>
 <?php }
 if (!get_fields()) echo 'Fill block with content';
