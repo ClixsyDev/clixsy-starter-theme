@@ -1,11 +1,14 @@
 import mainMenu from './menu';
 import { getElement, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
+import { formEntry } from './form_entry';
+
 
 ready(() => {
   mainMenu();
-});
 
+  formEntry();
+});
 let faqOpen = () => {
   let faqItem = document.querySelectorAll('.faq-block');
 

@@ -9,6 +9,10 @@ require_once('_core/taxonomy.php');
 // Include acf for taxonomy
 require_once('_core/taxonomy_acf.php');
 
+// Include form entry
+require_once('_core/cf7_form_entry/form_entry.php');
+require_once('_core/cf7_form_entry/export_entry.php');
+
 // Advanced Custom Fields Plugin
 // require_once ( '_inc/acf-include/acf-include.php' );
 

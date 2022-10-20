@@ -46,7 +46,7 @@ function starter_scripts()
         true
     );
 
-    wp_localize_script('starter-script', 'wpAjax', [
+    wp_localize_script('starter-script', 'ajax_url', [
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
 }
