@@ -56,7 +56,7 @@ if ($is_preview && !empty($previewImage)) {
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
                                 <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24' ?>">
-                                    <div class="font-avenir font-bold text-white text-3xl lg:text-lg span-change_color_1 leading-snug">
+                                    <div class="font-avenir font-bold text-white text-2xl lg:text-lg span-change_color_1 leading-snug">
                                         <?php echo $text_form_design_one__description ?>
                                     </div>
                                 </div>

@@ -1,9 +1,11 @@
 import mainMenu from './menu';
+import headerInit from './header';
 import { getElement, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
 
 ready(() => {
   mainMenu();
+  headerInit();
 });
 
 let faqOpen = () => {

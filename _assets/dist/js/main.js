@@ -535,11 +535,14 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _menu = require("./menu");
 var _menuDefault = parcelHelpers.interopDefault(_menu);
+var _header = require("./header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
 var _utils = require("./utils");
 var _sliders = require("./sliders");
 var _slidersDefault = parcelHelpers.interopDefault(_sliders);
 (0, _utils.ready)(()=>{
     (0, _menuDefault.default)();
+    (0, _headerDefault.default)();
 });
 let faqOpen = ()=>{
     let faqItem = document.querySelectorAll(".faq-block");
@@ -548,7 +551,10 @@ let faqOpen = ()=>{
             let hiddenPart = e.querySelector(".hidden-part");
             let title = e.querySelector(".title-faq");
             Array.from(faqItem).forEach((e)=>{
-                if (!e.querySelector(".hidden-part").classList.contains("hidden") && !e.querySelector(".hidden-part").classList.contains("opened")) e.querySelector(".hidden-part").classList.add("hidden");
+                if (!e.querySelector(".hidden-part").classList.contains("hidden") && e.querySelector(".hidden-part").classList.contains("opened")) {
+                    e.querySelector(".hidden-part").classList.add("hidden");
+                    e.querySelector(".title-faq").classList.remove("open-faq");
+                }
             });
             if (hiddenPart.classList.contains("hidden")) {
                 hiddenPart.classList.remove("hidden");
@@ -556,8 +562,8 @@ let faqOpen = ()=>{
                 title.classList.add("open-faq");
             } else {
                 hiddenPart.classList.add("hidden");
-                title.classList.remove("open-faq");
                 hiddenPart.classList.remove("opened");
+                title.classList.remove("open-faq");
             }
         });
     });
@@ -590,7 +596,7 @@ let btnMoreEducation = ()=>{
 };
 btnMoreEducation();
 
-},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
+},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./header":"9ZRJh"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Main Menu
@@ -4442,6 +4448,29 @@ let instances = 0;
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ZRJh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Main Menu
+var _utils = require("./utils");
+function headerInit() {
+    const header = (0, _utils.getElement)("header");
+    let isSticked = false;
+    document.addEventListener("scroll", (e)=>{
+        console.log("scroll;");
+        console.log(window.scrollY);
+        if (!isSticked && window.scrollY >= 60) {
+            header.classList.add("sticked");
+            isSticked = true;
+        }
+        if (isSticked && window.scrollY <= 60) {
+            header.classList.remove("sticked");
+            isSticked = false;
+        }
+    });
+}
+exports.default = headerInit;
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map
