@@ -12,10 +12,10 @@ $bottom_links = get_field('bottom_links', 'options');
 <footer class="pb-6 pt-40 bg-headings" style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/img/background-footer.png')">
     <div class="container">
         <div class="flex gap-64 items-center xl:flex-col xl:gap-10">
-            <div class="flex pt-3 gap-x-2">
+            <div class="flex pt-3 gap-x-4">
                 <?php if ($socials) { ?>
                     <?php foreach ($socials as $social_item) { ?>
-                        <a href="<?php echo esc_url($social_item['link']); ?>"><?php echo wp_get_attachment_image($social_item['icon'], 'full', "", ["class" => "h-14 w-auto sm:h-10 "]); ?></a>
+                        <a target="_blank" href="<?php echo esc_url($social_item['link']); ?>"><?php echo wp_get_attachment_image($social_item['icon'], 'full', "", ["class" => "h-14 w-auto sm:h-10 "]); ?></a>
                     <?php } ?>
                 <?php } ?>
             </div>
