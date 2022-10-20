@@ -21,7 +21,6 @@ $bottom_links = get_field('bottom_links', 'options');
             </div>
             <?php if ($subscribe_form) { ?>
                 <div class="xl:ml-16 sm:w-full sm:ml-0">
-                    <h5 class="text-accent font-avenir font-bold text-sm">GET OUR NEWSLETTER</h5>
                     <?php 
                         echo do_shortcode('[contact-form-7 id="'.$subscribe_form.'" title="Subscribe form"]');
                     ?>
@@ -38,25 +37,25 @@ $bottom_links = get_field('bottom_links', 'options');
                 <div class="flex flex-col gap-6">
                     <?php if ($location) { ?>
                         <div>
-                            <h5 class="text-accent font-avenir font-bold text-sm">LOCATION</h5>
+                            <h5 class="text-accent font-avenir font-bold text-xl">LOCATION</h5>
                             <p class="text-white font-avenir font-bold text-2xl xl:text-xl"><?php echo $location ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($phone) { ?>
                         <div>
-                            <h5 class="text-accent font-avenir font-bold text-sm">EMAIL</h5>
+                            <h5 class="text-accent font-avenir font-bold text-xl">EMAIL</h5>
                             <p class="text-white font-avenir font-bold text-lg xl:text-xl"><?php echo $phone ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($mail) { ?>
                         <div>
-                            <h5 class="text-accent font-avenir font-bold text-sm">PHONE</h5>
+                            <h5 class="text-accent font-avenir font-bold text-xl">PHONE</h5>
                             <p class="text-white font-avenir font-bold text-lg xl:text-xl"><?php echo $mail ?></p>
                         </div>
                     <?php } ?>
                 </div>
                 <div>
-                    <h5 class="text-accent font-avenir font-bold text-sm uppercase">Quick Links</h5>
+                    <h5 class="text-accent font-avenir font-bold text-xl uppercase">Quick Links</h5>
                     <?php wp_nav_menu([
                         'menu'                 => 'Footer menu',
                         'container'            => '',

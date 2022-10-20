@@ -1689,7 +1689,7 @@
 @media (max-width: 1024px) {
   .sub-menu.lvl-1 {
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    background-color: rgb(104 104 104 / var(--tw-bg-opacity));
   }
 }
 
@@ -1729,7 +1729,7 @@
 
 .sub-menu.lvl-2 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(104 104 104 / var(--tw-bg-opacity));
   min-width: 300px;
   padding: 0;
   display: none;
@@ -2705,6 +2705,17 @@ img, video {
 
 .wpcf7-response-output {
   display: none;
+}
+
+.footer-menu {
+  width: 13rem;
+}
+
+.footer-menu a {
+  margin-bottom: .75rem;
+  font-size: 1.5rem;
+  line-height: 1.375;
+  display: block;
 }
 
 *, :before, :after {
@@ -7276,7 +7287,7 @@ h2 span {
 
 .acf-block-preview .bg-bg_second {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(104 104 104 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-white\/60 {
