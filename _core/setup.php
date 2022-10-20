@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('starter_setup')) :
+if (!function_exists('starter_setup')) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -8,8 +8,7 @@ if (! function_exists('starter_setup')) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function starter_setup()
-    {
+    function starter_setup() {
         /**
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -97,8 +96,7 @@ if (! function_exists('starter_setup')) :
          */
         add_filter('option_use_smilies', '__return_false');
 
-        function disable_emojis_tinymce($plugins)
-        {
+        function disable_emojis_tinymce($plugins) {
             if (is_array($plugins)) {
                 $plugins = array_diff($plugins, array('wpemoji'));
             }
@@ -108,3 +106,11 @@ if (! function_exists('starter_setup')) :
 endif;
 
 add_action('after_setup_theme', 'starter_setup');
+
+
+// remove fullscreen mode
+function ghub_disable_editor_fullscreen_mode() {
+    $script = "window.onload = function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } }";
+    wp_add_inline_script('wp-blocks', $script);
+}
+add_action('enqueue_block_editor_assets', 'ghub_disable_editor_fullscreen_mode');

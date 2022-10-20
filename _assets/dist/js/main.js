@@ -540,9 +540,10 @@ var _headerDefault = parcelHelpers.interopDefault(_header);
 var _utils = require("./utils");
 var _sliders = require("./sliders");
 var _slidersDefault = parcelHelpers.interopDefault(_sliders);
+var _formEntry = require("./form_entry");
 (0, _utils.ready)(()=>{
     (0, _menuDefault.default)();
-    (0, _headerDefault.default)();
+    (0, _formEntry.formEntry)();
 });
 let faqOpen = ()=>{
     let faqItem = document.querySelectorAll(".faq-block");
@@ -595,8 +596,8 @@ let btnMoreEducation = ()=>{
     });
 };
 btnMoreEducation();
+},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0"}],"2uPGB":[function(require,module,exports) {
 
-},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./header":"9ZRJh"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Main Menu
@@ -4448,29 +4449,56 @@ let instances = 0;
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ZRJh":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1vUc0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-// Main Menu
-var _utils = require("./utils");
-function headerInit() {
-    const header = (0, _utils.getElement)("header");
-    let isSticked = false;
-    document.addEventListener("scroll", (e)=>{
-        console.log("scroll;");
-        console.log(window.scrollY);
-        if (!isSticked && window.scrollY >= 60) {
-            header.classList.add("sticked");
-            isSticked = true;
-        }
-        if (isSticked && window.scrollY <= 60) {
-            header.classList.remove("sticked");
-            isSticked = false;
-        }
-    });
-}
-exports.default = headerInit;
+parcelHelpers.export(exports, "formEntry", ()=>formEntry);
+const formEntry = (data)=>{
+    // Success entry
+    document.addEventListener("wpcf7mailsent", function(event) {
+        var obj = event.detail.inputs;
+        var result = Object.keys(obj).map((key)=>[
+                Number(key),
+                obj[key]
+            ]);
+        console.log("inputs = ", result);
+        saveSuccessEntry(obj);
+    }, false);
+    async function saveSuccessEntry(inputsData) {
+        let inputData = inputsData;
+        let data = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(inputData)
+        };
+        let response = await fetch(ajax_url.ajaxurl + "?action=form_entry_sucess", data);
+    // let serverResponse = await response.text();
+    }
+    //   Fail Entry
+    document.addEventListener("wpcf7mailfailed", function(event) {
+        var obj = event.detail.inputs;
+        var result = Object.keys(obj).map((key)=>[
+                Number(key),
+                obj[key]
+            ]);
+        saveFailEntry(obj);
+    }, false);
+    async function saveFailEntry(inputsData) {
+        let inputData = inputsData;
+        let data = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(inputData)
+        };
+        let response = await fetch(ajax_url.ajaxurl + "?action=form_entry_fail", data);
+    // let serverResponse = await response.text();
+    }
+};
 
-},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map
