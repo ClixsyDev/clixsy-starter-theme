@@ -24,7 +24,7 @@ function register_verdicts()
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords'           => array('welcome', 'banner'),
+                'keywords'           => array('verdicts', 'banner'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -41,6 +41,7 @@ add_action('acf/init', 'register_verdicts');
 
 if (function_exists('acf_add_local_field_group')) {
     $key = 'verdicts';
+    $reviews_key = 'reviews_design_two_';
     acf_add_local_field_group(array(
         'key'            => 'verdicts',
         'title'          => 'Verdicts',
@@ -56,7 +57,7 @@ if (function_exists('acf_add_local_field_group')) {
         'fields' => array(
             array(
                 'key' => $key . '_verdicts_repeater',
-                'name' => 'verdicts_repeater',
+                'name' => $key . '_verdicts_repeater',
                 'label' => 'Verdicts',
                 'type' => 'repeater',
                 'layout' => 'table',
@@ -76,27 +77,20 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
             array(
-                'key' => 'verdocts_testimonials',
-                'name' => 'verdicts_testimonials',
-                'label' => 'Testimonials',
-                'type' => 'repeater',
-                'layout' => 'table',
-                'sub_fields' => array(
-                    array(
-                        'key' => 'quote',
-                        'name' => 'text',
-                        'label' => 'Text',
-                        'type' => 'textarea',
-                    ),
-                    array(
-                        'key' => 'author',
-                        'name' => 'author',
-                        'label' => 'Author',
-                        'type' => 'text',
-                    ),
-                ),
+                'key' => $key . '_display_testimonials',
+                'name' => $key . '_display_testimonials',
+                'label' => 'Display Testimonials',
+                'type' => 'true_false',
             ),
-
+            array(
+                'key' => $key . '_background_image',
+                'label' => 'Background Image',
+                'name' => $key . '_background_image',
+                'type' => 'image',
+                'return_format' => 'id',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
         )
     ));
 }

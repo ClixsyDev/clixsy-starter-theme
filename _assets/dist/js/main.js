@@ -548,10 +548,7 @@ let faqOpen = ()=>{
             let hiddenPart = e.querySelector(".hidden-part");
             let title = e.querySelector(".title-faq");
             Array.from(faqItem).forEach((e)=>{
-                if (!e.querySelector(".hidden-part").classList.contains("hidden") && e.querySelector(".hidden-part").classList.contains("opened")) {
-                    e.querySelector(".hidden-part").classList.add("hidden");
-                    e.querySelector(".title-faq").classList.remove("open-faq");
-                }
+                if (!e.querySelector(".hidden-part").classList.contains("hidden") && !e.querySelector(".hidden-part").classList.contains("opened")) e.querySelector(".hidden-part").classList.add("hidden");
             });
             if (hiddenPart.classList.contains("hidden")) {
                 hiddenPart.classList.remove("hidden");
@@ -559,8 +556,8 @@ let faqOpen = ()=>{
                 title.classList.add("open-faq");
             } else {
                 hiddenPart.classList.add("hidden");
-                hiddenPart.classList.remove("opened");
                 title.classList.remove("open-faq");
+                hiddenPart.classList.remove("opened");
             }
         });
     });
