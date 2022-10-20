@@ -1,4 +1,5 @@
 import mainMenu from './menu';
+import headerInit from './header';
 import { getElement, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
@@ -6,6 +7,8 @@ import { formEntry } from './form_entry';
 
 ready(() => {
   mainMenu();
+  headerInit();
+});
 
   formEntry();
 });

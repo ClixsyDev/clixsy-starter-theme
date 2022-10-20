@@ -53,7 +53,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($personal_banner_design_one__social_icons) { ?>
                         <div class="flex justify-end mt-6 gap-2 pb-8 xl:z-[1] xl:pb-1 mdt:justify-center">
                             <?php foreach ($personal_banner_design_one__social_icons as $personal_item) { ?>
-                                <a href="<?php echo $personal_item['link'] ?>" target="_blank">
+                                <a href="<?php echo $personal_item['link'] ?>" class=" transition-all duration-300 hover:opacity-80" target="_blank">
                                     <img src="<?php echo wp_get_attachment_image_url($personal_item['icon'], 'full') ?>" class="xl:w-10 xl:h-10 xs:h-max" alt="social icon" loading="lazy">
                                 </a>
                             <?php } ?>

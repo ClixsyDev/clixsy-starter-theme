@@ -27,9 +27,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- testing mega menu -->
 
-    <header class="bg-headings_second sticky top-0 w-full z-50 h-40 py-8">
-        <div class="container flex justify-between items-center">
-            <a href="<?php echo home_url() ?>">
+    <header class="sticky top-0 w-full z-50 h-40 py-8 lg:h-[80px] lg:max-h-[80px] lg:p-1">
+        <img src="<?= wp_get_attachment_image_url(get_field('site_header_bg', 'option'), 'full') ?>" class="z-10 absolute left-0 top-0 w-full h-full object-cover" alt="">
+        <div class="z-10 bg-header_bg absolute left-0 top-0 w-full h-full object-cover"></div>
+        <div class="relative z-20 container flex justify-between items-center">
+            <a href="<?php echo home_url() ?>" class="logo-desktop lg:hidden">
                 <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => '']) ?>
             </a>
             <?php main_menu(); ?>
@@ -55,16 +57,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 ]) ?>
 
             </div>
-            <div class="mobile-menu-row__wrapper hidden lg:grid lg:grid-cols-3">
+            <div class="mobile-menu-row__wrapper hidden w-full flex-row-reverse items-center justify-between lg:flex">
                 <button aria-label="menu toggle" class="button small" id="main-menu-button">
                     <span class="ico-b open-menu"><span></span></span>
                     <span class="ico-c close-menu"></span>
                 </button>
                 <a href="<?php echo home_url('/') ?>">
-                    <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-20 h-auto transform transition-all my-0 mx-auto mobile-logo']) ?>
+                    <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-36 h-auto transform transition-all my-0 mx-auto mobile-logo']) ?>
                 </a>
             </div>
-            <div class="flex justify-center items-center flex-col text-white font-avenir gap-2 ">
+            <div class="call_header flex justify-center items-center flex-col text-white font-avenir gap-2 lg:hidden">
                 <div class=" text-lg leading-none">
                     AVAILABLE 24/7
                 </div>

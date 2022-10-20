@@ -22,7 +22,6 @@
   transition: all 0.2s ease-in-out;
   user-select: none;
   padding: 5px 2px;
-  background-color: var(--bg-darkblue);
 
   span[class^='ico-'] {
     position: absolute;
@@ -89,7 +88,7 @@ nav.main-menu {
     display: flex;
     flex-flow: row nowrap;
     position: fixed;
-    top: 64px;
+    top: 80px;
     @media(max-width: 1024px) {
       overflow-y: scroll;
     }
