@@ -15,7 +15,7 @@ $bottom_links = get_field('bottom_links', 'options');
             <div class="flex pt-3">
                 <?php if ($socials) { ?>
                     <?php foreach ($socials as $social_item) { ?>
-                        <a href="<?php echo esc_url($social_item['link']); ?>"><?php echo wp_get_attachment_image($social_item['icon'], 'full', "", ["class" => "h-14 w-auto"]); ?></a>
+                        <a href="<?php echo esc_url($social_item['link']); ?>"><?php echo wp_get_attachment_image($social_item['icon'], 'full', "", ["class" => "h-14 w-auto sm:h-10 "]); ?></a>
                     <?php } ?>
                 <?php } ?>
             </div>
