@@ -6,7 +6,6 @@ use App\Template;
 
     <!-- Main Content -->
     <main>
-
         <!-- Entry -->
         <?php while (have_posts()) : the_post(); ?>
             <?php include(Template::locate('_template-parts/single/_entry.php')); ?>
