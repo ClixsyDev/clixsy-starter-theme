@@ -3,12 +3,14 @@ import headerInit from './header';
 import { getElement, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
+import { hoverOnButton } from './button-hover';
 
 
 ready(() => {
   mainMenu();
   headerInit();
   formEntry();
+  hoverOnButton();
 });
 let faqOpen = () => {
   let faqItem = document.querySelectorAll('.faq-block');
