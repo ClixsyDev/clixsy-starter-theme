@@ -20,15 +20,15 @@ if ($is_preview && !empty($previewImage)) {
     <?php if ($welcome_banner__case_title || $welcome_banner__case_link || $welcome_banner__case_bg || $welcome_banner__case_icon) { ?>
         <section class="w-full relative">
             <?php if ($welcome_banner__case_bg) { ?>
-                <?php echo wp_get_attachment_image($welcome_banner__case_bg, 'full', '', ['class' => 'object-cover h-[730px] w-full ']) ?>
+                <?php echo wp_get_attachment_image($welcome_banner__case_bg, 'full', '', ['class' => 'object-cover h-[730px] w-full md:h-[600px] ']) ?>
             <?php } ?>
             <div class="container h-full absolute left-0 right-0 top-0  mx-auto ">
                 <div class=" translate-y-[20%] 2xl:translate-y-[30%] lg:translate-y-[20%] md:translate-y-[35%]">
                     
                     <?php if ($welcome_banner__case_title) { ?>
-                        <div class="pb-16 text-white text-[90px] 2xl:text-[60px] md:text-[40px] text-center font-bold">
+                        <div class="pb-12 text-white text-[90px] 2xl:text-[60px] md:text-[40px] text-center font-bold">
                             <span class="bg-accent w-2/5 h-2 absolute left-0 right-0 mx-auto"></span>
-                            <h2 class="py-3"><?php echo $welcome_banner__case_title ?></h2>
+                            <h2 class="py-3 leading-tight"><?php echo $welcome_banner__case_title ?></h2>
                             <span class="bg-accent w-2/5  h-2 absolute left-0 right-0 mx-auto"></span>
                         </div>
                     <?php } ?>

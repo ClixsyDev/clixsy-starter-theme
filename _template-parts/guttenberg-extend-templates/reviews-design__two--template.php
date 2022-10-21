@@ -57,7 +57,7 @@ if ($is_preview && !empty($previewImage)) {
                                                     </svg>
                                                 <?php } ?>
                                             </div>
-                                            <p class=" font-noto_serif text-2xl text-black">- <?php echo get_the_title($review_item) ?></p>
+                                            <p class=" font-noto_serif text-2xl text-black md:text-xl">- <?php echo get_the_title($review_item) ?></p>
                                         </div>
                                     <?php } ?>
                                 </div>
