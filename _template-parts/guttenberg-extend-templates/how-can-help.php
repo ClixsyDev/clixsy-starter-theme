@@ -20,21 +20,22 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <div class="relative pt-8 pb-44">
         <div class="container flex xl:flex-wrap">
-            <div class="w-[65%] relative xl:w-full">
-                <h2 class="absolute right-4 top-40 text-[60px] text-right leading-tight max-w-[367px] mdt:top-0 md:relative md:text-center md:text-4xl md:w-full md:m-0 md:left-0 md:right-0 md:mx-auto"><?= $title ?></h2>
-                <img src="<?= wp_get_attachment_image_url($attorney_image, 'full') ?>" class="relative z-20 left-0 top-0 w-[60%] h-auto object-cover md:left-50% md:-translate-x-1/2" alt="">
-                <div class="bg-headings absolute bottom-0 left-0 w-full h-72 z-0 md:h-32"></div>
-                <div class="absolute flex items-end bottom-0 left-0 w-full h-72 z-30 flex pt-9 px-5 pb-3 md:justify-center">
+            <div class="w-[65%] relative xl:max-w-2xl xl:w-full xl:mx-auto">
+                <h2 class="font-avenir font-bold absolute right-4 top-40 text-[60px] text-right leading-tight max-w-[367px] 
+                    2xl:text-[40px] 2xl:max-w-[280px] md:top-0 sm:text-[30px] sm:max-w-[200px]"><?= $title ?></h2>
+                <img src="<?= wp_get_attachment_image_url($attorney_image, 'full') ?>" class="relative z-20 left-0 top-0 w-[632px] h-auto object-cover xl:w-1/2 sm:transform-none sm:left-0 sm:max-w-[200px]" alt="">
+                <div class="bg-headings absolute bottom-0 left-0 w-full h-72 z-0 xl:h-32"></div>
+                <div class="absolute flex items-end bottom-0 left-0 w-full h-72 z-30 flex pt-9 px-5 pb-3 md:justify-start">
                     <img class=" w-16 h-auto mr-11 md:w-10 md:mr-3" src="<?= wp_get_attachment_image_url($company_logo, 'full') ?>" alt="">
-                    <img class="mdt:w-40 md:w-24" src="<?= wp_get_attachment_image_url($state_icon, 'full') ?>" alt="">
+                    <img class="xl:w-24" src="<?= wp_get_attachment_image_url($state_icon, 'full') ?>" alt="">
                     <?php if ($state_name) { ?>
-                        <div class="text-white text-10xl leading-tight mb-6 2xl:text-8xl md:text-3xl"><?= $state_name ?></div>
+                        <div class="font-avenir text-white text-10xl leading-tight mb-6 2xl:text-8xl xl:text-3xl"><?= $state_name ?></div>
                     <?php } ?>
                 </div>
             </div>
-            <div class="w-[35%] form_elements_design_one bg-headings p-11 how_can_help_form -mb-12 xl:w-full xl:max-w-2xl xl:my-0 xl:mx-auto md:p-4">
+            <div class="w-[515px] form_elements_design_one bg-headings p-11 how_can_help_form -mb-12 xl:w-full xl:max-w-2xl xl:my-0 xl:mx-auto md:p-4">
                 <?php if ($form_description) { ?>
-                    <div class=text-white text-xl leading-tight">
+                    <div class="font-noto_serif text-white text-xl leading-tight">
                         <?= $form_description ?>
                     </div>
                 <?php } ?>

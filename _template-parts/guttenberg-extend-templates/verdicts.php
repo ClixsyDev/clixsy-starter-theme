@@ -22,10 +22,10 @@ if ($is_preview && !empty($previewImage)) {
                     foreach ($verdicts as $verdict) {
                     ?>
                         <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1">
-                            <div class="text-accent text-5xl leading-none 2xl:text-3xl">
+                            <div class="font-avenir font-bold text-accent text-5xl leading-none 2xl:text-3xl">
                                 <?= $verdict['verdicts_value'] ?>
                             </div>
-                            <div class=" text-[40px] 2xl:text-[25px]">
+                            <div class="font-avenir text-[40px] 2xl:text-[25px]">
                                 <?= $verdict['verdicts_description'] ?>
                             </div>
                         </div>

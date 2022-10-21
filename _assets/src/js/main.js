@@ -38,6 +38,7 @@ let faqOpen = () => {
       }
     });
   });
+  Array.from(faqItem)[0].click();
 };
 faqOpen();
 

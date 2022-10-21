@@ -58,7 +58,7 @@
 @media (max-width: 1024px) {
   .sub-menu.lvl-1 {
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    background-color: rgb(129 215 66 / var(--tw-bg-opacity));
   }
 }
 
@@ -98,7 +98,7 @@
 
 .sub-menu.lvl-2 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(129 215 66 / var(--tw-bg-opacity));
   min-width: 300px;
   padding: 0;
   display: none;
@@ -10290,6 +10290,10 @@ img, video {
   width: 25%;
 }
 
+.w-\[632px\] {
+  width: 632px;
+}
+
 .max-w-\[1920px\] {
   max-width: 1920px;
 }
@@ -10617,6 +10621,11 @@ img, video {
   background-color: rgb(0 34 68 / var(--tw-bg-opacity));
 }
 
+.bg-header_bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: rgb(105 190 38 / var(--tw-bg-opacity));
@@ -10669,11 +10678,15 @@ img, video {
 
 .bg-bg_second {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(129 215 66 / var(--tw-bg-opacity));
 }
 
 .bg-white\/60 {
   background-color: #fff9;
+}
+
+.bg-white\/75 {
+  background-color: #ffffffbf;
 }
 
 .bg-opacity-70 {
@@ -11674,8 +11687,8 @@ body.logged-in {
     height: 16rem;
   }
 
-  .\32 xl\:h-\[560px\] {
-    height: 560px;
+  .\32 xl\:h-\[427px\] {
+    height: 427px;
   }
 
   .\32 xl\:w-\[300px\] {
@@ -11692,6 +11705,10 @@ body.logged-in {
 
   .\32 xl\:w-full {
     width: 100%;
+  }
+
+  .\32 xl\:max-w-\[280px\] {
+    max-width: 280px;
   }
 
   .\32 xl\:translate-y-\[30\%\] {
@@ -11758,6 +11775,15 @@ body.logged-in {
   .\32 xl\:text-4xl {
     font-size: 2.25rem;
   }
+
+  .\32 xl\:text-\[40px\] {
+    font-size: 40px;
+  }
+
+  .\32 xl\:before\:w-24:before, .\32 xl\:after\:w-24:after {
+    content: var(--tw-content);
+    width: 6rem;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -11819,6 +11845,10 @@ body.logged-in {
     height: 600px;
   }
 
+  .xl\:h-32 {
+    height: 8rem;
+  }
+
   .xl\:min-h-\[195px\] {
     min-height: 195px;
   }
@@ -11861,6 +11891,18 @@ body.logged-in {
 
   .xl\:w-10\/24 {
     width: 41.6667%;
+  }
+
+  .xl\:w-1\/2 {
+    width: 50%;
+  }
+
+  .xl\:w-24 {
+    width: 6rem;
+  }
+
+  .xl\:w-20 {
+    width: 5rem;
   }
 
   .xl\:max-w-2xl {
@@ -12520,8 +12562,8 @@ body.logged-in {
 }
 
 @media (max-width: 992px) {
-  .mdt\:relative {
-    position: relative;
+  .mdt\:absolute {
+    position: absolute;
   }
 
   .mdt\:top-0 {
@@ -12544,8 +12586,20 @@ body.logged-in {
     right: 2%;
   }
 
+  .mdt\:left-1\/2 {
+    left: 50%;
+  }
+
+  .mdt\:bottom-14 {
+    bottom: 3.5rem;
+  }
+
   .mdt\:z-\[1\] {
     z-index: 1;
+  }
+
+  .mdt\:z-10 {
+    z-index: 10;
   }
 
   .mdt\:order-2 {
@@ -12558,6 +12612,15 @@ body.logged-in {
 
   .mdt\:m-auto {
     margin: auto;
+  }
+
+  .mdt\:m-0 {
+    margin: 0;
+  }
+
+  .mdt\:my-1 {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
   }
 
   .mdt\:ml-0 {
@@ -12588,16 +12651,28 @@ body.logged-in {
     margin-bottom: 2.5rem;
   }
 
-  .mdt\:mt-4 {
-    margin-top: 1rem;
+  .mdt\:mt-64 {
+    margin-top: 16rem;
+  }
+
+  .mdt\:mb-16 {
+    margin-bottom: 4rem;
   }
 
   .mdt\:mt-2 {
     margin-top: .5rem;
   }
 
+  .mdt\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .mdt\:block {
     display: block;
+  }
+
+  .mdt\:flex {
+    display: flex;
   }
 
   .mdt\:hidden {
@@ -12652,6 +12727,10 @@ body.logged-in {
     width: 79.1667%;
   }
 
+  .mdt\:w-\[496px\] {
+    width: 496px;
+  }
+
   .mdt\:w-18\/24 {
     width: 75%;
   }
@@ -12666,6 +12745,11 @@ body.logged-in {
 
   .mdt\:flex-none {
     flex: none;
+  }
+
+  .mdt\:-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .mdt\:flex-row {
@@ -12704,8 +12788,16 @@ body.logged-in {
     gap: 1.75rem;
   }
 
+  .mdt\:bg-white\/75 {
+    background-color: #ffffffbf;
+  }
+
   .mdt\:p-5 {
     padding: 1.25rem;
+  }
+
+  .mdt\:p-0 {
+    padding: 0;
   }
 
   .mdt\:px-10 {
@@ -12738,8 +12830,36 @@ body.logged-in {
     padding-right: 3.5rem;
   }
 
+  .mdt\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .mdt\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .mdt\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .mdt\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .mdt\:pb-12 {
     padding-bottom: 3rem;
+  }
+
+  .mdt\:pt-72 {
+    padding-top: 18rem;
+  }
+
+  .mdt\:pb-14 {
+    padding-bottom: 3.5rem;
   }
 
   .mdt\:text-center {
@@ -12764,6 +12884,10 @@ body.logged-in {
 
   .mdt\:text-lg {
     font-size: 1.125rem;
+  }
+
+  .mdt\:text-8xl {
+    font-size: 80px;
   }
 
   .mdt\:leading-none {
@@ -12972,6 +13096,10 @@ body.logged-in {
     align-items: center;
   }
 
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
   .md\:justify-center {
     justify-content: center;
   }
@@ -13154,6 +13282,10 @@ body.logged-in {
     right: 1.75rem;
   }
 
+  .sm\:left-0 {
+    left: 0;
+  }
+
   .sm\:col-span-12 {
     grid-column: span 12 / span 12;
   }
@@ -13171,10 +13303,25 @@ body.logged-in {
     margin-top: 1.25rem;
   }
 
+  .sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .sm\:hidden {
     display: none;
   }
 
+<<<<<<< Updated upstream
+=======
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
+  .sm\:h-\[486px\] {
+    height: 486px;
+  }
+
+>>>>>>> Stashed changes
   .sm\:min-h-\[90px\] {
     min-height: 90px;
   }
@@ -13197,6 +13344,18 @@ body.logged-in {
 
   .sm\:w-\[96\%\] {
     width: 96%;
+  }
+
+  .sm\:w-\[295px\] {
+    width: 295px;
+  }
+
+  .sm\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+
+  .sm\:transform-none {
+    transform: none;
   }
 
   .sm\:grid-cols-1 {
@@ -13241,6 +13400,23 @@ body.logged-in {
 
   .sm\:text-2xl {
     font-size: 1.5rem;
+  }
+
+  .sm\:text-sm {
+    font-size: .875rem;
+  }
+
+  .sm\:text-\[53px\] {
+    font-size: 53px;
+  }
+
+  .sm\:text-\[30px\] {
+    font-size: 30px;
+  }
+
+  .sm\:before\:w-12:before, .sm\:after\:w-12:after {
+    content: var(--tw-content);
+    width: 3rem;
   }
 }
 

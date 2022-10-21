@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class=" pt-10 pb-9 bg-smoke">
         <div class="container">
             <?php if ($title) { ?>
-                <h2 class="text-white text-5xl leading-tight text-center mb-7"><?= $title ?></h2>
+                <h2 class="font-avenir text-white text-5xl leading-tight text-center mb-7"><?= $title ?></h2>
             <?php } ?>
             <?php if ($button) { ?>
                 <a href="<?= $button['url'] ?>" class=" mx-auto w-[233px] h-[67px] flex justify-center items-center bg-accent rounded-full text-2xl leading-none text-white uppercase">
