@@ -38,7 +38,7 @@ if ($is_preview && !empty($previewImage)) {
 
                         </span>
                         <?php if ($text_form_design_one__citation) { ?>
-                            <div class="text-headings_second font-avenir lg:pl-8 prose-xl lg:prose-lg leading-snug">
+                            <div class="text-headings_second font-avenir lg:pl-8 sm:pl-0 prose-xl lg:prose-lg leading-snug">
                                 <?php echo $text_form_design_one__citation ?>
                             </div>
                         <?php } ?>
