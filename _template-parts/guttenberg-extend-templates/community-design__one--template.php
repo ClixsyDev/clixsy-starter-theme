@@ -81,7 +81,7 @@ if ($is_preview && !empty($previewImage)) {
                                                 <?php } ?>
                                                 <?php if ($organization_v1_item_mobile['community_v1_button'] && $organization_v1_item_mobile['community_v1_button']['url']) { ?>
                                                     <div class="text-center mt-8">
-                                                        <a href="<?php echo $organization_v1_item_mobile['community_v1_button']['url'] ?>" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item_mobile['community_v1_button']['url'] ?></a>
+                                                        <a href="<?php echo $organization_v1_item_mobile['community_v1_button']['url'] ?>" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item_mobile['community_v1_button']['title'] ?></a>
                                                     </div>
                                                 <?php } ?>
                                             </div>

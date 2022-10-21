@@ -16,9 +16,9 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__page_icon = get_field('welcome_banner__page_icon');
 
 ?>
-    <div class="h-[900px] xl:h-[600px] bg-cover" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__page_bg, 'full') ?>');">
+    <div class="h-[750px] xl:h-[600px] bg-cover" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__page_bg, 'full') ?>');">
         <div class="container h-full">
-            <div class="flex flex-col items-center justify-center h-full">
+            <div class="flex flex-col items-center justify-center h-full -mb-12 md:mb-auto">
                 <div class="flex flex-col gap-5 text-center bg-accent bg-opacity-70	 px-8 py-12 w-13/24 xl:w-16/24 mdt:w-18/24 md:w-21/24 sm:w-22/24 xs:py-8">
                     <?php if ($welcome_banner__page_title) { ?>
                         <h1 class="span-change_color_2 text-6xl leading-tight font-avenir font-bold 2xl:text-5xl mdt:text-4xl xs:text-3xl"><?php echo $welcome_banner__page_title ?></h1>
