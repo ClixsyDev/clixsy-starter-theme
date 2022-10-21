@@ -12,3 +12,4 @@ vendor/*
 !vendor/composer
 vendor/composer/installed.php
 vendor/composer/InstalledVersions.php
+tailwind-colors.js
