@@ -5048,10 +5048,6 @@ h2 span {
   height: 100%;
 }
 
-.acf-block-preview .h-auto {
-  height: auto;
-}
-
 .acf-block-preview .h-11 {
   height: 2.75rem;
 }
@@ -5378,10 +5374,6 @@ h2 span {
 
 .acf-block-preview .w-16\/24 {
   width: 66.6667%;
-}
-
-.acf-block-preview .w-\[515px\] {
-  width: 515px;
 }
 
 .acf-block-preview .w-3\/24 {
@@ -6877,6 +6869,10 @@ html :where(.wp-block) {
     height: 600px;
   }
 
+  .xl\:h-\[427px\] {
+    height: 427px;
+  }
+
   .xl\:min-h-\[195px\] {
     min-height: 195px;
   }
@@ -7343,6 +7339,10 @@ html :where(.wp-block) {
 
   .lg\:h-40 {
     height: 10rem;
+  }
+
+  .lg\:h-\[427px\] {
+    height: 427px;
   }
 
   .lg\:max-h-\[80px\] {
@@ -8015,14 +8015,10 @@ html :where(.wp-block) {
     height: 13rem;
   }
 
-  .md\:h-32 {
-    height: 8rem;
-  }
-
   .md\:h-\[600px\] {
     height: 600px;
   }
-  
+
   .md\:w-full {
     width: 100%;
   }
@@ -8302,6 +8298,7 @@ html :where(.wp-block) {
   .sm\:h-10 {
     height: 2.5rem;
   }
+
   .sm\:h-\[486px\] {
     height: 486px;
   }
@@ -8366,6 +8363,14 @@ html :where(.wp-block) {
     padding: 0;
   }
 
+  .sm\:pt-6 {
+    padding-top: 1.5rem;
+  }
+
+  .sm\:pb-7 {
+    padding-bottom: 1.75rem;
+  }
+
   .sm\:pb-16 {
     padding-bottom: 4rem;
   }
@@ -8380,14 +8385,6 @@ html :where(.wp-block) {
 
   .sm\:pb-5 {
     padding-bottom: 1.25rem;
-  }
-
-  .sm\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .sm\:pb-7 {
-    padding-bottom: 1.75rem;
   }
 
   .sm\:text-center {
