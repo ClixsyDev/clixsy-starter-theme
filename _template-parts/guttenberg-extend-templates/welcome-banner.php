@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
     $text_line_3 = get_field('welcome_banner_banner_text_line_3');
     $button = get_field('welcome_banner_button');
     ?>
-    <div class="welcome_banner relative h-[780px] 2xl:h-[427px] mdt:h-auto sm:h-[486px]">
+    <div class="welcome_banner relative h-[780px] xl:h-[427px] mdt:h-auto sm:h-[486px]">
         <img src="<?= wp_get_attachment_image_url($bg_image, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
         <div class="container relative z-10 flex flex-col h-full justify-center items-end  mdt:items-center mdt:p-0">
             <div class="flex flex-col items-center mdt:w-[496px] mdt:bg-white/75 mdt:px-6 mdt:py-8 mdt:absolute mdt:left-1/2 mdt:bottom-14 mdt:-translate-x-1/2 mdt:z-10 sm:w-[295px]">

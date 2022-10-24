@@ -8860,6 +8860,10 @@ body.logged-in {
     height: 600px;
   }
 
+  .xl\:h-\[427px\] {
+    height: 427px;
+  }
+
   .xl\:min-h-\[195px\] {
     min-height: 195px;
   }
