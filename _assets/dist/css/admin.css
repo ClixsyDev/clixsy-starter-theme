@@ -6699,10 +6699,6 @@ html :where(.wp-block) {
     height: 16rem;
   }
 
-  .\32 xl\:h-\[427px\] {
-    height: 427px;
-  }
-
   .\32 xl\:w-\[300px\] {
     width: 300px;
   }
@@ -6867,10 +6863,6 @@ html :where(.wp-block) {
 
   .xl\:h-\[600px\] {
     height: 600px;
-  }
-
-  .xl\:h-\[427px\] {
-    height: 427px;
   }
 
   .xl\:min-h-\[195px\] {
@@ -7890,10 +7882,6 @@ html :where(.wp-block) {
 
   .mdt\:leading-none {
     line-height: 1;
-  }
-
-  .mdt\:leading-\[400px\] {
-    line-height: 400px;
   }
 
   .mdt\:leading-\[40px\] {

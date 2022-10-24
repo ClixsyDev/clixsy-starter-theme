@@ -8690,10 +8690,6 @@ body.logged-in {
     height: 16rem;
   }
 
-  .\32 xl\:h-\[427px\] {
-    height: 427px;
-  }
-
   .\32 xl\:w-\[300px\] {
     width: 300px;
   }
@@ -8858,10 +8854,6 @@ body.logged-in {
 
   .xl\:h-\[600px\] {
     height: 600px;
-  }
-
-  .xl\:h-\[427px\] {
-    height: 427px;
   }
 
   .xl\:min-h-\[195px\] {
@@ -9881,10 +9873,6 @@ body.logged-in {
 
   .mdt\:leading-none {
     line-height: 1;
-  }
-
-  .mdt\:leading-\[400px\] {
-    line-height: 400px;
   }
 
   .mdt\:leading-\[40px\] {
