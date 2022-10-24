@@ -39,12 +39,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="call_header mb-6 hidden justify-center items-center flex-row text-white font-avenir gap-5 xl:flex">
                     <div class="font-avenir text-lg leading-none">
-                        AVAILABLE 24/7
+                        <?= get_field('phone_available', 'option') ?>
                     </div>
                     <div class="font-avenir font-bold text-2xl leading-none">
-                        855-GO-KENNY
+                        <?= get_field('phone_with_letters', 'option') ?>
                     </div>
-                    <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
+                    <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
                     </a>
                 </div>
@@ -91,12 +91,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="call_header flex justify-center items-center flex-col text-white font-avenir gap-2 xl:hidden">
                 <div class="font-avenir text-lg leading-none">
-                    AVAILABLE 24/7
+                    <?= get_field('phone_available', 'option') ?>
                 </div>
                 <div class="font-avenir font-bold text-2xl leading-none">
-                    855-GO-KENNY
+                    <?= get_field('phone_with_letters', 'option') ?>
                 </div>
-                <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
+                <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
                     Call Now
                 </a>
             </div>
