@@ -8,8 +8,6 @@ import { formEntry } from './form_entry';
 ready(() => {
   mainMenu();
   headerInit();
-});
-
   formEntry();
 });
 let faqOpen = () => {
