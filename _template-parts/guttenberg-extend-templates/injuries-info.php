@@ -13,7 +13,10 @@ if ($is_preview && !empty($previewImage)) {
     $subtitle = get_field($key . '_subtitle');
 ?>
     <div class="relative py-28 md:py-12">
-        <img src="<?= wp_get_attachment_image_url($bg_image, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
+        <?php 
+        if (!empty($bg_image)) { ?>
+            <img src="<?= wp_get_attachment_image_url($bg_image, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
+        <?php } ?>
         <div class="container relative">
             <?php if ($title) { ?>
                 <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
@@ -29,6 +32,6 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
         </div>
     </div>
-</div>
+    </div>
 <?php }
 if (!get_fields()) echo 'Fill block with content';
