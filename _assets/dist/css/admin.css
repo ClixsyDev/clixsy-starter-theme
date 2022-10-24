@@ -7341,6 +7341,10 @@ html :where(.wp-block) {
     height: 10rem;
   }
 
+  .lg\:h-\[427px\] {
+    height: 427px;
+  }
+
   .lg\:max-h-\[80px\] {
     max-height: 80px;
   }
