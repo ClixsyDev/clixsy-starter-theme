@@ -34,10 +34,10 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4">
                 <?php if ($button1) { ?>
-                    <a href="<?= $button1['url'] ?>" class=" text-2xl uppercase font-bold rounded-full bg-white py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button1['title'] ?></a>
+                    <a href="<?= $button1['url'] ?>" class=" text-2xl uppercase font-avenir font-bold rounded-full bg-white py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button1['title'] ?></a>
                 <?php } ?>
                 <?php if ($button2) { ?>
-                    <a href="<?= $button2['url'] ?>" class="text-white text-2xl uppercase font-bold rounded-full bg-accent py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button2['title'] ?></a>
+                    <a href="<?= $button2['url'] ?>" class="text-white text-2xl uppercase font-avenir font-bold rounded-full bg-accent py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button2['title'] ?></a>
                 <?php } ?>
             </div>
         </div>
