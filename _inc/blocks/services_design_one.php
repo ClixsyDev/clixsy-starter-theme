@@ -55,7 +55,7 @@ if (function_exists('acf_add_local_field_group')) :
                 array(
                     'key' => $block_key . 'services',
                     'name' => $block_key . 'services',
-                    'label' => '_____',
+                    'label' => 'Services',
                     'type' => 'repeater',
                     'layout' => 'table',
                     'sub_fields' => array(

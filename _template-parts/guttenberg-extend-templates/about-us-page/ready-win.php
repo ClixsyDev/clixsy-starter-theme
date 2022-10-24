@@ -11,7 +11,7 @@
                     Habetz Injury Law can help you pursue compensation for injury and wrongful death, as well as handle other types of personal injury cases like those involving car crashes, home accidents, medical malpractice and slip and falls. 
                 </p>
             </div>
-            <div class=" bg-headings w-full h-72 z-30 flex px-5">
+            <div class=" bg-headings w-full  h-80 z-30 flex px-5">
                 <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/kenny-ready.png" class="-ml-20 -mt-24 h-auto object-cover" alt="">
                 <div class="flex flex-col -ml-12 xl:justify-center">
                     <div class="flex gap-5 2xl:items-center">
@@ -71,7 +71,7 @@
 <div class="hidden bg-smoke pt-8 pb-52 mdt:block sm:pt-0">
     <div class="container p-0">
         <div class="flex items-end">
-            <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/kenny-ready-mobile.png" class="w-10/24" alt="">
+            <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/kenny-ready-mobile.png" class="w-11/24" alt="">
             <div class="mt-8">
                 <div class="flex items-center gap-3 sm:hidden">
                     <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/louisianna-ready-mobile.svg" alt="">

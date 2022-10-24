@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php echo $win_case_design_one__description ?>
                         </div>
                     <?php } ?>
-                    <div class=" bg-headings w-full h-72 z-30 flex px-5">
+                    <div class=" bg-headings w-full h-80 z-30 flex px-5">
                         <?php if ($win_case_design_one__persone) { ?>
                             <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => '-ml-20 -mt-24 h-auto object-cover']) ?>
                         <?php } ?>
@@ -99,7 +99,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="container p-0">
                 <div class="flex items-end">
                     <?php if ($win_case_design_one__persone) { ?>
-                        <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => 'w-10/24']) ?>
+                        <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => 'w-12/24']) ?>
                     <?php } ?>
                     <div class="mt-8">
                         <div class="flex items-center gap-3 sm:hidden">

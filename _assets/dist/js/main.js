@@ -541,10 +541,12 @@ var _utils = require("./utils");
 var _sliders = require("./sliders");
 var _slidersDefault = parcelHelpers.interopDefault(_sliders);
 var _formEntry = require("./form_entry");
+var _buttonHover = require("./button-hover");
 (0, _utils.ready)(()=>{
     (0, _menuDefault.default)();
     (0, _headerDefault.default)();
     (0, _formEntry.formEntry)();
+    (0, _buttonHover.hoverOnButton)();
 });
 let faqOpen = ()=>{
     let faqItem = document.querySelectorAll(".faq-block");
@@ -598,8 +600,8 @@ let btnMoreEducation = ()=>{
     });
 };
 btnMoreEducation();
+},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0","./header":"9ZRJh","./button-hover":"9maqa"}],"2uPGB":[function(require,module,exports) {
 
-},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0","./header":"9ZRJh"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Main Menu
@@ -4523,7 +4525,36 @@ function headerInit() {
     });
 }
 exports.default = headerInit;
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9maqa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "hoverOnButton", ()=>hoverOnButton);
+var _utils = require("./utils");
+const hoverOnButton = ()=>{
+    let constBtns = (0, _utils.getElements)(".btn.no-text");
+    if ((0, _utils.ifSelectorExist)(constBtns) && constBtns.length > 0) Array.from(constBtns).forEach((item)=>{
+        item.addEventListener("mouseover", ()=>{
+            let btnFadeIn = item.querySelector(".btn-fade-in");
+            if ((0, _utils.ifSelectorExist)(btnFadeIn)) {
+                btnFadeIn.classList.add("opacity-100");
+                btnFadeIn.classList.remove("opacity-0");
+                btnFadeIn.style.width = "28px";
+                btnFadeIn.style.marginLeft = "8px";
+            }
+        });
+        item.addEventListener("mouseout", ()=>{
+            let btnFadeIn = item.querySelector(".btn-fade-in");
+            if ((0, _utils.ifSelectorExist)(btnFadeIn)) {
+                btnFadeIn.classList.remove("opacity-100");
+                btnFadeIn.classList.add("opacity-0");
+                btnFadeIn.style.width = "0px";
+                btnFadeIn.style.marginLeft = "0px";
+            }
+        });
+    });
+};
 
-},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"blFj3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+
 
 //# sourceMappingURL=main.js.map

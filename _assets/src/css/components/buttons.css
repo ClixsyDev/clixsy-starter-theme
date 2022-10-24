@@ -1,20 +1,29 @@
-@tailwind components;
+.btn {
+  min-width: 290px;
+  @apply bg-accent px-8 py-4 md:px-6 md:py-3 uppercase  h-14 text-white flex justify-center items-center transition-all duration-500 rounded-full text-center font-bold w-max;
 
-@layer components {
-  .btn {
-    min-width: 290px;
-    @apply bg-accent px-8 py-4 my-6 md:px-6 md:py-3 text-black  justify-center items-center transition-all duration-500 rounded-full text-center font-bold flex w-max text-xl;
+  @media (max-width: 540px) {
+    min-width: 240px;
+  }
 
-    @media (max-width: 540px) {
-      min-width: 240px;
+  /* button styles */
+  &.btn_headings {
+    @apply bg-headings;
+    .btn_text_2 {
+      @apply text-white;
     }
+  }
 
-    &.accent {
-      @apply bg-accent;
-    }
+  /* hover states */
+  &.hover_white {
+    @apply hover:bg-white  text-headings;
+  }
 
-    &.white {
-      @apply bg-white border-2 border-accent;
-    }
+  &.hover_accent {
+    @apply hover:bg-accent;
+  }
+
+  &.hover_headings {
+    @apply hover:bg-headings;
   }
 }

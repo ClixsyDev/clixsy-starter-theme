@@ -4,17 +4,26 @@
   justify-content: space-evenly;
   padding: 0;
   margin: 0;
-  gap: 0 42px;
+  gap: 0 20px;
 
   a {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2em;
     text-align: left;
     color: #fff;
     text-transform: uppercase;
+    position: relative;
+    transition: .3s all;
+    &:after {
+      @apply bg-accent w-6/12 h-1 absolute -bottom-2 left-[25%] hidden;
+      content:  '';
 
+    }
     &:hover {
-      text-decoration: underline;
+      @apply transform scale-[1.02];
+      &:after {
+        @apply block;
+      }
     }
   }
 
@@ -39,6 +48,11 @@
         .sub-menu.lvl-1 {
           display: block;
         }
+      }
+    }
+    &.current_page_item {
+      a:after {
+        display: block;
       }
     }
   }

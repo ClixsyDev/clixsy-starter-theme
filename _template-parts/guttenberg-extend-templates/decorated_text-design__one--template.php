@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="container -mt-24">
         <div class="w-full bg-headings">
             <?php if ($decorated_text_design_one__title) { ?>
-                <div class=" text-white text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-center relative pb-16 pt-28">
+                <div class=" text-white text-5xl xl:text-4xl lg:text-3xl md:text-2xl text-center relative pb-16 pt-28 md:pt-16 md:pb-4">
                     <h2 class="font-bold process_text_design__one"><?php echo $decorated_text_design_one__title ?></h2>
                     <span class="bg-accent w-32 h-1 absolute left-0 right-0 mx-auto"></span>
                 </div>
