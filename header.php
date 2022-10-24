@@ -17,7 +17,7 @@
     <!-- End Google Tag Manager -->
 </head>
 
-<body <?php body_class('font-helvetica body'); ?>>
+<body <?php body_class('font-avenir body'); ?>>
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->

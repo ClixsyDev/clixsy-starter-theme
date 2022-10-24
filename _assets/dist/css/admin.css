@@ -4688,10 +4688,6 @@ h2 span {
   left: -40%;
 }
 
-.acf-block-preview .-left-5 {
-  left: -1.25rem;
-}
-
 .acf-block-preview .left-1\/2 {
   left: 50%;
 }
@@ -5492,10 +5488,6 @@ h2 span {
   flex-direction: column;
 }
 
-.acf-block-preview .items-start {
-  align-items: flex-start;
-}
-
 .acf-block-preview .items-end {
   align-items: flex-end;
 }
@@ -6121,8 +6113,8 @@ h2 span {
   padding-bottom: 3.5rem;
 }
 
-.acf-block-preview .pb-36 {
-  padding-bottom: 9rem;
+.acf-block-preview .pt-2 {
+  padding-top: .5rem;
 }
 
 .acf-block-preview .pt-5 {
@@ -6131,10 +6123,6 @@ h2 span {
 
 .acf-block-preview .pb-52 {
   padding-bottom: 13rem;
-}
-
-.acf-block-preview .pt-2 {
-  padding-top: .5rem;
 }
 
 .acf-block-preview .text-center {
@@ -6151,10 +6139,6 @@ h2 span {
 
 .acf-block-preview .font-avenir {
   font-family: Avenir;
-}
-
-.acf-block-preview .font-helvetica {
-  font-family: Helvetica Neue, HelveticaNeue-Light, Helvetica Neue Light, Helvetica, Arial, Lucida Grande, sans-serif;
 }
 
 .acf-block-preview .font-noto_serif {

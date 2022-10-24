@@ -57,7 +57,6 @@ let faqOpen = () => {
       }
     });
   });
-  Array.from(faqItem)[0].click();
 };
 
 let btnMore = () => {
