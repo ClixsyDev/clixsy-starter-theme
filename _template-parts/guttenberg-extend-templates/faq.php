@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <div>
                                     <?php if ($item['faq_items_question']) { ?>
                                         <div class="title-faq text-headings_second flex justify-between relative bg-process_smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
-                                            <h3><?php echo $item['faq_items_question'] ?></h3>
+                                            <h3 class=" cursor-pointer"><?php echo $item['faq_items_question'] ?></h3>
                                         </div>
                                     <?php } ?>
                                     <?php if ($item['faq_items_answer']) { ?>
@@ -49,10 +49,10 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <?php if ($faq_repeater_hidden) { ?>
                         <?php foreach ($faq_repeater_hidden as $item_hidden) { ?>
-                            <div class="hidden hidden-text mt-1.5 faq-block relative">
+                            <div class="hidden hidden-text mt-1.5 faq-block relative hidden_faq_without_image">
                                 <div>
                                     <?php if ($item_hidden['faq_items_answer']) { ?>
-                                        <div class="title-faq text-headings_second flex justify-between relative bg-smoke font-avenir font-bold text-2xl p-4 lg:text-base lg:relative xs:px-7">
+                                        <div class="title-faq text-headings_second flex justify-between relative  bg-process_smoke  font-avenir font-bold  text-2xl p-4 lg:text-base lg:relative xs:px-7">
                                             <h3><?php echo $item_hidden['faq_items_question'] ?></h3>
                                         </div>
                                     <?php } ?>
@@ -67,7 +67,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <?php if ($faq_repeater_hidden) { ?>
                         <div class="text-end font-avenir font-bold text-xl pt-7">
-                            <a href="" class="more-btn">+ read more...</a>
+                            <span class="faq-without-image__btn cursor-pointer">+ read more...</span>
                         </div>
                     <?php } ?>
                 </div>
