@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
     $form = get_field($key . '_form_shortcode');
 ?>
     <div class="relative pt-8 pb-44">
-        <div class="container flex xl:flex-wrap">
+        <div class="container flex xl:flex-wrap items-end">
             <div class="w-[65%] relative xl:max-w-2xl xl:w-full xl:mx-auto">
                 <h2 class="font-avenir font-bold absolute right-4 top-40 text-[60px] text-right leading-tight max-w-[367px] 
                     2xl:text-[40px] 2xl:max-w-[280px] md:top-0 sm:text-[30px] sm:max-w-[200px]"><?= $title ?></h2>

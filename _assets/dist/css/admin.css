@@ -7896,6 +7896,10 @@ html :where(.wp-block) {
     line-height: 400px;
   }
 
+  .mdt\:leading-\[40px\] {
+    line-height: 40px;
+  }
+
   .mdt\:before\:w-20:before, .mdt\:after\:w-20:after {
     content: var(--tw-content);
     width: 5rem;
