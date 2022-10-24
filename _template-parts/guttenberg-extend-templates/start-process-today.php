@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="relative py-16 xs:py-4">
         <div class="container p-0 overflow-hidden">
             <?php if ($title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= $title ?></h2>
+                <h2 class="font-avenir font-bold text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= $title ?></h2>
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="flex flex-col gap-12 mt-11">
