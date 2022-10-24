@@ -7,12 +7,12 @@ export default function headerInit() {
   document.addEventListener('scroll', e => {
     console.log('scroll;')
     console.log(window.scrollY);
-    if (!isSticked && window.scrollY >= 60) {
+    if (!isSticked && window.scrollY >= 160) {
         header.classList.add('sticked');
         isSticked = true;
     }
         
-    if (isSticked && window.scrollY <= 60) {
+    if (isSticked && window.scrollY <= 80) {
         header.classList.remove('sticked');
         isSticked = false;
     }
