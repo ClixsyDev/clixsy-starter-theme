@@ -571,6 +571,7 @@ let faqOpen = ()=>{
             }
         });
     });
+    Array.from(faqItem)[0].click();
 };
 faqOpen();
 let btnMore = ()=>{
@@ -599,8 +600,8 @@ let btnMoreEducation = ()=>{
     });
 };
 btnMoreEducation();
-
 },{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0","./header":"9ZRJh","./button-hover":"9maqa"}],"2uPGB":[function(require,module,exports) {
+
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Main Menu
@@ -4524,7 +4525,6 @@ function headerInit() {
     });
 }
 exports.default = headerInit;
-
 },{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9maqa":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -4555,5 +4555,6 @@ const hoverOnButton = ()=>{
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"blFj3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+
 
 //# sourceMappingURL=main.js.map

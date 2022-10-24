@@ -29,13 +29,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="sticky top-0 w-full z-50 h-40 py-6 lg:h-[80px] lg:max-h-[80px] lg:p-1">
         <img src="<?= wp_get_attachment_image_url(get_field('site_header_bg', 'option'), 'full') ?>" class="z-10 absolute left-0 top-0 w-full h-full object-cover" alt="">
-        <div class="z-10 bg-header_bg absolute left-0 top-0 w-full h-full object-cover"></div>
-        <div class="relative z-20 container flex justify-between items-center">
+        <div class="z-10 absolute left-0 top-0 w-full h-full object-cover"></div>
+        <div class="relative z-20 container flex justify-between items-center h-full">
             <a href="<?php echo home_url() ?>" class="logo-desktop lg:hidden">
                 <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => '']) ?>
             </a>
             <?php main_menu(); ?>
             <div class="menu-row-wrapper lg:hidden">
+
+                <div class="call_header mb-6 hidden justify-center items-center flex-row text-white font-avenir gap-5 xl:flex">
+                    <div class="font-avenir text-lg leading-none">
+                        AVAILABLE 24/7
+                    </div>
+                    <div class="font-avenir font-bold text-2xl leading-none">
+                        855-GO-KENNY
+                    </div>
+                    <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
+                        Call Now
+                    </a>
+                </div>
                 <a href="<?php echo home_url('/') ?>" class="logo-link-wrapper hidden">
                     <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-full h-auto transform transition-all ']) ?>
                 </a>
@@ -58,22 +70,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             </div>
             <div class="mobile-menu-row__wrapper hidden w-full flex-row-reverse items-center justify-between lg:flex">
-                <button aria-label="menu toggle" class="button small" id="main-menu-button">
-                    <span class="ico-b open-menu"><span></span></span>
-                    <span class="ico-c close-menu"></span>
-                </button>
+                <div class="buttons_wrapper flex gap-5 items-center">
+                    <a href="tel:<?= get_field('phone', 'option') ?>" class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40.512" height="40.512" viewBox="0 0 40.512 40.512">
+                            <g id="telephone-call" transform="translate(-2 -2)">
+                                <path id="Path_504" class="fill-accent" data-name="Path 504" d="M41.634,32.9c-1.265-1.061-8.681-5.757-9.914-5.541-.579.1-1.021.6-2.206,2.01a16.909,16.909,0,0,1-1.8,1.949,15.564,15.564,0,0,1-3.435-1.273,21.269,21.269,0,0,1-9.815-9.818A15.564,15.564,0,0,1,13.19,16.8,16.909,16.909,0,0,1,15.139,15c1.412-1.185,1.907-1.625,2.01-2.206.216-1.236-4.485-8.649-5.541-9.914C11.164,2.352,10.762,2,10.247,2,8.754,2,2,10.351,2,11.433c0,.088.145,8.782,11.125,19.953C24.3,42.367,32.99,42.512,33.078,42.512c1.082,0,9.433-6.754,9.433-8.247,0-.515-.352-.917-.878-1.36Z" transform="translate(0 0)" fill="#69be26" />
+                                <path id="Path_505" class="fill-accent" data-name="Path 505" d="M25.681,18.575h2.894A11.588,11.588,0,0,0,17,7V9.894a8.69,8.69,0,0,1,8.681,8.681Z" transform="translate(6.703 2.234)" fill="#69be26" />
+                                <path id="Path_506" class="fill-accent" data-name="Path 506" d="M32.915,20.809h2.894A18.831,18.831,0,0,0,17,2V4.894A15.934,15.934,0,0,1,32.915,20.809Z" transform="translate(6.703)" fill="#69be26" />
+                            </g>
+                        </svg>
+                    </a>
+                    <button aria-label="menu toggle" class="button small" id="main-menu-button">
+                        <span class="ico-b open-menu"><span></span></span>
+                        <span class="ico-c close-menu"></span>
+                    </button>
+                </div>
                 <a href="<?php echo home_url('/') ?>">
                     <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-36 h-auto transform transition-all my-0 mx-auto mobile-logo']) ?>
                 </a>
             </div>
-            <div class="call_header flex justify-center items-center flex-col text-white font-avenir gap-2 lg:hidden">
-                <div class=" text-lg leading-none">
+            <div class="call_header flex justify-center items-center flex-col text-white font-avenir gap-2 xl:hidden">
+                <div class="font-avenir text-lg leading-none">
                     AVAILABLE 24/7
                 </div>
-                <div class=" text-2xl leading-none">
+                <div class="font-avenir font-bold text-2xl leading-none">
                     855-GO-KENNY
                 </div>
-                <a class=" flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
+                <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="#">
                     Call Now
                 </a>
             </div>

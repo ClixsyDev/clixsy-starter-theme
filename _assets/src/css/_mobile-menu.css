@@ -10,8 +10,8 @@
   font-size: 30px;
   cursor: pointer;
   vertical-align: middle;
-  width: 66px;
-  height: 64px;
+  width: 40px;
+  height: 26px;
   outline: none;
   display: flex;
   align-items: center;
@@ -31,7 +31,6 @@
     color: #ffffff;
     transition: all 0.2s;
     will-change: opacity, transform;
-    margin-right: 10px;
   }
 
   span {
@@ -414,8 +413,8 @@ nav.main-menu.active-level-3 {
 }
 
 .ico-b {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 26px;
 
   > span {
     content: '';
@@ -423,8 +422,8 @@ nav.main-menu.active-level-3 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
-    height: 4px;
+    width: 100%;
+    height: 3px;
     border-radius: 3px;
   }
 
@@ -433,8 +432,8 @@ nav.main-menu.active-level-3 {
     background-color: #ffffff;
     position: absolute;
     left: 0;
-    width: 70%;
-    height: 4px;
+    width: 100%;
+    height: 3px;
     border-radius: 3px;
     top: 10px;
   }
@@ -445,7 +444,7 @@ nav.main-menu.active-level-3 {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
     border-radius: 3px;
     top: 20px;
   }

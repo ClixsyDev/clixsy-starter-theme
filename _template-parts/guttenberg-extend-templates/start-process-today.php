@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <div>
                         <h3 class="font-noto_serif text-accent text-6xl lg:text-5xl xs:text-4xl">Step 01</h3>
-                        <p class="font-avenir text-kennyGrayText text-4xl py-3 lg:text-3xl md:text-2xl xs:text-xl"><?= $step_1_text ?></p>
+                        <p class="font-avenir leading-tight text-kennyGrayText text-4xl py-3 lg:text-3xl md:text-2xl xs:text-xl"><?= $step_1_text ?></p>
                         <?php if ($step_1_phone) { ?>
                             <p class="font-avenir text-kennyGrayText font-bold text-3xl pb-5 lg:text-2xl md:text-xl xs:text-2xl"><?= $step_1_phone ?></p>
                         <?php } ?>
@@ -46,7 +46,7 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="step-block relative flex justify-center items-center gap-44 pt-16 pb-24 md:gap-28 md:pt-4 md:pb-16 xs:gap-10"">
                 <div>
                     <h3 class=" font-noto_serif text-headings_second text-6xl text-end lg:text-5xl xs:text-4xl">Step 02</h3>
-                    <p class="font-avenir text-accent text-4xl py-3 text-right lg:text-3xl md:text-2xl xs:text-xl"><?= $step_2_text ?></p>
+                    <p class="font-avenir leading-tight  text-accent text-4xl py-3 text-right lg:text-3xl md:text-2xl xs:text-xl"><?= $step_2_text ?></p>
                 </div>
                 <div class="max-w-[170px] xs:max-w-[80px]">
                     <img src="<?= wp_get_attachment_image_url($step_2_icon, 'full') ?>" class="" alt="">
@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <div>
                     <h3 class="font-noto_serif text-accent text-6xl lg:text-5xl xs:text-4xl">Step 03</h3>
-                    <p class="font-avenir text-kennyGrayText text-4xl py-3 lg:text-3xl md:text-2xl xs:text-xl"><?= $step_3_text ?></p>
+                    <p class="font-avenir leading-tight text-kennyGrayText text-4xl py-3 lg:text-3xl md:text-2xl xs:text-xl"><?= $step_3_text ?></p>
                 </div>
                 <div class="triangle absolute top-[95%] m-auto lg:top-[98%]"></div>
             </div>

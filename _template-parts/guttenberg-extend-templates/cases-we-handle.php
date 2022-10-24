@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="bg-headings pt-14 pb-16">
         <div class="container">
             <?php if ($title) { ?>
-                <h2 class="text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">
+                <h2 class="font-avenir font-bold text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">
                     <?= $title ?>
                 </h2>
             <?php } ?>
@@ -27,7 +27,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php foreach ($cases as $case) { ?>
                     <a href="<?= $case[$key . '_case_link'] ?>" class="flex-1 flex flex-col items-center mdt:w-[250px] mdt:flex-none ">
                         <img src="<?= wp_get_attachment_image_url($case[$key . '_case_image'], 'full') ?>" alt="">
-                        <div class="text-2xl text-white "><?= $case[$key . '_case_name'] ?></div>
+                        <div class="font-avenir font-bold text-2xl text-white "><?= $case[$key . '_case_name'] ?></div>
                     </a>
                 <?php
                 } ?>

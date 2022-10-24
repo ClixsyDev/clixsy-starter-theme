@@ -22,7 +22,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="pt-24 lg:pt-12 lg:pb-24 xs:pt-24 overflow-hidden relative">
         <div class="container">
             <?php if ($text_form_design_one__title) { ?>
-                <h2 class="text-headings_second font-medium text-5xl m-auto text-center leading-tight pb-4 xs:text-2xl"><?php echo $text_form_design_one__title ?></h2>
+                <h2 class="font-avenir text-headings_second font-medium text-5xl m-auto text-center leading-tight pb-4 xs:text-2xl"><?php echo $text_form_design_one__title ?></h2>
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="flex mt-16 gap-16 mdt:flex-col mdt:gap-7 md:mt-12">
