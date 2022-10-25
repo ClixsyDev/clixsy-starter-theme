@@ -4484,8 +4484,16 @@ h2 span {
   visibility: visible;
 }
 
+.acf-block-preview .invisible {
+  visibility: hidden;
+}
+
 .acf-block-preview .static {
   position: static;
+}
+
+.acf-block-preview .fixed {
+  position: fixed;
 }
 
 .acf-block-preview .absolute {
@@ -4702,6 +4710,22 @@ h2 span {
 
 .acf-block-preview .right-\[11\%\] {
   right: 11%;
+}
+
+.acf-block-preview .right-32 {
+  right: 8rem;
+}
+
+.acf-block-preview .bottom-24 {
+  bottom: 6rem;
+}
+
+.acf-block-preview .left-16 {
+  left: 4rem;
+}
+
+.acf-block-preview .-right-16 {
+  right: -4rem;
 }
 
 .acf-block-preview .z-50 {
@@ -5027,6 +5051,10 @@ h2 span {
 
 .acf-block-preview .grid {
   display: grid;
+}
+
+.acf-block-preview .contents {
+  display: contents;
 }
 
 .acf-block-preview .hidden {
