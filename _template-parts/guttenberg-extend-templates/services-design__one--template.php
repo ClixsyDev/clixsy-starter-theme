@@ -29,7 +29,7 @@ if ($is_preview && !empty($previewImage)) {
                                 </div>
                             <?php } ?>
                             <?php if ($services_item['title']) { ?>
-                                <h3 class="text-accent text-2xl font-noto_serif my-3">
+                                <h3 class="text-accent text-2xl font-second my-3">
                                     <?php echo $services_item['title'] ?>
                                 </h3>
                             <?php } ?>
@@ -42,7 +42,7 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <?php if ($services_design_one__link) { ?>
                 <div class="text-center mt-16">
-                    <a href="<?php echo $services_design_one__link['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $services_design_one__link['title'] ?></a>
+                    <a href="<?php echo $services_design_one__link['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $services_design_one__link['title'] ?></a>
                 </div>
             <?php } ?>
         </div>

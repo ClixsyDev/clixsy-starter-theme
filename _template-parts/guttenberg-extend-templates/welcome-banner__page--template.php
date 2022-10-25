@@ -21,7 +21,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex flex-col items-center justify-center h-full -mb-12 md:mb-auto">
                 <div class="flex flex-col gap-5 text-center bg-accent bg-opacity-70	 px-8 py-12 w-13/24 xl:w-16/24 mdt:w-18/24 md:w-21/24 sm:w-22/24 xs:py-8">
                     <?php if ($welcome_banner__page_title) { ?>
-                        <h1 class="span-change_color_2 text-6xl leading-tight font-avenir font-bold 2xl:text-5xl mdt:text-4xl xs:text-3xl"><?php echo $welcome_banner__page_title ?></h1>
+                        <h1 class="span-change_color_2 text-6xl leading-tight font-main font-bold 2xl:text-5xl mdt:text-4xl xs:text-3xl"><?php echo $welcome_banner__page_title ?></h1>
                     <?php } ?>
                     <?php if ($welcome_banner__page_description) { ?>
                         <div class="relative">
@@ -32,7 +32,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <?php if ($welcome_banner__page_link) { ?>
                         <div class="mt-2.5 lg:mt-4">
-                            <a href="<?php echo $welcome_banner__page_link['url'] ?>" class="font-avenir uppercase bg-headings text-white font-bold text-3xl py-2 px-9 rounded-full 2xl:text-2xl lg:px-10 lg:py-4 lg:text-xl mdt:text-lg mdt:px-14 xs:px-8 xs:text-lg"><?php echo $welcome_banner__page_link['title'] ?></a>
+                            <a href="<?php echo $welcome_banner__page_link['url'] ?>" class="font-main uppercase bg-headings text-white font-bold text-3xl py-2 px-9 rounded-full 2xl:text-2xl lg:px-10 lg:py-4 lg:text-xl mdt:text-lg mdt:px-14 xs:px-8 xs:text-lg"><?php echo $welcome_banner__page_link['title'] ?></a>
                         </div>
                     <?php } ?>
                 </div>

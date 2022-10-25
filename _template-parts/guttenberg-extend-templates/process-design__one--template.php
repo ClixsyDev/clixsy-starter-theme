@@ -38,29 +38,29 @@ if ($is_preview && !empty($previewImage)) {
                             <?php foreach ($process_design_one__sercive_repeater as $key => $process_design_one__sercive_repeater_item) {
                                 if ($key % 2 == 0) { ?>
                                     <div class="bg-process_smoke min-h-[246px] flex gap-5 px-5 py-12 xl:py-8 xl:min-h-[195px] xl:items-center lg:min-h-max md:px-20 xs:px-6 xs:py-5">
-                                        <div class="text-accent font-noto_serif font-bold text-7xl xl:text-6xl xs:text-5xl">
+                                        <div class="text-accent font-second font-bold text-7xl xl:text-6xl xs:text-5xl">
                                             <?php echo str_pad(++$key, 2, '0', STR_PAD_LEFT) ?>
                                         </div>
-                                        <div class="text-4xl font-avenir xl:text-3xl lg:text-2xl xs:text-xl">
+                                        <div class="text-4xl font-main xl:text-3xl lg:text-2xl xs:text-xl">
                                             <div class="text-headings process_text_design__one"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?></div>
                                             <?php if ($process_design_one__sercive_repeater_item['process_design_one__service_link'] && $process_design_one__sercive_repeater_item['process_design_one__service_link']['url']) { ?>
                                                 <div class="">
-                                                    <a href="<?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'] ?>" class="font-avenir bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-lg xs:py-1"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['title'] ?></a>
+                                                    <a href="<?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'] ?>" class="font-main bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-lg xs:py-1"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['title'] ?></a>
                                                 </div>
                                             <?php } ?>
                                         </div>
                                     </div>
                                 <?php } else { ?>
                                     <div class="bg-smoke min-h-[246px] flex items-center gap-5 px-5 py-12 xl:py-8 xl:min-h-[195px] xl:items-center lg:min-h-max md:px-20 xs:px-6 xs:py-5">
-                                        <div class="text-white font-noto_serif font-bold text-7xl xl:text-6xl xs:text-5xl">
+                                        <div class="text-white font-second font-bold text-7xl xl:text-6xl xs:text-5xl">
                                             <?php echo str_pad(++$key, 2, '0', STR_PAD_LEFT) ?>
                                         </div>
-                                        <div class="text-4xl font-avenir xl:text-3xl lg:text-2xl xs:text-xl">
+                                        <div class="text-4xl font-main xl:text-3xl lg:text-2xl xs:text-xl">
                                             <div class="text-headings process_text_design__one"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?></div>
                                         </div>
                                         <?php if ($process_design_one__sercive_repeater_item['process_design_one__service_link'] && $process_design_one__sercive_repeater_item['process_design_one__service_link']['url']) { ?>
                                             <div class="">
-                                                <a href="<?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'] ?>" class="font-avenir bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-lg xs:py-1"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['title'] ?></a>
+                                                <a href="<?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'] ?>" class="font-main bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-lg xs:py-1"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['title'] ?></a>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -71,7 +71,7 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <?php if ($process_design_one__button) { ?>
                     <div class="text-center mt-16 xs:mt-12">
-                        <a href="<?php echo $process_design_one__button['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $process_design_one__button['title'] ?></a>
+                        <a href="<?php echo $process_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $process_design_one__button['title'] ?></a>
                     </div>
                 <?php } ?>
             </div>

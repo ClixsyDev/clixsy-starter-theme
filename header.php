@@ -15,9 +15,15 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-TF8CHB6');</script> -->
     <!-- End Google Tag Manager -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
 </head>
 
-<body <?php body_class('font-avenir body'); ?>>
+<body <?php body_class('font-main body'); ?>>
     <!-- Google Tag Manager (noscript) -->
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
@@ -37,14 +43,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <?php main_menu(); ?>
             <div class="menu-row-wrapper lg:hidden">
 
-                <div class="call_header mb-6 hidden justify-center items-center flex-row text-white font-avenir gap-5 xl:flex">
-                    <div class="font-avenir text-lg leading-none">
+                <div class="call_header mb-6 hidden justify-center items-center flex-row text-white font-main gap-5 xl:flex">
+                    <div class="font-main text-lg leading-none">
                         <?= get_field('phone_available', 'option') ?>
                     </div>
-                    <div class="font-avenir font-bold text-2xl leading-none">
+                    <div class="font-main font-bold text-2xl leading-none">
                         <?= get_field('phone_with_letters', 'option') ?>
                     </div>
-                    <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
+                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
                     </a>
                 </div>
@@ -89,14 +95,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-36 h-auto transform transition-all my-0 mx-auto mobile-logo']) ?>
                 </a>
             </div>
-            <div class="call_header flex justify-center items-center flex-col text-white font-avenir gap-2 xl:hidden">
-                <div class="font-avenir text-lg leading-none">
+            <div class="call_header flex justify-center items-center flex-col text-white font-main gap-2 xl:hidden">
+                <div class="font-main text-lg leading-none">
                     <?= get_field('phone_available', 'option') ?>
                 </div>
-                <div class="font-avenir font-bold text-2xl leading-none">
+                <div class="font-main font-bold text-2xl leading-none">
                     <?= get_field('phone_with_letters', 'option') ?>
                 </div>
-                <a class="font-avenir font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
+                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
                     Call Now
                 </a>
             </div>

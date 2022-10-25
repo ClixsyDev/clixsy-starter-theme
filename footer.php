@@ -37,25 +37,25 @@ $bottom_links = get_field('bottom_links', 'options');
                 <div class="flex flex-col gap-6">
                     <?php if ($location) { ?>
                         <div>
-                            <h5 class="text-accent font-avenir font-bold text-xl">LOCATION</h5>
-                            <p class="text-white font-avenir font-bold text-2xl xl:text-xl"><?php echo $location ?></p>
+                            <h5 class="text-accent font-main font-bold text-xl">LOCATION</h5>
+                            <p class="text-white font-main font-bold text-2xl xl:text-xl"><?php echo $location ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($phone) { ?>
                         <div>
-                            <h5 class="text-accent font-avenir font-bold text-xl">EMAIL</h5>
-                            <p class="text-white font-avenir font-bold text-lg xl:text-xl"><?php echo $phone ?></p>
+                            <h5 class="text-accent font-main font-bold text-xl">EMAIL</h5>
+                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($mail) { ?>
                         <div>
-                            <h5 class="text-accent font-avenir font-bold text-xl">PHONE</h5>
-                            <p class="text-white font-avenir font-bold text-lg xl:text-xl"><?php echo $mail ?></p>
+                            <h5 class="text-accent font-main font-bold text-xl">PHONE</h5>
+                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $mail ?></p>
                         </div>
                     <?php } ?>
                 </div>
                 <div>
-                    <h5 class="text-accent font-avenir font-bold text-xl uppercase">Quick Links</h5>
+                    <h5 class="text-accent font-main font-bold text-xl uppercase">Quick Links</h5>
                     <?php wp_nav_menu([
                         'menu'                 => 'Footer menu',
                         'container'            => '',

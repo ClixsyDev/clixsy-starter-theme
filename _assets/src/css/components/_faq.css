@@ -1,0 +1,36 @@
+.faq__text {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.25s linear;
+  -o-transition: max-height 0.25s linear;
+  transition: max-height 0.25s linear;
+}
+
+.faq__position {
+  position: relative;
+  &:after {
+    content: '+';
+    position: absolute;
+    top: calc(50% - 36px);
+    right: 15px;
+    font-size: 40px;
+    font-weight: 900;
+  }
+  &.faq__position__active {
+    &:after {
+      content: '—';
+      top: 3%;
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .faq__text {
+      @apply mt-3 mb-5 mx-11;
+    }
+
+    .faq__header {
+        @apply bg-accent text-white;
+    }
+  }
+
+}

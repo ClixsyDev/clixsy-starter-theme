@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
         <img src="<?= wp_get_attachment_image_url($bg_image, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
         <div class="container relative pt-20 pb-10">
             <?php if ($title) { ?>
-                <h2 class="font-avenir font-bold relative text-headings_second pb-5 mb-16 text-center text-5xl leading-tight max-w-[950px] mx-auto before:block before:absolute before:bg-accent before:left-1/2 before:w-40 before:h-1 before:bottom-0 before:-translate-x-1/2
+                <h2 class="font-main font-bold relative text-headings_second pb-5 mb-16 text-center text-5xl leading-tight max-w-[950px] mx-auto before:block before:absolute before:bg-accent before:left-1/2 before:w-40 before:h-1 before:bottom-0 before:-translate-x-1/2
             mdt:text-4xl md:text-2xl">
                     <?= $title ?>
                 </h2>

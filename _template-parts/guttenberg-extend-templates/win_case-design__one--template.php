@@ -59,7 +59,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <?php if ($win_case_design_one__button) { ?>
                         <div class="text-center mt-12">
-                            <a href="<?php echo $win_case_design_one__button['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl"><?php echo $win_case_design_one__button['title'] ?></a>
+                            <a href="<?php echo $win_case_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl"><?php echo $win_case_design_one__button['title'] ?></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -89,7 +89,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php } ?>
                 <?php if ($win_case_design_one__button) { ?>
                     <div class="text-center mt-12">
-                        <a href="<?php echo $win_case_design_one__button['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full"><?php echo $win_case_design_one__button['title'] ?></a>
+                        <a href="<?php echo $win_case_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full"><?php echo $win_case_design_one__button['title'] ?></a>
                     </div>
                 <?php } ?>
             </div>

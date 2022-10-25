@@ -7,7 +7,7 @@
                 <div class="bg-white shadow-inner h-48 w-48 m-auto -mt-32 border-reviewText rounded-full p-9 mdt:w-40 mdt:h-40 mdt:-mt-24 xs:w-36 xs:h-36 xs:p-10">
                     <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/clear-process.png" class="m-auto" alt="">
                 </div>
-                <h3 class="text-accent text-2xl font-noto_serif my-3">
+                <h3 class="text-accent text-2xl font-second my-3">
                     Clear <br> Process
                 </h3>
                 <p class="text-white">We are dedicated to ensuring the process is clear and you never have to guess what the next step is.</p>
@@ -16,7 +16,7 @@
                 <div class="bg-white shadow-inner h-48 w-48 m-auto -mt-32 border-reviewText rounded-full p-9 mdt:w-40 mdt:h-40 mdt:-mt-24 xs:w-36 xs:h-36 xs:p-10">
                     <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/collaborative.png" class="m-auto" alt="">
                 </div>
-                <h3 class="text-accent text-2xl font-noto_serif my-3">
+                <h3 class="text-accent text-2xl font-second my-3">
                     Collaborative <br> Work Environment
                 </h3>
                 <p class="text-white">We don’t call the shots - you do. <br> At Habetz Law we will collaborate <br> with you.</p>
@@ -25,14 +25,14 @@
                 <div class="bg-white shadow-inner h-48 w-48 m-auto -mt-32 border-reviewText rounded-full p-9 mdt:w-40 mdt:h-40 mdt:-mt-24 xs:w-36 xs:h-36 xs:p-10">
                     <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/client.png" class="m-auto" alt="">
                 </div>
-                <h3 class="text-accent text-2xl font-noto_serif my-3">
+                <h3 class="text-accent text-2xl font-second my-3">
                     Client <br> Communication
                 </h3>
                 <p class="text-white">We ensure that you are always <br> informed on the status of your case.</p>
             </div>
         </div>
         <div class="text-center mt-16">
-            <a href="#" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl">free case review</a>
+            <a href="#" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl">free case review</a>
         </div>
     </div>
 </div>

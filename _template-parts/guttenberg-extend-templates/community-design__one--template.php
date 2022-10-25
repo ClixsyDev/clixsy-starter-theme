@@ -53,7 +53,7 @@ if ($is_preview && !empty($previewImage)) {
 
                                     <?php if ($organization_v1_item['community_v1_button'] && $organization_v1_item['community_v1_button']['url']) { ?>
                                         <div class="text-center mt-8">
-                                            <a href="<?php echo $organization_v1_item['community_v1_button']['url'] ?>" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item['community_v1_button']['title'] ?></a>
+                                            <a href="<?php echo $organization_v1_item['community_v1_button']['url'] ?>" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item['community_v1_button']['title'] ?></a>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -81,7 +81,7 @@ if ($is_preview && !empty($previewImage)) {
                                                 <?php } ?>
                                                 <?php if ($organization_v1_item_mobile['community_v1_button'] && $organization_v1_item_mobile['community_v1_button']['url']) { ?>
                                                     <div class="text-center mt-8">
-                                                        <a href="<?php echo $organization_v1_item_mobile['community_v1_button']['url'] ?>" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item_mobile['community_v1_button']['title'] ?></a>
+                                                        <a href="<?php echo $organization_v1_item_mobile['community_v1_button']['url'] ?>" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item_mobile['community_v1_button']['title'] ?></a>
                                                     </div>
                                                 <?php } ?>
                                             </div>
@@ -111,7 +111,7 @@ if ($is_preview && !empty($previewImage)) {
 
                     <?php if ($community_design_one__button && $community_design_one__button['url']) { ?>
                         <div class="text-center mt-16 mdt:mt-6 xs:mt-10">
-                            <a href="<?php echo $community_design_one__button['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $community_design_one__button['title'] ?></a>
+                            <a href="<?php echo $community_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $community_design_one__button['title'] ?></a>
                         </div>
                     <?php } ?>
                 </div>

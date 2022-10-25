@@ -1,0 +1,1 @@
+module.exports = {main: 'Lato', second: 'Noto Serif', };

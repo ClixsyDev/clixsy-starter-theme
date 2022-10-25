@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="bg-headings pt-14 pb-16">
         <div class="container">
             <?php if ($title) { ?>
-                <h2 class="font-avenir font-bold text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">
+                <h2 class="font-main font-bold text-white text-5xl leading-tight text-center pb-5 mdt:text-4xl">
                     <?= $title ?>
                 </h2>
             <?php } ?>
@@ -27,17 +27,17 @@ if ($is_preview && !empty($previewImage)) {
                 <?php foreach ($cases as $case) { ?>
                     <a href="<?= $case[$key . '_case_link'] ?>" class="flex-1 flex flex-col items-center mdt:w-[250px] mdt:flex-none ">
                         <img src="<?= wp_get_attachment_image_url($case[$key . '_case_image'], 'full') ?>" alt="">
-                        <div class="font-avenir font-bold text-2xl text-white "><?= $case[$key . '_case_name'] ?></div>
+                        <div class="font-main font-bold text-2xl text-white "><?= $case[$key . '_case_name'] ?></div>
                     </a>
                 <?php
                 } ?>
             </div>
             <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4">
                 <?php if ($button1) { ?>
-                    <a href="<?= $button1['url'] ?>" class=" text-2xl uppercase font-avenir font-bold rounded-full bg-white py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button1['title'] ?></a>
+                    <a href="<?= $button1['url'] ?>" class=" text-2xl uppercase font-main font-bold rounded-full bg-white py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button1['title'] ?></a>
                 <?php } ?>
                 <?php if ($button2) { ?>
-                    <a href="<?= $button2['url'] ?>" class="text-white text-2xl uppercase font-avenir font-bold rounded-full bg-accent py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button2['title'] ?></a>
+                    <a href="<?= $button2['url'] ?>" class="text-white text-2xl uppercase font-main font-bold rounded-full bg-accent py-4 px-12 leading-none md:py-2 md:px-8 md:text-lg"><?= $button2['title'] ?></a>
                 <?php } ?>
             </div>
         </div>

@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex flex-col items-center mdt:w-[496px] mdt:bg-white/75 mdt:px-6 mdt:py-8 mdt:absolute mdt:left-1/2 mdt:bottom-14 mdt:-translate-x-1/2 mdt:z-10 sm:w-[295px]">
                 <div class="flex flex-col mb-16 items-center text-headings_second lg:mb-10 lg:px-3 mdt:mb-6 sm:mb-4">
                     <?php if ($text_line_1) { ?>
-                        <div class="font-noto_serif relative text-3xl leading-tight 
+                        <div class="font-second relative text-3xl leading-tight 
                         before:block before:absolute before:bg-accent before:right-full before:w-40 before:h-1 before:top-1/2 before:mr-4
                         after:block after:absolute after:bg-accent after:left-full after:w-40 after:h-1 after:top-1/2 after:ml-4
                         2xl:after:w-24 2xl:before:w-24
@@ -32,12 +32,12 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     <?php } ?>
                     <?php if ($text_line_2) { ?>
-                        <div class=" text-[150px] font-avenir font-bold leading-none my-3 xl:text-[100px] mdt:text-8xl mdt:my-1 sm:text-[53px]">
+                        <div class=" text-[150px] font-main font-bold leading-none my-3 xl:text-[100px] mdt:text-8xl mdt:my-1 sm:text-[53px]">
                             <?= $text_line_2 ?>
                         </div>
                     <?php } ?>
                     <?php if ($text_line_3) { ?>
-                        <div class="font-noto_serif relative text-3xl leading-tight
+                        <div class="font-second relative text-3xl leading-tight
                         before:block before:absolute before:bg-accent before:right-full before:w-40 before:h-1 before:top-1/2 before:mr-4
                         after:block after:absolute after:bg-accent after:left-full after:w-40 after:h-1 after:top-1/2 after:ml-4
                         2xl:after:w-24 2xl:before:w-24
@@ -47,7 +47,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                 </div>
                 <?php if ($button) { ?>
-                    <a href="<?= $button['url'] ?>" class="font-avenir h-[75px] px-14 flex justify-center items-center bg-accent rounded-full text-4xl leading-none text-white uppercase xl:text-3xl mdt:text-lg mdt:py-4 mdt:px-10 mdt:h-auto">
+                    <a href="<?= $button['url'] ?>" class="font-main h-[75px] px-14 flex justify-center items-center bg-accent rounded-full text-4xl leading-none text-white uppercase xl:text-3xl mdt:text-lg mdt:py-4 mdt:px-10 mdt:h-auto">
                         <?= $button['title'] ?>
                     </a>
                 <?php } ?>

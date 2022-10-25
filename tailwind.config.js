@@ -1,4 +1,5 @@
 const colors = require('./tailwind-colors');
+const fonts = require('./tailwind-fonts');
 module.exports = {
   content: ['./clixsy_src/**/*.{js,ts,jsx,tsx}', '**/*.php'],
   corePlugins: {
@@ -32,11 +33,7 @@ module.exports = {
       sm: { max: '640px' },
       xs: { max: '540px' },
     },
-    fontFamily: {
-      helvetica: ['Helvetica Neue', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica', 'Arial', 'Lucida Grande', 'sans-serif'],
-      avenir: ['Avenir'],
-      noto_serif: ['Noto Serif'],
-    },
+
     extend: {
       transitionProperty: {
         width: 'width',
@@ -46,6 +43,10 @@ module.exports = {
         reviews: '3px 3px 15px rgba(141, 141, 141, 0.47)',
       },
       colors: colors,
+      fontFamily: {
+        main: fonts['main'],
+        second: fonts['second']
+      },
       width: {
         '1/24': '4.1666667%',
         '2/24': '8.3333333%',
@@ -109,7 +110,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/typography')],
 };

@@ -35,10 +35,10 @@ if ($is_preview && !empty($previewImage)) {
                                     <svg class="absolute -left-2 -top-12 w-12" xmlns="http://www.w3.org/2000/svg" width="99.679" height="76.16" viewBox="0 0 99.679 76.16">
                                         <path class="fill-accent" id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
                                     </svg>
-                                    <div class="font-avenir text-lg leading-tight mb-6 text-kennyGrayText">
+                                    <div class="font-main text-lg leading-tight mb-6 text-kennyGrayText">
                                         <?php echo apply_filters('the_content', get_post($review_design_v1_item)->post_content); ?>
                                     </div>
-                                    <p class="font-avenir font-bold text-kennyGrayText"><?php echo get_the_title($review_design_v1_item) ?></p>
+                                    <p class="font-main font-bold text-kennyGrayText"><?php echo get_the_title($review_design_v1_item) ?></p>
                                     <div class="flex items-center">
                                         <?php if ($revies_design_one_logo) {
                                             echo wp_get_attachment_image($revies_design_one_logo, 'full', '', ['class' => 'absolute left-5 bottom-2 w-24']);
