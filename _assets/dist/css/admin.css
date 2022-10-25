@@ -1120,7 +1120,7 @@ img, video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   border-radius: 9999px;
   padding: .375rem 1.5rem;
-  font-family: Avenir;
+  font-family: Lato;
   font-size: 1rem;
   font-weight: 700;
   --tw-bg-opacity: 1 !important;
@@ -4696,10 +4696,6 @@ h2 span {
   left: -40%;
 }
 
-.acf-block-preview .-left-5 {
-  left: -1.25rem;
-}
-
 .acf-block-preview .left-1\/2 {
   left: 50%;
 }
@@ -4830,6 +4826,11 @@ h2 span {
 .acf-block-preview .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.acf-block-preview .mx-11 {
+  margin-left: 2.75rem;
+  margin-right: 2.75rem;
 }
 
 .acf-block-preview .mt-6 {
@@ -5016,6 +5017,14 @@ h2 span {
   margin-top: -210px;
 }
 
+.acf-block-preview .mb-2 {
+  margin-bottom: .5rem;
+}
+
+.acf-block-preview .mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .acf-block-preview .block {
   display: block;
 }
@@ -5162,6 +5171,14 @@ h2 span {
 
 .acf-block-preview .h-\[900px\] {
   height: 900px;
+}
+
+.acf-block-preview .h-0 {
+  height: 0;
+}
+
+.acf-block-preview .\!h-full {
+  height: 100% !important;
 }
 
 .acf-block-preview .min-h-\[246px\] {
@@ -5408,6 +5425,10 @@ h2 span {
   width: 45.8333%;
 }
 
+.acf-block-preview .w-6\/12 {
+  width: 50%;
+}
+
 .acf-block-preview .max-w-\[1920px\] {
   max-width: 1920px;
 }
@@ -5518,10 +5539,6 @@ h2 span {
 
 .acf-block-preview .flex-col {
   flex-direction: column;
-}
-
-.acf-block-preview .items-start {
-  align-items: flex-start;
 }
 
 .acf-block-preview .items-end {
@@ -6149,8 +6166,8 @@ h2 span {
   padding-bottom: 3.5rem;
 }
 
-.acf-block-preview .pb-36 {
-  padding-bottom: 9rem;
+.acf-block-preview .pt-2 {
+  padding-top: .5rem;
 }
 
 .acf-block-preview .pt-5 {
@@ -6161,8 +6178,12 @@ h2 span {
   padding-bottom: 13rem;
 }
 
-.acf-block-preview .pt-2 {
-  padding-top: .5rem;
+.acf-block-preview .pr-8 {
+  padding-right: 2rem;
+}
+
+.acf-block-preview .pr-9 {
+  padding-right: 2.25rem;
 }
 
 .acf-block-preview .text-center {
@@ -6177,15 +6198,11 @@ h2 span {
   text-align: end;
 }
 
-.acf-block-preview .font-avenir {
-  font-family: Avenir;
+.acf-block-preview .font-main {
+  font-family: Lato;
 }
 
-.acf-block-preview .font-helvetica {
-  font-family: Helvetica Neue, HelveticaNeue-Light, Helvetica Neue Light, Helvetica, Arial, Lucida Grande, sans-serif;
-}
-
-.acf-block-preview .font-noto_serif {
+.acf-block-preview .font-second {
   font-family: Noto Serif;
 }
 

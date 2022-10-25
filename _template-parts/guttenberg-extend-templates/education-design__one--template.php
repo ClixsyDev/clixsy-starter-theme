@@ -51,7 +51,7 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     <?php } ?>
                     <?php if ($education_design_one__description__visible_mobile && $education_design_one__description__hidden_mobile) { ?>
-                    <div class="hidden font-avenir font-bold text-xl pl-7 pt-7 mdt:block">
+                    <div class="hidden font-main font-bold text-xl pl-7 pt-7 mdt:block">
                         <a href="javascript:void(0);" class="more-btn-education">read more...</a>
                     </div>
                     <?php } ?>
@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
             
             <?php if ($education_design_one__link) { ?>
             <div class="text-center mt-12">
-                <a href="<?php echo $education_design_one__link['url'] ?>" class="font-avenir uppercase bg-accent text-white font-bold text-xl py-2 px-12 rounded-full lg:py-3 lg:px-8 lg:text-base xs:text-2xl"><?php echo $education_design_one__link['title'] ?></a>
+                <a href="<?php echo $education_design_one__link['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-xl py-2 px-12 rounded-full lg:py-3 lg:px-8 lg:text-base xs:text-2xl"><?php echo $education_design_one__link['title'] ?></a>
             </div>
             <?php } ?>
         </div>

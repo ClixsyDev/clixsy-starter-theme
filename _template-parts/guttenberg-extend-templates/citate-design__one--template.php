@@ -29,7 +29,7 @@ if ($is_preview && !empty($previewImage)) {
                 </span>
             </div>
             <?php if ($citate_design_one__author) { ?>
-                <h3 class="text-headings_second text-lg font-avenir font-bold mt-4">- <?php echo $citate_design_one__author ?> -</h3>
+                <h3 class="text-headings_second text-lg font-main font-bold mt-4">- <?php echo $citate_design_one__author ?> -</h3>
             <?php } ?>
         </div>
     </div>

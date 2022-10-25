@@ -13,7 +13,7 @@
                     <h4 class="text-headings_second text-center font-bold my-5 text-xl">Organization 1</h4>
                     <p class="text-headings">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <div class="text-center mt-8">
-                        <a href="#" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl">Learn More</a>
+                        <a href="#" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl">Learn More</a>
                     </div>
                 </div>
                 <div class="bg-white w-[27%] pt-10 px-10 pb-7 shadow-lg xl:w-8/24 lg:px-6 lg:pt-7">
@@ -21,7 +21,7 @@
                     <h4 class="text-headings_second text-center font-bold my-5 text-xl">Organization 1</h4>
                     <p class="text-headings">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <div class="text-center mt-8">
-                        <a href="#" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl">Learn More</a>
+                        <a href="#" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl">Learn More</a>
                     </div>
                 </div>
                 <div class="bg-white w-[27%] pt-10 px-10 pb-7 shadow-lg xl:w-8/24 lg:px-6 lg:pt-7">
@@ -29,7 +29,7 @@
                     <h4 class="text-headings_second text-center font-bold my-5 text-xl">Organization 1</h4>
                     <p class="text-headings">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <div class="text-center mt-8">
-                        <a href="#" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl">Learn More</a>
+                        <a href="#" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                                 <h4 class="text-headings_second text-center font-bold my-5 text-xl">Organization 1</h4>
                                 <p class="text-headings">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="text-center mt-8">
-                                    <a href="#" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-xl">Learn More</a>
+                                    <a href="#" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-xl">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                                 <h4 class="text-headings_second text-center font-bold my-5 text-xl">Organization 2</h4>
                                 <p class="text-headings">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="text-center mt-8">
-                                    <a href="#" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-xl">Learn More</a>
+                                    <a href="#" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-xl">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                 <h4 class="text-headings_second text-center font-bold my-5 text-xl">Organization 3</h4>
                                 <p class="text-headings">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="text-center mt-8">
-                                    <a href="#" class="font-avenir bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-xl">Learn More</a>
+                                    <a href="#" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-xl">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="text-center mt-16 mdt:mt-6 xs:mt-10">
-                <a href="#" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl">free case review</a>
+                <a href="#" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl">free case review</a>
             </div>
         </div>
     </div>

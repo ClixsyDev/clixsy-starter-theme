@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <?php echo wp_get_attachment_image($slider_v2_item['image'], 'full', '', ['class' => 'm-auto']) ?>
                                     <?php if ($slider_v2_item['content']) { ?>
                                         <div class="absolute <?php echo $key % 2 == 0 ? 'top-0' : 'bottom-8' ?> ml-5 mt-10 mr-10 p-5 w-18/24 bg-white/60 xl:p-2 xs:ml-3 xs:mt-8">
-                                            <div class="font-avenir font-bold text-headings_second prose-xl lg:prose-lg lg:leading-tight leading-tight"><?php echo $slider_v2_item['content'] ?></div>
+                                            <div class="font-main font-bold text-headings_second prose-xl lg:prose-lg lg:leading-tight leading-tight"><?php echo $slider_v2_item['content'] ?></div>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <?php if ($slider_description_design_two__link) { ?>
                 <div class="text-center mt-5 lg:mt-8">
-                    <a href="<?php echo $slider_description_design_two__link['url'] ?>" class="font-avenir bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $slider_description_design_two__link['title'] ?></a>
+                    <a href="<?php echo $slider_description_design_two__link['url'] ?>" class="font-main bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $slider_description_design_two__link['title'] ?></a>
                 </div>
             <?php } ?>
         </div>

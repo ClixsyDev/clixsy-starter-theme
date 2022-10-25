@@ -123,7 +123,7 @@
         <div class="w-[40%] lg:w-full">
             <img class=" object-cover h-full lg:h-72 w-full  " src="<?php echo get_template_directory_uri() ?>/_assets/src/img/car-accident-img.png" alt="accident img">
         </div>
-        <div class="w-[60%] lg:w-full text-[40px] font-avenir text-headings leading-none">
+        <div class="w-[60%] lg:w-full text-[40px] font-main text-headings leading-none">
             <div class=" bg-[#F3F3F3]">
                 <div class="flex  items-center lg:justify-start py-9 pl-5 h-64 lg:h-40 lg:w-3/5 md:w-full lg:mx-auto">
                     <div class="text-accent text-[90px] lg:text-[60px] md:text-[40px] font-bold pr-5">
@@ -191,7 +191,7 @@
         <div class="mx-auto w-[60%] mdt:w-[80%] md:w-full ">
             <div>
                 <div class="pb-2 faq-block">
-                    <div class="title-faq text-headings flex justify-between bg-smoke font-avenir font-bold text-2xl xl:text-lg p-4 lg:text-base relative xs:px-7">
+                    <div class="title-faq text-headings flex justify-between bg-smoke font-main font-bold text-2xl xl:text-lg p-4 lg:text-base relative xs:px-7">
                         <h3>How Much Does a Personal Injury Lawyer Cost?1</h3>
 
                     </div>
@@ -200,7 +200,7 @@
                     </div>
                 </div>
                 <div class="pb-2 faq-block">
-                    <div class="title-faq text-headings flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 xl:text-lg lg:text-base relative xs:px-7">
+                    <div class="title-faq text-headings flex justify-between bg-smoke font-main font-bold text-2xl p-4 xl:text-lg lg:text-base relative xs:px-7">
                         <h3>How Much Does a Personal Injury Lawyer Cost?2</h3>
 
                     </div>
@@ -209,7 +209,7 @@
                     </div>
                 </div>
                 <div class="pb-2 faq-block">
-                    <div class="title-faq text-headings flex justify-between bg-smoke font-avenir font-bold text-2xl p-4 xl:text-lg lg:text-base relative xs:px-7">
+                    <div class="title-faq text-headings flex justify-between bg-smoke font-main font-bold text-2xl p-4 xl:text-lg lg:text-base relative xs:px-7">
                         <h3>How Much Does a Personal Injury Lawyer Cost?3</h3>
 
                     </div>
@@ -242,7 +242,7 @@
 </section>
 
 <!-- Contact us Main office (map) section -->
-<section class="w-full bg-img-case-types pt-32 pb-20 font-avenir">
+<section class="w-full bg-img-case-types pt-32 pb-20 font-main">
     <div class="container">
         <div class=" text-headings text-5xl text-center relative pb-16">
             <h2 class="font-bold"> Main <span class=" text-accent">Office</span></h2>

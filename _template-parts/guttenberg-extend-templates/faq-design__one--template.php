@@ -31,7 +31,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php if ($faq_item['question'] && $faq_item['answer']) { ?>
                             <div>
                                 <div class="pb-2 faq-block">
-                                    <div class="title-faq text-headings flex justify-between bg-gray-300 cursor-pointer font-avenir font-bold text-2xl xl:text-lg p-4 lg:text-base relative xs:px-7">
+                                    <div class="title-faq text-headings flex justify-between bg-gray-300 cursor-pointer font-main font-bold text-2xl xl:text-lg p-4 lg:text-base relative xs:px-7">
                                         <h3><?php echo $faq_item['question'] ?></h3>
                                     </div>
                                     <div class="pt-3 pb-5 px-11 hidden hidden-part prose-base">

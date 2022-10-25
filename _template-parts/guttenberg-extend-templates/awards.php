@@ -14,7 +14,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <div class="bg-headings px-4 pt-10 pb-8 ">
         <?php if ($title) { ?>
-            <h2 class="text-white font-avenir font-medium text-5xl leading-tight text-center pb-5 mdt:text-4xl"><?= $title ?></h2>
+            <h2 class="text-white font-main font-medium text-5xl leading-tight text-center pb-5 mdt:text-4xl"><?= $title ?></h2>
             <hr class="bg-accent border-none mx-auto h-1 w-[596px] max-w-full mb-6">
         <?php } ?>
         <div class="awards_slider glide relative max-w-[1920px] mx-auto">

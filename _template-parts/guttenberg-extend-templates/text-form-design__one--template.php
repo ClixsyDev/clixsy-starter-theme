@@ -22,7 +22,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="pt-24 lg:pt-12 lg:pb-24 xs:pt-24 overflow-hidden relative">
         <div class="container">
             <?php if ($text_form_design_one__title) { ?>
-                <h2 class="font-avenir text-headings_second font-medium text-5xl m-auto text-center leading-tight pb-4 xs:text-2xl"><?php echo $text_form_design_one__title ?></h2>
+                <h2 class="font-main text-headings_second font-medium text-5xl m-auto text-center leading-tight pb-4 xs:text-2xl"><?php echo $text_form_design_one__title ?></h2>
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="flex mt-16 gap-16 mdt:flex-col mdt:gap-7 md:mt-12">
@@ -38,12 +38,12 @@ if ($is_preview && !empty($previewImage)) {
 
                         </span>
                         <?php if ($text_form_design_one__citation) { ?>
-                            <div class="text-headings_second font-avenir lg:pl-8 sm:pl-0 prose-xl lg:prose-lg leading-snug">
+                            <div class="text-headings_second font-main lg:pl-8 sm:pl-0 prose-xl lg:prose-lg leading-snug">
                                 <?php echo $text_form_design_one__citation ?>
                             </div>
                         <?php } ?>
                         <?php if ($text_form_design_one__author) { ?>
-                            <p class="text-xl text-end font-avenir font-bold mb-6"><?php echo $text_form_design_one__author ?></p>
+                            <p class="text-xl text-end font-main font-bold mb-6"><?php echo $text_form_design_one__author ?></p>
                         <?php } ?>
                     </div>
                     <div class="py-5 relative ">
@@ -56,7 +56,7 @@ if ($is_preview && !empty($previewImage)) {
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
                                 <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24' ?>">
-                                    <div class="font-avenir font-bold text-white text-2xl lg:text-lg span-change_color_1 leading-snug">
+                                    <div class="font-main font-bold text-white text-2xl lg:text-lg span-change_color_1 leading-snug">
                                         <?php echo $text_form_design_one__description ?>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <?php if ($text_form_design_one__button && $text_form_design_one__button['url']) { ?>
                         <div class="text-center mt-12 lg:mt-8">
-                            <a href="<?php echo $text_form_design_one__button['url'] ?>" class="font-avenir bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $text_form_design_one__button['title'] ?></a>
+                            <a href="<?php echo $text_form_design_one__button['url'] ?>" class="font-main bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $text_form_design_one__button['title'] ?></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -78,7 +78,7 @@ if ($is_preview && !empty($previewImage)) {
                             </h2>
                         <?php } ?>
                         <?php if ($text_form_design_one__description) { ?>
-                            <div class="text-white text-lg mb-6 text-center font-noto_serif">
+                            <div class="text-white text-lg mb-6 text-center font-second">
                                 <?php echo $text_form_design_one__description ?>
                             </div>
                         <?php } ?>

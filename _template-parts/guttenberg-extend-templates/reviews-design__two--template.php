@@ -44,7 +44,7 @@ if ($is_preview && !empty($previewImage)) {
                                             <path  class="fill-accent"id="quote_1_" data-name="quote (1)" d="M12.06,75.2C6.46,69.04,3.1,62.32,3.1,51.12c0-19.6,14-36.96,33.6-45.92l5.04,7.28C23.26,22.56,19.34,35.44,18.22,43.84a16.606,16.606,0,0,1,10.64-1.68c10.08,1.12,17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14,18.574,18.574,0,0,1-14,5.6A22.025,22.025,0,0,1,12.06,75.2Zm56,0c-5.6-6.16-8.96-12.88-8.96-24.08,0-19.6,14-36.96,33.6-45.92l5.04,7.28C79.26,22.56,75.34,35.44,74.22,43.84c2.8-1.68,10.64-1.68,10.64-1.68s17.92,8.96,17.92,19.6a22.1,22.1,0,0,1-5.6,14c-3.36,3.92-8.4,5.6-14,5.6A22.025,22.025,0,0,1,68.06,75.2Z" transform="translate(-3.1 -5.2)" fill="#69be26" />
                                         </svg>
                                     </div>
-                                    <div class="pb-14 text-lg leading-6 font-avenir font-normal">
+                                    <div class="pb-14 text-lg leading-6 font-main font-normal">
                                         <?php echo apply_filters('the_content', get_post($review_item)->post_content); ?>
                                     </div>
                                     <?php if ($reviews_design_two_stars) { ?>
@@ -57,7 +57,7 @@ if ($is_preview && !empty($previewImage)) {
                                                     </svg>
                                                 <?php } ?>
                                             </div>
-                                            <p class=" font-noto_serif text-2xl text-black md:text-xl">- <?php echo get_the_title($review_item) ?></p>
+                                            <p class=" font-second text-2xl text-black md:text-xl">- <?php echo get_the_title($review_item) ?></p>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -85,7 +85,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <?php if ($reviews_design_two_link) { ?>
                 <div class="text-center mt-10 lg:mt-8">
-                    <a href="<?php echo $reviews_design_two_link['url'] ?>" class="font-avenir bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $reviews_design_two_link['title'] ?></a>
+                    <a href="<?php echo $reviews_design_two_link['url'] ?>" class="font-main bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $reviews_design_two_link['title'] ?></a>
                 </div>
             <?php } ?>
         </div>

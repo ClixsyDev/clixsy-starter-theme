@@ -13,6 +13,6 @@
                 </svg>
             </span>
         </div>
-        <h3 class="text-headings_second text-lg font-avenir font-bold mt-4">- Suni M. -</h3>
+        <h3 class="text-headings_second text-lg font-main font-bold mt-4">- Suni M. -</h3>
     </div>
 </div>

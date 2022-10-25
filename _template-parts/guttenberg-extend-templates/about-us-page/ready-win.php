@@ -22,30 +22,30 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="#" class="font-avenir uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl">free case review</a>
+                <a href="#" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl">free case review</a>
             </div>
         </div>
         <div class="w-[35%] bg-headings p-11 lg:w-[45%] xl:p-7">
             <div class=" text-white text-xl leading-tight mb-8">Tell us a little about what happened, and a Go Kenny team member will contact you soon to listen to your story and review your case for free.</div>
             <form action="" class="flex flex-col gap-3">
                 <div class="flex flex-col">
-                    <label for="fname" class="text-white font-avenir">What happened?</label>
+                    <label for="fname" class="text-white font-main">What happened?</label>
                     <textarea class="px-3 py-2 min-h-[140px] focus:outline-none" placeholder="I was in an accident when…"></textarea>
                 </div>
                 <div class="flex flex-col">
-                    <label class="text-white font-avenir">Name:</label>
+                    <label class="text-white font-main">Name:</label>
                     <input class="px-3 py-2.5 min-h-[45px] focus:outline-none" placeholder="John Doe" type="text">
                 </div>
                 <div class="flex flex-col">
-                    <label class="text-white font-avenir">Email:</label>
+                    <label class="text-white font-main">Email:</label>
                     <input class="px-3 py-2.5 min-h-[45px] focus:outline-none" placeholder="johndoe@email.com" type="text">
                 </div>
                 <div class="flex flex-col">
-                    <label class="text-white font-avenir">Phone:</label>
+                    <label class="text-white font-main">Phone:</label>
                     <input class="px-3 py-2.5 min-h-[45px] focus:outline-none" placeholder="000-000-0000" type="text">
                 </div>
-                <div class="font-noto_serif text-white text-base leading-5 mb-8 xl:mb-2">By submitting your contact information, you agree that we may contact you by telephone (including text) and email in accordance with our Terms and Privacy Policy</div>
-                <input class="font-avenir max-w-[310px] m-auto uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl" type="submit" value="SEND MESSAGE">
+                <div class="font-second text-white text-base leading-5 mb-8 xl:mb-2">By submitting your contact information, you agree that we may contact you by telephone (including text) and email in accordance with our Terms and Privacy Policy</div>
+                <input class="font-main max-w-[310px] m-auto uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl" type="submit" value="SEND MESSAGE">
             </form>
         </div>
     </div>
@@ -63,7 +63,7 @@
             <p class="mb-6">Habetz Injury Law can help you pursue compensation for injury and wrongful death, as well as handle other types of personal injury cases like those involving car crashes, home accidents, medical malpractice and slip and falls. </p>
         </div>
         <div class="text-center mt-12">
-            <a href="#" class="font-avenir uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full">free case review</a>
+            <a href="#" class="font-main uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full">free case review</a>
         </div>
     </div>
 </div>
@@ -88,23 +88,23 @@
         <div class=" text-white text-xl leading-tight mb-8">Tell us a little about what happened, and a Go Kenny team member will contact you soon to listen to your story and review your case for free.</div>
         <form action="" class="flex flex-col gap-3">
             <div class="flex flex-col">
-                <label for="fname" class="text-white font-avenir">What happened?</label>
+                <label for="fname" class="text-white font-main">What happened?</label>
                 <textarea class="px-3 py-2 min-h-[140px] focus:outline-none sm:min-h-[90px]" placeholder="I was in an accident when…"></textarea>
             </div>
             <div class="flex flex-col">
-                <label class="text-white font-avenir">Name:</label>
+                <label class="text-white font-main">Name:</label>
                 <input class="px-3 py-2.5 min-h-[45px] focus:outline-none" placeholder="John Doe" type="text">
             </div>
             <div class="flex flex-col">
-                <label class="text-white font-avenir">Email:</label>
+                <label class="text-white font-main">Email:</label>
                 <input class="px-3 py-2.5 min-h-[45px] focus:outline-none" placeholder="johndoe@email.com" type="text">
             </div>
             <div class="flex flex-col">
-                <label class="text-white font-avenir">Phone:</label>
+                <label class="text-white font-main">Phone:</label>
                 <input class="px-3 py-2.5 min-h-[45px] focus:outline-none" placeholder="000-000-0000" type="text">
             </div>
-            <div class="font-noto_serif text-white text-base leading-5 mb-8 xl:mb-2">By submitting your contact information, you agree that we may contact you by telephone (including text) and email in accordance with our Terms and Privacy Policy</div>
-            <input class="font-avenir max-w-[310px] m-auto uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-lg" type="submit" value="SEND MESSAGE">
+            <div class="font-second text-white text-base leading-5 mb-8 xl:mb-2">By submitting your contact information, you agree that we may contact you by telephone (including text) and email in accordance with our Terms and Privacy Policy</div>
+            <input class="font-main max-w-[310px] m-auto uppercase bg-accent text-white font-bold text-xl py-3 px-10 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-lg" type="submit" value="SEND MESSAGE">
         </form>
     </div>
 </div>

@@ -11,7 +11,7 @@
 }
 
 .submit-subscribe-cf7 {
-    @apply uppercase font-avenir !bg-accent text-white font-bold text-base py-1.5 px-6 rounded-full md:text-base md:px-10 sm:w-2/4 sm:m-auto;
+    @apply uppercase font-main !bg-accent text-white font-bold text-base py-1.5 px-6 rounded-full md:text-base md:px-10 sm:w-2/4 sm:m-auto;
 }
 
 .subscribe-form-wrapper {

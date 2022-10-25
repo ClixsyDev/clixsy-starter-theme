@@ -23,10 +23,10 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php if ($subtitle) { ?>
-                <p class="font-noto_serif font-bold text-2xl text-center md:text-xl"><?php echo $subtitle ?></p>
+                <p class="font-second font-bold text-2xl text-center md:text-xl"><?php echo $subtitle ?></p>
             <?php } ?>
             <?php if ($description) { ?>
-                <div class="font-avenir text-xl max-w-[1120px] m-auto pt-10 lg:px-16 md:pt-3 md:text-base xs:px-0 xs:pt-5">
+                <div class="font-main text-xl max-w-[1120px] m-auto pt-10 lg:px-16 md:pt-3 md:text-base xs:px-0 xs:pt-5">
                     <?php echo $description ?>
                 </div>
             <?php } ?>
