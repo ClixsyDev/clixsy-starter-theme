@@ -600,6 +600,20 @@ let btnMoreEducation = ()=>{
     });
 };
 btnMoreEducation();
+const nextArrow = ()=>{
+    const arrows = Array.from(document.querySelectorAll("[data-go-to]"));
+    arrows.map((arrow)=>{
+        arrow.addEventListener("click", (e)=>{
+            e.preventDefault();
+            const selector = arrow.getAttribute("data-go-to");
+            window.scrollTo({
+                top: document.querySelector(selector).offsetTop - document.querySelector("header").offsetHeight,
+                behavior: "smooth"
+            });
+        });
+    });
+};
+nextArrow();
 
 },{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0","./header":"9ZRJh","./button-hover":"9maqa"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -4512,8 +4526,6 @@ function headerInit() {
     const header = (0, _utils.getElement)("header");
     let isSticked = false;
     document.addEventListener("scroll", (e)=>{
-        console.log("scroll;");
-        console.log(window.scrollY);
         if (!isSticked && window.scrollY >= 160) {
             header.classList.add("sticked");
             isSticked = true;

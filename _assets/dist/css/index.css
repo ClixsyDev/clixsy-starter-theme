@@ -6603,6 +6603,22 @@ img, video {
   right: 11%;
 }
 
+.right-32 {
+  right: 8rem;
+}
+
+.bottom-24 {
+  bottom: 6rem;
+}
+
+.left-16 {
+  left: 4rem;
+}
+
+.-right-16 {
+  right: -4rem;
+}
+
 .z-50 {
   z-index: 50;
 }
