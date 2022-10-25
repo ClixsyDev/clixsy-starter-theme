@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
     $form_description = get_field($key . '_form_description');
     $form = get_field($key . '_form_shortcode');
 ?>
-    <div class="relative pt-8 pb-44">
+    <div class="how_can_help relative pt-8 pb-44">
         <div class="container flex xl:flex-wrap items-end">
             <div class="w-[65%] relative xl:max-w-2xl xl:w-full xl:mx-auto">
                 <h2 class="font-main font-bold absolute right-4 top-40 text-[60px] text-right leading-tight max-w-[367px] 

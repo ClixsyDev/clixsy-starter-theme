@@ -98,3 +98,19 @@ let btnMoreEducation = () => {
     });
   }
 };
+btnMoreEducation();
+
+const nextArrow = () => {
+  const arrows = Array.from(document.querySelectorAll('[data-go-to]'));
+  arrows.map(arrow => {
+    arrow.addEventListener('click', e => {
+      e.preventDefault();
+      const selector = arrow.getAttribute('data-go-to');
+      window.scrollTo({
+        top: document.querySelector(selector).offsetTop - document.querySelector('header').offsetHeight,
+        behavior: 'smooth',
+      });
+    });
+  });
+}
+nextArrow();

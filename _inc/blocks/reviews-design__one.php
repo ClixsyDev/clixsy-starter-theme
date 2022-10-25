@@ -86,9 +86,35 @@ if (function_exists('acf_add_local_field_group')) :
                 'label' => 'Title',
                 'instructions' => '',
             ),
-
+            array(
+                'key' => 'reviews_design_one_arrows',
+                'label' => 'Display Arrows',
+                'name' => 'reviews_design_one_arrows',
+                'type' => 'true_false',
+            ),
+            array(
+                'key' => 'reviews_design_one_next_section_arrow',
+                'label' => 'Next Section Arrow',
+                'name' => 'reviews_design_one_next_section_arrow',
+                'type' => 'true_false',
+            ),
+            array(
+                'key' => 'reviews_design_one_next_section_selector',
+                'name' => 'reviews_design_one_next_section_selector',
+                'type' => 'text',
+                'label' => 'Next Section Selector',
+                'instructions' => '',
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => 'reviews_design_one_next_section_arrow',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+            ),
         ),
-
     ));
 
 endif;
