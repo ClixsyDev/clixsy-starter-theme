@@ -4484,16 +4484,8 @@ h2 span {
   visibility: visible;
 }
 
-.acf-block-preview .invisible {
-  visibility: hidden;
-}
-
 .acf-block-preview .static {
   position: static;
-}
-
-.acf-block-preview .fixed {
-  position: fixed;
 }
 
 .acf-block-preview .absolute {
@@ -5042,10 +5034,6 @@ h2 span {
 
 .acf-block-preview .grid {
   display: grid;
-}
-
-.acf-block-preview .contents {
-  display: contents;
 }
 
 .acf-block-preview .hidden {
@@ -6159,6 +6147,10 @@ h2 span {
 
 .acf-block-preview .pb-52 {
   padding-bottom: 13rem;
+}
+
+.acf-block-preview .pt-2 {
+  padding-top: .5rem;
 }
 
 .acf-block-preview .text-center {

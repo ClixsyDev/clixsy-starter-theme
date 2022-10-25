@@ -547,6 +547,9 @@ var _buttonHover = require("./button-hover");
     (0, _headerDefault.default)();
     (0, _formEntry.formEntry)();
     (0, _buttonHover.hoverOnButton)();
+    faqOpen();
+    btnMore();
+    btnMoreEducation();
 });
 let faqOpen = ()=>{
     let faqItem = document.querySelectorAll(".faq-block");
@@ -554,6 +557,19 @@ let faqOpen = ()=>{
         e.addEventListener("click", ()=>{
             let hiddenPart = e.querySelector(".hidden-part");
             let title = e.querySelector(".title-faq");
+            let moreBtn = (0, _utils.getElement)(".faq-without-image__btn");
+            if ((0, _utils.ifSelectorExist)(moreBtn)) moreBtn.addEventListener("click", ()=>{
+                let hiddenImage = (0, _utils.getElement)(".hidden_faq_without_image");
+                moreBtn.textContent = "- show less";
+                if (moreBtn.classList.contains("clicked")) {
+                    hiddenImage.classList.add("hidden");
+                    moreBtn.textContent = "+ show more...";
+                    moreBtn.classList.remove("clicked");
+                } else if ((0, _utils.ifSelectorExist)(hiddenImage)) {
+                    moreBtn.classList.add("clicked");
+                    hiddenImage.classList.remove("hidden");
+                }
+            });
             Array.from(faqItem).forEach((e)=>{
                 if (!e.querySelector(".hidden-part").classList.contains("hidden") && e.querySelector(".hidden-part").classList.contains("opened")) {
                     e.querySelector(".hidden-part").classList.add("hidden");
@@ -573,7 +589,6 @@ let faqOpen = ()=>{
     });
     Array.from(faqItem)[0].click();
 };
-faqOpen();
 let btnMore = ()=>{
     let hiddenBlock = document.querySelector(".hidden-text");
     let btn = document.querySelector(".more-btn");
@@ -588,13 +603,12 @@ let btnMore = ()=>{
         });
     };
 };
-btnMore();
 let btnMoreEducation = ()=>{
     let hiddenBlock = document.querySelector(".hidden-text-education");
     let btn = document.querySelector(".more-btn-education");
-    if ((0, _utils.ifSelectorExist)(btn) && (0, _utils.ifSelectorExist)(hiddenBlock)) btn.addEventListener("click", ()=>{
+    if ((0, _utils.ifSelectorExist)(btn) && (0, _utils.ifSelectorExist)(hiddenBlock)) btn.addEventListener("click", (event1)=>{
         hiddenBlock.classList.toggle("hidden");
-        event.preventDefault();
+        event1.preventDefault();
         if (hiddenBlock.classList.contains("hidden")) btn.textContent = "read more...";
         else btn.textContent = "show less...";
     });

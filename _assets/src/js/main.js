@@ -5,12 +5,14 @@ import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
 
-
 ready(() => {
   mainMenu();
   headerInit();
   formEntry();
   hoverOnButton();
+  faqOpen();
+  btnMore();
+  btnMoreEducation();
 });
 let faqOpen = () => {
   let faqItem = document.querySelectorAll('.faq-block');
@@ -19,7 +21,24 @@ let faqOpen = () => {
     e.addEventListener('click', () => {
       let hiddenPart = e.querySelector('.hidden-part');
       let title = e.querySelector('.title-faq');
+      let moreBtn = getElement('.faq-without-image__btn');
 
+      if (ifSelectorExist(moreBtn)) {
+        moreBtn.addEventListener('click', () => {
+          let hiddenImage = getElement('.hidden_faq_without_image');
+          moreBtn.textContent = '- show less';
+          if (moreBtn.classList.contains('clicked')) {
+            hiddenImage.classList.add('hidden');
+            moreBtn.textContent = '+ show more...';
+            moreBtn.classList.remove('clicked');
+          } else {
+            if (ifSelectorExist(hiddenImage)) {
+              moreBtn.classList.add('clicked');
+              hiddenImage.classList.remove('hidden');
+            }
+          }
+        });
+      }
       Array.from(faqItem).forEach((e) => {
         if (!e.querySelector('.hidden-part').classList.contains('hidden') && e.querySelector('.hidden-part').classList.contains('opened')) {
           e.querySelector('.hidden-part').classList.add('hidden');
@@ -40,7 +59,6 @@ let faqOpen = () => {
   });
   Array.from(faqItem)[0].click();
 };
-faqOpen();
 
 let btnMore = () => {
   let hiddenBlock = document.querySelector('.hidden-text');
@@ -62,14 +80,13 @@ let btnMore = () => {
     }
   };
 };
-btnMore();
 
 let btnMoreEducation = () => {
   let hiddenBlock = document.querySelector('.hidden-text-education');
   let btn = document.querySelector('.more-btn-education');
 
   if (ifSelectorExist(btn) && ifSelectorExist(hiddenBlock)) {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (event) => {
       hiddenBlock.classList.toggle('hidden');
       event.preventDefault();
 

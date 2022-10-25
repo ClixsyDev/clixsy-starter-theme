@@ -8048,6 +8048,10 @@ img, video {
   padding-bottom: 13rem;
 }
 
+.pt-2 {
+  padding-top: .5rem;
+}
+
 .text-center {
   text-align: center;
 }
