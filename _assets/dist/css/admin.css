@@ -4484,8 +4484,16 @@ h2 span {
   visibility: visible;
 }
 
+.acf-block-preview .invisible {
+  visibility: hidden;
+}
+
 .acf-block-preview .static {
   position: static;
+}
+
+.acf-block-preview .fixed {
+  position: fixed;
 }
 
 .acf-block-preview .absolute {
@@ -5034,6 +5042,10 @@ h2 span {
 
 .acf-block-preview .grid {
   display: grid;
+}
+
+.acf-block-preview .contents {
+  display: contents;
 }
 
 .acf-block-preview .hidden {
