@@ -1,5 +1,5 @@
 import Glide from '@glidejs/glide';
-import { getElements } from './utils';
+import { getElements, ifSelectorExist } from './utils';
 import Marquee from 'vanilla-marquee';
 
 const testmonialsSlider = '.testmonialsSlider';
@@ -70,9 +70,11 @@ const verdictsSlider = '.verdicts_slider';
 if (document.querySelector(verdictsSlider) != undefined && document.querySelector(verdictsSlider) != null) {
   Array.from(getElements(verdictsSlider)).forEach((item) => {
     new Glide(item, {
-      perView: 4,
       type: 'carousel',
-      autoplay: 3000,
+      autoplay: 1,
+      animationDuration: 4000,
+      animationTimingFunc: 'linear',
+      perView: 4,
       breakpoints: {
         1100: {
           perView: 3,
@@ -105,7 +107,6 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
     new Glide(item, {
       perView: 3,
       type: 'carousel',
-      autoplay: 3000,
       breakpoints: {
         1100: {
           perView: 2,
@@ -149,7 +150,6 @@ if (document.querySelector(communitySliderAbout) != undefined && document.queryS
   });
 }
 
-
 const marqueEl1 = document.getElementById('marquee');
 if (document.body.contains(marqueEl1)) {
   const marqueOne = new Marquee(marqueEl1, {
@@ -163,4 +163,19 @@ if (document.body.contains(marqueEl1)) {
     startVisible: true,
   });
   marqueOne.resume();
+}
+
+const verdicts = document.querySelector('.verdicts-marquee');
+if (ifSelectorExist(verdicts)) {
+  const verdictsMarquee = new Marquee(verdicts, {
+    css3easing: 'linear',
+    speed: window.innerWidth < 768 ? 60 : 100,
+    gap: 100,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+    duration: 5000,
+    startVisible: true,
+  });
+  verdictsMarquee.resume();
 }

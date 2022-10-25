@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   gap: 0 20px;
-
   a {
     font-size: 18px;
     line-height: 2em;
@@ -63,7 +62,7 @@
 }
 
 .sub-menu.lvl-1 {
-  @apply absolute p-0 bg-accent lg:bg-bg_second;
+  @apply absolute p-0 bg-headings;
   top: 100%;
   min-width: 300px;
   left: -5px;
@@ -94,6 +93,10 @@
     font-size: 17px;
     display: block;
     width: 100%;
+    &:after {
+      width: 100%;
+      left: 0;
+    }
   }
 }
 

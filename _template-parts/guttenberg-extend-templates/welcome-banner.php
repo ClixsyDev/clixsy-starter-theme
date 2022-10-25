@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $text_line_2 = get_field('welcome_banner_banner_text_line_2');
     $text_line_3 = get_field('welcome_banner_banner_text_line_3');
     $button = get_field('welcome_banner_button');
-    ?>
+?>
     <div class="welcome_banner relative h-[780px] lg:h-[427px] mdt:h-auto sm:h-[486px]">
         <img src="<?= wp_get_attachment_image_url($bg_image, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
         <div class="container relative z-10 flex flex-col h-full justify-center items-end  mdt:items-center mdt:p-0">
@@ -47,6 +47,13 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                 </div>
                 <?php if ($button) { ?>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $button['url'],
+                        'text' => __($button['title'], 'law'),
+                        'text_hover' => 'hovered',
+                        'classes' => '', // hover_headings hover_accent hover_white btn_headings button-xl button-md button-sm
+                    ]); ?>
                     <a href="<?= $button['url'] ?>" class="font-main h-[75px] px-14 flex justify-center items-center bg-accent rounded-full text-4xl leading-none text-white uppercase xl:text-3xl mdt:text-lg mdt:py-4 mdt:px-10 mdt:h-auto">
                         <?= $button['title'] ?>
                     </a>

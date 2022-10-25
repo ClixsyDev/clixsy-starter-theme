@@ -1,4 +1,4 @@
-import mainMenu from './menu';
+import {mainMenu, dropdownMenu} from './menu';
 import headerInit from './header';
 import { getElement, getElements, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
@@ -7,69 +7,16 @@ import { hoverOnButton } from './button-hover';
 
 ready(() => {
   mainMenu();
+  dropdownMenu();
   headerInit();
   formEntry();
   hoverOnButton();
-  // faqOpen();
   btnMore();
   btnMoreEducation();
   initFAQ();
+
 });
-// let faqOpen = () => {
-//   let faqItem = document.querySelectorAll('.faq-block');
 
-//   Array.from(faqItem).forEach((e) => {
-//     e.addEventListener('click', () => {
-//       let hiddenPart = e.querySelector('.hidden-part');
-//       let title = e.querySelector('.title-faq');
-
-//       // Array.from(faqItem).forEach((e) => {
-//       //   if (!e.querySelector('.hidden-part').classList.contains('hidden') && e.querySelector('.hidden-part').classList.contains('opened')) {
-//       //     e.querySelector('.hidden-part').classList.add('hidden');
-//       //     e.querySelector('.title-faq').classList.remove('open-faq');
-//       //     e.classList.remove('faq-block__open')
-//       //   }
-//       // });
-
-      
-
-      
-//       // if (e.classList.contains('faq-block__open') &&  hiddenPart.classList.contains('hidden')) {
-//       //   e.classList.remove('faq-block__open')
-//       //   hiddenPart.classList.remove('hidden');
-//       //   hiddenPart.classList.add('opened');
-//       //   title.classList.add('open-faq');
-//       // } else {
-//       //   e.classList.add('faq-block__open')
-//       //   hiddenPart.classList.add('hidden');
-//       //   hiddenPart.classList.remove('opened');
-//       //   title.classList.remove('open-faq');
-//       // }
-
-//       // if (hiddenPart.classList.contains('hidden')) {
-//       //   hiddenPart.classList.remove('hidden');
-//       //   hiddenPart.classList.add('opened');
-//       //   title.classList.add('open-faq');
-//       // } else {
-//       //   hiddenPart.classList.add('hidden');
-//       //   hiddenPart.classList.remove('opened');
-//       //   title.classList.remove('open-faq');
-//       // }
-
-//       hiddenPart.classList.toggle('hidden')
-//       Array.from(faqItem).forEach((event) => {
-//         // event.querySelector('.hidden-part:not(.hidden)').classList.add('hidden')
-//         console.log(event.querySelector('.hidden-part:not(.hidden)'))
-//         if (!event.querySelector('.hidden-part').classList.contains('hidden')) {
-//           setTimeout(() => {
-//             event.querySelector('.hidden-part').classList.add('hidden');
-//           }, 200)
-//         }
-//       })
-
-//     });
-//   });
-// };
 
 /* FAQ start */
 const initFAQ = () => {
