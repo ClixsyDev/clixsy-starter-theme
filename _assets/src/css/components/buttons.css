@@ -37,6 +37,9 @@
     span {
       @apply text-white hover:text-headings;
     }
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.2rem];
+    }
     &:hover {
       span {
         @apply text-headings;

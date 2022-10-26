@@ -44,13 +44,13 @@ $bottom_links = get_field('bottom_links', 'options');
                     <?php if ($phone) { ?>
                         <div>
                             <h5 class="text-accent font-main font-bold text-xl">EMAIL</h5>
-                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone ?></p>
+                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $mail ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($mail) { ?>
                         <div>
                             <h5 class="text-accent font-main font-bold text-xl">PHONE</h5>
-                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $mail ?></p>
+                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone  ?></p>
                         </div>
                     <?php } ?>
                 </div>
