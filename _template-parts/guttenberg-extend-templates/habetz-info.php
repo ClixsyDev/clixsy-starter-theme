@@ -37,7 +37,13 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <?php if ($link) { ?>
                         <div class="md:text-center">
-                            <a href="<?php echo esc_url($link['url']); ?>" class="font-main bg-headings uppercase text-white font-bold text-xl py-2 px-12 rounded-full lg:px-8 lg:text-base xs:text-2xl"><?php echo esc_html($link['title']); ?></a>
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $link['url'],
+                                'text' => __($link['title'], 'law'),
+                                'text_hover' => false,
+                                'classes' => 'btn_xs btn_headings hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                 </div>
@@ -51,6 +57,6 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
     </div>
-</div>
+    </div>
 <?php }
 if (!get_fields()) echo 'Fill block with content';

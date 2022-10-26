@@ -19,9 +19,11 @@ if ($is_preview && !empty($previewImage)) {
         <div class="pt-20 pb-24 xs:pb-16">
             <div class="container md:p-0">
                 <?php if ($process_design_one__title) { ?>
-                    <h2 class="text-headings font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl xs:text-2xl"><?php echo $process_design_one__title ?></h2>
+                    <div class="mb-16 md:mb-8">
+                        <h2 class="heading_h2 pb-4"><?php echo $process_design_one__title ?></h2>
+                        <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+                    </div>
                 <?php } ?>
-                <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
                 <div class="flex md:flex-col">
                     <?php if ($process_design_one__image) { ?>
                         <div class="w-12/24 md:hidden">
@@ -44,8 +46,14 @@ if ($is_preview && !empty($previewImage)) {
                                         <div class="text-4xl font-main xl:text-3xl lg:text-2xl xs:text-xl">
                                             <div class="text-headings process_text_design__one"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?></div>
                                             <?php if ($process_design_one__sercive_repeater_item['process_design_one__service_link'] && $process_design_one__sercive_repeater_item['process_design_one__service_link']['url']) { ?>
-                                                <div class="">
-                                                    <a href="<?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'] ?>" class="font-main bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-lg xs:py-1"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['title'] ?></a>
+                                                <div class="mt-3">
+                                                    <?php
+                                                    Template::load('_template-parts/components/button.php', [
+                                                        'link' => $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'],
+                                                        'text' => __($process_design_one__sercive_repeater_item['process_design_one__service_link']['title'], 'law'),
+                                                        'text_hover' =>  false,
+                                                        'classes' => 'btn_sm hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                                    ]); ?>
                                                 </div>
                                             <?php } ?>
                                         </div>
@@ -59,8 +67,14 @@ if ($is_preview && !empty($previewImage)) {
                                             <div class="text-headings process_text_design__one"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?></div>
                                         </div>
                                         <?php if ($process_design_one__sercive_repeater_item['process_design_one__service_link'] && $process_design_one__sercive_repeater_item['process_design_one__service_link']['url']) { ?>
-                                            <div class="">
-                                                <a href="<?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'] ?>" class="font-main bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-lg xs:py-1"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_link']['title'] ?></a>
+                                            <div class="mt-3">
+                                                <?php
+                                                Template::load('_template-parts/components/button.php', [
+                                                    'link' => $process_design_one__sercive_repeater_item['process_design_one__service_link']['url'],
+                                                    'text' => __($process_design_one__sercive_repeater_item['process_design_one__service_link']['title'], 'law'),
+                                                    'text_hover' =>  false,
+                                                    'classes' => 'btn_sm hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                                ]); ?>
                                             </div>
                                         <?php } ?>
                                     </div>
@@ -71,7 +85,15 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <?php if ($process_design_one__button) { ?>
                     <div class="text-center mt-16 xs:mt-12">
-                        <a href="<?php echo $process_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $process_design_one__button['title'] ?></a>
+                        <div class="mt-3">
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $process_design_one__button['url'],
+                                'text' => __($process_design_one__button['title'], 'law'),
+                                'text_hover' =>  false,
+                                'classes' => 'btn_xl center hover_headings max-w-[400px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
+                        </div>
                     </div>
                 <?php } ?>
             </div>

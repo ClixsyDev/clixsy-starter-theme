@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="pb-16">
         <div class="container">
             <?php if ($services_design_one__title) { ?>
-                <h2 class="text-headings font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl xs:text-2xl"><?php echo $services_design_one__title ?></h2>
+                <h2 class="heading_h2 pb-4"><?php echo $services_design_one__title ?></h2>
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <?php if ($services_design_one__services) { ?>
@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php foreach ($services_design_one__services as $services_item) { ?>
                         <div class="bg-headings text-center px-5 w-6/24 pb-6 xl:w-18/24 mdt:m-auto mdt:w-16/24 xs:w-21/24">
                             <?php if ($services_item['icon']) { ?>
-                                <div class="bg-white shadow-inner h-48 w-48 m-auto -mt-32 border-reviewText rounded-full p-9 mdt:w-40 mdt:h-40 mdt:-mt-24 xs:w-36 xs:h-36 xs:p-10">
+                                <div class="bg-white shadow-[inset_0_-1px_6px_rgba(0,0,0,0.26)] h-48 w-48 m-auto -mt-32 border-reviewText rounded-full p-9 mdt:w-40 mdt:h-40 mdt:-mt-24 xs:w-36 xs:h-36 xs:p-10">
                                     <?php echo wp_get_attachment_image($services_item['icon'], 'full', '', ['class' => 'm-auto']) ?>
                                 </div>
                             <?php } ?>
@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
                                 </h3>
                             <?php } ?>
                             <?php if ($services_item['description']) { ?>
-                                <div class="text-white prose"><?php echo $services_item['description'] ?></div>
+                                <div class="text-white prose leading-tight"><?php echo $services_item['description'] ?></div>
                             <?php } ?>
                         </div>
                     <?php } ?>
@@ -42,7 +42,13 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <?php if ($services_design_one__link) { ?>
                 <div class="text-center mt-16">
-                    <a href="<?php echo $services_design_one__link['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $services_design_one__link['title'] ?></a>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $services_design_one__link['url'],
+                        'text' => __($services_design_one__link['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => 'btn_xl hover_headings center max-w-[460px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
                 </div>
             <?php } ?>
         </div>

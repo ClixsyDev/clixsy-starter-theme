@@ -5,7 +5,7 @@
             <?php echo $args['text'] ?>
         </span>
         <span class="btn_text_2 opacity-0 group-hover:opacity-100 transform transition-opacity duration-300">
-        <?php echo $args['text'] ?> ⟶
+        <?php echo $args['text'] ?> <span class="btn_arrow">⟶</span>
         </span>
     </a>
 <?php } else { ?>
@@ -14,7 +14,7 @@
             <?php echo $args['text'] ?>
         </span>
         <span class="btn_text_2 opacity-0 group-hover:opacity-100 transform transition-opacity duration-300">
-            <?php echo $args['text_hover'] ?>
+            <?php echo $args['text_hover'] ?> <span class="btn_arrow">⟶</span>
         </span>
     </a>
 <?php } ?>

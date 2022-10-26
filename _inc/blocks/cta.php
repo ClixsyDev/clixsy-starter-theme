@@ -66,6 +66,13 @@ if (function_exists('acf_add_local_field_group')) {
                 'name' => $key . '_button',
                 'type' => 'link',
             ),
+            array(
+            'key' => $key .'_button_hover',
+            'name' => $key .'_button_hover',
+            'type' => 'text',
+            'label' => 'Button text on hover',
+            'instructions' => '',
+            ),
         )
     ));
 }

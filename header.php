@@ -33,7 +33,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- testing mega menu -->
 
-    <header class="sticky top-0 w-full z-50 h-40 py-6 lg:h-[80px] lg:max-h-[80px] lg:p-1">
+    <header class="sticky top-0 w-full z-50 h-40 lg:h-[80px] lg:max-h-[80px] lg:p-1">
         <img src="<?= wp_get_attachment_image_url(get_field('site_header_bg', 'option'), 'full') ?>" class="z-10 absolute left-0 top-0 w-full h-full object-cover" alt="">
         <div class="z-10 absolute left-0 top-0 w-full h-full object-cover"></div>
         <div class="relative z-20 container flex justify-between items-center h-full">
@@ -41,16 +41,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => '']) ?>
             </a>
             <?php main_menu(); ?>
-            <div class="menu-row-wrapper lg:hidden">
+            <div class="menu-row-wrapper lg:hidden h-full flex">
 
-                <div class="call_header mb-6 hidden justify-center items-center flex-row text-white font-main gap-5 xl:flex">
+                <div class="call_header mb-6 hidden justify-center items-center flex-row text-white font-main gap-5 lg:flex">
                     <div class="font-main text-lg leading-none">
                         <?= get_field('phone_available', 'option') ?>
                     </div>
                     <div class="font-main font-bold text-2xl leading-none">
                         <?= get_field('phone_with_letters', 'option') ?>
                     </div>
-                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
+                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
                     </a>
                 </div>
@@ -63,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     'container_class'      => '',
                     'container_id'         => '',
                     'container_aria_label' => '',
-                    'menu_class'           => 'main-menu',
+                    'menu_class'           => 'main-menu font-main',
                     'menu_id'              => '',
                     'echo'                 => true,
                     'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="font-main font-bold text-2xl leading-none">
                     <?= get_field('phone_with_letters', 'option') ?>
                 </div>
-                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
+                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings hover:shadow-siteWide" href="tel:<?= get_field('phone', 'option') ?>">
                     Call Now
                 </a>
             </div>

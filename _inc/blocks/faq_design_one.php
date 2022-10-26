@@ -76,6 +76,29 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
                 array(
+                    'key' => $block_key . 'faq_repeater_key_hidden',
+                    'name' => $block_key . 'faq_repeater_name_hidden',
+                    'label' => 'FAQ hidden items',
+                    'type' => 'repeater',
+                    'layout' => 'table',
+                    'sub_fields' => array(
+                        array(
+                            'key' => $block_key . 'question_hidden',
+                            'name' => 'question_hidden',
+                            'type' => 'text',
+                            'label' => 'Question',
+                            'instructions' => '',
+                        ),
+                        array(
+                            'key' => $block_key . 'answer_hidden',
+                            'name' => 'answer_hidden',
+                            'type' => 'wysiwyg',
+                            'label' => 'Answer',
+                            'instructions' => '',
+                        ),
+                    ),
+                ),
+                array(
                     'key' => $block_key . 'title',
                     'name' => $block_key . 'title',
                     'type' => 'text',

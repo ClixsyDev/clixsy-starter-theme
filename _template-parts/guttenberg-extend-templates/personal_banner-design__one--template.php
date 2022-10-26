@@ -15,6 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     $personal_banner_design_one__phone = get_field('personal_banner_design_one__phone');
     $personal_banner_design_one__mail = get_field('personal_banner_design_one__mail');
     $personal_banner_design_one__link = get_field('personal_banner_design_one__link');
+    $personal_banner_design_one__hover_text = get_field('personal_banner_design_one__hover_text');
     $personal_banner_design_one__social_icons = get_field('personal_banner_design_one__social_icons');
     $personal_banner_design_one__logo = get_field('personal_banner_design_one__logo');
     $personal_banner_design_one__bg = get_field('personal_banner_design_one__bg');
@@ -25,7 +26,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex items-center relative mdt:justify-center">
                 <?php if ($personal_banner_design_one__persone) { ?>
                     <div class="z-[1] xxl:w-14/24 xl:w-12/24 mdt:w-17/24 md:w-21/24 sm:w-full">
-                        
+
                         <?php echo wp_get_attachment_image($personal_banner_design_one__persone, 'full') ?>
                     </div>
                 <?php } ?>
@@ -46,8 +47,14 @@ if ($is_preview && !empty($previewImage)) {
                         <a href="mailto:<?php echo $personal_banner_design_one__mail ?>" class="block font-main text-headings_second text-3xl font-bold -mt-5 text-end xxl:text-2xl mdt:text-center xs:text-xl"><?php echo $personal_banner_design_one__mail ?></a>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__link) { ?>
-                        <div class="text-end mt-5 xl:z-[1] mdt:text-center">
-                            <a href="<?php echo $personal_banner_design_one__link['url'] ?>" class="font-main  bg-headings uppercase text-white font-bold text-4xl py-2 px-10 rounded-full lg:px-8 lg:text-base xs:text-base mdt:text-xl mdt:py-3"><?php echo $personal_banner_design_one__link['title'] ?></a>
+                        <div class="flex items-end justify-end mt-5 xl:z-[1] mdt:justify-center">
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $personal_banner_design_one__link['url'],
+                                'text' => __($personal_banner_design_one__link['title'], 'law'),
+                                'text_hover' =>  $personal_banner_design_one__hover_text ?: false,
+                                'classes' => 'btn_md btn_headings hover_white_text_accent', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                     <?php if ($personal_banner_design_one__social_icons) { ?>

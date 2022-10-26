@@ -12,6 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__page_title = get_field('welcome_banner__page_title');
     $welcome_banner__page_description = get_field('welcome_banner__page_description');
     $welcome_banner__page_link = get_field('welcome_banner__page_link');
+    $welcome_banner__page_hover = get_field('welcome_banner__page_hover');
     $welcome_banner__page_bg = get_field('welcome_banner__page_bg');
     $welcome_banner__page_icon = get_field('welcome_banner__page_icon');
 
@@ -32,7 +33,13 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <?php if ($welcome_banner__page_link) { ?>
                         <div class="mt-2.5 lg:mt-4">
-                            <a href="<?php echo $welcome_banner__page_link['url'] ?>" class="font-main uppercase bg-headings text-white font-bold text-3xl py-2 px-9 rounded-full 2xl:text-2xl lg:px-10 lg:py-4 lg:text-xl mdt:text-lg mdt:px-14 xs:px-8 xs:text-lg"><?php echo $welcome_banner__page_link['title'] ?></a>
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $welcome_banner__page_link['url'],
+                                'text' => __($welcome_banner__page_link['title'], 'law'),
+                                'text_hover' => $welcome_banner__page_hover ?: false,
+                                'classes' => 'btn_xl btn_headings hover_white_text_accent max-w-[470px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                 </div>

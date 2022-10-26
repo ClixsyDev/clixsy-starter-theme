@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
     <?php if ($win_case_design_one__title || $win_case_design_one__description || $win_case_design_one__persone || $win_case_design_one__area || $win_case_design_one__area_title || $win_case_design_one__cta || $win_case_design_one__cta_link || $win_case_design_one__button || $win_case_design_one__form || $win_case_design_one__form_description) { ?>
         <div class="relative py-20 mdt:hidden bg-cover" style="background-image: url('<?php echo wp_get_attachment_image_url($win_case_design_one__background, 'full') ?>');">
             <?php if ($win_case_design_one__title) { ?>
-                <h2 class="text-headings font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl"><?php echo $win_case_design_one__title ?></h2>
+                <h2 class="heading_h2 heading_second pb-4"><?php echo $win_case_design_one__title ?></h2>
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="container flex pt-5">
@@ -36,7 +36,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <div class=" bg-headings w-full h-80 z-30 flex px-5">
                         <?php if ($win_case_design_one__persone) { ?>
-                            <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => '-ml-20 -mt-24 h-auto object-cover']) ?>
+                            <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => '-ml-20 -mt-24 h-auto object-contain']) ?>
                         <?php } ?>
                         <div class="flex flex-col -ml-12 xl:justify-center">
                             <div class="flex gap-5 2xl:items-center">
@@ -59,12 +59,18 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <?php if ($win_case_design_one__button) { ?>
                         <div class="text-center mt-12">
-                            <a href="<?php echo $win_case_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl"><?php echo $win_case_design_one__button['title'] ?></a>
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $win_case_design_one__button['url'],
+                                'text' => __($win_case_design_one__button['title'], 'law'),
+                                'text_hover' => false,
+                                'classes' => 'btn_xl hover_headings center max-w-[480px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                 </div>
                 <?php if ($win_case_design_one__form) { ?>
-                    <div class="w-[35%] bg-headings p-11 lg:w-[45%] xl:p-7">
+                    <div class="w-[35%] bg-headings p-11 lg:w-[45%] xl:p-7 form_elements_design_one">
                         <?php if ($win_case_design_one__form_description) { ?>
                             <div class=" text-white text-xl leading-tight mb-8"><?php echo $win_case_design_one__form_description ?></div>
                         <?php } ?>

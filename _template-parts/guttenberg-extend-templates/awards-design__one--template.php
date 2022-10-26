@@ -39,7 +39,13 @@ if ($is_preview && !empty($previewImage)) {
 
             <?php if ($awards_design_one__link) { ?>
                 <div class="text-center mt-12">
-                    <a href="<?php echo $awards_design_one__link['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-2xl"><?php echo $awards_design_one__link['title'] ?></a>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $awards_design_one__link['url'],
+                        'text' => __($awards_design_one__link['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => 'btn_xl hover_headings uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
                 </div>
             <?php } ?>
         </div>

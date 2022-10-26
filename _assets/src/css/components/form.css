@@ -1,5 +1,14 @@
 .form_elements_design_one {
+  &.small-textarea {
+    textarea {
+      @apply h-24;
+    }
+  }
   form {
+    br,
+    p:empty {
+      @apply hidden;
+    }
     input:not([type='submit']),
     textarea {
       @apply w-full bg-white text-base text-[#707070] text-left px-4 py-2;
@@ -12,7 +21,7 @@
       @apply h-36;
     }
     p.disclaimer {
-      @apply text-base leading-tight text-left text-white mt-6 mb-4;
+      @apply text-base lg:text-sm leading-tight text-left text-white mt-6 mb-4;
     }
     input[type='submit'] {
       @apply font-bold text-xl leading-8 text-center text-white px-9 py-2 rounded-3xl bg-accent mx-auto my-0 block w-fit;
@@ -20,9 +29,22 @@
     input:not([type='submit']) {
       @apply h-11 flex items-center;
     }
+    label {
+      span {
+        @apply block mb-1 text-white;
+      }
+    }
+    .wpcf7-not-valid-tip {
+      @apply border-b-2 border-red-600 w-max;
+    }
+  }
+  .sent {
+    .wpcf7-response-output {
+       @apply block text-white text-center text-2xl py-4 px-4;
+    }
   }
 }
-.contact-page__form {
+/* .contact-page__form {
   [type='text'],
   [type='email'],
   [type='tel'] {
@@ -56,7 +78,7 @@
   .policy-text {
     @apply text-sm;
   }
-}
+} */
 
 .subscribe_form--style-1 {
   @apply flex gap-x-4 items-end justify-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
@@ -64,12 +86,12 @@
     @apply focus:text-black font-medium w-80 h-12 py-4 pl-5 border-headings border-2 focus:outline-none focus:border-accent active:border-accent;
   }
   button {
-    @apply  mx-auto bg-accent w-64 rounded-full h-12 text-xl flex items-center justify-center hover:bg-accent hover:text-white font-main font-bold transition duration-300;
+    @apply mx-auto bg-accent w-64 rounded-full h-12 text-xl flex items-center justify-center hover:bg-accent hover:text-white font-main font-bold transition duration-300;
   }
   label {
     @apply flex gap-y-1 flex-col;
     span {
-        @apply text-accent  font-bold text-xl ;
+      @apply text-accent  font-bold text-xl;
     }
   }
   br,

@@ -11,3 +11,33 @@
     }
   }
 }
+
+.heading_h1 {
+}
+
+.heading_h2 {
+  @apply text-5xl font-bold font-main text-headings text-center leading-[60px] lg:text-4xl lg:leading-[42px] md:text-3xl md:leading-[36px] sm:text-2xl sm:leading-[30px];
+
+  &.heading_second {
+    @apply text-headings_second;
+  }
+
+  
+
+  span {
+    @apply text-accent;
+  }
+
+  &.white {
+    @apply text-white;
+  }
+
+  &.span_headings {
+    span {
+      @apply text-headings;
+    }
+  }
+}
+
+.block_title {
+}

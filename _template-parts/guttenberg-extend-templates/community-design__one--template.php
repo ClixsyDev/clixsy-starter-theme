@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="py-16 bg-cover" style="background-image: url('<?php echo $community_design_one__bg ? wp_get_attachment_image_url($community_design_one__bg, 'full') : '' ?>')">
             <div class="container">
                 <?php if ($community_design_one__title) { ?>
-                    <h2 class="text-headings font-medium text-5xl text-center leading-tight pb-4 lg:text-4xl md:text-3xl"><?php echo $community_design_one__title ?></h2>
+                    <h2 class="heading_h2 heading_second pb-4"><?php echo $community_design_one__title ?></h2>
                 <?php } ?>
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
                 <?php if ($community_design_one__description) { ?>
@@ -36,7 +36,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($community_design_one__organizations[0]) { ?>
                         <div class="flex justify-center mt-12 gap-9 xl:gap-7 mdt:hidden">
                             <?php foreach ($community_design_one__organizations as $organization_v1_item) { ?>
-                                <div class="bg-white w-[27%] pt-10 px-10 pb-7 shadow-lg xl:w-8/24 lg:px-6 lg:pt-7">
+                                <div class="bg-white w-[28%] pt-10 px-10 pb-7 shadow-lg xl:w-8/24 lg:px-6 lg:pt-7">
                                     <?php if ($organization_v1_item['community_v1_img']) { ?>
                                         <?php echo wp_get_attachment_image($organization_v1_item['community_v1_img'], 'full', '', ['class' => 'm-auto h-44 object-cover']) ?>
                                     <?php } ?>
@@ -53,7 +53,13 @@ if ($is_preview && !empty($previewImage)) {
 
                                     <?php if ($organization_v1_item['community_v1_button'] && $organization_v1_item['community_v1_button']['url']) { ?>
                                         <div class="text-center mt-8">
-                                            <a href="<?php echo $organization_v1_item['community_v1_button']['url'] ?>" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item['community_v1_button']['title'] ?></a>
+                                            <?php
+                                            Template::load('_template-parts/components/button.php', [
+                                                'link' => $organization_v1_item['community_v1_button']['url'],
+                                                'text' => __($organization_v1_item['community_v1_button']['title'], 'law'),
+                                                'text_hover' => false,
+                                                'classes' => 'btn_xs btn_headings center hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                            ]); ?>
                                         </div>
                                     <?php } ?>
                                 </div>
@@ -81,7 +87,13 @@ if ($is_preview && !empty($previewImage)) {
                                                 <?php } ?>
                                                 <?php if ($organization_v1_item_mobile['community_v1_button'] && $organization_v1_item_mobile['community_v1_button']['url']) { ?>
                                                     <div class="text-center mt-8">
-                                                        <a href="<?php echo $organization_v1_item_mobile['community_v1_button']['url'] ?>" class="font-main bg-headings text-white font-bold text-lg py-2 px-5 rounded-full lg:px-8 lg:py-2 lg:text-lg xs:text-2xl"><?php echo $organization_v1_item_mobile['community_v1_button']['title'] ?></a>
+                                                        <?php
+                                                        Template::load('_template-parts/components/button.php', [
+                                                            'link' => $organization_v1_item_mobile['url'],
+                                                            'text' => __($organization_v1_item_mobile['title'], 'law'),
+                                                            'text_hover' => false,
+                                                            'classes' => 'btn_xs btn_headings center hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                                        ]); ?>
                                                     </div>
                                                 <?php } ?>
                                             </div>
@@ -111,7 +123,13 @@ if ($is_preview && !empty($previewImage)) {
 
                     <?php if ($community_design_one__button && $community_design_one__button['url']) { ?>
                         <div class="text-center mt-16 mdt:mt-6 xs:mt-10">
-                            <a href="<?php echo $community_design_one__button['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-2xl py-2 px-12 rounded-full lg:px-8 lg:py-3 lg:text-lg xs:text-xl"><?php echo $community_design_one__button['title'] ?></a>
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $community_design_one__button['url'],
+                                'text' => __($community_design_one__button['title'], 'law'),
+                                'text_hover' =>  false,
+                                'classes' => 'btn_xl hover_headings center max-w-[460px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                 </div>

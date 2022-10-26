@@ -17,13 +17,13 @@ if ($is_preview && !empty($previewImage)) {
             <?php if ($verdicts_design_one__bg) {
                 echo wp_get_attachment_image($verdicts_design_one__bg, 'full', '', ['class' => 'absolute left-0 top-0 w-full h-full object-cover']);
             } ?>
-            <div class="verdicts_slider glide relative pt-12 pb-14 2xl:pt-6 2xl:pb-7">
+            <div class="verdicts_slider glide relative">
                 <div class="glide__track" data-glide-el="track">
-                    <div class="glide__slides overflow-visible flex justify-around gap-3 items-center">
+                    <div class="glide__slides overflow-visible flex justify-around gap-3 items-center  pt-12 pb-14 2xl:pt-6 2xl:pb-7">
                         <?php
                         foreach ($verdicts_design_one__verdicts as $verdic_item) {
                         ?>
-                            <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1">
+                            <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1 shadow-reviews">
                                 <div class="text-accent text-5xl leading-none 2xl:text-3xl">
                                     <?php echo $verdic_item['price'] ?>
                                 </div>

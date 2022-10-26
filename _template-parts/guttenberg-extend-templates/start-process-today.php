@@ -24,9 +24,9 @@ if ($is_preview && !empty($previewImage)) {
     <div class="relative py-16 xs:py-4">
         <div class="container p-0 overflow-hidden">
             <?php if ($title) { ?>
-                <h2 class="font-main font-bold text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= $title ?></h2>
+                <h2 class="heading_h2 pb-4"><?= $title ?></h2>
+                <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
-            <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="flex flex-col gap-12 mt-11">
                 <div class="step-block overflow-hidden top relative flex justify-center items-center gap-44 pt-16 pb-24 md:gap-28 md:pt-4 md:pb-16 xs:gap-10">
                     <span class="absolute skew-y-2 bg-process_smoke w-full h-[120%] -top-[30%] z-[-1]"></span>
@@ -39,7 +39,13 @@ if ($is_preview && !empty($previewImage)) {
                         <?php if ($step_1_phone) { ?>
                             <p class="font-main text-kennyGrayText font-bold text-3xl pb-5 lg:text-2xl md:text-xl xs:text-2xl"><?= $step_1_phone ?></p>
                         <?php } ?>
-                        <a href="tel:<?= $step_1_link['url'] ?>" class="font-main bg-accent text-white font-bold text-base py-2 px-7 rounded-full lg:uppercase xs:text-xl"><?= $step_1_link['title'] ?></a>
+                        <?php
+                        Template::load('_template-parts/components/button.php', [
+                            'link' => $step_1_link['url'],
+                            'text' => __($step_1_link['title'], 'law'),
+                            'text_hover' => false,
+                            'classes' => 'btn_sm hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        ]); ?>
                     </div>
                     <div class="triangle absolute bottom-[6%] m-auto lg:top-[95%] md:top-[92%]"></div>
                 </div>
@@ -66,12 +72,18 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
         <?php if ($start_btn) { ?>
-            <div class="text-center my-16 xs:my-10">
-                <a href="<?= $start_btn['url'] ?>" class="uppercase font-main bg-accent text-white font-bold text-2xl py-2 px-16 rounded-full md:text-base md:px-10 xs:text-2xl"><?= $start_btn['title'] ?></a>
+            <div class="mt-12">
+                <?php
+                Template::load('_template-parts/components/button.php', [
+                    'link' => $start_btn['url'],
+                    'text' => __($start_btn['title'], 'law'),
+                    'text_hover' => false,
+                    'classes' => 'btn_xl hover_headings uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                ]); ?>
             </div>
         <?php } ?>
     </div>
     </div>
-</div>
+    </div>
 <?php }
 if (!get_fields()) echo 'Fill block with content';

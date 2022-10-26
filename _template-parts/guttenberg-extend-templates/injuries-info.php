@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
         <?php } ?>
         <div class="container relative">
             <?php if ($title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $title ?></h2>
+                <h2 class="heading_h2 pb-4"><?php echo $title ?></h2>
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php if ($subtitle) { ?>

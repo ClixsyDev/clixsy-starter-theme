@@ -23,7 +23,7 @@
 }
 
 .footer-menu {
-    @apply w-52;
+    @apply w-[16rem];
     a {
         @apply text-2xl block mb-3 leading-snug
     }

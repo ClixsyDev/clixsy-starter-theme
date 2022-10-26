@@ -1,14 +1,61 @@
 .btn {
   min-width: 290px;
-  @apply bg-accent px-8 py-4 md:px-6 md:py-3 uppercase  h-14 text-white flex justify-center items-center transition-all duration-500 rounded-full text-center font-bold w-max;
+  @apply bg-accent font-main  px-8 py-4 md:px-6 md:py-3 uppercase  h-14 text-white flex justify-center items-center transition-all duration-100 rounded-full text-center font-bold w-max active:translate-y-[4px] active:shadow-lg;
 
   @media (max-width: 540px) {
     min-width: 240px;
   }
 
+  /* button sizes */
+  &.btn_xl {
+    @apply text-4xl font-bold h-20 w-[580px] lg:w-[334px] lg:text-xl lg:h-[70px] md:w-[300px] md:h-[60px] md:text-[18px] sm:w-[246px] sm:text-[17px];
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.3rem] md:-translate-y-[0.2rem];
+    }
+  }
+
+  &.btn_md {
+    @apply text-[20px] h-[70px];
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.2rem] ;
+    }
+  }
+
+  &.btn_sm {
+    @apply text-[25px] h-[56px] tracking-wide min-w-[200px];
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.2rem];
+    }
+  }
+
+  &.btn_xs {
+    @apply text-[25px] h-[50px] tracking-wide min-w-[200px];
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.2rem];
+    }
+  }
+
+  &.btn_form {
+    @apply w-full h-20 bg-accent hover:bg-white hover:text-headings text-2xl text-white lg:h-[70px] md:w-[300px] md:h-[60px] md:text-[18px] sm:w-[246px] sm:text-[17px] m-auto mt-5;
+    span {
+      @apply text-white hover:text-headings;
+    }
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.2rem];
+    }
+    &:hover {
+      span {
+        @apply text-headings;
+      }
+    }
+  }
+
   /* button styles */
   &.btn_headings {
-    @apply bg-headings;
+    @apply bg-headings text-white;
+    .btn_text_1 {
+      @apply text-white;
+    }
     .btn_text_2 {
       @apply text-white;
     }
@@ -19,11 +66,40 @@
     @apply hover:bg-white  text-headings;
   }
 
+  &.hover_white_text_accent {
+    @apply hover:bg-white;
+    &:hover {
+      .btn_text_1 {
+        @apply text-accent;
+      }
+      .btn_text_2 {
+        @apply text-accent;
+      }
+    }
+  }
+
   &.hover_accent {
     @apply hover:bg-accent;
   }
 
   &.hover_headings {
     @apply hover:bg-headings;
+  }
+
+  &.hover_outline_white {
+    @apply hover:bg-transparent hover:border-2 hover:border-white hover:text-white;
+  }
+
+  &.hover_outline_accent {
+    @apply hover:bg-transparent hover:border-2 hover:border-accent hover:text-accent;
+  }
+
+  &.white {
+    @apply bg-white text-headings;
+  }
+
+  /* align */
+  &.center {
+    @apply mx-auto;
   }
 }

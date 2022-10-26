@@ -1,7 +1,8 @@
 // Main Menu
-import { getElement, off } from './utils';
+import { getElement, getElements, ifSelectorExist, off } from './utils';
 
-export default function mainMenu() {
+// mobile menu
+export const mainMenu = () => {
   const menuButton = getElement('#main-menu-button');
   const menu = getElement('nav.main-menu');
   function menuOpen() {
@@ -84,12 +85,12 @@ export default function mainMenu() {
     Array.from(subMenus).forEach((link) => {
       link.addEventListener('click', function (event) {
         let parentTitle = link.getAttribute('data-item-title');
-        let parentUrl = link.getAttribute('data-url')
+        let parentUrl = link.getAttribute('data-url');
         if (parentTitle != null && parentTitle != undefined && parentUrl != undefined && parentUrl != null) {
           let parentAlias = link.getAttribute('data-target-alias');
           let levelTitle = document.querySelector(`[data-alias=${parentAlias}] .level-url`);
           levelTitle.textContent = parentTitle;
-          levelTitle.setAttribute('href', parentUrl)
+          levelTitle.setAttribute('href', parentUrl);
         }
         event.preventDefault();
         event.stopPropagation();
@@ -132,4 +133,21 @@ export default function mainMenu() {
       });
     });
   }
-}
+};
+
+// desktop dropdown
+export const dropdownMenu = () => {
+  let headerSelector = getElement('header');
+  if (ifSelectorExist(headerSelector)) {
+    let itemsHasChildren = getElements('.menu-item-has-children');
+    if (ifSelectorExist(itemsHasChildren)) {
+      Array.from(itemsHasChildren).forEach((item) => {
+        console.log(headerSelector.clientHeight);
+        let subMenuSelector = getElement('.sub-menu', item);
+        if (ifSelectorExist(subMenuSelector)) {
+          subMenuSelector.style.top = headerSelector.clientHeight + 'px';
+        }
+      });
+    }
+  }
+};

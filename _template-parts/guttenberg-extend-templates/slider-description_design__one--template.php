@@ -17,9 +17,11 @@ if ($is_preview && !empty($previewImage)) {
     <section class="pt-10 pb-20 lg:pb-10">
         <div class="container">
             <?php if ($slider_description_design_one__title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $slider_description_design_one__title ?></h2>
+                <div class="mb-16 md:mb-8">
+                    <h2 class="heading_h2 pb-4"><?php echo $slider_description_design_one__title ?></h2>
+                    <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+                </div>
             <?php } ?>
-            </hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="lifeSlider glide relative md:pt-10">
                 <div class="glide__track" data-glide-el="track">
                     <div class="glide__slides overflow-visible">
