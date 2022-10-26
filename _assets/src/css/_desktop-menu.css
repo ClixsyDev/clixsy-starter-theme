@@ -49,7 +49,7 @@
       }
     }
     &.current_page_item {
-      a:after {
+      > a:after {
         display: block;
       }
     }
@@ -59,7 +59,7 @@
 header {
   &.sticked {
     .sub-menu.lvl-1 {
-      top: 122% !important;
+      top: 100% !important;
     }
   }
 }
