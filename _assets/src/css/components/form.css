@@ -40,7 +40,7 @@
   }
   .sent {
     .wpcf7-response-output {
-       @apply block;
+       @apply block text-white text-center text-2xl py-4 px-4;
     }
   }
 }
