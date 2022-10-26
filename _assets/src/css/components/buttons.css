@@ -30,6 +30,9 @@
 
   &.btn_xs {
     @apply text-[25px] h-[50px] tracking-wide min-w-[200px];
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.1rem];
+    }
   }
 
   &.btn_form {
