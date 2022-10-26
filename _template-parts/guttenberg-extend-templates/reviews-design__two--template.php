@@ -52,12 +52,12 @@ if ($is_preview && !empty($previewImage)) {
                                             <div class="flex gap-0.5 items-center xs:items-center">
                                                 <?php
                                                 for ($i = 1; $i <= $reviews_design_two_stars; $i++) { ?>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 md:w-5" viewBox="0 0 30 27.857">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 md:w-5" width="30" height="27.857" viewBox="0 0 30 27.857">
                                                         <path id="Icon_ionic-ios-star" data-name="Icon ionic-ios-star" d="M31.112,13.018h-9.85L18.268,4.085a1.085,1.085,0,0,0-2.036,0l-2.993,8.933H3.321A1.075,1.075,0,0,0,2.25,14.089a.787.787,0,0,0,.02.181,1.029,1.029,0,0,0,.449.757l8.1,5.705L7.708,29.766a1.075,1.075,0,0,0,.368,1.205,1.036,1.036,0,0,0,.6.261,1.313,1.313,0,0,0,.67-.241l7.9-5.632,7.9,5.632a1.255,1.255,0,0,0,.67.241.962.962,0,0,0,.6-.261,1.061,1.061,0,0,0,.368-1.205l-3.107-9.033,8.029-5.759.194-.167a1.123,1.123,0,0,0,.348-.717A1.134,1.134,0,0,0,31.112,13.018Z" transform="translate(-2.25 -3.375)" fill="#fabf13" />
                                                     </svg>
                                                 <?php } ?>
                                             </div>
-                                            <p class=" font-second text-base text-black md:text-xl">- <?php echo get_the_title($review_item) ?></p>
+                                            <p class=" font-second text-base text-black">- <?php echo get_the_title($review_item) ?></p>
                                         </div>
                                     <?php } ?>
                                 </div>

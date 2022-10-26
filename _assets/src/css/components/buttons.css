@@ -10,14 +10,14 @@
   &.btn_xl {
     @apply text-4xl font-bold h-20 w-[580px] lg:w-[334px] lg:text-xl lg:h-[70px] md:w-[300px] md:h-[60px] md:text-[18px] sm:w-[246px] sm:text-[17px];
     .btn_arrow {
-      @apply transform inline-block -translate-y-[0.3rem];
+      @apply transform inline-block -translate-y-[0.3rem] md:-translate-y-[0.2rem];
     }
   }
 
   &.btn_md {
     @apply text-[20px] h-[70px];
     .btn_arrow {
-      @apply transform inline-block -translate-y-[0.2rem];
+      @apply transform inline-block -translate-y-[0.2rem] ;
     }
   }
 

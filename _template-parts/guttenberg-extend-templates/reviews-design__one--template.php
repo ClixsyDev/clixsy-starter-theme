@@ -41,7 +41,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <div class="font-main text-lg leading-tight mb-6 text-kennyGrayText">
                                         <?php echo apply_filters('the_content', get_post($review_design_v1_item)->post_content); ?>
                                     </div>
-                                    <p class="font-main font-bold text-headings"><?php echo get_the_title($review_design_v1_item) ?></p>
+                                    <p class="font-main font-bold text-headings">-<?php echo get_the_title($review_design_v1_item) ?></p>
                                     <div class="flex items-center">
                                         <?php if ($revies_design_one_logo) {
                                             echo wp_get_attachment_image($revies_design_one_logo, 'full', '', ['class' => 'absolute left-5 bottom-2 w-24']);
