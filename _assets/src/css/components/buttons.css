@@ -24,14 +24,14 @@
   &.btn_sm {
     @apply text-[25px] h-[56px] tracking-wide min-w-[200px];
     .btn_arrow {
-      @apply transform inline-block -translate-y-[0.1rem];
+      @apply transform inline-block -translate-y-[0.2rem];
     }
   }
 
   &.btn_xs {
     @apply text-[25px] h-[50px] tracking-wide min-w-[200px];
     .btn_arrow {
-      @apply transform inline-block -translate-y-[0.1rem];
+      @apply transform inline-block -translate-y-[0.2rem];
     }
   }
 

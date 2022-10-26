@@ -38,6 +38,11 @@
       @apply border-b-2 border-red-600 w-max;
     }
   }
+  .sent {
+    .wpcf7-response-output {
+       @apply block;
+    }
+  }
 }
 /* .contact-page__form {
   [type='text'],
