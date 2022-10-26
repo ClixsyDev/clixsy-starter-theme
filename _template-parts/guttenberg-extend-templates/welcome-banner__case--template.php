@@ -14,17 +14,15 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__case_hover_text = get_field('welcome_banner__case_hover_text');
     $welcome_banner__case_bg = get_field('welcome_banner__case_bg');
     $welcome_banner__case_icon = get_field('welcome_banner__case_icon');
-
+    $welcome_banner__case_overlay = get_field('welcome_banner__case_overlay');
 
 ?>
 
     <?php if ($welcome_banner__case_title || $welcome_banner__case_link || $welcome_banner__case_bg || $welcome_banner__case_icon) { ?>
-        <section class="w-full relative">
-            <?php if ($welcome_banner__case_bg) { ?>
-                <?php echo wp_get_attachment_image($welcome_banner__case_bg, 'full', '', ['class' => 'object-cover h-[730px] w-full md:h-[600px] ']) ?>
-            <?php } ?>
-            <div class="container h-full absolute left-0 right-0 top-0  mx-auto ">
-                <div class=" translate-y-[20%] 2xl:translate-y-[30%] lg:translate-y-[20%] md:translate-y-[35%]">
+        <section class="w-full relative bg-cover h-[730px] md:h-auto md:pt-10 md:pb-10" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__case_bg, 'full') ?>')">
+        <span class="block absolute left-0 top-0 h-full w-full" style="background-color: <?php echo $welcome_banner__case_overlay ?: '' ?>"></span>
+            <div class="container h-full relative left-0 right-0 top-0  mx-auto ">
+                <div class=" translate-y-[20%] 2xl:translate-y-[30%] lg:translate-y-[20%] md:translate-y-[0%]">
                     
                     <?php if ($welcome_banner__case_title) { ?>
                         <div class="pb-12 text-white text-[90px] 2xl:text-[60px] md:text-[40px] text-center font-bold">
@@ -35,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
 
                     <?php if ($welcome_banner__case_icon) { ?>
-                        <div class="pb-16 flex flex-row justify-center">
+                        <div class="pb-16 md:pb-6 flex flex-row justify-center">
                             <div class="flex items-center justify-center">
                                 <?php echo wp_get_attachment_image($welcome_banner__case_icon, 'full', '', ['class' => ' object-contain h-14 md:h-9 w-auto ']) ?>
                             </div>

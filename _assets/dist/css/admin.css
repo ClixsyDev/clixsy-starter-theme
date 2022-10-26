@@ -4579,10 +4579,6 @@ h2 span {
   left: 50%;
 }
 
-.acf-block-preview .-bottom-2 {
-  bottom: -.5rem;
-}
-
 .acf-block-preview .left-\[11\%\] {
   left: 11%;
 }
@@ -7650,6 +7646,10 @@ html :where(.wp-block) {
     height: 2.25rem;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:w-full {
     width: 100%;
   }
@@ -7701,6 +7701,11 @@ html :where(.wp-block) {
 
   .md\:translate-y-\[35\%\] {
     --tw-translate-y: 35%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-y-\[0\%\] {
+    --tw-translate-y: 0%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -7831,6 +7836,10 @@ html :where(.wp-block) {
 
   .md\:pt-12 {
     padding-top: 3rem;
+  }
+
+  .md\:pb-6 {
+    padding-bottom: 1.5rem;
   }
 
   .md\:text-center {

@@ -89,6 +89,12 @@ if (function_exists('acf_add_local_field_group')) {
                 'return_format' => 'id',
                 'preview_size' => 'thumbnail'
             ),
+            array(
+                'key' => $block_key . 'overlay',
+                'name' => $block_key . 'overlay',
+                'type' => 'extended-color-picker',
+                'label' => 'Overlay color',
+            ),
         )
     ));
 }
