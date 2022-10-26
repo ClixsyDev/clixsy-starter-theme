@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                             </span>
                             <?php } ?>
                         </span>
-                        <div class="font-main font-bold text-2xl text-white "><?= $case[$key . '_case_name'] ?></div>
+                        <div class="font-main font-bold text-2xl text-white group-hover:text-accent "><?= $case[$key . '_case_name'] ?></div>
                     </a>
                 <?php
                 } ?>
