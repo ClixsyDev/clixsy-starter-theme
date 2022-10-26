@@ -70,7 +70,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                 </div>
                 <?php if ($win_case_design_one__form) { ?>
-                    <div class="w-[35%] bg-headings p-11 lg:w-[45%] xl:p-7 form_elements_design_one small-textarea">
+                    <div class="w-[35%] bg-headings p-11 lg:w-[45%] xl:p-7 form_elements_design_one">
                         <?php if ($win_case_design_one__form_description) { ?>
                             <div class=" text-white text-xl leading-tight mb-8"><?php echo $win_case_design_one__form_description ?></div>
                         <?php } ?>
