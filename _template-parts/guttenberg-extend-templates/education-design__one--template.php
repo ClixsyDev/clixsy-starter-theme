@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="pt-16 pb-28 sm:pb-16">
         <div class="container">
             <?php if ($education_design_one__title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $education_design_one__title ?></h2>
+                <h2 class="heading_h2 pb-4"><?php echo $education_design_one__title ?></h2>
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <div class="flex my-14 mdt:justify-center">
@@ -41,27 +41,33 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                     <!-- for mobile -->
                     <?php if ($education_design_one__description__visible_mobile) { ?>
-                        <div class="visible-education-text-tablet hidden w-14/24 pl-12 lg:pl-6 mdt:block mdt:w-full mdt:mt-5">
+                        <div class="visible-education-text-tablet hidden w-14/24 pl-12 lg:pl-6  mdt:block mdt:w-full mdt:mt-5 md:pl-0">
                             <p class="text-lg lg:text-base"><?php echo $education_design_one__description__visible_mobile ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($education_design_one__description__hidden_mobile) { ?>
-                        <div class="hidden-text-education hidden w-14/24 pl-12 lg:pl-6 mdt:w-full mdt:mt-5">
+                        <div class="hidden-text-education hidden w-14/24 pl-12 lg:pl-6  mdt:w-full mdt:mt-5 md:pl-0">
                             <p class="text-lg lg:text-base"><?php echo $education_design_one__description__hidden_mobile ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($education_design_one__description__visible_mobile && $education_design_one__description__hidden_mobile) { ?>
-                    <div class="hidden font-main font-bold text-xl pl-7 pt-7 mdt:block">
-                        <a href="javascript:void(0);" class="more-btn-education">read more...</a>
-                    </div>
+                        <div class="hidden font-main font-bold text-xl pl-7  pt-7 mdt:block md:pl-0">
+                            <a href="javascript:void(0);" class="more-btn-education">read more...</a>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
-            
+
             <?php if ($education_design_one__link) { ?>
-            <div class="text-center mt-12">
-                <a href="<?php echo $education_design_one__link['url'] ?>" class="font-main uppercase bg-accent text-white font-bold text-xl py-2 px-12 rounded-full lg:py-3 lg:px-8 lg:text-base xs:text-2xl"><?php echo $education_design_one__link['title'] ?></a>
-            </div>
+                <div class="text-center mt-12">
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $education_design_one__link['url'],
+                        'text' => __($education_design_one__link['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => 'btn_xl hover_headings uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
+                </div>
             <?php } ?>
         </div>
     </section>

@@ -50,7 +50,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="font-main font-bold text-2xl leading-none">
                         <?= get_field('phone_with_letters', 'option') ?>
                     </div>
-                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
+                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
                     </a>
                 </div>
@@ -102,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="font-main font-bold text-2xl leading-none">
                     <?= get_field('phone_with_letters', 'option') ?>
                 </div>
-                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11" href="tel:<?= get_field('phone', 'option') ?>">
+                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings hover:shadow-siteWide" href="tel:<?= get_field('phone', 'option') ?>">
                     Call Now
                 </a>
             </div>

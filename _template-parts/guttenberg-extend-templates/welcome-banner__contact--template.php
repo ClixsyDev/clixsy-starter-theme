@@ -16,19 +16,17 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_hero__contact_form_select = get_field('welcome_hero__contact_form_select');
     $welcome_hero__contact_running_repeater = get_field('welcome_hero__contact_running_repeater');
 ?>
-    <section class="contact-page__hero-wrapper " style="background-image: url(<?php echo $welcome_hero__contact_bg ?: get_template_directory_uri() . '/_assets/src/img/contact-page-bg.png);' ?>">
-        <div class="contact-page__hero__img-wrapper">
+    <section class="mx-auto  bg-no-repeat bg-cover " style="background-image: url(<?php echo $welcome_hero__contact_bg ?: get_template_directory_uri() . '/_assets/src/img/contact-page-bg.png);' ?>">
+        <div class="container mx-auto justify-around items-end lg:justify-center h-full flex mdt:flex-wrap mdt:pt-9 form_elements_design_one small-textarea pt-12">
             <?php if ($welcome_hero__contact_persone) {
-                echo wp_get_attachment_image($welcome_hero__contact_persone, 'full', '', ['class' => 'block  2xl:w-full w-5/12']);
-            } else { ?>
-                <img class="block  2xl:w-full w-5/12" src="<?php echo get_template_directory_uri() ?>/_assets/src/img/kenny-contact-us.png" alt="Kenny" />
-            <?php } ?>
-            <div class="contact-page__form contact-page__hero__form-wrapper">
+                echo wp_get_attachment_image($welcome_hero__contact_persone, 'full', '', ['class' => 'block  w-7/12']);
+            } ?>
+            <div class=" bg-headings text-white relative z-10 mb-8  px-8 w-1/3 2xl:w-[65%] mdt:w-[90%] sm:w-full pb-4">
                 <?php if ($welcome_hero__contact_form_title) { ?>
-                    <h2 class="form-heading"><?php echo $welcome_hero__contact_form_title ?></h2>
+                    <h2 class="form-heading mt-4 mb-2"><?php echo $welcome_hero__contact_form_title ?></h2>
                 <?php }
                 if ($welcome_hero__contact_form_description) { ?>
-                    <p class=" pb-7"><?php echo $welcome_hero__contact_form_description ?></p>
+                    <p class="pb-3 font-second"><?php echo $welcome_hero__contact_form_description ?></p>
                 <?php }
                 echo $welcome_hero__contact_form_select ? do_shortcode('[contact-form-7 id="' . $welcome_hero__contact_form_select['0'] . '" title="Contact form"]') : '' ?>
             </div>

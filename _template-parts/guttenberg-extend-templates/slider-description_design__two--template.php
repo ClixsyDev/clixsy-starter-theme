@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="py-16 bg-cover" style="background-image: url('<?php echo $slider_description_design_two__bg ?>');">
         <div class="container">
             <?php if ($slider_description_design_two__title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?php echo $slider_description_design_two__title ?></h2>
+                <h2 class="heading_h2 pb-4"><?php echo $slider_description_design_two__title ?></h2>
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <?php if ($slider_description_design_two__description) { ?>
@@ -60,7 +60,13 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <?php if ($slider_description_design_two__link) { ?>
                 <div class="text-center mt-5 lg:mt-8">
-                    <a href="<?php echo $slider_description_design_two__link['url'] ?>" class="font-main bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $slider_description_design_two__link['title'] ?></a>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $slider_description_design_two__link['url'],
+                        'text' => __($slider_description_design_two__link['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => 'btn_xl hover_headings uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
                 </div>
             <?php } ?>
         </div>

@@ -10,8 +10,7 @@
 
 
 
-function register_personal_banner_design__one()
-{
+function register_personal_banner_design__one() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -125,6 +124,13 @@ if (function_exists('acf_add_local_field_group')) :
                 'label' => 'Button',
                 'type' => 'link',
                 'return_format' => 'array',
+            ),
+            array(
+                'key' => $block_key . 'hover_text',
+                'name' => $block_key . 'hover_text',
+                'type' => 'text',
+                'label' => 'Text on hover',
+                'instructions' => '',
             ),
             array(
                 'key' => $block_key . 'logo',

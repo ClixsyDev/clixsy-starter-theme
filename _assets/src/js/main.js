@@ -87,8 +87,10 @@ let btnMoreEducation = () => {
 
   if (ifSelectorExist(btn) && ifSelectorExist(hiddenBlock)) {
     btn.addEventListener('click', (event) => {
-      hiddenBlock.classList.toggle('hidden');
       event.preventDefault();
+      
+      hiddenBlock.classList.toggle('hidden');
+      console.log('clicking')
 
       if (hiddenBlock.classList.contains('hidden')) {
         btn.textContent = 'read more...';
@@ -98,7 +100,6 @@ let btnMoreEducation = () => {
     });
   }
 };
-btnMoreEducation();
 
 const nextArrow = () => {
   const arrows = Array.from(document.querySelectorAll('[data-go-to]'));

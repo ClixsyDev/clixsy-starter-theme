@@ -11,6 +11,7 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $welcome_banner__case_title = get_field('welcome_banner__case_title');
     $welcome_banner__case_link = get_field('welcome_banner__case_link');
+    $welcome_banner__case_hover_text = get_field('welcome_banner__case_hover_text');
     $welcome_banner__case_bg = get_field('welcome_banner__case_bg');
     $welcome_banner__case_icon = get_field('welcome_banner__case_icon');
 
@@ -43,7 +44,13 @@ if ($is_preview && !empty($previewImage)) {
 
                     <?php if ($welcome_banner__case_link) { ?>
                         <div class="w-full flex justify-center ">
-                            <a href="<?php echo $welcome_banner__case_link['url'] ?>" class="text-white bg-accent w-[580px] 2xl:w-[300px] h-20 flex justify-center items-center text-4xl  xxl:text-2xl  font-bold rounded-full"><?php echo $welcome_banner__case_link['title'] ?></a>
+                        <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $welcome_banner__case_link['url'],
+                                'text' => __($welcome_banner__case_link['title'], 'law'),
+                                'text_hover' => $welcome_banner__case_hover_text ?: false,
+                                'classes' => 'btn_xl hover_headings center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                 </div>

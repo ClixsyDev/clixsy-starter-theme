@@ -14,7 +14,7 @@ if ($is_preview && !empty($previewImage)) {
     $reviews_design_one_arrows = get_field('reviews_design_one_arrows');
     $reviews_design_one_next_section_arrow = get_field('reviews_design_one_next_section_arrow');
     $reviews_design_one_next_section_selector = get_field('reviews_design_one_next_section_selector');
-    
+
 ?>
 
     <div class="relative">
@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
         } ?>
         <div class="container relative pb-16">
             <?php if ($reviews_design_one_title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4 pt-10 md:pt-6"><?php echo $reviews_design_one_title ?></h2>
+                <h2 class="heading_h2 pb-4 pt-10 md:pt-6"><?php echo $reviews_design_one_title ?></h2>
                 <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <?php } ?>
             <div class="google_reviews_slider glide">
@@ -64,7 +64,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <?php if ($reviews_design_one_arrows) { ?>
                         <div class="text-center relative mt-7">
-                            <div class="glide__arrows absolute right-[60%] top-11% w-max lg:right-55% md:right-57%" data-glide-el="controls">
+                            <div class="glide__arrows absolute right-[60%] top-11% w-max lg:right-[65%] md:right-[65%] xs:right-[70%]" data-glide-el="controls">
                                 <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-left.png"></button>
                             </div>
                             <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -72,13 +72,13 @@ if ($is_preview && !empty($previewImage)) {
                                     <button class="slider__bullet glide__bullet focus:border-none bg-smoke focus:bg-darkOrange hover:bg-darkOrange w-7 h-1.5 rounded-none xs:h-1 xs:w-6" data-glide-dir="=<?php echo $i - 1 ?>"></button>
                                 <?php } ?>
                             </div>
-                            <div class="glide__arrows absolute left-[60%] top-11% w-max lg:left-55% md:left-57% xs:left-58%" data-glide-el="controls">
+                            <div class="glide__arrows absolute left-[60%] lg:left-[65%] md:left-[65%] xs:left-[70%]  top-[11%] w-max " data-glide-el="controls">
                                 <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-right.png"></button>
                             </div>
                         </div>
                     <?php } ?>
                     <?php if ($reviews_design_one_next_section_arrow) { ?>
-                        <div data-go-to="<?= $reviews_design_one_next_section_selector ?>" class="absolute -right-16 bottom-24 cursor-pointer">
+                        <div data-go-to="<?= $reviews_design_one_next_section_selector ?>" class="absolute lg:hidden -right-16 bottom-24 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50.112" height="75.136" viewBox="0 0 50.112 75.136">
                                 <path class="fill-accent" id="Icon_ionic-ios-arrow-round-forward" data-name="Icon ionic-ios-arrow-round-forward" d="M55.791,12.211a3.41,3.41,0,0,0-.026,4.8L71.632,32.907H11.242a3.393,3.393,0,0,0,0,6.785H71.606L55.739,55.586a3.435,3.435,0,0,0,.026,4.8,3.379,3.379,0,0,0,4.776-.026L82.046,38.7h0a3.81,3.81,0,0,0,.7-1.07,3.238,3.238,0,0,0,.261-1.3,3.4,3.4,0,0,0-.966-2.375l-21.5-21.661A3.325,3.325,0,0,0,55.791,12.211Z" transform="translate(61.364 -7.875) rotate(90)" fill="#69be26" />
                             </svg>

@@ -35,7 +35,13 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <?php if ($decorated_text_design_one__button) { ?>
                 <div class="w-full flex justify-center pb-16">
-                    <a href="<?php echo $decorated_text_design_one__button['url'] ?>" class="text-white bg-accent w-96 lg:w-72 h-20  flex justify-center items-center text-4xl lg:text-2xl font-bold rounded-full"><?php echo $decorated_text_design_one__button['title'] ?></a>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $decorated_text_design_one__button['url'],
+                        'text' => __($decorated_text_design_one__button['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => 'btn_xl hover_outline_accent uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
                 </div>
             <?php } ?>
         </div>

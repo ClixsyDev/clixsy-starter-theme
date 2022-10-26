@@ -13,16 +13,17 @@ if ($is_preview && !empty($previewImage)) {
     $text_form_design_one__author = get_field('text_form_design_one__author');
     $text_form_design_one__icon = get_field('text_form_design_one__icon');
     $text_form_design_one__description = get_field('text_form_design_one__description');
+    $text_form_design_one__form_description = get_field('text_form_design_one__form_description');
     $text_form_design_one__form_title = get_field('text_form_design_one__form_title');
     $text_form_design_one__form_select = get_field('text_form_design_one__form_select');
     $text_form_design_one__button = get_field('text_form_design_one__button');
     $text_form_design_one__form_remove_citate_icon = get_field('text_form_design_one__remove_citate_icon');
 
 ?>
-    <div class="pt-24 lg:pt-12 lg:pb-24 xs:pt-24 overflow-hidden relative">
+    <div class="pt-24 lg:pt-12 lg:pb-12 xs:pt-16 overflow-hidden relative">
         <div class="container">
             <?php if ($text_form_design_one__title) { ?>
-                <h2 class="font-main text-headings_second font-medium text-5xl m-auto text-center leading-tight pb-4 xs:text-2xl"><?php echo $text_form_design_one__title ?></h2>
+                <h2 class="heading_h2 pb-4"><?php echo $text_form_design_one__title ?></h2>
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="flex mt-16 gap-16 mdt:flex-col mdt:gap-7 md:mt-12">
@@ -55,8 +56,8 @@ if ($is_preview && !empty($previewImage)) {
                                 } ?>
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
-                                <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24' ?>">
-                                    <div class="font-main font-bold text-white text-2xl lg:text-lg span-change_color_1 leading-snug">
+                                <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24 lg:w-full ' ?>">
+                                    <div class="font-main font-bold text-white text-3xl lg:text-lg span-change_color_1 leading-snug">
                                         <?php echo $text_form_design_one__description ?>
                                     </div>
                                 </div>
@@ -65,24 +66,35 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <?php if ($text_form_design_one__button && $text_form_design_one__button['url']) { ?>
                         <div class="text-center mt-12 lg:mt-8">
-                            <a href="<?php echo $text_form_design_one__button['url'] ?>" class="font-main bg-accent uppercase text-white font-bold text-2xl py-2 px-20 rounded-full lg:px-14 lg:py-3 lg:text-xl xs:text-2xl"><?php echo $text_form_design_one__button['title'] ?></a>
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $text_form_design_one__button['url'],
+                                'text' => __($text_form_design_one__button['title'], 'law'),
+                                'text_hover' => false,
+                                'classes' => 'btn_xl hover_headings uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
                         </div>
                     <?php } ?>
                 </div>
 
                 <?php if ($text_form_design_one__form_select) { ?>
                     <div class="w-[515px] bg-headings_second z-[1] mdt:m-auto mdt:w-19/24 md:w-full text-white  p-11">
-                    <?php if ($text_form_design_one__form_title) { ?>
+                        <?php if ($text_form_design_one__form_title) { ?>
                             <h2 class="text-white  text-3xl md:text-2xl mb-6 text-center process_text_design__one">
                                 <?php echo $text_form_design_one__form_title ?>
                             </h2>
                         <?php } ?>
-                        <?php if ($text_form_design_one__description) { ?>
+                        <?php if ($text_form_design_one__form_description) { ?>
                             <div class="text-white text-lg mb-6 text-center font-second">
-                                <?php echo $text_form_design_one__description ?>
+                                <?php echo $text_form_design_one__form_description ?>
                             </div>
                         <?php } ?>
-                        <?php echo $text_form_design_one__form_select ? do_shortcode('[contact-form-7 id="' . $text_form_design_one__form_select['0'] . '" title="Contact form"]') : '' ?>
+                        <?php if ($text_form_design_one__form_select) { ?>
+                            <div class="form_elements_design_one">
+                                <?php echo $text_form_design_one__form_select ? do_shortcode('[contact-form-7 id="' . $text_form_design_one__form_select['0'] . '" title="Contact form"]') : '' ?>
+                            </div>
+                        <?php } ?>
+
                     </div>
                 <?php } ?>
             </div>

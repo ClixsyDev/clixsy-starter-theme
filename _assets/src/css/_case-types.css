@@ -2,12 +2,10 @@
     .bg-img-case-types {
         @apply bg-[url('../../../_assets/src/img/bg-texture.jpg')];
     }
-    .contact-page__hero-wrapper {
-        @apply mx-auto  bg-no-repeat bg-cover;
-    }
+
     
     .contact-page__hero__img-wrapper {
-        @apply container mx-auto justify-around lg:justify-center h-full flex mdt:flex-wrap items-end mdt:pt-9;
+        @apply container mx-auto justify-around lg:justify-center h-full flex mdt:flex-wrap mdt:pt-9;
     }
     
     .contact-page__hero__form-wrapper {
@@ -16,6 +14,4 @@
     
     
 }
-
-
 

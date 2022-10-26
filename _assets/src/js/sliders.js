@@ -154,7 +154,7 @@ const marqueEl1 = document.getElementById('marquee');
 if (document.body.contains(marqueEl1)) {
   const marqueOne = new Marquee(marqueEl1, {
     css3easing: 'linear',
-    speed: window.innerWidth < 768 ? 60 : 100,
+    speed: window.innerWidth < 768 ? 40 : 60,
     gap: 100,
     delayBeforeStart: 0,
     direction: 'left',

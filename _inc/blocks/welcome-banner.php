@@ -10,21 +10,20 @@
 
 
 
-function register_welcome_banner()
-{
+function register_welcome_banner() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
                 'name'            => 'welcome-banner',
                 'title'           => __('Welcome Banner', 'clixsy'),
-                'description'	  => __('Welcome Banner', 'clixsy'),
+                'description'      => __('Welcome Banner', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/welcome-banner.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords' 		  => array('welcome', 'banner'),
+                'keywords'           => array('welcome', 'banner'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -104,6 +103,13 @@ if (function_exists('acf_add_local_field_group')) {
                 'label' => 'Button',
                 'name' => $key . '_button',
                 'type' => 'link',
+            ),
+            array(
+                'key' => $key . '_button_text',
+                'name' => $key . '_button_text',
+                'type' => 'text',
+                'label' => 'Button text on hover',
+                'instructions' => '',
             ),
         )
     ));

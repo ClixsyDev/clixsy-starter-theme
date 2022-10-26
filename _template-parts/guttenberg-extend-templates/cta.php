@@ -12,6 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $key = 'cta';
     $title = get_field($key . '_title');
     $button = get_field($key . '_button');
+    $button_hover = get_field($key . '_button_hover');
 ?>
     <div class=" pt-10 pb-9 bg-smoke sm:pt-6 sm:pb-7">
         <div class="container">
@@ -19,9 +20,13 @@ if ($is_preview && !empty($previewImage)) {
                 <h2 class="font-main font-bold text-white text-5xl leading-tight text-center mb-7 sm:text-2xl"><?= $title ?></h2>
             <?php } ?>
             <?php if ($button) { ?>
-                <a href="<?= $button['url'] ?>" class="font-main font-bold mx-auto w-[233px] h-[67px] flex justify-center items-center bg-accent rounded-full text-2xl leading-none text-white uppercase">
-                    <?= $button['title'] ?>
-                </a>
+                <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $button['url'],
+                        'text' => __($button['title'], 'law'),
+                        'text_hover' => $button_hover ?: false,
+                        'classes' => 'btn_md hover_headings center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
             <?php } ?>
 
         </div>

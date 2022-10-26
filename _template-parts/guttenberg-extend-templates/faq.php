@@ -18,9 +18,11 @@ if ($is_preview && !empty($previewImage)) {
     <div class="py-24">
         <div class="container">
             <?php if ($title) { ?>
-                <h2 class="text-headings_second font-medium text-4xl text-center leading-tight pb-4"><?= $title ?></h2>
+                <div class="mb-16 lg:mb-8">
+                    <h2 class="heading_h2 pb-4"><?= $title ?></h2>
+                    <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
+                </div>
             <?php } ?>
-            <hr class="bg-accent border-none mx-auto h-1 w-[100px] max-w-full mb-6">
             <div class="flex justify-center gap-2 w-11/12 m-auto md:block">
                 <?php if ($image) { ?>
                     <div class="md:hidden">
@@ -41,16 +43,16 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php } ?>
                             <?php } ?>
                             <?php if ($faq_repeater_hidden) { ?>
-                                <?php foreach ($faq_repeater_hidden as $item_hidden) { ?>
-                                    <div class="hidden hidden_faq_image_left">
+                                <div class="hidden hidden_faq_image_left">
+                                    <?php foreach ($faq_repeater_hidden as $item_hidden) { ?>
                                         <div class="faq__position ">
                                             <div class="faq__header p-4 pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item_hidden['faq_items_question'] ?></div>
                                             <div class="faq__text">
                                                 <?php echo $item_hidden['faq_items_answer'] ?>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php } ?>
+                                    <?php } ?>
+                                </div>
                             <?php } ?>
                             </div>
                             <?php if ($faq_repeater_hidden) { ?>

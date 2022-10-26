@@ -64,6 +64,15 @@ if (function_exists('acf_add_local_field_group')) {
                 'library' => 'all',
             ),
             array(
+                'key' => $key . '_attorney_image_mobile',
+                'label' => 'Attorney Image mobile',
+                'name' => $key . '_attorney_image_mobile',
+                'type' => 'image',
+                'return_format' => 'id',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
+            array(
                 'key' => $key . '_company_logo',
                 'label' => 'Company Logo',
                 'name' => $key . '_company_logo',

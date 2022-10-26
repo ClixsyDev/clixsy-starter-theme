@@ -12,11 +12,10 @@
     color: #fff;
     text-transform: uppercase;
     position: relative;
-    transition: .3s all;
+    transition: 0.3s all;
     &:after {
       @apply bg-accent w-6/12 h-1 absolute -bottom-2 left-[25%] hidden;
-      content:  '';
-
+      content: '';
     }
     &:hover {
       @apply transform scale-[1.02];
@@ -53,6 +52,14 @@
       a:after {
         display: block;
       }
+    }
+  }
+}
+
+header {
+  &.sticked {
+    .sub-menu.lvl-1 {
+      top: 122% !important;
     }
   }
 }
@@ -137,5 +144,5 @@
 }
 
 .footer-menu {
-  border-left: 4px solid #69BE26;
+  border-left: 4px solid #69be26;
 }

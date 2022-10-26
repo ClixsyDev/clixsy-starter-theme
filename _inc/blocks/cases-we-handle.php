@@ -10,8 +10,7 @@
 
 
 
-function register_cases_we_handle()
-{
+function register_cases_we_handle() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -81,6 +80,13 @@ if (function_exists('acf_add_local_field_group')) {
                         'return_format' => 'id',
                         'preview_size' => 'medium',
                         'library' => 'all',
+                    ),
+                    array(
+                        'key' => $key . '_description',
+                        'name' => $key . '_description',
+                        'type' => 'text',
+                        'label' => 'Description',
+                        'instructions' => '',
                     ),
                 ),
             ),
