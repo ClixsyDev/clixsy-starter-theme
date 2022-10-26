@@ -19,10 +19,10 @@ if ($is_preview && !empty($previewImage)) {
 ?>
 
     <?php if ($welcome_banner__case_title || $welcome_banner__case_link || $welcome_banner__case_bg || $welcome_banner__case_icon) { ?>
-        <section class="w-full relative bg-cover h-[730px] md:h-auto md:pt-10 md:pb-10" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__case_bg, 'full') ?>')">
+        <section class="w-full relative bg-cover pt-16 pb-16 md:h-auto md:pt-10 md:pb-10" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__case_bg, 'full') ?>')">
         <span class="block absolute left-0 top-0 h-full w-full" style="background-color: <?php echo $welcome_banner__case_overlay ?: '' ?>"></span>
             <div class="container h-full relative left-0 right-0 top-0  mx-auto ">
-                <div class=" translate-y-[20%] 2xl:translate-y-[30%] lg:translate-y-[20%] md:translate-y-[0%]">
+                <div class="">
                     
                     <?php if ($welcome_banner__case_title) { ?>
                         <div class="pb-12 text-white text-[90px] 2xl:text-[60px] md:text-[40px] text-center font-bold">

@@ -4957,10 +4957,6 @@ h2 span {
   height: 780px;
 }
 
-.acf-block-preview .h-\[730px\] {
-  height: 730px;
-}
-
 .acf-block-preview .h-2 {
   height: .5rem;
 }
@@ -7638,16 +7634,12 @@ html :where(.wp-block) {
     height: 13rem;
   }
 
-  .md\:h-\[600px\] {
-    height: 600px;
+  .md\:h-auto {
+    height: auto;
   }
 
   .md\:h-9 {
     height: 2.25rem;
-  }
-
-  .md\:h-auto {
-    height: auto;
   }
 
   .md\:w-full {
@@ -7696,11 +7688,6 @@ html :where(.wp-block) {
 
   .md\:translate-y-0 {
     --tw-translate-y: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .md\:translate-y-\[35\%\] {
-    --tw-translate-y: 35%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
