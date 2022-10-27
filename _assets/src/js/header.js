@@ -10,7 +10,7 @@ export default function headerInit() {
         isSticked = true;
     }
         
-    if (isSticked && window.scrollY <= 80) {
+    if (isSticked && window.scrollY <= 70) {
         header.classList.remove('sticked');
         isSticked = false;
     }
