@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner_company_logo = get_field('welcome_banner_company_logo');
 
 ?>
-    <div class="welcome_banner relative h-[780px] 2xl:h-[600px] lg:h-[427px] mdt:h-auto sm:h-[486px] md:overflow-hidden">
+    <div class="welcome_banner relative h-[800px] 2xl:h-[620px] lg:h-[427px] mdt:h-auto sm:h-[486px] md:overflow-hidden">
         <?php if ($welcome_banner_company_logo) { ?>
             <div class="absolute left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-full z-10">
                 <img src="<?= wp_get_attachment_image_url($welcome_banner_company_logo, 'full') ?>" class="absolute left-9 bottom-9 w-[143px] h-auto object-cover z-10 fhd:w-20 md:hidden" alt="">
@@ -104,7 +104,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <?php echo wp_get_attachment_image($bg_image_with_attorney_mobile, 'full', '', ['class' => 'hidden relative left-0 bottom-0 w-auto h-full object-cover max-w-[1920px] mx-auto mdt:flex mdt:m-0 mdt:l-0']) ?>
         </div>
-        <img src="<?= wp_get_attachment_image_url($bg_image_with_attorney, 'full') ?>" class="absolute left-1/2 bottom-0 w-full h-full object-cover max-w-[1920px] mx-auto -translate-x-1/2 fhd:left-0 fhd:translate-x-0 fhd:w-auto mdt:hidden" alt="">
+        <img src="<?= wp_get_attachment_image_url($bg_image_with_attorney, 'full') ?>" class="absolute left-1/2 bottom-0 w-full h-full object-cover max-w-[1920px] pt-5 mx-auto -translate-x-1/2 fhd:left-0 fhd:translate-x-0 fhd:w-auto fhd:min-w-full mdt:hidden" alt="">
     </div>
 <?php }
 if (!get_fields()) echo 'Fill block with content';

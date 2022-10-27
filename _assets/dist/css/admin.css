@@ -4969,8 +4969,8 @@ h2 span {
   height: 120%;
 }
 
-.acf-block-preview .h-\[780px\] {
-  height: 780px;
+.acf-block-preview .h-\[800px\] {
+  height: 800px;
 }
 
 .acf-block-preview .h-2 {
@@ -6483,8 +6483,8 @@ html :where(.wp-block) {
     height: 16rem;
   }
 
-  .\32 xl\:h-\[600px\] {
-    height: 600px;
+  .\32 xl\:h-\[620px\] {
+    height: 620px;
   }
 
   .\32 xl\:w-\[65\%\] {
@@ -6563,6 +6563,10 @@ html :where(.wp-block) {
 
   .fhd\:w-auto {
     width: auto;
+  }
+
+  .fhd\:min-w-full {
+    min-width: 100%;
   }
 
   .fhd\:translate-x-0 {
