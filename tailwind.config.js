@@ -28,6 +28,7 @@ module.exports = {
       '2xl': { max: '1496px' },
       'fhd': { max: '1920px' },
       xl: { max: '1280px' },
+      uniq_xl: { max: '1200px' },
       lg: { max: '1024px' },
       mdt: { max: '992px' },
       md: { max: '768px' },
