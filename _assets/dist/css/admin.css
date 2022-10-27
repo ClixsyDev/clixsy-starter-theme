@@ -4359,8 +4359,16 @@ h2 span {
   visibility: visible;
 }
 
+.acf-block-preview .invisible {
+  visibility: hidden;
+}
+
 .acf-block-preview .static {
   position: static;
+}
+
+.acf-block-preview .fixed {
+  position: fixed;
 }
 
 .acf-block-preview .absolute {
@@ -4579,6 +4587,14 @@ h2 span {
   left: 50%;
 }
 
+.acf-block-preview .left-9 {
+  left: 2.25rem;
+}
+
+.acf-block-preview .bottom-9 {
+  bottom: 2.25rem;
+}
+
 .acf-block-preview .left-\[11\%\] {
   left: 11%;
 }
@@ -4589,6 +4605,10 @@ h2 span {
 
 .acf-block-preview .right-\[11\%\] {
   right: 11%;
+}
+
+.acf-block-preview .bottom-7 {
+  bottom: 1.75rem;
 }
 
 .acf-block-preview .-right-12 {
@@ -4881,6 +4901,10 @@ h2 span {
   display: grid;
 }
 
+.acf-block-preview .contents {
+  display: contents;
+}
+
 .acf-block-preview .hidden {
   display: none;
 }
@@ -5159,6 +5183,10 @@ h2 span {
 
 .acf-block-preview .w-16\/24 {
   width: 66.6667%;
+}
+
+.acf-block-preview .w-\[143px\] {
+  width: 143px;
 }
 
 .acf-block-preview .w-2\/5 {
@@ -6471,6 +6499,10 @@ html :where(.wp-block) {
     height: 16rem;
   }
 
+  .\32 xl\:h-\[600px\] {
+    height: 600px;
+  }
+
   .\32 xl\:w-\[65\%\] {
     width: 65%;
   }
@@ -6533,6 +6565,25 @@ html :where(.wp-block) {
   .\32 xl\:before\:w-24:before, .\32 xl\:after\:w-24:after {
     content: var(--tw-content);
     width: 6rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .fhd\:left-0 {
+    left: 0;
+  }
+
+  .fhd\:w-20 {
+    width: 5rem;
+  }
+
+  .fhd\:w-auto {
+    width: auto;
+  }
+
+  .fhd\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 
@@ -7629,6 +7680,10 @@ html :where(.wp-block) {
     top: 92%;
   }
 
+  .md\:bottom-2 {
+    bottom: .5rem;
+  }
+
   .md\:col-span-12 {
     grid-column: span 12 / span 12;
   }
@@ -7943,6 +7998,10 @@ html :where(.wp-block) {
 
   .sm\:right-7 {
     right: 1.75rem;
+  }
+
+  .sm\:z-10 {
+    z-index: 10;
   }
 
   .sm\:col-span-12 {

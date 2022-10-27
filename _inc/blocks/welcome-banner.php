@@ -111,6 +111,15 @@ if (function_exists('acf_add_local_field_group')) {
                 'label' => 'Button text on hover',
                 'instructions' => '',
             ),
+            array(
+                'key' => $key . '_company_logo',
+                'label' => 'Company logo',
+                'name' => $key . '_company_logo',
+                'type' => 'image',
+                'return_format' => 'id',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
         )
     ));
 }
