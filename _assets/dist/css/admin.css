@@ -126,7 +126,7 @@
 
 .btn.btn_form {
   height: 5rem;
-  width: 100%;
+  width: max-content;
   --tw-bg-opacity: 1;
   background-color: rgb(105 190 38 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -7194,6 +7194,14 @@ html :where(.wp-block) {
 
   .lg\:gap-3 {
     gap: .75rem;
+  }
+
+  .lg\:bg-contain {
+    background-size: contain;
+  }
+
+  .lg\:bg-repeat {
+    background-repeat: repeat;
   }
 
   .lg\:p-1 {

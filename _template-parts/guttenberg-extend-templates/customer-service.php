@@ -15,8 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     $company_logo = get_field($key . '_company_logo');
     $services = get_field($key . '_services');
 ?>
-    <div class="relative">
-        <img src="<?= wp_get_attachment_image_url($bg_image, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
+    <div class="relative bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo  wp_get_attachment_image_url($bg_image) ?: ''  ?>');">
         <div class="container relative pt-20 pb-10">
             <?php if ($title) { ?>
                 <h2 class="heading_h2 relative pb-5 mb-16 max-w-[950px] mx-auto before:block before:absolute before:bg-accent before:left-1/2 before:w-40 before:h-1 before:bottom-0 before:-translate-x-1/2">
