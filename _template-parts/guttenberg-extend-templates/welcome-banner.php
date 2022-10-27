@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner_company_logo = get_field('welcome_banner_company_logo');
 
 ?>
-    <div class="welcome_banner relative h-[800px] 2xl:h-[620px] lg:h-[427px] mdt:h-auto sm:h-[486px] md:overflow-hidden">
+    <div class="welcome_banner overflow-hidden relative h-[800px] 2xl:h-[620px] lg:h-[427px] mdt:h-auto sm:h-[486px] md:overflow-hidden">
         <?php if ($welcome_banner_company_logo) { ?>
             <div class="absolute left-1/2 -translate-x-1/2 w-full max-w-[1920px] h-full z-10">
                 <img src="<?= wp_get_attachment_image_url($welcome_banner_company_logo, 'full') ?>" class="absolute left-9 bottom-9 w-[143px] h-auto object-cover z-10 fhd:w-20 md:hidden" alt="">
