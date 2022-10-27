@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
     <div class="bg-headings pt-14 pb-16">
         <div class="container">
             <?php if ($title) { ?>
-                <h2 class="heading_h2 white pb-5">
+                <h2 class="heading_h2 white pb-5 capitalize">
                     <?= $title ?>
                 </h2>
             <?php } ?>
