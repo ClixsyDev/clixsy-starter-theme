@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
     $location_design_one__google_map = get_field('location_design_one__google_map');
 
 ?>
-    <section class="w-full pt-16 pb-20 font-main" style="background-image: url('<?php echo wp_get_attachment_image_url($location_design_one__background, 'full') ?>');">
+    <section class="w-full pt-16 pb-20 font-main bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo wp_get_attachment_image_url($location_design_one__background, 'full') ?>');">
         <div class="container">
             <div class=" text-headings_second text-5xl text-center relative pb-16">
                 <?php if ($location_design_one__title) { ?>

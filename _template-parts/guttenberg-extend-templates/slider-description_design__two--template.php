@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="py-16 bg-cover" style="background-image: url('<?php echo $slider_description_design_two__bg ?>');">
+    <section class="py-16 bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo $slider_description_design_two__bg ?>');">
         <div class="container">
             <?php if ($slider_description_design_two__title) { ?>
                 <h2 class="heading_h2 pb-4"><?php echo $slider_description_design_two__title ?></h2>

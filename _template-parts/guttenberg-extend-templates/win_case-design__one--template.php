@@ -22,7 +22,7 @@ if ($is_preview && !empty($previewImage)) {
 
 ?>
     <?php if ($win_case_design_one__title || $win_case_design_one__description || $win_case_design_one__persone || $win_case_design_one__area || $win_case_design_one__area_title || $win_case_design_one__cta || $win_case_design_one__cta_link || $win_case_design_one__button || $win_case_design_one__form || $win_case_design_one__form_description) { ?>
-        <div class="relative py-20 mdt:hidden bg-cover" style="background-image: url('<?php echo wp_get_attachment_image_url($win_case_design_one__background, 'full') ?>');">
+        <div class="relative py-20 mdt:hidden bg-contain bg-repeat" style="background-image: url('<?php echo wp_get_attachment_image_url($win_case_design_one__background, 'full') ?>');">
             <?php if ($win_case_design_one__title) { ?>
                 <h2 class="heading_h2 heading_second pb-4"><?php echo $win_case_design_one__title ?></h2>
             <?php } ?>
@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php echo $win_case_design_one__description ?>
                         </div>
                     <?php } ?>
-                    <div class=" bg-headings w-full h-[24rem] z-30 flex px-5">
+                    <div class=" bg-headings w-full h-80 z-30 flex px-5">
                         <?php if ($win_case_design_one__persone) { ?>
                             <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => '-ml-20 -mt-24 h-auto object-contain']) ?>
                         <?php } ?>

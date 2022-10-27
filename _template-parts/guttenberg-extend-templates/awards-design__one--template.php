@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <div class="pb-12">
         <div class="max-w-[1920px] m-auto md:max-w-none">
-            <div class="bg-cover py-10" style="background-image: url('<?php echo $awards_design_one__bg ?>');">
+            <div class="bg-cover py-10 lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo $awards_design_one__bg ?>');">
                 <?php if ($awards_design_one__title) { ?>
                     <h2 class="text-headings_second text-2xl text-center font-bold font-main"><?php echo $awards_design_one__title ?></h2>
                 <?php } ?>
