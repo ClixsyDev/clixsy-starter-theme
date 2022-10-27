@@ -78,7 +78,7 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     <?php } ?>
                     <?php if ($reviews_design_one_next_section_arrow) { ?>
-                        <div data-go-to="<?= $reviews_design_one_next_section_selector ?>" class="absolute lg:hidden -right-16 bottom-24 cursor-pointer">
+                        <div data-go-to="<?= $reviews_design_one_next_section_selector ?>" class="absolute xl:hidden -right-12 bottom-24 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50.112" height="75.136" viewBox="0 0 50.112 75.136">
                                 <path class="fill-accent" id="Icon_ionic-ios-arrow-round-forward" data-name="Icon ionic-ios-arrow-round-forward" d="M55.791,12.211a3.41,3.41,0,0,0-.026,4.8L71.632,32.907H11.242a3.393,3.393,0,0,0,0,6.785H71.606L55.739,55.586a3.435,3.435,0,0,0,.026,4.8,3.379,3.379,0,0,0,4.776-.026L82.046,38.7h0a3.81,3.81,0,0,0,.7-1.07,3.238,3.238,0,0,0,.261-1.3,3.4,3.4,0,0,0-.966-2.375l-21.5-21.661A3.325,3.325,0,0,0,55.791,12.211Z" transform="translate(61.364 -7.875) rotate(90)" fill="#69be26" />
                             </svg>
