@@ -24,10 +24,10 @@ if ($is_preview && !empty($previewImage)) {
                         foreach ($verdicts_design_one__verdicts as $verdic_item) {
                         ?>
                             <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1 shadow-reviews">
-                                <div class="text-accent text-5xl leading-none 2xl:text-3xl">
+                                <div class="font-avenir font-bold text-accent text-5xl leading-none 2xl:text-3xl">
                                     <?php echo $verdic_item['price'] ?>
                                 </div>
-                                <div class=" text-[40px] 2xl:text-[25px]">
+                                <div class="font-avenir text-[40px] 2xl:text-[25px]">
                                     <?php echo $verdic_item['case'] ?>
                                 </div>
                             </div>
