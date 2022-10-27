@@ -5001,6 +5001,10 @@ h2 span {
   height: 75px;
 }
 
+.acf-block-preview .h-\[800px\] {
+  height: 800px;
+}
+
 .acf-block-preview .min-h-\[246px\] {
   min-height: 246px;
 }
@@ -6495,6 +6499,10 @@ html :where(.wp-block) {
     height: 600px;
   }
 
+  .\32 xl\:h-\[620px\] {
+    height: 620px;
+  }
+
   .\32 xl\:w-\[65\%\] {
     width: 65%;
   }
@@ -6565,6 +6573,10 @@ html :where(.wp-block) {
 
   .fhd\:w-auto {
     width: auto;
+  }
+
+  .fhd\:min-w-full {
+    min-width: 100%;
   }
 
   .fhd\:translate-x-0 {

@@ -6672,6 +6672,10 @@ img, video {
   height: 75px;
 }
 
+.h-\[800px\] {
+  height: 800px;
+}
+
 .min-h-\[246px\] {
   min-height: 246px;
 }
@@ -8270,6 +8274,10 @@ body.logged-in {
     height: 600px;
   }
 
+  .\32 xl\:h-\[620px\] {
+    height: 620px;
+  }
+
   .\32 xl\:w-\[65\%\] {
     width: 65%;
   }
@@ -8340,6 +8348,10 @@ body.logged-in {
 
   .fhd\:w-auto {
     width: auto;
+  }
+
+  .fhd\:min-w-full {
+    min-width: 100%;
   }
 
   .fhd\:translate-x-0 {
