@@ -4359,16 +4359,8 @@ h2 span {
   visibility: visible;
 }
 
-.acf-block-preview .invisible {
-  visibility: hidden;
-}
-
 .acf-block-preview .static {
   position: static;
-}
-
-.acf-block-preview .fixed {
-  position: fixed;
 }
 
 .acf-block-preview .absolute {
@@ -4897,10 +4889,6 @@ h2 span {
   display: grid;
 }
 
-.acf-block-preview .contents {
-  display: contents;
-}
-
 .acf-block-preview .hidden {
   display: none;
 }
@@ -4999,6 +4987,10 @@ h2 span {
 
 .acf-block-preview .h-\[75px\] {
   height: 75px;
+}
+
+.acf-block-preview .h-\[24rem\] {
+  height: 24rem;
 }
 
 .acf-block-preview .min-h-\[246px\] {

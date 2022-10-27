@@ -37,7 +37,9 @@
     <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
-    <?php $logo = get_field('logo', 'options'); ?>
+    <?php $logo = get_field('logo', 'options'); 
+    $phone = get_field('phone', 'options');
+    ?>
 
 
     <!-- testing mega menu -->
@@ -57,7 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <?= get_field('phone_available', 'option') ?>
                     </div>
                     <div class="font-main font-bold text-2xl leading-none">
-                        <?= get_field('phone_with_letters', 'option') ?>
+                        <a href="tel:<?php echo $phone ?>"><?= get_field('phone_with_letters', 'option') ?></a>
                     </div>
                     <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
@@ -86,7 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="mobile-menu-row__wrapper hidden w-full flex-row-reverse items-center justify-between lg:flex">
                 <div class="buttons_wrapper flex gap-5 items-center">
-                    <a href="tel:<?= get_field('phone', 'option') ?>" class="flex">
+                    <a href="tel:<?php echo $phone ?>" class="flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40.512" height="40.512" viewBox="0 0 40.512 40.512">
                             <g id="telephone-call" transform="translate(-2 -2)">
                                 <path id="Path_504" class="fill-accent" data-name="Path 504" d="M41.634,32.9c-1.265-1.061-8.681-5.757-9.914-5.541-.579.1-1.021.6-2.206,2.01a16.909,16.909,0,0,1-1.8,1.949,15.564,15.564,0,0,1-3.435-1.273,21.269,21.269,0,0,1-9.815-9.818A15.564,15.564,0,0,1,13.19,16.8,16.909,16.909,0,0,1,15.139,15c1.412-1.185,1.907-1.625,2.01-2.206.216-1.236-4.485-8.649-5.541-9.914C11.164,2.352,10.762,2,10.247,2,8.754,2,2,10.351,2,11.433c0,.088.145,8.782,11.125,19.953C24.3,42.367,32.99,42.512,33.078,42.512c1.082,0,9.433-6.754,9.433-8.247,0-.515-.352-.917-.878-1.36Z" transform="translate(0 0)" fill="#69be26" />
@@ -109,9 +111,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <?= get_field('phone_available', 'option') ?>
                 </div>
                 <div class="font-main font-bold text-2xl leading-none">
-                    <?= get_field('phone_with_letters', 'option') ?>
+                    <a href="tel:<?php echo $phone ?>"><?= get_field('phone_with_letters', 'option') ?></a>
                 </div>
-                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings hover:shadow-siteWide" href="tel:<?= get_field('phone', 'option') ?>">
+                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings hover:shadow-siteWide" href="tel:<?php echo $phone ?>">
                     Call Now
                 </a>
             </div>

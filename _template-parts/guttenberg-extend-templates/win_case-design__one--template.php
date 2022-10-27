@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php echo $win_case_design_one__description ?>
                         </div>
                     <?php } ?>
-                    <div class=" bg-headings w-full h-80 z-30 flex px-5">
+                    <div class=" bg-headings w-full h-[24rem] z-30 flex px-5">
                         <?php if ($win_case_design_one__persone) { ?>
                             <?php echo wp_get_attachment_image($win_case_design_one__persone, 'full', '', ['class' => '-ml-20 -mt-24 h-auto object-contain']) ?>
                         <?php } ?>
