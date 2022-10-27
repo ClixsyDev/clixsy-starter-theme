@@ -9,6 +9,12 @@
     margin-left: 23px;
     margin-top: 15px;
     margin-bottom: 15px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  p {
+    margin-bottom: 10px;
   }
 }
 
