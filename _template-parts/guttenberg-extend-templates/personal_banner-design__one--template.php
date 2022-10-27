@@ -30,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php echo wp_get_attachment_image($personal_banner_design_one__persone, 'full') ?>
                     </div>
                 <?php } ?>
-                <div class="bg-accent w-17/24 py-8 pb-16 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-50% sm:top-50% xs:top-[40%] xs:w-22/24">
+                <div class="bg-accent w-17/24 py-8 pb-16 absolute right-0 pr-48 xxl:pr-28 xl:pr-20 xl:w-18/24 mdt:z-[1] mdt:right-auto mdt:p-5 mdt:top-50% sm:top-50% xs:w-22/24">
                     <?php if ($personal_banner_design_one__title) { ?>
                         <h1 class="font-main font-bold uppercase text-white text-8xl  leading-none pt-4 text-end xxl:text-6xl mdt:text-center mdt:text-5xl mdt:leading-none xs:text-3xl"><?php echo $personal_banner_design_one__title ?></h1>
                     <?php } ?>
