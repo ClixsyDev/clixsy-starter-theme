@@ -1,5 +1,4 @@
 .form_elements_design_one {
-  @apply font-second;
   &.small-textarea {
     textarea {
       @apply h-24;
