@@ -30,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="container flex pt-5">
                 <div class="w-[65%] relative">
                     <?php if ($win_case_design_one__description) { ?>
-                        <div class="text-headings_second prose-lg mb-28 px-16 lg:px-5">
+                        <div class="text-headings_second font-avenir prose-lg mb-28 px-16 lg:px-5">
                             <?php echo $win_case_design_one__description ?>
                         </div>
                     <?php } ?>
@@ -129,7 +129,7 @@ if ($is_preview && !empty($previewImage)) {
 
         <?php if ($win_case_design_one__form) { ?>
             <div class="hidden -mt-[210px] m-auto mdt:block">
-                <div class="container bg-headings p-7 sm:w-[96%]">
+                <div class="container bg-headings p-7 sm:w-[96%] form_elements_design_one">
                     <?php if ($win_case_design_one__form_description) { ?>
                         <div class=" text-white text-xl leading-tight mb-8"><?php echo $win_case_design_one__form_description ?></div>
                     <?php } ?>
