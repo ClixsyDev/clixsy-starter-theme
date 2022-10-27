@@ -25,7 +25,21 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[124px] max-w-full mb-6">
             <div class="flex gap-14 mt-14 mdt:flex-wrap mdt:justify-center md:gap-6">
-                <?php foreach ($case_items as $item) { 
+                <?php 
+                if (!$case_items) {
+                    $posts = get_posts(array(
+                        'numberposts'   => 4,
+                        'post_type'     => 'page',
+                        'meta_key'      => 'page_case_type_is_case_type',
+                        'meta_value'    => true,
+                        'exclude'      => get_the_ID(),
+                    ));
+                    $case_items = array();
+                    foreach ($posts as $post_item) {
+                        $case_items[] = $post_item->ID;
+                    }
+                }
+                foreach ($case_items as $item) { 
                     $key = 'page_case_type';
                     $case_title = get_field($key . '_case_title', $item);
                     $case_description = get_field($key . '_case_description', $item);
