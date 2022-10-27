@@ -4981,16 +4981,12 @@ h2 span {
   height: 750px;
 }
 
-.acf-block-preview .h-80 {
-  height: 20rem;
+.acf-block-preview .h-\[24rem\] {
+  height: 24rem;
 }
 
 .acf-block-preview .h-\[75px\] {
   height: 75px;
-}
-
-.acf-block-preview .h-\[24rem\] {
-  height: 24rem;
 }
 
 .acf-block-preview .min-h-\[246px\] {
@@ -8366,10 +8362,6 @@ html :where(.wp-block) {
 
   .xs\:left-\[68\%\] {
     left: 68%;
-  }
-
-  .xs\:top-\[40\%\] {
-    top: 40%;
   }
 
   .xs\:right-\[70\%\] {
