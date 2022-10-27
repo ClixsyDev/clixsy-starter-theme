@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
 
 ?>
     <?php if ($community_design_one__organizations) { ?>
-        <div class="py-16 bg-cover" style="background-image: url('<?php echo $community_design_one__bg ? wp_get_attachment_image_url($community_design_one__bg, 'full') : '' ?>')">
+        <div class="py-16 bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo $community_design_one__bg ? wp_get_attachment_image_url($community_design_one__bg, 'full') : '' ?>')">
             <div class="container">
                 <?php if ($community_design_one__title) { ?>
                     <h2 class="heading_h2 heading_second pb-4"><?php echo $community_design_one__title ?></h2>
