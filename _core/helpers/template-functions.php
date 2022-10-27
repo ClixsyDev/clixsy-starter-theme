@@ -4,7 +4,8 @@
  * Get post date in time ago format
  */
 if (!function_exists('the_time_ago')) {
-    function the_time_ago() {
+    function the_time_ago()
+    {
         echo human_time_diff(get_the_time('U'), current_time('timestamp'));
     }
 }
@@ -14,7 +15,8 @@ if (!function_exists('the_time_ago')) {
  * @param $limit
  */
 if (!function_exists('the_starter_excerpt')) {
-    function the_starter_excerpt($limit) {
+    function the_starter_excerpt($limit)
+    {
         $text  = get_the_content('');
         $text  = strip_shortcodes($text);
         $text  = apply_filters('the_content', $text);
@@ -43,7 +45,8 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-function save_tailwind_colors() {
+function save_tailwind_colors()
+{
     $screen = get_current_screen();
 
     if (strpos($screen->id, "theme-general-settings") == true) {
@@ -82,3 +85,105 @@ function save_tailwind_colors() {
     }
 }
 add_action('acf/save_post', 'save_tailwind_colors', 20);
+
+// field group for case type pages
+if (function_exists('acf_add_local_field_group')) :
+    $key = 'page_case_type';
+    acf_add_local_field_group(array(
+        'key' => $key,
+        'title' => 'Case Type',
+        'fields' => array(
+            array(
+                'key' => $key . '_is_case_type',
+                'label' => 'Is Case Type?',
+                'name' => $key . '_is_case_type',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 0,
+                'ui' => 0,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
+            ),
+            array(
+                'key' => $key . '_case_title',
+                'label' => 'Case Title',
+                'name' => $key . '_case_title',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => $key . '_is_case_type',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => $key . '_case_description',
+                'label' => 'Case Description',
+                'name' => $key . '_case_description',
+                'type' => 'textarea',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => array(
+                    array(
+                        array(
+                            'field' => $key . '_is_case_type',
+                            'operator' => '==',
+                            'value' => '1',
+                        ),
+                    ),
+                ),
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => 3,
+                'new_lines' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
+endif;

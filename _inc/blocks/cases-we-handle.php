@@ -54,41 +54,21 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields' => array(
             array(
-                'key' => $key . '_items',
-                'name' => $key . '_items',
-                'label' => 'Cases',
-                'type' => 'repeater',
-                'layout' => 'table',
-                'sub_fields' => array(
-                    array(
-                        'key' => $key . '_case_name',
-                        'name' => $key . '_case_name',
-                        'label' => 'Case Name',
-                        'type' => 'text',
-                    ),
-                    array(
-                        'key' => $key . '_case_link',
-                        'name' => $key . '_case_link',
-                        'label' => 'Case URL',
-                        'type' => 'text',
-                    ),
-                    array(
-                        'key' => $key . '_case_image',
-                        'label' => 'Case Image',
-                        'name' => $key . '_case_image',
-                        'type' => 'image',
-                        'return_format' => 'id',
-                        'preview_size' => 'medium',
-                        'library' => 'all',
-                    ),
-                    array(
-                        'key' => $key . '_description',
-                        'name' => $key . '_description',
-                        'type' => 'text',
-                        'label' => 'Description',
-                        'instructions' => '',
-                    ),
+                'key' => $key . '_case_items',
+                'label' => 'Case Items',
+                'name' => $key . '_case_items',
+                'type' => 'relationship',
+                'post_type' => array(
+                    0 => 'page',
                 ),
+                'filters' => array(
+                    0 => 'search',
+                ),
+                'elements' => array(
+                    0 => 'featured_image',
+                ),
+                'max' => 4,
+                'return_format' => 'id',
             ),
             array(
                 'key' => $key . '_title',
