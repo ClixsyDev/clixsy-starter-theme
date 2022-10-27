@@ -18,8 +18,7 @@
   }
 }
 
-.faq__position {
-  position: relative;
+.faq__header {
   &:after {
     content: '+';
     position: absolute;
@@ -28,12 +27,19 @@
     font-size: 40px;
     font-weight: 900;
   }
+}
+
+.faq__position {
+  position: relative;
+
   &.faq__position__active {
-    &:after {
-      content: '—';
-      top: 3%;
-      font-size: 30px;
-      color: #fff;
+    .faq__header {
+      &:after {
+        content: '—';
+        top: 3%;
+        font-size: 30px;
+        color: #fff;
+      }
     }
 
     .faq__text {
@@ -41,8 +47,7 @@
     }
 
     .faq__header {
-        @apply bg-accent text-white;
+      @apply bg-accent text-white;
     }
   }
-
 }
