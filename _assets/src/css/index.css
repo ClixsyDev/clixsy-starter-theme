@@ -47,6 +47,12 @@ body.logged-in {
   }
 }
 
+.span-change_color_3 {
+  span {
+    @apply text-accent;
+  }
+}
+
 .process_text_design__one {
   span {
     @apply font-bold text-accent;

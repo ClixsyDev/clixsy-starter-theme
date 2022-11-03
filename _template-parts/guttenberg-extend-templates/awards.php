@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
         <?php } ?>
         <div class="awards_slider glide relative max-w-[1920px] mx-auto">
             <div class="glide__track" data-glide-el="track">
-                <div class="glide__slides overflow-visible flex justify-around gap-3 items-center">
+                <div class="glide__slides overflow-visible flex justify-around gap-3 items-center py-[10px]">
                     <?php
                     if ($items) {
                         foreach ($items as $item) {
