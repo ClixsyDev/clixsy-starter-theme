@@ -50,7 +50,7 @@ $bottom_links = get_field('bottom_links', 'options');
                     <?php if ($phone) { ?>
                         <div>
                             <h5 class="text-accent font-main font-bold text-xl">PHONE</h5>
-                            <a href="mailto:<?php echo $phone ?>" class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone  ?></a>
+                            <a href="tel:<?php echo $phone ?>" class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone  ?></a>
                         </div>
                     <?php } ?>
                 </div>
