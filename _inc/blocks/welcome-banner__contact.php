@@ -51,6 +51,51 @@ if (function_exists('acf_add_local_field_group')) {
         ),
         'fields'         => array(
             array(
+                'key' => 'welcome_hero__contact_running_repeater',
+                'name' => 'welcome_hero__contact_running_repeater',
+                'label' => 'Running line items',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'welcome_hero__contact_running_repeater_google_stars',
+                        'label' => 'Google 5 Stars Badne',
+                        'name' => 'welcome_hero__contact_running_repeater_google_stars',
+                        'type' => 'true_false',
+                    ),
+                    array(
+                        'key' => 'welcome_hero__contact_repeater_text',
+                        'label' => 'Text',
+                        'name' => 'welcome_hero__contact_repeater_text',
+                        'type' => 'text',
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'welcome_hero__contact_running_repeater_google_stars',
+                                    'operator' => '==',
+                                    'value' => '0',
+                                ),
+                            ),
+                        ),
+                    ),
+                    array(
+                        'key' => 'welcome_hero__contact_blue_text',
+                        'label' => 'Blue Text?',
+                        'name' => 'welcome_hero__contact_blue_text',
+                        'type' => 'true_false',
+                        'conditional_logic' => array(
+                            array(
+                                array(
+                                    'field' => 'welcome_hero__contact_running_repeater_google_stars',
+                                    'operator' => '==',
+                                    'value' => '0',
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            array(
                 'key' => 'welcome_hero__contact_bg',
                 'name' => 'welcome_hero__contact_bg',
                 'type' => 'image',
@@ -91,30 +136,6 @@ if (function_exists('acf_add_local_field_group')) {
                     0 => 'search',
                 ),
                 'return_format' => 'id',
-            ),
-            array(
-                'key' => 'welcome_hero__contact_running_repeater',
-                'name' => 'welcome_hero__contact_running_repeater',
-                'label' => 'Running line items',
-                'type' => 'repeater',
-                'layout' => 'table',
-                'sub_fields' => array(
-                    array(
-                        'key' => 'field_6345f20f58b9c',
-                        'name' => 'text',
-                        'label' => 'Text',
-                        'type' => 'text',
-                    ),
-                    array(
-                        'key' => 'field_6345f21458b9d',
-                        'name' => 'icon',
-                        'label' => 'Icon',
-                        'type' => 'image',
-                        'return_format' => 'id',
-                        'preview_size' => 'thumbnail',
-                        'library' => 'all',
-                    ),
-                ),
             ),
         )
     ));

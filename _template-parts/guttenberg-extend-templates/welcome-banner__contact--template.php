@@ -35,9 +35,15 @@ if ($is_preview && !empty($previewImage)) {
     <section class="bg-white overflow-hidden" id="marquee">
         <div class="contact-page__first-slider mt-3">
             <div class="flex items-center gap-20">
-                <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/google-logo.png" alt="">
-                <p class="text-4xl font-main"><span class="text-accent font-bold">$2 MILLION</span> car accident case</p>
-                <p class="text-headings_second font-bold text-4xl lg:text-3xl">WON <span class="text-accent">MILLIONS</span> FOR HIS CLIENTS</p>
+                <?php if ($welcome_hero__contact_running_repeater) {
+                    foreach($welcome_hero__contact_running_repeater as $repeater_item) {
+                        if ($repeater_item['welcome_hero__contact_running_repeater_google_stars']) {
+                            echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/google-logo.png" alt="">';
+                        } else { ?>
+                            <p class="text-4xl span-change_color_3 font-main <?php echo $repeater_item['welcome_hero__contact_blue_text'] ? 'text-headings_second' : '' ?>"><?php echo $repeater_item['welcome_hero__contact_repeater_text'] ?></p>
+                        <?php }
+                    }
+                } ?>
             </div>
         </div>
     </section>

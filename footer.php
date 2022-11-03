@@ -41,16 +41,16 @@ $bottom_links = get_field('bottom_links', 'options');
                             <p class="text-white font-main font-bold text-2xl xl:text-xl"><?php echo $location ?></p>
                         </div>
                     <?php } ?>
-                    <?php if ($phone) { ?>
-                        <div>
-                            <h5 class="text-accent font-main font-bold text-xl">EMAIL</h5>
-                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $mail ?></p>
-                        </div>
-                    <?php } ?>
                     <?php if ($mail) { ?>
                         <div>
+                            <h5 class="text-accent font-main font-bold text-xl">EMAIL</h5>
+                            <a href="mailto:<?php echo $mail ?>" class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $mail ?></a>
+                        </div>
+                    <?php } ?>
+                    <?php if ($phone) { ?>
+                        <div>
                             <h5 class="text-accent font-main font-bold text-xl">PHONE</h5>
-                            <p class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone  ?></p>
+                            <a href="mailto:<?php echo $phone ?>" class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $phone  ?></a>
                         </div>
                     <?php } ?>
                 </div>

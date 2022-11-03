@@ -1060,11 +1060,9 @@ if (document.querySelector(lifeSlider) != undefined && document.querySelector(li
 const verdictsSlider = ".verdicts_slider";
 if (document.querySelector(verdictsSlider) != undefined && document.querySelector(verdictsSlider) != null) Array.from((0, _utils.getElements)(verdictsSlider)).forEach((item)=>{
     new (0, _glideDefault.default)(item, {
-        type: "carousel",
-        autoplay: 1,
-        animationDuration: 4000,
-        animationTimingFunc: "linear",
         perView: 4,
+        type: "carousel",
+        autoplay: 3000,
         breakpoints: {
             1100: {
                 perView: 3
@@ -1091,6 +1089,7 @@ if (document.querySelector(grSlider) != undefined && document.querySelector(grSl
     new (0, _glideDefault.default)(item, {
         perView: 3,
         type: "carousel",
+        autoplay: 3000,
         breakpoints: {
             1100: {
                 perView: 2
@@ -1130,20 +1129,6 @@ const marqueEl1 = document.getElementById("marquee");
 if (document.body.contains(marqueEl1)) {
     const marqueOne = new (0, _vanillaMarqueeDefault.default)(marqueEl1, {
         css3easing: "linear",
-        speed: window.innerWidth < 768 ? 40 : 60,
-        gap: 100,
-        delayBeforeStart: 0,
-        direction: "left",
-        duplicated: true,
-        duration: 5000,
-        startVisible: true
-    });
-    marqueOne.resume();
-}
-const verdicts = document.querySelector(".verdicts-marquee");
-if ((0, _utils.ifSelectorExist)(verdicts)) {
-    const verdictsMarquee = new (0, _vanillaMarqueeDefault.default)(verdicts, {
-        css3easing: "linear",
         speed: window.innerWidth < 768 ? 60 : 100,
         gap: 100,
         delayBeforeStart: 0,
@@ -1152,7 +1137,7 @@ if ((0, _utils.ifSelectorExist)(verdicts)) {
         duration: 5000,
         startVisible: true
     });
-    verdictsMarquee.resume();
+    marqueOne.resume();
 }
 
 },{"@glidejs/glide":"cS4lK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"blFj3","vanilla-marquee":"aRzML"}],"cS4lK":[function(require,module,exports) {
@@ -4559,11 +4544,11 @@ function headerInit() {
     const header = (0, _utils.getElement)("header");
     let isSticked = false;
     document.addEventListener("scroll", (e)=>{
-        if (!isSticked && window.scrollY >= 60) {
+        if (!isSticked && window.scrollY >= 160) {
             header.classList.add("sticked");
             isSticked = true;
         }
-        if (isSticked && window.scrollY <= 60) {
+        if (isSticked && window.scrollY <= 70) {
             header.classList.remove("sticked");
             isSticked = false;
         }
@@ -4600,6 +4585,6 @@ const hoverOnButton = ()=>{
     });
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"blFj3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map
