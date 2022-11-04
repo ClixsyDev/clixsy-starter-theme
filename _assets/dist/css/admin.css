@@ -8755,6 +8755,11 @@ header.sticked .menu-row-wrapper .call_header {
   padding-right: .75rem;
 }
 
+.acf-block-preview .py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .acf-block-preview .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -8833,16 +8838,6 @@ header.sticked .menu-row-wrapper .call_header {
 .acf-block-preview .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
-}
-
-.acf-block-preview .py-\[10p\] {
-  padding-top: 10p;
-  padding-bottom: 10p;
-}
-
-.acf-block-preview .py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .acf-block-preview .pt-12 {
@@ -12068,11 +12063,6 @@ html :where(.wp-block) {
   .xs\:text-sm {
     font-size: .875rem;
   }
-}
-
-.\[\&\>span\]\:text-accent > span {
-  --tw-text-opacity: 1;
-  color: rgb(105 190 38 / var(--tw-text-opacity));
 }
 
 /*# sourceMappingURL=admin.css.map */

@@ -38,13 +38,13 @@ $bottom_links = get_field('bottom_links', 'options');
                     <?php if ($location) { ?>
                         <div>
                             <h5 class="text-accent font-main font-bold text-xl">LOCATION</h5>
-                            <p class="text-white font-main font-bold text-2xl xl:text-xl"><?php echo $location ?></p>
+                            <p class="text-white font-main font-bold text-xl xl:text-xl"><?php echo $location ?></p>
                         </div>
                     <?php } ?>
                     <?php if ($mail) { ?>
                         <div>
                             <h5 class="text-accent font-main font-bold text-xl">EMAIL</h5>
-                            <a href="mailto:<?php echo $mail ?>" class="text-white font-main font-bold text-lg xl:text-xl"><?php echo $mail ?></a>
+                            <a href="mailto:<?php echo $mail ?>" class="text-white font-main font-bold text-xl xl:text-xl"><?php echo $mail ?></a>
                         </div>
                     <?php } ?>
                     <?php if ($phone) { ?>
