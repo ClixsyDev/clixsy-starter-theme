@@ -5971,11 +5971,21 @@ header.sticked .menu-row-wrapper .call_header {
   overflow: hidden;
 }
 
-.faq__position {
-  position: relative;
+.faq__text ul {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 23px;
 }
 
-.faq__position:after {
+.faq__text ul li {
+  margin-bottom: 5px;
+}
+
+.faq__text p {
+  margin-bottom: 10px;
+}
+
+.faq__header:after {
   content: "+";
   font-size: 40px;
   font-weight: 900;
@@ -5984,7 +5994,11 @@ header.sticked .menu-row-wrapper .call_header {
   right: 15px;
 }
 
-.faq__position.faq__position__active:after {
+.faq__position {
+  position: relative;
+}
+
+.faq__position.faq__position__active .faq__header:after {
   content: "—";
   color: #fff;
   font-size: 30px;
@@ -7858,6 +7872,10 @@ header.sticked .menu-row-wrapper .call_header {
   margin-left: -2.5rem;
 }
 
+.acf-block-preview .ml-52 {
+  margin-left: 13rem;
+}
+
 .acf-block-preview .-mt-2 {
   margin-top: -.5rem;
 }
@@ -8960,8 +8978,8 @@ header.sticked .menu-row-wrapper .call_header {
   padding-bottom: .75rem;
 }
 
-.acf-block-preview .pr-48 {
-  padding-right: 12rem;
+.acf-block-preview .pr-\[308px\] {
+  padding-right: 308px;
 }
 
 .acf-block-preview .pt-4 {
@@ -9056,8 +9074,8 @@ header.sticked .menu-row-wrapper .call_header {
   font-size: 60px;
 }
 
-.acf-block-preview .text-8xl {
-  font-size: 80px;
+.acf-block-preview .text-\[95px\] {
+  font-size: 95px;
 }
 
 .acf-block-preview .text-7xl {
@@ -9078,6 +9096,10 @@ header.sticked .menu-row-wrapper .call_header {
 
 .acf-block-preview .text-\[90px\] {
   font-size: 90px;
+}
+
+.acf-block-preview .text-8xl {
+  font-size: 80px;
 }
 
 .acf-block-preview .font-bold {
@@ -9510,7 +9532,33 @@ html :where(.wp-block) {
   }
 }
 
+@media (max-width: 1750px) {
+  .xxxl\:pr-\[200px\] {
+    padding-right: 200px;
+  }
+}
+
 @media (max-width: 1630px) {
+  .xxl\:ml-0 {
+    margin-left: 0;
+  }
+
+  .xxl\:ml-56 {
+    margin-left: 14rem;
+  }
+
+  .xxl\:ml-\[10\%\] {
+    margin-left: 10%;
+  }
+
+  .xxl\:ml-\[13\%\] {
+    margin-left: 13%;
+  }
+
+  .xxl\:ml-\[9\%\] {
+    margin-left: 9%;
+  }
+
   .xxl\:w-17\/24 {
     width: 70.8333%;
   }
@@ -9680,6 +9728,10 @@ html :where(.wp-block) {
 
   .xl\:mt-9 {
     margin-top: 2.25rem;
+  }
+
+  .xl\:ml-0 {
+    margin-left: 0;
   }
 
   .xl\:hidden {
