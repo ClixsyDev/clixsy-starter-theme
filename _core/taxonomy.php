@@ -86,7 +86,7 @@ function phillips_law_attorneys_cpt() {
 	));
 
 	register_post_type('form-entry', array(
-		'labels'             => array('name' => __('Form entry', 'law')),
+		'labels'             => array('name' => __('Form Entries', 'law')),
 		'menu_icon'          => 'dashicons-email-alt',
 		'hierarchical'       => false,
 		'public'             => false,
