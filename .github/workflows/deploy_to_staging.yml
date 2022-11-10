@@ -17,5 +17,5 @@ jobs:
         port: 54321
         script: |
           cd /var/www/bigauto.clixsy.com/public_html/wp-content/themes/clixsy-starter-theme/
-          git pull origin parcel
+          git pull origin bigauto
           git status
