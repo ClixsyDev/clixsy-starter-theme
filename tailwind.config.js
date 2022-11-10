@@ -24,6 +24,7 @@ module.exports = {
       '12xl': '125px',
     },
     screens: {
+      fhd: { max: '1920px' },
       xxxl: { max: '1750px' },
       xxl: { max: '1630px' },
       '2xl': { max: '1496px' },

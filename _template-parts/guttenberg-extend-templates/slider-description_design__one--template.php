@@ -30,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <div class="max-w-[85%] py-6 flex items-center gap-8 m-auto md:mt-[100px] md:flex-col" style="background-color: <?php echo $slider_description_design_one__slider_color ?: "" ?>">
                                     <?php echo wp_get_attachment_image($life_slide['image'], 'full', '', ['class' => 'ml-[-50px] xl:w-12/24 md:ml-0 md:w-19/24 md:mt-[-100px] max-w-[630px]']) ?>
                                     <?php if ($life_slide['content']) { ?>
-                                        <div class="prose-lg text-white font-main w-19/24 lg:w-20/24 md:m-auto px-4">
+                                        <div class="prose-lg text-white md:text-base font-main w-19/24 lg:w-20/24 md:m-auto px-4 md:px-auto">
                                             <?php echo $life_slide['content'] ?>
                                         </div>
                                     <?php } ?>
