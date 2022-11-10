@@ -16,6 +16,6 @@ jobs:
         key: ${{ secrets.CLIXSY_SECRET }}
         port: 54321
         script: |
-          cd /var/www/gokenny.clixsy.com/public_html/wp-content/themes/clixsy-starter-theme/
+          cd /var/www/bigauto.clixsy.com/public_html/wp-content/themes/clixsy-starter-theme/
           git pull origin parcel
           git status
