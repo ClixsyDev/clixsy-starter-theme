@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "clean:output": "rimraf dist",
-    "browsersync": "browser-sync start --proxy 'http://gokenny.local/' --files '**/*.php'",
+    "browsersync": "browser-sync start --proxy 'http://bigauto.develop/' --files '**/*.php'",
     "connc": "concurrently --kill-others",
     "watch": "concurrently --kill-others  'npm run browsersync' 'npx parcel _assets/src/css/index.css _assets/src/css/admin.css _assets/src/js/main.js --dist-dir _assets/dist'",
     "build": "npx parcel build _assets/src/css/index.css _assets/src/js/main.js --dist-dir _assets/dist"

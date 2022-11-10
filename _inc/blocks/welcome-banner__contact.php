@@ -26,7 +26,7 @@ function register_welcome_banner__contact()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/welcome-banner__contact.png',
+                            'preview_image' => get_template_directory_uri() . '/_assets/src/img/guttenberg-preview/welcome-banner__contact.png',
                         ),
                     )
                 )

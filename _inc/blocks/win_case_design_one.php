@@ -26,7 +26,7 @@ function register_win_case_design__one()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_stylesheet_directory_uri() . '/_assets/src/img/guttenberg-preview/win_case-design__one.png',
+                            'preview_image' => get_template_directory_uri() . '/_assets/src/img/guttenberg-preview/win_case-design__one.png',
                         ),
                     )
                 )

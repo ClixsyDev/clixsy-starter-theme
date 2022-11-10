@@ -19,6 +19,9 @@ require_once('_core/cf7_form_entry/export_entry.php');
 // Helper Functions
 require_once('_core/helpers/helper-functions.php');
 
+// Theme settings from ACF
+require_once('_core/helpers/theme-options-acf.php');
+
 // Template Functions
 require_once('_core/helpers/template-functions.php');
 

@@ -25,7 +25,7 @@ function starter_scripts()
     // Main Stylesheet
     wp_enqueue_style(
         'starter-style',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/css/index.css',
+        trailingslashit(get_template_directory_uri()) . '_assets/dist/css/index.css',
         [],
         $version
     );
@@ -40,7 +40,7 @@ function starter_scripts()
     // Main Script
     wp_enqueue_script(
         'starter-script',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/js/main.js',
+        trailingslashit(get_template_directory_uri()) . '_assets/dist/js/main.js',
         [],
         $version,
         true
@@ -58,14 +58,14 @@ function admin_style()
     $version = '5.0.0';
     wp_enqueue_style(
         'starter-style',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/css/admin.css',
+        trailingslashit(get_template_directory_uri()) . '_assets/dist/css/admin.css',
         [],
         $version
     );
      // Main Script
      wp_enqueue_script(
         'starter-script-admin',
-        trailingslashit(get_stylesheet_directory_uri()) . '_assets/dist/js/main.js',
+        trailingslashit(get_template_directory_uri()) . '_assets/dist/js/main.js',
         [],
         $version,
         true
