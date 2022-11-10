@@ -8,13 +8,6 @@
     <meta name="msapplication-TileColor" content="#114b7d">
     <meta name="theme-color" content="#ffffff">
     <?php wp_head(); ?>
-    <!-- Google Tag Manager -->
-    <!-- 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-TF8CHB6');</script> -->
-    <!-- End Google Tag Manager -->
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,14 +26,9 @@
 </head>
 
 <body <?php body_class('font-main body'); ?>>
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF8CHB6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
     <?php $logo = get_field('logo', 'options'); 
     $phone = get_field('phone', 'options');
     ?>
-
 
     <!-- testing mega menu -->
 
