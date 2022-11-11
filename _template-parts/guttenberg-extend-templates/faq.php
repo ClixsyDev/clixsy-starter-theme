@@ -15,7 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     $faq_repeater_hidden = get_field($key . '_repeater_hidden');
     $image = get_field($key . '_image');
 ?>
-    <div class="py-24">
+    <div class="py-24 sm:pt-10 sm:pb-14">
         <div class="container">
             <?php if ($title) { ?>
                 <div class="mb-16 lg:mb-8">

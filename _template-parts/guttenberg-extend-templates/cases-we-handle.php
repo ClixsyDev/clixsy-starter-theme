@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $button2 = get_field($key . '_button_2');
     $case_items = get_field('cases_we_handle_case_items');
 ?>
-    <div class="bg-headings pt-14 pb-16">
+    <div class="bg-headings pt-14 pb-16 sm:pt-7 sm:pb-12">
         <div class="container">
             <?php if ($title) { ?>
                 <h2 class="heading_h2 white pb-5 capitalize">

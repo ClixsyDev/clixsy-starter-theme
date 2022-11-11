@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
     $form_description = get_field($key . '_form_description');
     $form = get_field($key . '_form_shortcode');
 ?>
-    <div class="how_can_help relative pt-8 pb-44">
+    <div class="how_can_help relative pt-8 pb-44 sm:pb-10">
         <div class="container flex items-end xl:max-w-full md:flex-wrap md:flex-col">
             <div class="w-[65%] lg:w-full relative">
                 <h2 class="font-main font-bold absolute right-4 top-40 text-[60px] text-right leading-tight max-w-[367px] 
@@ -39,7 +39,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
             </div>
-            <div class="w-[515px] lg:w-full form_elements_design_one how_can_help_form  bg-headings p-11 -mb-12 sm:p-6 ">
+            <div class="w-[515px] lg:w-full lg:max-w-[400px] md:max-w-full form_elements_design_one how_can_help_form  bg-headings p-11 -mb-12 sm:p-6 sm:mb-0">
                 <?php if ($form_description) { ?>
                     <div class="font-second text-white text-xl lg:text-base leading-tight mb-4">
                         <?= $form_description ?>
