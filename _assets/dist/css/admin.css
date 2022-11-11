@@ -255,7 +255,7 @@
 .main-menu {
   justify-content: space-evenly;
   align-items: center;
-  gap: 0 20px;
+  gap: 0 65px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10456,8 +10456,16 @@ html :where(.wp-block) {
     width: 45%;
   }
 
+  .lg\:w-\[400px\] {
+    width: 400px;
+  }
+
   .lg\:max-w-\[160px\] {
     max-width: 160px;
+  }
+
+  .lg\:max-w-\[400px\] {
+    max-width: 400px;
   }
 
   .lg\:-translate-y-16 {
@@ -10701,6 +10709,10 @@ html :where(.wp-block) {
     margin-left: 0;
   }
 
+  .mdt\:mt-0 {
+    margin-top: 0;
+  }
+
   .mdt\:mb-0 {
     margin-bottom: 0;
   }
@@ -10723,10 +10735,6 @@ html :where(.wp-block) {
 
   .mdt\:mt-2 {
     margin-top: .5rem;
-  }
-
-  .mdt\:mt-0 {
-    margin-top: 0;
   }
 
   .mdt\:block {
@@ -11310,6 +11318,10 @@ html :where(.wp-block) {
     max-width: 100px;
   }
 
+  .md\:max-w-full {
+    max-width: 100%;
+  }
+
   .md\:translate-y-0 {
     --tw-translate-y: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -11530,6 +11542,14 @@ html :where(.wp-block) {
     margin-top: 1.25rem;
   }
 
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0;
+  }
+
   .sm\:mb-4 {
     margin-bottom: 1rem;
   }
@@ -11631,6 +11651,11 @@ html :where(.wp-block) {
     padding: 0;
   }
 
+  .sm\:py-9 {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
   .sm\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -11653,6 +11678,26 @@ html :where(.wp-block) {
 
   .sm\:pt-0 {
     padding-top: 0;
+  }
+
+  .sm\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:pt-7 {
+    padding-top: 1.75rem;
+  }
+
+  .sm\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .sm\:pb-14 {
+    padding-bottom: 3.5rem;
   }
 
   .sm\:text-center {

@@ -13,7 +13,7 @@ if ($is_preview && !empty($previewImage)) {
     $reviews_design_two_link = get_field('reviews_design_two_link');
     $reviews_design_two_bg = get_field('reviews_design_two_bg');
 ?>
-    <section class="py-20 lg:py-16 bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo $reviews_design_two_bg ? wp_get_attachment_image_url($reviews_design_two_bg, 'full') : '' ?>')">
+    <section class="py-20 lg:py-16 bg-cover lg:bg-contain lg:bg-repeat sm:py-9" style="background-image: url('<?php echo $reviews_design_two_bg ? wp_get_attachment_image_url($reviews_design_two_bg, 'full') : '' ?>')">
         <div class="container">
             <?php if ($reviews_design_two_title) { ?>
                 <h2 class="heading_h2 pb-4"><?php echo $reviews_design_two_title ?></h2>

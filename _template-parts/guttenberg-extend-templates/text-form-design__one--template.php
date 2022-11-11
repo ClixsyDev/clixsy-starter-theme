@@ -49,10 +49,10 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <div class="py-5 relative ">
                         <span class="bg-smoke w-[280%] -left-[40%] top-0 h-full -z-[1] absolute mdt:h-[320%] block"></span>
-                        <div class="<?php echo $text_form_design_one__icon ? 'gap-6 lg:gap-3' : '' ?>  flex items-center ">
+                        <div class="<?php echo $text_form_design_one__icon ? 'gap-6 lg:gap-3 sm:flex-col' : '' ?>  flex items-center ">
                             <div>
                                 <?php if ($text_form_design_one__icon) {
-                                    echo wp_get_attachment_image($text_form_design_one__icon, 'full', '', ['class' => 'xxl:w-20/24']);
+                                    echo wp_get_attachment_image($text_form_design_one__icon, 'full', '', ['class' => 'xxl:w-20/24 sm:w-full']);
                                 } ?>
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
