@@ -25,7 +25,7 @@ function litify_hook_callback()
     $phone = $data['client_phone'] ?: '-';
     $description = $data['client_message'] ?: '-';
     $zip = $data['client_zip'] ?: '-';
-    $gclid = $data['gclid_field'] ?: '-';
+    $gclid = $data['GCLID'] ?: '';
     $litify_case = $data['client_case_type'] ?: '-';
 
     switch ($data['client_case_type']) {
@@ -75,7 +75,7 @@ function litify_hook_callback()
      "phone" : "{$phone}",
      "description" : "{$description}",
      "caseType" : "{$litify_case}",
-     "Case_Postal_Code" : "{$zip}",
+     "caseZip" : "{$zip}",
      "websource" : "Website",
      "intakeStatus": "Open",
      "gclid" : "{$gclid}"
