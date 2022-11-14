@@ -75,7 +75,7 @@ function litify_hook_callback()
      "phone" : "{$phone}",
      "description" : "{$description}",
      "caseType" : "{$litify_case}",
-     "Case_Postal_Code" : "{$zip}",
+     "caseZip" : "{$zip}",
      "websource" : "Website",
      "intakeStatus": "Open",
      "gclid" : "{$gclid}"
