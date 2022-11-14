@@ -54,7 +54,7 @@ function litify_hook_callback()
             break;
     }
 
-    $url = "https://phillipsintakes.secure.force.com/api/services/apexrest/litify_pm/api/v1/intake/create";
+    $url = "https://webhook.site/6ce2ffe1-d7e5-41e8-85c4-42720e287a31";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_URL, $url);
