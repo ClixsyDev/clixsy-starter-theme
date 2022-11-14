@@ -1,1 +1,1 @@
-module.exports = {smoke: '#a5acaf', process_smoke: '#f4f2f2', bg_second: '#021a33', accent: '#3171b8', accent_hover: '#0055b7', button_color: '#d1383a', button_hover_color: '#d16466', headings: '#393939', headings_second: '#3171b8', };
+module.exports = {bg_second: '#b5b5b5', bigauto_red: '#d1383a', bg_sections: '#f7f8fa', accent: '#3171b8', accent_hover: '#878787', button_color: '#dd8e33', button_hover_color: '#b7b7b7', headings: '#393939', headings_second: '#0a423e', };
