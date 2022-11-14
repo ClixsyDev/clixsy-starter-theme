@@ -44,41 +44,6 @@
     }
   }
 }
-/* .contact-page__form {
-  [type='text'],
-  [type='email'],
-  [type='tel'] {
-    @apply focus:text-black  w-full h-12 py-4 pl-5 mb-3 mt-3 border-headings border-2 focus:outline-none focus:border-accent active:border-accent;
-  }
-
-  textarea {
-    @apply focus:text-black w-full h-16  lg:h-28 pt-4 pl-5 mt-3 border-headings border-2  focus:outline-none focus:border-white;
-  }
-
-  [type='submit'] {
-    @apply my-6 mx-auto xl:mt-6 xl:mb-8 md:my-5 bg-accent w-64 rounded-full  h-16 xl:h-12 text-xl flex items-center justify-center hover:bg-accent hover:text-white font-main font-bold transition duration-300;
-  }
-
-  [type='text']::placeholder,
-  [type='email']::placeholder,
-  [type='tel']::placeholder,
-  [type='submit']::placeholder,
-  textarea::placeholder {
-    @apply text-[#707070];
-  }
-  .wpcf7-spinner,
-  .wpcf7-response-output,
-  .wpcf7-not-valid-tip {
-    @apply hidden;
-  }
-
-  .wpcf7-not-valid {
-    border: 2px solid red;
-  }
-  .policy-text {
-    @apply text-sm;
-  }
-} */
 
 .subscribe_form--style-1 {
   @apply flex gap-x-4 items-end justify-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;

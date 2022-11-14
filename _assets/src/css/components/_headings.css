@@ -13,10 +13,10 @@
 }
 
 .heading_h1 {
-  @apply font-main text-headings text-7xl text-center font-bold lg:text-5xl xs:text-4xl;
+  @apply font-main text-accent text-7xl text-center font-bold lg:text-5xl xs:text-4xl;
 
   span {
-    @apply text-accent border-b-4;
+    @apply text-headings border-b-4;
   }
 }
 

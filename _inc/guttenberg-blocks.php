@@ -50,3 +50,11 @@ foreach ($files as $file) {
 		require_once $file;
 	}
 }
+
+
+$files_client_2 = glob(get_template_directory() . '/_inc/blocks/client-2/*.php');
+foreach ($files_client_2 as $file) {
+	if (file_exists($file)) {
+		require_once $file;
+	}
+}
