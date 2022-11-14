@@ -7973,14 +7973,6 @@ h2 span {
   margin-top: .5rem;
 }
 
-.acf-block-preview .mt-40 {
-  margin-top: 10rem;
-}
-
-.acf-block-preview .mb-40 {
-  margin-bottom: 10rem;
-}
-
 .acf-block-preview .mt-7 {
   margin-top: 1.75rem;
 }
@@ -8111,6 +8103,14 @@ h2 span {
 
 .acf-block-preview .-mt-\[210px\] {
   margin-top: -210px;
+}
+
+.acf-block-preview .mt-40 {
+  margin-top: 10rem;
+}
+
+.acf-block-preview .mb-40 {
+  margin-bottom: 10rem;
 }
 
 .acf-block-preview .-mt-60 {
@@ -8822,14 +8822,9 @@ h2 span {
   background-color: rgb(165 172 175 / var(--tw-bg-opacity));
 }
 
-.acf-block-preview .bg-headings_second, .acf-block-preview .bg-\[\#3171B8\] {
+.acf-block-preview .bg-headings_second {
   --tw-bg-opacity: 1;
   background-color: rgb(49 113 184 / var(--tw-bg-opacity));
-}
-
-.acf-block-preview .bg-\[\#393939\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-gray-200 {
@@ -8849,6 +8844,16 @@ h2 span {
 
 .acf-block-preview .bg-white\/60 {
   background-color: #fff9;
+}
+
+.acf-block-preview .bg-\[\#3171B8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
+}
+
+.acf-block-preview .bg-\[\#393939\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-opacity-75 {
@@ -8957,11 +8962,6 @@ h2 span {
   padding-right: .5rem;
 }
 
-.acf-block-preview .py-11 {
-  padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
-}
-
 .acf-block-preview .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -9062,6 +9062,11 @@ h2 span {
   padding-right: 4rem;
 }
 
+.acf-block-preview .py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
 .acf-block-preview .pt-12 {
   padding-top: 3rem;
 }
@@ -9098,12 +9103,12 @@ h2 span {
   padding-bottom: 6rem;
 }
 
-.acf-block-preview .pb-8 {
-  padding-bottom: 2rem;
-}
-
 .acf-block-preview .pb-12 {
   padding-bottom: 3rem;
+}
+
+.acf-block-preview .pb-8 {
+  padding-bottom: 2rem;
 }
 
 .acf-block-preview .pb-7 {
@@ -9270,10 +9275,6 @@ h2 span {
   font-size: 1.875rem;
 }
 
-.acf-block-preview .text-\[75px\] {
-  font-size: 75px;
-}
-
 .acf-block-preview .text-4xl {
   font-size: 2.25rem;
 }
@@ -9312,6 +9313,10 @@ h2 span {
 
 .acf-block-preview .text-8xl {
   font-size: 80px;
+}
+
+.acf-block-preview .text-\[75px\] {
+  font-size: 75px;
 }
 
 .acf-block-preview .font-bold {

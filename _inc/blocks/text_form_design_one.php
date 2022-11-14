@@ -122,11 +122,11 @@ if (function_exists('acf_add_local_field_group')) :
                 'required' => 0,
             ),
             array(
-              'key' => $block_key .'button',
-              'name' => $block_key .'button',
-              'label' => 'Button',
-              'type' => 'link',
-              'return_format' => 'array',
+                'key' => $block_key . 'button',
+                'name' => $block_key . 'button',
+                'label' => 'Button',
+                'type' => 'link',
+                'return_format' => 'array',
             ),
         ),
 
