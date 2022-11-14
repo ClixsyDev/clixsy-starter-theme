@@ -55,7 +55,7 @@ function litify_hook_callback()
             break;
     }
 
-    $url = "https://webhook.site/6ce2ffe1-d7e5-41e8-85c4-42720e287a31";
+    $url = "https://webhook.site/fd764ba7-6986-4437-a727-7031f9cdbd24";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_URL, $url);
