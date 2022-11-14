@@ -13,3 +13,4 @@ vendor/*
 vendor/composer/installed.php
 vendor/composer/InstalledVersions.php
 tailwind-colors.js
+tailwind-fonts.js
