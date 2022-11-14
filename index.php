@@ -38,4 +38,8 @@ use App\Template;
         <?php } ?>
     </div>
 </main>
+<?php include(Template::locate('_template-parts/guttenberg-extend-templates/attorney-group-section.php')); ?>
+
+
+
 <?php get_footer(); ?>
