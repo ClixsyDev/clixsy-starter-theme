@@ -38,4 +38,7 @@ use App\Template;
         <?php } ?>
     </div>
 </main>
+
+
+
 <?php get_footer(); ?>

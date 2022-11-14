@@ -1,4 +1,4 @@
-<?php 
+<?php
 $socials = get_field('socials', 'options');
 $footer_logo = get_field('logo', 'options');
 $location = get_field('location', 'options');
@@ -21,8 +21,8 @@ $bottom_links = get_field('bottom_links', 'options');
             </div>
             <?php if ($subscribe_form) { ?>
                 <div class="xl:ml-16 sm:w-full sm:ml-0">
-                    <?php 
-                        echo do_shortcode('[contact-form-7 id="'.$subscribe_form.'" title="Subscribe form"]');
+                    <?php
+                    echo do_shortcode('[contact-form-7 id="' . $subscribe_form . '" title="Subscribe form"]');
                     ?>
                 </div>
             <?php } ?>
@@ -83,21 +83,22 @@ $bottom_links = get_field('bottom_links', 'options');
             <?php if ($footer_logo) { ?>
                 <div>
                     <?php echo wp_get_attachment_image($footer_logo, 'full', "", ["class" => "w-19/24 sm:w-9/24"]); ?>
-                </div> 
-            <?php } ?>      
+                </div>
+            <?php } ?>
         </div>
         <?php if ($bottom_links) { ?>
             <div class="flex gap-6 mt-5 sm:justify-between">
                 <?php foreach ($bottom_links as $link_item) { ?>
-                    <a href="<?php echo esc_url( $link_item['link']['url'] ); ?>" class="text-white text-lg"> <?php echo esc_html( $link_item['link']['title'] ); ?></a>
+                    <a href="<?php echo esc_url($link_item['link']['url']); ?>" class="text-white text-lg"> <?php echo esc_html($link_item['link']['title']); ?></a>
                 <?php } ?>
             </div>
         <?php } ?>
         <!-- <div>
             
         </div> -->
-        
+
     </div>
+
 </footer>
 
 

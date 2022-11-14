@@ -541,6 +541,7 @@ var _sliders = require("./sliders");
 var _slidersDefault = parcelHelpers.interopDefault(_sliders);
 var _formEntry = require("./form_entry");
 var _buttonHover = require("./button-hover");
+var _litifyAjax = require("./litify-ajax");
 (0, _utils.ready)(()=>{
     (0, _menu.mainMenu)();
     (0, _menu.dropdownMenu)();
@@ -550,6 +551,7 @@ var _buttonHover = require("./button-hover");
     btnMore();
     btnMoreEducation();
     initFAQ();
+    (0, _litifyAjax.litifyCall)();
 });
 /* FAQ start */ const initFAQ = ()=>{
     const acc = (0, _utils.getElements)(".faq__header");
@@ -621,7 +623,7 @@ const nextArrow = ()=>{
 };
 nextArrow();
 
-},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
+},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./litify-ajax":"dwgAa"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mainMenu", ()=>mainMenu);
@@ -4600,6 +4602,31 @@ const hoverOnButton = ()=>{
     });
 };
 
-},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dwgAa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "litifyCall", ()=>litifyCall);
+const litifyCall = ()=>{
+    document.addEventListener("wpcf7mailsent", function(event) {
+        var inputs = event.detail.inputs;
+        let fullData = {};
+        for(var i = 0; i < inputs.length; i++)fullData[inputs[i].name] = inputs[i].value;
+        async function litifyCallAsync() {
+            let data = {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                },
+                body: JSON.stringify(fullData)
+            };
+            let response = await fetch(ajax_url.ajaxurl + "?action=litify_hook", data);
+            let serverResponse = await response.text();
+            console.log(serverResponse);
+        }
+        litifyCallAsync();
+    }, false);
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map

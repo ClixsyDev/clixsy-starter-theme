@@ -5991,6 +5991,157 @@ h2 span {
   display: none;
 }
 
+.attorney-group__form {
+  justify-content: flex-end;
+  align-items: flex-end;
+  column-gap: 1rem;
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .attorney-group__form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+.attorney-group__form input, .attorney-group__form textarea {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.attorney-group__form input {
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.attorney-group__form input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+  padding-left: 1rem;
+}
+
+.attorney-group__form input[type="submit"] {
+  height: 3rem;
+  width: 14rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  border-radius: 9999px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.attorney-group__form textarea {
+  height: 10rem;
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-left: 1rem;
+}
+
+.attorney-group__form textarea::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+}
+
+.attorney-group__form p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+.attorney-group__form label {
+  padding-left: .5rem;
+}
+
+.attorney-group__form .wpcf7-spinner {
+  display: none;
+}
+
+.attorney-group__form {
+  justify-content: flex-end;
+  align-items: flex-end;
+  column-gap: 1rem;
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .attorney-group__form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+.attorney-group__form input, .attorney-group__form textarea {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.attorney-group__form input {
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.attorney-group__form input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+  padding-left: 1rem;
+}
+
+.attorney-group__form input[type="submit"] {
+  height: 3rem;
+  width: 14rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  border-radius: 9999px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.attorney-group__form textarea {
+  height: 10rem;
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-left: 1rem;
+}
+
+.attorney-group__form textarea::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+}
+
+.attorney-group__form p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+.attorney-group__form label {
+  padding-left: .5rem;
+}
+
+.attorney-group__form .wpcf7-spinner, .attorney-group__form br, .attorney-group__form p:empty {
+  display: none;
+}
+
 .faq__text {
   max-height: 0;
   -o-transition: max-height .25s linear;
@@ -7959,6 +8110,14 @@ h2 span {
   margin-top: -210px;
 }
 
+.acf-block-preview .mt-40 {
+  margin-top: 10rem;
+}
+
+.acf-block-preview .mb-40 {
+  margin-bottom: 10rem;
+}
+
 .acf-block-preview .-mt-60 {
   margin-top: -15rem;
 }
@@ -8887,6 +9046,11 @@ h2 span {
   padding-right: 4rem;
 }
 
+.acf-block-preview .py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
 .acf-block-preview .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -9140,6 +9304,10 @@ h2 span {
   font-size: 80px;
 }
 
+.acf-block-preview .text-\[75px\] {
+  font-size: 75px;
+}
+
 .acf-block-preview .font-bold {
   font-weight: 700;
 }
@@ -9239,6 +9407,11 @@ h2 span {
 .acf-block-preview .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.acf-block-preview .text-\[\#C6C5C5\] {
+  --tw-text-opacity: 1;
+  color: rgb(198 197 197 / var(--tw-text-opacity));
 }
 
 .acf-block-preview .underline {
