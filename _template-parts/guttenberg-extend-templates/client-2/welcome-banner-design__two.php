@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_two__section_bg_second = get_field('welcome_banner__design_two__section_bg_second');
 ?>
     <section>
-        <div class=" pb-52 pt-20 lg:pb-56 sm:pb-24" style="background-color: <?php echo $welcome_banner__design_two__section_bg_first ?: ''  ?> ;">
+        <div class=" pb-52 pt-20 lg:pb-56 sm:pb-24">
             <?php if ($welcome_banner__design_two__title) { ?>
                 <div class="container">
                     <h1 class="heading_h1"><?php echo $welcome_banner__design_two__title ?></h1>
