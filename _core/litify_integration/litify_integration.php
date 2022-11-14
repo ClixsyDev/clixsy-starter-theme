@@ -3,7 +3,7 @@
 
 function wh_log($log_msg)
 {
-    $log_filename = WP_CONTENT_DIR . "/litify-log/log";
+    $log_filename = WP_CONTENT_DIR . "/litify-log/";
     if (!file_exists($log_filename)) {
         // create directory/folder uploads.
         mkdir($log_filename, 0777, true);
