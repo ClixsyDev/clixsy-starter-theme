@@ -1,1 +1,1 @@
-module.exports = {main: 'Lato', second: 'Montserrat', };
+module.exports = {main: 'Montserrat', second: 'Arial', };
