@@ -4,6 +4,8 @@ import { getElement, getElements, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
+import { litifyCall } from './litify-ajax';
+
 
 ready(() => {
   mainMenu();
@@ -14,7 +16,7 @@ ready(() => {
   btnMore();
   btnMoreEducation();
   initFAQ();
-
+  litifyCall();
 });
 
 
