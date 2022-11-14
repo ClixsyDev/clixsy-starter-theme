@@ -65,7 +65,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($reviews_design_one_arrows) { ?>
                         <div class="text-center relative mt-7">
                             <div class="glide__arrows absolute right-[60%] top-11% w-max lg:right-[65%] md:right-[65%] xs:right-[70%]" data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-left.png"></button>
+                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img class="w-9/12" src="<?= get_template_directory_uri() ?>/assets/img/bottom-arrow-left.png"></button>
                             </div>
                             <div class="glide__bullets" data-glide-el="controls[nav]">
                                 <?php for ($i = 1; $i <= count($reviews_design_one_select); $i++) { ?>
@@ -73,7 +73,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php } ?>
                             </div>
                             <div class="glide__arrows absolute left-[60%] lg:left-[65%] md:left-[65%] xs:left-[70%]  top-[11%] w-max " data-glide-el="controls">
-                                <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-right.png"></button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"><img class="w-9/12" src="<?= get_template_directory_uri() ?>/assets/img/bottom-arrow-right.png"></button>
                             </div>
                         </div>
                     <?php } ?>

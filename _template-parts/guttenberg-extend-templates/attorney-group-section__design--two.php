@@ -5,7 +5,7 @@
                 <img class="object-contain mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/attorneygroup.png" alt="">
             </div>
             <div class="bg-[#3171B8] py-11 font-bold">
-                <p class=" text-3xl">We don't settle -</p>
+                <p class=" text-3xl text-[#C6C5C5]">We don't settle -</p>
                 <p class=" text-[75px]">We Settle BIG</p>
             </div>
 

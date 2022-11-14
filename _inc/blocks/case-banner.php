@@ -13,6 +13,7 @@
 function register_case_banner()
 {
     if (function_exists('acf_register_block_type')) {
+        // TODO: why do we need this part? @max
         // acf_register_block_type(
         //     array(
         //         'name'            => 'welcome-banner',

@@ -10,8 +10,7 @@
 
 
 
-function register_verdicts_design__one()
-{
+function register_verdicts_design__one() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -82,6 +81,19 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Background image',
                     'return_format' => 'id',
                     'preview_size' => 'thumbnail'
+                ),
+                array(
+                    'key' => $block_key . 'title',
+                    'name' => $block_key . 'title',
+                    'type' => 'textarea',
+                    'label' => 'Title',
+                    'instructions' => '',
+                ),
+                array(
+                    'key' => $block_key . 'bg_color',
+                    'name' => $block_key . 'bg_color',
+                    'type' => 'color_picker',
+                    'label' => 'Seciton background color',
                 ),
             ),
 
