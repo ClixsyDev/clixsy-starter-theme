@@ -8846,16 +8846,6 @@ h2 span {
   background-color: #fff9;
 }
 
-.acf-block-preview .bg-\[\#3171B8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
-}
-
-.acf-block-preview .bg-\[\#393939\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
-}
-
 .acf-block-preview .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }

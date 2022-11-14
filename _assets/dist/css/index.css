@@ -8846,16 +8846,6 @@ img, video {
   background-color: #fff9;
 }
 
-.bg-\[\#3171B8\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#393939\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }
