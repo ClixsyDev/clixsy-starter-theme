@@ -64,3 +64,6 @@ require_once('_core/ajax/_init.php');
 require_once('_core/guttenberg-extend.php');
 
 require_once('_inc/guttenberg-blocks.php');
+
+//Litify api integration
+require_once('_core/litify_integration/litify_integration.php');
