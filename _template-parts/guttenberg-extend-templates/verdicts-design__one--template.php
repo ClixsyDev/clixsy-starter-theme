@@ -1,7 +1,6 @@
 <?php
 
 use App\Template;
-
 $previewImage = @$block['data']['preview_image'];
 // back-end previews
 if ($is_preview && !empty($previewImage)) {
@@ -10,13 +9,20 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $verdicts_design_one__verdicts = get_field('verdicts_design_one__verdicts');
     $verdicts_design_one__bg = get_field('verdicts_design_one__bg');
+    $verdicts_design_one__title = get_field('verdicts_design_one__title');
+    $verdicts_design_one__bg_color = get_field('verdicts_design_one__bg_color');
 
 ?>
     <?php if ($verdicts_design_one__verdicts['0']) { ?>
-        <div class="relative">
+        <div class="relative" style="background-color: <?php echo $verdicts_design_one__bg_color ?: '' ?> ">
             <?php if ($verdicts_design_one__bg) {
                 echo wp_get_attachment_image($verdicts_design_one__bg, 'full', '', ['class' => 'absolute left-0 top-0 w-full h-full object-cover']);
             } ?>
+            <?php if ($verdicts_design_one__title) { ?>
+            <h2 class="heading_h2 relative pt-6 mb-6 mx-auto">
+                <?php echo $verdicts_design_one__title ?>
+            </h2>
+            <?php } ?>
             <div class="verdicts_slider glide relative">
                 <div class="glide__track" data-glide-el="track">
                     <div class="glide__slides overflow-visible flex justify-around gap-3 items-center  pt-12 pb-14 2xl:pt-6 2xl:pb-7">
