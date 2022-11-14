@@ -78,7 +78,7 @@ function litify_hook_callback()
      "Case_Postal_Code" : "{$zip}",
      "websource" : "Website",
      "intakeStatus": "Open",
-	 "gclid": "{$gclid}"
+     "gclid" : "{$gclid}"
     }
     DATA;
 
