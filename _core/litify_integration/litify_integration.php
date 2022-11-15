@@ -19,7 +19,7 @@ function litify_hook_callback()
 
     $data = json_decode(file_get_contents('php://input'), true);
    
-    $firstName = $data['client_name'] ?: '-';
+    $firstName = $data['client_first_name'] ?: '-';
     $lastName = $data['client_last_name'] ?: '-';
     $email = $data['client_email'] ?: '-';
     $phone = $data['client_phone'] ?: '-';
