@@ -18,26 +18,26 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="container mt-40 mb-40  text-white">
-        <div class="grid grid-cols-12 gap-5">
-            <div class="col-span-8 text-center bg-white">
+    <section class="container mt-24 mb-36  text-white font-second">
+        <div class="grid grid-cols-12 row-auto gap-5 mdt:gap-0">
+            <div class="col-span-8 mdt:col-span-10 mdt:col-start-2 text-center bg-white">
                 <?php if ($attorney_group_section_design_two__image) { ?>
                     <?php echo wp_get_attachment_image($attorney_group_section_design_two__image, 'full', '', ['class' => 'object-contain mx-auto']) ?>
                 <?php } ?>
 
                 <?php if ($attorney_group_section_design_two__first_text || $attorney_group_section_design_two__second_text) { ?>
                     <div class="py-11 font-bold" style="background-color: <?php echo $attorney_group_section_design_two__section_bg ?: ''  ?> ;">
-                        <div class=" text-3xl text-[#C6C5C5]">
+                        <div class=" text-3xl md:text-2xl sm:text-lg text-[#C6C5C5]">
                             <?php echo $attorney_group_section_design_two__first_text ?>
                         </div>
-                        <div class=" text-[75px]">
+                        <div class="text-[75px] md:text-5xl sm:text-4xl text-white">
                             <?php echo $attorney_group_section_design_two__second_text ?>
                         </div>
                     </div>
                 <?php } ?>
             </div>
             <?php if ($attorney_group_section_design_two__form_select && $attorney_group_section_design_two__form_select['0']) { ?>
-                <div class="col-span-4 w-full pt-10 pb-8" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
+                <div class="col-span-4  mdt:col-span-10 mdt:col-start-2 w-full pt-10 pb-8" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
                     <div class="attorney-group__form">
                         <?php echo $attorney_group_section_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $attorney_group_section_design_two__form_select['0'] . '" title="Contact form"]') : '' ?>
                     </div>

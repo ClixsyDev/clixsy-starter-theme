@@ -6135,10 +6135,22 @@ h2 span {
 }
 
 .attorney-group__form label {
+  padding-bottom: .5rem;
   padding-left: .5rem;
 }
 
-.attorney-group__form .wpcf7-spinner, .attorney-group__form br, .attorney-group__form p:empty {
+.attorney-group__form .wpcf7-spinner {
+  display: none;
+}
+
+.attorney-group__form .wpcf7-form-control-wrap {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.attorney-group__form br, .attorney-group__form p:empty {
   display: none;
 }
 
@@ -7904,6 +7916,10 @@ h2 span {
   grid-column: span 3 / span 3;
 }
 
+.acf-block-preview .row-auto {
+  grid-row: auto;
+}
+
 .acf-block-preview .m-auto {
   margin: auto;
 }
@@ -8110,12 +8126,8 @@ h2 span {
   margin-top: -210px;
 }
 
-.acf-block-preview .mt-40 {
-  margin-top: 10rem;
-}
-
-.acf-block-preview .mb-40 {
-  margin-bottom: 10rem;
+.acf-block-preview .mb-36 {
+  margin-bottom: 9rem;
 }
 
 .acf-block-preview .-mt-60 {
@@ -10923,6 +10935,14 @@ html :where(.wp-block) {
     order: 1;
   }
 
+  .mdt\:col-span-10 {
+    grid-column: span 10 / span 10;
+  }
+
+  .mdt\:col-start-2 {
+    grid-column-start: 2;
+  }
+
   .mdt\:m-auto {
     margin: auto;
   }
@@ -11095,6 +11115,10 @@ html :where(.wp-block) {
 
   .mdt\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .mdt\:gap-0 {
+    gap: 0;
   }
 
   .mdt\:bg-white\/75 {
@@ -11929,6 +11953,10 @@ html :where(.wp-block) {
 
   .sm\:text-\[53px\] {
     font-size: 53px;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
   }
 
   .sm\:opacity-100 {

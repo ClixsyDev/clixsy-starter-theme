@@ -143,11 +143,15 @@
   }
 
   label {
-    @apply pl-2;
+    @apply pl-2 pb-2;
   }
 
   .wpcf7-spinner {
     @apply hidden;
+  }
+
+  .wpcf7-form-control-wrap {
+    @apply bg-white text-black;
   }
 
   br,
