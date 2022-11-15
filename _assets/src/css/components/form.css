@@ -126,7 +126,7 @@
   }
 
   input[type="submit"] {
-    @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl;
+    @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl text-white;
   }
 
   textarea {
@@ -139,7 +139,7 @@
 
  
   p {
-    @apply text-base w-4/5 mx-auto;
+    @apply text-base w-4/5 mx-auto text-white;
   }
 
   label {
