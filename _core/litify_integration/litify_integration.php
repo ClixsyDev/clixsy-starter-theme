@@ -19,14 +19,14 @@ function litify_hook_callback()
 
     $data = json_decode(file_get_contents('php://input'), true);
    
-    $firstName = $data['client_first_name'] ?: '-';
-    $lastName = $data['client_last_name'] ?: '-';
-    $email = $data['client_email'] ?: '-';
-    $phone = $data['client_phone'] ?: '-';
-    $description = $data['client_message'] ?: '-';
-    $zip = $data['client_zip'] ?: '-';
+    $firstName = $data['client_first_name'] ?: '';
+    $lastName = $data['client_last_name'] ?: '';
+    $email = $data['client_email'] ?: '';
+    $phone = $data['client_phone'] ?: '';
+    $description = $data['client_message'] ?: '';
+    $zip = $data['client_zip'] ?: '';
     $gclid = $data['GCLID'] ?: '';
-    $litify_case = $data['client_case_type'] ?: '-';
+    $litify_case = $data['client_case_type'] ?: '';
 
     // Litify has preset case types.
     // This is not necessary for Big Auto at this time
