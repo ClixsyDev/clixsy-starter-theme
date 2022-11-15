@@ -114,15 +114,15 @@
 
   input,
   textarea {
-    @apply w-full mx-auto flex items-center justify-center;
+    @apply w-full mx-auto flex items-center justify-center text-black;
   }
 
   input {
-    @apply py-2 mb-3;
+    @apply py-2 mb-3 text-black pl-2;
   }
 
   input::placeholder {
-    @apply pl-4 text-[#707070];
+    @apply pl-2 text-[#707070];
   }
 
   input[type="submit"] {
@@ -134,7 +134,7 @@
   }
 
   textarea::placeholder {
-    @apply text-[#707070];
+    @apply text-[#707070] ;
   }
 
  
@@ -143,7 +143,7 @@
   }
 
   label {
-    @apply pl-2 pb-2;
+    @apply pl-2 pb-2 text-white;
   }
 
   .wpcf7-spinner {
