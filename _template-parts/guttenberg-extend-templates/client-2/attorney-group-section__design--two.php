@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="container mt-24 mb-36  text-white font-second">
+    <section class="container mt-24 mb-36 font-second">
         <div class="grid grid-cols-12 row-auto gap-5 mdt:gap-0">
             <div class="col-span-8 mdt:col-span-10 mdt:col-start-2 text-center bg-white">
                 <?php if ($attorney_group_section_design_two__image) { ?>
@@ -38,7 +38,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <?php if ($attorney_group_section_design_two__form_select && $attorney_group_section_design_two__form_select['0']) { ?>
                 <div class="col-span-4  mdt:col-span-10 mdt:col-start-2 w-full pt-10 pb-8" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
-                    <div class="attorney-group__form">
+                    <div class="attorney-group__form ">
                         <?php echo $attorney_group_section_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $attorney_group_section_design_two__form_select['0'] . '" title="Contact form"]') : '' ?>
                     </div>
                 </div>
