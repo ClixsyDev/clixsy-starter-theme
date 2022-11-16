@@ -102,7 +102,7 @@ if (function_exists('acf_add_local_field_group')) :
                     'key' => $block_key . 'form_text',
                     'name' => $block_key . 'form_text',
                     'type' => 'text',
-                    'label' => 'Second text',
+                    'label' => 'Form text',
                 ),
 
 
