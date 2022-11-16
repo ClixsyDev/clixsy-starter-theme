@@ -19,7 +19,8 @@ function register_contact_form()
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'supports' => array(
-                    'color' => true
+                    'color' => true,
+                    'jsx' => true
                 ),
                 'keywords' 		  => array('welcome', 'banner'),
                 'example'  => array(

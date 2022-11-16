@@ -12,6 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $faq_design_one__faq_repeater_hidden = get_field('faq_design_one__faq_repeater_name_hidden');
     $faq_design_one__title = get_field('faq_design_one__title');
     $faq_design_one__image = get_field('faq_design_one__image');
+    $faq_design_one__disable_schema = get_field('faq_design_one__disable_schema');
 
 ?>
     <?php if ($faq_design_one__faq_repeater[0]) { ?>
@@ -67,4 +68,7 @@ if ($is_preview && !empty($previewImage)) {
         </section>
     <?php } ?>
 <?php }
+if (!$faq_design_one__disable_schema) {
+    faq_schema($faq_design_one__faq_repeater, $faq_design_one__faq_repeater_hidden);
+}
 if (!get_fields()) echo 'Fill block with content';

@@ -113,6 +113,14 @@ if (function_exists('acf_add_local_field_group')) :
                     'return_format' => 'id',
                     'preview_size' => 'thumbnail'
                 ),
+                array(
+                    'key' => $block_key . 'disable_schema',
+                    'name' => $block_key . 'disable_schema',
+                    'label' => 'Disable schema for FAQ',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                ),
             ),
 
         )
