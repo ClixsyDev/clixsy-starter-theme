@@ -84,6 +84,24 @@ if (function_exists('acf_add_local_field_group')) :
                     'type' => 'color_picker',
                     'label' => 'Set background color for first section',
                 ),
+                array(
+                    'key' => $block_key . 'select',
+                    'name' => $block_key . 'select',
+                    'type' => 'color_picker',
+                    'label' => 'Set background color for first section',
+                ),
+                array(
+                    'key' => $block_key . 'select',
+                    'name' => $block_key . 'select',
+                    'label' => 'Select the width of the block',
+                    'type' => 'radio',
+                    'choices' => array(
+                        'Default' => 'Default',
+                        'Wider' => 'Wider',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
             ),
 
         )

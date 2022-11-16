@@ -100,7 +100,7 @@
   }
 
   label {
-    @apply pl-2;
+    @apply pl-2 text-white;
   }
 
   .wpcf7-spinner {
@@ -112,6 +112,56 @@
 .attorney-group__form {
   @apply flex gap-x-4 items-end justify-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
 
+  input,
+  textarea {
+    @apply w-full mx-auto flex items-center justify-center text-black;
+  }
+
+  input {
+    @apply py-2 mb-3 text-black pl-2;
+  }
+
+  input::placeholder {
+    @apply pl-2 text-[#707070];
+  }
+
+  input[type="submit"] {
+    @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl text-white;
+  }
+
+  textarea {
+    @apply pl-4 pt-2 mb-3 h-40;
+  }
+
+  textarea::placeholder {
+    @apply text-[#707070] ;
+  }
+
+ 
+  p {
+    @apply text-base w-4/5 mx-auto text-white;
+  }
+
+  label {
+    @apply pl-2 pb-2 text-white;
+  }
+
+  .wpcf7-spinner {
+    @apply hidden;
+  }
+
+  .wpcf7-form-control-wrap {
+    @apply bg-white text-black;
+  }
+
+  br,
+  p:empty {
+    @apply hidden;
+  }
+
+}
+
+.form {
   input,
   textarea {
     @apply w-full mx-auto flex items-center justify-center;
@@ -126,7 +176,7 @@
   }
 
   input[type="submit"] {
-    @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl;
+    @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl text-white;
   }
 
   textarea {
@@ -137,17 +187,20 @@
     @apply text-[#707070];
   }
 
- 
   p {
     @apply text-base w-4/5 mx-auto;
   }
 
   label {
-    @apply pl-2;
+    @apply pl-2 pb-2 text-white;
   }
 
   .wpcf7-spinner {
     @apply hidden;
+  }
+
+  .wpcf7-form-control-wrap {
+    @apply bg-white text-black;
   }
 
   br,
