@@ -98,6 +98,12 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                     'return_format' => 'id',
                 ),
+                array(
+                    'key' => $block_key . 'form_text',
+                    'name' => $block_key . 'form_text',
+                    'type' => 'text',
+                    'label' => 'Second text',
+                ),
 
 
             ),

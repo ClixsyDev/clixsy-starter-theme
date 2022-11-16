@@ -110,7 +110,7 @@
 }
 
 .attorney-group__form {
-  @apply flex gap-x-4 items-end justify-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
+  @apply flex gap-x-4 items-center justify-center sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
 
   input,
   textarea {
@@ -139,7 +139,7 @@
 
  
   p {
-    @apply text-base w-4/5 mx-auto text-white;
+    @apply text-base w-full 2xl:w-4/5 mdt:w-full xs:w-4/5 mx-auto text-white;
   }
 
   label {
