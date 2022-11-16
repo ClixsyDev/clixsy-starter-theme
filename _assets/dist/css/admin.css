@@ -7872,8 +7872,8 @@ header.sticked .menu-row-wrapper .call_header {
   margin-left: -2.5rem;
 }
 
-.acf-block-preview .ml-52 {
-  margin-left: 13rem;
+.acf-block-preview .ml-44 {
+  margin-left: 11rem;
 }
 
 .acf-block-preview .-mt-2 {
@@ -10456,10 +10456,6 @@ html :where(.wp-block) {
     width: 45%;
   }
 
-  .lg\:w-\[400px\] {
-    width: 400px;
-  }
-
   .lg\:max-w-\[160px\] {
     max-width: 160px;
   }
@@ -11542,10 +11538,6 @@ html :where(.wp-block) {
     margin-top: 1.25rem;
   }
 
-  .sm\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .sm\:mb-0 {
     margin-bottom: 0;
   }
@@ -11610,6 +11602,10 @@ html :where(.wp-block) {
     max-width: 200px;
   }
 
+  .sm\:max-w-\[100px\] {
+    max-width: 100px;
+  }
+
   .sm\:translate-y-8 {
     --tw-translate-y: 2rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -11660,6 +11656,14 @@ html :where(.wp-block) {
     padding-bottom: 1.25rem;
   }
 
+  .sm\:pt-7 {
+    padding-top: 1.75rem;
+  }
+
+  .sm\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
   .sm\:pt-6 {
     padding-top: 1.5rem;
   }
@@ -11672,32 +11676,24 @@ html :where(.wp-block) {
     padding-bottom: 4rem;
   }
 
-  .sm\:pl-0 {
-    padding-left: 0;
-  }
-
-  .sm\:pt-0 {
-    padding-top: 0;
-  }
-
-  .sm\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .sm\:pt-7 {
-    padding-top: 1.75rem;
-  }
-
-  .sm\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
   .sm\:pt-10 {
     padding-top: 2.5rem;
   }
 
   .sm\:pb-14 {
     padding-bottom: 3.5rem;
+  }
+
+  .sm\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:pl-0 {
+    padding-left: 0;
+  }
+
+  .sm\:pt-0 {
+    padding-top: 0;
   }
 
   .sm\:text-center {
@@ -12049,6 +12045,10 @@ html :where(.wp-block) {
 
   .xs\:w-6 {
     width: 1.5rem;
+  }
+
+  .xs\:w-auto {
+    width: auto;
   }
 
   .xs\:w-21\/24 {

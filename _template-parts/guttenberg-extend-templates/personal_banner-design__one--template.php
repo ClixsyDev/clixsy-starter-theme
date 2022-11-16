@@ -25,7 +25,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="max-w-[1920px] m-auto">
             <div class="flex items-center relative mdt:justify-center">
                 <?php if ($personal_banner_design_one__persone) { ?>
-                    <div class="z-[1] ml-52 xxl:ml-[9%] xxl:w-14/24 xl:ml-0 xl:w-12/24 mdt:w-17/24 md:w-21/24 sm:w-full">
+                    <div class="z-[1] ml-44 xxl:ml-[9%] xxl:w-14/24 xl:ml-0 xl:w-12/24 mdt:w-17/24 md:w-21/24 sm:w-full">
 
                         <?php echo wp_get_attachment_image($personal_banner_design_one__persone, 'full') ?>
                     </div>
@@ -62,7 +62,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php foreach ($personal_banner_design_one__social_icons as $personal_item) {
                                 if ($personal_item['link']) { ?>
                                     <a href="<?php echo $personal_item['link'] ?>" class=" transition-all duration-300 hover:opacity-80" target="_blank">
-                                        <img src="<?php echo wp_get_attachment_image_url($personal_item['icon'], 'full') ?>" class="xl:w-10 xl:h-10 xs:h-max" alt="social icon" loading="lazy">
+                                        <img src="<?php echo wp_get_attachment_image_url($personal_item['icon'], 'full') ?>" class="xl:w-10 xl:h-10 xs:h-max xs:w-auto" alt="social icon" loading="lazy">
                                     </a> <?php
                                 }
                             } ?>
