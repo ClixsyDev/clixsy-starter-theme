@@ -2166,7 +2166,7 @@ header.sticked .sub-menu.lvl-1 {
 
 .sub-menu.lvl-2 {
   --tw-bg-opacity: 1;
-  background-color: rgb(2 26 51 / var(--tw-bg-opacity));
+  background-color: rgb(181 181 181 / var(--tw-bg-opacity));
   min-width: 300px;
   padding: 0;
   display: none;
@@ -3096,7 +3096,7 @@ img, video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   border-radius: 9999px;
   padding: .375rem 1.5rem;
-  font-family: Lato;
+  font-family: Montserrat;
   font-size: 1rem;
   font-weight: 700;
   --tw-bg-opacity: 1 !important;
@@ -3140,7 +3140,7 @@ img, video {
 
 .footer-menu a {
   margin-bottom: .75rem;
-  font-family: Lato;
+  font-family: Montserrat;
   font-size: 1.25rem;
   line-height: 1.375;
   display: block;
@@ -3450,7 +3450,7 @@ img, video {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  font-family: Lato;
+  font-family: Montserrat;
   font-weight: 700;
   transition-property: all;
   transition-duration: .1s;
@@ -4895,7 +4895,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(49 113 184 / var(--tw-text-opacity));
-  font-family: Lato;
+  font-family: Montserrat;
   font-size: 5rem;
   font-weight: 700;
 }
@@ -4922,7 +4922,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  font-family: Lato;
+  font-family: Montserrat;
   font-size: 3rem;
   font-weight: 700;
   line-height: 60px;
@@ -4949,7 +4949,12 @@ h2 span {
   }
 }
 
-.heading_h2.heading_second, .heading_h2 span {
+.heading_h2.heading_second {
+  --tw-text-opacity: 1;
+  color: rgb(10 66 62 / var(--tw-text-opacity));
+}
+
+.heading_h2 span {
   --tw-text-opacity: 1;
   color: rgb(49 113 184 / var(--tw-text-opacity));
 }
@@ -5953,7 +5958,7 @@ h2 span {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  font-family: Lato;
+  font-family: Montserrat;
   font-size: 1.25rem;
   font-weight: 700;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter;
@@ -6064,8 +6069,8 @@ h2 span {
 }
 
 .attorney-group__form {
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   column-gap: 1rem;
   display: flex;
 }
@@ -6081,6 +6086,8 @@ h2 span {
 
 .attorney-group__form input, .attorney-group__form textarea {
   width: 100%;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
   justify-content: center;
   align-items: center;
   margin-left: auto;
@@ -6089,15 +6096,18 @@ h2 span {
 }
 
 .attorney-group__form input {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
   margin-bottom: .75rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
+  padding-left: .5rem;
 }
 
 .attorney-group__form input::placeholder {
   --tw-text-opacity: 1;
   color: rgb(112 112 112 / var(--tw-text-opacity));
-  padding-left: 1rem;
+  padding-left: .5rem;
 }
 
 .attorney-group__form input[type="submit"] {
@@ -6127,13 +6137,35 @@ h2 span {
 }
 
 .attorney-group__form p {
-  width: 80%;
+  width: 100%;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   margin-left: auto;
   margin-right: auto;
   font-size: 1rem;
 }
 
+@media (max-width: 1496px) {
+  .attorney-group__form p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .attorney-group__form p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .attorney-group__form p {
+    width: 80%;
+  }
+}
+
 .attorney-group__form label {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   padding-bottom: .5rem;
   padding-left: .5rem;
 }
@@ -8553,8 +8585,8 @@ h2 span {
   width: 25%;
 }
 
-.acf-block-preview .w-11\/24 {
-  width: 45.8333%;
+.acf-block-preview .w-4\/5 {
+  width: 80%;
 }
 
 .acf-block-preview .max-w-\[1920px\] {
@@ -8619,10 +8651,6 @@ h2 span {
 
 .acf-block-preview .max-w-\[1177px\] {
   max-width: 1177px;
-}
-
-.acf-block-preview .max-w-\[50\%\] {
-  max-width: 50%;
 }
 
 .acf-block-preview .flex-1 {
@@ -8929,14 +8957,9 @@ h2 span {
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
 
-.acf-block-preview .bg-smoke {
-  --tw-bg-opacity: 1;
-  background-color: rgb(165 172 175 / var(--tw-bg-opacity));
-}
-
 .acf-block-preview .bg-headings_second {
   --tw-bg-opacity: 1;
-  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
+  background-color: rgb(10 66 62 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-gray-200 {
@@ -8944,14 +8967,9 @@ h2 span {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.acf-block-preview .bg-process_smoke {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 242 242 / var(--tw-bg-opacity));
-}
-
 .acf-block-preview .bg-bg_second {
   --tw-bg-opacity: 1;
-  background-color: rgb(2 26 51 / var(--tw-bg-opacity));
+  background-color: rgb(181 181 181 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-white\/60 {
@@ -8960,7 +8978,7 @@ h2 span {
 
 .acf-block-preview .bg-button_color {
   --tw-bg-opacity: 1;
-  background-color: rgb(209 56 58 / var(--tw-bg-opacity));
+  background-color: rgb(221 142 51 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-opacity-75 {
@@ -9173,14 +9191,14 @@ h2 span {
   padding-bottom: 2.75rem;
 }
 
-.acf-block-preview .px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .acf-block-preview .px-60 {
   padding-left: 15rem;
   padding-right: 15rem;
+}
+
+.acf-block-preview .px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .acf-block-preview .pt-12 {
@@ -9348,11 +9366,11 @@ h2 span {
 }
 
 .acf-block-preview .font-main {
-  font-family: Lato;
+  font-family: Montserrat;
 }
 
 .acf-block-preview .font-second {
-  font-family: Montserrat;
+  font-family: Arial;
 }
 
 .acf-block-preview .text-10xl {
@@ -9529,14 +9547,9 @@ h2 span {
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
-.acf-block-preview .text-smoke {
-  --tw-text-opacity: 1;
-  color: rgb(165 172 175 / var(--tw-text-opacity));
-}
-
 .acf-block-preview .text-headings_second {
   --tw-text-opacity: 1;
-  color: rgb(49 113 184 / var(--tw-text-opacity));
+  color: rgb(10 66 62 / var(--tw-text-opacity));
 }
 
 .acf-block-preview .text-headings {
@@ -9879,16 +9892,6 @@ html :where(.wp-block) {
 }
 
 @media (max-width: 1750px) {
-  .xxxl\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .xxxl\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
   .xxxl\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;

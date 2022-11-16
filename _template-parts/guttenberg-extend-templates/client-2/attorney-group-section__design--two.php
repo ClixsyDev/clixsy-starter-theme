@@ -15,6 +15,8 @@ if ($is_preview && !empty($previewImage)) {
     $attorney_group_section_design_two__section_bg = get_field('attorney_group_section_design_two__section_bg');
     $attorney_group_section_design_two__form_bg = get_field('attorney_group_section_design_two__form_bg');
     $attorney_group_section_design_two__form_select = get_field('attorney_group_section_design_two__form_select');
+    $attorney_group_section_design_two__form_text = get_field('attorney_group_section_design_two__form_text');
+
 
 
 ?>
@@ -36,11 +38,15 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 <?php } ?>
             </div>
-            <?php if ($attorney_group_section_design_two__form_select && $attorney_group_section_design_two__form_select['0']) { ?>
+            <?php if ($attorney_group_section_design_two__form_select && $attorney_group_section_design_two__form_select['0'] || $attorney_group_section_design_two__form_text) { ?>
                 <div class="col-span-4  mdt:col-span-10 mdt:col-start-2 w-full pt-10 pb-8" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
                     <div class="attorney-group__form ">
                         <?php echo $attorney_group_section_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $attorney_group_section_design_two__form_select['0'] . '" title="Contact form"]') : '' ?>
                     </div>
+                    <div class="flex justify-center items-center w-4/5 mx-auto text-white">
+                        <?php echo $attorney_group_section_design_two__form_text ?>
+                    </div>
+
                 </div>
             <?php } ?>
 
