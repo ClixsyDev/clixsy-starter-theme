@@ -79,8 +79,8 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
                 <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left absolute top-36 left-25% xl:left-10% md:left-0 xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png"></button>
-                    <button class="glide__arrow glide__arrow--right absolute top-36 right-25% xl:right-10% md:right-0 xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
+                    <button class="glide__arrow glide__arrow--left absolute top-36 left-25% xl:left-10% md:left-0 xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png"></button>
+                    <button class="glide__arrow glide__arrow--right absolute top-36 right-25% xl:right-10% md:right-0 xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
                 </div>
             </div>
             <?php if ($reviews_design_two_link) { ?>

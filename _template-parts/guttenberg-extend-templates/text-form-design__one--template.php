@@ -52,11 +52,11 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="<?php echo $text_form_design_one__icon ? 'gap-6 lg:gap-3 sm:flex-col' : '' ?>  flex items-center ">
                             <div>
                                 <?php if ($text_form_design_one__icon) {
-                                    echo wp_get_attachment_image($text_form_design_one__icon, 'full', '', ['class' => 'xxl:w-20/24 sm:w-full']);
+                                    echo wp_get_attachment_image($text_form_design_one__icon, 'full', '', ['class' => 'xxl:w-20/24 sm:w-full sm:max-w-[100px] sm:h-auto']);
                                 } ?>
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
-                                <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24 lg:w-full ' ?>">
+                                <div class="<?php echo $text_form_design_one__icon ? 'w-16/24 sm:w-full' : 'w-20/24 lg:w-full ' ?>">
                                     <div class="font-main font-bold text-white text-3xl lg:text-lg span-change_color_1 leading-snug">
                                         <?php echo $text_form_design_one__description ?>
                                     </div>

@@ -4,6 +4,7 @@ import { getElement, getElements, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
+import { coloredBorderOnFirstInput } from './form_inputs';
 
 ready(() => {
   mainMenu();
@@ -14,7 +15,7 @@ ready(() => {
   btnMore();
   btnMoreEducation();
   initFAQ();
-
+  coloredBorderOnFirstInput();
 });
 
 
