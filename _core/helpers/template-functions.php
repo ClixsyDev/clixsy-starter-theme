@@ -4,8 +4,7 @@
  * Get post date in time ago format
  */
 if (!function_exists('the_time_ago')) {
-    function the_time_ago()
-    {
+    function the_time_ago() {
         echo human_time_diff(get_the_time('U'), current_time('timestamp'));
     }
 }
@@ -15,8 +14,7 @@ if (!function_exists('the_time_ago')) {
  * @param $limit
  */
 if (!function_exists('the_starter_excerpt')) {
-    function the_starter_excerpt($limit)
-    {
+    function the_starter_excerpt($limit) {
         $text  = get_the_content('');
         $text  = strip_shortcodes($text);
         $text  = apply_filters('the_content', $text);
@@ -45,8 +43,7 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
-function save_tailwind_colors()
-{
+function save_tailwind_colors() {
     $screen = get_current_screen();
 
     if (strpos($screen->id, "theme-general-settings") == true) {
@@ -187,3 +184,49 @@ if (function_exists('acf_add_local_field_group')) :
     ));
 
 endif;
+
+
+
+// Additional scripts to the footer 
+function faq_schema($visible_faq, $hidden_faq = false) {
+
+    
+    $case_faq_repeater = $visible_faq;
+    $faq_repeater_name_hidden = $hidden_faq;
+
+    $locations_faq_repeater = get_field('faq_items');
+
+    $faq_repeater = '';
+    if (!empty($case_faq_repeater)) {
+        $faq_repeater = $case_faq_repeater;
+    } elseif (!empty($locations_faq_repeater)) {
+        $faq_repeater = $locations_faq_repeater;
+    } else {
+        $faq_repeater = false;
+    }
+    if ($faq_repeater_name_hidden) {
+        $faq_repeater = array_merge($faq_repeater, $faq_repeater_name_hidden);
+    }
+    if (!empty($faq_repeater)) {
+?>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    <?php foreach ($faq_repeater as $key => $question) { ?> {
+                            "@type": "Question",
+                            "name": "<?php echo $question['question'] ?>",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "<?php echo preg_replace('/\s+/', ' ',  strip_tags($question['answer'])); ?>"
+                            }
+                        }
+                        <?php echo $key === array_key_last($faq_repeater) ? '' : ',' ?>
+                    <?php } ?>
+                ]
+            }]
+            }
+        </script>
+<?php }
+}

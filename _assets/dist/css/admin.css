@@ -6059,6 +6059,8 @@ h2 span {
 }
 
 .attorney-group__form label {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   padding-left: .5rem;
 }
 
@@ -6180,6 +6182,82 @@ h2 span {
 }
 
 .attorney-group__form br, .attorney-group__form p:empty {
+  display: none;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.form input {
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.form input::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+  padding-left: 1rem;
+}
+
+.form input[type="submit"] {
+  height: 3rem;
+  width: 14rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  border-radius: 9999px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.form textarea {
+  height: 10rem;
+  margin-bottom: .75rem;
+  padding-top: .5rem;
+  padding-left: 1rem;
+}
+
+.form textarea::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+}
+
+.form p {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+.form label {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  padding-bottom: .5rem;
+  padding-left: .5rem;
+}
+
+.form .wpcf7-spinner {
+  display: none;
+}
+
+.form .wpcf7-form-control-wrap {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.form br, .form p:empty {
   display: none;
 }
 
@@ -8507,10 +8585,6 @@ h2 span {
   width: 25%;
 }
 
-.acf-block-preview .w-11\/24 {
-  width: 45.8333%;
-}
-
 .acf-block-preview .w-4\/5 {
   width: 80%;
 }
@@ -8604,6 +8678,10 @@ h2 span {
 
 .acf-block-preview .cursor-pointer {
   cursor: pointer;
+}
+
+.acf-block-preview .grid-flow-col {
+  grid-auto-flow: column;
 }
 
 .acf-block-preview .grid-cols-12 {
@@ -8736,6 +8814,14 @@ h2 span {
 
 .acf-block-preview .gap-20 {
   gap: 5rem;
+}
+
+.acf-block-preview .gap-10 {
+  gap: 2.5rem;
+}
+
+.acf-block-preview .gap-4 {
+  gap: 1rem;
 }
 
 .acf-block-preview .gap-x-4 {
@@ -8890,6 +8976,11 @@ h2 span {
   background-color: #fff9;
 }
 
+.acf-block-preview .bg-button_color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(221 142 51 / var(--tw-bg-opacity));
+}
+
 .acf-block-preview .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }
@@ -8904,6 +8995,10 @@ h2 span {
 
 .acf-block-preview .bg-contain {
   background-size: contain;
+}
+
+.acf-block-preview .bg-center {
+  background-position: center;
 }
 
 .acf-block-preview .bg-repeat {
@@ -9094,6 +9189,11 @@ h2 span {
 .acf-block-preview .py-11 {
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
+}
+
+.acf-block-preview .px-60 {
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .acf-block-preview .px-20 {
@@ -9371,6 +9471,14 @@ h2 span {
 
 .acf-block-preview .font-light {
   font-weight: 300;
+}
+
+.acf-block-preview .font-black {
+  font-weight: 900;
+}
+
+.acf-block-preview .font-extralight {
+  font-weight: 200;
 }
 
 .acf-block-preview .uppercase {
@@ -9784,6 +9892,11 @@ html :where(.wp-block) {
 }
 
 @media (max-width: 1750px) {
+  .xxxl\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
   .xxxl\:pr-\[200px\] {
     padding-right: 200px;
   }
@@ -9859,8 +9972,29 @@ html :where(.wp-block) {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .\32 xl\:grid-flow-row {
+    grid-auto-flow: row;
+  }
+
+  .\32 xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .\32 xl\:items-center {
     align-items: center;
+  }
+
+  .\32 xl\:justify-center {
+    justify-content: center;
+  }
+
+  .\32 xl\:gap-y-5 {
+    row-gap: 1.25rem;
+  }
+
+  .\32 xl\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .\32 xl\:pt-6 {
@@ -10078,6 +10212,10 @@ html :where(.wp-block) {
 
   .xl\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .xl\:gap-40 {
+    gap: 10rem;
   }
 
   .xl\:p-2 {
@@ -10882,6 +11020,10 @@ html :where(.wp-block) {
     padding-left: 2rem;
   }
 
+  .lg\:pt-16 {
+    padding-top: 4rem;
+  }
+
   .lg\:pb-56 {
     padding-bottom: 14rem;
   }
@@ -10987,6 +11129,11 @@ html :where(.wp-block) {
   .mdt\:my-1 {
     margin-top: .25rem;
     margin-bottom: .25rem;
+  }
+
+  .mdt\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .mdt\:mt-6 {
@@ -11154,8 +11301,20 @@ html :where(.wp-block) {
     gap: 0;
   }
 
+  .mdt\:gap-16 {
+    gap: 4rem;
+  }
+
   .mdt\:bg-white\/75 {
     background-color: #ffffffbf;
+  }
+
+  .mdt\:bg-contain {
+    background-size: contain;
+  }
+
+  .mdt\:bg-\[center_top_12rem\] {
+    background-position: 50% 12rem;
   }
 
   .mdt\:p-5 {
@@ -12355,6 +12514,10 @@ html :where(.wp-block) {
     gap: 2.5rem;
   }
 
+  .xs\:gap-3 {
+    gap: .75rem;
+  }
+
   .xs\:p-0 {
     padding: 0;
   }
@@ -12431,6 +12594,10 @@ html :where(.wp-block) {
 
   .xs\:text-sm {
     font-size: .875rem;
+  }
+
+  .xs\:text-base {
+    font-size: 1rem;
   }
 }
 

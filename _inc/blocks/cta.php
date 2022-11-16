@@ -22,7 +22,9 @@ function register_cta()
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'supports' => array(
-                    'color' => true
+                    'color' => true,
+                    'anchor' => true, // Enable support for anchor.
+					'jsx'    => true, // Enable support for JSX.
                 ),
                 'keywords' 		  => array('welcome', 'banner'),
                 'example'  => array(
