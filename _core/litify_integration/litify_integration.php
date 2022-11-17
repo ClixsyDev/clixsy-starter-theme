@@ -1,8 +1,7 @@
 <?php
 //LITIFY API
 
-function wh_log($log_msg)
-{
+function wh_log($log_msg, $log_msg_info = '') {
     $log_filename = WP_CONTENT_DIR . "/litify-log/";
     if (!file_exists($log_filename)) {
         // create directory/folder uploads.
@@ -10,15 +9,14 @@ function wh_log($log_msg)
     }
     $log_file_data = $log_filename . 'log_' . date('Y-M-d') . '.log';
     // if you don't add `FILE_APPEND`, the file will be erased each time you add a log
-    file_put_contents($log_file_data, $log_msg . "\n", FILE_APPEND);
+    file_put_contents($log_file_data, $log_msg . "\r\n" . ' ======================= Start '.date('Y/m/d H:i:s').' ======================' . "\r\n" . json_encode($log_msg_info) . "\r\n" . ' ======================= end of log ======================' . "\n", FILE_APPEND);
 }
 
 
-function litify_hook_callback()
-{
+function litify_hook_callback() {
 
     $data = json_decode(file_get_contents('php://input'), true);
-   
+
     $firstName = $data['client_first_name'] ?: '';
     $lastName = $data['client_last_name'] ?: '';
     $email = $data['client_email'] ?: '';
@@ -30,7 +28,7 @@ function litify_hook_callback()
 
     // Litify has preset case types.
     // This is not necessary for Big Auto at this time
-    
+
     // switch ($data['client_case_type']) {
     //     case "Auto Accident":
     //         $litify_case = 'Auto (AA)';
@@ -64,6 +62,8 @@ function litify_hook_callback()
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_VERBOSE, true);
+
 
     $headers = array(
         "Content-Type: application/json",
@@ -92,13 +92,13 @@ function litify_hook_callback()
     // curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
     $resp = curl_exec($curl);
-    // $responseInfo = curl_getinfo($curl);
+    $responseInfo = curl_getinfo($curl);
     // var_dump($responseInfo);
     var_dump($resp);
     curl_close($curl);
 
     // logging everything
-    wh_log($resp);
+    wh_log($resp, $responseInfo);
 
     wp_die();
 }
