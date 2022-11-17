@@ -17,14 +17,14 @@ function register_start_process_today()
             array(
                 'name'            => 'start-process-today',
                 'title'           => __('Start process today', 'clixsy'),
-                'description'	  => __('Start process today', 'clixsy'),
+                'description'      => __('Start process today', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/start-process-today.php',
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'supports' => array(
                     'color' => true
                 ),
-                'keywords' 		  => array('welcome', 'banner'),
+                'keywords'           => array('welcome', 'banner'),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
