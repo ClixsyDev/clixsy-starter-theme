@@ -7,10 +7,26 @@ namespace Composer\Autoload;
 class ComposerStaticInitb9aff06abb0feade90f529dd14ad4639
 {
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'TOC\\' => 4,
+        ),
+        'M' => 
+        array (
+            'Masterminds\\' => 12,
+        ),
+        'K' => 
+        array (
+            'Knp\\Menu\\' => 9,
+        ),
         'J' => 
         array (
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
             'JakubOnderka\\PhpConsoleColor\\' => 29,
+        ),
+        'C' => 
+        array (
+            'Cocur\\Slugify\\' => 14,
         ),
         'A' => 
         array (
@@ -19,6 +35,19 @@ class ComposerStaticInitb9aff06abb0feade90f529dd14ad4639
     );
 
     public static $prefixDirsPsr4 = array (
+        'TOC\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/caseyamcl/toc/src',
+            1 => __DIR__ . '/..' . '/caseyamcl/toc/tests',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
+        ),
+        'Knp\\Menu\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-menu/src/Knp/Menu',
+        ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-parallel-lint/php-console-highlighter/src',
@@ -27,6 +56,10 @@ class ComposerStaticInitb9aff06abb0feade90f529dd14ad4639
         array (
             0 => __DIR__ . '/..' . '/php-parallel-lint/php-console-color/src',
         ),
+        'Cocur\\Slugify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cocur/slugify/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/_core/classes',
@@ -34,7 +67,6 @@ class ComposerStaticInitb9aff06abb0feade90f529dd14ad4639
     );
 
     public static $classMap = array (
-        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JakubOnderka\\PhpParallelLint\\Application' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Application.php',
         'JakubOnderka\\PhpParallelLint\\ArrayIterator' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Settings.php',
         'JakubOnderka\\PhpParallelLint\\Blame' => __DIR__ . '/..' . '/php-parallel-lint/php-parallel-lint/src/Error.php',
