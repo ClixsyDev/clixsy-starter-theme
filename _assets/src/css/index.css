@@ -11,6 +11,7 @@
 @import './components/form.css';
 @import './components/_faq.css';
 @import './components/_toc.css';
+@import './components/_breadcrumbs.css';
 
 @tailwind base;
 @tailwind components;
