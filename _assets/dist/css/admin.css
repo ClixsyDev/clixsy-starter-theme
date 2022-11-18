@@ -3441,7 +3441,7 @@ img, video {
   height: 3.5rem;
   width: max-content;
   --tw-bg-opacity: 1;
-  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
+  background-color: rgb(209 56 58 / var(--tw-bg-opacity));
   text-align: center;
   text-transform: uppercase;
   --tw-text-opacity: 1;
@@ -3456,6 +3456,11 @@ img, video {
   transition-duration: .1s;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
   display: flex;
+}
+
+.btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 100 102 / var(--tw-bg-opacity));
 }
 
 .btn:active {
@@ -3566,7 +3571,7 @@ img, video {
   height: 5rem;
   width: max-content;
   --tw-bg-opacity: 1;
-  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
+  background-color: rgb(209 56 58 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   margin: 1.25rem auto auto;
