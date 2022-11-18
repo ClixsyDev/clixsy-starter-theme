@@ -35,9 +35,9 @@ if ($is_preview && !empty($previewImage)) {
                         ]); ?>
                     <?php } ?>
                 </div>
-                <div class="font-second text-accent font-black max-h-[570px] flex items-center relative">
-                    <span class="absolute text-13xl top-11% -left-25%">$</span>
-                    <div class="text-20xl">0</div>
+                <div class="font-second text-accent font-black max-h-[570px] flex items-center relative lg:max-h-80 xs:max-h-64">
+                    <span class="absolute text-13xl top-11% -left-25% lg:-top-7% lg:-left-35% xs:text-10xl xs:top-0">$</span>
+                    <div class="text-20xl lg:text-17xl xs:text-15xl">0</div>
                 </div>
             <?php } ?>
         </div>

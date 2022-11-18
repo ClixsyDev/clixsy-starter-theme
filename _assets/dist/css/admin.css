@@ -9475,12 +9475,12 @@ h2 span {
   font-size: 75px;
 }
 
-.acf-block-preview .text-\[500px\] {
-  font-size: 500px;
-}
-
 .acf-block-preview .text-13xl {
   font-size: 150px;
+}
+
+.acf-block-preview .text-20xl {
+  font-size: 500px;
 }
 
 .acf-block-preview .font-bold {
@@ -10823,6 +10823,18 @@ html :where(.wp-block) {
     top: 98%;
   }
 
+  .lg\:-top-7\% {
+    top: -7%;
+  }
+
+  .lg\:-left-35\% {
+    left: -35%;
+  }
+
+  .lg\:-top-7 {
+    top: -1.75rem;
+  }
+
   .lg\:col-span-6 {
     grid-column: span 6 / span 6;
   }
@@ -10873,6 +10885,14 @@ html :where(.wp-block) {
 
   .lg\:max-h-\[80px\] {
     max-height: 80px;
+  }
+
+  .lg\:max-h-96 {
+    max-height: 24rem;
+  }
+
+  .lg\:max-h-80 {
+    max-height: 20rem;
   }
 
   .lg\:min-h-max {
@@ -11091,6 +11111,14 @@ html :where(.wp-block) {
 
   .lg\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .lg\:text-17xl {
+    font-size: 350px;
+  }
+
+  .lg\:text-15xl {
+    font-size: 250px;
   }
 
   .lg\:leading-tight {
@@ -12447,6 +12475,10 @@ html :where(.wp-block) {
     right: -8%;
   }
 
+  .xs\:top-0 {
+    top: 0;
+  }
+
   .xs\:m-auto {
     margin: auto;
   }
@@ -12497,6 +12529,10 @@ html :where(.wp-block) {
 
   .xs\:h-80 {
     height: 20rem;
+  }
+
+  .xs\:max-h-64 {
+    max-height: 16rem;
   }
 
   .xs\:w-full {
@@ -12631,6 +12667,14 @@ html :where(.wp-block) {
 
   .xs\:text-base {
     font-size: 1rem;
+  }
+
+  .xs\:text-15xl {
+    font-size: 250px;
+  }
+
+  .xs\:text-10xl {
+    font-size: 100px;
   }
 }
 
