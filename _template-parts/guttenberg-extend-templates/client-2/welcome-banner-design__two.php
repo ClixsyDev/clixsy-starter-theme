@@ -36,7 +36,6 @@ if ($is_preview && !empty($previewImage)) {
                                 'text_hover' => false,
                                 'classes' => 'btn_md white hover_accent uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
-                            <!-- <a href="<?php echo $welcome_banner__design_two__link['url'] ?>" target="<?php echo $welcome_banner__design_two__link['target'] ?: '_self' ?>" class="btn"><?php echo $welcome_banner__design_two__link['title'] ?></a> -->
                         <?php } ?>
                     </div>
                 </div>

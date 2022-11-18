@@ -13,5 +13,8 @@
         "lint:cs": "@php ./vendor/bin/phpcs",
         "lint:cs:fix": "@php ./vendor/bin/phpcbf",
         "lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."
+    },
+    "require": {
+        "caseyamcl/toc": "^3.1"
     }
 }

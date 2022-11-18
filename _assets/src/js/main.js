@@ -5,6 +5,8 @@ import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
 import { litifyCall } from './litify-ajax';
+import { tocAnchor } from './toc';
+
 
 
 ready(() => {
@@ -17,6 +19,7 @@ ready(() => {
   btnMoreEducation();
   initFAQ();
   litifyCall();
+  tocAnchor();
 });
 
 

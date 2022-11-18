@@ -1,0 +1,7 @@
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  a {
+    @apply text-accent
+  }
+}

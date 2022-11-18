@@ -16,6 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $button2 = get_field($key . '_button_2');
     $case_items = get_field('cases_we_handle_case_items');
 ?>
+    <!-- cases-we-handle.php -->
     <div class="bg-headings pt-14 pb-16">
         <div class="container">
             <?php if ($title) { ?>
@@ -25,7 +26,7 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <hr class="bg-accent border-none mx-auto h-1 w-[124px] max-w-full mb-6">
             <div class="flex gap-14 mt-14 mdt:flex-wrap mdt:justify-center md:gap-6">
-                <?php 
+                <?php
                 if (!$case_items) {
                     $posts = get_posts(array(
                         'numberposts'   => 4,
@@ -39,19 +40,19 @@ if ($is_preview && !empty($previewImage)) {
                         $case_items[] = $post_item->ID;
                     }
                 }
-                foreach ($case_items as $item) { 
+                foreach ($case_items as $item) {
                     $key = 'page_case_type';
                     $case_title = get_field($key . '_case_title', $item);
                     $case_description = get_field($key . '_case_description', $item);
-                    ?>
-                    <a href="<?= get_permalink( $item ) ?>" class="flex-1 group flex flex-col items-center mdt:w-[250px] mdt:flex-none ">
+                ?>
+                    <a href="<?= get_permalink($item) ?>" class="flex-1 group flex flex-col items-center mdt:w-[250px] mdt:flex-none ">
                         <span class="relative">
                             <img src="<?= get_the_post_thumbnail_url($item, 'full') ?>" alt="">
                             <?php if ($case_description) { ?>
-                            <span class="group-hover:opacity-100 opacity-0 transition-all  px-2 text-sm py-3 absolute bottom-0 left-0 bg-white bg-opacity-75 flex gap-2 items-center w-full">
-                                <span><?= $case_description ?></span>
-                                <span class="text-accent text-xl">➙</span>
-                            </span>
+                                <span class="group-hover:opacity-100 opacity-0 transition-all  px-2 text-sm py-3 absolute bottom-0 left-0 bg-white bg-opacity-75 flex gap-2 items-center w-full">
+                                    <span><?= $case_description ?></span>
+                                    <span class="text-accent text-xl">➙</span>
+                                </span>
                             <?php } ?>
                         </span>
                         <div class="font-main font-bold text-2xl text-white group-hover:text-accent "><?= $case_title ?></div>
@@ -74,7 +75,7 @@ if ($is_preview && !empty($previewImage)) {
                         'link' => $button2['url'],
                         'text' => __($button2['title'], 'law'),
                         'text_hover' => false,
-                        'classes' => 'btn_xl hover_outline_accent uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        'classes' => 'btn_xl hover_accent uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                     ]); ?>
                 <?php } ?>
             </div>

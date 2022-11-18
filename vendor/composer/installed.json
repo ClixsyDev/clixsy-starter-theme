@@ -1,238 +1,493 @@
-{
-    "packages": [
-        {
-            "name": "php-parallel-lint/php-console-color",
-            "version": "v0.3",
-            "version_normalized": "0.3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-parallel-lint/PHP-Console-Color.git",
-                "reference": "b6af326b2088f1ad3b264696c9fd590ec395b49e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-parallel-lint/PHP-Console-Color/zipball/b6af326b2088f1ad3b264696c9fd590ec395b49e",
-                "reference": "b6af326b2088f1ad3b264696c9fd590ec395b49e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "replace": {
-                "jakub-onderka/php-console-color": "*"
-            },
-            "require-dev": {
-                "php-parallel-lint/php-code-style": "1.0",
-                "php-parallel-lint/php-parallel-lint": "1.0",
-                "php-parallel-lint/php-var-dump-check": "0.*",
-                "phpunit/phpunit": "~4.3",
-                "squizlabs/php_codesniffer": "1.*"
-            },
-            "time": "2020-05-14T05:47:14+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleColor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "jakub.onderka@gmail.com"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/php-parallel-lint/PHP-Console-Color/issues",
-                "source": "https://github.com/php-parallel-lint/PHP-Console-Color/tree/master"
-            },
-            "install-path": "../php-parallel-lint/php-console-color"
+[
+    {
+        "name": "caseyamcl/toc",
+        "version": "v3.1",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/caseyamcl/toc.git",
+            "reference": "1aa7d6b446e151b4c11d18b11c199e61d00c5182"
         },
-        {
-            "name": "php-parallel-lint/php-console-highlighter",
-            "version": "v0.5",
-            "version_normalized": "0.5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-parallel-lint/PHP-Console-Highlighter.git",
-                "reference": "21bf002f077b177f056d8cb455c5ed573adfdbb8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-parallel-lint/PHP-Console-Highlighter/zipball/21bf002f077b177f056d8cb455c5ed573adfdbb8",
-                "reference": "21bf002f077b177f056d8cb455c5ed573adfdbb8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "php": ">=5.4.0",
-                "php-parallel-lint/php-console-color": "~0.2"
-            },
-            "replace": {
-                "jakub-onderka/php-console-highlighter": "*"
-            },
-            "require-dev": {
-                "php-parallel-lint/php-code-style": "~1.0",
-                "php-parallel-lint/php-parallel-lint": "~1.0",
-                "php-parallel-lint/php-var-dump-check": "~0.1",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "time": "2020-05-13T07:37:49+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleHighlighter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "acci@acci.cz",
-                    "homepage": "http://www.acci.cz/"
-                }
-            ],
-            "description": "Highlight PHP code in terminal",
-            "support": {
-                "issues": "https://github.com/php-parallel-lint/PHP-Console-Highlighter/issues",
-                "source": "https://github.com/php-parallel-lint/PHP-Console-Highlighter/tree/master"
-            },
-            "install-path": "../php-parallel-lint/php-console-highlighter"
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/caseyamcl/toc/zipball/1aa7d6b446e151b4c11d18b11c199e61d00c5182",
+            "reference": "1aa7d6b446e151b4c11d18b11c199e61d00c5182",
+            "shasum": ""
         },
-        {
-            "name": "php-parallel-lint/php-parallel-lint",
-            "version": "v1.3.0",
-            "version_normalized": "1.3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-parallel-lint/PHP-Parallel-Lint.git",
-                "reference": "772a954e5f119f6f5871d015b23eabed8cbdadfb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-parallel-lint/PHP-Parallel-Lint/zipball/772a954e5f119f6f5871d015b23eabed8cbdadfb",
-                "reference": "772a954e5f119f6f5871d015b23eabed8cbdadfb",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=5.3.0"
-            },
-            "replace": {
-                "grogy/php-parallel-lint": "*",
-                "jakub-onderka/php-parallel-lint": "*"
-            },
-            "require-dev": {
-                "nette/tester": "^1.3 || ^2.0",
-                "php-parallel-lint/php-console-highlighter": "~0.3",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "suggest": {
-                "php-parallel-lint/php-console-highlighter": "Highlight syntax in code snippet"
-            },
-            "time": "2021-04-07T14:42:48+00:00",
-            "bin": [
-                "parallel-lint"
-            ],
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "classmap": [
-                    "./"
+        "require": {
+            "cocur/slugify": "^3.0|^4.0",
+            "ext-dom": "*",
+            "knplabs/knp-menu": "^3.2",
+            "masterminds/html5": "^2.1",
+            "php": "^7.2|^8.0"
+        },
+        "require-dev": {
+            "jaschilz/php-coverage-badger": "^2.0",
+            "phpstan/phpstan": "^1.4",
+            "phpunit/phpunit": "^7.5|^8.0|^9.0",
+            "squizlabs/php_codesniffer": "^3.5",
+            "twig/twig": "^2.4|^3.0"
+        },
+        "time": "2022-03-16T15:46:12+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TOC\\": [
+                    "src",
+                    "tests"
                 ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "ahoj@jakubonderka.cz"
-                }
-            ],
-            "description": "This tool check syntax of PHP files about 20x faster than serial check.",
-            "homepage": "https://github.com/php-parallel-lint/PHP-Parallel-Lint",
-            "support": {
-                "issues": "https://github.com/php-parallel-lint/PHP-Parallel-Lint/issues",
-                "source": "https://github.com/php-parallel-lint/PHP-Parallel-Lint/tree/v1.3.0"
-            },
-            "install-path": "../php-parallel-lint/php-parallel-lint"
+            }
         },
-        {
-            "name": "squizlabs/php_codesniffer",
-            "version": "3.6.0",
-            "version_normalized": "3.6.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Casey McLaughlin",
+                "email": "caseyamcl@gmail.com",
+                "homepage": "https://caseymclaughlin.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Simple Table-of-Contents Generator for PHP.  Generates TOCs based off H1...H6 tags",
+        "homepage": "https://github.com/caseyamcl/toc",
+        "keywords": [
+            "TOC",
+            "table of contents"
+        ]
+    },
+    {
+        "name": "cocur/slugify",
+        "version": "v4.2.0",
+        "version_normalized": "4.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cocur/slugify.git",
+            "reference": "7e7d03067d1075b1147090b3e1df672dfffb9dc3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/cocur/slugify/zipball/7e7d03067d1075b1147090b3e1df672dfffb9dc3",
+            "reference": "7e7d03067d1075b1147090b3e1df672dfffb9dc3",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*",
+            "php": "^7.1 || ~8.0.0 || ~8.1.0"
+        },
+        "conflict": {
+            "symfony/config": "<3.4 || >=4,<4.3",
+            "symfony/dependency-injection": "<3.4 || >=4,<4.3",
+            "symfony/http-kernel": "<3.4 || >=4,<4.3",
+            "twig/twig": "<2.12.1"
+        },
+        "require-dev": {
+            "laravel/framework": "^5.0|^6.0|^7.0|^8.0",
+            "latte/latte": "~2.2",
+            "league/container": "^2.2.0",
+            "mikey179/vfsstream": "~1.6.8",
+            "mockery/mockery": "^1.3",
+            "nette/di": "~2.4",
+            "pimple/pimple": "~1.1",
+            "plumphp/plum": "~0.1",
+            "symfony/config": "^3.4 || ^4.3 || ^5.0 || ^6.0",
+            "symfony/dependency-injection": "^3.4 || ^4.3 || ^5.0 || ^6.0",
+            "symfony/http-kernel": "^3.4 || ^4.3 || ^5.0 || ^6.0",
+            "symfony/phpunit-bridge": "^5.4 || ^6.0",
+            "twig/twig": "^2.12.1 || ~3.0",
+            "zendframework/zend-modulemanager": "~2.2",
+            "zendframework/zend-servicemanager": "~2.2",
+            "zendframework/zend-view": "~2.2"
+        },
+        "time": "2022-08-13T15:23:32+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Cocur\\Slugify\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Florian Eckerstorfer",
+                "email": "florian@eckerstorfer.co",
+                "homepage": "https://florian.ec"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "shasum": ""
+            {
+                "name": "Ivo Bathke",
+                "email": "ivo.bathke@gmail.com"
+            }
+        ],
+        "description": "Converts a string into a slug.",
+        "keywords": [
+            "slug",
+            "slugify"
+        ]
+    },
+    {
+        "name": "knplabs/knp-menu",
+        "version": "v3.3.0",
+        "version_normalized": "3.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/KnpLabs/KnpMenu.git",
+            "reference": "8bd3dc2afa22c65617c563c5e25e62d6e23e98c7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/8bd3dc2afa22c65617c563c5e25e62d6e23e98c7",
+            "reference": "8bd3dc2afa22c65617c563c5e25e62d6e23e98c7",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.3 || ^8.0"
+        },
+        "conflict": {
+            "twig/twig": "<1.40 || >=2,<2.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^9.5",
+            "psr/container": "^1.0",
+            "symfony/http-foundation": "^4.4 || ^5.0 || ^6.0",
+            "symfony/phpunit-bridge": "^5.3",
+            "symfony/routing": "^4.4 || ^5.0 || ^6.0",
+            "twig/twig": "^1.40 || ^2.9 || ^3.0"
+        },
+        "suggest": {
+            "twig/twig": "for the TwigRenderer and the integration with your templates"
+        },
+        "time": "2021-10-23T15:01:04+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Knp\\Menu\\": "src/Knp/Menu"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "KnpLabs",
+                "homepage": "https://knplabs.com"
             },
-            "require": {
-                "ext-simplexml": "*",
-                "ext-tokenizer": "*",
-                "ext-xmlwriter": "*",
-                "php": ">=5.4.0"
+            {
+                "name": "Christophe Coevoet",
+                "email": "stof@notk.org"
             },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+            {
+                "name": "The Community",
+                "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
+            }
+        ],
+        "description": "An object oriented menu library",
+        "homepage": "https://knplabs.com",
+        "keywords": [
+            "menu",
+            "tree"
+        ]
+    },
+    {
+        "name": "masterminds/html5",
+        "version": "2.7.6",
+        "version_normalized": "2.7.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Masterminds/html5-php.git",
+            "reference": "897eb517a343a2281f11bc5556d6548db7d93947"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/897eb517a343a2281f11bc5556d6548db7d93947",
+            "reference": "897eb517a343a2281f11bc5556d6548db7d93947",
+            "shasum": ""
+        },
+        "require": {
+            "ext-ctype": "*",
+            "ext-dom": "*",
+            "ext-libxml": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7"
+        },
+        "time": "2022-08-18T16:18:26+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Masterminds\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Matt Butcher",
+                "email": "technosophos@gmail.com"
             },
-            "time": "2021-04-09T00:54:41+00:00",
-            "bin": [
-                "bin/phpcs",
-                "bin/phpcbf"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
+            {
+                "name": "Matt Farina",
+                "email": "matt@mattfarina.com"
             },
-            "installation-source": "dist",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Greg Sherwood",
-                    "role": "lead"
-                }
-            ],
-            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
-            "keywords": [
-                "phpcs",
-                "standards"
-            ],
-            "support": {
-                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
-                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
-                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
-            },
-            "install-path": "../squizlabs/php_codesniffer"
+            {
+                "name": "Asmir Mustafic",
+                "email": "goetas@gmail.com"
+            }
+        ],
+        "description": "An HTML5 parser and serializer.",
+        "homepage": "http://masterminds.github.io/html5-php",
+        "keywords": [
+            "HTML5",
+            "dom",
+            "html",
+            "parser",
+            "querypath",
+            "serializer",
+            "xml"
+        ]
+    },
+    {
+        "name": "php-parallel-lint/php-console-color",
+        "version": "v0.3",
+        "version_normalized": "0.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-parallel-lint/PHP-Console-Color.git",
+            "reference": "b6af326b2088f1ad3b264696c9fd590ec395b49e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-parallel-lint/PHP-Console-Color/zipball/b6af326b2088f1ad3b264696c9fd590ec395b49e",
+            "reference": "b6af326b2088f1ad3b264696c9fd590ec395b49e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "replace": {
+            "jakub-onderka/php-console-color": "*"
+        },
+        "require-dev": {
+            "php-parallel-lint/php-code-style": "1.0",
+            "php-parallel-lint/php-parallel-lint": "1.0",
+            "php-parallel-lint/php-var-dump-check": "0.*",
+            "phpunit/phpunit": "~4.3",
+            "squizlabs/php_codesniffer": "1.*"
+        },
+        "time": "2020-05-14T05:47:14+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "JakubOnderka\\PhpConsoleColor\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Jakub Onderka",
+                "email": "jakub.onderka@gmail.com"
+            }
+        ],
+        "support": {
+            "issues": "https://github.com/php-parallel-lint/PHP-Console-Color/issues",
+            "source": "https://github.com/php-parallel-lint/PHP-Console-Color/tree/master"
         }
-    ],
-    "dev": true,
-    "dev-package-names": [
-        "php-parallel-lint/php-console-color",
-        "php-parallel-lint/php-console-highlighter",
-        "php-parallel-lint/php-parallel-lint",
-        "squizlabs/php_codesniffer"
-    ]
-}
+    },
+    {
+        "name": "php-parallel-lint/php-console-highlighter",
+        "version": "v0.5",
+        "version_normalized": "0.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-parallel-lint/PHP-Console-Highlighter.git",
+            "reference": "21bf002f077b177f056d8cb455c5ed573adfdbb8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-parallel-lint/PHP-Console-Highlighter/zipball/21bf002f077b177f056d8cb455c5ed573adfdbb8",
+            "reference": "21bf002f077b177f056d8cb455c5ed573adfdbb8",
+            "shasum": ""
+        },
+        "require": {
+            "ext-tokenizer": "*",
+            "php": ">=5.4.0",
+            "php-parallel-lint/php-console-color": "~0.2"
+        },
+        "replace": {
+            "jakub-onderka/php-console-highlighter": "*"
+        },
+        "require-dev": {
+            "php-parallel-lint/php-code-style": "~1.0",
+            "php-parallel-lint/php-parallel-lint": "~1.0",
+            "php-parallel-lint/php-var-dump-check": "~0.1",
+            "phpunit/phpunit": "~4.0",
+            "squizlabs/php_codesniffer": "~1.5"
+        },
+        "time": "2020-05-13T07:37:49+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "JakubOnderka\\PhpConsoleHighlighter\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jakub Onderka",
+                "email": "acci@acci.cz",
+                "homepage": "http://www.acci.cz/"
+            }
+        ],
+        "description": "Highlight PHP code in terminal",
+        "support": {
+            "issues": "https://github.com/php-parallel-lint/PHP-Console-Highlighter/issues",
+            "source": "https://github.com/php-parallel-lint/PHP-Console-Highlighter/tree/master"
+        }
+    },
+    {
+        "name": "php-parallel-lint/php-parallel-lint",
+        "version": "v1.3.0",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-parallel-lint/PHP-Parallel-Lint.git",
+            "reference": "772a954e5f119f6f5871d015b23eabed8cbdadfb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-parallel-lint/PHP-Parallel-Lint/zipball/772a954e5f119f6f5871d015b23eabed8cbdadfb",
+            "reference": "772a954e5f119f6f5871d015b23eabed8cbdadfb",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "php": ">=5.3.0"
+        },
+        "replace": {
+            "grogy/php-parallel-lint": "*",
+            "jakub-onderka/php-parallel-lint": "*"
+        },
+        "require-dev": {
+            "nette/tester": "^1.3 || ^2.0",
+            "php-parallel-lint/php-console-highlighter": "~0.3",
+            "squizlabs/php_codesniffer": "^3.5"
+        },
+        "suggest": {
+            "php-parallel-lint/php-console-highlighter": "Highlight syntax in code snippet"
+        },
+        "time": "2021-04-07T14:42:48+00:00",
+        "bin": [
+            "parallel-lint"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "./"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Jakub Onderka",
+                "email": "ahoj@jakubonderka.cz"
+            }
+        ],
+        "description": "This tool check syntax of PHP files about 20x faster than serial check.",
+        "homepage": "https://github.com/php-parallel-lint/PHP-Parallel-Lint",
+        "support": {
+            "issues": "https://github.com/php-parallel-lint/PHP-Parallel-Lint/issues",
+            "source": "https://github.com/php-parallel-lint/PHP-Parallel-Lint/tree/v1.3.0"
+        }
+    },
+    {
+        "name": "squizlabs/php_codesniffer",
+        "version": "3.6.0",
+        "version_normalized": "3.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+            "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+            "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+            "shasum": ""
+        },
+        "require": {
+            "ext-simplexml": "*",
+            "ext-tokenizer": "*",
+            "ext-xmlwriter": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
+        },
+        "time": "2021-04-09T00:54:41+00:00",
+        "bin": [
+            "bin/phpcs",
+            "bin/phpcbf"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Greg Sherwood",
+                "role": "lead"
+            }
+        ],
+        "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+        "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
+        "keywords": [
+            "phpcs",
+            "standards"
+        ],
+        "support": {
+            "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+            "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+        }
+    }
+]

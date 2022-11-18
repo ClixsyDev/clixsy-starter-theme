@@ -10,8 +10,7 @@
 
 
 
-function register_faq()
-{
+function register_faq() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -65,13 +64,13 @@ if (function_exists('acf_add_local_field_group')) {
                     array(
                         'key' => $key . '_items_question',
                         'label' => 'Question',
-                        'name' => $key . '_items_question',
+                        'name' =>  'question',
                         'type' => 'text',
                     ),
                     array(
                         'key' => $key . '_items_answer',
                         'label' => 'Answer',
-                        'name' => $key . '_items_answer',
+                        'name' =>  'answer',
                         'type' => 'wysiwyg',
                     ),
                 ),
@@ -86,13 +85,13 @@ if (function_exists('acf_add_local_field_group')) {
                     array(
                         'key' => $key . '_items_question_hidden',
                         'label' => 'Question',
-                        'name' => $key . '_items_question',
+                        'name' => 'question',
                         'type' => 'text',
                     ),
                     array(
                         'key' => $key . '_items_answer_hidden',
                         'label' => 'Answer',
-                        'name' => $key . '_items_answer',
+                        'name' => 'answer',
                         'type' => 'wysiwyg',
                     ),
                 ),

@@ -2,8 +2,7 @@
 /*
  * Change gutenberg palette
  */
-function csme_gutenberg_palette($palette)
-{
+function csme_gutenberg_palette($palette) {
     return array(
         array(
             'name'  => 'White',
@@ -34,16 +33,17 @@ function csme_gutenberg_palette($palette)
 }
 add_filter('villen_gutenberg_palette', 'csme_gutenberg_palette');
 
-add_filter( 'render_block', 'wrap_table_block', 10, 2 );
-function wrap_table_block( $block_content, $block ) {
-  if ( 'core/paragraph' === $block['blockName'] || 'core/heading' === $block['blockName'] ||  'core/list' === $block['blockName']) {
-    $block_content = '<div class="container prose-lg">' . $block_content . '</div>';
-  }
-  return $block_content;
+add_filter('render_block', 'wrap_table_block', 10, 2);
+function wrap_table_block($block_content, $block) {
+    if (!is_single()) {
+        if ('core/paragraph' === $block['blockName'] || 'core/heading' === $block['blockName'] ||  'core/list' === $block['blockName']) {
+            $block_content = '<div class="container prose-lg">' . $block_content . '</div>';
+        }
+    }
+    return $block_content;
 }
 
-function theme_customize_register($wp_customize)
-{
+function theme_customize_register($wp_customize) {
     // Text color
     $wp_customize->add_setting('text_color', array(
         'default'   => '',
@@ -107,14 +107,13 @@ function theme_customize_register($wp_customize)
 add_action('customize_register', 'theme_customize_register');
 
 
-add_filter( 'block_categories_all' , function( $categories ) {
+add_filter('block_categories_all', function ($categories) {
 
     // Adding a new category.
-	$categories[] = array(
-		'slug'  => 'clixsy',
-		'title' => 'Clixsy blocks'
-	);
+    $categories[] = array(
+        'slug'  => 'clixsy',
+        'title' => 'Clixsy blocks'
+    );
 
-	return array_reverse($categories);
-} );
-
+    return array_reverse($categories);
+});

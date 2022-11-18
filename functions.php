@@ -22,6 +22,9 @@ require_once('_core/helpers/helper-functions.php');
 // Theme settings from ACF
 require_once('_core/helpers/theme-options-acf.php');
 
+// Single post additional acf
+require_once('_core/helpers/single-acf.php');
+
 // Template Functions
 require_once('_core/helpers/template-functions.php');
 
@@ -33,6 +36,7 @@ require_once('_core/setup.php');
 
 // Enqueue
 require_once('_core/enqueue.php');
+require_once('_core/breadcrumbs.php');
 
 // Actions
 require_once('_core/hooks/actions.php');
