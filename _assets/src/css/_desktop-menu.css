@@ -144,5 +144,6 @@ header {
 }
 
 .footer-menu {
-  border-left: 4px solid #69be26;
+  @apply border-l-4 border-accent
+  /* border-left: 4px solid #69be26; */
 }

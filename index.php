@@ -4,7 +4,6 @@ use App\Template;
 ?>
 
 <?php get_header(); ?>
-
 <main>
     <div class="container pt-36 pb-24">
         <div class="grid grid-cols-12 gap-[30px]">

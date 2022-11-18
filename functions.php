@@ -36,7 +36,12 @@ require_once('_core/setup.php');
 
 // Enqueue
 require_once('_core/enqueue.php');
+
+// breadcrumbs
 require_once('_core/breadcrumbs.php');
+
+// Pagination
+require_once('_core/pagination.php');
 
 // Actions
 require_once('_core/hooks/actions.php');

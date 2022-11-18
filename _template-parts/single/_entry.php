@@ -11,7 +11,7 @@ $remove_breadcrumbs = get_field('remove_breadcrumbs');
     <div class=" mb-6  bg-headings_second">
         <div class="container pt-24 pb-12">
             <div class="blog-article__title-wrapper">
-                <h1 class="font-bold  text-6xl text-white mb-3"><?php the_title() ?></h1>
+                <h1 class="font-bold  text-6xl lg:text-4xl sm:text-2xl text-white mb-3 "><?php the_title() ?></h1>
                 <span class="block border border-yellow mt-4  w-1/4"></span>
             </div>
         </div>

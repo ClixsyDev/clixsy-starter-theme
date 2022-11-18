@@ -2208,7 +2208,9 @@ header.sticked .sub-menu.lvl-1 {
 }
 
 .footer-menu {
-  border-left: 4px solid #69be26;
+  --tw-border-opacity: 1;
+  border-left-width: 4px;
+  border-color: rgb(49 113 184 / var(--tw-border-opacity));
 }
 
 :root {
@@ -4921,6 +4923,29 @@ h2 span {
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
   border-bottom-width: 4px;
+}
+
+.heading_default_color {
+  font-family: Lato;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .heading_default_color {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .heading_default_color {
+    font-size: 2.25rem;
+  }
+}
+
+.heading_default_color span {
+  --tw-text-opacity: 1;
+  color: rgb(49 113 184 / var(--tw-text-opacity));
 }
 
 .heading_h2 {
@@ -7971,6 +7996,10 @@ h2 span {
   right: 11%;
 }
 
+.acf-block-preview .right-2 {
+  right: .5rem;
+}
+
 .acf-block-preview .z-50 {
   z-index: 50;
 }
@@ -8063,6 +8092,11 @@ h2 span {
 .acf-block-preview .my-3 {
   margin-top: .75rem;
   margin-bottom: .75rem;
+}
+
+.acf-block-preview .mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .acf-block-preview .mt-6 {
@@ -8241,6 +8275,14 @@ h2 span {
   margin-top: -15rem;
 }
 
+.acf-block-preview .mr-9 {
+  margin-right: 2.25rem;
+}
+
+.acf-block-preview .mb-2\.5 {
+  margin-bottom: .625rem;
+}
+
 .acf-block-preview .block {
   display: block;
 }
@@ -8375,6 +8417,10 @@ h2 span {
 
 .acf-block-preview .min-h-\[246px\] {
   min-height: 246px;
+}
+
+.acf-block-preview .min-h-\[300px\] {
+  min-height: 300px;
 }
 
 .acf-block-preview .w-full {
@@ -8589,12 +8635,12 @@ h2 span {
   width: 80%;
 }
 
-.acf-block-preview .max-w-\[1920px\] {
-  max-width: 1920px;
-}
-
 .acf-block-preview .max-w-\[460px\] {
   max-width: 460px;
+}
+
+.acf-block-preview .max-w-\[1920px\] {
+  max-width: 1920px;
 }
 
 .acf-block-preview .max-w-full {
@@ -8706,6 +8752,10 @@ h2 span {
 
 .acf-block-preview .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.acf-block-preview .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .acf-block-preview .flex-row {
@@ -8995,12 +9045,21 @@ h2 span {
   background-color: rgb(209 56 58 / var(--tw-bg-opacity));
 }
 
+.acf-block-preview .bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .acf-block-preview .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }
 
 .acf-block-preview .bg-opacity-70 {
   --tw-bg-opacity: .7;
+}
+
+.acf-block-preview .bg-opacity-60 {
+  --tw-bg-opacity: .6;
 }
 
 .acf-block-preview .bg-cover {
@@ -9075,6 +9134,11 @@ h2 span {
   padding: 1.75rem;
 }
 
+.acf-block-preview .py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .acf-block-preview .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -9118,11 +9182,6 @@ h2 span {
 .acf-block-preview .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.acf-block-preview .py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .acf-block-preview .px-6 {
@@ -9873,6 +9932,10 @@ html :where(.wp-block) {
 
 .focus\:border-none:focus {
   border-style: none;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 .group:hover .group-hover\:translate-x-3 {
