@@ -35,9 +35,9 @@ if ($is_preview && !empty($previewImage)) {
                             <div class="faq__list">
                                 <?php foreach ($faq_repeater as $key => $item) { ?>
                                     <div class="faq__position <?php echo $key == 0 ? 'faq__position__active' : '' ?> ">
-                                        <div class="faq__header p-4 pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item['faq_items_question'] ?></div>
+                                        <div class="faq__header p-4 pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item['question'] ?></div>
                                         <div class="faq__text" style="<?php echo $key == 0 ? 'max-height: 100%' : '' ?>">
-                                            <?php echo $item['faq_items_answer'] ?>
+                                            <?php echo $item['answer'] ?>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -46,9 +46,9 @@ if ($is_preview && !empty($previewImage)) {
                                 <div class="hidden hidden_faq_image_left">
                                     <?php foreach ($faq_repeater_hidden as $item_hidden) { ?>
                                         <div class="faq__position ">
-                                            <div class="faq__header p-4 pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item_hidden['faq_items_question'] ?></div>
+                                            <div class="faq__header p-4 pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item_hidden['question'] ?></div>
                                             <div class="faq__text">
-                                                <?php echo $item_hidden['faq_items_answer'] ?>
+                                                <?php echo $item_hidden['answer'] ?>
                                             </div>
                                         </div>
                                     <?php } ?>
@@ -66,4 +66,7 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </div>
 <?php }
+if ($faq_repeater) {
+    faq_schema($faq_repeater, $faq_repeater_hidden);
+}
 if (!get_fields()) echo 'Fill block with content';
