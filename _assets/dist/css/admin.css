@@ -2208,7 +2208,9 @@ header.sticked .sub-menu.lvl-1 {
 }
 
 .footer-menu {
-  border-left: 4px solid #69be26;
+  --tw-border-opacity: 1;
+  border-left-width: 4px;
+  border-color: rgb(49 113 184 / var(--tw-border-opacity));
 }
 
 :root {
@@ -3640,6 +3642,46 @@ img, video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.btn.btn_form_design_one {
+  min-width: 230px;
+  margin: 2.25rem auto auto;
+  font-size: 1.25rem;
+}
+
+.btn.btn_form_design_one .btn_arrow {
+  --tw-translate-y: -.2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  display: inline-block;
+}
+
+.btn.btn_form_design_one:hover {
+  min-width: 270px;
+  --tw-text-opacity: 1;
+  color: rgb(209 56 58 / var(--tw-text-opacity));
+  font-size: 1.5rem;
+}
+
+.btn.btn_form_design_one.btn-form-newsletter {
+  height: 2.75rem;
+  min-width: 170px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 113 184 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(209 56 58 / var(--tw-text-opacity));
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+.btn.btn_form_design_one.btn-form-newsletter:hover {
+  min-width: 190px;
+}
+
+.btn.btn_form_design_one.btn-form-newsletter:hover span {
+  --tw-text-opacity: 1;
+  color: rgb(209 56 58 / var(--tw-text-opacity));
+}
+
 .btn.hover_white {
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
@@ -4921,6 +4963,29 @@ h2 span {
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
   border-bottom-width: 4px;
+}
+
+.heading_default_color {
+  font-family: Lato;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .heading_default_color {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .heading_default_color {
+    font-size: 2.25rem;
+  }
+}
+
+.heading_default_color span {
+  --tw-text-opacity: 1;
+  color: rgb(49 113 184 / var(--tw-text-opacity));
 }
 
 .heading_h2 {
@@ -7975,6 +8040,10 @@ h2 span {
   left: -25%;
 }
 
+.acf-block-preview .right-2 {
+  right: .5rem;
+}
+
 .acf-block-preview .z-50 {
   z-index: 50;
 }
@@ -8067,6 +8136,11 @@ h2 span {
 .acf-block-preview .my-3 {
   margin-top: .75rem;
   margin-bottom: .75rem;
+}
+
+.acf-block-preview .mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .acf-block-preview .mt-6 {
@@ -8241,6 +8315,14 @@ h2 span {
   margin-bottom: 9rem;
 }
 
+.acf-block-preview .mr-9 {
+  margin-right: 2.25rem;
+}
+
+.acf-block-preview .mb-2\.5 {
+  margin-bottom: .625rem;
+}
+
 .acf-block-preview .-mt-60 {
   margin-top: -15rem;
 }
@@ -8383,6 +8465,10 @@ h2 span {
 
 .acf-block-preview .min-h-\[246px\] {
   min-height: 246px;
+}
+
+.acf-block-preview .min-h-\[300px\] {
+  min-height: 300px;
 }
 
 .acf-block-preview .w-full {
@@ -8597,12 +8683,12 @@ h2 span {
   width: 80%;
 }
 
-.acf-block-preview .max-w-\[1920px\] {
-  max-width: 1920px;
-}
-
 .acf-block-preview .max-w-\[460px\] {
   max-width: 460px;
+}
+
+.acf-block-preview .max-w-\[1920px\] {
+  max-width: 1920px;
 }
 
 .acf-block-preview .max-w-full {
@@ -8692,10 +8778,6 @@ h2 span {
   cursor: pointer;
 }
 
-.acf-block-preview .grid-flow-col {
-  grid-auto-flow: column;
-}
-
 .acf-block-preview .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
@@ -8714,6 +8796,10 @@ h2 span {
 
 .acf-block-preview .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.acf-block-preview .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .acf-block-preview .flex-row {
@@ -8830,10 +8916,6 @@ h2 span {
 
 .acf-block-preview .gap-10 {
   gap: 2.5rem;
-}
-
-.acf-block-preview .gap-4 {
-  gap: 1rem;
 }
 
 .acf-block-preview .gap-x-4 {
@@ -9003,12 +9085,21 @@ h2 span {
   background-color: rgb(209 56 58 / var(--tw-bg-opacity));
 }
 
+.acf-block-preview .bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .acf-block-preview .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }
 
 .acf-block-preview .bg-opacity-70 {
   --tw-bg-opacity: .7;
+}
+
+.acf-block-preview .bg-opacity-60 {
+  --tw-bg-opacity: .6;
 }
 
 .acf-block-preview .bg-cover {
@@ -9083,6 +9174,11 @@ h2 span {
   padding: 1.75rem;
 }
 
+.acf-block-preview .py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .acf-block-preview .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -9126,11 +9222,6 @@ h2 span {
 .acf-block-preview .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.acf-block-preview .py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .acf-block-preview .px-6 {
@@ -9392,7 +9483,7 @@ h2 span {
 }
 
 .acf-block-preview .font-second {
-  font-family: Montserrat;
+  font-family: Noto Serif;
 }
 
 .acf-block-preview .text-10xl {
@@ -9891,6 +9982,10 @@ html :where(.wp-block) {
   border-style: none;
 }
 
+.group:hover .group-hover\:block {
+  display: block;
+}
+
 .group:hover .group-hover\:translate-x-3 {
   --tw-translate-x: .75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -9940,6 +10035,10 @@ html :where(.wp-block) {
 
   .xxxl\:pr-\[200px\] {
     padding-right: 200px;
+  }
+
+  .xxxl\:text-xl {
+    font-size: 1.25rem;
   }
 }
 
@@ -10023,10 +10122,6 @@ html :where(.wp-block) {
 
   .\32 xl\:items-center {
     align-items: center;
-  }
-
-  .\32 xl\:justify-center {
-    justify-content: center;
   }
 
   .\32 xl\:gap-y-5 {
@@ -10887,10 +10982,6 @@ html :where(.wp-block) {
     max-height: 80px;
   }
 
-  .lg\:max-h-96 {
-    max-height: 24rem;
-  }
-
   .lg\:max-h-80 {
     max-height: 20rem;
   }
@@ -11115,10 +11206,6 @@ html :where(.wp-block) {
 
   .lg\:text-17xl {
     font-size: 350px;
-  }
-
-  .lg\:text-15xl {
-    font-size: 250px;
   }
 
   .lg\:leading-tight {
@@ -12665,16 +12752,16 @@ html :where(.wp-block) {
     font-size: .875rem;
   }
 
-  .xs\:text-base {
-    font-size: 1rem;
+  .xs\:text-10xl {
+    font-size: 100px;
   }
 
   .xs\:text-15xl {
     font-size: 250px;
   }
 
-  .xs\:text-10xl {
-    font-size: 100px;
+  .xs\:text-base {
+    font-size: 1rem;
   }
 }
 

@@ -15,7 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     $how_much_cost__block_bg = get_field('how_much_cost__block_bg');
     $how_much_cost__select = get_field('how_much_cost__select'); ?>
 
-    <div>
+    <div class="overflow-hidden">
         <div class="container flex items-center justify-between rounded-2xl uniq_xl:w-23/24 uniq_xl:px-16 lg:flex-col-reverse lg:pb-10 sm:px-6 <?php echo $how_much_cost__select == 'Wider' ? 'max-w-full w-20/24 px-60 xxxl:px-24' : 'px-20' ?>" style="background-color: <?php echo $how_much_cost__block_bg ?: ''  ?> ;">
             <?php if ($how_much_cost__title || $how_much_cost__description || $how_much_cost__link) { ?>
                 <div class="w-12/24 flex flex-col gap-6 lg:items-center lg:w-full lg:text-center">

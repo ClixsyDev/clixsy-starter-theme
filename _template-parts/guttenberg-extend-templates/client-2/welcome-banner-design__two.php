@@ -15,8 +15,9 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_two__section_bg_first = get_field('welcome_banner__design_two__section_bg_first');
     $welcome_banner__design_two__section_bg_second = get_field('welcome_banner__design_two__section_bg_second');
 ?>
+    <!-- welcome-banner-design__two.php -->
     <section>
-        <div class=" pb-52 pt-20 lg:pb-56 sm:pb-24">
+        <div class="pb-52 pt-20 lg:pb-56 sm:pb-24">
             <?php if ($welcome_banner__design_two__title) { ?>
                 <div class="container">
                     <h1 class="heading_h1"><?php echo $welcome_banner__design_two__title ?></h1>
@@ -34,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                                 'link' => $welcome_banner__design_two__link['url'],
                                 'text' => __($welcome_banner__design_two__link['title'], 'law'),
                                 'text_hover' => false,
-                                'classes' => 'btn_md white hover_accent uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                'classes' => 'text-white btn_md hover_accent border-white border-2 uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
                     </div>

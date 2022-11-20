@@ -4,7 +4,6 @@ use App\Template;
 
 get_header(); ?>
 
-
     <div class="container pt-36">
         <div class="grid grid-cols-12 gap-[30px]">
             <div class="col-span-8 md:col-span-12">
