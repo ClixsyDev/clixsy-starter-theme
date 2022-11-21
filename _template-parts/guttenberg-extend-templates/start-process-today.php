@@ -47,7 +47,7 @@ if ($is_preview && !empty($previewImage)) {
                             'classes' => 'btn_sm hover_headings', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                         ]); ?>
                     </div>
-                    <div class="triangle absolute bottom-[6%] m-auto lg:top-[95%] md:top-[92%]"></div>
+                    <div class="triangle absolute bottom-[6%] m-auto lg:top-[95%] mdt:top-[91%]"></div>
                 </div>
                 <div class="step-block relative flex justify-center items-center gap-44 pt-16 pb-24 md:gap-28 md:pt-4 md:pb-16 xs:gap-10"">
                 <div>
