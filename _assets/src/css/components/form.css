@@ -208,4 +208,10 @@
     @apply hidden;
   }
 
+  &.sidebar-template {
+    p {
+      @apply w-full
+    }
+  }
+
 }

@@ -6753,6 +6753,10 @@ h2 span {
   display: none;
 }
 
+.form.sidebar-template p {
+  width: 100%;
+}
+
 .faq__text {
   max-height: 0;
   -o-transition: max-height .25s linear;
