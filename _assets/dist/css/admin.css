@@ -12268,6 +12268,10 @@ html :where(.wp-block) {
     width: 96%;
   }
 
+  .sm\:w-15\/24 {
+    width: 62.5%;
+  }
+
   .sm\:max-w-\[200px\] {
     max-width: 200px;
   }
