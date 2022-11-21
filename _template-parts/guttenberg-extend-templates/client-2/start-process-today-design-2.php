@@ -11,6 +11,7 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $title = get_field('start_process_today_design_2__title');
     $start_process_today_design_2__steps = get_field('start_process_today_design_2__steps');
+    $start_process_today_design_2__start_link = get_field('start_process_today_design_2__start_link');
  ?>
 
     <div class="relative py-16 xs:py-4">
@@ -25,7 +26,7 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="relative flex justify-center items-center gap-20 pt-16 pb-24 mdt:flex-col mdt:gap-16 md:gap-14 md:pt-4 md:pb-16 xs:gap-0 <?php echo $i % 2 == 0 ?: 'flex-row-reverse' ?>" style="background-color: <?php echo $step_item['start_process_today_design_2__block_bg'] ?: ''  ?> ;">
                             <span class="absolute skew-y-1 w-full h-[110%] -top-[6%] z-[-1]" style="background-color: <?php echo $step_item['start_process_today_design_2__block_bg'] ?: ''  ?> ;"></span>
                             <?php if ($step_item['start_process_today_design_2__image']) { ?>
-                                <div class="<?php echo $i % 2 == 0 ?: 'w-7/24 xs:p-4' ?>">
+                                <div class="<?php echo $i % 2 == 0 ?: 'w-7/24 xs:p-4 sm:w-15/24' ?>">
                                     <img src="<?= wp_get_attachment_image_url($step_item['start_process_today_design_2__image'], 'full') ?>" class="max-w-md mdt:max-w-none mdt:w-15/24 mdt:m-auto" alt="">
                                 </div>
                             <?php } ?>
@@ -54,14 +55,14 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             
         </div>
-        <?php if ($start_btn) { ?>
+        <?php if ($start_process_today_design_2__start_link) { ?>
             <div class="mt-12">
                 <?php
                 Template::load('_template-parts/components/button.php', [
-                    'link' => $start_btn['url'],
-                    'text' => __($start_btn['title'], 'law'),
+                    'link' => $start_process_today_design_2__start_link['url'],
+                    'text' => __($start_process_today_design_2__start_link['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => 'btn_xl hover_headings uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => 'btn_sm hover_headings uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             </div>
         <?php } ?>
