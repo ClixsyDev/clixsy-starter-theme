@@ -12,6 +12,7 @@
 @import './components/_faq.css';
 @import './components/_toc.css';
 @import './components/_breadcrumbs.css';
+@import './components/_thank-you-messages.css';
 
 @tailwind base;
 @tailwind components;

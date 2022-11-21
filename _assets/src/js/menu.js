@@ -142,7 +142,6 @@ export const dropdownMenu = () => {
     let itemsHasChildren = getElements('.menu-item-has-children');
     if (ifSelectorExist(itemsHasChildren)) {
       Array.from(itemsHasChildren).forEach((item) => {
-        console.log(headerSelector.clientHeight);
         let subMenuSelector = getElement('.sub-menu', item);
         if (ifSelectorExist(subMenuSelector)) {
           subMenuSelector.style.top = headerSelector.clientHeight + 'px';
