@@ -16,7 +16,7 @@
   @apply font-main text-accent text-7xl text-center font-bold lg:text-5xl xs:text-4xl;
 
   span {
-    @apply text-headings border-b-4 border-button_color text-accent;
+    @apply text-headings border-b-4;
   }
 }
 

@@ -4960,13 +4960,9 @@ h2 span {
 }
 
 .heading_h1 span {
-  --tw-border-opacity: 1;
-  border-bottom-width: 4px;
-  border-color: rgb(209 56 58 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(49 113 184 / var(--tw-text-opacity));
+  border-bottom-width: 4px;
 }
 
 .heading_default_color {
@@ -12707,6 +12703,10 @@ html :where(.wp-block) {
 
   .xs\:h-80 {
     height: 20rem;
+  }
+
+  .xs\:h-full {
+    height: 100%;
   }
 
   .xs\:max-h-64 {
