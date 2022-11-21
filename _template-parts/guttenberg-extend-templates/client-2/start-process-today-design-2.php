@@ -62,7 +62,7 @@ if ($is_preview && !empty($previewImage)) {
                     'link' => $start_process_today_design_2__start_link['url'],
                     'text' => __($start_process_today_design_2__start_link['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => 'btn_sm hover_headings uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => 'btn_sm hover_accent uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             </div>
         <?php } ?>
