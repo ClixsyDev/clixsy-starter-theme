@@ -10042,10 +10042,6 @@ h2 span {
   padding-bottom: 3.5rem;
 }
 
-.acf-block-preview .pt-6 {
-  padding-top: 1.5rem;
-}
-
 .acf-block-preview .pb-2 {
   padding-bottom: .5rem;
 }
@@ -12931,6 +12927,10 @@ html :where(.wp-block) {
     font-size: 2.25rem;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+  }
+
   .sm\:text-sm {
     font-size: .875rem;
   }
@@ -13260,6 +13260,10 @@ html :where(.wp-block) {
 
   .xs\:h-80 {
     height: 20rem;
+  }
+
+  .xs\:h-full {
+    height: 100%;
   }
 
   .xs\:max-h-64 {
