@@ -27,6 +27,21 @@
   }
 }
 
+.hero_heading_h1 {
+  @apply font-main text-black text-7xl text-center font-black lg:text-5xl xs:text-4xl;
+
+  span {
+    @apply text-accent border-b-4 border-button_color;
+  }
+}
+
+.heading_default_color {
+  @apply font-main text-6xl font-bold lg:text-5xl xs:text-4xl;
+  span {
+    @apply text-accent;
+  }
+}
+
 .heading_h2 {
   @apply text-5xl font-bold font-main text-headings text-center leading-[60px] lg:text-4xl lg:leading-[42px] md:text-3xl md:leading-[36px] sm:text-2xl sm:leading-[30px];
 
@@ -49,5 +64,9 @@
   }
 }
 
-.block_title {
+.heading_verdicts {
+  @apply font-black text-5xl text-center text-black uppercase;
+  span {
+    @apply text-accent border-b-4 border-button_color;
+  }
 }

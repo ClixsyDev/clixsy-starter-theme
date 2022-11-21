@@ -5346,6 +5346,58 @@ h2 span {
   color: rgb(49 113 184 / var(--tw-text-opacity));
 }
 
+.hero_heading_h1 {
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  font-family: Lato;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .hero_heading_h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero_heading_h1 {
+    font-size: 2.25rem;
+  }
+}
+
+.hero_heading_h1 span {
+  --tw-border-opacity: 1;
+  border-bottom-width: 4px;
+  border-color: rgb(209 56 58 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(49 113 184 / var(--tw-text-opacity));
+}
+
+.heading_default_color {
+  font-family: Lato;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .heading_default_color {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .heading_default_color {
+    font-size: 2.25rem;
+  }
+}
+
+.heading_default_color span {
+  --tw-text-opacity: 1;
+  color: rgb(49 113 184 / var(--tw-text-opacity));
+}
+
 .heading_h2 {
   text-align: center;
   --tw-text-opacity: 1;
@@ -5390,6 +5442,23 @@ h2 span {
 .heading_h2.span_headings span {
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
+}
+
+.heading_verdicts {
+  text-align: center;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.heading_verdicts span {
+  --tw-border-opacity: 1;
+  border-bottom-width: 4px;
+  border-color: rgb(209 56 58 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(49 113 184 / var(--tw-text-opacity));
 }
 
 @media (max-width: 1024px) {
@@ -8591,6 +8660,18 @@ h2 span {
 
 .acf-block-preview .-bottom-\[17\%\] {
   bottom: -17%;
+}
+
+.acf-block-preview .-bottom-\[16\%\] {
+  bottom: -16%;
+}
+
+.acf-block-preview .-top-8 {
+  top: -2rem;
+}
+
+.acf-block-preview .-top-7 {
+  top: -1.75rem;
 }
 
 .acf-block-preview .z-50 {
@@ -12170,6 +12251,14 @@ html :where(.wp-block) {
     line-height: 40px;
   }
 
+  .mdt\:leading-5 {
+    line-height: 1.25rem;
+  }
+
+  .mdt\:\!leading-5 {
+    line-height: 1.25rem !important;
+  }
+
   .mdt\:before\:w-20:before, .mdt\:after\:w-20:after {
     content: var(--tw-content);
     width: 5rem;
@@ -13256,10 +13345,6 @@ html :where(.wp-block) {
 
   .xs\:h-7 {
     height: 1.75rem;
-  }
-
-  .xs\:h-80 {
-    height: 20rem;
   }
 
   .xs\:h-full {

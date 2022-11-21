@@ -73,7 +73,7 @@ if (document.querySelector(verdictsSlider) != undefined && document.querySelecto
       type: 'carousel',
       autoplay: 1,
       animationDuration: 4000,
-      animationTimingFunc: 'linear',
+      // animationTimingFunc: 'linear',
       perView: 4,
       breakpoints: {
         1100: {
@@ -188,16 +188,19 @@ if (document.querySelector(merits) != undefined && document.querySelector(merits
     new Glide(item, {
       perView: 4,
       type: 'carousel',
-      autoplay: 3000,
+      animationDuration: 4000,
       breakpoints: {
         1496: {
           perView: 3,
+          autoplay: 1,
         },
         1200: {
           perView: 2,
+          autoplay: 3000,
         },
         640: {
           perView: 1,
+          autoplay: 3000,
         },
       },
     }).mount();

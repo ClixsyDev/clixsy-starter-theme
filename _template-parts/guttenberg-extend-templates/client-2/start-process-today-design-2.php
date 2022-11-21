@@ -12,7 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $title = get_field('start_process_today_design_2__title');
     $start_process_today_design_2__steps = get_field('start_process_today_design_2__steps');
     $start_process_today_design_2__start_link = get_field('start_process_today_design_2__start_link');
- ?>
+?>
 
     <div class="relative py-16 xs:py-4">
         <div class="container p-0 overflow-hidden">
@@ -42,18 +42,19 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php } ?>
                                 <?php if ($step_item['start_process_today_design_2__link']) {
                                     Template::load('_template-parts/components/button.php', [
-                                    'link' => $step_item['start_process_today_design_2__link']['url'],
-                                    'text' => __($step_item['start_process_today_design_2__link']['title'], 'law'),
-                                    'text_hover' => false,
-                                    'classes' => 'btn_sm hover_accent mdt:m-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
-                                ]); } ?>
+                                        'link' => $step_item['start_process_today_design_2__link']['url'],
+                                        'text' => __($step_item['start_process_today_design_2__link']['title'], 'law'),
+                                        'text_hover' => false,
+                                        'classes' => 'btn_sm hover_accent mdt:m-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                    ]);
+                                } ?>
                             </div>
-                            <div class="z-10 border-transparent border-[25px] absolute m-auto <?php echo $i % 2 == 0 ? 'bottom-[-59px] border-t-[#e2e4e8] lg:bottom-[-56px] mdt:bottom-[-47px]' : '-bottom-[17%] border-t-white lg:-bottom-[14%] mdt:-bottom-[8%] md:-bottom-[10%]'  ?>"></div>
+                            <div class="z-10 border-transparent border-[25px] absolute m-auto <?php echo $i % 2 == 0 ? 'bottom-[-59px] border-t-[#e2e4e8] lg:bottom-[-56px] mdt:bottom-[-47px]' : '-bottom-[16%] border-t-white lg:-bottom-[14%] mdt:-bottom-[8%] md:-bottom-[10%]'  ?>"></div>
                         </div>
                     <?php } ?>
                 </div>
             <?php } ?>
-            
+
         </div>
         <?php if ($start_process_today_design_2__start_link) { ?>
             <div class="mt-12">
