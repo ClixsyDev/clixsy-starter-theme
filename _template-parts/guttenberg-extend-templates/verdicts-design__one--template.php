@@ -31,7 +31,7 @@ if ($is_preview && !empty($previewImage)) {
                         foreach ($verdicts_design_one__verdicts as $verdic_item) {
                         ?>
                             <div class="glide__slide pt-4 pb-2 px-4 text-center flex-1 shadow-reviews <?php echo $verdicts_design_one__select == 'Dark' ? 'bg-headings' : 'bg-white' ?>">
-                                <div class="font-avenir font-bold text-accent text-5xl leading-none 2xl:text-3xl <?php echo $verdicts_design_one__select == 'Dark' ? 'uppercase' : '' ?>">
+                                <div class="font-avenir font-bold text-accent text-4xl leading-none 2xl:text-3xl <?php echo $verdicts_design_one__select == 'Dark' ? 'uppercase' : '' ?>">
                                     <?php echo $verdic_item['price'] ?>
                                 </div>
                                 <div class="font-avenir text-[40px] 2xl:text-[25px] <?php echo $verdicts_design_one__select == 'Dark' ? 'text-white' : '' ?>">

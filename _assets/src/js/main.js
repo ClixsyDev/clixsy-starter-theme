@@ -22,6 +22,8 @@ ready(() => {
   litifyCall();
   tocAnchor();
   sentNewMessage('.sidebar-form');
+  sentNewMessage('.attorney-group__form');
+  sentNewMessage('.form');
 });
 
 

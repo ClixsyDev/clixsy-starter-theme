@@ -74,6 +74,30 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                     'return_format' => 'id',
                 ),
+                array(
+                    'key' => $block_key . 'disable_title',
+                    'name' => $block_key . 'disable_title',
+                    'label' => 'Hide title',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $block_key . 'disable_description',
+                    'name' => $block_key . 'disable_description',
+                    'label' => 'Hide description',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                ),
+                array(
+                    'key' => $block_key . 'disable_date',
+                    'name' => $block_key . 'disable_date',
+                    'label' => 'Hide date',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                ),
             ),
 
         )

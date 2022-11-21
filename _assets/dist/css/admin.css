@@ -6683,6 +6683,7 @@ h2 span {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
   display: flex;
 }
 
@@ -6695,7 +6696,6 @@ h2 span {
 .form input::placeholder {
   --tw-text-opacity: 1;
   color: rgb(112 112 112 / var(--tw-text-opacity));
-  padding-left: 1rem;
 }
 
 .form input[type="submit"] {
@@ -6716,7 +6716,6 @@ h2 span {
   height: 10rem;
   margin-bottom: .75rem;
   padding-top: .5rem;
-  padding-left: 1rem;
 }
 
 .form textarea::placeholder {
@@ -8514,8 +8513,8 @@ h2 span {
   left: -.5rem;
 }
 
-.acf-block-preview .-top-12 {
-  top: -3rem;
+.acf-block-preview .-top-7 {
+  top: -1.75rem;
 }
 
 .acf-block-preview .left-5 {
@@ -8662,20 +8661,8 @@ h2 span {
   bottom: -59px;
 }
 
-.acf-block-preview .-bottom-\[17\%\] {
-  bottom: -17%;
-}
-
 .acf-block-preview .-bottom-\[16\%\] {
   bottom: -16%;
-}
-
-.acf-block-preview .-top-8 {
-  top: -2rem;
-}
-
-.acf-block-preview .-top-7 {
-  top: -1.75rem;
 }
 
 .acf-block-preview .z-50 {
@@ -12255,14 +12242,6 @@ html :where(.wp-block) {
     line-height: 40px;
   }
 
-  .mdt\:leading-5 {
-    line-height: 1.25rem;
-  }
-
-  .mdt\:\!leading-5 {
-    line-height: 1.25rem !important;
-  }
-
   .mdt\:before\:w-20:before, .mdt\:after\:w-20:after {
     content: var(--tw-content);
     width: 5rem;
@@ -13018,10 +12997,6 @@ html :where(.wp-block) {
 
   .sm\:text-4xl {
     font-size: 2.25rem;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
   }
 
   .sm\:text-sm {

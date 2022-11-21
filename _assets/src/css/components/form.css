@@ -164,7 +164,7 @@
 .form {
   input,
   textarea {
-    @apply w-full mx-auto flex items-center justify-center;
+    @apply w-full mx-auto flex items-center justify-center pl-4;
   }
 
   input {
@@ -172,7 +172,7 @@
   }
 
   input::placeholder {
-    @apply pl-4 text-[#707070];
+    @apply text-[#707070];
   }
 
   input[type="submit"] {
@@ -180,7 +180,7 @@
   }
 
   textarea {
-    @apply pl-4 pt-2 mb-3 h-40;
+    @apply pt-2 mb-3 h-40;
   }
 
   textarea::placeholder {

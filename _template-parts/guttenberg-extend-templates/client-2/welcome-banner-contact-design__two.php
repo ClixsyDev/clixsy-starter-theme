@@ -20,7 +20,9 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner_contact_design_two__form_description = get_field('welcome_banner_contact_design_two__form_description');
 ?>
     <!-- welcome-banner-contact-design__two.php -->
-    <section class="bg-no-repeat bg-center pt-36 lg:pt-16 mdt:bg-contain mdt:bg-[center_top_12rem]" style="background-color: <?php echo $welcome_banner_contact_design_two__bg ?: ''  ?> ; background-image:url('<?php echo $welcome_banner_contact_design_two__image['url']; ?>');">
+    <section class="bg-no-repeat bg-center pt-36 lg:pt-16 mdt:bg-contain mdt:bg-[center_top_12rem]" style="
+    background-color: <?php echo $welcome_banner_contact_design_two__bg ?: ''  ?>; 
+    background-image:url('<?php echo !empty($welcome_banner_contact_design_two__image) ? wp_get_attachment_image_url($welcome_banner_contact_design_two__image['ID']) : ''; ?>');">
         <div class="container">
             <div class="flex items-center px-20 gap-64 2xl:px-0 xl:gap-40 mdt:flex-col mdt:gap-16">
                 <?php if ($welcome_banner_contact_design_two__top_description || $welcome_banner_contact_design_two__title || $welcome_banner_contact_design_two__bottom_description) { ?>
@@ -43,14 +45,19 @@ if ($is_preview && !empty($previewImage)) {
                                 'classes' => 'mt-10 btn_xl bigauto_red border-white border-2 hover_white_text_accent er_accent uppercase max-w-[395px] mdt:mx-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
-                    </div> 
+                    </div>
                 <?php } ?>
                 <?php if ($welcome_banner_contact_design_two__form_select) { ?>
                     <div class="w-2/5 mdt:w-20/24" style="background-color: <?php echo $welcome_banner_contact_design_two__form_bg ?: ''  ?> ;">
                         <div class="form py-10">
                             <?php echo $welcome_banner_contact_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner_contact_design_two__form_select['0'] . '" title=""]') : '' ?>
+                            <?php
+                            Template::load('_template-parts/components/thank-you-message.php', [
+                                'classes_disclaimer' => 'text-white',
+                                'classes_thankyou' => 'text-white'
+                            ]); ?>
                         </div>
-                    </div>  
+                    </div>
                 <?php } ?>
             </div>
             <?php if ($welcome_banner_contact_design_two__form_description) { ?>

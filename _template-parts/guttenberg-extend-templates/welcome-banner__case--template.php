@@ -27,7 +27,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($welcome_banner__case_title) { ?>
                         <div class="pb-12 text-white text-[90px] 2xl:text-[60px] md:text-[40px] text-center font-bold">
                             <span class="bg-accent w-2/5 h-2 absolute left-0 right-0 mx-auto"></span>
-                            <h2 class="py-3 leading-tight"><?php echo $welcome_banner__case_title ?></h2>
+                            <h1 class="py-3 leading-tight"><?php echo $welcome_banner__case_title ?></h1>
                             <span class="bg-accent w-2/5  h-2 absolute left-0 right-0 mx-auto"></span>
                         </div>
                     <?php } ?>

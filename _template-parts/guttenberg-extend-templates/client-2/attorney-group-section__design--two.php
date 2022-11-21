@@ -42,6 +42,11 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="col-span-4 xl:col-span-5  mdt:col-span-10 mdt:col-start-2 w-full pt-10 pb-8 mdt:p-4" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
                     <div class="attorney-group__form ">
                         <?php echo $attorney_group_section_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $attorney_group_section_design_two__form_select['0'] . '" title="Contact form"]') : '' ?>
+                        <?php
+                        Template::load('_template-parts/components/thank-you-message.php', [
+                            'classes_disclaimer' => 'text-white',
+                            'classes_thankyou' => 'text-white'
+                        ]); ?>
                     </div>
                     <div class="flex justify-center items-center w-4/5 mx-auto text-white">
                         <?php echo $attorney_group_section_design_two__form_text ?>
