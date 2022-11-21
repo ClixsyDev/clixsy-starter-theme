@@ -61,6 +61,30 @@
     }
   }
 
+  &.btn_form_design_one {
+    @apply min-w-[230px] text-xl mt-9 m-auto;
+
+    .btn_arrow {
+      @apply transform inline-block -translate-y-[0.2rem];
+    }
+
+    &:hover {
+      @apply text-2xl min-w-[270px] text-button_color;
+    }
+
+    &.btn-form-newsletter {
+      @apply text-lg bg-accent text-button_color p-0 min-w-[170px] h-11;
+
+      &:hover {
+        @apply min-w-[190px];
+        
+        span {
+          @apply text-button_color;
+        }
+      }
+    }
+  }
+
   /* hover states */
   &.hover_white {
     @apply hover:bg-white  text-headings;

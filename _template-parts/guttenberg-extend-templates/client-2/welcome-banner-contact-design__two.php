@@ -40,7 +40,7 @@ if ($is_preview && !empty($previewImage)) {
                                 'link' => 'tel:' . $welcome_banner_contact_design_two__tel,
                                 'text' => __($welcome_banner_contact_design_two__tel, 'law'),
                                 'text_hover' => false,
-                                'classes' => 'mt-10 btn_md bigauto_red hover_accent uppercase max-w-[460px] mdt:mx-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                'classes' => 'mt-10 btn_md bigauto_red hover_white_text_accent er_accent uppercase max-w-[460px] mdt:mx-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
                     </div> 

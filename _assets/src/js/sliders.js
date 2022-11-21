@@ -179,3 +179,27 @@ if (ifSelectorExist(verdicts)) {
   });
   verdictsMarquee.resume();
 }
+
+// client 2
+
+const merits = '.merits';
+if (document.querySelector(merits) != undefined && document.querySelector(merits) != null) {
+  Array.from(getElements(merits)).forEach((item) => {
+    new Glide(item, {
+      perView: 4,
+      type: 'carousel',
+      autoplay: 3000,
+      breakpoints: {
+        1496: {
+          perView: 3,
+        },
+        1200: {
+          perView: 2,
+        },
+        640: {
+          perView: 1,
+        },
+      },
+    }).mount();
+  });
+}

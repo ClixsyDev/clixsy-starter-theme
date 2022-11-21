@@ -1179,6 +1179,26 @@ if ((0, _utils.ifSelectorExist)(verdicts)) {
     });
     verdictsMarquee.resume();
 }
+// client 2
+const merits = ".merits";
+if (document.querySelector(merits) != undefined && document.querySelector(merits) != null) Array.from((0, _utils.getElements)(merits)).forEach((item)=>{
+    new (0, _glideDefault.default)(item, {
+        perView: 4,
+        type: "carousel",
+        autoplay: 3000,
+        breakpoints: {
+            1496: {
+                perView: 3
+            },
+            1200: {
+                perView: 2
+            },
+            640: {
+                perView: 1
+            }
+        }
+    }).mount();
+});
 
 },{"@glidejs/glide":"cS4lK","./utils":"blFj3","vanilla-marquee":"aRzML","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
