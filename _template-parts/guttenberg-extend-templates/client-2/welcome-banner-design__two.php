@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="pb-52 pt-20 lg:pb-56 sm:pb-24">
             <?php if ($welcome_banner__design_two__title) { ?>
                 <div class="container">
-                    <h1 class="heading_h1"><?php echo $welcome_banner__design_two__title ?></h1>
+                    <h1 class="heading_h1 text-headings"><?php echo $welcome_banner__design_two__title ?></h1>
                 </div>
             <?php } ?>
         </div>

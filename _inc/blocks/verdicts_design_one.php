@@ -75,6 +75,18 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
                 array(
+                    'key' => $block_key . 'select',
+                    'name' => $block_key . 'select',
+                    'label' => 'Select the design of the block',
+                    'type' => 'radio',
+                    'choices' => array(
+                        'Light' => 'Light',
+                        'Dark' => 'Dark',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
+                array(
                     'key' => $block_key . 'bg',
                     'name' => $block_key . 'bg',
                     'type' => 'image',

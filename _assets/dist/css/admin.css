@@ -4960,9 +4960,13 @@ h2 span {
 }
 
 .heading_h1 span {
+  --tw-border-opacity: 1;
+  border-bottom-width: 4px;
+  border-color: rgb(209 56 58 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  border-bottom-width: 4px;
+  --tw-text-opacity: 1;
+  color: rgb(49 113 184 / var(--tw-text-opacity));
 }
 
 .heading_default_color {
@@ -8771,10 +8775,6 @@ h2 span {
   max-width: 28rem;
 }
 
-.acf-block-preview .max-w-\[380px\] {
-  max-width: 380px;
-}
-
 .acf-block-preview .max-w-\[395px\] {
   max-width: 395px;
 }
@@ -9505,10 +9505,6 @@ h2 span {
   padding-bottom: 3.5rem;
 }
 
-.acf-block-preview .pt-6 {
-  padding-top: 1.5rem;
-}
-
 .acf-block-preview .pb-2 {
   padding-bottom: .5rem;
 }
@@ -9538,7 +9534,7 @@ h2 span {
 }
 
 .acf-block-preview .font-second {
-  font-family: Noto Serif;
+  font-family: ArialRounded;
 }
 
 .acf-block-preview .text-10xl {
@@ -9627,10 +9623,6 @@ h2 span {
 
 .acf-block-preview .text-20xl {
   font-size: 500px;
-}
-
-.acf-block-preview .\!text-4xl {
-  font-size: 2.25rem !important;
 }
 
 .acf-block-preview .font-bold {
@@ -12380,6 +12372,10 @@ html :where(.wp-block) {
 
   .sm\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
   }
 
   .sm\:text-sm {
