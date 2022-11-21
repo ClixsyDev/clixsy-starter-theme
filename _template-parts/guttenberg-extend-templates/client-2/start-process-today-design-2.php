@@ -11,6 +11,7 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $title = get_field('start_process_today_design_2__title');
     $start_process_today_design_2__steps = get_field('start_process_today_design_2__steps');
+    $start_process_today_design_2__start_link = get_field('start_process_today_design_2__start_link');
  ?>
 
     <div class="relative py-16 xs:py-4">
@@ -54,14 +55,14 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             
         </div>
-        <?php if ($start_btn) { ?>
+        <?php if ($start_process_today_design_2__start_link) { ?>
             <div class="mt-12">
                 <?php
                 Template::load('_template-parts/components/button.php', [
-                    'link' => $start_btn['url'],
-                    'text' => __($start_btn['title'], 'law'),
+                    'link' => $start_process_today_design_2__start_link['url'],
+                    'text' => __($start_process_today_design_2__start_link['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => 'btn_xl hover_headings uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => 'btn_sm hover_headings uppercase max-w-[410px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             </div>
         <?php } ?>

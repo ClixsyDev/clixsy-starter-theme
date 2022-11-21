@@ -108,6 +108,13 @@ if (function_exists('acf_add_local_field_group')) {
                 'type' => 'text',
                 'label' => 'Title section',
             ),
+            array(
+                'key' => $block_key . 'start_link',
+                'name' => $block_key . 'start_link',
+                'label' => 'Link',
+                'type' => 'link',
+                'return_format' => 'array',
+            ),
         )
     ));
 }
