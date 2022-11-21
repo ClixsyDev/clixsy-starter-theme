@@ -26,7 +26,7 @@ if ($is_preview && !empty($previewImage)) {
         </div>
         <?php if ($welcome_banner__design_two__image || $welcome_banner__design_two__link) { ?>
             <div>
-                <div class="bg-accent pb-20 sm:h-96 sm:pb-14 xs:h-80" style="background-color: <?php echo $welcome_banner__design_two__section_bg_second ?: ''  ?> ;">
+                <div class="bg-accent pb-20 sm:h-96 sm:pb-14 xs:h-full" style="background-color: <?php echo $welcome_banner__design_two__section_bg_second ?: ''  ?> ;">
                     <div class="container flex flex-col items-center">
                         <?php echo wp_get_attachment_image($welcome_banner__design_two__image, 'full', '', ['class' => 'm-auto -mt-60 sm:-mt-24']) ?>
                         <?php if ($welcome_banner__design_two__link && $welcome_banner__design_two__link['url']) { ?>

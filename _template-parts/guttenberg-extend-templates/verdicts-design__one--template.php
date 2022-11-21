@@ -7,6 +7,7 @@ if ($is_preview && !empty($previewImage)) {
     echo ("<img style='display: block; max-width: 100%; height: auto;'  src='{$block['data']['preview_image']}' alt='widget preview'");
     return;
 } else {
+    $verdicts_design_one__select = get_field('verdicts_design_one__select');
     $verdicts_design_one__verdicts = get_field('verdicts_design_one__verdicts');
     $verdicts_design_one__bg = get_field('verdicts_design_one__bg');
     $verdicts_design_one__title = get_field('verdicts_design_one__title');
@@ -14,12 +15,12 @@ if ($is_preview && !empty($previewImage)) {
 
 ?>
     <?php if ($verdicts_design_one__verdicts['0']) { ?>
-        <div class="relative" style="background-color: <?php echo $verdicts_design_one__bg_color ?: '' ?> ">
+        <div class="relative <?php echo $verdicts_design_one__select == 'Dark' ? 'shadow-siteWide' : '' ?> " style="background-color: <?php echo $verdicts_design_one__bg_color ?: '' ?> ">
             <?php if ($verdicts_design_one__bg) {
                 echo wp_get_attachment_image($verdicts_design_one__bg, 'full', '', ['class' => 'absolute left-0 top-0 w-full h-full object-cover']);
             } ?>
             <?php if ($verdicts_design_one__title) { ?>
-            <h2 class="heading_h2 relative pt-6 mb-6 mx-auto">
+            <h2 class="heading_h2 relative pt-10 mx-auto text-6xl xl:text-4xl sm:text-3xl">
                 <?php echo $verdicts_design_one__title ?>
             </h2>
             <?php } ?>
@@ -29,11 +30,11 @@ if ($is_preview && !empty($previewImage)) {
                         <?php
                         foreach ($verdicts_design_one__verdicts as $verdic_item) {
                         ?>
-                            <div class="glide__slide bg-white pt-4 pb-2 px-4 text-center flex-1 shadow-reviews">
+                            <div class="glide__slide pt-4 pb-2 px-4 text-center flex-1 shadow-reviews <?php echo $verdicts_design_one__select == 'Dark' ? 'bg-headings' : 'bg-white' ?>">
                                 <div class="font-avenir font-bold text-accent text-5xl leading-none 2xl:text-3xl">
                                     <?php echo $verdic_item['price'] ?>
                                 </div>
-                                <div class="font-avenir text-[40px] 2xl:text-[25px]">
+                                <div class="font-avenir text-[40px] 2xl:text-[25px] <?php echo $verdicts_design_one__select == 'Dark' ? 'text-white' : '' ?>">
                                     <?php echo $verdic_item['case'] ?>
                                 </div>
                             </div>
