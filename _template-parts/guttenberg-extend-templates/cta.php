@@ -13,9 +13,10 @@ if ($is_preview && !empty($previewImage)) {
     $title = get_field($key . '_title');
     $button = get_field($key . '_button');
     $button_hover = get_field($key . '_button_hover');
+    $block_bg = get_field($key . '_block_bg');
 ?>
     <!-- cta.php -->
-    <div class=" pt-10 pb-9 bg-smoke sm:pt-6 sm:pb-7">
+    <div class=" pt-10 pb-9 bg-smoke sm:pt-6 sm:pb-7" style="background-color: <?php echo $block_bg ?: ''  ?> ;">
         <div class="container">
             <?php if ($title) { ?>
                 <h2 class="font-main font-bold text-white text-5xl leading-tight text-center mb-7 sm:text-2xl"><?= $title ?></h2>

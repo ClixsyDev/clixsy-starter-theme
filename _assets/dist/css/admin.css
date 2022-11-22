@@ -6487,7 +6487,6 @@ h2 span {
   justify-content: flex-end;
   align-items: flex-end;
   column-gap: 1rem;
-  display: flex;
 }
 
 @media (max-width: 640px) {
@@ -6501,6 +6500,8 @@ h2 span {
 
 .attorney-group__form input, .attorney-group__form textarea {
   width: 100%;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
   justify-content: center;
   align-items: center;
   margin-left: auto;
@@ -6510,14 +6511,12 @@ h2 span {
 
 .attorney-group__form input {
   margin-bottom: .75rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding: .5rem 1rem;
 }
 
 .attorney-group__form input::placeholder {
   --tw-text-opacity: 1;
   color: rgb(112 112 112 / var(--tw-text-opacity));
-  padding-left: 1rem;
 }
 
 .attorney-group__form input[type="submit"] {
@@ -6525,10 +6524,18 @@ h2 span {
   width: 14rem;
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   border-radius: 9999px;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1;
+}
+
+.attorney-group__form .btn {
+  line-height: 3px;
 }
 
 .attorney-group__form textarea {
@@ -6557,123 +6564,6 @@ h2 span {
 }
 
 .attorney-group__form .wpcf7-spinner {
-  display: none;
-}
-
-.attorney-group__form {
-  justify-content: center;
-  align-items: center;
-  column-gap: 1rem;
-  display: flex;
-}
-
-@media (max-width: 640px) {
-  .attorney-group__form {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1rem;
-  }
-}
-
-.attorney-group__form input, .attorney-group__form textarea {
-  width: 100%;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-}
-
-.attorney-group__form input {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-  margin-bottom: .75rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  padding-left: .5rem;
-}
-
-.attorney-group__form input::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(112 112 112 / var(--tw-text-opacity));
-  padding-left: .5rem;
-}
-
-.attorney-group__form input[type="submit"] {
-  height: 3rem;
-  width: 14rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  border-radius: 9999px;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.attorney-group__form textarea {
-  height: 10rem;
-  margin-bottom: .75rem;
-  padding-top: .5rem;
-  padding-left: 1rem;
-}
-
-.attorney-group__form textarea::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(112 112 112 / var(--tw-text-opacity));
-}
-
-.attorney-group__form p {
-  width: 100%;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1rem;
-}
-
-@media (max-width: 1496px) {
-  .attorney-group__form p {
-    width: 80%;
-  }
-}
-
-@media (max-width: 992px) {
-  .attorney-group__form p {
-    width: 100%;
-  }
-}
-
-@media (max-width: 540px) {
-  .attorney-group__form p {
-    width: 80%;
-  }
-}
-
-.attorney-group__form label {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  padding-bottom: .5rem;
-  padding-left: .5rem;
-}
-
-.attorney-group__form .wpcf7-spinner {
-  display: none;
-}
-
-.attorney-group__form .wpcf7-form-control-wrap {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.attorney-group__form br, .attorney-group__form p:empty {
   display: none;
 }
 
@@ -8717,6 +8607,14 @@ h2 span {
   grid-column: span 3 / span 3;
 }
 
+.acf-block-preview .col-span-7 {
+  grid-column: span 7 / span 7;
+}
+
+.acf-block-preview .col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
 .acf-block-preview .row-auto {
   grid-row: auto;
 }
@@ -9635,6 +9533,10 @@ h2 span {
   border-width: 25px;
 }
 
+.acf-block-preview .border-1 {
+  border-width: 1px;
+}
+
 .acf-block-preview .border-b {
   border-bottom-width: 1px;
 }
@@ -10124,6 +10026,10 @@ h2 span {
 
 .acf-block-preview .pb-52 {
   padding-bottom: 13rem;
+}
+
+.acf-block-preview .pt-6 {
+  padding-top: 1.5rem;
 }
 
 .acf-block-preview .text-center {

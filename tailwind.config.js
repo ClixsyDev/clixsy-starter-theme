@@ -100,6 +100,9 @@ module.exports = {
       content: {
         'content-dedicat': 'url("/assets/img/quote_dedicated.png")',
       },
+      borderWidth: {
+        '1': '1px',
+      }
     },
     container: {
       center: true,
