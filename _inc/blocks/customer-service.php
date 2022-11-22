@@ -108,6 +108,18 @@ if (function_exists('acf_add_local_field_group')) {
                     ),
                 ),
             ),
+            array(
+                'key' => $key . '_select',
+                'name' => $key . '_select',
+                'label' => 'Select text weight of the title',
+                'type' => 'radio',
+                'choices' => array(
+                    'Default' => 'Default',
+                    'Bold text' => 'Bold text',
+                ),
+                'layout' => 'vertical',
+                'return_format' => 'value',
+            ),
         )
     ));
 }

@@ -14,6 +14,7 @@ if ($is_preview && !empty($previewImage)) {
     $title = get_field($key . '_title');
     $company_logo = get_field($key . '_company_logo');
     $services = get_field($key . '_services');
+    $select = get_field($key . '_select');
 ?>
     <div class="relative bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo  wp_get_attachment_image_url($bg_image) ?: ''  ?>');">
         <div class="container relative pt-20 pb-10">
@@ -34,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                             <div class="rounded-full bg-white w-[200px] h-[200px] p-10 flex justify-center items-center mb-3">
                                 <img src="<?= wp_get_attachment_image_url($service['customer_service_service_logo'], 'full') ?>" alt="">
                             </div>
-                            <div class=" text-3xl leading-tight text-center mb-3"><?= $service['customer_service_service_title'] ?></div>
+                            <div class=" text-3xl leading-tight text-center mb-3 <?php echo $select == 'Bold text' ? 'font-bold' : '' ?>"><?= $service['customer_service_service_title'] ?></div>
                             <div class=" bg-headings text-white px-7 py-5 h-[117px] flex text-center items-center
                             <?= $class ?>">
                                 <?= $service['customer_service_service_description'] ?>
