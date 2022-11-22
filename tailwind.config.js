@@ -50,6 +50,9 @@ module.exports = {
         siteWide: '0px 3px 6px rgba(0, 0, 0, 0.16)',
         reviews: '3px 3px 15px rgba(141, 141, 141, 0.47)',
       },
+      dropShadow: {
+        'circleShadow': '0px 3px 6px rgba(0, 0, 0, 0.16)',
+      },
       colors: colors,
       fontFamily: {
         main: fonts['main'],

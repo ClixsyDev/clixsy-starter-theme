@@ -15,6 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     $company_logo = get_field($key . '_company_logo');
     $services = get_field($key . '_services');
     $select = get_field($key . '_select');
+    $select_shadow = get_field($key . '_select_shadow');
 ?>
     <div class="relative bg-cover lg:bg-contain lg:bg-repeat" style="background-image: url('<?php echo  wp_get_attachment_image_url($bg_image) ?: ''  ?>');">
         <div class="container relative pt-20 pb-10">
@@ -32,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
                         after:block after:absolute after:-translate-y-1/2 after:w-[1px] after:h-[65px] after:bg-white after:right-0 after:top-1/2' : '';
                         ?>
                         <div class="flex-1 flex flex-col justify-center items-center mdt:max-w-[400px]">
-                            <div class="rounded-full bg-white w-[200px] h-[200px] p-10 flex justify-center items-center mb-3">
+                            <div class="rounded-full bg-white w-[200px] h-[200px] p-10 flex justify-center items-center mb-3 <?php echo $select_shadow == 'With shadow' ? 'drop-shadow-circleShadow shadow-inner' : '' ?>">
                                 <img src="<?= wp_get_attachment_image_url($service['customer_service_service_logo'], 'full') ?>" alt="">
                             </div>
                             <div class=" text-3xl leading-tight text-center mb-3 <?php echo $select == 'Bold text' ? 'font-bold' : '' ?>"><?= $service['customer_service_service_title'] ?></div>

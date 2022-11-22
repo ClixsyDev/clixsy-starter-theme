@@ -120,6 +120,18 @@ if (function_exists('acf_add_local_field_group')) {
                 'layout' => 'vertical',
                 'return_format' => 'value',
             ),
+            array(
+                'key' => $key . '_select_shadow',
+                'name' => $key . '_select_shadow',
+                'label' => 'Select style of the circles',
+                'type' => 'radio',
+                'choices' => array(
+                    'Default' => 'Default',
+                    'With shadow' => 'With shadow',
+                ),
+                'layout' => 'vertical',
+                'return_format' => 'value',
+            ),
         )
     ));
 }
