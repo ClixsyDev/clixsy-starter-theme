@@ -53,8 +53,8 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <?php if (count($slider_description_design_two__slides) > 1) { ?>
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left absolute top-55% left-25% xl:top-45% lg:left-17% sm:left-7% xl:left-10% xs:top-[46%] xs:left-0" data-glide-dir="<"><img class="w-9/12 xs:h-7" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png"></button>
-                        <button class="glide__arrow glide__arrow--right absolute top-55% right-25% xl:top-45% lg:right-17% sm:right-7% xl:right-10% xs:top-[46%] xs:right-0" data-glide-dir="&gt;"><img class="w-9/12 xs:h-7" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
+                        <button class="glide__arrow glide__arrow--left absolute top-55% left-25% xl:top-45% lg:left-17% sm:left-7% xl:left-10% xs:top-[46%] xs:left-0" data-glide-dir="<"><img class="w-9/12 xs:h-7 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png"></button>
+                        <button class="glide__arrow glide__arrow--right absolute top-55% right-25% xl:top-45% lg:right-17% sm:right-7% xl:right-10% xs:top-[46%] xs:right-0" data-glide-dir="&gt;"><img class="w-9/12 xs:h-7 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
                     </div>
                 <?php } ?>
             </div>
