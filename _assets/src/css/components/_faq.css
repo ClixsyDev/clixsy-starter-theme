@@ -5,7 +5,7 @@
   -o-transition: max-height 0.25s linear;
   transition: max-height 0.25s linear;
 
-  ul {
+  ul, ol {
     margin-left: 23px;
     margin-top: 15px;
     margin-bottom: 15px;
