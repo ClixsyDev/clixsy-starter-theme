@@ -21,7 +21,7 @@ function litify_hook_callback() {
 
         $firstName = $data['client_first_name'] ? preg_replace("/[^a-zA-Z0-9 ]+/", '',  $data['client_first_name']) : '';
         $lastName = $data['client_last_name'] ? preg_replace("/[^a-zA-Z0-9 ]+/", '',  $data['client_last_name']) : '';
-        $email = $data['client_email'] ? preg_replace("/[^a-zA-Z0-9 ]+/", '',  $data['client_email']) : '';
+        $email = $data['client_email'] ?: '';
         $phone = $data['client_phone'] ? preg_replace("/[^a-zA-Z0-9 ]+/", '',  $data['client_phone']) : '';
         $description = $data['client_message'] ? preg_replace("/[^a-zA-Z0-9 ]+/", '',  $data['client_message']) : '';
         $zip = $data['client_zip'] ? preg_replace("/[^a-zA-Z0-9 ]+/", '',  $data['client_zip']) : '';
