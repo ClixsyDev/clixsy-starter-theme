@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__case_overlay = get_field('welcome_banner__case_overlay');
 
 ?>
-
+<!-- welcome-banner__case--template.php -->
     <?php if ($welcome_banner__case_title || $welcome_banner__case_link || $welcome_banner__case_bg || $welcome_banner__case_icon) { ?>
         <section class="w-full relative bg-cover pt-16 pb-16 md:h-auto md:pt-10 md:pb-10" style="background-image: url('<?php echo wp_get_attachment_image_url($welcome_banner__case_bg, 'full') ?>')">
         <span class="block absolute left-0 top-0 h-full w-full" style="background-color: <?php echo $welcome_banner__case_overlay ?: '' ?>"></span>

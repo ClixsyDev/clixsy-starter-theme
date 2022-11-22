@@ -12,10 +12,13 @@ if ($is_preview && !empty($previewImage)) {
     $key = 'contact_form';
     $title = get_field($key . '_title');
     $form = get_field($key . '_form_id');
+    $change_form_style = get_field($key . '_change_form_style');
+
 ?>
+<!-- contact-form.php -->
 <div class="how_can_help_form">
     <div class="container translate-y-20">
-        <div class="form_elements_design_one w-[555px] max-w-full bg-headings pt-7 px-12 mx-auto md:px-4 pb-8 ">
+        <div class="form_elements_design_one <?php echo $change_form_style ? 'dark_style' : '' ?> w-[555px] max-w-full bg-headings pt-7 px-12 mx-auto md:px-4 pb-8 ">
             <?php if ($title) { ?>
                 <h2 class=" text-4xl text-white text-center"><?= $title ?></h2>
             <?php } ?>

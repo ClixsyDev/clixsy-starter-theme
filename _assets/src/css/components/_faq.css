@@ -19,6 +19,7 @@
 }
 
 .faq__header {
+  position: relative;
   &:after {
     content: '+';
     position: absolute;
@@ -36,7 +37,7 @@
     .faq__header {
       &:after {
         content: '—';
-        top: 3%;
+        top: calc(50% - 23px);
         font-size: 30px;
         color: #fff;
       }

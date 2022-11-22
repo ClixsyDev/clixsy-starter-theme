@@ -76,6 +76,9 @@ if (document.querySelector(verdictsSlider) != undefined && document.querySelecto
       // animationTimingFunc: 'linear',
       perView: 4,
       breakpoints: {
+        1400: {
+          perView: 3,
+        },
         1100: {
           perView: 3,
         },

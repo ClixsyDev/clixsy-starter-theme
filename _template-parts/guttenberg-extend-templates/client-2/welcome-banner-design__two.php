@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                                 'link' => $welcome_banner__design_two__link['url'],
                                 'text' => __($welcome_banner__design_two__link['title'], 'law'),
                                 'text_hover' => false,
-                                'classes' => 'text-white btn_md hover_accent border-white border-2 uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                'classes' => 'btn_md text-white hover_headings border-white border-2 uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
                     </div>

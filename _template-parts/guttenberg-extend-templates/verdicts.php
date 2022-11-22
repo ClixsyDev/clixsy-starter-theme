@@ -13,6 +13,7 @@ if ($is_preview && !empty($previewImage)) {
     $verdicts = get_field($key . '_verdicts_repeater');
     $bg = get_field($key . '_background_image');
 ?>
+<!-- verdicts.php -->
     <div class="relative">
         <img src="<?= wp_get_attachment_image_url($bg, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
         <div class="verdicts_slider glide relative pt-12 pb-14 2xl:pt-6 2xl:pb-7">

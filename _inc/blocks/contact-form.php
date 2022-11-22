@@ -69,6 +69,14 @@ if (function_exists('acf_add_local_field_group')) {
                 'return_format' => 'id',
                 'ui' => 1,
             ),
+            array(
+                'key' => $key . '_change_form_style',
+                'name' => $key . '_change_form_style',
+                'label' => 'Dark style',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+            ),
         )
     ));
 }

@@ -38,9 +38,17 @@
       @apply border-b-2 border-red-600 w-max;
     }
   }
+  &.dark_style {
+    @apply shadow-lg;
+    form {
+      label {
+        @apply text-white;
+      }
+    }
+  }
   .sent {
     .wpcf7-response-output {
-       @apply block text-white text-center text-2xl py-4 px-4;
+      @apply block text-white text-center text-2xl py-4 px-4;
     }
   }
 }
@@ -65,7 +73,6 @@
   }
 }
 
-
 .attorney-group__form {
   @apply gap-x-4 items-end justify-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
 
@@ -82,7 +89,7 @@
     @apply text-[#707070];
   }
 
-  input[type="submit"] {
+  input[type='submit'] {
     @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl text-white leading-none;
   }
 
@@ -95,7 +102,7 @@
   }
 
   textarea::placeholder {
-    @apply text-[#707070] ;
+    @apply text-[#707070];
   }
 
   p {
@@ -113,9 +120,7 @@
   br {
     @apply hidden;
   }
-
 }
-
 
 .form {
   input,
@@ -131,7 +136,7 @@
     @apply text-[#707070];
   }
 
-  input[type="submit"] {
+  input[type='submit'] {
     @apply bg-red-600 w-56 h-12 rounded-full my-5 font-bold text-xl text-white;
   }
 
@@ -166,8 +171,7 @@
 
   &.sidebar-template {
     p {
-      @apply w-full
+      @apply w-full;
     }
   }
-
 }

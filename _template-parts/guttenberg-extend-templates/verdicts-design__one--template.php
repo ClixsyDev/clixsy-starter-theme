@@ -14,13 +14,14 @@ if ($is_preview && !empty($previewImage)) {
     $verdicts_design_one__bg_color = get_field('verdicts_design_one__bg_color');
 
 ?>
+<!-- verdicts-design__one--template.php -->
     <?php if ($verdicts_design_one__verdicts['0']) { ?>
         <div class="relative pt-4 <?php echo $verdicts_design_one__select == 'Dark' ? 'shadow-siteWide' : '' ?> " style="background-color: <?php echo $verdicts_design_one__bg_color ?: '' ?> ">
             <?php if ($verdicts_design_one__bg) {
                 echo wp_get_attachment_image($verdicts_design_one__bg, 'full', '', ['class' => 'absolute left-0 top-0 w-full h-full object-cover']);
             } ?>
             <?php if ($verdicts_design_one__title) { ?>
-            <h2 class="heading_verdicts">
+            <h2 class="heading_verdicts relative z-10">
                 <?php echo $verdicts_design_one__title ?>
             </h2>
             <?php } ?>
