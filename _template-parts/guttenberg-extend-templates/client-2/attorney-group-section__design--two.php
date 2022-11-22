@@ -22,7 +22,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <section class="container mt-24 mb-36  xl:w-11/12 xl:max-w-full">
         <div class="grid grid-cols-12 row-auto gap-5 mdt:gap-0">
-            <div class="col-span-8 xl:col-span-7 mdt:col-span-10 mdt:col-start-2 text-center bg-white">
+            <div class="col-span-7 xl:col-span-7 mdt:col-span-10 mdt:col-start-2 text-center bg-white">
                 <?php if ($attorney_group_section_design_two__image) { ?>
                     <?php echo wp_get_attachment_image($attorney_group_section_design_two__image, 'full', '', ['class' => 'object-contain mx-auto']) ?>
                 <?php } ?>
@@ -39,7 +39,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php } ?>
             </div>
             <?php if ($attorney_group_section_design_two__form_select && $attorney_group_section_design_two__form_select['0'] || $attorney_group_section_design_two__form_text) { ?>
-                <div class="col-span-4 xl:col-span-5  mdt:col-span-10 mdt:col-start-2 w-full pt-10 pb-8 mdt:p-4" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
+                <div class="col-span-5 xl:col-span-5  mdt:col-span-10 mdt:col-start-2 w-full pt-10 pb-8 mdt:p-4" style="background-color: <?php echo $attorney_group_section_design_two__form_bg ?: ''  ?> ;">
                     <div class="attorney-group__form ">
                         <?php echo $attorney_group_section_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $attorney_group_section_design_two__form_select['0'] . '" title="Contact form"]') : '' ?>
                         <?php
@@ -48,10 +48,11 @@ if ($is_preview && !empty($previewImage)) {
                             'classes_thankyou' => 'text-white'
                         ]); ?>
                     </div>
-                    <div class="flex justify-center items-center w-4/5 mx-auto text-white">
-                        <?php echo $attorney_group_section_design_two__form_text ?>
-                    </div>
-
+                    <?php if ($attorney_group_section_design_two__form_text) { ?>
+                        <div class="flex justify-center pt-6 items-center w-4/5 mx-auto text-white">
+                            <?php echo $attorney_group_section_design_two__form_text ?>
+                        </div>
+                    <?php } ?>
                 </div>
             <?php } ?>
 

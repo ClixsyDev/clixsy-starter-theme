@@ -15,9 +15,10 @@ if ($is_preview && !empty($previewImage)) {
     $button1 = get_field($key . '_button_1');
     $button2 = get_field($key . '_button_2');
     $case_items = get_field('cases_we_handle_case_items');
+    $block_bg = get_field($key . '_block_bg');
 ?>
     <!-- cases-we-handle.php -->
-    <div class="bg-headings pt-14 pb-16">
+    <div class="bg-headings pt-14 pb-16" style="background-color: <?php echo $block_bg ?: ''  ?> ;">
         <div class="container">
             <?php if ($title) { ?>
                 <h2 class="heading_h2 white pb-5 capitalize">

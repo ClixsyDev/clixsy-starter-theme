@@ -75,6 +75,12 @@ if (function_exists('acf_add_local_field_group')) {
             'label' => 'Button text on hover',
             'instructions' => '',
             ),
+            array(
+                'key' => $key . '_block_bg',
+                'name' => $key . '_block_bg',
+                'type' => 'color_picker',
+                'label' => 'Set background color for section',
+            ),
         )
     ));
 }
