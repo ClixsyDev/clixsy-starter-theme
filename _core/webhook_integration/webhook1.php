@@ -19,14 +19,14 @@ function litify_hook_callback() {
     if (!$remove_litify_integration && !empty($litify_integration_url)) {
         $data = json_decode(file_get_contents('php://input'), true);
 
-        $firstName = $data['client_first_name'] ?: '';
-        $lastName = $data['client_last_name'] ?: '';
-        $email = $data['client_email'] ?: '';
-        $phone = $data['client_phone'] ?: '';
-        $description = $data['client_message'] ?: '';
-        $zip = $data['client_zip'] ?: '';
-        $gclid = $data['GCLID'] ?: '';
-        $litify_case = $data['client_case_type'] ?: '';
+        $firstName = $data['client_first_name'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_first_name']) : '';
+        $lastName = $data['client_last_name'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_last_name']) : '';
+        $email = $data['client_email'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_email']) : '';
+        $phone = $data['client_phone'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_phone']) : '';
+        $description = $data['client_message'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_message']) : '';
+        $zip = $data['client_zip'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_zip']) : '';
+        $gclid = $data['GCLID'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['GCLID']) : '';
+        $litify_case = $data['client_case_type'] ? preg_replace("/[^a-zA-Z0-9]+/", '',  $data['client_case_type']) : '';
 
         // Litify has preset case types.
         // This is not necessary for Big Auto at this time

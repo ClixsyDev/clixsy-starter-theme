@@ -74,5 +74,5 @@ require_once('_core/guttenberg-extend.php');
 
 require_once('_inc/guttenberg-blocks.php');
 
-//Litify api integration
-require_once('_core/litify_integration/litify_integration.php');
+//Webhook api integration
+require_once('_core/webhook_integration/webhook1.php');
