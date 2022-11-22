@@ -7,6 +7,7 @@ import { hoverOnButton } from './button-hover';
 import { litifyCall } from './litify-ajax';
 import { tocAnchor } from './toc';
 import { sentNewMessage } from './thank-you-messages';
+import { gclid } from './gclid';
 
 
 
@@ -24,6 +25,7 @@ ready(() => {
   sentNewMessage('.sidebar-form');
   sentNewMessage('.attorney-group__form');
   sentNewMessage('.form');
+  gclid();
 });
 
 
