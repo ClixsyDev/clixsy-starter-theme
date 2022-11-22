@@ -73,17 +73,20 @@ function litify_hook_callback() {
         curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
         $data = <<<DATA
-    {  
-     "firstName" : "{$firstName}",
-     "lastName" : "{$lastName}",
-     "email": "{$email}",
-     "phone" : "{$phone}",
-     "description" : "{$description}",
-     "caseType" : "{$litify_case}",
-     "caseZip" : "{$zip}",
-     "websource" : "Website",
-     "intakeStatus": "Open",
-     "gclid" : "{$gclid}"
+    {
+     "user" : "Website",
+     "pass": "Open",
+     "SKU" : "Website",
+     "version": "Open",
+     "action" : "Website",
+     "c_first" : "{$firstName}",
+     "c_last" : "{$lastName}",
+     "c_homephone" : "{$phone}",
+     "c_email": "{$email}",
+     "custom4" : "{$description}",
+     "custom5" : "{$litify_case}",
+     "custom6" : "{$zip}",
+     "custom3" : "{$gclid}"
     }
     DATA;
 
