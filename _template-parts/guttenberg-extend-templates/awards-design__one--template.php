@@ -25,12 +25,12 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="glide__track" data-glide-el="track">
                         <div class="glide__slides overflow-visible">
                             <?php foreach ($awards_design_one__repeater as $awards_item) { ?>
-                                <div class="glide__slide" style="background-color: <?php echo $awards_design_one__slide_bg ?: '' ?> ;">
+                                <a href="<?= $awards_item['icon_link'] ?>" target="_blank" class="glide__slide" style="background-color: <?php echo $awards_design_one__slide_bg ?: '' ?> ;">
                                     <div class="py-6 px-3 flex items-center justify-center w-full">
                                         <?php echo wp_get_attachment_image($awards_item['icon'], 'full', '', ['class' => 'm-auto xxl:w-17/24 object-contain h-44 block m-auto']) ?>
                                     </div>
                                     <span class="m-auto xxl:w-17/24 object-contain h-44 hidden"></span>
-                                </div>
+                                </a>
                             <?php } ?>
                         </div>
                     </div>

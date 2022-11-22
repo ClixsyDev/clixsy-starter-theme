@@ -66,6 +66,12 @@ if (function_exists('acf_add_local_field_group')) :
                         'return_format' => 'id',
                         'preview_size' => 'thumbnail'
                     ),
+                    array(
+                        'key' => 'icon_link',
+                        'name' => 'icon_link',
+                        'type' => 'text',
+                        'label' => 'Icon Link',
+                    ),
                 ),
             ),
             array(

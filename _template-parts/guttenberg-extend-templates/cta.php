@@ -25,7 +25,7 @@ if ($is_preview && !empty($previewImage)) {
                         'link' => $button['url'],
                         'text' => __($button['title'], 'law'),
                         'text_hover' => $button_hover ?: false,
-                        'classes' => 'btn_md hover_headings center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        'classes' => 'btn_xl hover_headings center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                     ]); ?>
             <?php } ?>
 

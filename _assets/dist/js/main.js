@@ -623,7 +623,7 @@ const nextArrow = ()=>{
 };
 nextArrow();
 
-},{"./menu":"2uPGB","./utils":"blFj3","./sliders":"8pa5Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./form_entry":"1vUc0","./header":"9ZRJh","./button-hover":"9maqa","./form_inputs":"3pM6z"}],"2uPGB":[function(require,module,exports) {
+},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./form_inputs":"3pM6z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mainMenu", ()=>mainMenu);
@@ -1000,7 +1000,28 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"8pa5Q":[function(require,module,exports) {
+},{}],"9ZRJh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Main Menu
+var _utils = require("./utils");
+function headerInit() {
+    const header = (0, _utils.getElement)("header");
+    let isSticked = false;
+    document.addEventListener("scroll", (e)=>{
+        if (!isSticked && window.scrollY >= 160) {
+            header.classList.add("sticked");
+            isSticked = true;
+        }
+        if (isSticked && window.scrollY <= 70) {
+            header.classList.remove("sticked");
+            isSticked = false;
+        }
+    });
+}
+exports.default = headerInit;
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pa5Q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _glide = require("@glidejs/glide");
 var _glideDefault = parcelHelpers.interopDefault(_glide);
@@ -1157,7 +1178,7 @@ if ((0, _utils.ifSelectorExist)(verdicts)) {
     verdictsMarquee.resume();
 }
 
-},{"@glidejs/glide":"cS4lK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utils":"blFj3","vanilla-marquee":"aRzML"}],"cS4lK":[function(require,module,exports) {
+},{"@glidejs/glide":"cS4lK","./utils":"blFj3","vanilla-marquee":"aRzML","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>Glide);
@@ -4552,28 +4573,7 @@ const formEntry = (data)=>{
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ZRJh":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-// Main Menu
-var _utils = require("./utils");
-function headerInit() {
-    const header = (0, _utils.getElement)("header");
-    let isSticked = false;
-    document.addEventListener("scroll", (e)=>{
-        if (!isSticked && window.scrollY >= 160) {
-            header.classList.add("sticked");
-            isSticked = true;
-        }
-        if (isSticked && window.scrollY <= 70) {
-            header.classList.remove("sticked");
-            isSticked = false;
-        }
-    });
-}
-exports.default = headerInit;
-
-},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9maqa":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9maqa":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "hoverOnButton", ()=>hoverOnButton);
