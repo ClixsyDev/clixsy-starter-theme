@@ -10947,6 +10947,10 @@ html :where(.wp-block) {
     justify-content: center;
   }
 
+  .xl\:\!justify-center {
+    justify-content: center !important;
+  }
+
   .xl\:gap-10 {
     gap: 2.5rem;
   }
@@ -10965,6 +10969,10 @@ html :where(.wp-block) {
 
   .xl\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .xl\:\!gap-40 {
+    gap: 10rem !important;
   }
 
   .xl\:gap-40 {
@@ -11050,14 +11058,6 @@ html :where(.wp-block) {
     --tw-scale-x: 1.6;
     --tw-scale-y: 1.6;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .uniq_xl\:gap-40 {
-    gap: 10rem;
-  }
-
-  .uniq_xl\:\!gap-40 {
-    gap: 10rem !important;
   }
 
   .uniq_xl\:px-16 {
@@ -12104,10 +12104,6 @@ html :where(.wp-block) {
 
   .mdt\:gap-16 {
     gap: 4rem;
-  }
-
-  .mdt\:\!gap-16 {
-    gap: 4rem !important;
   }
 
   .mdt\:\!gap-12 {
