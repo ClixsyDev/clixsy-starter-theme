@@ -11,7 +11,7 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $merits__block_bg = get_field('merits__block_bg');
     $merits__items = get_field('merits__items'); ?>
-    
+
     <section style="background-color: <?php echo $merits__block_bg ?: ''  ?> ;">
         <div class="merits glide px-3">
             <div class="glide__track" data-glide-el="track">
@@ -24,16 +24,16 @@ if ($is_preview && !empty($previewImage)) {
                                         <img class="" src="<?= wp_get_attachment_image_url($item['merits__icons'], 'full') ?>">
                                     <?php } ?>
                                     <?php if ($item['merits__title']) { ?>
-                                        <h3 class="font-second text-white text-2xl xxxl:text-xl md:text-base xs:text-base"><?php echo $item['merits__title'] ?></h3>
+                                        <h3 class="font-second text-white  xxxl:text-xl md:text-base xs:text-base"><?php echo $item['merits__title'] ?></h3>
                                     <?php } ?>
                                 </div>
                             </div>
                         <?php } ?>
                     <?php } ?>
-                </div>  
+                </div>
             </div>
         </div>
     </section>
-    
+
 <?php }
 if (!get_fields()) echo 'Fill block with content';

@@ -47,7 +47,7 @@ if ($is_preview && !empty($previewImage)) {
                     $case_description = get_field($key . '_case_description', $item);
                 ?>
                     <a href="<?= get_permalink($item) ?>" class="flex-1 group flex flex-col items-center mdt:w-[250px] mdt:flex-none ">
-                        <span class="relative">
+                        <span class="relative w-full">
                             <?php echo get_the_post_thumbnail($item, 'full', ['class' => 'object-cover h-60 w-full']) ?>
                             <?php if ($case_description) { ?>
                                 <span class="group-hover:opacity-100 opacity-0 transition-all  px-2 text-sm py-3 absolute bottom-0 left-0 bg-white bg-opacity-75 flex gap-2 items-center w-full">

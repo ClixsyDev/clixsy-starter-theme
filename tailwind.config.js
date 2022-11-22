@@ -26,13 +26,12 @@ module.exports = {
       '15xl': '250px',
       '17xl': '350px',
       '20xl': '500px',
-
     },
     screens: {
+      fhd: { max: '1920px' },
       xxxl: { max: '1750px' },
       xxl: { max: '1630px' },
       '2xl': { max: '1496px' },
-      'fhd': { max: '1920px' },
       xl: { max: '1280px' },
       uniq_xl: { max: '1200px' },
       lg: { max: '1024px' },
@@ -51,12 +50,12 @@ module.exports = {
         reviews: '3px 3px 15px rgba(141, 141, 141, 0.47)',
       },
       dropShadow: {
-        'circleShadow': '0px 3px 6px rgba(0, 0, 0, 0.16)',
+        circleShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)',
       },
       colors: colors,
       fontFamily: {
         main: fonts['main'],
-        second: fonts['second']
+        second: fonts['second'],
       },
       width: {
         '1/24': '4.1666667%',
@@ -104,8 +103,8 @@ module.exports = {
         'content-dedicat': 'url("/assets/img/quote_dedicated.png")',
       },
       borderWidth: {
-        '1': '1px',
-      }
+        1: '1px',
+      },
     },
     container: {
       center: true,
