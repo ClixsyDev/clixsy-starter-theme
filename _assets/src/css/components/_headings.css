@@ -65,7 +65,7 @@
 }
 
 .heading_verdicts {
-  @apply font-black text-5xl text-center text-black uppercase;
+  @apply font-black text-5xl text-center text-black uppercase lg:text-4xl xs:text-3xl;
   span {
     @apply text-accent border-b-4 border-button_color;
   }

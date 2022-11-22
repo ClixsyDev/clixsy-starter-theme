@@ -5453,6 +5453,18 @@ h2 span {
   font-weight: 900;
 }
 
+@media (max-width: 1024px) {
+  .heading_verdicts {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .heading_verdicts {
+    font-size: 1.875rem;
+  }
+}
+
 .heading_verdicts span {
   --tw-border-opacity: 1;
   border-bottom-width: 4px;
@@ -6563,7 +6575,7 @@ h2 span {
   padding-left: .5rem;
 }
 
-.attorney-group__form .wpcf7-spinner {
+.attorney-group__form .wpcf7-spinner, .attorney-group__form br {
   display: none;
 }
 
@@ -9870,9 +9882,9 @@ h2 span {
   padding-bottom: 2.75rem;
 }
 
-.acf-block-preview .px-60 {
-  padding-left: 15rem;
-  padding-right: 15rem;
+.acf-block-preview .px-48 {
+  padding-left: 12rem;
+  padding-right: 12rem;
 }
 
 .acf-block-preview .px-20 {

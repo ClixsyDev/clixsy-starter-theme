@@ -110,6 +110,10 @@
     @apply hidden;
   }
 
+  br {
+    @apply hidden;
+  }
+
 }
 
 
