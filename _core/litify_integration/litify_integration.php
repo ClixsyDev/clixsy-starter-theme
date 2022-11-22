@@ -74,11 +74,11 @@ function litify_hook_callback() {
 
         $data = <<<DATA
     {
-     "user" : "Website",
-     "pass": "Open",
-     "SKU" : "Website",
-     "version": "Open",
-     "action" : "Website",
+     "user" : "bigautoapi",
+     "pass": "Le@ds2022!",
+     "SKU" : "NEWSKU",
+     "version": "1",
+     "action" : "add",
      "c_first" : "{$firstName}",
      "c_last" : "{$lastName}",
      "c_homephone" : "{$phone}",
