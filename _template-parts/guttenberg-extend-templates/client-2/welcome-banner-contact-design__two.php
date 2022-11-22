@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
     background-color: <?php echo $welcome_banner_contact_design_two__bg ?: ''  ?>; 
     background-image:url('<?php echo !empty($welcome_banner_contact_design_two__image) ? wp_get_attachment_image_url($welcome_banner_contact_design_two__image['ID'], 'full') : ''; ?>');">
         <div class="container">
-            <div class="flex items-center px-20 gap-64 2xl:px-0 uniq_xl:!gap-40 xl:gap-40 mdt:flex-col mdt:!gap-12">
+            <div class="flex items-center px-20 gap-64 2xl:px-0 xl:!gap-40 xl:!justify-center mdt:flex-col mdt:!gap-12">
                 <?php if ($welcome_banner_contact_design_two__top_description || $welcome_banner_contact_design_two__title || $welcome_banner_contact_design_two__bottom_description) { ?>
                     <div class="font-main text-white text-3xl leading-tight xl:text-2xl mdt:text-center xs:text-xl">
                         <?php if ($welcome_banner_contact_design_two__top_description) { ?>
