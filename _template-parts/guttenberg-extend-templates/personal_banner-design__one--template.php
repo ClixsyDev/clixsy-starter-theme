@@ -22,11 +22,11 @@ if ($is_preview && !empty($previewImage)) {
 
 ?>
     <section class="bg-cover" style="background-image: url('<?php echo $personal_banner_design_one__bg ?>');">
-        <div class="max-w-[1920px] m-auto">
+        <div class="max-w-[1920px] m-auto xs:mb-14">
             <div class="flex items-center relative mdt:justify-center">
                 <?php if ($personal_banner_design_one__persone) { ?>
                     <div class="z-[1] ml-44 xxl:ml-[9%] xxl:w-14/24 xl:ml-0 xl:w-12/24 mdt:w-17/24 md:w-21/24 sm:w-full">
-
+ 
                         <?php echo wp_get_attachment_image($personal_banner_design_one__persone, 'full') ?>
                     </div>
                 <?php } ?>
