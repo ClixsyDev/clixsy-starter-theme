@@ -23,6 +23,11 @@ if ($is_preview && !empty($previewImage)) {
                 <h2 class=" text-4xl text-white text-center"><?= $title ?></h2>
             <?php } ?>
             <?= do_shortcode('[contact-form-7 id="' . $form . '"]') ?>
+            <?php
+                Template::load('_template-parts/components/thank-you-message.php', [
+                    'classes_disclaimer' => 'text-white',
+                    'classes_thankyou' => 'text-white'
+                ]); ?>
         </div>
     </div>
 </div>

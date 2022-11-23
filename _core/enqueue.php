@@ -62,6 +62,14 @@ function admin_style()
         [],
         $version
     );
+
+    wp_enqueue_style(
+        'builded-starter-style',
+        trailingslashit(get_template_directory_uri()) . '_assets/src/builded_css_admin/builded_css_admin.css',
+        [],
+        $version
+    );
+
      // Main Script
      wp_enqueue_script(
         'starter-script-admin',
@@ -70,5 +78,6 @@ function admin_style()
         $version,
         true
     );
+    
 }
 add_action('admin_enqueue_scripts', 'admin_style');

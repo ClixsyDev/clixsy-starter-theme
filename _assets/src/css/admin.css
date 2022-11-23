@@ -1,4 +1,4 @@
-@import './header.css';
+/* @import './header.css';
 @import './_desktop-menu.css';
 @import './_mobile-menu.css';
 @import './_case-types.css';
@@ -9,7 +9,7 @@
 @import './components/buttons.css';
 @import './components/_headings.css';
 @import './components/form.css';
-@import './components/_faq.css';
+@import './components/_faq.css'; */
 
 .acf-block-preview {
   @tailwind base;
@@ -19,3 +19,4 @@
 html :where(.wp-block) {
   max-width: 100%;
 }
+

@@ -16,6 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $button2 = get_field($key . '_button_2');
     $case_items = get_field('cases_we_handle_case_items');
     $block_bg = get_field($key . '_block_bg');
+    $button_size = get_field($key . '_button_size');
 ?>
     <!-- cases-we-handle.php -->
     <div class="bg-headings pt-14 pb-16" style="background-color: <?php echo $block_bg ?: ''  ?> ;">
@@ -67,7 +68,7 @@ if ($is_preview && !empty($previewImage)) {
                         'link' => $button1['url'],
                         'text' => __($button1['title'], 'law'),
                         'text_hover' => false,
-                        'classes' => 'btn_xl hover_outline_white white uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        'classes' => $button_size . ' hover_outline_white white uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                     ]); ?>
                 <?php } ?>
                 <?php if ($button2) { ?>
@@ -76,7 +77,7 @@ if ($is_preview && !empty($previewImage)) {
                         'link' => $button2['url'],
                         'text' => __($button2['title'], 'law'),
                         'text_hover' => false,
-                        'classes' => 'btn_xl hover_accent uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        'classes' => $button_size . ' hover_accent uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                     ]); ?>
                 <?php } ?>
             </div>

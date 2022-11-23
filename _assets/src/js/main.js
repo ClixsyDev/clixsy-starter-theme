@@ -25,6 +25,7 @@ ready(() => {
   sentNewMessage('.sidebar-form');
   sentNewMessage('.attorney-group__form');
   sentNewMessage('.form');
+  sentNewMessage('.how_can_help_form');
   gclid();
 });
 
