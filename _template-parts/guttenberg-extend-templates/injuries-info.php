@@ -12,6 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $title = get_field($key . '_title');
     $subtitle = get_field($key . '_subtitle');
 ?>
+<!-- injuries-info.php -->
     <div class="relative py-28 md:py-12 bg-contain bg-repeat" style="background-image: url('<?php echo wp_get_attachment_image_url($bg_image, 'full') ?: '' ?>');">
         <div class="container relative">
             <?php if ($title) { ?>

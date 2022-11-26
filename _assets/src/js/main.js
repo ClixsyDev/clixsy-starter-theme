@@ -4,7 +4,6 @@ import { getElement, getElements, ifSelectorExist, ready } from './utils';
 import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
-import { litifyCall } from './litify-ajax';
 import { tocAnchor } from './toc';
 import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
@@ -20,7 +19,6 @@ ready(() => {
   btnMore();
   btnMoreEducation();
   initFAQ();
-  litifyCall();
   tocAnchor();
   sentNewMessage('.sidebar-form');
   sentNewMessage('.attorney-group__form');

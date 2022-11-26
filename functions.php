@@ -75,4 +75,4 @@ require_once('_core/guttenberg-extend.php');
 require_once('_inc/guttenberg-blocks.php');
 
 //Webhook api integration
-require_once('_core/webhook_integration/webhook1.php');
+require_once('_core/webhook_integration/webhook_data_to_json.php');
