@@ -44,6 +44,8 @@ function webhook_integration_clixsy($contact_form) {
                         foreach ($acf_mapped_fields as $f_id => $acf_data) {
                             if ($p_id == $acf_data['form_submission_field']) {
                                 $empty_arr[$acf_data['third_party_field']] = $post_data;
+                            } else {
+                                $empty_arr[$acf_data['third_party_field']] = $acf_data['default_value'] ?: '';
                             }
                         }
                     }
