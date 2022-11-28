@@ -47,6 +47,7 @@ function webhook_integration_clixsy($contact_form) {
                             } else {
                                 $empty_arr[$acf_data['third_party_field']] = $acf_data['default_value'] ?: '';
                             }
+                            
                         }
                     }
                     curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($empty_arr));
