@@ -13,8 +13,10 @@
   a {
     @apply hover:text-accent no-underline;
     &:before {
-        content: '➡️';
+        content: url("../../img/right-arrow.svg");
         margin-right: 5px;
+        display: inline-block;
+        transform: translateY(7px);
     }
   }
 }
