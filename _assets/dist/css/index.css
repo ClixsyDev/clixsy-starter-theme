@@ -6747,8 +6747,10 @@ h2 span {
 }
 
 .table_of_content a:before {
-  content: "➡️";
+  content: url("../right-arrow.b7840d1c.svg");
   margin-right: 5px;
+  display: inline-block;
+  transform: translateY(7px);
 }
 
 .breadcrumbs {
