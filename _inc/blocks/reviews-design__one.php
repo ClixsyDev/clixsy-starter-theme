@@ -10,8 +10,7 @@
 
 
 
-function register_reviews_design__one()
-{
+function register_reviews_design__one() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -76,6 +75,14 @@ if (function_exists('acf_add_local_field_group')) :
                 'name' => 'reviews_design_one_bg',
                 'type' => 'image',
                 'label' => 'Background image',
+                'return_format' => 'id',
+                'preview_size' => 'thumbnail',
+            ),
+            array(
+                'key' => 'reviews_design_one_bg_color',
+                'name' => 'reviews_design_one_bg_color',
+                'type' => 'color_picker',
+                'label' => 'Background Color',
                 'return_format' => 'id',
                 'preview_size' => 'thumbnail',
             ),

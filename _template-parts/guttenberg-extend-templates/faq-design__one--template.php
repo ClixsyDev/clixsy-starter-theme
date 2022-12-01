@@ -13,6 +13,7 @@ if ($is_preview && !empty($previewImage)) {
     $faq_design_one__title = get_field('faq_design_one__title');
     $faq_design_one__image = get_field('faq_design_one__image');
     $faq_design_one__disable_schema = get_field('faq_design_one__disable_schema');
+    $faq_design_one__make_first_active = get_field('faq_design_one__make_first_active');
 
 ?>
     <?php if ($faq_design_one__faq_repeater[0]) { ?>
@@ -34,9 +35,9 @@ if ($is_preview && !empty($previewImage)) {
                             <?php if ($faq_design_one__faq_repeater) { ?>
                                 <div class="faq__list">
                                     <?php foreach ($faq_design_one__faq_repeater as $key => $item) { ?>
-                                        <div class="faq__position <?php echo $key == 0 ? 'faq__position__active' : '' ?> ">
+                                        <div class="faq__position <?php echo $key == 0 && $faq_design_one__make_first_active ? 'faq__position__active' : '' ?> ">
                                             <div class="faq__header p-4 pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item['question'] ?></div>
-                                            <div class="faq__text" style="<?php echo $key == 0 ? 'max-height: 100%' : '' ?>">
+                                            <div class="faq__text" style="<?php echo $key == 0 && $faq_design_one__make_first_active ? 'max-height: 100%' : '' ?>">
                                                 <?php echo $item['answer'] ?>
                                             </div>
                                         </div>

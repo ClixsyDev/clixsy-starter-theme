@@ -128,6 +128,18 @@ if (function_exists('acf_add_local_field_group')) :
                 'type' => 'link',
                 'return_format' => 'array',
             ),
+            array(
+                'key' => $block_key . 'first_text_color',
+                'name' => $block_key . 'first_text_color',
+                'type' => 'color_picker',
+                'label' => 'First text color',
+            ),
+            array(
+                'key' => $block_key . 'second_text_color',
+                'name' => $block_key . 'second_text_color',
+                'type' => 'color_picker',
+                'label' => 'Second text color',
+            ),
         ),
 
     ));

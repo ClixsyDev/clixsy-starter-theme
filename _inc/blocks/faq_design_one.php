@@ -121,6 +121,14 @@ if (function_exists('acf_add_local_field_group')) :
                     'instructions' => '',
                     'required' => 0,
                 ),
+                array(
+                    'key' => $block_key . 'make_first_active',
+                    'name' => $block_key . 'make_first_active',
+                    'label' => 'Make first item active',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                ),
             ),
 
         )

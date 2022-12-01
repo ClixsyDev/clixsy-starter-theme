@@ -111,6 +111,14 @@ if (function_exists('acf_add_local_field_group')) {
                 'preview_size' => 'medium',
                 'library' => 'all',
             ),
+            array(
+                'key' => $key . '_make_first_active',
+                'name' => $key . '_make_first_active',
+                'label' => 'Make first item active',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+            ),
         )
     ));
 }

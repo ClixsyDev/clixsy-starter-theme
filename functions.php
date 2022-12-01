@@ -76,3 +76,6 @@ require_once('_inc/guttenberg-blocks.php');
 
 //Webhook api integration
 require_once('_core/webhook_integration/webhook_data_to_json.php');
+
+// Filter for external links
+require_once('_core/filters/external_link_new_tab.php');

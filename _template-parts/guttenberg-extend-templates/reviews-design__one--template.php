@@ -10,14 +10,15 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $reviews_design_one_select = get_field('reviews_design_one_select');
     $reviews_design_one_bg = get_field('reviews_design_one_bg');
+    $reviews_design_one_bg_color = get_field('reviews_design_one_bg_color');
     $reviews_design_one_title = get_field('reviews_design_one_title');
     $reviews_design_one_arrows = get_field('reviews_design_one_arrows');
     $reviews_design_one_next_section_arrow = get_field('reviews_design_one_next_section_arrow');
     $reviews_design_one_next_section_selector = get_field('reviews_design_one_next_section_selector');
 
 ?>
-
-    <div class="relative">
+    <!-- reviews-design__one--template.php -->
+    <div class="relative" style="background-color: <?php echo $reviews_design_one_bg_color ?> ">
         <?php if ($reviews_design_one_bg) {
             echo wp_get_attachment_image($reviews_design_one_bg, 'full', '', ['class' => 'absolute left-0 top-0 w-full h-full object-cover']);
         } ?>

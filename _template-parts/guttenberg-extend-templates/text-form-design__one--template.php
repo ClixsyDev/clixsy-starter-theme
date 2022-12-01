@@ -18,8 +18,11 @@ if ($is_preview && !empty($previewImage)) {
     $text_form_design_one__form_select = get_field('text_form_design_one__form_select');
     $text_form_design_one__button = get_field('text_form_design_one__button');
     $text_form_design_one__form_remove_citate_icon = get_field('text_form_design_one__remove_citate_icon');
+    $text_form_design_one__first_text_color = get_field('text_form_design_one__first_text_color');
+    $text_form_design_one__second_text_color = get_field('text_form_design_one__second_text_color');
 
 ?>
+    <!-- text-form-design__one--template.php -->
     <div class="pt-24 lg:pt-12 lg:pb-12 xs:pt-16 overflow-hidden relative">
         <div class="container">
             <?php if ($text_form_design_one__title) { ?>
@@ -39,7 +42,7 @@ if ($is_preview && !empty($previewImage)) {
 
                         </span>
                         <?php if ($text_form_design_one__citation) { ?>
-                            <div class="text-headings_second font-main lg:pl-8 sm:pl-0 prose-xl lg:prose-lg leading-snug">
+                            <div class="text-headings_second font-main lg:pl-8 sm:pl-0 prose-xl lg:prose-lg leading-snug" style="color: <?php echo $text_form_design_one__first_text_color ?> !important">
                                 <?php echo $text_form_design_one__citation ?>
                             </div>
                         <?php } ?>
@@ -57,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
                             </div>
                             <?php if ($text_form_design_one__description) { ?>
                                 <div class="<?php echo $text_form_design_one__icon ? 'w-16/24' : 'w-20/24 lg:w-full ' ?>">
-                                    <div class="font-main font-bold text-white text-3xl lg:text-lg span-change_color_1 leading-snug">
+                                    <div class="font-main font-bold text-white text-3xl lg:text-lg span-change_color_1 leading-snug" style="color: <?php echo $text_form_design_one__second_text_color ?> !important">
                                         <?php echo $text_form_design_one__description ?>
                                     </div>
                                 </div>
@@ -78,9 +81,9 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
 
                 <?php if ($text_form_design_one__form_select) { ?>
-                    <div class="w-[515px] bg-headings_second z-[1] mdt:m-auto mdt:w-19/24 md:w-full text-white  p-11">
+                    <div class="w-[515px] bg-headings_second z-[1] mdt:m-auto mdt:w-19/24 md:w-full text-white  p-10">
                         <?php if ($text_form_design_one__form_title) { ?>
-                            <h2 class="text-white  text-3xl md:text-2xl mb-6 text-center process_text_design__one">
+                            <h2 class="text-white  text-3xl md:text-2xl mb-6 text-center font-black process_text_design__one">
                                 <?php echo $text_form_design_one__form_title ?>
                             </h2>
                         <?php } ?>

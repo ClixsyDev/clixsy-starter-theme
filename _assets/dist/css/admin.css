@@ -3040,6 +3040,10 @@
   padding: 1.75rem;
 }
 
+.acf-block-preview .p-2 {
+  padding: .5rem;
+}
+
 .acf-block-preview .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
