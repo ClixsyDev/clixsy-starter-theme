@@ -186,6 +186,12 @@
     background-position: 30px 30px;
   }
 
+  .first-step {
+    .wpcf7-form-control-wrap {
+      @apply bg-transparent;
+    }
+  }
+
   .second-step-form {
     @apply border-2 border-white px-16 pb-10 pt-16 -mt-14 sm:pb-5 sm:px-5;
 
