@@ -148,6 +148,43 @@ if (function_exists('acf_add_local_field_group')) :
                     'type' => 'link',
                     'return_format' => 'array',
                 ),
+                array(
+                    'key' => $block_key . 'cost_title',
+                    'name' => $block_key . 'cost_title',
+                    'type' => 'text',
+                    'label' => 'Title',
+                ),
+                array(
+                    'key' => $block_key . 'cost_description',
+                    'name' => $block_key . 'cost_description',
+                    'type' => 'text',
+                    'label' => 'Description',
+                ),
+                array(
+                    'key' => $block_key . 'cost_link',
+                    'name' => $block_key . 'cost_link',
+                    'label' => 'Button',
+                    'type' => 'link',
+                    'return_format' => 'array',
+                ),
+                array(
+                    'key' => $block_key . 'cost_block_bg',
+                    'name' => $block_key . 'cost_block_bg',
+                    'type' => 'color_picker',
+                    'label' => 'Set background color for first section',
+                ),
+                array(
+                    'key' => $block_key . 'cost_select',
+                    'name' => $block_key . 'cost_select',
+                    'label' => 'Select the width of the block',
+                    'type' => 'radio',
+                    'choices' => array(
+                        'Default' => 'Default',
+                        'Wider' => 'Wider',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
             ),
 
         )

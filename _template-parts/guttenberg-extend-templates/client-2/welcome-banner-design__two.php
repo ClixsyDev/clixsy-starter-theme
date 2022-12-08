@@ -14,6 +14,8 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_two__link = get_field('welcome_banner__design_two__link');
     $welcome_banner__design_two__section_bg_first = get_field('welcome_banner__design_two__section_bg_first');
     $welcome_banner__design_two__section_bg_second = get_field('welcome_banner__design_two__section_bg_second');
+    $welcome_banner__design_two__description_form = get_field('welcome_banner__design_two__description_form');
+    $welcome_banner__design_two__form_select = get_field('welcome_banner__design_two__form_select');
 ?>
     <!-- welcome-banner-design__two.php -->
     <section>
@@ -37,6 +39,15 @@ if ($is_preview && !empty($previewImage)) {
                                 'text_hover' => false,
                                 'classes' => 'btn_md text-white hover_headings border-white border-2 uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
+                        <?php } ?>
+
+                        <?php if ($welcome_banner__design_two__form_select) { ?>
+                            <div class="pt-10">
+                                <?php if ($welcome_banner__design_two__description_form) { ?>
+                                    <p class="font-main text-white text-2xl"><?php echo $welcome_banner__design_two__description_form ?></p>
+                                <?php } ?>
+                                <?php echo $welcome_banner__design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_two__form_select['0'] . '" title=""]') : '' ?>
+                            </div>
                         <?php } ?>
                     </div>
                 </div>
