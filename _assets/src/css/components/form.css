@@ -175,3 +175,66 @@
     }
   }
 }
+
+.banner-form {
+  select {
+    @apply rounded-full text-headings border-1 border-black text-2xl font-main min-w-[450px] min-h-[65px] pr-7 pl-20 mb-5 outline-0 appearance-none bg-no-repeat lg:min-w-[360px] xs:min-w-[260px];
+  }
+
+  select {
+    background-image: url(../../img/select-arrow.svg);
+    background-position: 30px 30px;
+  }
+
+  .second-step-form {
+    @apply border-2 border-white px-16 pb-10 pt-16 -mt-14 sm:pb-5 sm:px-5;
+
+    p {
+      @apply text-left;
+    }
+
+    .wpcf7-form-control-wrap {
+      @apply bg-inherit;
+  
+      .wpcf7-form-control {
+        @apply flex;
+  
+        .wpcf7-list-item {
+          @apply !flex gap-2;
+    
+          input {
+            @apply w-6 h-[2.35rem] rounded outline-0 sm:h-[1.95rem];
+          }
+
+          span {
+            @apply text-2xl sm:text-xl;
+          }
+
+          .wpcf7-list-item-label {
+            @apply text-white font-bold; 
+          }
+        }
+      }
+    }
+
+    .wpcf7-checkbox {
+      @apply sm:mb-4;
+    }
+  }
+
+  p {
+    @apply w-full text-center font-main text-white text-2xl mb-4 sm:text-xl;
+  }
+
+  button {
+    @apply !h-[55px] min-w-[425px] border-2 border-white;
+  }
+
+  input {
+    @apply h-[50px] outline-0 rounded;
+  }
+
+  .next_step {
+    @apply !min-w-[450px] text-2xl border-white border-1 m-auto hover:cursor-pointer lg:!min-w-[360px] lg:text-xl xs:!min-w-[260px];
+  }
+}

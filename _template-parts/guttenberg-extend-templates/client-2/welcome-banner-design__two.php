@@ -28,7 +28,7 @@ if ($is_preview && !empty($previewImage)) {
         </div>
         <?php if ($welcome_banner__design_two__image || $welcome_banner__design_two__link) { ?>
             <div>
-                <div class="bg-accent pb-20 sm:h-96 sm:pb-14 xs:h-full" style="background-color: <?php echo $welcome_banner__design_two__section_bg_second ?: ''  ?> ;">
+                <div class="bg-accent pb-20 sm:pb-14 xs:h-full" style="background-color: <?php echo $welcome_banner__design_two__section_bg_second ?: ''  ?> ;">
                     <div class="container flex flex-col items-center">
                         <?php echo wp_get_attachment_image($welcome_banner__design_two__image, 'full', '', ['class' => '-mt-60 sm:-mt-24']) ?>
                         <?php if ($welcome_banner__design_two__link && $welcome_banner__design_two__link['url']) { ?>
@@ -42,9 +42,9 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
 
                         <?php if ($welcome_banner__design_two__form_select) { ?>
-                            <div class="pt-10">
+                            <div class="form banner-form pt-10">
                                 <?php if ($welcome_banner__design_two__description_form) { ?>
-                                    <p class="font-main text-white text-2xl"><?php echo $welcome_banner__design_two__description_form ?></p>
+                                    <p><?php echo $welcome_banner__design_two__description_form ?></p>
                                 <?php } ?>
                                 <?php echo $welcome_banner__design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_two__form_select['0'] . '" title=""]') : '' ?>
                             </div>

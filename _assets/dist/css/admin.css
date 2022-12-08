@@ -6327,10 +6327,6 @@ html :where(.wp-block) {
     height: 486px;
   }
 
-  .sm\:h-96 {
-    height: 24rem;
-  }
-
   .sm\:w-full {
     width: 100%;
   }
