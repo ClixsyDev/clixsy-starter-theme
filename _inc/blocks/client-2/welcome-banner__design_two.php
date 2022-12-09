@@ -86,6 +86,26 @@ if (function_exists('acf_add_local_field_group')) :
                     'type' => 'color_picker',
                     'label' => 'Set background color for first section',
                 ),
+                array(
+                    'key' => $block_key . 'description_form',
+                    'name' => $block_key . 'description_form',
+                    'type' => 'text',
+                    'label' => 'Description to form',
+                ),
+                array(
+                    'key' => $block_key . 'form_select',
+                    'name' => $block_key . 'form_select',
+                    'label' => 'Select form',
+                    'type' => 'relationship',
+                    'post_type' => array(
+                        0 => 'wpcf7_contact_form',
+                    ),
+                    'taxonomy' => '',
+                    'filters' => array(
+                        0 => 'search',
+                    ),
+                    'return_format' => 'id',
+                ),
             ),
 
         )

@@ -629,6 +629,17 @@ const nextArrow = ()=>{
     });
 };
 nextArrow();
+let secondStep = ()=>{
+    let btnForm = document.querySelector(".send_form_btn");
+    let secondStep = document.querySelector(".second-step-form");
+    let nextStep = document.querySelector(".next_step");
+    if (nextStep) nextStep.addEventListener("click", ()=>{
+        nextStep.style.display = "none";
+        secondStep.classList.remove("hidden");
+        btnForm.classList.remove("hidden-btn");
+    });
+};
+secondStep();
 
 },{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./thank-you-messages":"9IJ1s","./gclid":"bvTDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

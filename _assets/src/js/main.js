@@ -125,3 +125,18 @@ const nextArrow = () => {
   });
 }
 nextArrow();
+
+let secondStep = () => {
+  let btnForm = document.querySelector('.send_form_btn');
+  let secondStep = document.querySelector('.second-step-form');
+  let nextStep = document.querySelector('.next_step');
+
+  if (nextStep) {
+    nextStep.addEventListener('click', () => {
+      nextStep.style.display = 'none';
+      secondStep.classList.remove('hidden');
+      btnForm.classList.remove('hidden-btn');
+    });
+  }
+};
+secondStep();
