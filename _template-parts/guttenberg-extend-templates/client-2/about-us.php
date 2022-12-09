@@ -75,7 +75,7 @@ if ($is_preview && !empty($previewImage)) {
                                             <div class="flex gap-5 items-center">
                                                 <?php if ($item['icons']) { ?>
                                                     <div class="min-w-[66px]">
-                                                        <?php echo wp_get_attachment_image($item['icons'], 'full', '', ['class' => '']) ?>
+                                                        <?php echo wp_get_attachment_image($item['icons'], 'full', '', ['class' => 'm-auto']) ?>
                                                     </div>
                                                 <?php } ?>
                                                 <?php if ($item['title']) { ?>
