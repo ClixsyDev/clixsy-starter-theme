@@ -59,6 +59,12 @@ if (function_exists('acf_add_local_field_group')) :
                     'instructions' => 'To change text color wrap the part of text with span tag',
                 ),
                 array(
+                    'key' => $block_key . 'description',
+                    'name' => $block_key . 'description',
+                    'type' => 'text',
+                    'label' => 'Description',
+                ),
+                array(
                     'key' => $block_key . 'image',
                     'name' => $block_key . 'image',
                     'type' => 'image',

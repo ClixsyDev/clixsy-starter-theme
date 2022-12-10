@@ -243,4 +243,8 @@
   .next_step {
     @apply !min-w-[450px] text-2xl border-white border-1 m-auto hover:cursor-pointer lg:!min-w-[360px] lg:text-xl xs:!min-w-[260px];
   }
+
+  .wpcf7-not-valid-tip {
+    @apply text-white border-button_color border-b-1
+  }
 }

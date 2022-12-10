@@ -2166,6 +2166,10 @@
   margin-top: -15rem;
 }
 
+.acf-block-preview .-mt-52 {
+  margin-top: -13rem;
+}
+
 .acf-block-preview .block {
   display: block;
 }
@@ -3408,6 +3412,14 @@
 
 .acf-block-preview .pr-7 {
   padding-right: 1.75rem;
+}
+
+.acf-block-preview .pb-40 {
+  padding-bottom: 10rem;
+}
+
+.acf-block-preview .pb-32 {
+  padding-bottom: 8rem;
 }
 
 .acf-block-preview .text-center {
@@ -5258,6 +5270,10 @@ html :where(.wp-block) {
     padding-bottom: 14rem;
   }
 
+  .lg\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
   .lg\:text-center {
     text-align: center;
   }
@@ -5300,6 +5316,10 @@ html :where(.wp-block) {
 
   .lg\:text-17xl {
     font-size: 350px;
+  }
+
+  .lg\:\!text-2xl {
+    font-size: 1.5rem !important;
   }
 
   .lg\:leading-tight {
@@ -5424,6 +5444,10 @@ html :where(.wp-block) {
 
   .mdt\:mt-2 {
     margin-top: .5rem;
+  }
+
+  .mdt\:-mt-36 {
+    margin-top: -9rem;
   }
 
   .mdt\:block {
@@ -6313,6 +6337,10 @@ html :where(.wp-block) {
 
   .sm\:-mt-24 {
     margin-top: -6rem;
+  }
+
+  .sm\:-mt-12 {
+    margin-top: -3rem;
   }
 
   .sm\:hidden {
