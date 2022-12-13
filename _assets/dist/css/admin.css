@@ -11351,6 +11351,10 @@ html :where(.wp-block) {
     border-bottom-width: 2px;
   }
 
+  .md\:border-b-0 {
+    border-bottom-width: 0;
+  }
+
   .md\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));

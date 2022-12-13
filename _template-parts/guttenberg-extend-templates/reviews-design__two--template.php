@@ -64,23 +64,28 @@ if ($is_preview && !empty($previewImage)) {
                             </div>
                         <?php } ?>
                     </div>
-                    <div class="text-center relative mt-10 xs:mt-6">
-                        <div class="glide__arrows absolute right-[60%] top-11% w-max lg:right-65% md:right-65%" data-glide-el="controls">
-                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-left.png"></button>
-                        </div>
+                    <!-- test -->
+                    <div class="flex items-end justify-center gap-3 text-center relative mt-7">
+                        <div class="glide__arrows w-max" data-glide-el="controls">
+                                <button class=" mb-1 block glide__arrow glide__arrow--left" data-glide-dir="<"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-left.png"></button>
+                            </div>
                         <div class="glide__bullets" data-glide-el="controls[nav]">
                             <?php for ($i = 1; $i <= count($reviews_design_two_select); $i++) { ?>
                                 <button class="slider__bullet glide__bullet focus:border-none bg-smoke focus:bg-darkOrange hover:bg-darkOrange w-7 h-1.5 rounded-none xs:h-1 xs:w-6" data-glide-dir="=<?php echo $i - 1 ?>"></button>
                             <?php } ?>
                         </div>
-                        <div class="glide__arrows absolute left-[60%] top-11% w-max lg:left-65% md:left-65% xs:left-65%" data-glide-el="controls">
-                            <button class="glide__arrow glide__arrow--right" data-glide-dir="&gt;"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-right.png"></button>
+                        <div class="glide__arrows w-max " data-glide-el="controls">
+                            <button class=" mb-1 block glide__arrow glide__arrow--right" data-glide-dir="&gt;"><img class="w-9/12" src="<?= get_stylesheet_directory_uri() ?>/assets/img/bottom-arrow-right.png"></button>
                         </div>
                     </div>
                 </div>
                 <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left absolute top-36 left-25% xl:left-10% md:left-0 xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png"></button>
-                    <button class="glide__arrow glide__arrow--right absolute top-36 right-25% xl:right-10% md:right-0 xs:top-[46%]" data-glide-dir="<"><img class="w-9/12 xs:h-5 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png"></button>
+                    <button class="glide__arrow glide__arrow--left absolute top-52 left-0 lg:top-36 md:top-80 md:-left-[2%] xs:top-[46%]" data-glide-dir="<">
+                        <img class="w-9/12 xs:h-5 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-back.png">
+                    </button>
+                    <button data-glide-dir="&gt;" class="glide__arrow glide__arrow--right absolute top-52 right-7 md:-right-[2%] lg:top-36 md:top-80 xs:top-[46%]">
+                        <img class="w-9/12 xs:h-5 xs:w-auto" src="<?= get_stylesheet_directory_uri() ?>/assets/img/arrow-next.png">
+                    </button>
                 </div>
             </div>
             <?php if ($reviews_design_two_link) { ?>
