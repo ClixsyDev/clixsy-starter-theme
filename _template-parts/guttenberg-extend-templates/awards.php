@@ -12,6 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $title = get_field('awards_title');
     $items = get_field('awards_items');
 ?>
+<!-- awards.php -->
     <div class="bg-headings px-4 pt-10 pb-8 ">
         <?php if ($title) { ?>
             <h2 class="heading_h2 white pb-7 md:pb-5 sm:pb-5"><?= $title ?></h2>

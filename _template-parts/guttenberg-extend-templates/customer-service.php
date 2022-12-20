@@ -31,7 +31,7 @@ if ($is_preview && !empty($previewImage)) {
                         after:block after:absolute after:-translate-y-1/2 after:w-[1px] after:h-[65px] after:bg-white after:right-0 after:top-1/2' : '';
                         ?>
                         <div class="flex-1 flex flex-col justify-center items-center mdt:max-w-[400px]">
-                            <div class="rounded-full bg-white w-[200px] h-[200px] p-10 flex justify-center items-center mb-3">
+                            <div class="rounded-full shadow-siteWide bg-white w-[200px] h-[200px] p-10 flex justify-center items-center mb-3">
                                 <img src="<?= wp_get_attachment_image_url($service['customer_service_service_logo'], 'full') ?>" alt="">
                             </div>
                             <div class=" text-3xl leading-tight text-center mb-3"><?= $service['customer_service_service_title'] ?></div>

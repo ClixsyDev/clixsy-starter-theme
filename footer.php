@@ -2,6 +2,7 @@
 $socials = get_field('socials', 'options');
 $footer_logo = get_field('logo', 'options');
 $location = get_field('location', 'options');
+$location_link = get_field('location_link', 'options');
 $phone = get_field('phone', 'options');
 $mail = get_field('mail', 'options');
 $subscribe_form = get_field('subscribe_form', 'options');
@@ -38,7 +39,11 @@ $bottom_links = get_field('bottom_links', 'options');
                     <?php if ($location) { ?>
                         <div>
                             <h5 class="text-accent font-main font-bold text-xl">LOCATION</h5>
-                            <p class="text-white font-main font-bold text-xl xl:text-xl"><?php echo $location ?></p>
+                            <?php if (!$location_link) { ?>
+                                <p class="text-white font-main font-bold text-xl xl:text-xl"><?php echo $location ?></p>
+                            <?php } else { ?>
+                                <a href="<?php echo $location_link ?>" target="_blank" class="text-white font-main font-bold text-xl xl:text-xl"><?php echo $location ?></a>
+                            <?php } ?>
                         </div>
                     <?php } ?>
                     <?php if ($mail) { ?>
@@ -74,7 +79,7 @@ $bottom_links = get_field('bottom_links', 'options');
                 </div>
             </div>
         </div>
-        <div class="flex justify-between w-21/24 mt-8 lg:w-full sm:flex-col-reverse">
+        <div class="flex justify-between w-full mt-8 lg:w-full sm:flex-col-reverse">
             <?php if ($info_site) { ?>
                 <div class="sm:mt-5">
                     <p class="text-white font-avnir text-lg"><?php echo $info_site ?></p>
