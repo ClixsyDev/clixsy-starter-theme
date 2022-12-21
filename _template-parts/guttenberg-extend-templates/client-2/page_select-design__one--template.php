@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <div class="container py-10 lg:py-6">
         <?php if ($page_select_design_one__title) { ?>
-            <h1 class="heading_h2 mb-4 text-left"><?php echo $page_select_design_one__title ?></h1>
+            <h1 class="heading_h2 font-main mb-4 text-left"><?php echo $page_select_design_one__title ?></h1>
         <?php } ?>
         <span class="hidden grid-cols-3 grid-cols-2 grid-cols-1"></span>
         <div class="grid <?php echo count($page_select_design_one__select_pages) < 3 ? 'grid-cols-' . count($page_select_design_one__select_pages)  : 'grid-cols-3 ' ?> lg:grid-cols-1 gap-[30px] ">
@@ -32,7 +32,7 @@ if ($is_preview && !empty($previewImage)) {
                             <div class="bg-black bg-opacity-60 absolute z-20 w-full h-full top-0 left-0"></div>
                             <div class="relative z-30 mx-4 w-full">
                                 <?php if (!$page_select_design_one__disable_title) { ?>
-                                    <div class="text-white font-second text-3xl leading-tight mb-3 ">
+                                    <div class="text-white font-main text-3xl leading-tight mb-3 ">
                                         <?php echo get_the_title($selected_post); ?>
                                     </div>
                                 <?php } ?>
