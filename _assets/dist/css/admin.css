@@ -2146,6 +2146,10 @@
   margin-top: -14rem;
 }
 
+.acf-block-preview .-mr-1 {
+  margin-right: -.25rem;
+}
+
 .acf-block-preview .-mt-40 {
   margin-top: -10rem;
 }
@@ -2626,6 +2630,10 @@
   max-width: 460px !important;
 }
 
+.acf-block-preview .max-w-\[1720px\] {
+  max-width: 1720px;
+}
+
 .acf-block-preview .max-w-md {
   max-width: 28rem;
 }
@@ -2862,6 +2870,10 @@
   border-radius: 0;
 }
 
+.acf-block-preview .rounded {
+  border-radius: .25rem;
+}
+
 .acf-block-preview .rounded-2xl {
   border-radius: 1rem;
 }
@@ -2909,6 +2921,10 @@
   border-top-width: 2px;
 }
 
+.acf-block-preview .border-solid {
+  border-style: solid;
+}
+
 .acf-block-preview .border-none {
   border-style: none;
 }
@@ -2941,6 +2957,11 @@
 .acf-block-preview .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.acf-block-preview .border-headings {
+  --tw-border-opacity: 1;
+  border-color: rgb(57 57 57 / var(--tw-border-opacity));
 }
 
 .acf-block-preview .border-transparent {
@@ -3590,6 +3611,10 @@
   line-height: 1.625;
 }
 
+.acf-block-preview .leading-7 {
+  line-height: 1.75rem;
+}
+
 .acf-block-preview .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -4071,6 +4096,10 @@ html :where(.wp-block) {
     right: 5%;
   }
 
+  .\32 xl\:m-auto {
+    margin: auto;
+  }
+
   .\32 xl\:-mt-24 {
     margin-top: -6rem;
   }
@@ -4093,6 +4122,14 @@ html :where(.wp-block) {
 
   .\32 xl\:w-\[65\%\] {
     width: 65%;
+  }
+
+  .\32 xl\:w-max {
+    width: max-content;
+  }
+
+  .\32 xl\:\!w-max {
+    width: max-content !important;
   }
 
   .\32 xl\:max-w-\[280px\] {
@@ -4118,6 +4155,10 @@ html :where(.wp-block) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .\32 xl\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .\32 xl\:items-center {
     align-items: center;
   }
@@ -4128,6 +4169,10 @@ html :where(.wp-block) {
 
   .\32 xl\:gap-y-5 {
     row-gap: 1.25rem;
+  }
+
+  .\32 xl\:gap-y-32 {
+    row-gap: 8rem;
   }
 
   .\32 xl\:px-4 {
@@ -4245,6 +4290,10 @@ html :where(.wp-block) {
 
   .xl\:mt-0 {
     margin-top: 0;
+  }
+
+  .xl\:mr-0 {
+    margin-right: 0;
   }
 
   .xl\:mt-28 {
@@ -4396,6 +4445,14 @@ html :where(.wp-block) {
 
   .xl\:\!gap-40 {
     gap: 10rem !important;
+  }
+
+  .xl\:gap-y-32 {
+    row-gap: 8rem;
+  }
+
+  .xl\:gap-x-32 {
+    column-gap: 8rem;
   }
 
   .xl\:p-2 {
@@ -6271,6 +6328,14 @@ html :where(.wp-block) {
 
   .md\:\!text-2xl {
     font-size: 1.5rem !important;
+  }
+
+  .md\:\!text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .md\:leading-10 {
+    line-height: 2.5rem;
   }
 }
 
