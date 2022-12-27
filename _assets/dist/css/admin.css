@@ -3452,7 +3452,7 @@
 }
 
 .acf-block-preview .font-second {
-  font-family: Noto Serif;
+  font-family: ArialRounded;
 }
 
 .acf-block-preview .text-10xl {
@@ -4124,10 +4124,6 @@ html :where(.wp-block) {
     width: 65%;
   }
 
-  .\32 xl\:w-max {
-    width: max-content;
-  }
-
   .\32 xl\:\!w-max {
     width: max-content !important;
   }
@@ -4167,12 +4163,12 @@ html :where(.wp-block) {
     gap: 1.75rem;
   }
 
-  .\32 xl\:gap-y-5 {
-    row-gap: 1.25rem;
-  }
-
   .\32 xl\:gap-y-32 {
     row-gap: 8rem;
+  }
+
+  .\32 xl\:gap-y-5 {
+    row-gap: 1.25rem;
   }
 
   .\32 xl\:px-4 {
@@ -4445,14 +4441,6 @@ html :where(.wp-block) {
 
   .xl\:\!gap-40 {
     gap: 10rem !important;
-  }
-
-  .xl\:gap-y-32 {
-    row-gap: 8rem;
-  }
-
-  .xl\:gap-x-32 {
-    column-gap: 8rem;
   }
 
   .xl\:p-2 {

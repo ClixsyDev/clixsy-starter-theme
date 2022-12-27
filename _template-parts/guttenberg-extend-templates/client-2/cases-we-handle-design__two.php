@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
         <?php } ?>
         <div class="pb-12 rounded-md m-auto max-w-[1720px]" style="background-color: <?php echo $block_bg ?: ''  ?> ;">
             <div class="container">
-                <div class="flex gap-14 mt-14 2xl:flex-wrap 2xl:gap-y-32 mdt:justify-center">
+                <div class="flex gap-11 mt-14 2xl:flex-wrap 2xl:gap-y-32 mdt:justify-center">
                     <?php
                     if (!$case_items) {
                         $posts = get_posts(array(
