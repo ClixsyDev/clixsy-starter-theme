@@ -248,3 +248,11 @@
     @apply text-white border-button_color border-b-1
   }
 }
+
+.sidebar-form {
+  form {
+    p {
+      width: 100%;
+    }
+  }
+}
