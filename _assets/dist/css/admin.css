@@ -2162,10 +2162,6 @@
   margin-bottom: .625rem;
 }
 
-.acf-block-preview .-mt-60 {
-  margin-top: -15rem;
-}
-
 .acf-block-preview .-mt-52 {
   margin-top: -13rem;
 }
@@ -3414,10 +3410,6 @@
   padding-right: 1.75rem;
 }
 
-.acf-block-preview .pb-40 {
-  padding-bottom: 10rem;
-}
-
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
 }
@@ -3439,7 +3431,7 @@
 }
 
 .acf-block-preview .font-second {
-  font-family: ArialRounded;
+  font-family: Noto Serif;
 }
 
 .acf-block-preview .text-10xl {
@@ -5266,10 +5258,6 @@ html :where(.wp-block) {
     padding-top: 4rem;
   }
 
-  .lg\:pb-56 {
-    padding-bottom: 14rem;
-  }
-
   .lg\:pb-32 {
     padding-bottom: 8rem;
   }
@@ -6335,10 +6323,6 @@ html :where(.wp-block) {
     margin-bottom: 1rem;
   }
 
-  .sm\:-mt-24 {
-    margin-top: -6rem;
-  }
-
   .sm\:-mt-12 {
     margin-top: -3rem;
   }
@@ -6482,10 +6466,6 @@ html :where(.wp-block) {
 
   .sm\:pb-8 {
     padding-bottom: 2rem;
-  }
-
-  .sm\:pb-24 {
-    padding-bottom: 6rem;
   }
 
   .sm\:pb-14 {
