@@ -42,7 +42,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php if ($auto_accident_fault__description_repeater) { ?>
                             <p class="text-white text-xl pb-5 xl:text-center"><?php echo $auto_accident_fault__description_repeater ?></p>
                         <?php } ?>
-                        <div class="grid grid-cols-3 gap-y-10 gap-x-3 md:grid-cols-2 xs:gap-x-0 xs:gap-y-5 xs:grid-cols-1">
+                        <div class="grid grid-cols-3 gap-y-10 gap-x-3 md:!grid-cols-2 xs:!gap-x-16 xs:!gap-y-5 xs:g!rid-cols-1">
                             <?php foreach ($auto_accident_fault__items as $item) { ?>
                                 <div class="flex items-center gap-2 xl:justify-center md:justify-start xs:justify-center">
                                     <?php if ($item['icons']) { ?>
