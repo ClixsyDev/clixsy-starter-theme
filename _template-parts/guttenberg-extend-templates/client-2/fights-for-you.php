@@ -42,9 +42,9 @@ if ($is_preview && !empty($previewImage)) {
             <div class="px-20 rounded-md pb-10 xl:px-10 xl:pt-7 sm:px-4" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
                 <div class="flex xl:flex-col items-center">
                     <?php if ($fights_for_you__text_available || $fights_for_you__time_available) { ?>
-                        <div class="flex items-center px-16 w-4/12 h-full mt-2.5 font-main gap-3 py-1 text-white xl:px-10 xl:justify-center xl:w-12/24 sm:w-full" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
+                        <div class="flex items-center px-16 w-4/12 h-full mt-2.5 font-main gap-3 py-1 rounded -mr-1 text-white xl:px-10 xl:mr-0 xl:justify-center xl:w-12/24 sm:w-full" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                             <?php if ($fights_for_you__text_available) { ?>
-                                <p class="text-2xl text-right font-light"><?php echo $fights_for_you__text_available ?></p>
+                                <p class="text-2xl text-right font-light leading-7"><?php echo $fights_for_you__text_available ?></p>
                             <?php } ?>
                             <?php if ($fights_for_you__time_available) { ?>
                                 <p class="text-5xl font-bold"><?php echo $fights_for_you__time_available ?></p>

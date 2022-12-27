@@ -1,0 +1,6 @@
+@layer {
+    .overlay {
+        background: rgba(57, 57, 57, 0.67);
+        @apply h-full w-full;
+    }
+}
