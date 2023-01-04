@@ -2166,8 +2166,16 @@
   margin-bottom: .625rem;
 }
 
-.acf-block-preview .-mt-52 {
-  margin-top: -13rem;
+.acf-block-preview .-mt-28 {
+  margin-top: -7rem;
+}
+
+.acf-block-preview .-mt-36 {
+  margin-top: -9rem;
+}
+
+.acf-block-preview .\!-mt-36 {
+  margin-top: -9rem !important;
 }
 
 .acf-block-preview .block {
@@ -2556,6 +2564,10 @@
 
 .acf-block-preview .w-7\/24 {
   width: 29.1667%;
+}
+
+.acf-block-preview .w-10\/12 {
+  width: 83.3333%;
 }
 
 .acf-block-preview .min-w-\[66px\] {
@@ -3452,7 +3464,7 @@
 }
 
 .acf-block-preview .font-second {
-  font-family: ArialRounded;
+  font-family: Noto Serif;
 }
 
 .acf-block-preview .text-10xl {
@@ -5483,6 +5495,10 @@ html :where(.wp-block) {
     margin-top: -9rem;
   }
 
+  .mdt\:\!-mt-36 {
+    margin-top: -9rem !important;
+  }
+
   .mdt\:block {
     display: block;
   }
@@ -6125,10 +6141,6 @@ html :where(.wp-block) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:\!grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
@@ -6537,14 +6549,6 @@ html :where(.wp-block) {
     padding-bottom: 3.5rem;
   }
 
-  .sm\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
-  .sm\:\!pt-5 {
-    padding-top: 1.25rem !important;
-  }
-
   .sm\:text-center {
     text-align: center;
   }
@@ -6940,10 +6944,6 @@ html :where(.wp-block) {
     max-width: 80px;
   }
 
-  .xs\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
   .xs\:items-center {
     align-items: center;
   }
@@ -6968,32 +6968,12 @@ html :where(.wp-block) {
     gap: 0;
   }
 
-  .xs\:gap-x-0 {
-    column-gap: 0;
-  }
-
-  .xs\:gap-y-5 {
-    row-gap: 1.25rem;
-  }
-
-  .xs\:\!gap-x-0 {
-    column-gap: 0 !important;
+  .xs\:\!gap-x-16 {
+    column-gap: 4rem !important;
   }
 
   .xs\:\!gap-y-5 {
     row-gap: 1.25rem !important;
-  }
-
-  .xs\:\!gap-x-5 {
-    column-gap: 1.25rem !important;
-  }
-
-  .xs\:\!gap-x-20 {
-    column-gap: 5rem !important;
-  }
-
-  .xs\:\!gap-x-16 {
-    column-gap: 4rem !important;
   }
 
   .xs\:p-0 {

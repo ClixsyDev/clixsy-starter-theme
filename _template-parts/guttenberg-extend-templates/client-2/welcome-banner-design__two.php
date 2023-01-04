@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
             <div>
                 <div class="bg-accent pb-20 sm:pb-14 xs:h-full" style="background-color: <?php echo $welcome_banner__design_two__section_bg_second ?: ''  ?> ;">
                     <div class="container flex flex-col items-center">
-                        <?php echo wp_get_attachment_image($welcome_banner__design_two__image, 'full', '', ['class' => '-mt-52 mdt:-mt-36 sm:-mt-12']) ?>
+                        <?php echo wp_get_attachment_image($welcome_banner__design_two__image, 'full', '', ['class' => 'block -mt-32 mdt:-mt-36 sm:-mt-12 w-10/12']) ?>
                         <?php if ($welcome_banner__design_two__link && $welcome_banner__design_two__link['url']) { ?>
                             <?php
                             Template::load('_template-parts/components/button.php', [
