@@ -2166,18 +2166,6 @@
   margin-bottom: .625rem;
 }
 
-.acf-block-preview .-mt-28 {
-  margin-top: -7rem;
-}
-
-.acf-block-preview .-mt-36 {
-  margin-top: -9rem;
-}
-
-.acf-block-preview .\!-mt-36 {
-  margin-top: -9rem !important;
-}
-
 .acf-block-preview .block {
   display: block;
 }
@@ -3464,7 +3452,7 @@
 }
 
 .acf-block-preview .font-second {
-  font-family: Noto Serif;
+  font-family: ArialRounded;
 }
 
 .acf-block-preview .text-10xl {
@@ -5493,10 +5481,6 @@ html :where(.wp-block) {
 
   .mdt\:-mt-36 {
     margin-top: -9rem;
-  }
-
-  .mdt\:\!-mt-36 {
-    margin-top: -9rem !important;
   }
 
   .mdt\:block {
