@@ -28,7 +28,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($welcome_banner__design_two__description) { ?>
                     <p class="text-headings font-main text-3xl uppercase pt-4 lg:!text-2xl sm:!text-xl"><?php echo $welcome_banner__design_two__description ?></p>
                 <?php } ?>
-            </div>    
+            </div>
         </div>
         <?php if ($welcome_banner__design_two__image || $welcome_banner__design_two__link) { ?>
             <div>
