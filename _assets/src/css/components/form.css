@@ -23,7 +23,7 @@
     .disclaimer {
       @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
       a {
-        @apply text-accent font-semibold;
+        @apply font-semibold;
       }
     }
     input[type='submit'] {
@@ -204,13 +204,13 @@
 
     .wpcf7-form-control-wrap {
       @apply bg-inherit;
-  
+
       .wpcf7-form-control {
         @apply flex;
-  
+
         .wpcf7-list-item {
           @apply !flex gap-2;
-    
+
           input {
             @apply w-6 h-[2.35rem] rounded outline-0 sm:h-[1.95rem];
           }
@@ -220,7 +220,7 @@
           }
 
           .wpcf7-list-item-label {
-            @apply text-white font-bold; 
+            @apply text-white font-bold;
           }
         }
       }
@@ -248,7 +248,7 @@
   }
 
   .wpcf7-not-valid-tip {
-    @apply text-white border-button_color border-b-1
+    @apply text-white border-button_color border-b-1;
   }
 }
 
@@ -256,6 +256,12 @@
   form {
     p {
       width: 100%;
+    }
+    .disclaimer {
+      @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
+      a {
+        @apply font-semibold;
+      }
     }
   }
 }
