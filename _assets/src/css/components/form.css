@@ -20,8 +20,11 @@
     textarea {
       @apply h-36;
     }
-    p.disclaimer {
-      @apply text-base lg:text-sm leading-tight text-left text-white mt-6 mb-4;
+    .disclaimer {
+      @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
+      a {
+        @apply text-accent font-semibold;
+      }
     }
     input[type='submit'] {
       @apply font-bold text-xl leading-8 text-center text-white px-9 py-2 rounded-3xl bg-accent mx-auto my-0 block w-fit;
