@@ -23,7 +23,7 @@
     .disclaimer {
       @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
       a {
-        @apply font-semibold;
+        @apply font-semibold underline;
       }
     }
     input[type='submit'] {
@@ -260,7 +260,7 @@
     .disclaimer {
       @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
       a {
-        @apply font-semibold;
+        @apply font-semibold underline;
       }
     }
   }
