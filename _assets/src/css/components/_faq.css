@@ -20,6 +20,7 @@
 
 .faq__header {
   position: relative;
+  padding-right: 50px;
   &:after {
     content: '+';
     position: absolute;
