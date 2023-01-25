@@ -1,7 +1,14 @@
+
+
 # WordPress starter theme
 
 This is a starter theme focused on page speed optimized aproach to web development with strict coding styles and clean, flexible and 
 easily maintainable code.
+
+## Info about BigAuto site
+Branch to work with bigauto parent theme https://github.com/ClixsyDev/clixsy-starter-theme/tree/bigauto
+Branch to work with bigauto child theme https://github.com/ClixsyDev/bigauto.com/tree/develop 
+
 
 ## PHP autoload and dependencies
 

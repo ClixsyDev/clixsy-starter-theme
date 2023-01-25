@@ -49,7 +49,7 @@ if ($is_preview && !empty($previewImage)) {
                                     ]);
                                 } ?>
                             </div>
-                            <div class="z-10 border-transparent border-[25px] absolute m-auto <?php echo $i % 2 == 0 ? 'bottom-[-59px] border-t-[#e2e4e8] lg:bottom-[-56px] mdt:bottom-[-47px]' : '-bottom-[16%] border-t-white lg:-bottom-[14%] mdt:-bottom-[8%] md:-bottom-[10%]'  ?>"></div>
+                            <div class="z-10 border-transparent border-[25px] absolute m-auto <?php echo $i % 2 == 0 ? 'bottom-[-57px] border-t-[#e2e4e8] lg:bottom-[-56px] mdt:bottom-[-47px]' : '-bottom-[16%] border-t-white lg:-bottom-[14%] mdt:-bottom-[8%] md:-bottom-[10%]'  ?>"></div>
                         </div>
                     <?php } ?>
                 </div>
