@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $image = get_field($key . '_image');
     $faq_design_one__make_first_active = get_field($key . '_make_first_active');
 ?>
-    <div class="py-24">
+    <div class="py-24 md:py-12">
         <div class="container">
             <?php if ($title) { ?>
                 <div class="mb-16 lg:mb-8">
