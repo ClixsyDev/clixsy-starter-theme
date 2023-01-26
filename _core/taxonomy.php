@@ -100,6 +100,36 @@ function phillips_law_attorneys_cpt() {
 		'rewrite' => array('slug' => 'results'),
 		'taxonomies'          => array('category'),
 	));
+
+	register_post_type('faq', array(
+		'labels'             => array('name' => __('FAQ', 'law')),
+		'menu_icon' 				 => 'dashicons-welcome-learn-more',
+		'hierarchical'       => false,
+		'public'             => true,
+		'has_archive'        => true,
+		'show_ui'            => true,
+		'show_admin_column'  => true,
+		'show_in_nav_menus'  => true,
+		'query_var'          => true,
+		'publicly_queryable' => true,
+		'supports'           => array('title', 'excerpt', 'thumbnail', 'editor'),
+		// 'slug' 							 => '/%faq%/%faq-categories%/%postname%/',
+		'with_front' 				 => true,
+		// 'walk_dirs' 				 => false
+	));
+
+	register_taxonomy('faq-categories', 'faq', array(
+		'hierarchical' => true,
+		'menu_icon'          => 'dashicons-welcome-learn-more',
+		'label' => 'Faq categories',
+		'singular_label' => 'Faq categories',
+		'query_var' => true,
+		'public' => true,
+		'show_ui' => true,
+		'show_tagcloud' => true,
+		'_builtin' => false,
+		'show_in_nav_menus' => false,
+	));
 }
 
 add_action('init', 'phillips_law_attorneys_cpt');
