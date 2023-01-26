@@ -6,7 +6,7 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 //Register Taxonomy and Post types
-function phillips_law_attorneys_cpt() {
+function bigauto_attorneys_cpt() {
 	register_post_type('attorneys', array(
 		'labels'             => array('name' => __('Attorneys', 'law')),
 		'hierarchical'       => true,
@@ -121,8 +121,8 @@ function phillips_law_attorneys_cpt() {
 	register_taxonomy('faq-categories', 'faq', array(
 		'hierarchical' => true,
 		'menu_icon'          => 'dashicons-welcome-learn-more',
-		'label' => 'Faq categories',
-		'singular_label' => 'Faq categories',
+		'label' => 'FAQ Categories',
+		'singular_label' => 'FAQ Categories',
 		'query_var' => true,
 		'public' => true,
 		'show_ui' => true,
@@ -132,4 +132,4 @@ function phillips_law_attorneys_cpt() {
 	));
 }
 
-add_action('init', 'phillips_law_attorneys_cpt');
+add_action('init', 'bigauto_attorneys_cpt');
