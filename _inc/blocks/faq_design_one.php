@@ -129,6 +129,14 @@ if (function_exists('acf_add_local_field_group')) :
                     'instructions' => '',
                     'required' => 0,
                 ),
+                array(
+                    'key' => $block_key . 'full_width',
+                    'name' => $block_key . 'full_width',
+                    'label' => 'Set to full width',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                ),
             ),
 
         )

@@ -32,14 +32,14 @@ if ($is_preview && !empty($previewImage)) {
                     <article class="h-full">
                         <a class="relative group min-h-[300px] h-full flex bg-cover items-end" style="background-image: url(<?php echo $thumbnail ?: $thumbnail_placeholder ?>);" href="<?= get_permalink($selected_post) ?>">
                             <div class="bg-black bg-opacity-60 absolute z-20 w-full h-full top-0 left-0"></div>
-                            <div class="relative z-30 mx-4 w-full">
+                            <div class="relative z-30 mx-4 w-full group">
                                 <?php if (!$page_select_design_one__disable_title) { ?>
                                     <div class="text-white font-second text-3xl leading-tight mb-3 ">
                                         <?php echo get_the_title($selected_post); ?>
                                     </div>
                                 <?php } ?>
                                 <?php if (!$page_select_design_one__disable_description) { ?>
-                                    <div class="font-libre text-white text-base mb-2 mr-9" style="line-height: 19px; height: 57px; overflow: hidden;">
+                                    <div class="font-libre group-hover:opacity-100 opacity-0 pt-[10px] pr-[10px] text-white text-base mb-2 mr-9">
                                         <?php echo get_the_excerpt($selected_post) ?>
                                     </div>
                                 <?php } ?>

@@ -2562,6 +2562,10 @@
   width: 83.3333%;
 }
 
+.acf-block-preview .\!w-\[100\%\] {
+  width: 100% !important;
+}
+
 .acf-block-preview .min-w-\[45px\] {
   min-width: 45px;
 }
@@ -2700,10 +2704,6 @@
 
 .acf-block-preview .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.acf-block-preview .grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .acf-block-preview .flex-row {
@@ -3426,6 +3426,14 @@
 
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
+}
+
+.acf-block-preview .pt-\[10px\] {
+  padding-top: 10px;
+}
+
+.acf-block-preview .pr-\[10px\] {
+  padding-right: 10px;
 }
 
 .acf-block-preview .text-center {
@@ -6114,6 +6122,10 @@ html :where(.wp-block) {
 
   .md\:\!grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-col {

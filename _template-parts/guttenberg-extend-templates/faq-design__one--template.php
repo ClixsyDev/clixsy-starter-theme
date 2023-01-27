@@ -14,8 +14,10 @@ if ($is_preview && !empty($previewImage)) {
     $faq_design_one__image = get_field('faq_design_one__image');
     $faq_design_one__disable_schema = get_field('faq_design_one__disable_schema');
     $faq_design_one__make_first_active = get_field('faq_design_one__make_first_active');
+    $faq_design_one__full_width = get_field('faq_design_one__full_width');
 
 ?>
+<!-- faq-design__one--template.php -->
     <?php if ($faq_design_one__faq_repeater[0]) { ?>
         <section class="container mb-16">
             <?php if ($faq_design_one__title) { ?>
@@ -29,7 +31,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($faq_design_one__image) { ?>
                     <?php echo wp_get_attachment_image($faq_design_one__image, 'full', '', ['class' => 'object-cover mx-auto w-[60%] mdt:w-[80%]  md:w-full h-[487px] 2xl:h-64 md:h-52']) ?>
                 <?php } ?>
-                <div class="mx-auto w-[60%] mdt:w-[80%] md:w-full ">
+                <div class="mx-auto <?php echo $faq_design_one__full_width ? '!w-[100%]' : '' ?> w-[60%] mdt:w-[80%] md:w-full ">
                     <?php if ($faq_design_one__faq_repeater) { ?>
                         <div class="w-full">
                             <?php if ($faq_design_one__faq_repeater) { ?>
