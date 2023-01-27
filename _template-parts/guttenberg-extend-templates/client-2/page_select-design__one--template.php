@@ -16,11 +16,12 @@ if ($is_preview && !empty($previewImage)) {
     $page_select_design_one__disable_date = get_field('page_select_design_one__disable_date');
 
 ?>
+<!-- page_select-design__one--template.php -->
     <div class="container py-10 lg:py-6">
         <?php if ($page_select_design_one__title) { ?>
-            <h1 class="heading_default_color mb-4"><?php echo $page_select_design_one__title ?></h1>
+            <h1 class="heading_default_color mb-4 text-center"><?php echo $page_select_design_one__title ?></h1>
         <?php } ?>
-        <span class="hidden grid-cols-3 grid-cols-2 grid-cols-1"></span>
+        <span class="hidden grid-cols-3 md:grid-cols-2 sm:grid-cols-1"></span>
         <div class="grid <?php echo count($page_select_design_one__select_pages) < 3 ? 'grid-cols-' . count($page_select_design_one__select_pages)  : 'grid-cols-3 ' ?> lg:grid-cols-1 gap-[30px] ">
             <?php if (!empty($page_select_design_one__select_pages)) { ?>
 
