@@ -1,6 +1,9 @@
 <?php
+// filter to remove additional <p> tags in CF7
 add_filter('wpcf7_autop_or_not', '__return_false');
 
+
+// rewrite rule to make url for blog posts like :site.com/blog/category/post-slug:
 function THEME_SLUG_posts_add_rewrite_rules( $wp_rewrite )
 {
     $new_rules = [
