@@ -12,7 +12,7 @@ if ($is_preview && !empty($previewImage)) {
     $key = 'cases_we_handle_two';
     $title = get_field($key . '_title');
     $cases = get_field($key . '_items');
-    $case_items = get_field('cases_we_handle_case_items');
+    $case_items = get_field($key . '_case_items');
     $block_bg = get_field($key . '_block_bg');
     $button1 = get_field($key . '_button_1');
     $button2 = get_field($key . '_button_2');
@@ -35,7 +35,8 @@ if ($is_preview && !empty($previewImage)) {
                             'post_type'     => 'page',
                             'meta_key'      => 'page_case_type_is_case_type',
                             'meta_value'    => true,
-                            'exclude'      => get_the_ID(),
+                            'orderby'       => 'menu_order',
+                            'exclude'       => get_the_ID(),
                         ));
                         $case_items = array();
                         foreach ($posts as $post_item) {

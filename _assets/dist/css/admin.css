@@ -2166,10 +2166,6 @@
   margin-bottom: .625rem;
 }
 
-.acf-block-preview .mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .acf-block-preview .block {
   display: block;
 }
@@ -2888,10 +2884,6 @@
 
 .acf-block-preview .rounded-2xl {
   border-radius: 1rem;
-}
-
-.acf-block-preview .rounded-xl {
-  border-radius: .75rem;
 }
 
 .acf-block-preview .rounded-t-lg {
@@ -3661,11 +3653,6 @@
   color: rgb(198 197 197 / var(--tw-text-opacity));
 }
 
-.acf-block-preview .text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .acf-block-preview .underline {
   text-decoration-line: underline;
 }
@@ -4009,11 +3996,6 @@ html :where(.wp-block) {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
-
-  .dark\:text-gray-200 {
-    --tw-text-opacity: 1;
-    color: rgb(229 231 235 / var(--tw-text-opacity));
-  }
 }
 
 @media (max-width: 1920px) {
@@ -4275,11 +4257,6 @@ html :where(.wp-block) {
 
   .xl\:m-auto {
     margin: auto;
-  }
-
-  .xl\:my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
   }
 
   .xl\:ml-16 {
