@@ -1847,8 +1847,8 @@
   top: -6%;
 }
 
-.acf-block-preview .bottom-\[-59px\] {
-  bottom: -59px;
+.acf-block-preview .bottom-\[-57px\] {
+  bottom: -57px;
 }
 
 .acf-block-preview .-bottom-\[16\%\] {
@@ -2166,6 +2166,10 @@
   margin-bottom: .625rem;
 }
 
+.acf-block-preview .mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .acf-block-preview .block {
   display: block;
 }
@@ -2282,6 +2286,10 @@
   height: 120%;
 }
 
+.acf-block-preview .h-max {
+  height: max-content;
+}
+
 .acf-block-preview .h-\[800px\] {
   height: 800px;
 }
@@ -2300,10 +2308,6 @@
 
 .acf-block-preview .h-\[75px\] {
   height: 75px;
-}
-
-.acf-block-preview .h-max {
-  height: max-content;
 }
 
 .acf-block-preview .h-\[110\%\] {
@@ -2884,6 +2888,10 @@
 
 .acf-block-preview .rounded-2xl {
   border-radius: 1rem;
+}
+
+.acf-block-preview .rounded-xl {
+  border-radius: .75rem;
 }
 
 .acf-block-preview .rounded-t-lg {
@@ -3653,6 +3661,11 @@
   color: rgb(198 197 197 / var(--tw-text-opacity));
 }
 
+.acf-block-preview .text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 .acf-block-preview .underline {
   text-decoration-line: underline;
 }
@@ -3996,6 +4009,11 @@ html :where(.wp-block) {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+
+  .dark\:text-gray-200 {
+    --tw-text-opacity: 1;
+    color: rgb(229 231 235 / var(--tw-text-opacity));
+  }
 }
 
 @media (max-width: 1920px) {
@@ -4115,10 +4133,6 @@ html :where(.wp-block) {
     width: max-content !important;
   }
 
-  .\32 xl\:w-\[200px\] {
-    width: 200px;
-  }
-
   .\32 xl\:max-w-\[280px\] {
     max-width: 280px;
   }
@@ -4160,10 +4174,6 @@ html :where(.wp-block) {
 
   .\32 xl\:gap-y-5 {
     row-gap: 1.25rem;
-  }
-
-  .\32 xl\:gap-y-4 {
-    row-gap: 1rem;
   }
 
   .\32 xl\:px-4 {
@@ -4265,6 +4275,11 @@ html :where(.wp-block) {
 
   .xl\:m-auto {
     margin: auto;
+  }
+
+  .xl\:my-5 {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .xl\:ml-16 {
@@ -4398,10 +4413,6 @@ html :where(.wp-block) {
     flex-direction: column-reverse;
   }
 
-  .xl\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
   .xl\:items-center {
     align-items: center;
   }
@@ -4440,10 +4451,6 @@ html :where(.wp-block) {
 
   .xl\:\!gap-40 {
     gap: 10rem !important;
-  }
-
-  .xl\:gap-y-4 {
-    row-gap: 1rem;
   }
 
   .xl\:p-2 {

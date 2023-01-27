@@ -46,17 +46,18 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
 
                         <?php if ($welcome_banner__design_two__form_select) { ?>
-                            <div class="form banner-form pt-10">
-                                <?php if ($welcome_banner__design_two__description_form) { ?>
-                                    <p><?php echo $welcome_banner__design_two__description_form ?></p>
-                                <?php } ?>
-                                <?php echo $welcome_banner__design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_two__form_select['0'] . '" title=""]') : '' ?>
+                            <div class="first-step text-center">
+                                <div class="form banner-form pt-10">
+                                    <?php if ($welcome_banner__design_two__description_form) { ?>
+                                        <p><?php echo $welcome_banner__design_two__description_form ?></p>
+                                    <?php } ?>
+                                    <?php echo $welcome_banner__design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_two__form_select['0'] . '" title=""]') : '' ?>
+                                </div>
+                            <?php } ?>
                             </div>
-                        <?php } ?>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
     </section>
 
     </div>
