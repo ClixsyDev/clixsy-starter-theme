@@ -144,7 +144,7 @@ const btnMoreFormDesignTwo = () => {
             console.log('clicked 1');
           } else {
             fixedHeightElemSelector.classList.add('overflow-hidden', 'hidden-with-shadow');
-            fixedHeightElemSelector.style.maxHeight = '330px';
+            fixedHeightElemSelector.style.maxHeight = '580px';
             toggleFixedHeight.textContent = 'Read more...';
           }
         });

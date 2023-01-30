@@ -40,7 +40,9 @@ if ($is_preview && !empty($previewImage)) {
                                         <div class="faq__position <?php echo $key == 0 && $faq_design_one__make_first_active ? 'faq__position__active' : '' ?> ">
                                             <div class="faq__header p-4 !pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item['question'] ?></div>
                                             <div class="faq__text" style="<?php echo $key == 0 && $faq_design_one__make_first_active ? 'max-height: 100%' : '' ?>">
-                                                <?php echo $item['answer'] ?>
+                                                <div class="mt-3 mb-5 mx-11">
+                                                        <?php echo $item['answer'] ?>
+                                                    </div>
                                             </div>
                                         </div>
                                     <?php } ?>
@@ -52,7 +54,9 @@ if ($is_preview && !empty($previewImage)) {
                                             <div class="faq__position ">
                                                 <div class="faq__header p-4 !pr-9 text-headings_second mb-2 bg-process_smoke font-main font-bold  text-2xl lg:text-base lg:relative xs:px-7 cursor-pointer"><?php echo $item_hidden['question_hidden'] ?></div>
                                                 <div class="faq__text">
-                                                    <?php echo $item_hidden['answer_hidden'] ?>
+                                                    <div class="mt-3 mb-5 mx-11">
+                                                        <?php echo $item_hidden['answer_hidden'] ?>
+                                                    </div>
                                                 </div>
                                             </div>
 
