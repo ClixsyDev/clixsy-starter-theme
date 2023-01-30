@@ -1,6 +1,6 @@
-import {mainMenu, dropdownMenu} from './menu';
+import { mainMenu, dropdownMenu } from './menu';
 import headerInit from './header';
-import { getElement, getElements, ifSelectorExist, ready } from './utils';
+import { getElement, getElements, ifSelectorExist, isOverflown, ready } from './utils';
 import testimonialSlider from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
@@ -8,48 +8,28 @@ import { tocAnchor } from './toc';
 import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
 
-
-
-ready(() => {
-  mainMenu();
-  dropdownMenu();
-  headerInit();
-  formEntry();
-  hoverOnButton();
-  btnMore();
-  btnMoreEducation();
-  initFAQ();
-  tocAnchor();
-  sentNewMessage('.sidebar-form');
-  sentNewMessage('.attorney-group__form');
-  sentNewMessage('.form');
-  sentNewMessage('.how_can_help_form');
-  gclid();
-});
-
-
 /* FAQ start */
 const initFAQ = () => {
-  const acc = getElements('.faq__header')
+  const acc = getElements('.faq__header');
   if (acc && acc.length) {
     for (let i = 0; i < acc.length; i++) {
       acc[i].addEventListener('click', function () {
         if (this.parentNode.classList.contains('faq__position__active')) {
-          this.nextElementSibling.style.maxHeight = null
-          this.parentNode.classList.remove('faq__position__active')
+          this.nextElementSibling.style.maxHeight = null;
+          this.parentNode.classList.remove('faq__position__active');
         } else {
           for (let j = 0; j < acc.length; j++) {
-            acc[j].parentNode.classList.remove('faq__position__active')
-            acc[j].nextElementSibling.style.maxHeight = null
+            acc[j].parentNode.classList.remove('faq__position__active');
+            acc[j].nextElementSibling.style.maxHeight = null;
           }
-          this.parentNode.classList.add('faq__position__active')
-          const panel = this.nextElementSibling
-          panel.style.maxHeight = panel.scrollHeight + 'px'
+          this.parentNode.classList.add('faq__position__active');
+          const panel = this.nextElementSibling;
+          panel.style.maxHeight = panel.scrollHeight + 'px';
         }
-      })
+      });
     }
   }
-    let moreBtn = getElement('.faq-without-image__btn');
+  let moreBtn = getElement('.faq-without-image__btn');
   if (ifSelectorExist(moreBtn)) {
     moreBtn.addEventListener('click', () => {
       let hiddenFaqImageLeft = getElement('.hidden_faq_image_left');
@@ -66,11 +46,11 @@ const initFAQ = () => {
       }
     });
   }
-}
+};
 /* FAQ end */
 
-
-let btnMore = () => {
+// Show more FAQ item
+const btnMore = () => {
   let hiddenBlock = document.querySelector('.hidden-text');
   let btn = document.querySelector('.more-btn');
   let faqMore = () => {
@@ -91,16 +71,17 @@ let btnMore = () => {
   };
 };
 
-let btnMoreEducation = () => {
+// Text education btnMore
+const btnMoreEducation = () => {
   let hiddenBlock = document.querySelector('.hidden-text-education');
   let btn = document.querySelector('.more-btn-education');
 
   if (ifSelectorExist(btn) && ifSelectorExist(hiddenBlock)) {
     btn.addEventListener('click', (event) => {
       event.preventDefault();
-      
+
       hiddenBlock.classList.toggle('hidden');
-      console.log('clicking')
+      console.log('clicking');
 
       if (hiddenBlock.classList.contains('hidden')) {
         btn.textContent = 'read more...';
@@ -111,10 +92,11 @@ let btnMoreEducation = () => {
   }
 };
 
+// Scroll to [data-go-to] attr
 const nextArrow = () => {
   const arrows = Array.from(document.querySelectorAll('[data-go-to]'));
-  arrows.map(arrow => {
-    arrow.addEventListener('click', e => {
+  arrows.map((arrow) => {
+    arrow.addEventListener('click', (e) => {
       e.preventDefault();
       const selector = arrow.getAttribute('data-go-to');
       window.scrollTo({
@@ -123,10 +105,10 @@ const nextArrow = () => {
       });
     });
   });
-}
-nextArrow();
+};
 
-let secondStep = () => {
+// Show form after submit dropdown in <!-- welcome-banner-design__two.php -->
+const secondStep = () => {
   let btnForm = document.querySelector('.send_form_btn');
   let secondStep = document.querySelector('.second-step-form');
   let nextStep = document.querySelector('.next_step');
@@ -139,4 +121,54 @@ let secondStep = () => {
     });
   }
 };
-secondStep();
+
+// Show more content in <!-- text-form-design__two--template.php -->
+const btnMoreFormDesignTwo = () => {
+  fixedHeightContainerSelector = getElements('.fixedHeightContainer');
+  if (ifSelectorExist(fixedHeightContainerSelector)) {
+    Array.from(fixedHeightContainerSelector).forEach((item) => {
+      fixedHeightElemSelector = getElement('.fixedHeight', item);
+      toggleFixedHeight = getElement('.toggleFixedHeight', item);
+      innerContentHeight = getElement('.innerContentHeight', item);
+      checkHeight = innerContentHeight.offsetHeight > parseInt(fixedHeightElemSelector.style.maxHeight);
+      console.log(innerContentHeight.offsetHeight + ' || ' + parseInt(fixedHeightElemSelector.style.maxHeight));
+      if (ifSelectorExist(fixedHeightContainerSelector) && ifSelectorExist(toggleFixedHeight) && checkHeight) {
+        fixedHeightElemSelector.classList.add('overflow-hidden', 'hidden-with-shadow');
+        toggleFixedHeight.classList.remove('hidden');
+        toggleFixedHeight.addEventListener('click', () => {
+          if (fixedHeightElemSelector.classList.contains('overflow-hidden')) {
+            fixedHeightElemSelector.classList.remove('overflow-hidden', 'hidden-with-shadow');
+            fixedHeightElemSelector.style.maxHeight = '1000000px';
+            console.log(fixedHeightElemSelector);
+            toggleFixedHeight.textContent = 'Show less';
+            console.log('clicked 1');
+          } else {
+            fixedHeightElemSelector.classList.add('overflow-hidden', 'hidden-with-shadow');
+            fixedHeightElemSelector.style.maxHeight = '330px';
+            toggleFixedHeight.textContent = 'Read more...';
+          }
+        });
+      }
+    });
+  }
+};
+
+ready(() => {
+  mainMenu();
+  dropdownMenu();
+  headerInit();
+  formEntry();
+  hoverOnButton();
+  btnMore();
+  btnMoreEducation();
+  initFAQ();
+  tocAnchor();
+  sentNewMessage('.sidebar-form');
+  sentNewMessage('.attorney-group__form');
+  sentNewMessage('.form');
+  sentNewMessage('.how_can_help_form');
+  gclid();
+  secondStep();
+  nextArrow();
+  btnMoreFormDesignTwo();
+});

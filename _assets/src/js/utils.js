@@ -261,15 +261,15 @@ export const listAllEventListeners = () => {
     for (let j = 0; j < types.length; j++) {
       if (typeof currentElement[types[j]] === 'function') {
         elements.push({
-          "node": currentElement,
-          "type": types[j],
-          "func": currentElement[types[j]].toString(),
+          node: currentElement,
+          type: types[j],
+          func: currentElement[types[j]].toString(),
         });
       }
     }
   }
 
-  return elements.sort(function(a,b) {
+  return elements.sort(function (a, b) {
     return a.type.localeCompare(b.type);
   });
-}
+};
