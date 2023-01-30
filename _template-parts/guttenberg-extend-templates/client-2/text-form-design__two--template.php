@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
   <!-- text-form-design__two--template.php -->
   <?php if ($text_form_design_two__main_content) { ?>
-    <section class="py-16 xs:py-5" id="values-and-family-section">
+    <section class="py-16 xs:py-5 container" id="values-and-family-section">
       <div class="fixedHeightContainer flex gap-10 mdt:flex-wrap-reverse xl:gap-4 mdt:gap-10">
         <div class="w-15/24 lg:w-2/4 mdt:w-full">
           <div class="pb-8 relative px-11 py-7 h-full bg-process_smoke drop-shadow-lg xs:p-6  ">
