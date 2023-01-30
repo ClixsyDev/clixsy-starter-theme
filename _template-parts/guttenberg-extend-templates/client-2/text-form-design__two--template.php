@@ -46,7 +46,7 @@ if ($is_preview && !empty($previewImage)) {
 
           </div>
         </div>
-        <div class="form w-9/24 bg-accent px-9 py-5 lg:w-2/4 lg:py-9  mdt:max-h-full mdt:w-full xs:p-6">
+        <div class="form w-9/24 bg-accent px-9 py-5 lg:w-2/4 lg:py-9  mdt:max-h-full mdt:w-full xs:p-6 form_elements_design_one">
 
           <?php if ($text_form_design_two__form_title) { ?>
             <h3 class="text-3xl text-white text-center lg:pb-8 lg:text-2xl"><?php echo $text_form_design_two__form_title ?></h3>
