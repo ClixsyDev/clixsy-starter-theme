@@ -49,7 +49,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php } ?>
                 <?php if ($welcome_banner_contact_design_two__form_select) { ?>
                     <div class="w-2/5 mdt:w-20/24" style="background-color: <?php echo $welcome_banner_contact_design_two__form_bg ?: ''  ?> ;">
-                        <div class="form py-10 border-1 border-white">
+                        <div class="form p-10 border-1 border-white">
                             <?php echo $welcome_banner_contact_design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner_contact_design_two__form_select['0'] . '" title=""]') : '' ?>
                             <?php
                             Template::load('_template-parts/components/thank-you-message.php', [

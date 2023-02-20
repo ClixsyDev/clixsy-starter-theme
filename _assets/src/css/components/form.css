@@ -20,8 +20,11 @@
     textarea {
       @apply h-36;
     }
-    p.disclaimer {
-      @apply text-base lg:text-sm leading-tight text-left text-white mt-6 mb-4;
+    .disclaimer {
+      @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
+      a {
+        @apply font-semibold underline;
+      }
     }
     input[type='submit'] {
       @apply font-bold text-xl leading-8 text-center text-white px-9 py-2 rounded-3xl bg-accent mx-auto my-0 block w-fit;
@@ -201,13 +204,13 @@
 
     .wpcf7-form-control-wrap {
       @apply bg-inherit;
-  
+
       .wpcf7-form-control {
         @apply flex;
-  
+
         .wpcf7-list-item {
           @apply !flex gap-2;
-    
+
           input {
             @apply w-6 h-[2.35rem] rounded outline-0 sm:h-[1.95rem];
           }
@@ -217,7 +220,7 @@
           }
 
           .wpcf7-list-item-label {
-            @apply text-white font-bold; 
+            @apply text-white font-bold;
           }
         }
       }
@@ -249,7 +252,7 @@
   }
 
   .wpcf7-not-valid-tip {
-    @apply text-white border-button_color border-b-1
+    @apply text-white border-button_color border-b-1;
   }
 }
 
@@ -257,6 +260,12 @@
   form {
     p {
       width: 100%;
+    }
+    .disclaimer {
+      @apply text-sm lg:text-sm leading-tight text-left text-white mt-6 mb-4;
+      a {
+        @apply font-semibold underline;
+      }
     }
   }
 }

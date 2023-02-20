@@ -28,7 +28,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($welcome_banner__design_two__description) { ?>
                     <p class="text-headings font-main text-3xl uppercase pt-4 lg:!text-2xl sm:!text-xl"><?php echo $welcome_banner__design_two__description ?></p>
                 <?php } ?>
-            </div>    
+            </div>
         </div>
         <?php if ($welcome_banner__design_two__image || $welcome_banner__design_two__link) { ?>
             <div>
@@ -46,17 +46,18 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
 
                         <?php if ($welcome_banner__design_two__form_select) { ?>
-                            <div class="form banner-form pt-10">
-                                <?php if ($welcome_banner__design_two__description_form) { ?>
-                                    <p><?php echo $welcome_banner__design_two__description_form ?></p>
-                                <?php } ?>
-                                <?php echo $welcome_banner__design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_two__form_select['0'] . '" title=""]') : '' ?>
+                            <div class="first-step text-center">
+                                <div class="form banner-form pt-10">
+                                    <?php if ($welcome_banner__design_two__description_form) { ?>
+                                        <p><?php echo $welcome_banner__design_two__description_form ?></p>
+                                    <?php } ?>
+                                    <?php echo $welcome_banner__design_two__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_two__form_select['0'] . '" title=""]') : '' ?>
+                                </div>
+                            <?php } ?>
                             </div>
-                        <?php } ?>
                     </div>
                 </div>
-            </div>
-        <?php } ?>
+            <?php } ?>
     </section>
 
     </div>

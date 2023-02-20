@@ -36,7 +36,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php } ?>
             </div>
             <?php if ($auto_accident_fault__items) { ?>
-                <div class="flex pr-7 rounded-md gap-24 py-5 -mt-56 2xl:-mt-24 xl:justify-center xl:pt-32 md:pr-0" style="background-color: <?php echo $auto_accident_fault__block_color ?: ''  ?> ;">
+                <div class="flex pr-7 rounded-md gap-24 py-5 -mt-56 2xl:-mt-20 xl:justify-center xl:pt-32 md:pr-0" style="background-color: <?php echo $auto_accident_fault__block_color ?: ''  ?> ;">
                     <div class="w-12/24 xl:hidden"></div>
                     <div class="w-12/24 xl:w-18/24">
                         <?php if ($auto_accident_fault__description_repeater) { ?>

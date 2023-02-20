@@ -20,6 +20,7 @@
 
 .faq__header {
   position: relative;
+  padding-right: 50px;
   &:after {
     content: '+';
     position: absolute;
@@ -42,11 +43,6 @@
         color: #fff;
       }
     }
-
-    .faq__text {
-      @apply mt-3 mb-5 mx-11;
-    }
-
     .faq__header {
       @apply bg-accent text-white;
     }

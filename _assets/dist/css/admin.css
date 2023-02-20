@@ -1847,8 +1847,8 @@
   top: -6%;
 }
 
-.acf-block-preview .bottom-\[-59px\] {
-  bottom: -59px;
+.acf-block-preview .bottom-\[-57px\] {
+  bottom: -57px;
 }
 
 .acf-block-preview .-bottom-\[16\%\] {
@@ -2310,6 +2310,10 @@
   height: 120%;
 }
 
+.acf-block-preview .h-max {
+  height: max-content;
+}
+
 .acf-block-preview .h-\[800px\] {
   height: 800px;
 }
@@ -2462,6 +2466,10 @@
   width: 60%;
 }
 
+.acf-block-preview .\!w-\[100\%\] {
+  width: 100% !important;
+}
+
 .acf-block-preview .w-11\/12 {
   width: 91.6667%;
 }
@@ -2592,6 +2600,10 @@
 
 .acf-block-preview .w-7\/24 {
   width: 29.1667%;
+}
+
+.acf-block-preview .\!w-full {
+  width: 100% !important;
 }
 
 .acf-block-preview .w-10\/12 {
@@ -2744,10 +2756,6 @@
 
 .acf-block-preview .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.acf-block-preview .grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .acf-block-preview .flex-row {
@@ -3423,8 +3431,8 @@
   padding-left: 1.75rem;
 }
 
-.acf-block-preview .pr-9 {
-  padding-right: 2.25rem;
+.acf-block-preview .\!pr-9 {
+  padding-right: 2.25rem !important;
 }
 
 .acf-block-preview .pb-44 {
@@ -3479,6 +3487,14 @@
   padding-right: 1.75rem;
 }
 
+.acf-block-preview .pt-\[10px\] {
+  padding-top: 10px;
+}
+
+.acf-block-preview .pr-\[10px\] {
+  padding-right: 10px;
+}
+
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
 }
@@ -3512,7 +3528,7 @@
 }
 
 .acf-block-preview .font-second {
-  font-family: ArialRounded;
+  font-family: Noto Serif;
 }
 
 .acf-block-preview .font-third {
@@ -3816,6 +3832,11 @@
 
 .acf-block-preview .drop-shadow-circleShadow {
   --tw-drop-shadow: drop-shadow(0px 3px 6px #00000029);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.acf-block-preview .drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px #0000000a) drop-shadow(0 4px 3px #0000001a);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -4182,6 +4203,10 @@ html :where(.wp-block) {
     margin: auto;
   }
 
+  .\32 xl\:-mt-20 {
+    margin-top: -5rem;
+  }
+
   .\32 xl\:-mt-24 {
     margin-top: -6rem;
   }
@@ -4277,6 +4302,10 @@ html :where(.wp-block) {
 
   .\32 xl\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .\32 xl\:pb-6 {
+    padding-bottom: 1.5rem;
   }
 
   .\32 xl\:text-3xl {
@@ -4521,6 +4550,10 @@ html :where(.wp-block) {
     gap: 2rem;
   }
 
+  .xl\:gap-4 {
+    gap: 1rem;
+  }
+
   .xl\:\!gap-40 {
     gap: 10rem !important;
   }
@@ -4611,6 +4644,10 @@ html :where(.wp-block) {
 
   .xl\:text-\[100px\] {
     font-size: 100px;
+  }
+
+  .xl\:text-base {
+    font-size: 1rem;
   }
 
   .xl\:shadow-none {
@@ -5222,6 +5259,10 @@ html :where(.wp-block) {
     width: 45%;
   }
 
+  .lg\:w-2\/4 {
+    width: 50%;
+  }
+
   .lg\:max-w-\[160px\] {
     max-width: 160px;
   }
@@ -5349,6 +5390,11 @@ html :where(.wp-block) {
     padding-right: 1.75rem;
   }
 
+  .lg\:py-9 {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
   .lg\:pt-8 {
     padding-top: 2rem;
   }
@@ -5379,6 +5425,10 @@ html :where(.wp-block) {
 
   .lg\:pl-8 {
     padding-left: 2rem;
+  }
+
+  .lg\:pb-8 {
+    padding-bottom: 2rem;
   }
 
   .lg\:pt-16 {
@@ -5593,6 +5643,10 @@ html :where(.wp-block) {
     height: auto;
   }
 
+  .mdt\:max-h-full {
+    max-height: 100%;
+  }
+
   .mdt\:w-full {
     width: 100%;
   }
@@ -5678,6 +5732,10 @@ html :where(.wp-block) {
     flex-wrap: wrap;
   }
 
+  .mdt\:flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
   .mdt\:items-center {
     align-items: center;
   }
@@ -5708,6 +5766,10 @@ html :where(.wp-block) {
 
   .mdt\:gap-16 {
     gap: 4rem;
+  }
+
+  .mdt\:gap-10 {
+    gap: 2.5rem;
   }
 
   .mdt\:\!gap-12 {
@@ -6209,6 +6271,10 @@ html :where(.wp-block) {
 
   .md\:\!grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-col {
@@ -7052,6 +7118,10 @@ html :where(.wp-block) {
 
   .xs\:p-4 {
     padding: 1rem;
+  }
+
+  .xs\:p-6 {
+    padding: 1.5rem;
   }
 
   .xs\:px-7 {

@@ -12,9 +12,13 @@ if ($is_preview && !empty($previewImage)) {
     $key = 'cases_we_handle_two';
     $title = get_field($key . '_title');
     $cases = get_field($key . '_items');
-    $case_items = get_field('cases_we_handle_case_items');
+    $case_items = get_field($key . '_case_items');
     $block_bg = get_field($key . '_block_bg');
+    $button1 = get_field($key . '_button_1');
+    $button2 = get_field($key . '_button_2');
+    $button_size = get_field($key . '_button_size');
 ?>
+    <!-- cases-we-handle-design__two.php -->
     <div class="pt-14 pb-16">
         <?php if ($title) { ?>
             <h2 class="heading_h2 text-black font-bold text-6xl pb-20 capitalize md:!text-5xl md:leading-10">
@@ -31,7 +35,8 @@ if ($is_preview && !empty($previewImage)) {
                             'post_type'     => 'page',
                             'meta_key'      => 'page_case_type_is_case_type',
                             'meta_value'    => true,
-                            'exclude'      => get_the_ID(),
+                            'orderby'       => 'menu_order',
+                            'exclude'       => get_the_ID(),
                         ));
                         $case_items = array();
                         foreach ($posts as $post_item) {
@@ -60,8 +65,27 @@ if ($is_preview && !empty($previewImage)) {
                     <?php } ?>
                 </div>
             </div>
+            <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4">
+                <?php if ($button1) { ?>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $button1['url'],
+                        'text' => __($button1['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => $button_size . ' hover_outline_white white uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
+                <?php } ?>
+                <?php if ($button2) { ?>
+                    <?php
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $button2['url'],
+                        'text' => __($button2['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => $button_size . ' hover_accent uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    ]); ?>
+                <?php } ?>
+            </div>
         </div>
-    </div>
     </div>
 <?php }
 if (!get_fields()) echo 'Fill block with content';

@@ -114,7 +114,7 @@ function faq_schema($visible_faq, $hidden_faq = false) {
                 "mainEntity": [
                     <?php foreach ($faq_repeater as $key => $question) { ?> {
                             "@type": "Question",
-                            "name": "<?php echo $question['question'] ?>",
+                            "name": "<?php echo preg_replace('/\s+/', ' ',  strip_tags($question['question'])); ?>",
                             "acceptedAnswer": {
                                 "@type": "Answer",
                                 "text": "<?php echo preg_replace('/\s+/', ' ',  strip_tags($question['answer'])); ?>"

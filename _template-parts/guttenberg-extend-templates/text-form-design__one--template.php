@@ -81,7 +81,7 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
 
                 <?php if ($text_form_design_one__form_select) { ?>
-                    <div class="w-[515px] bg-headings_second z-[1] mdt:m-auto mdt:w-19/24 md:w-full text-white  p-10">
+                    <div class="w-[515px] bg-headings_second z-[1] mdt:m-auto mdt:w-19/24 md:w-full text-white  p-10 h-max">
                         <?php if ($text_form_design_one__form_title) { ?>
                             <h2 class="text-white  text-3xl md:text-2xl mb-6 text-center font-black process_text_design__one">
                                 <?php echo $text_form_design_one__form_title ?>

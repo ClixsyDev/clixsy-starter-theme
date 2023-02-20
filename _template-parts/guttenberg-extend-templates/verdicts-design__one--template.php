@@ -16,7 +16,10 @@ if ($is_preview && !empty($previewImage)) {
 ?>
 <!-- verdicts-design__one--template.php -->
     <?php if ($verdicts_design_one__verdicts['0']) { ?>
-        <div class="relative pt-4 <?php echo $verdicts_design_one__select == 'Dark' ? 'shadow-siteWide' : '' ?> " style="background-color: <?php echo $verdicts_design_one__bg_color ?: '' ?> ">
+        <div class="relative 
+        <?php echo $verdicts_design_one__title ? 'pt-4' : '' ?>
+        <?php echo $verdicts_design_one__select == 'Dark' ? 'shadow-siteWide' : '' ?> " 
+        style="background-color: <?php echo $verdicts_design_one__bg_color ?: '' ?> ">
             <?php if ($verdicts_design_one__bg) {
                 echo wp_get_attachment_image($verdicts_design_one__bg, 'full', '', ['class' => 'absolute left-0 top-0 w-full h-full object-cover']);
             } ?>
@@ -27,7 +30,9 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <div class="verdicts_slider glide relative">
                 <div class="glide__track" data-glide-el="track">
-                    <div class="glide__slides overflow-visible flex justify-around gap-3 items-center  pt-12 pb-14 2xl:pt-6 2xl:pb-7">
+                    <div class="glide__slides overflow-visible flex justify-around gap-3 items-center  
+                    <?php echo $verdicts_design_one__title ? 'pt-12 pb-14 ' : 'pt-12 pb-12'; ?>
+                    <?php echo $verdicts_design_one__title ? '2xl:pt-6 2xl:pb-7 ' : '2xl:pt-6 2xl:pb-6'; ?>">
                         <?php
                         foreach ($verdicts_design_one__verdicts as $verdic_item) {
                         ?>

@@ -82,6 +82,39 @@ if (function_exists('acf_add_local_field_group')) {
                 'type' => 'color_picker',
                 'label' => 'Set background color for section',
             ),
+            array(
+                'key' => $key . '_button_1',
+                'label' => 'Button 1',
+                'name' => $key . '_button_1',
+                'type' => 'link',
+            ),
+            array(
+                'key' => $key . '_button_2',
+                'label' => 'Button 2',
+                'name' => $key . '_button_2',
+                'type' => 'link',
+            ),
+            array(
+                'key' => $key . '_button_size',
+                'name' => $key . '_button_size',
+                'label' => 'Button size',
+                'type' => 'radio',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'btn_xl' => 'huge button',
+                    'btn_md' => 'Large button',
+                    'btn_sm' => 'small button',
+                ),
+                'allow_null' => 0,
+                'other_choice' => 0,
+            ),
         )
     ));
 }
