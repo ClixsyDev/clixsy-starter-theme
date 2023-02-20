@@ -106,6 +106,15 @@ if (function_exists('acf_add_local_field_group')) :
                     'library' => 'all',
                 ),
                 array(
+                    'key' => $block_key . 'bg_image',
+                    'label' => 'Bg image',
+                    'name' => 'bg_image',
+                    'type' => 'image',
+                    'return_format' => 'id',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array(
                     'key' => $block_key . 'color',
                     'name' => $block_key . 'color',
                     'type' => 'color_picker',
