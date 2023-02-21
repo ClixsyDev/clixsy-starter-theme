@@ -544,22 +544,6 @@ var _buttonHover = require("./button-hover");
 var _toc = require("./toc");
 var _thankYouMessages = require("./thank-you-messages");
 var _gclid = require("./gclid");
-(0, _utils.ready)(()=>{
-    (0, _menu.mainMenu)();
-    (0, _menu.dropdownMenu)();
-    (0, _headerDefault.default)();
-    (0, _formEntry.formEntry)();
-    (0, _buttonHover.hoverOnButton)();
-    btnMore();
-    btnMoreEducation();
-    initFAQ();
-    (0, _toc.tocAnchor)();
-    (0, _thankYouMessages.sentNewMessage)(".sidebar-form");
-    (0, _thankYouMessages.sentNewMessage)(".attorney-group__form");
-    (0, _thankYouMessages.sentNewMessage)(".form");
-    (0, _thankYouMessages.sentNewMessage)(".how_can_help_form");
-    (0, _gclid.gclid)();
-});
 /* FAQ start */ const initFAQ = ()=>{
     const acc = (0, _utils.getElements)(".faq__header");
     if (acc && acc.length) for(let i = 0; i < acc.length; i++)acc[i].addEventListener("click", function() {
@@ -590,7 +574,8 @@ var _gclid = require("./gclid");
         }
     });
 };
-/* FAQ end */ let btnMore = ()=>{
+/* FAQ end */ // Show more FAQ item
+const btnMore = ()=>{
     let hiddenBlock = document.querySelector(".hidden-text");
     let btn = document.querySelector(".more-btn");
     let faqMore = ()=>{
@@ -604,7 +589,8 @@ var _gclid = require("./gclid");
         });
     };
 };
-let btnMoreEducation = ()=>{
+// Text education btnMore
+const btnMoreEducation = ()=>{
     let hiddenBlock = document.querySelector(".hidden-text-education");
     let btn = document.querySelector(".more-btn-education");
     if ((0, _utils.ifSelectorExist)(btn) && (0, _utils.ifSelectorExist)(hiddenBlock)) btn.addEventListener("click", (event1)=>{
@@ -615,6 +601,7 @@ let btnMoreEducation = ()=>{
         else btn.textContent = "show less...";
     });
 };
+// Scroll to [data-go-to] attr
 const nextArrow = ()=>{
     const arrows = Array.from(document.querySelectorAll("[data-go-to]"));
     arrows.map((arrow)=>{
@@ -628,8 +615,8 @@ const nextArrow = ()=>{
         });
     });
 };
-nextArrow();
-let secondStep = ()=>{
+// Show form after submit dropdown in <!-- welcome-banner-design__two.php -->
+const secondStep = ()=>{
     let btnForm = document.querySelector(".send_form_btn");
     let secondStep = document.querySelector(".second-step-form");
     let nextStep = document.querySelector(".next_step");
@@ -639,7 +626,53 @@ let secondStep = ()=>{
         btnForm.classList.remove("hidden-btn");
     });
 };
-secondStep();
+// Show more content in <!-- text-form-design__two--template.php -->
+const btnMoreFormDesignTwo = ()=>{
+    fixedHeightContainerSelector = (0, _utils.getElements)(".fixedHeightContainer");
+    if ((0, _utils.ifSelectorExist)(fixedHeightContainerSelector)) Array.from(fixedHeightContainerSelector).forEach((item)=>{
+        fixedHeightElemSelector = (0, _utils.getElement)(".fixedHeight", item);
+        toggleFixedHeight = (0, _utils.getElement)(".toggleFixedHeight", item);
+        innerContentHeight = (0, _utils.getElement)(".innerContentHeight", item);
+        checkHeight = innerContentHeight.offsetHeight > parseInt(fixedHeightElemSelector.style.maxHeight);
+        console.log(innerContentHeight.offsetHeight + " || " + parseInt(fixedHeightElemSelector.style.maxHeight));
+        if ((0, _utils.ifSelectorExist)(fixedHeightContainerSelector) && (0, _utils.ifSelectorExist)(toggleFixedHeight) && checkHeight) {
+            fixedHeightElemSelector.classList.add("overflow-hidden", "hidden-with-shadow");
+            toggleFixedHeight.classList.remove("hidden");
+            toggleFixedHeight.addEventListener("click", ()=>{
+                if (fixedHeightElemSelector.classList.contains("overflow-hidden")) {
+                    fixedHeightElemSelector.classList.remove("overflow-hidden", "hidden-with-shadow");
+                    fixedHeightElemSelector.style.maxHeight = "1000000px";
+                    console.log(fixedHeightElemSelector);
+                    toggleFixedHeight.textContent = "Show less";
+                    console.log("clicked 1");
+                } else {
+                    fixedHeightElemSelector.classList.add("overflow-hidden", "hidden-with-shadow");
+                    fixedHeightElemSelector.style.maxHeight = "580px";
+                    toggleFixedHeight.textContent = "Read more...";
+                }
+            });
+        }
+    });
+};
+(0, _utils.ready)(()=>{
+    (0, _menu.mainMenu)();
+    (0, _menu.dropdownMenu)();
+    (0, _headerDefault.default)();
+    (0, _formEntry.formEntry)();
+    (0, _buttonHover.hoverOnButton)();
+    btnMore();
+    btnMoreEducation();
+    initFAQ();
+    (0, _toc.tocAnchor)();
+    (0, _thankYouMessages.sentNewMessage)(".sidebar-form");
+    (0, _thankYouMessages.sentNewMessage)(".attorney-group__form");
+    (0, _thankYouMessages.sentNewMessage)(".form");
+    (0, _thankYouMessages.sentNewMessage)(".how_can_help_form");
+    (0, _gclid.gclid)();
+    secondStep();
+    nextArrow();
+    btnMoreFormDesignTwo();
+});
 
 },{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./thank-you-messages":"9IJ1s","./gclid":"bvTDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -997,9 +1030,9 @@ const listAllEventListeners = ()=>{
     for(let i = 0; i < allElements.length; i++){
         const currentElement = allElements[i];
         for(let j = 0; j < types.length; j++)if (typeof currentElement[types[j]] === "function") elements.push({
-            "node": currentElement,
-            "type": types[j],
-            "func": currentElement[types[j]].toString()
+            node: currentElement,
+            type: types[j],
+            func: currentElement[types[j]].toString()
         });
     }
     return elements.sort(function(a, b) {
