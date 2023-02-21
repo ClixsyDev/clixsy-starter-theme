@@ -33,7 +33,7 @@
     <!-- testing mega menu -->
 
     <header class="sticky top-0 w-full z-50 h-40 lg:h-[80px] lg:max-h-[80px] lg:p-1">
-        <img src="<?= wp_get_attachment_image_url(get_field('site_header_bg', 'options'), 'full') ?>" class="z-10 absolute left-0 top-0 w-full h-full object-cover" alt="">
+        <img src="<?= wp_get_attachment_image_url(get_field('site_header_bg', 'option'), 'full') ?>" class="z-10 absolute left-0 top-0 w-full h-full object-cover" alt="">
         <div class="z-10 absolute left-0 top-0 w-full h-full object-cover"></div>
         <div class="relative z-20 container flex justify-between items-center h-full">
             <a href="<?php echo home_url() ?>" class="logo-desktop lg:hidden">
