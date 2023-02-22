@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => '']) ?>
                 <?php } ?>
                 <?php if ($fights_for_you__title) { ?>
-                    <h2 class="text-6xl pt-8 text-headings font-third 2xl:!text-5xl xl:text-3xl mdt:pt-0"><?php echo $fights_for_you__title ?></h2>
+                    <h2 class="text-6xl pt-8 text-black font-medium font-third 2xl:!text-5xl xl:text-3xl mdt:pt-0"><?php echo $fights_for_you__title ?></h2>
                 <?php } ?>
                 <?php if ($fights_for_you__rating_image) { ?>
                     <?php echo wp_get_attachment_image($fights_for_you__rating_image, 'full', '', ['class' => 'object-contain h-full pt-16 ml-32 2xl:ml-0 2xl:!pt-12 mdt:!pt-5']) ?>
@@ -63,7 +63,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 !max-h-24 md:m-auto']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h3 class="font-fourth font-bold text-3xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
+                                        <h3 class="font-main font-bold text-3xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
                                         <p class="text-white"><?php echo $item['description'] ?></p>
@@ -118,7 +118,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php } ?>
                         </div>
                         <div class="font-third z-10 pb-24 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
-                            <div class="text-20xl leading-[370px] xl:text-17xl md:text-15xl md:leading-[280px]">$0</div>
+                            <div class="text-[430px] leading-[370px] xl:text-17xl md:text-15xl md:leading-[280px]">$0</div>
                         </div>
                     </div>
                 <?php } ?>

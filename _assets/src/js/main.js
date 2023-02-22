@@ -113,7 +113,7 @@ const secondStep = () => {
   let secondStep = document.querySelector('.second-step-form');
   let nextStep = document.querySelector('.next_step');
 
-  if (nextStep) {
+  if (ifSelectorExist(nextStep)) {
     nextStep.addEventListener('click', () => {
       nextStep.style.display = 'none';
       secondStep.classList.remove('hidden');

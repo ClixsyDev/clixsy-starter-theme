@@ -40,16 +40,16 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="flex flex-col gap-24 justify-center pt-24 lg:!pt-0 md:gap-12">
                     <?php if ($settlement_case_type__insurance_offer) { ?>
                         <div>
-                            <h4 class="font-fourth font-light uppercase text-3xl lg:!text-2xl xs:!text-xl">Insurance Offer</h4>
+                            <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl">Insurance Offer</h4>
                             <div class="line-through text-button_color">
-                                <div class="font-third text-12xl leading-none text-black xxl:text-10xl md:text-8xl xs:text-6xl"><?php echo $settlement_case_type__insurance_offer ?></div>
+                                <div class="font-third text-12xl font-bold leading-none text-black xxl:text-10xl md:text-8xl xs:text-6xl"><?php echo $settlement_case_type__insurance_offer ?></div>
                             </div>
                         </div>
                     <?php } ?>
                     <?php if ($settlement_case_type__final_settlement) { ?>
                         <div>
-                            <h4 class="font-fourth font-light uppercase text-3xl lg:!text-2xl xs:!text-xl">Final Settlement* </h4>
-                            <div class="font-third text-15xl leading-none text-accent xxl:text-13xl md:text-10xl xs:text-8xl"><?php echo $settlement_case_type__final_settlement ?></div>
+                            <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl">Final Settlement* </h4>
+                            <div class="font-third text-15xl font-bold leading-none text-accent xxl:text-13xl md:text-10xl xs:text-8xl"><?php echo $settlement_case_type__final_settlement ?></div>
                             <?php if ($settlement_case_type__description_settlement) { ?>
                                 <div class="description_settlement mt-4 text-lg xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
                             <?php } ?>
