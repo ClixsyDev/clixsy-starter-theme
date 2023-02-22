@@ -9,7 +9,7 @@ if ($is_preview && !empty($previewImage)) {
 
     return;
 } else {
-    $key = 'verdicts2';
+    $key = 'verdicts_design_two';
     $verdicts = get_field($key . '_verdicts_repeater2');
     $bg = get_field($key . '_background_image2');
 ?>

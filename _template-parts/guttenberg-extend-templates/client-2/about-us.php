@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="pt-72 2xl:pt-44 md:pt-28">
+    <section class="mt-72 -mb-[4%] 2xl:pt-44 md:pt-28 relative z-[1]">
         <div class="container">
             <?php if ($about_us__title) { ?>
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-96 xl:text-left xl:ml-0 md:text-5xl"><?php echo $about_us__title ?></h2>
@@ -52,10 +52,9 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </section>
 
-    <section style="background-image: url('<?php echo $about_us__background ?>')" class="pb-10 w-full">
-        <?php var_dump($about_us__background) ?>
+    <section style="background-image: url('<?php echo $about_us__background ?>');background-size: cover;" class="pb-10 w-full">
 
-        <div class="container">
+        <div class="container pt-[4%]">
             <?php if ($about_us__second_description || $about_us__title_items || $about_us__items || $about_us__link) { ?>
                 <div class="flex gap-16 lg:flex-col-reverse justify-center">
                     <div class="flex flex-col gap-20 w-1/2 lg:w-full lg:m-auto lg:items-center lg:gap-10">
@@ -73,7 +72,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                     </div>
                     <?php if ($about_us__items || $about_us__title_items) { ?>
-                        <div class="shadow-siteWide w-2/6 px-12 pt-9 pb-20 h-max lg:w-full lg:m-auto lg:px-7 sm:pb-10">
+                        <div class="shadow-siteWide bg-white w-2/6 px-12 pt-9 pb-20 h-max lg:w-full lg:m-auto lg:px-7 sm:pb-10">
                             <?php if ($about_us__title_items) { ?>
                                 <h3 class="font-second text-3xl text-headings pb-16 sm:pb-8 "><?php echo $about_us__title_items ?></h3>
                             <?php } ?>
