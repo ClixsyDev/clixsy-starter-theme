@@ -19,20 +19,20 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <section class="pb-4 pt-10 relative overflow-hidden lg:pb-32 sm:pb-10" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
         <?php if ($welcome_banner__design_three__background_image) { ?>
-            <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24']) ?>
+            <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-left-72 xs:-left-40']) ?>
         <?php } ?>
         <div>
             <div class="container text-center">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
-                    <h2 class="text-white font-fourth text-3xl uppercase lg:!text-2xl sm:!text-xl "><?php echo $welcome_banner__design_three__subtitle ?></h2>
+                    <h2 class="text-white font-fourth text-3xl uppercase lg:!text-2xl sm:!text-xl xs:!text-lg"><?php echo $welcome_banner__design_three__subtitle ?></h2>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
-                    <h1 class="hero_heading_h1 text-10xl leading-[115px] text-white font-third"><?php echo $welcome_banner__design_three__title ?></h1>
+                    <h1 class="hero_heading_h1 banner"><?php echo $welcome_banner__design_three__title ?></h1>
                 <?php } ?>
             </div>    
         </div>
         <?php if ($welcome_banner__design_three__background_image) { ?>
-            <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-7 -right-96 h-full object-contain xxl:w-11/24']) ?>
+            <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-7 -right-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-right-72 xs:-right-40']) ?>
         <?php } ?>
         <?php if ($welcome_banner__design_three__form_select) { ?>
             <div>
