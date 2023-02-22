@@ -1972,6 +1972,11 @@
   margin-bottom: 3.5rem;
 }
 
+.acf-block-preview .mx-11 {
+  margin-left: 2.75rem;
+  margin-right: 2.75rem;
+}
+
 .acf-block-preview .my-3 {
   margin-top: .75rem;
   margin-bottom: .75rem;
@@ -2070,6 +2075,10 @@
   margin-bottom: .5rem;
 }
 
+.acf-block-preview .mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .acf-block-preview .ml-5 {
   margin-left: 1.25rem;
 }
@@ -2166,6 +2175,10 @@
   margin-top: -14rem;
 }
 
+.acf-block-preview .ml-32 {
+  margin-left: 8rem;
+}
+
 .acf-block-preview .-mr-1 {
   margin-right: -.25rem;
 }
@@ -2186,12 +2199,8 @@
   margin-bottom: .625rem;
 }
 
-.acf-block-preview .mr-32 {
-  margin-right: 8rem;
-}
-
-.acf-block-preview .ml-32 {
-  margin-left: 8rem;
+.acf-block-preview .-mt-28 {
+  margin-top: -7rem;
 }
 
 .acf-block-preview .block {
@@ -2332,10 +2341,6 @@
 
 .acf-block-preview .h-\[75px\] {
   height: 75px;
-}
-
-.acf-block-preview .h-max {
-  height: max-content;
 }
 
 .acf-block-preview .h-28 {
@@ -2598,6 +2603,10 @@
   width: 80%;
 }
 
+.acf-block-preview .w-5\/12 {
+  width: 41.6667%;
+}
+
 .acf-block-preview .w-7\/24 {
   width: 29.1667%;
 }
@@ -2620,10 +2629,6 @@
 
 .acf-block-preview .min-w-\[460px\] {
   min-width: 460px;
-}
-
-.acf-block-preview .\!min-w-\[400px\] {
-  min-width: 400px !important;
 }
 
 .acf-block-preview .max-w-\[460px\] {
@@ -2882,6 +2887,10 @@
   gap: 2.5rem;
 }
 
+.acf-block-preview .gap-28 {
+  gap: 7rem;
+}
+
 .acf-block-preview .gap-x-4 {
   column-gap: 1rem;
 }
@@ -3080,7 +3089,7 @@
 
 .acf-block-preview .bg-button_color {
   --tw-bg-opacity: 1;
-  background-color: rgb(209 56 58 / var(--tw-bg-opacity));
+  background-color: rgb(217 21 28 / var(--tw-bg-opacity));
 }
 
 .acf-block-preview .bg-opacity-75 {
@@ -3317,14 +3326,19 @@
   padding-right: 12rem;
 }
 
-.acf-block-preview .px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
 .acf-block-preview .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
+}
+
+.acf-block-preview .px-11 {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}
+
+.acf-block-preview .py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .acf-block-preview .pt-12 {
@@ -3487,6 +3501,10 @@
   padding-right: 1.75rem;
 }
 
+.acf-block-preview .pl-10 {
+  padding-left: 2.5rem;
+}
+
 .acf-block-preview .pt-\[10px\] {
   padding-top: 10px;
 }
@@ -3495,16 +3513,16 @@
   padding-right: 10px;
 }
 
+.acf-block-preview .pt-48 {
+  padding-top: 12rem;
+}
+
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
 }
 
-.acf-block-preview .pl-8 {
-  padding-left: 2rem;
-}
-
-.acf-block-preview .pl-10 {
-  padding-left: 2.5rem;
+.acf-block-preview .pt-0 {
+  padding-top: 0;
 }
 
 .acf-block-preview .text-left {
@@ -3528,7 +3546,7 @@
 }
 
 .acf-block-preview .font-second {
-  font-family: Noto Serif;
+  font-family: ArialRounded;
 }
 
 .acf-block-preview .font-third {
@@ -3627,6 +3645,14 @@
   font-size: 150px;
 }
 
+.acf-block-preview .text-12xl {
+  font-size: 125px;
+}
+
+.acf-block-preview .text-15xl {
+  font-size: 250px;
+}
+
 .acf-block-preview .font-bold {
   font-weight: 700;
 }
@@ -3695,8 +3721,8 @@
   line-height: 1.625;
 }
 
-.acf-block-preview .leading-7 {
-  line-height: 1.75rem;
+.acf-block-preview .leading-\[77px\] {
+  line-height: 77px;
 }
 
 .acf-block-preview .leading-\[65px\] {
@@ -3705,18 +3731,6 @@
 
 .acf-block-preview .leading-\[370px\] {
   line-height: 370px;
-}
-
-.acf-block-preview .leading-\[115px\] {
-  line-height: 115px;
-}
-
-.acf-block-preview .leading-5 {
-  line-height: 1.25rem;
-}
-
-.acf-block-preview .leading-\[77px\] {
-  line-height: 77px;
 }
 
 .acf-block-preview .text-gray-900 {
@@ -3764,8 +3778,17 @@
   color: rgb(198 197 197 / var(--tw-text-opacity));
 }
 
+.acf-block-preview .text-button_color {
+  --tw-text-opacity: 1;
+  color: rgb(217 21 28 / var(--tw-text-opacity));
+}
+
 .acf-block-preview .underline {
   text-decoration-line: underline;
+}
+
+.acf-block-preview .line-through {
+  text-decoration-line: line-through;
 }
 
 .acf-block-preview .\!no-underline {
@@ -4188,6 +4211,18 @@ html :where(.wp-block) {
   .xxl\:text-5xl {
     font-size: 3rem;
   }
+
+  .xxl\:text-12xl {
+    font-size: 125px;
+  }
+
+  .xxl\:text-13xl {
+    font-size: 150px;
+  }
+
+  .xxl\:text-10xl {
+    font-size: 100px;
+  }
 }
 
 @media (max-width: 1496px) {
@@ -4205,6 +4240,10 @@ html :where(.wp-block) {
 
   .\32 xl\:-mt-20 {
     margin-top: -5rem;
+  }
+
+  .\32 xl\:ml-0 {
+    margin-left: 0;
   }
 
   .\32 xl\:-mt-24 {
@@ -4296,6 +4335,10 @@ html :where(.wp-block) {
     padding-bottom: 1.75rem;
   }
 
+  .\32 xl\:pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
   .\32 xl\:pt-44 {
     padding-top: 11rem;
   }
@@ -4304,8 +4347,8 @@ html :where(.wp-block) {
     padding-top: 2rem;
   }
 
-  .\32 xl\:pb-6 {
-    padding-bottom: 1.5rem;
+  .\32 xl\:\!pt-12 {
+    padding-top: 3rem !important;
   }
 
   .\32 xl\:text-3xl {
@@ -4334,6 +4377,10 @@ html :where(.wp-block) {
 
   .\32 xl\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .\32 xl\:\!text-5xl {
+    font-size: 3rem !important;
   }
 
   .\32 xl\:\!text-2xl {
@@ -4558,6 +4605,10 @@ html :where(.wp-block) {
     gap: 10rem !important;
   }
 
+  .xl\:rounded-2xl {
+    border-radius: 1rem;
+  }
+
   .xl\:p-2 {
     padding: .5rem;
   }
@@ -4646,6 +4697,10 @@ html :where(.wp-block) {
     font-size: 100px;
   }
 
+  .xl\:text-17xl {
+    font-size: 350px;
+  }
+
   .xl\:text-base {
     font-size: 1rem;
   }
@@ -4668,17 +4723,25 @@ html :where(.wp-block) {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .uniq_xl\:gap-20 {
+    gap: 5rem;
+  }
+
   .uniq_xl\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 
-  .uniq_xl\:text-4xl {
-    font-size: 2.25rem;
+  .uniq_xl\:\!text-5xl {
+    font-size: 3rem !important;
   }
 
   .uniq_xl\:text-lg {
     font-size: 1.125rem;
+  }
+
+  .uniq_xl\:text-4xl {
+    font-size: 2.25rem;
   }
 }
 
@@ -5223,12 +5286,24 @@ html :where(.wp-block) {
     height: 427px;
   }
 
+  .lg\:h-20 {
+    height: 5rem;
+  }
+
   .lg\:max-h-\[80px\] {
     max-height: 80px;
   }
 
+  .lg\:max-h-\[655px\] {
+    max-height: 655px;
+  }
+
   .lg\:max-h-80 {
     max-height: 20rem;
+  }
+
+  .lg\:max-h-max {
+    max-height: max-content;
   }
 
   .lg\:min-h-max {
@@ -5261,6 +5336,10 @@ html :where(.wp-block) {
 
   .lg\:w-2\/4 {
     width: 50%;
+  }
+
+  .lg\:w-15\/24 {
+    width: 62.5%;
   }
 
   .lg\:max-w-\[160px\] {
@@ -5301,6 +5380,10 @@ html :where(.wp-block) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
   .lg\:flex-col-reverse {
     flex-direction: column-reverse;
   }
@@ -5333,8 +5416,20 @@ html :where(.wp-block) {
     gap: 2.5rem;
   }
 
+  .lg\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
   .lg\:bg-contain {
     background-size: contain;
+  }
+
+  .lg\:bg-top {
+    background-position: top;
   }
 
   .lg\:bg-repeat {
@@ -5395,6 +5490,11 @@ html :where(.wp-block) {
     padding-bottom: 2.25rem;
   }
 
+  .lg\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .lg\:pt-8 {
     padding-top: 2rem;
   }
@@ -5427,6 +5527,10 @@ html :where(.wp-block) {
     padding-left: 2rem;
   }
 
+  .lg\:\!pt-0 {
+    padding-top: 0 !important;
+  }
+
   .lg\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -5437,6 +5541,14 @@ html :where(.wp-block) {
 
   .lg\:pb-32 {
     padding-bottom: 8rem;
+  }
+
+  .lg\:\!pb-0 {
+    padding-bottom: 0 !important;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0;
   }
 
   .lg\:text-center {
@@ -5485,6 +5597,14 @@ html :where(.wp-block) {
 
   .lg\:\!text-2xl {
     font-size: 1.5rem !important;
+  }
+
+  .lg\:\!text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .lg\:\!text-5xl {
+    font-size: 3rem !important;
   }
 
   .lg\:leading-tight {
@@ -6148,6 +6268,14 @@ html :where(.wp-block) {
     bottom: -10%;
   }
 
+  .md\:-left-72 {
+    left: -18rem;
+  }
+
+  .md\:-right-72 {
+    right: -18rem;
+  }
+
   .md\:col-span-12 {
     grid-column: span 12 / span 12;
   }
@@ -6329,6 +6457,10 @@ html :where(.wp-block) {
     gap: 3.5rem;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:overflow-hidden {
     overflow: hidden;
   }
@@ -6478,8 +6610,24 @@ html :where(.wp-block) {
     font-size: 3rem !important;
   }
 
+  .md\:text-15xl {
+    font-size: 250px;
+  }
+
+  .md\:text-10xl {
+    font-size: 100px;
+  }
+
+  .md\:text-8xl {
+    font-size: 80px;
+  }
+
   .md\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .md\:leading-\[280px\] {
+    line-height: 280px;
   }
 }
 
@@ -6645,6 +6793,11 @@ html :where(.wp-block) {
     padding-right: 1.5rem;
   }
 
+  .sm\:px-2 {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
   .sm\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -6681,6 +6834,14 @@ html :where(.wp-block) {
     padding-bottom: 3.5rem;
   }
 
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .sm\:pt-5 {
+    padding-top: 1.25rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
@@ -6715,6 +6876,26 @@ html :where(.wp-block) {
 
   .sm\:text-lg {
     font-size: 1.125rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+  }
+
+  .sm\:\!text-3xl {
+    font-size: 1.875rem !important;
+  }
+
+  .sm\:\!text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .sm\:leading-none {
+    line-height: 1;
   }
 
   .sm\:opacity-100 {
@@ -6984,6 +7165,14 @@ html :where(.wp-block) {
     top: 0;
   }
 
+  .xs\:-left-40 {
+    left: -10rem;
+  }
+
+  .xs\:-right-40 {
+    right: -10rem;
+  }
+
   .xs\:m-auto {
     margin: auto;
   }
@@ -7100,6 +7289,14 @@ html :where(.wp-block) {
     gap: 0;
   }
 
+  .xs\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .xs\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .xs\:\!gap-x-16 {
     column-gap: 4rem !important;
   }
@@ -7170,6 +7367,10 @@ html :where(.wp-block) {
     padding-top: 4rem;
   }
 
+  .xs\:pt-36 {
+    padding-top: 9rem;
+  }
+
   .xs\:text-3xl {
     font-size: 1.875rem;
   }
@@ -7212,6 +7413,30 @@ html :where(.wp-block) {
 
   .xs\:text-10xl {
     font-size: 100px;
+  }
+
+  .xs\:text-lg {
+    font-size: 1.125rem;
+  }
+
+  .xs\:\!text-lg {
+    font-size: 1.125rem !important;
+  }
+
+  .xs\:\!text-sm {
+    font-size: .875rem !important;
+  }
+
+  .xs\:text-8xl {
+    font-size: 80px;
+  }
+
+  .xs\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .xs\:\!text-base {
+    font-size: 1rem !important;
   }
 }
 
