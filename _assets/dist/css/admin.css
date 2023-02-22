@@ -3521,10 +3521,6 @@
   padding-bottom: 8rem;
 }
 
-.acf-block-preview .pt-0 {
-  padding-top: 0;
-}
-
 .acf-block-preview .text-left {
   text-align: left;
 }
@@ -3550,11 +3546,7 @@
 }
 
 .acf-block-preview .font-third {
-  font-family: Bebas Neue Pro;
-}
-
-.acf-block-preview .font-fourth {
-  font-family: Industry;
+  font-family: Oswald;
 }
 
 .acf-block-preview .text-10xl {
@@ -3637,12 +3629,16 @@
   font-size: 75px;
 }
 
-.acf-block-preview .text-20xl {
-  font-size: 500px;
+.acf-block-preview .text-\[430px\] {
+  font-size: 430px;
 }
 
 .acf-block-preview .text-13xl {
   font-size: 150px;
+}
+
+.acf-block-preview .text-20xl {
+  font-size: 500px;
 }
 
 .acf-block-preview .text-12xl {
@@ -3679,6 +3675,10 @@
 
 .acf-block-preview .font-extralight {
   font-weight: 200;
+}
+
+.acf-block-preview .font-thin {
+  font-weight: 100;
 }
 
 .acf-block-preview .uppercase {
@@ -4212,16 +4212,12 @@ html :where(.wp-block) {
     font-size: 3rem;
   }
 
-  .xxl\:text-12xl {
-    font-size: 125px;
+  .xxl\:text-10xl {
+    font-size: 100px;
   }
 
   .xxl\:text-13xl {
     font-size: 150px;
-  }
-
-  .xxl\:text-10xl {
-    font-size: 100px;
   }
 }
 
@@ -5298,12 +5294,12 @@ html :where(.wp-block) {
     max-height: 655px;
   }
 
-  .lg\:max-h-80 {
-    max-height: 20rem;
-  }
-
   .lg\:max-h-max {
     max-height: max-content;
+  }
+
+  .lg\:max-h-80 {
+    max-height: 20rem;
   }
 
   .lg\:min-h-max {
@@ -5420,10 +5416,6 @@ html :where(.wp-block) {
     gap: 1.25rem;
   }
 
-  .lg\:gap-16 {
-    gap: 4rem;
-  }
-
   .lg\:bg-contain {
     background-size: contain;
   }
@@ -5485,14 +5477,14 @@ html :where(.wp-block) {
     padding-right: 1.75rem;
   }
 
-  .lg\:py-9 {
-    padding-top: 2.25rem;
-    padding-bottom: 2.25rem;
-  }
-
   .lg\:px-0 {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .lg\:py-9 {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 
   .lg\:pt-8 {
@@ -5531,6 +5523,10 @@ html :where(.wp-block) {
     padding-top: 0 !important;
   }
 
+  .lg\:\!pb-0 {
+    padding-bottom: 0 !important;
+  }
+
   .lg\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -5541,14 +5537,6 @@ html :where(.wp-block) {
 
   .lg\:pb-32 {
     padding-bottom: 8rem;
-  }
-
-  .lg\:\!pb-0 {
-    padding-bottom: 0 !important;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0;
   }
 
   .lg\:text-center {
@@ -5587,24 +5575,20 @@ html :where(.wp-block) {
     font-size: 1.25rem !important;
   }
 
-  .lg\:\!text-3xl {
-    font-size: 1.875rem !important;
+  .lg\:\!text-4xl {
+    font-size: 2.25rem !important;
   }
 
   .lg\:text-17xl {
     font-size: 350px;
   }
 
-  .lg\:\!text-2xl {
-    font-size: 1.5rem !important;
-  }
-
-  .lg\:\!text-4xl {
-    font-size: 2.25rem !important;
-  }
-
   .lg\:\!text-5xl {
     font-size: 3rem !important;
+  }
+
+  .lg\:\!text-2xl {
+    font-size: 1.5rem !important;
   }
 
   .lg\:leading-tight {
@@ -6457,10 +6441,6 @@ html :where(.wp-block) {
     gap: 3.5rem;
   }
 
-  .md\:gap-10 {
-    gap: 2.5rem;
-  }
-
   .md\:overflow-hidden {
     overflow: hidden;
   }
@@ -6614,12 +6594,12 @@ html :where(.wp-block) {
     font-size: 250px;
   }
 
-  .md\:text-10xl {
-    font-size: 100px;
-  }
-
   .md\:text-8xl {
     font-size: 80px;
+  }
+
+  .md\:text-10xl {
+    font-size: 100px;
   }
 
   .md\:leading-10 {
@@ -6788,14 +6768,14 @@ html :where(.wp-block) {
     padding-right: 1rem;
   }
 
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .sm\:px-2 {
     padding-left: .5rem;
     padding-right: .5rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sm\:pb-5 {
@@ -6830,16 +6810,12 @@ html :where(.wp-block) {
     padding-bottom: 2rem;
   }
 
-  .sm\:pb-14 {
-    padding-bottom: 3.5rem;
-  }
-
-  .sm\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
   .sm\:pt-5 {
     padding-top: 1.25rem;
+  }
+
+  .sm\:pb-14 {
+    padding-bottom: 3.5rem;
   }
 
   .sm\:text-center {
@@ -6876,18 +6852,6 @@ html :where(.wp-block) {
 
   .sm\:text-lg {
     font-size: 1.125rem;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .sm\:\!text-3xl {
-    font-size: 1.875rem !important;
   }
 
   .sm\:\!text-4xl {
@@ -7285,16 +7249,12 @@ html :where(.wp-block) {
     gap: .75rem;
   }
 
-  .xs\:gap-0 {
-    gap: 0;
-  }
-
-  .xs\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .xs\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .xs\:gap-0 {
+    gap: 0;
   }
 
   .xs\:\!gap-x-16 {
@@ -7407,36 +7367,32 @@ html :where(.wp-block) {
     font-size: .75rem !important;
   }
 
-  .xs\:text-15xl {
-    font-size: 250px;
-  }
-
   .xs\:text-10xl {
     font-size: 100px;
   }
 
-  .xs\:text-lg {
-    font-size: 1.125rem;
+  .xs\:text-15xl {
+    font-size: 250px;
   }
 
-  .xs\:\!text-lg {
-    font-size: 1.125rem !important;
-  }
-
-  .xs\:\!text-sm {
-    font-size: .875rem !important;
-  }
-
-  .xs\:text-8xl {
-    font-size: 80px;
+  .xs\:\!text-base {
+    font-size: 1rem !important;
   }
 
   .xs\:text-6xl {
     font-size: 4rem;
   }
 
-  .xs\:\!text-base {
-    font-size: 1rem !important;
+  .xs\:text-8xl {
+    font-size: 80px;
+  }
+
+  .xs\:\!text-sm {
+    font-size: .875rem !important;
+  }
+
+  .xs\:\!text-lg {
+    font-size: 1.125rem !important;
   }
 }
 
