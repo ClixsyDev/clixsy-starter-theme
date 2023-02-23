@@ -2917,6 +2917,10 @@
   overflow: visible;
 }
 
+.acf-block-preview .overflow-x-clip {
+  overflow-x: clip;
+}
+
 .acf-block-preview .truncate {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -4173,6 +4177,14 @@ html :where(.wp-block) {
   .xxxl\:text-xl {
     font-size: 1.25rem;
   }
+
+  .xxxl\:text-13xl {
+    font-size: 150px;
+  }
+
+  .xxxl\:text-10xl {
+    font-size: 100px;
+  }
 }
 
 @media (max-width: 1630px) {
@@ -4214,10 +4226,6 @@ html :where(.wp-block) {
 
   .xxl\:text-10xl {
     font-size: 100px;
-  }
-
-  .xxl\:text-13xl {
-    font-size: 150px;
   }
 }
 
