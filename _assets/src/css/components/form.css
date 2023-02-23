@@ -248,7 +248,7 @@
   }
 
   .next_step {
-    @apply !min-w-[450px] min-h-[75px] font-main text-2xl border-white border-[5px] m-auto hover:cursor-pointer lg:!min-w-[360px] lg:text-xl xs:!min-w-[100%];
+    @apply !min-w-[450px] min-h-[75px] font-main text-2xl border-white border-[5px] m-auto hover:cursor-pointer mdt:!min-w-[360px] sm:!min-w-[320px] lg:text-xl xs:!min-w-[100%];
   }
 
   .wpcf7-not-valid-tip {

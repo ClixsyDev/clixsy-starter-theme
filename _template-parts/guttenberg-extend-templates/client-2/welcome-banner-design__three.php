@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_three__form_select = get_field('welcome_banner__design_three__form_select');
     $welcome_banner__design_three__description_second_form = get_field('welcome_banner__design_three__description_second_form');
 ?>
-    <section class="pb-4 pt-10 overflow-x-clip relative lg:pb-32 sm:pb-10" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
+    <section class="pb-4 pt-10 overflow-x-clip relative" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
         <?php if ($welcome_banner__design_three__background_image) { ?>
             <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-left-72 xs:-left-40']) ?>
         <?php } ?>
