@@ -2707,6 +2707,10 @@
   max-width: 28rem;
 }
 
+.acf-block-preview .max-w-\[900px\] {
+  max-width: 900px;
+}
+
 .acf-block-preview .flex-1 {
   flex: 1;
 }
@@ -4178,12 +4182,12 @@ html :where(.wp-block) {
     font-size: 1.25rem;
   }
 
-  .xxxl\:text-13xl {
-    font-size: 150px;
-  }
-
   .xxxl\:text-10xl {
     font-size: 100px;
+  }
+
+  .xxxl\:text-13xl {
+    font-size: 150px;
   }
 }
 
@@ -4222,10 +4226,6 @@ html :where(.wp-block) {
 
   .xxl\:text-5xl {
     font-size: 3rem;
-  }
-
-  .xxl\:text-10xl {
-    font-size: 100px;
   }
 }
 
@@ -4707,6 +4707,14 @@ html :where(.wp-block) {
 
   .xl\:text-base {
     font-size: 1rem;
+  }
+
+  .xl\:text-8xl {
+    font-size: 80px;
+  }
+
+  .xl\:text-10xl {
+    font-size: 100px;
   }
 
   .xl\:shadow-none {
