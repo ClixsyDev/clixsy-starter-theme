@@ -76,13 +76,13 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($fights_for_you__description || $fights_for_you__number || $fights_for_you__link) { ?>
                     <div>
                         <?php if ($fights_for_you__description) { ?>
-                            <div class="text-left py-10 px-16 text-white text-2xl font-light lg:px-0 lg:!text-xl">
+                            <div class="text-left py-10 px-16 text-white text-2xl font-light uniq_xl:px-0 lg:!text-xl">
                                 <?php echo $fights_for_you__description ?>
                             </div>
                         <?php } ?>
                         <?php if ($fights_for_you__number || $fights_for_you__link) { ?>
                             <div class="flex items-center justify-center gap-16 lg:flex-col lg:gap-5">
-                                <a href="tel:+<?php echo $fights_for_you__number ?>" class="font-third font-black text-white text-6xl lg:!text-4xl"><?php echo $fights_for_you__number ?></a>
+                                <a href="tel:+<?php echo $fights_for_you__number ?>" class="font-third font-black text-white text-6xl xl:!text-5xl lg:!text-4xl"><?php echo $fights_for_you__number ?></a>
                                 <?php if ($fights_for_you__link && $fights_for_you__link['url']) { ?>
                                     <?php
                                     Template::load('_template-parts/components/button.php', [
@@ -97,15 +97,15 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 <?php } ?>
             </div>
-            <div class="relative pt-12 lg:!pt-0" style="background-color: <?php echo $fights_for_you__cost_block_bg ?: ''  ?> ;">
+            <div class="relative pt-12 lg:!pt-0 rounded-2xl shadow-siteWide" style="background-color: <?php echo $fights_for_you__cost_block_bg ?: ''  ?> ;">
                 <?php if ($fights_for_you__cost_title || $fights_for_you__cost_description || $fights_for_you__cost_link) { ?>
-                    <div class="flex gap-44 rounded-2xl uniq_xl:w-23/24 shadow-siteWide uniq_xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $fights_for_you__cost_select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-24' ?>">
+                    <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $fights_for_you__cost_select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-24' ?>">
                         <div class="w-11/24 z-10 lg:items-center lg:w-full lg:text-center">
                             <?php if ($fights_for_you__cost_title) { ?>
-                                <h3 class="text-headings font-third pb-10 leading-[65px] text-6xl font-medium uniq_xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-5"><?php echo $fights_for_you__cost_title ?></h3>
+                                <h3 class="text-headings font-third pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-5"><?php echo $fights_for_you__cost_title ?></h3>
                             <?php } ?>
                             <?php if ($fights_for_you__cost_description) { ?>
-                                <p class="text-xl pb-16 leading-tight uniq_xl:text-lg lg:pb-10"><?php echo $fights_for_you__cost_description ?></p>
+                                <p class="text-xl pb-16 leading-tight xl:text-lg lg:pb-10"><?php echo $fights_for_you__cost_description ?></p>
                             <?php } ?>
                             <?php if ($fights_for_you__cost_link && $fights_for_you__cost_link['url']) { ?>
                                 <?php
@@ -118,7 +118,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php } ?>
                         </div>
                         <div class="font-third z-10 pb-24 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
-                            <div class="text-[430px] mt-8 leading-[370px] xl:text-17xl md:text-15xl md:leading-[280px]">$0</div>
+                            <div class="text-[430px] mt-8 leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[280px]">$0</div>
                         </div>
                     </div>
                 <?php } ?>
