@@ -51,7 +51,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <p class="text-xl text-right font-light leading-6"><?php echo $fights_for_you__text_available ?></p>
                             <?php } ?>
                             <?php if ($fights_for_you__time_available) { ?>
-                                <p class="font-third text-6xl leading-[77px] font-bold"><?php echo $fights_for_you__time_available ?></p>
+                                <p class="font-third text-6xl leading-[77px] font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
                             <?php } ?>
                         </div>
                     <?php } ?>
@@ -102,7 +102,7 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $fights_for_you__cost_select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-24' ?>">
                         <div class="w-11/24 z-10 lg:items-center lg:w-full lg:text-center">
                             <?php if ($fights_for_you__cost_title) { ?>
-                                <h3 class="text-headings font-third pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-5"><?php echo $fights_for_you__cost_title ?></h3>
+                                <h3 class="text-headings font-third pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $fights_for_you__cost_title ?></h3>
                             <?php } ?>
                             <?php if ($fights_for_you__cost_description) { ?>
                                 <p class="text-xl pb-16 leading-tight xl:text-lg lg:pb-10"><?php echo $fights_for_you__cost_description ?></p>
@@ -118,7 +118,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php } ?>
                         </div>
                         <div class="font-third z-10 pb-24 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
-                            <div class="text-[430px] mt-8 leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[280px]">$0</div>
+                            <div class="text-[430px] mt-8 leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[190px]">$0</div>
                         </div>
                     </div>
                 <?php } ?>

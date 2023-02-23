@@ -5429,12 +5429,20 @@ html :where(.wp-block) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .lg\:\!grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
   .lg\:flex-col {
     flex-direction: column;
   }
 
   .lg\:flex-col-reverse {
     flex-direction: column-reverse;
+  }
+
+  .lg\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .lg\:items-center {
@@ -5874,6 +5882,14 @@ html :where(.wp-block) {
   .mdt\:-translate-x-1\/2 {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .mdt\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mdt\:\!grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
   .mdt\:flex-row {
@@ -6657,6 +6673,10 @@ html :where(.wp-block) {
   .md\:leading-\[280px\] {
     line-height: 280px;
   }
+
+  .md\:leading-\[190px\] {
+    line-height: 190px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -6781,6 +6801,10 @@ html :where(.wp-block) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .sm\:\!grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
   .sm\:flex-col {
     flex-direction: column;
   }
@@ -6799,6 +6823,10 @@ html :where(.wp-block) {
 
   .sm\:gap-8 {
     gap: 2rem;
+  }
+
+  .sm\:gap-0 {
+    gap: 0;
   }
 
   .sm\:p-6 {
@@ -6876,6 +6904,14 @@ html :where(.wp-block) {
 
   .sm\:pb-14 {
     padding-bottom: 3.5rem;
+  }
+
+  .sm\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .sm\:pt-9 {
+    padding-top: 2.25rem;
   }
 
   .sm\:text-center {
@@ -7453,6 +7489,32 @@ html :where(.wp-block) {
 
   .xs\:\!text-lg {
     font-size: 1.125rem !important;
+  }
+
+  .xs\:\!text-5xl {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .xxs\:text-5xl {
+    font-size: 3rem;
+  }
+
+  .xxs\:\!text-lg {
+    font-size: 1.125rem !important;
+  }
+
+  .xxs\:\!text-base {
+    font-size: 1rem !important;
+  }
+
+  .xxs\:text-4xl {
+    font-size: 2.25rem;
+  }
+
+  .xxs\:text-6xl {
+    font-size: 4rem;
   }
 }
 

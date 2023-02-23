@@ -40,16 +40,16 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="flex flex-col gap-24 justify-center pt-24 lg:!pt-0 md:gap-12">
                     <?php if ($settlement_case_type__insurance_offer) { ?>
                         <div>
-                            <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl">Insurance Offer</h4>
+                            <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Insurance Offer</h4>
                             <div class="line-through text-button_color">
-                                <div class="font-third text-12xl font-bold leading-none text-black xxxl:text-10xl xl:text-8xl xs:text-6xl"><?php echo $settlement_case_type__insurance_offer ?></div>
+                                <div class="font-third text-12xl font-bold leading-none text-black xxxl:text-10xl xl:text-8xl xs:text-6xl xxs:text-5xl"><?php echo $settlement_case_type__insurance_offer ?></div>
                             </div>
                         </div>
                     <?php } ?>
                     <?php if ($settlement_case_type__final_settlement) { ?>
                         <div>
-                            <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl">Final Settlement* </h4>
-                            <div class="font-third text-15xl font-bold leading-none text-accent xxxl:text-13xl xl:text-10xl xs:text-8xl"><?php echo $settlement_case_type__final_settlement ?></div>
+                            <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Final Settlement* </h4>
+                            <div class="font-third text-15xl font-bold leading-none text-accent xxxl:text-13xl xl:text-10xl xs:text-8xl xxs:text-6xl"><?php echo $settlement_case_type__final_settlement ?></div>
                             <?php if ($settlement_case_type__description_settlement) { ?>
                                 <div class="description_settlement mt-12 max-w-[900px] text-lg xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
                             <?php } ?>

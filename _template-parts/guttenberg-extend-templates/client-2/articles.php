@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?= $articles_title ?>
                 </h2>
             <?php } ?>
-            <div class="flex gap-11 mb-11 2xl:gap-y-32 lg:flex-col lg:gap-5 mdt:justify-center sm:!mb-5">
+            <div class="grid grid-cols-3 gap-9 mb-11 2xl:gap-y-32 lg:!grid-cols-2 sm:!grid-cols-1 sm:gap-0 lg:gap-5 sm:!mb-5">
                 <?php
                 $posts = get_posts(array(
                     'numberposts' => 3,
@@ -29,10 +29,9 @@ if ($is_preview && !empty($previewImage)) {
                 ));
                 $case_items = array();
                 foreach ($posts as $item) { ?>
-                    <article class="group w-8/24 h-full relative lg:w-14/24 lg:m-auto sm:w-full md:w-18/24">
+                    <article class="group h-full relative sm:w-full">
                         <a class="min-h-[500px] lg:min-h-auto xl:min-h-full lg:p-14 sm:p-5" href="<?= get_permalink($item) ?>">
                             <?php echo get_the_post_thumbnail($item->ID, 'full', ['class' => 'w-full']) ?>
-                            <div class=" w-full h-full top-0 left-0"></div>
                             <div class="z-30 w-full max-w-[830px]">
                                 <div class="text-accent font-second text-2xl leading-tight mt-3 mb-2 sm:!text-xl">
                                     <?php echo get_the_title($item -> ID); ?>
