@@ -3128,6 +3128,10 @@
   --tw-bg-opacity: .6;
 }
 
+.acf-block-preview .\!bg-opacity-80 {
+  --tw-bg-opacity: .8 !important;
+}
+
 .acf-block-preview .bg-cover {
   background-size: cover;
 }
@@ -4621,16 +4625,16 @@ html :where(.wp-block) {
     gap: 2rem;
   }
 
+  .xl\:gap-32 {
+    gap: 8rem;
+  }
+
   .xl\:gap-4 {
     gap: 1rem;
   }
 
   .xl\:\!gap-40 {
     gap: 10rem !important;
-  }
-
-  .xl\:gap-32 {
-    gap: 8rem;
   }
 
   .xl\:rounded-2xl {
@@ -4725,6 +4729,14 @@ html :where(.wp-block) {
     font-size: 100px;
   }
 
+  .xl\:\!text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .xl\:text-lg {
+    font-size: 1.125rem;
+  }
+
   .xl\:text-17xl {
     font-size: 350px;
   }
@@ -4739,14 +4751,6 @@ html :where(.wp-block) {
 
   .xl\:text-base {
     font-size: 1rem;
-  }
-
-  .xl\:\!text-5xl {
-    font-size: 3rem !important;
-  }
-
-  .xl\:text-lg {
-    font-size: 1.125rem;
   }
 
   .xl\:shadow-none {
@@ -4771,14 +4775,6 @@ html :where(.wp-block) {
     gap: 5rem;
   }
 
-  .uniq_xl\:gap-28 {
-    gap: 7rem;
-  }
-
-  .uniq_xl\:gap-32 {
-    gap: 8rem;
-  }
-
   .uniq_xl\:px-0 {
     padding-left: 0;
     padding-right: 0;
@@ -4789,20 +4785,12 @@ html :where(.wp-block) {
     padding-right: 4rem;
   }
 
-  .uniq_xl\:\!text-5xl {
-    font-size: 3rem !important;
-  }
-
-  .uniq_xl\:text-lg {
-    font-size: 1.125rem;
-  }
-
   .uniq_xl\:text-4xl {
     font-size: 2.25rem;
   }
 
-  .uniq_xl\:text-5xl {
-    font-size: 3rem;
+  .uniq_xl\:text-lg {
+    font-size: 1.125rem;
   }
 }
 
@@ -5483,22 +5471,6 @@ html :where(.wp-block) {
 
   .lg\:bg-contain {
     background-size: contain;
-  }
-
-  .lg\:bg-top {
-    background-position: top;
-  }
-
-  .lg\:bg-\[center_top_1rem\] {
-    background-position: 50% 1rem;
-  }
-
-  .lg\:bg-\[top_1rem\] {
-    background-position: top 1rem;
-  }
-
-  .lg\:bg-\[10\%_left\] {
-    background-position: 10% left;
   }
 
   .lg\:bg-\[70\%_top\] {
