@@ -26,7 +26,7 @@
 </head>
 
 <body <?php body_class('font-main body'); ?>>
-    <?php $logo = get_field('logo', 'options'); 
+    <?php $logo = get_field('logo', 'options');
     $phone = get_field('phone', 'options');
     ?>
 
