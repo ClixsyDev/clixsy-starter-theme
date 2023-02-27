@@ -15,7 +15,9 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <!-- verdicts.php -->
     <div class="relative">
-        <img src="<?= wp_get_attachment_image_url($bg, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
+        <?php if ($bg) { ?>
+            <img src="<?= wp_get_attachment_image_url($bg, 'full') ?>" class="absolute left-0 top-0 w-full h-full object-cover" alt="">
+        <?php } ?>
         <div class="verdicts_slider_ba glide relative pt-12 pb-14 2xl:pt-6 2xl:pb-7">
             <div class="glide__track" data-glide-el="track">
                 <div class="glide__slides overflow-visible flex justify-around gap-3 items-center py-2">
