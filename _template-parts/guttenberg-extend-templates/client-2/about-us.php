@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="mt-72 -mb-[4%] 2xl:pt-44 md:pt-28 relative z-[1]">
+    <section class="pt-40  -mb-[4%] 2xl:pt-44 md:pt-28 relative z-[1]">
         <div class="container">
             <?php if ($about_us__title) { ?>
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-96 xl:text-left xl:ml-0 md:text-5xl"><?php echo $about_us__title ?></h2>
@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($about_us__attorney_subtitle || $about_us__attorney_title) { ?>
                         <div class=" py-7 px-8 text-center rounded-md shadow-siteWide sm:px-9 sm:py-4" style="background-color: <?php echo $about_us__attorney_block_color ?: ''  ?> ;">
                             <?php if ($about_us__attorney_subtitle) { ?>
-                                <p class=" text-black font-second font-bold text-5xl md:!text-2xl xs:!text-xl"><?php echo $about_us__attorney_subtitle ?></p>
+                                <p class=" text-black font-second font-bold text-5xl 2xl:text-3xl md:!text-2xl xs:!text-xl"><?php echo $about_us__attorney_subtitle ?></p>
                             <?php } ?>
                             <?php if ($about_us__attorney_title) { ?>
                                 <h3 class="font-main font-bold text-white text-7xl 2xl:text-5xl md:text-4xl xs:text-3xl"><?php echo $about_us__attorney_title ?></h3>

@@ -29,7 +29,7 @@ function register_verdicts_design_two()
                     'attributes' => array(
                         'mode' => 'preview',
                         'data' => array(
-                            'preview_image' => get_template_directory_uri() . '/_assets/src/img/guttenberg-preview/verdicts_and_testimonials.png',
+                            'preview_image' => get_template_directory_uri() . '/_assets/src/img/guttenberg-preview/client-2/verdicts_and_testimonials.png',
                         ),
                     )
                 )

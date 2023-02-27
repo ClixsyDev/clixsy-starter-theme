@@ -67,7 +67,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
 
         </div>
-        <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4">
+        <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4 ">
             <?php if ($button1) { ?>
                 <?php
                 Template::load('_template-parts/components/button.php', [
@@ -83,7 +83,7 @@ if ($is_preview && !empty($previewImage)) {
                     'link' => $button2['url'],
                     'text' => __($button2['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => $button_size . '  bg-white text-button_color border-4 border-button_color  hover:text-white hover:bg-button_color  rounded-xl uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => $button_size . '  bg-white text-button_color border-4 !border-[#d1383a]  hover:!text-white hover:!bg-button_color  rounded-xl uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             <?php } ?>
         </div>
