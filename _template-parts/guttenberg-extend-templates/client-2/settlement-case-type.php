@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex gap-28 uniq_xl:gap-20 lg:flex-col xs:gap-10">
                 <div class="flex flex-col gap-10 w-9/24 lg:w-full xs:gap-6">
                     <?php if ($settlement_case_type__title) { ?>
-                        <h3 class="text-6xl font-third leading-[65px] lg:!text-5xl sm:!text-4xl"> <?php echo $settlement_case_type__title ?></h3>
+                        <h3 class="font-main text-6xl leading-[65px] lg:!text-5xl sm:!text-4xl"> <?php echo $settlement_case_type__title ?></h3>
                     <?php } ?>
                     <?php if ($settlement_case_type__description) { ?>
                         <div class="settlement_case_type_description text-lg xs:!text-base"><?php echo $settlement_case_type__description ?></div>
@@ -42,14 +42,14 @@ if ($is_preview && !empty($previewImage)) {
                         <div>
                             <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Insurance Offer</h4>
                             <div class="line-through text-button_color">
-                                <div class="font-third text-12xl font-bold leading-none text-black xxxl:text-10xl xl:text-8xl xs:text-6xl xxs:text-5xl"><?php echo $settlement_case_type__insurance_offer ?></div>
+                                <div class="font-second text-12xl font-bold leading-none text-black xxxl:text-10xl xl:text-8xl xs:text-6xl xxs:text-5xl"><?php echo $settlement_case_type__insurance_offer ?></div>
                             </div>
                         </div>
                     <?php } ?>
                     <?php if ($settlement_case_type__final_settlement) { ?>
                         <div>
                             <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Final Settlement* </h4>
-                            <div class="font-third text-15xl font-bold leading-none text-accent xxxl:text-13xl xl:text-10xl xs:text-8xl xxs:text-6xl"><?php echo $settlement_case_type__final_settlement ?></div>
+                            <div class="font-second text-15xl font-bold leading-none text-accent xxxl:text-13xl xl:text-10xl xs:text-8xl xxs:text-6xl"><?php echo $settlement_case_type__final_settlement ?></div>
                             <?php if ($settlement_case_type__description_settlement) { ?>
                                 <div class="description_settlement mt-12 max-w-[900px] text-lg xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
                             <?php } ?>
