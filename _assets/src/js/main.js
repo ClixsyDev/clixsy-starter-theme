@@ -8,6 +8,7 @@ import { tocAnchor } from './toc';
 import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
 
+
 /* FAQ start */
 const initFAQ = () => {
   const acc = getElements('.faq__header');
