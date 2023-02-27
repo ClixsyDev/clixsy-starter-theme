@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="text-button_color text-center text-8xl 2xl:text-[70px] xl:text-6xl xs:!text-[44px] text font-second z-[1] w-1/2 mdt:w-full">
                     <?php echo wp_get_attachment_image($big_auto_footer_form__image, 'full', '', ['class' => 'block mx-auto ']) ?>
 
-                    <?php echo $big_auto_footer_form__number ?>
+                    <a href="tel:<?php echo $big_auto_footer_form__number ?>"><?php echo $big_auto_footer_form__number ?></a>
                 </div>
 
                 <?php if ($big_auto_footer_form__form_select) { ?>

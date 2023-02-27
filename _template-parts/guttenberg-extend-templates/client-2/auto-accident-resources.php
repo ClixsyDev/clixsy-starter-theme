@@ -27,7 +27,7 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
             <?php } ?>
 
-            <div class="flex flex-col gap-[1px] mb-10">
+            <div class="flex flex-col gap-[2px] mb-10">
                 <?php foreach ($auto_accident_resources__items as $item) { ?>
                     <div class="bg-smoke py-2 w-full">
                         <a href="#<?php echo $item['auto_accident_resources__faq_title'] ?>" class=" text-white text-3xl mdt:!text-2xl pl-8  font-fourth"><?php echo $item['auto_accident_resources__faq_title'] ?></a>
@@ -37,10 +37,10 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex flex-col">
                 <?php foreach ($auto_accident_resources__items as $item) { ?>
                     <div id="<?php echo $item['auto_accident_resources__faq_title'] ?>" class="mb-8">
-                        <div class="text-3xl font-fourth">
-                            <span class=""><?php echo $item['auto_accident_resources__faq_title'] ?></span>
+                        <div class="text-3xl font-fourth mb-4">
+                            <h3 class=""><?php echo $item['auto_accident_resources__faq_title'] ?></h3>
                         </div>
-                        <div class="text-base px-8 py-8 lg:px-4 md:px-2  font-fourth shadow-lg faq-content-box">
+                        <div class="text-base px-8 py-8 lg:px-4 md:px-2 faq-shadow font-fourth faq-content-box">
                             <div class="mb-16">
                                 <?php echo $item['auto_accident_resources__faq_description'] ?>
                             </div>

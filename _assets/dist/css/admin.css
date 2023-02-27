@@ -2984,6 +2984,10 @@
   gap: 7rem;
 }
 
+.acf-block-preview .gap-\[2px\] {
+  gap: 2px;
+}
+
 .acf-block-preview .gap-x-4 {
   column-gap: 1rem;
 }
@@ -3646,6 +3650,10 @@
 
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
+}
+
+.acf-block-preview .pt-\[6\%\] {
+  padding-top: 6%;
 }
 
 .acf-block-preview .text-left {
@@ -4818,6 +4826,11 @@ html :where(.wp-block) {
     padding-right: 2.5rem;
   }
 
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .xl\:pr-20 {
     padding-right: 5rem;
   }
@@ -4840,6 +4853,14 @@ html :where(.wp-block) {
 
   .xl\:pt-7 {
     padding-top: 1.75rem;
+  }
+
+  .xl\:pb-9 {
+    padding-bottom: 2.25rem;
+  }
+
+  .xl\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .xl\:text-left {
@@ -5468,6 +5489,10 @@ html :where(.wp-block) {
     margin-top: 1rem;
   }
 
+  .lg\:-mb-\[6\%\] {
+    margin-bottom: -6%;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -5934,6 +5959,10 @@ html :where(.wp-block) {
 
   .mdt\:-mt-36 {
     margin-top: -9rem;
+  }
+
+  .mdt\:-mb-\[6\%\] {
+    margin-bottom: -6%;
   }
 
   .mdt\:block {
