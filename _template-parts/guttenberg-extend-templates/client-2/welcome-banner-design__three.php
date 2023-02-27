@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
         <div>
             <div class="container text-center">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
-                    <h2 class="text-white font-main font-thin text-3xl uppercase lg:!text-2xl sm:!text-xl xs:!text-lg"><?php echo $welcome_banner__design_three__subtitle ?></h2>
+                    <h2 class="text-white font-thin text-3xl uppercase lg:!text-2xl sm:!text-xl xs:!text-lg"><?php echo $welcome_banner__design_three__subtitle ?></h2>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
                     <h1 class="hero_heading_h1 banner"><?php echo $welcome_banner__design_three__title ?></h1>

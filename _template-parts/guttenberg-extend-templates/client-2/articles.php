@@ -15,7 +15,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="pt-12 pb-16">
         <div class="container">
             <?php if ($articles_title) { ?>
-                <h2 class="heading_h2 font-third text-black font-bold text-6xl pb-12 capitalize md:!text-5xl md:leading-10">
+                <h2 class="heading_h2 font-second text-black font-bold text-6xl pb-12 capitalize md:!text-5xl md:leading-10">
                     <?= $articles_title ?>
                 </h2>
             <?php } ?>
@@ -33,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
                         <a class="min-h-[500px] lg:min-h-auto xl:min-h-full lg:p-14 sm:p-5" href="<?= get_permalink($item) ?>">
                             <?php echo get_the_post_thumbnail($item->ID, 'full', ['class' => 'w-full']) ?>
                             <div class="z-30 w-full max-w-[830px]">
-                                <div class="text-accent font-second text-2xl leading-tight mt-3 mb-2 sm:!text-xl">
+                                <div class="text-accent font-bold text-2xl leading-tight mt-3 mb-2 sm:!text-xl">
                                     <?php echo get_the_title($item -> ID); ?>
                                 </div>
                                 <?php $cat = get_the_category($item -> ID); ?>
@@ -41,7 +41,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <span><?php echo $cat[0]->name ?></span>
                                     <span>| <?php echo get_the_date('F d, Y') ?></span>
                                 </div>
-                                <div class="font-libre text-2xl text-black mb-2 mr-9 lg:!text-lg sm:mr-0 sm:!text-base">
+                                <div class="text-xl text-black mb-2 mr-9 lg:!text-lg sm:mr-0 sm:!text-base">
                                     <?php echo get_the_excerpt($item->ID) ?>
                                 </div>
                                 <div class="chevron_link absolute right-4 bottom-4 hidden group-hover:block">

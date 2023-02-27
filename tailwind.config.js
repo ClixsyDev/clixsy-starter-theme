@@ -58,7 +58,7 @@ module.exports = {
         main: fonts['main'],
         second: fonts['second'],
         third: fonts['third'],
-        fourth: fonts['fourth'],
+        // fourth: fonts['fourth'],
       },
       width: {
         '1/24': '4.1666667%',
