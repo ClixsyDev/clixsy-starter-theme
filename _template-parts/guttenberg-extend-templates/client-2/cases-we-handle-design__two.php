@@ -59,7 +59,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php } ?>
                             </span>
                             <?php if ($case_title) { ?>
-                                <div class="btn-accident bg-white border-2 border-solid border-headings"><?= $case_title ?></div>
+                                <div class="btn-accident bg-white border-2 border-solid border-headings leading-none"><?= $case_title ?></div>
                             <?php } ?>
                         </a>
                     <?php } ?>

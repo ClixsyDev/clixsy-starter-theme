@@ -2972,8 +2972,8 @@
   gap: 6rem;
 }
 
-.acf-block-preview .gap-\[1px\] {
-  gap: 1px;
+.acf-block-preview .gap-\[2px\] {
+  gap: 2px;
 }
 
 .acf-block-preview .gap-10 {
@@ -3612,8 +3612,8 @@
   padding-bottom: 13rem;
 }
 
-.acf-block-preview .pt-\[4\%\] {
-  padding-top: 4%;
+.acf-block-preview .pt-\[6\%\] {
+  padding-top: 6%;
 }
 
 .acf-block-preview .pt-6 {
@@ -4813,6 +4813,11 @@ html :where(.wp-block) {
     padding-bottom: 2rem;
   }
 
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .xl\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -4828,6 +4833,14 @@ html :where(.wp-block) {
 
   .xl\:pr-0 {
     padding-right: 0;
+  }
+
+  .xl\:pb-9 {
+    padding-bottom: 2.25rem;
+  }
+
+  .xl\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .xl\:pb-5 {
@@ -5466,6 +5479,10 @@ html :where(.wp-block) {
 
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:-mb-\[6\%\] {
+    margin-bottom: -6%;
   }
 
   .lg\:block {

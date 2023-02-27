@@ -24,12 +24,12 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="pt-40  -mb-[4%] 2xl:pt-44 md:pt-28 relative z-[1]">
+    <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1]">
         <div class="container">
             <?php if ($about_us__title) { ?>
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-96 xl:text-left xl:ml-0 md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
-            <div class="flex pb-8 px-9 gap-16 items-center max-h-96 mb-16 2xl:pt-8 xl:flex-col xl:max-h-max lg:mb-8 lg:px-5 md:gap-8" style="background-color: <?php echo $about_us__block_color ?: ''  ?> ;">
+            <div class="flex pb-8 px-9 gap-16 items-center max-h-96  2xl:pt-8 xl:flex-col xl:max-h-max lg:mb-8 lg:px-5 md:gap-8" style="background-color: <?php echo $about_us__block_color ?: ''  ?> ;">
                 <div class="flex flex-col -mt-80 w-12/24 xl:w-23/24 xl:mt-0">
                     <?php if ($about_us__image) { ?>
                         <?php echo wp_get_attachment_image($about_us__image, 'full', '', ['class' => '']) ?>
@@ -54,7 +54,7 @@ if ($is_preview && !empty($previewImage)) {
 
     <section style="background-image: url('<?php echo $about_us__background ?>');background-size: cover;" class="pb-10 w-full">
 
-        <div class="container pt-[4%]">
+        <div class="container pt-[6%]">
             <?php if ($about_us__second_description || $about_us__title_items || $about_us__items || $about_us__link) { ?>
                 <div class="flex gap-16 lg:flex-col-reverse justify-center">
                     <div class="flex flex-col gap-20 w-1/2 lg:w-full lg:m-auto lg:items-center lg:gap-10">
@@ -72,7 +72,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                     </div>
                     <?php if ($about_us__items || $about_us__title_items) { ?>
-                        <div class="shadow-siteWide bg-white w-2/6 px-12 pt-9 pb-20 h-max lg:w-full lg:m-auto lg:px-7 sm:pb-10">
+                        <div class="shadow-siteWide bg-white w-2/6 px-12 xl:px-8 pt-9 pb-20 xl:pb-9 h-max lg:w-full lg:m-auto lg:px-7 sm:pb-10">
                             <?php if ($about_us__title_items) { ?>
                                 <h3 class="font-second text-3xl text-headings pb-16 sm:pb-8 "><?php echo $about_us__title_items ?></h3>
                             <?php } ?>
@@ -87,7 +87,7 @@ if ($is_preview && !empty($previewImage)) {
                                                     </div>
                                                 <?php } ?>
                                                 <?php if ($item['title']) { ?>
-                                                    <h4 class="text-3xl font-main font-black sm:!text-xl"><?php echo $item['title'] ?></h4>
+                                                    <h4 class="text-3xl xl:text-2xl font-main font-black sm:!text-xl"><?php echo $item['title'] ?></h4>
                                                 <?php } ?>
                                             </div>
                                         <?php } ?>
