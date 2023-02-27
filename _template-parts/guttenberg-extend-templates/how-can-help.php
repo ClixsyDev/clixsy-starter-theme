@@ -41,7 +41,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <div class="w-[515px] lg:w-full form_elements_design_one how_can_help_form  bg-headings p-11 -mb-12 sm:p-6 ">
                 <?php if ($form_description) { ?>
-                    <div class="font-second text-white text-xl lg:text-base leading-tight mb-4">
+                    <div class="text-white text-xl lg:text-base leading-tight mb-4">
                         <?= $form_description ?>
                     </div>
                 <?php } ?>

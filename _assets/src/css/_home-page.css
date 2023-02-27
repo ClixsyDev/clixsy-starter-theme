@@ -1,5 +1,5 @@
 @tailwind components;
 
 .dots-bg {
-    @apply bg-[url('../../../_assets/src/img/dots-bg.png')] h-[63px];
+    @apply bg-[url('../../../_assets/src/img/dots-bg.png')] h-[63px] xs:h-[35px];
 }

@@ -2176,6 +2176,14 @@
   margin-top: -20rem;
 }
 
+.acf-block-preview .mb-11 {
+  margin-bottom: 2.75rem;
+}
+
+.acf-block-preview .mr-9 {
+  margin-right: 2.25rem;
+}
+
 .acf-block-preview .mb-36 {
   margin-bottom: 9rem;
 }
@@ -2204,12 +2212,12 @@
   margin-top: -4rem;
 }
 
-.acf-block-preview .mr-9 {
-  margin-right: 2.25rem;
-}
-
 .acf-block-preview .mb-2\.5 {
   margin-bottom: .625rem;
+}
+
+.acf-block-preview .-mt-28 {
+  margin-top: -7rem;
 }
 
 .acf-block-preview .mb-64 {
@@ -2402,6 +2410,10 @@
 
 .acf-block-preview .min-h-\[246px\] {
   min-height: 246px;
+}
+
+.acf-block-preview .min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .acf-block-preview .min-h-\[300px\] {
@@ -2636,6 +2648,10 @@
   width: 80%;
 }
 
+.acf-block-preview .w-5\/12 {
+  width: 41.6667%;
+}
+
 .acf-block-preview .w-11\/24 {
   width: 45.8333%;
 }
@@ -2686,10 +2702,6 @@
 
 .acf-block-preview .min-w-\[460px\] {
   min-width: 460px;
-}
-
-.acf-block-preview .\!min-w-\[400px\] {
-  min-width: 400px !important;
 }
 
 .acf-block-preview .max-w-\[460px\] {
@@ -2760,8 +2772,16 @@
   max-width: 460px !important;
 }
 
+.acf-block-preview .max-w-\[830px\] {
+  max-width: 830px;
+}
+
 .acf-block-preview .max-w-\[1720px\] {
   max-width: 1720px;
+}
+
+.acf-block-preview .max-w-\[900px\] {
+  max-width: 900px;
 }
 
 .acf-block-preview .max-w-md {
@@ -2960,6 +2980,10 @@
   gap: 2.5rem;
 }
 
+.acf-block-preview .gap-28 {
+  gap: 7rem;
+}
+
 .acf-block-preview .gap-x-4 {
   column-gap: 1rem;
 }
@@ -2984,6 +3008,10 @@
 
 .acf-block-preview .overflow-visible {
   overflow: visible;
+}
+
+.acf-block-preview .overflow-x-clip {
+  overflow-x: clip;
 }
 
 .acf-block-preview .truncate {
@@ -3198,6 +3226,10 @@
 
 .acf-block-preview .bg-opacity-60 {
   --tw-bg-opacity: .6;
+}
+
+.acf-block-preview .\!bg-opacity-80 {
+  --tw-bg-opacity: .8 !important;
 }
 
 .acf-block-preview .bg-cover {
@@ -3608,6 +3640,10 @@
   padding-right: 10px;
 }
 
+.acf-block-preview .pt-48 {
+  padding-top: 12rem;
+}
+
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
 }
@@ -3634,14 +3670,6 @@
 
 .acf-block-preview .font-second {
   font-family: ArialRounded;
-}
-
-.acf-block-preview .font-fourth {
-  font-family: Industry;
-}
-
-.acf-block-preview .font-third {
-  font-family: Bebas Neue Pro;
 }
 
 .acf-block-preview .text-10xl {
@@ -3724,12 +3752,24 @@
   font-size: 75px;
 }
 
-.acf-block-preview .text-20xl {
-  font-size: 500px;
+.acf-block-preview .text-\[430px\] {
+  font-size: 430px;
 }
 
 .acf-block-preview .text-13xl {
   font-size: 150px;
+}
+
+.acf-block-preview .text-20xl {
+  font-size: 500px;
+}
+
+.acf-block-preview .text-12xl {
+  font-size: 125px;
+}
+
+.acf-block-preview .text-15xl {
+  font-size: 250px;
 }
 
 .acf-block-preview .font-bold {
@@ -3758,6 +3798,10 @@
 
 .acf-block-preview .font-extralight {
   font-weight: 200;
+}
+
+.acf-block-preview .font-thin {
+  font-weight: 100;
 }
 
 .acf-block-preview .uppercase {
@@ -3812,10 +3856,6 @@
   line-height: 370px;
 }
 
-.acf-block-preview .leading-\[115px\] {
-  line-height: 115px;
-}
-
 .acf-block-preview .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -3868,6 +3908,10 @@
 
 .acf-block-preview .underline {
   text-decoration-line: underline;
+}
+
+.acf-block-preview .line-through {
+  text-decoration-line: line-through;
 }
 
 .acf-block-preview .\!no-underline {
@@ -4277,6 +4321,14 @@ html :where(.wp-block) {
   .xxxl\:text-xl {
     font-size: 1.25rem;
   }
+
+  .xxxl\:text-10xl {
+    font-size: 100px;
+  }
+
+  .xxxl\:text-13xl {
+    font-size: 150px;
+  }
 }
 
 @media (max-width: 1630px) {
@@ -4337,6 +4389,10 @@ html :where(.wp-block) {
 
   .\32 xl\:-mt-20 {
     margin-top: -5rem;
+  }
+
+  .\32 xl\:ml-0 {
+    margin-left: 0;
   }
 
   .\32 xl\:-mt-24 {
@@ -4444,6 +4500,10 @@ html :where(.wp-block) {
     padding-top: 2rem;
   }
 
+  .\32 xl\:\!pt-12 {
+    padding-top: 3rem !important;
+  }
+
   .\32 xl\:text-3xl {
     font-size: 1.875rem;
   }
@@ -4470,6 +4530,10 @@ html :where(.wp-block) {
 
   .\32 xl\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .\32 xl\:\!text-5xl {
+    font-size: 3rem !important;
   }
 
   .\32 xl\:\!text-2xl {
@@ -4581,6 +4645,10 @@ html :where(.wp-block) {
 
   .xl\:min-h-\[195px\] {
     min-height: 195px;
+  }
+
+  .xl\:min-h-full {
+    min-height: 100%;
   }
 
   .xl\:min-h-\[320px\] {
@@ -4710,8 +4778,16 @@ html :where(.wp-block) {
     gap: 2rem;
   }
 
+  .xl\:gap-32 {
+    gap: 8rem;
+  }
+
   .xl\:\!gap-40 {
     gap: 10rem !important;
+  }
+
+  .xl\:rounded-2xl {
+    border-radius: 1rem;
   }
 
   .xl\:p-2 {
@@ -4802,8 +4878,28 @@ html :where(.wp-block) {
     font-size: 100px;
   }
 
+  .xl\:\!text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .xl\:text-lg {
+    font-size: 1.125rem;
+  }
+
+  .xl\:text-17xl {
+    font-size: 350px;
+  }
+
   .xl\:\!text-lg {
     font-size: 1.125rem !important;
+  }
+
+  .xl\:text-8xl {
+    font-size: 80px;
+  }
+
+  .xl\:text-10xl {
+    font-size: 100px;
   }
 
   .xl\:text-base {
@@ -4826,6 +4922,15 @@ html :where(.wp-block) {
     --tw-scale-x: 1.6;
     --tw-scale-y: 1.6;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .uniq_xl\:gap-20 {
+    gap: 5rem;
+  }
+
+  .uniq_xl\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .uniq_xl\:px-16 {
@@ -5383,8 +5488,20 @@ html :where(.wp-block) {
     height: 427px;
   }
 
+  .lg\:h-20 {
+    height: 5rem;
+  }
+
   .lg\:max-h-\[80px\] {
     max-height: 80px;
+  }
+
+  .lg\:max-h-\[655px\] {
+    max-height: 655px;
+  }
+
+  .lg\:max-h-max {
+    max-height: max-content;
   }
 
   .lg\:max-h-80 {
@@ -5421,6 +5538,10 @@ html :where(.wp-block) {
 
   .lg\:w-2\/4 {
     width: 50%;
+  }
+
+  .lg\:w-15\/24 {
+    width: 62.5%;
   }
 
   .lg\:max-w-\[160px\] {
@@ -5461,6 +5582,14 @@ html :where(.wp-block) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .lg\:\!grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
   .lg\:flex-col-reverse {
     flex-direction: column-reverse;
   }
@@ -5493,8 +5622,16 @@ html :where(.wp-block) {
     gap: 2.5rem;
   }
 
+  .lg\:gap-5 {
+    gap: 1.25rem;
+  }
+
   .lg\:bg-contain {
     background-size: contain;
+  }
+
+  .lg\:bg-\[70\%_top\] {
+    background-position: 70% 0;
   }
 
   .lg\:bg-repeat {
@@ -5503,6 +5640,10 @@ html :where(.wp-block) {
 
   .lg\:p-1 {
     padding: .25rem;
+  }
+
+  .lg\:p-14 {
+    padding: 3.5rem;
   }
 
   .lg\:py-6 {
@@ -5587,6 +5728,14 @@ html :where(.wp-block) {
     padding-left: 2rem;
   }
 
+  .lg\:\!pt-0 {
+    padding-top: 0 !important;
+  }
+
+  .lg\:\!pb-0 {
+    padding-bottom: 0 !important;
+  }
+
   .lg\:pb-8 {
     padding-bottom: 2rem;
   }
@@ -5635,12 +5784,20 @@ html :where(.wp-block) {
     font-size: 1.25rem !important;
   }
 
-  .lg\:\!text-3xl {
-    font-size: 1.875rem !important;
+  .lg\:\!text-lg {
+    font-size: 1.125rem !important;
+  }
+
+  .lg\:\!text-4xl {
+    font-size: 2.25rem !important;
   }
 
   .lg\:text-17xl {
     font-size: 350px;
+  }
+
+  .lg\:\!text-5xl {
+    font-size: 3rem !important;
   }
 
   .lg\:\!text-2xl {
@@ -6320,6 +6477,14 @@ html :where(.wp-block) {
     bottom: -10%;
   }
 
+  .md\:-left-72 {
+    left: -18rem;
+  }
+
+  .md\:-right-72 {
+    right: -18rem;
+  }
+
   .md\:col-span-12 {
     grid-column: span 12 / span 12;
   }
@@ -6655,16 +6820,24 @@ html :where(.wp-block) {
     font-size: 1.5rem !important;
   }
 
-  .md\:text-\[17px\] {
-    font-size: 17px;
-  }
-
   .md\:\!text-5xl {
     font-size: 3rem !important;
   }
 
+  .md\:text-\[17px\] {
+    font-size: 17px;
+  }
+
+  .md\:text-15xl {
+    font-size: 250px;
+  }
+
   .md\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .md\:leading-\[190px\] {
+    line-height: 190px;
   }
 }
 
@@ -6715,6 +6888,14 @@ html :where(.wp-block) {
 
   .sm\:mb-4 {
     margin-bottom: 1rem;
+  }
+
+  .sm\:\!mb-5 {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .sm\:mr-0 {
+    margin-right: 0;
   }
 
   .sm\:-mt-12 {
@@ -6782,6 +6963,10 @@ html :where(.wp-block) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
+  .sm\:\!grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
   .sm\:flex-col {
     flex-direction: column;
   }
@@ -6802,12 +6987,20 @@ html :where(.wp-block) {
     gap: 2rem;
   }
 
+  .sm\:gap-0 {
+    gap: 0;
+  }
+
   .sm\:p-6 {
     padding: 1.5rem;
   }
 
   .sm\:p-0 {
     padding: 0;
+  }
+
+  .sm\:p-5 {
+    padding: 1.25rem;
   }
 
   .sm\:px-9 {
@@ -6823,6 +7016,11 @@ html :where(.wp-block) {
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:px-2 {
+    padding-left: .5rem;
+    padding-right: .5rem;
   }
 
   .sm\:px-6 {
@@ -6860,6 +7058,10 @@ html :where(.wp-block) {
 
   .sm\:pb-8 {
     padding-bottom: 2rem;
+  }
+
+  .sm\:pt-9 {
+    padding-top: 2.25rem;
   }
 
   .sm\:pb-14 {
@@ -6902,8 +7104,16 @@ html :where(.wp-block) {
     font-size: 1.125rem;
   }
 
+  .sm\:\!text-4xl {
+    font-size: 2.25rem !important;
+  }
+
   .sm\:text-base {
     font-size: 1rem;
+  }
+
+  .sm\:leading-none {
+    line-height: 1;
   }
 
   .sm\:opacity-100 {
@@ -7173,6 +7383,14 @@ html :where(.wp-block) {
     top: 0;
   }
 
+  .xs\:-left-40 {
+    left: -10rem;
+  }
+
+  .xs\:-right-40 {
+    right: -10rem;
+  }
+
   .xs\:m-auto {
     margin: auto;
   }
@@ -7285,6 +7503,10 @@ html :where(.wp-block) {
     gap: .75rem;
   }
 
+  .xs\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .xs\:gap-0 {
     gap: 0;
   }
@@ -7359,6 +7581,10 @@ html :where(.wp-block) {
     padding-top: 4rem;
   }
 
+  .xs\:pt-36 {
+    padding-top: 9rem;
+  }
+
   .xs\:text-3xl {
     font-size: 1.875rem;
   }
@@ -7395,8 +7621,8 @@ html :where(.wp-block) {
     font-size: .75rem !important;
   }
 
-  .xs\:text-15xl {
-    font-size: 250px;
+  .xs\:\!text-5xl {
+    font-size: 3rem !important;
   }
 
   .xs\:\!text-\[44px\] {
@@ -7413,6 +7639,40 @@ html :where(.wp-block) {
 
   .xs\:text-10xl {
     font-size: 100px;
+  }
+
+  .xs\:text-15xl {
+    font-size: 250px;
+  }
+
+  .xs\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .xs\:text-8xl {
+    font-size: 80px;
+  }
+
+  .xs\:\!text-sm {
+    font-size: .875rem !important;
+  }
+
+  .xs\:\!text-lg {
+    font-size: 1.125rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .xxs\:\!text-base {
+    font-size: 1rem !important;
+  }
+
+  .xxs\:text-5xl {
+    font-size: 3rem;
+  }
+
+  .xxs\:text-6xl {
+    font-size: 4rem;
   }
 }
 

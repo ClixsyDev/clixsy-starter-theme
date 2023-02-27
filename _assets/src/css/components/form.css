@@ -181,7 +181,7 @@
 
 .banner-form {
   select {
-    @apply rounded-2xl text-headings border-1 border-black text-2xl font-fourth font-bold min-w-[450px] min-h-[65px] shadow-siteWide pr-7 pl-20 mb-5 outline-0 appearance-none bg-no-repeat lg:min-w-[360px] xs:min-w-[260px];
+    @apply rounded-2xl text-headings border-1 border-black text-2xl font-second font-bold min-w-[450px] min-h-[65px] shadow-siteWide pr-7 pl-20 mb-5 outline-0 appearance-none bg-no-repeat lg:min-w-[430px] xs:min-w-min xs:w-full;
   }
 
   select {
@@ -232,7 +232,7 @@
   }
 
   p {
-    @apply w-full text-center font-main font-thin text-white text-xl mb-4 sm:text-xl;
+    @apply w-full text-center font-thin text-white text-xl mb-4 sm:text-xl;
 
     span {
       @apply font-bold
@@ -248,7 +248,7 @@
   }
 
   .next_step {
-    @apply !min-w-[450px] min-h-[75px] font-fourth text-2xl border-white border-[5px] m-auto hover:cursor-pointer lg:!min-w-[360px] lg:text-xl xs:!min-w-[260px];
+    @apply !min-w-[450px] min-h-[75px] font-main text-2xl border-white border-[5px] m-auto hover:cursor-pointer mdt:!min-w-[360px] sm:!min-w-[320px] lg:text-xl xs:!min-w-[100%];
   }
 
   .wpcf7-not-valid-tip {
