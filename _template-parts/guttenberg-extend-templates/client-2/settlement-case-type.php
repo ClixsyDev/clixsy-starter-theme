@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex gap-28 uniq_xl:gap-20 lg:flex-col xs:gap-10">
                 <div class="flex flex-col gap-10 w-9/24 lg:w-full xs:gap-6">
                     <?php if ($settlement_case_type__title) { ?>
-                        <h3 class="font-main text-6xl leading-[65px] lg:!text-5xl sm:!text-4xl"> <?php echo $settlement_case_type__title ?></h3>
+                        <h3 class="font-second text-6xl leading-[65px] lg:!text-5xl sm:!text-4xl"> <?php echo $settlement_case_type__title ?></h3>
                     <?php } ?>
                     <?php if ($settlement_case_type__description) { ?>
                         <div class="settlement_case_type_description text-lg xs:!text-base"><?php echo $settlement_case_type__description ?></div>

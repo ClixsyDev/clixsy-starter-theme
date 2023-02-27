@@ -51,7 +51,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <p class="text-xl text-right font-light leading-6"><?php echo $fights_for_you__text_available ?></p>
                             <?php } ?>
                             <?php if ($fights_for_you__time_available) { ?>
-                                <p class="font-main text-6xl leading-[77px] font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
+                                <p class="font-second text-6xl leading-[77px] font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
                             <?php } ?>
                         </div>
                     <?php } ?>
@@ -63,7 +63,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 !max-h-24 md:m-auto']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h3 class="font-bold text-3xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
+                                        <h3 class="font-bold text-2xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
                                         <p class="text-white"><?php echo $item['description'] ?></p>
