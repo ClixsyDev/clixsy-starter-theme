@@ -2972,8 +2972,8 @@
   gap: 6rem;
 }
 
-.acf-block-preview .gap-\[1px\] {
-  gap: 1px;
+.acf-block-preview .gap-\[2px\] {
+  gap: 2px;
 }
 
 .acf-block-preview .gap-10 {
@@ -2982,10 +2982,6 @@
 
 .acf-block-preview .gap-28 {
   gap: 7rem;
-}
-
-.acf-block-preview .gap-\[2px\] {
-  gap: 2px;
 }
 
 .acf-block-preview .gap-x-4 {
@@ -3616,8 +3612,8 @@
   padding-bottom: 13rem;
 }
 
-.acf-block-preview .pt-\[4\%\] {
-  padding-top: 4%;
+.acf-block-preview .pt-\[6\%\] {
+  padding-top: 6%;
 }
 
 .acf-block-preview .pt-6 {
@@ -3650,10 +3646,6 @@
 
 .acf-block-preview .pb-32 {
   padding-bottom: 8rem;
-}
-
-.acf-block-preview .pt-\[6\%\] {
-  padding-top: 6%;
 }
 
 .acf-block-preview .text-left {
@@ -4821,14 +4813,14 @@ html :where(.wp-block) {
     padding-bottom: 2rem;
   }
 
-  .xl\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .xl\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .xl\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .xl\:pr-20 {
@@ -4843,6 +4835,14 @@ html :where(.wp-block) {
     padding-right: 0;
   }
 
+  .xl\:pb-9 {
+    padding-bottom: 2.25rem;
+  }
+
+  .xl\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
   .xl\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -4853,14 +4853,6 @@ html :where(.wp-block) {
 
   .xl\:pt-7 {
     padding-top: 1.75rem;
-  }
-
-  .xl\:pb-9 {
-    padding-bottom: 2.25rem;
-  }
-
-  .xl\:pt-10 {
-    padding-top: 2.5rem;
   }
 
   .xl\:text-left {
@@ -5959,10 +5951,6 @@ html :where(.wp-block) {
 
   .mdt\:-mt-36 {
     margin-top: -9rem;
-  }
-
-  .mdt\:-mb-\[6\%\] {
-    margin-bottom: -6%;
   }
 
   .mdt\:block {
