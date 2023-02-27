@@ -10,7 +10,8 @@
 
 
 
-function register_about_us() {
+function register_about_us()
+{
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -124,6 +125,16 @@ if (function_exists('acf_add_local_field_group')) :
                     'name' => $block_key . 'first_description',
                     'type' => 'wysiwyg',
                     'label' => 'First description',
+                ),
+                array(
+                    'key' => $block_key . 'background',
+                    'name' => $block_key . 'background',
+                    'type' => 'image',
+                    'label' => 'About Us bg image',
+                    'return_format' => 'url',
+                    'preview_size' => 'thumbnail',
+                    'library' => 'all',
+
                 ),
                 array(
                     'key' => $block_key . 'second_description',

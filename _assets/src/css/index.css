@@ -143,3 +143,37 @@ body.logged-in {
   background: linear-gradient(to bottom, rgba(244, 242, 242, 0) 0%, rgba(244, 242, 242, 1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f4f2f2',GradientType=0 ); /* IE6-8 */
 }
+
+/* Smooth Scrool */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Big Auto Footer Form */
+@layer components {
+  .big-auto-footer-form {
+    margin-bottom: -150px;
+  
+    .fields {
+      display: flex;
+      gap: 20px;
+    }
+
+    .fields label {
+      padding: 0;
+    }
+
+  }
+
+}
+
+/* FAQ Content Box */
+
+@layer components {
+  .faq-content-box ul,
+  .faq-content-box ol {
+  padding-left: 20px;
+     
+    
+  }
+}

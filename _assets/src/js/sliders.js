@@ -93,6 +93,33 @@ if (document.querySelector(verdictsSlider) != undefined && document.querySelecto
   });
 }
 
+const verdictsSliderBa = '.verdicts_slider_ba';
+if (document.querySelector(verdictsSliderBa) != undefined && document.querySelector(verdictsSliderBa) != null) {
+  Array.from(getElements(verdictsSliderBa)).forEach((item) => {
+    new Glide(item, {
+      type: 'carousel',
+      autoplay: 1,
+      animationDuration: 4000,
+      // animationTimingFunc: 'linear',
+      perView: 5,
+      breakpoints: {
+        1496: {
+          perView: 4,
+        },
+        1200: {
+          perView: 3,
+        },
+        868: {
+          perView: 2,
+        },
+        640: {
+          perView: 1,
+        },
+      },
+    }).mount();
+  });
+}
+
 const memorableSlider = '.memorableSlider';
 if (document.querySelector(memorableSlider) != undefined && document.querySelector(memorableSlider) != null) {
   Array.from(getElements(memorableSlider)).forEach((item) => {
