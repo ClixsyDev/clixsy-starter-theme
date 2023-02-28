@@ -30,12 +30,12 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="first-step text-left  z-[1] w-1/2 mdt:w-full ">
                         <div class="form banner-form big-auto-footer-form p-10 xl:p-7 bg-accent font-main w-22/24 2xl:w-full mx-auto 2xl:mx-0 mdt:text-center">
                             <?php if ($big_auto_footer_form__title_form) { ?>
-                                <div class="text-white text-2xl 2xl:!text-[20px] xl:!text-lg xs:!text-base">
+                                <div class="text-white font-thin text-2xl 2xl:!text-[20px] mdt:!pb-3 xl:!text-lg xs:!text-base">
                                     <?php echo $big_auto_footer_form__title_form ?>
                                 </div>
                             <?php } ?>
                             <?php if ($big_auto_footer_form__description_form) { ?>
-                                <div class="text-white text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $big_auto_footer_form__description_form ?></div>
+                                <div class="text-white font-second uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $big_auto_footer_form__description_form ?></div>
                             <?php } ?>
                             <?php echo $big_auto_footer_form__form_select ? do_shortcode('[contact-form-7 id="' . $big_auto_footer_form__form_select['0'] . '" title=""]') : '' ?>
                         </div>
