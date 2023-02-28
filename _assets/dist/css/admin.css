@@ -5444,16 +5444,8 @@ html :where(.wp-block) {
     margin-bottom: -6%;
   }
 
-  .lg\:mt-5 {
-    margin-top: 1.25rem;
-  }
-
   .lg\:\!mt-5 {
     margin-top: 1.25rem !important;
-  }
-
-  .lg\:-mt-4 {
-    margin-top: -1rem;
   }
 
   .lg\:-mt-5 {
