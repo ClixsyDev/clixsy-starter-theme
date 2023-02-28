@@ -66,7 +66,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <h3 class="font-bold text-2xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
-                                        <p class="text-white"><?php echo $item['description'] ?></p>
+                                        <div class="text-white"><?php echo $item['description'] ?></div>
                                     <?php } ?>
                                 </div>
                             <?php } ?>
