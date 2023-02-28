@@ -177,3 +177,15 @@ html {
     
   }
 }
+
+.merits_inner_block {
+  .glide__slides {
+    padding: 0;
+  }
+}
+
+.iframe-full-width {
+  iframe {
+    width: 100% !important;
+  }
+}

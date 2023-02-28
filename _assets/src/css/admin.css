@@ -10,14 +10,72 @@
 @import './components/buttons.css';
 @import './components/_headings.css';
 @import './components/form.css';
-@import './components/_faq.css'; 
+@import './components/_faq.css';
 
 html body .edit-post-visual-editor__content-area {
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  .html-active .switch-html,
+  .tmce-active .switch-tmce {
+    background: #f6f7f7;
+    color: #50575e;
+    border-bottom-color: #f6f7f7;
+  }
+
+  textarea {
+    width: 100% !important;
+    padding: 4px 8px !important;
+    padding-top: 4px !important;
+    padding-right: 8px !important;
+    padding-bottom: 4px !important;
+    padding-left: 8px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
 }
 
+html body .edit-post-visual-editor__content-area .wp-switch-editor {
+  float: left;
+  box-sizing: content-box;
+  position: relative;
+  top: 1px;
+  background: #f0f0f1;
+  color: #646970;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1.46153846;
+  height: 20px;
+  margin: 5px 0 0 5px;
+  padding: 3px 8px 4px;
+  padding-top: 3px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  border: 1px solid #dcdcde;
+  &.switch-tmce {
+    float: left;
+    box-sizing: content-box;
+    position: relative;
+    top: 1px;
+    background: #f0f0f1;
+    color: #646970;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.46153846;
+    height: 20px;
+    margin: 5px 0 0 5px;
+    padding: 3px 8px 4px;
+    padding-top: 3px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    border: 1px solid #dcdcde;
+  }
+}
 html body {
   .acf-field {
     input,
@@ -34,4 +92,3 @@ html body {
 html :where(.wp-block) {
   max-width: 100%;
 }
-

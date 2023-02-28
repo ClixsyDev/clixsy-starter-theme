@@ -107,4 +107,4 @@ if ($is_preview && !empty($previewImage)) {
         <img src="<?= wp_get_attachment_image_url($bg_image_with_attorney, 'full') ?>" class="absolute left-1/2 bottom-0 w-full h-full object-cover max-w-[1920px] pt-5 mx-auto -translate-x-1/2 fhd:left-0 fhd:translate-x-0 fhd:w-auto fhd:min-w-full mdt:hidden" alt="">
     </div>
 <?php }
-if (!get_fields()) echo 'Fill block with content';
+if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

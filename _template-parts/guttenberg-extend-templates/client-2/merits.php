@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <img class="" src="<?= wp_get_attachment_image_url($item['merits__icons'], 'full') ?>">
                                     <?php } ?>
                                     <?php if ($item['merits__title']) { ?>
-                                        <h3 class="font-second text-white  xxxl:text-xl md:text-base xs:text-base"><?php echo $item['merits__title'] ?></h3>
+                                        <h3 class="font-main text-white  xxxl:text-xl md:text-base xs:text-base"><?php echo $item['merits__title'] ?></h3>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -36,4 +36,4 @@ if ($is_preview && !empty($previewImage)) {
     </section>
 
 <?php }
-if (!get_fields()) echo 'Fill block with content';
+if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

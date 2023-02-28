@@ -106,5 +106,5 @@ if ($is_preview && !empty($previewImage)) {
     </div>
 
 <?php
-    if (!get_fields()) echo 'Fill block with content';
+    if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';
 }

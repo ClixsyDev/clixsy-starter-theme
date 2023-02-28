@@ -10,8 +10,7 @@
 
 
 
-function register_welcome_banner_contact_design_three()
-{
+function register_welcome_banner_contact_design_three() {
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -22,6 +21,9 @@ function register_welcome_banner_contact_design_three()
                 'icon'            => 'groups',
                 'category'        => 'clixsy',
                 'keywords'           => array('welcome', 'hero', 'contact'),
+                'supports'        => array(
+                    'jsx'    => true, // Enable support for JSX.
+                ),
                 'example'  => array(
                     'attributes' => array(
                         'mode' => 'preview',
@@ -54,14 +56,22 @@ if (function_exists('acf_add_local_field_group')) {
             array(
                 'key' => $block_key . 'bg',
                 'name' => $block_key . 'bg',
-                'type' => 'color_picker',
+                'type' => 'extended-color-picker',
                 'label' => 'Set background color for section',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
             ),
             array(
-                'key' => $block_key . 'top_description',
-                'name' => $block_key . 'top_description',
-                'type' => 'text',
-                'label' => 'Top description',
+                'key' => $block_key . 'block_bg',
+                'name' => $block_key . 'block_bg',
+                'type' => 'image',
+                'label' => 'Background image',
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
             ),
             array(
                 'key' => $block_key . 'title',
@@ -69,31 +79,47 @@ if (function_exists('acf_add_local_field_group')) {
                 'type' => 'text',
                 'label' => 'Title',
             ),
-            array(
-                'key' => $block_key . 'bottom_description',
-                'name' => $block_key . 'bottom_description',
-                'type' => 'text',
-                'label' => 'Bottom description',
-            ),
-            array(
-                'key' => $block_key . 'tel',
-                'name' => $block_key . 'tel',
-                'type' => 'text',
-                'label' => 'Number phone',
-            ),
+
             array(
                 'key' => $block_key . 'image',
                 'name' => $block_key . 'image',
                 'type' => 'image',
                 'label' => 'Image',
-                'return_format' => 'array',
+                'return_format' => 'id',
                 'preview_size' => 'thumbnail'
             ),
             array(
                 'key' => $block_key . 'form_bg',
                 'name' => $block_key . 'form_bg',
-                'type' => 'color_picker',
+                'type' => 'extended-color-picker',
                 'label' => 'Set background color for form',
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array(
+                'key' => $block_key . 'form_subtitle',
+                'name' => $block_key . 'form_subtitle',
+                'type' => 'text',
+                'label' => 'Form subtitle',
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array(
+                'key' => $block_key . 'form_title',
+                'name' => $block_key . 'form_title',
+                'type' => 'text',
+                'label' => 'Form title',
+                'wrapper' => array(
+                    'width' => '33',
+                    'class' => '',
+                    'id' => '',
+                ),
             ),
             array(
                 'key' => $block_key . 'form_select',
@@ -108,12 +134,18 @@ if (function_exists('acf_add_local_field_group')) {
                     0 => 'search',
                 ),
                 'return_format' => 'id',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
             ),
             array(
                 'key' => $block_key . 'form_description',
                 'name' => $block_key . 'form_description',
                 'type' => 'wysiwyg',
                 'label' => 'Form description',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
             ),
         )
     ));
