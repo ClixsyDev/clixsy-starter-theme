@@ -58,7 +58,7 @@ if ($is_preview && !empty($previewImage)) {
 
                                     <?php
                                     Template::load('_template-parts/components/button.php', [
-                                        'link' => $item['auto_accident_resources__faq_number'],
+                                        'link' => 'tel:' . $item['auto_accident_resources__faq_number'],
                                         'text' => __($item['auto_accident_resources__faq_number'], 'law'),
                                         'text_hover' => false,
                                         'classes' => 'bg-white text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
