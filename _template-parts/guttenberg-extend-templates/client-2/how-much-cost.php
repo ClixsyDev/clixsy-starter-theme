@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                     </div>
                     <div class="font-main z-10 pb-20 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
-                        <div class="font-second text-[500px] mt-8 leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[190px]">$0</div>
+                        <div class="font-second text-[500px] leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[190px] md:mt-8">$0</div>
                     </div>
                 </div>
             <?php } ?>
