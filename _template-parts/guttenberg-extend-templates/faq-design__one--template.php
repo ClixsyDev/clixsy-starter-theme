@@ -78,4 +78,4 @@ if ($is_preview && !empty($previewImage)) {
 if (!$faq_design_one__disable_schema) {
     faq_schema($faq_design_one__faq_repeater, $faq_design_one__faq_repeater_hidden);
 }
-if (!get_fields()) echo 'Fill block with content';
+if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

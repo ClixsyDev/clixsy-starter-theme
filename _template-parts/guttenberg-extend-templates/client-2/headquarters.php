@@ -14,7 +14,7 @@ if ($is_preview && !empty($previewImage)) {
     $headquarters__address = get_field('headquarters__address');
     $headquarters__email = get_field('headquarters__email');
     $headquarters__phone = get_field('headquarters__phone'); ?>
-    
+
     <section class="py-8">
         <div class="container">
             <?php if ($headquarters__title) { ?>
@@ -23,12 +23,12 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <div class="pt-16 flex justify-center gap-10 md:pt-12 md:flex-col md:items-center">
                 <?php if ($headquarters__map) { ?>
-                    <div>
+                    <div class="w-6/12 iframe-full-width md:w-full">
                         <?php echo $headquarters__map ?>
                     </div>
                 <?php } ?>
                 <?php if ($headquarters__address || $headquarters__email || $headquarters__phone) { ?>
-                    <div class="flex flex-col gap-5 md:text-center xs:gap-3">
+                    <div class="w-6/12 flex flex-col gap-5 md:text-center xs:gap-3 md:w-full">
                         <?php if ($headquarters__address) { ?>
                             <div>
                                 <h4 class="font-second font-bold text-3xl xs:text-2xl">Address</h4>
@@ -52,6 +52,6 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
     </section>
-    
+
 <?php }
-if (!get_fields()) echo 'Fill block with content';
+if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

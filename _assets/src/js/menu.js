@@ -67,16 +67,18 @@ export const mainMenu = () => {
     });
   }
 
-  menuButton.addEventListener('click', (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    if (menuButton.classList.contains('open')) {
-      menuClose();
-    } else {
-      menuOpen();
-      setMenuLevel(1);
-    }
-  });
+  if (ifSelectorExist(menuButton)) {
+    menuButton.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (menuButton.classList.contains('open')) {
+        menuClose();
+      } else {
+        menuOpen();
+        setMenuLevel(1);
+      }
+    });
+  }
 
   const subMenus = document.querySelectorAll('.o-sub[data-target-alias]');
 

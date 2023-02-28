@@ -1,5 +1,3 @@
-@tailwind base;
-
 @layer {
     .background-image-footer {
         @apply bg-[url('../../../assets/img/background-footer.png')];
