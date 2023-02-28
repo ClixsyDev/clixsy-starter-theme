@@ -3772,6 +3772,10 @@
   font-size: 250px;
 }
 
+.acf-block-preview .text-\[500px\] {
+  font-size: 500px;
+}
+
 .acf-block-preview .font-bold {
   font-weight: 700;
 }
