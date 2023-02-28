@@ -1281,6 +1281,7 @@ if (document.querySelector(merits) != undefined && document.querySelector(merits
         perView: 4,
         type: "carousel",
         animationDuration: 4000,
+        autoplay: 1,
         breakpoints: {
             1496: {
                 perView: 3,
