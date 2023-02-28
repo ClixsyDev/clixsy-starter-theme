@@ -29,9 +29,9 @@ if ($is_preview && !empty($previewImage)) {
 
             <div class="flex flex-col gap-[2px] mb-10">
                 <?php foreach ($auto_accident_resources__items as $item) { ?>
-                    <div class="bg-smoke py-2 px-8 sm:px-4 w-full">
-                        <a href="#<?php echo $item['auto_accident_resources__faq_title'] ?>" class=" text-white text-3xl mdt:!text-2xl  font-fourth"><?php echo $item['auto_accident_resources__faq_title'] ?></a>
-                    </div>
+                    <a href="#<?php echo $item['auto_accident_resources__faq_title'] ?>" class="bg-smoke block py-2 px-8 sm:px-4 w-full">
+                        <h3 class="text-white text-3xl mdt:!text-2xl  font-fourth"><?php echo $item['auto_accident_resources__faq_title'] ?></h3>
+                    </a>
                 <?php } ?>
             </div>
             <div class="flex flex-col">
