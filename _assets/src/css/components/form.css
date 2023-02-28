@@ -40,7 +40,43 @@
     .wpcf7-not-valid-tip {
       @apply border-b-2 border-red-600 w-max;
     }
+
+    .fields {
+      @apply flex gap-5;
+
+      label {
+        @apply p-0;
+
+        span {
+          @apply !rounded-md;
+
+          input {
+            outline-width: 0;
+          }
+        }
+      }
+
+      .textarea-label {
+        @apply w-full;
+        textarea {
+          outline-width: 0;
+        }
+      }
+    }
+
+    .btn {
+      @apply border-[3px] mb-5 rounded-md;
+    }
   }
+
+  p {
+    @apply !w-full text-white;
+
+    a {
+      @apply font-bold underline;
+    }
+  }
+
   &.dark_style {
     @apply shadow-lg;
     form {

@@ -5724,10 +5724,6 @@ html :where(.wp-block) {
     padding-bottom: 0 !important;
   }
 
-  .lg\:pb-8 {
-    padding-bottom: 2rem;
-  }
-
   .lg\:pt-16 {
     padding-top: 4rem;
   }
