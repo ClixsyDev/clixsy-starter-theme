@@ -160,6 +160,10 @@ html {
       gap: 20px;
     }
 
+    button {
+      @apply rounded-md;
+    }
+
     .fields label {
       padding: 0;
       width: 50%;       
