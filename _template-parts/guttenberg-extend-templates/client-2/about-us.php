@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1]">
+    <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 xs:!pt-12 relative z-[1]">
         <div class="container">
             <?php if ($about_us__title) { ?>
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-96 xl:text-left xl:ml-0 md:text-5xl"><?php echo $about_us__title ?></h2>
@@ -67,12 +67,12 @@ if ($is_preview && !empty($previewImage)) {
                                 'link' => $about_us__link['url'],
                                 'text' => __($about_us__link['title'], 'law'),
                                 'text_hover' => false,
-                                'classes' => 'btn_sm bigauto_red hover_accent !max-w-[460px] rounded-xl ', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                'classes' => 'btn_sm bigauto_red hover_accent !max-w-[460px] rounded-xl xs:!text-xl', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
                     </div>
                     <?php if ($about_us__items || $about_us__title_items) { ?>
-                        <div class="shadow-siteWide bg-white w-2/6 px-12 xl:px-8 pt-9 pb-20 xl:pb-9 h-max lg:w-full lg:m-auto lg:px-7 sm:pb-10">
+                        <div class="shadow-siteWide bg-white w-2/6 px-12 xl:px-8 pt-9 pb-20 xl:pb-9 h-max lg:w-full lg:m-auto lg:px-7 sm:pb-10  ">
                             <?php if ($about_us__title_items) { ?>
                                 <h3 class="font-second text-3xl text-headings pb-16 sm:pb-8 "><?php echo $about_us__title_items ?></h3>
                             <?php } ?>
