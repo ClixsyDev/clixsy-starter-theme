@@ -8893,6 +8893,10 @@ img, video {
   margin-top: -8rem !important;
 }
 
+.\!mb-0 {
+  margin-bottom: 0 !important;
+}
+
 .block {
   display: block;
 }

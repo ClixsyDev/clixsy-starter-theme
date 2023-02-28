@@ -5838,6 +5838,10 @@ html body .edit-post-visual-editor__content-area .\!-mt-32 {
   margin-top: -8rem !important;
 }
 
+html body .edit-post-visual-editor__content-area .\!mb-0 {
+  margin-bottom: 0 !important;
+}
+
 html body .edit-post-visual-editor__content-area .block {
   display: block;
 }
