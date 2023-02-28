@@ -15,7 +15,7 @@ function register_logo_design_two() {
         acf_register_block_type(
             array(
                 'name'            => 'logo-design-two',
-                'title'           => __('Logo', 'clixsy'),
+                'title'           => __('Logo design two', 'clixsy'),
                 'description'      => __('Design v1.', 'clixsy'),
                 'render_template' => '_template-parts/guttenberg-extend-templates/client-2/logo-section-design__two.php',
                 'icon'            => 'groups',
