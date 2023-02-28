@@ -196,7 +196,7 @@
   }
 
   .second-step-form {
-    @apply border-2 border-white px-16 pb-10 pt-16 -mt-14 sm:pb-5 sm:px-5;
+    @apply border-2 text-left border-white px-16 pb-10 pt-16 -mt-14 sm:pb-5 sm:px-5;
 
     p {
       @apply text-left;

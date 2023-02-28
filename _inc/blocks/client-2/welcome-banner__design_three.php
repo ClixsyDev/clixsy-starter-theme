@@ -65,6 +65,18 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Subtitle',
                 ),
                 array(
+                    'key' => $block_key . 'select_font',
+                    'name' => $block_key . 'select_font',
+                    'label' => 'Select the font of the subtitle',
+                    'type' => 'radio',
+                    'choices' => array(
+                        'Normal' => 'Normal',
+                        'Bold' => 'Bold',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
+                array(
                     'key' => $block_key . 'bg',
                     'name' => $block_key . 'bg',
                     'type' => 'color_picker',

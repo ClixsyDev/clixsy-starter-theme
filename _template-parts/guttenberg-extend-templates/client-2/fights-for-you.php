@@ -66,7 +66,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <h3 class="font-bold text-2xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
-                                        <p class="text-white"><?php echo $item['description'] ?></p>
+                                        <div class="text-white"><?php echo $item['description'] ?></div>
                                     <?php } ?>
                                 </div>
                             <?php } ?>
@@ -100,12 +100,12 @@ if ($is_preview && !empty($previewImage)) {
             <div class="relative pt-12 lg:!pt-0 rounded-2xl shadow-siteWide" style="background-color: <?php echo $fights_for_you__cost_block_bg ?: ''  ?> ;">
                 <?php if ($fights_for_you__cost_title || $fights_for_you__cost_description || $fights_for_you__cost_link) { ?>
                     <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $fights_for_you__cost_select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-24' ?>">
-                        <div class="w-11/24 z-10 lg:items-center lg:w-full lg:text-center">
+                        <div class="w-12/24 z-10 lg:items-center lg:w-full lg:text-center">
                             <?php if ($fights_for_you__cost_title) { ?>
                                 <h3 class="text-headings font-second pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $fights_for_you__cost_title ?></h3>
                             <?php } ?>
                             <?php if ($fights_for_you__cost_description) { ?>
-                                <p class="text-xl pb-16 leading-tight xl:text-lg lg:pb-10"><?php echo $fights_for_you__cost_description ?></p>
+                                <p class="pb-16 text-lg leading-tight xl:text-lg lg:pb-10"><?php echo $fights_for_you__cost_description ?></p>
                             <?php } ?>
                             <?php if ($fights_for_you__cost_link && $fights_for_you__cost_link['url']) { ?>
                                 <?php
@@ -117,8 +117,8 @@ if ($is_preview && !empty($previewImage)) {
                                 ]); ?>
                             <?php } ?>
                         </div>
-                        <div class="font-main z-10 pb-24 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
-                            <div class="font-second text-[430px] mt-8 leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[190px]">$0</div>
+                        <div class="font-main z-10 pb-20 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
+                            <div class="font-second text-[500px] leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[190px] md:mt-8">$0</div>
                         </div>
                     </div>
                 <?php } ?>
