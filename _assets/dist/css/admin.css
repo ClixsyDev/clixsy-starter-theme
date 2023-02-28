@@ -6150,14 +6150,6 @@ html :where(.wp-block) {
     padding-top: 1.25rem !important;
   }
 
-  .mdt\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .mdt\:\!pb-4 {
-    padding-bottom: 1rem !important;
-  }
-
   .mdt\:\!pb-3 {
     padding-bottom: .75rem !important;
   }
