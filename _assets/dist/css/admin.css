@@ -1835,10 +1835,6 @@
   right: 11%;
 }
 
-.acf-block-preview .-left-25\% {
-  left: -25%;
-}
-
 .acf-block-preview .right-2 {
   right: .5rem;
 }
@@ -2650,10 +2646,6 @@
 
 .acf-block-preview .w-5\/12 {
   width: 41.6667%;
-}
-
-.acf-block-preview .w-11\/24 {
-  width: 45.8333%;
 }
 
 .acf-block-preview .w-7\/24 {
@@ -3752,15 +3744,7 @@
   font-size: 75px;
 }
 
-.acf-block-preview .text-\[430px\] {
-  font-size: 430px;
-}
-
-.acf-block-preview .text-13xl {
-  font-size: 150px;
-}
-
-.acf-block-preview .text-20xl {
+.acf-block-preview .text-\[500px\] {
   font-size: 500px;
 }
 
@@ -3770,10 +3754,6 @@
 
 .acf-block-preview .text-15xl {
   font-size: 250px;
-}
-
-.acf-block-preview .text-\[500px\] {
-  font-size: 500px;
 }
 
 .acf-block-preview .font-bold {
@@ -4931,10 +4911,6 @@ html :where(.wp-block) {
 }
 
 @media (max-width: 1200px) {
-  .uniq_xl\:w-23\/24 {
-    width: 95.8333%;
-  }
-
   .uniq_xl\:scale-\[1\.6\] {
     --tw-scale-x: 1.6;
     --tw-scale-y: 1.6;
@@ -4948,19 +4924,6 @@ html :where(.wp-block) {
   .uniq_xl\:px-0 {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .uniq_xl\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .uniq_xl\:text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .uniq_xl\:text-lg {
-    font-size: 1.125rem;
   }
 }
 
@@ -5433,18 +5396,6 @@ html :where(.wp-block) {
     top: 98%;
   }
 
-  .lg\:-top-7\% {
-    top: -7%;
-  }
-
-  .lg\:-left-35\% {
-    left: -35%;
-  }
-
-  .lg\:-top-7 {
-    top: -1.75rem;
-  }
-
   .lg\:bottom-\[-56px\] {
     bottom: -56px;
   }
@@ -5523,10 +5474,6 @@ html :where(.wp-block) {
 
   .lg\:max-h-max {
     max-height: max-content;
-  }
-
-  .lg\:max-h-80 {
-    max-height: 20rem;
   }
 
   .lg\:min-h-max {
@@ -5811,10 +5758,6 @@ html :where(.wp-block) {
 
   .lg\:\!text-4xl {
     font-size: 2.25rem !important;
-  }
-
-  .lg\:text-17xl {
-    font-size: 350px;
   }
 
   .lg\:\!text-5xl {
@@ -6550,6 +6493,10 @@ html :where(.wp-block) {
     margin-bottom: auto;
   }
 
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .md\:-mt-24 {
     margin-top: -6rem;
   }
@@ -7048,11 +6995,6 @@ html :where(.wp-block) {
     padding-right: .5rem;
   }
 
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
   .sm\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -7408,10 +7350,6 @@ html :where(.wp-block) {
     right: -8%;
   }
 
-  .xs\:top-0 {
-    top: 0;
-  }
-
   .xs\:-left-40 {
     left: -10rem;
   }
@@ -7664,14 +7602,6 @@ html :where(.wp-block) {
 
   .xs\:\!text-3xl {
     font-size: 1.875rem !important;
-  }
-
-  .xs\:text-10xl {
-    font-size: 100px;
-  }
-
-  .xs\:text-15xl {
-    font-size: 250px;
   }
 
   .xs\:text-6xl {
