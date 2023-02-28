@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
 
 
 ?>
-    <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 xs:!pt-12 relative z-[1]">
+    <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1] lg:!pt-8">
         <div class="container">
             <?php if ($about_us__title) { ?>
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-96 xl:text-left xl:ml-0 md:text-5xl"><?php echo $about_us__title ?></h2>

@@ -13,7 +13,7 @@ if ($is_preview && !empty($previewImage)) {
     $auto_accident_resources__subtitle = get_field('auto_accident_resources__subtitle');
     $auto_accident_resources__items = get_field('auto_accident_resources__items');
 ?>
-    <section class="container mt-14">
+    <section class="container mt-14 lg:!mt-0">
         <?php if ($auto_accident_resources__title) { ?>
             <div id="<?php echo $auto_accident_resources__title ?>" class="flex justify-center">
                 <h2 class="font-second text-6xl xl:pb-5 2xl:text-4xl xl:text-3xl"> <?php echo $auto_accident_resources__title ?></h2>
