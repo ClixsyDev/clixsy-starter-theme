@@ -5991,6 +5991,61 @@ h2 span {
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
+.form_elements_design_one form .fields {
+  gap: 1.25rem;
+  display: flex;
+}
+
+@media (max-width: 640px) {
+  .form_elements_design_one form .fields {
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.form_elements_design_one form .fields label {
+  padding: 0;
+}
+
+.form_elements_design_one form .fields label span {
+  border-radius: .375rem !important;
+}
+
+@media (max-width: 640px) {
+  .form_elements_design_one form .fields label span input {
+    margin: 0;
+  }
+}
+
+.form_elements_design_one form .fields label span input {
+  outline-width: 0;
+}
+
+.form_elements_design_one form .fields .textarea-label {
+  width: 100%;
+}
+
+.form_elements_design_one form .fields .textarea-label textarea {
+  outline-width: 0;
+}
+
+.form_elements_design_one form .btn {
+  border-width: 3px;
+  border-radius: .375rem;
+  margin-bottom: 1.25rem;
+}
+
+.form_elements_design_one p {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  width: 100% !important;
+}
+
+.form_elements_design_one p a {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
 .form_elements_design_one.dark_style {
   --tw-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);

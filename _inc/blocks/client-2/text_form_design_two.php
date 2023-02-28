@@ -80,6 +80,12 @@ if (function_exists('acf_add_local_field_group')) :
                 'instructions' => '',
             ),
             array(
+                'key' => $block_key . 'disclaimer',
+                'name' => $block_key . 'disclaimer',
+                'type' => 'wysiwyg',
+                'label' => 'Form disclaimer',
+            ),
+            array(
                 'key' => $block_key . 'form_select',
                 'name' => $block_key . 'form_select',
                 'label' => 'Select form',
