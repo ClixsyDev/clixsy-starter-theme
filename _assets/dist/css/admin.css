@@ -2208,6 +2208,10 @@
   margin-top: -4rem;
 }
 
+.acf-block-preview .-mt-12 {
+  margin-top: -3rem;
+}
+
 .acf-block-preview .mb-2\.5 {
   margin-bottom: .625rem;
 }
@@ -3216,12 +3220,12 @@
   --tw-bg-opacity: .7;
 }
 
-.acf-block-preview .bg-opacity-60 {
-  --tw-bg-opacity: .6;
-}
-
 .acf-block-preview .\!bg-opacity-80 {
   --tw-bg-opacity: .8 !important;
+}
+
+.acf-block-preview .bg-opacity-60 {
+  --tw-bg-opacity: .6;
 }
 
 .acf-block-preview .bg-cover {
@@ -5438,6 +5442,22 @@ html :where(.wp-block) {
 
   .lg\:-mb-\[6\%\] {
     margin-bottom: -6%;
+  }
+
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .lg\:\!mt-5 {
+    margin-top: 1.25rem !important;
+  }
+
+  .lg\:-mt-4 {
+    margin-top: -1rem;
+  }
+
+  .lg\:-mt-5 {
+    margin-top: -1.25rem;
   }
 
   .lg\:block {
