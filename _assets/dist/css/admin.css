@@ -6817,6 +6817,10 @@ html :where(.wp-block) {
     padding: 1.25rem;
   }
 
+  .sm\:\!p-0 {
+    padding: 0 !important;
+  }
+
   .sm\:px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -6876,6 +6880,10 @@ html :where(.wp-block) {
 
   .sm\:pt-9 {
     padding-top: 2.25rem;
+  }
+
+  .sm\:pb-4 {
+    padding-bottom: 1rem;
   }
 
   .sm\:pb-14 {
