@@ -13,8 +13,8 @@ if ($is_preview && !empty($previewImage)) {
 
     <?php if ($logo__image) { ?>
         <section class="pt-7">   
-            <div class="container">
-                <?php echo wp_get_attachment_image($logo__image, 'full', '', ['class' => 'm-auto pb-3']) ?>
+            <div class="container sm:!p-0">
+                <?php echo wp_get_attachment_image($logo__image, 'full', '', ['class' => 'm-auto pb-3 sm:pb-4']) ?>
             </div>
             <div class="dots-bg"></div>
         </section>
