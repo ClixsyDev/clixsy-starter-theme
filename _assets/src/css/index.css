@@ -156,11 +156,35 @@ html {
   
     .fields {
       display: flex;
+      flex-direction: row;
       gap: 20px;
+    }
+
+    button {
+      @apply rounded-md;
     }
 
     .fields label {
       padding: 0;
+      width: 50%;       
+
+    }
+
+    .fields .textarea-label  {
+      padding: 0;
+      width: 100%;
+    }
+
+    @media (max-width:576px) {
+      .fields {
+        flex-direction: column;
+        gap:0px;
+      }
+
+      .fields label {
+        padding: 0;
+        width: 100%;
+      }
     }
 
   }

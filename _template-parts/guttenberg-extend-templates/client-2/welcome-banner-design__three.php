@@ -16,7 +16,8 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_three__description_form = get_field('welcome_banner__design_three__description_form');
     $welcome_banner__design_three__form_select = get_field('welcome_banner__design_three__form_select');
     $welcome_banner__design_three__description_second_form = get_field('welcome_banner__design_three__description_second_form');
-?>
+    $welcome_banner__design_three__select_font = get_field('welcome_banner__design_three__select_font'); ?>
+
     <section class="pb-4 pt-10 overflow-x-clip relative" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
         <?php if ($welcome_banner__design_three__background_image) { ?>
             <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-left-72 xs:-left-40']) ?>
@@ -24,7 +25,7 @@ if ($is_preview && !empty($previewImage)) {
         <div>
             <div class="container text-center">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
-                    <h2 class="text-white font-thin text-3xl uppercase lg:!text-2xl sm:!text-xl xs:!text-lg"><?php echo $welcome_banner__design_three__subtitle ?></h2>
+                    <h2 class="text-white text-3xl lg:!text-2xl sm:!text-xl xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h2>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
                     <h1 class="hero_heading_h1 banner"><?php echo $welcome_banner__design_three__title ?></h1>

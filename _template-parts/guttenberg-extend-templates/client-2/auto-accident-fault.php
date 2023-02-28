@@ -14,14 +14,14 @@ if ($is_preview && !empty($previewImage)) {
     $auto_accident_fault__description = get_field('auto_accident_fault__description');
     $auto_accident_fault__items = get_field('auto_accident_fault__items');
     $auto_accident_fault__block_color = get_field('auto_accident_fault__block_color');
-    $auto_accident_fault__description_repeater = get_field('auto_accident_fault__description_repeater');?>
+    $auto_accident_fault__description_repeater = get_field('auto_accident_fault__description_repeater'); ?>
 
-    <section class="pt-20">
+    <section class="pt-20 xl:pt-10">
         <div class="container">
             <div class="flex gap-16 px-6 xl:flex-col-reverse xl:items-center md:gap-9 xs:px-0">
                 <?php if ($auto_accident_fault__image) { ?>
                     <div class="w-12/24 md:w-19/24">
-                        <?php echo wp_get_attachment_image($auto_accident_fault__image, 'full', '', ['class' => 'w-full']) ?>
+                        <?php echo wp_get_attachment_image($auto_accident_fault__image, 'full', '', ['class' => 'w-full rounded-md']) ?>
                     </div>
                 <?php } ?>
                 <?php if ($auto_accident_fault__title || $auto_accident_fault__description) { ?>

@@ -59,7 +59,7 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php } ?>
                             </span>
                             <?php if ($case_title) { ?>
-                                <div class="btn-accident bg-white border-2 border-solid border-headings"><?= $case_title ?></div>
+                                <div class="btn-accident bg-white border-2 border-solid border-headings leading-none"><?= $case_title ?></div>
                             <?php } ?>
                         </a>
                     <?php } ?>
@@ -67,14 +67,14 @@ if ($is_preview && !empty($previewImage)) {
             </div>
 
         </div>
-        <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4 ">
+        <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4 md:w-full">
             <?php if ($button1) { ?>
                 <?php
                 Template::load('_template-parts/components/button.php', [
                     'link' => $button1['url'],
                     'text' => __($button1['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => $button_size . ' hover_accent bg-accent bg-button_color rounded-xl uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => $button_size . ' hover_accent !border-[#d1383a] bg-accent bg-button_color rounded-xl uppercase max-w-[470px] md:w-full', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             <?php } ?>
             <?php if ($button2) { ?>
@@ -83,7 +83,7 @@ if ($is_preview && !empty($previewImage)) {
                     'link' => $button2['url'],
                     'text' => __($button2['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => $button_size . '  bg-white text-button_color border-4 !border-[#d1383a]  hover:!text-white hover:!bg-button_color  rounded-xl uppercase max-w-[470px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => $button_size . '  bg-white text-button_color border-4 !border-[#d1383a]  hover:!text-white hover:!bg-button_color  rounded-xl uppercase max-w-[470px] md:w-full', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             <?php } ?>
         </div>

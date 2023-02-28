@@ -16,15 +16,15 @@ if ($is_preview && !empty($previewImage)) {
     $how_much_cost__select = get_field('how_much_cost__select'); ?>
 
     <div class="overflow-hidden">
-        <div class="container" style="background-color: <?php echo $how_much_cost__block_bg ?: ''  ?> ;">
+        <div class="container relative rounded-2xl" style="background-color: <?php echo $how_much_cost__block_bg ?: ''  ?> ;">
             <?php if ($how_much_cost__title || $how_much_cost__description || $how_much_cost__link) { ?>
-                <div class="flex items-center justify-between rounded-2xl uniq_xl:w-23/24 uniq_xl:px-16 lg:flex-col-reverse lg:pb-10 sm:px-6 <?php echo $how_much_cost__select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-20' ?>">
-                    <div class="w-12/24 flex flex-col gap-6 lg:items-center lg:w-full lg:text-center">
+                <div class="flex gap-44 pt-12 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $how_much_cost__select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-20' ?>">
+                    <div class="w-12/24 z-10 flex flex-col lg:items-center lg:w-full lg:text-center">
                         <?php if ($how_much_cost__title) { ?>
-                            <h3 class="text-headings leading-tight font-second text-5xl font-medium uniq_xl:text-4xl"><?php echo $how_much_cost__title ?></h3>
+                            <h3 class="text-headings font-second pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $how_much_cost__title ?></h3>
                         <?php } ?>
                         <?php if ($how_much_cost__description) { ?>
-                            <p class="text-xl leading-tight uniq_xl:text-lg"><?php echo $how_much_cost__description ?></p>
+                            <p class="text-lg pb-16 leading-tight xl:text-lg lg:pb-10"><?php echo $how_much_cost__description ?></p>
                         <?php } ?>
                         <?php if ($how_much_cost__link && $how_much_cost__link['url']) { ?>
                             <?php
@@ -32,16 +32,16 @@ if ($is_preview && !empty($previewImage)) {
                                 'link' => $how_much_cost__link['url'],
                                 'text' => __($how_much_cost__link['title'], 'law'),
                                 'text_hover' => false,
-                                'classes' => 'btn_md bigauto_red hover_accent uppercase max-w-[460px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                'classes' => 'btn-medium hover_accent uppercase lg:m-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
                     </div>
-                    <div class="font-second text-accent font-black max-h-[570px] flex items-center relative lg:max-h-80 xs:max-h-64">
-                        <span class="absolute text-13xl top-11% -left-25% lg:-top-7% lg:-left-35% xs:text-10xl xs:top-0">$</span>
-                        <div class="text-20xl lg:text-17xl xs:text-15xl">0</div>
+                    <div class="font-main z-10 pb-20 text-accent font-black max-h-[570px] relative xs:max-h-64 lg:!pb-0 lg:max-h-max">
+                        <div class="font-second text-[500px] leading-[370px] xl:text-17xl md:text-15xl lg:mb-8 md:leading-[190px] md:mt-8">$0</div>
                     </div>
                 </div>
             <?php } ?>
+            <div class="dots-bg h-28 left-0 absolute w-full bottom-0 lg:h-20"></div>
         </div>
     </div>
 
