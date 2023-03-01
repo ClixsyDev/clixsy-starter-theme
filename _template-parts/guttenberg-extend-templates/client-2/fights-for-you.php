@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => '']) ?>
                 <?php } ?>
                 <?php if ($fights_for_you__title) { ?>
-                    <h2 class="text-6xl pt-8 text-black font-medium font-second 2xl:!text-5xl xl:text-3xl mdt:pt-0"><?php echo $fights_for_you__title ?></h2>
+                    <h2 class="text-6xl capitalize pt-8 text-black font-medium font-second 2xl:!text-5xl xl:text-3xl mdt:pt-0"><?php echo $fights_for_you__title ?></h2>
                 <?php } ?>
                 <?php if ($fights_for_you__rating_image) { ?>
                     <?php echo wp_get_attachment_image($fights_for_you__rating_image, 'full', '', ['class' => 'object-contain h-full pt-16 ml-32 2xl:ml-0 2xl:!pt-12 mdt:!pt-5']) ?>
@@ -63,7 +63,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 !max-h-24 md:m-auto']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h3 class="font-bold text-2xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
+                                        <h3 class="font-bold font-third text-3xl mt-8 mb-6 text-white 2xl:!text-2xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
                                         <div class="text-white"><?php echo $item['description'] ?></div>
@@ -102,7 +102,7 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $fights_for_you__cost_select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-24' ?>">
                         <div class="w-12/24 z-10 lg:items-center lg:w-full lg:text-center">
                             <?php if ($fights_for_you__cost_title) { ?>
-                                <h3 class="text-headings font-second pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $fights_for_you__cost_title ?></h3>
+                                <h3 class="text-headings capitalize font-second pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $fights_for_you__cost_title ?></h3>
                             <?php } ?>
                             <?php if ($fights_for_you__cost_description) { ?>
                                 <p class="pb-16 text-lg leading-tight xl:text-lg lg:pb-10"><?php echo $fights_for_you__cost_description ?></p>

@@ -87,7 +87,7 @@ if ($is_preview && !empty($previewImage)) {
                                                     </div>
                                                 <?php } ?>
                                                 <?php if ($item['title']) { ?>
-                                                    <h4 class="text-3xl xl:text-2xl font-main font-black sm:!text-xl"><?php echo $item['title'] ?></h4>
+                                                    <h4 class="font-third text-3xl xl:text-2xl font-main font-black sm:!text-xl"><?php echo $item['title'] ?></h4>
                                                 <?php } ?>
                                             </div>
                                         <?php } ?>

@@ -40,8 +40,8 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="text-3xl font-fourth mb-4">
                             <h3 class=""><?php echo $item['auto_accident_resources__faq_title'] ?></h3>
                         </div>
-                        <div class="text-base px-8 py-8 lg:px-4  faq-shadow font-fourth faq-content-box">
-                            <div class="mb-16 xs:mb-8">
+                        <div class="text-base px-8 py-8 lg:px-4 shadow-siteWide font-fourth faq-content-box">
+                            <div class="font-main text-lg mb-16 xs:mb-8">
                                 <?php echo $item['auto_accident_resources__faq_description'] ?>
                             </div>
                             <div class="flex justify-between xs:flex-wrap-reverse">
