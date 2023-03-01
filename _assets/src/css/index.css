@@ -209,5 +209,7 @@ html {
 .iframe-full-width {
   iframe {
     width: 100% !important;
+    min-height: 270px;
+    height: 100%;
   }
 }
