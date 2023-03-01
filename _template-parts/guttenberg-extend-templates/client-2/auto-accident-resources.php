@@ -61,11 +61,11 @@ if ($is_preview && !empty($previewImage)) {
                                         'link' => 'tel:' . $item['auto_accident_resources__faq_number'],
                                         'text' => __($item['auto_accident_resources__faq_number'], 'law'),
                                         'text_hover' => false,
-                                        'classes' => 'bg-white text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
+                                        'classes' => 'bg-white !text-3xl text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
                                     ]); ?>
                                 </div>
                                 <div class="flex justify-center items-end bxs:ml-auto bxs:mb-4 ">
-                                    <a href="#<?php echo $auto_accident_resources__title ?>" class=" flex justify-center items-center text-4xl  mdt:text-2xl md:text-[17px] text-button_color border-4 border-button_color rounded-xl h-[75px] w-16 hover:text-white hover:bg-button_color ">↑</a>
+                                    <a href="#<?php echo $auto_accident_resources__title ?>" class=" flex justify-center items-center text-4xl  mdt:text-2xl md:text-[17px] text-button_color rounded-xl h-[75px] w-16 hover:text-white hover:bg-button_color ">↑</a>
                                 </div>
                             </div>
 
