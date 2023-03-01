@@ -6454,16 +6454,16 @@ html body .edit-post-visual-editor__content-area .max-w-\[1720px\] {
   max-width: 1720px;
 }
 
+html body .edit-post-visual-editor__content-area .max-w-\[240px\] {
+  max-width: 240px;
+}
+
 html body .edit-post-visual-editor__content-area .max-w-\[900px\] {
   max-width: 900px;
 }
 
 html body .edit-post-visual-editor__content-area .max-w-md {
   max-width: 28rem;
-}
-
-html body .edit-post-visual-editor__content-area .max-w-\[240px\] {
-  max-width: 240px;
 }
 
 html body .edit-post-visual-editor__content-area .flex-1 {
