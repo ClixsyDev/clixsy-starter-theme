@@ -50,7 +50,7 @@ if ($is_preview && !empty($previewImage)) {
                     ?>
                         <a href="<?= get_permalink($item) ?>" class="flex-1 group flex flex-col items-center -mt-20 mdt:w-[250px] mdt:flex-none">
                             <span class="relative">
-                                <?php echo get_the_post_thumbnail($item, 'full', ['class' => 'w-full object-cover rounded-md h-40 2xl:!w-max 2xl:m-auto']) ?>
+                                <?php echo get_the_post_thumbnail($item, 'full', ['class' => 'w-full max-w-[240px] object-cover rounded-md h-40 2xl:!w-max 2xl:m-auto']) ?>
                                 <?php if ($case_description) { ?>
                                     <span class="group-hover:opacity-100 rounded-md opacity-0 transition-all  px-2 text-sm py-3 absolute bottom-0 left-0 bg-white bg-opacity-75 flex gap-2 items-center w-full">
                                         <span><?= $case_description ?></span>

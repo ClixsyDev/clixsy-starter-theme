@@ -49,7 +49,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <?php echo wp_get_attachment_image($item['icons'], 'full', '', ['class' => '']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h4 class="text-white font-second font-bold text-xl mdt:!text-base xs:!text-xs"><?php echo $item['title'] ?></h4>
+                                        <h4 class="text-white font-third font-bold text-xl mdt:!text-base xs:!text-xs"><?php echo $item['title'] ?></h4>
                                     <?php } ?>
                                 </div>
                             <?php } ?>

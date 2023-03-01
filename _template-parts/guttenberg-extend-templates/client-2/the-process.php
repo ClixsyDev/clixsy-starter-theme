@@ -36,7 +36,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <h3 class="font-fourth font-bold text-3xl mt-8 mb-2 text-white 2xl:!text-2xl"><?php echo $item['number'] ?></h3>
                                 <?php } ?>
                                 <?php if ($item['title']) { ?>
-                                    <h3 class="text-white font-fourth font-bold text-3xl"><?php echo $item['title'] ?></h3>
+                                    <h3 class="text-white font-third font-bold text-2xl"><?php echo $item['title'] ?></h3>
                                 <?php } ?>
                             </div>
                         <?php } ?>
@@ -48,10 +48,10 @@ if ($is_preview && !empty($previewImage)) {
                         <?php foreach ($the_process__process_text as $item) { ?>
                             <div class=" mb-8 ">
                                 <?php if ($item['title']) { ?>
-                                    <h3 class="text-white font-second font-bold text-5xl md:text-3xl sm:text-2xl"><?php echo $item['title'] ?></h3>
+                                    <h3 class="text-white font-third font-bold text-5xl md:text-3xl sm:text-2xl"><?php echo $item['title'] ?></h3>
                                 <?php } ?>
                                 <?php if ($item['description']) { ?>
-                                    <div class="text-white font-second font-bold text-lg sm:text-base"><?php echo $item['description'] ?></div>
+                                    <div class="text-white font-main text-lg sm:text-base"><?php echo $item['description'] ?></div>
                                 <?php } ?>
                             </div>
 
@@ -71,7 +71,7 @@ if ($is_preview && !empty($previewImage)) {
                         ]); ?>
                     <?php } ?>
 
-                    <div class="text-white text-5xl xs:text-4xl font-second"> <?php echo $the_process__number ?></div>
+                    <div class="text-white text-6xl xs:text-4xl font-second"> <?php echo $the_process__number ?></div>
                 </div>
 
 

@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     $big_auto_footer_form__form_select = get_field('big_auto_footer_form__form_select');
 ?>
     <!-- welcome-banner-design__two.php -->
-    <section class="relative mt-10">
+    <section class="relative mt-10" id="footer-form">
         <div class="dots-bg h-10 absolute w-full bottom-0 left-0"></div>
         <div class="sm:pb-14 xs:h-full  ">
             <div class="container flex flex-row mdt:flex-col justify-center items-end">
