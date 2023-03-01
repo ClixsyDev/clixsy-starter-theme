@@ -33,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
                                     <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mx-auto !max-h-24 md:-mt-24 object-contain ']) ?>
                                 <?php } ?>
                                 <?php if ($item['number']) { ?>
-                                    <h3 class="font-fourth font-bold text-3xl mt-8 mb-2 text-white 2xl:!text-2xl"><?php echo $item['number'] ?></h3>
+                                    <h3 class="font-fourth font-bold text-5xl mt-8 mb-2 text-white 2xl:!text-2xl"><?php echo $item['number'] ?></h3>
                                 <?php } ?>
                                 <?php if ($item['title']) { ?>
                                     <h3 class="text-white font-third font-bold text-2xl"><?php echo $item['title'] ?></h3>
@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 <?php } ?>
 
-                <div class=" flex flex-wrap justify-center flex-row mx-auto w-3/5 md:w-full pb-20 gap-5">
+                <div class=" flex flex-wrap items-center justify-center flex-row mx-auto w-3/5 md:w-full pb-20 gap-5">
                     <?php if ($the_process__link) { ?>
                         <?php
                         Template::load('_template-parts/components/button.php', [
