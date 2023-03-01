@@ -45,14 +45,14 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php echo $item['auto_accident_resources__faq_description'] ?>
                             </div>
                             <div class="flex justify-between xs:flex-wrap-reverse">
-                                <div class=" flex justify-start gap-11 xl:flex-col md:items-center xl:gap-4 bxs:w-full ">
+                                <div class=" flex justify-start gap-11 xl:flex-col md:items-center xl:gap-4 bxs:w-full  ">
                                     <?php if ($item['auto_accident_resources__faq_link']) { ?>
                                         <?php
                                         Template::load('_template-parts/components/button.php', [
                                             'link' => $item['auto_accident_resources__faq_link']['url'],
                                             'text' => __($item['auto_accident_resources__faq_link']['title'], 'law'),
                                             'text_hover' => false,
-                                            'classes' => ' hover_accent bg-accent bg-button_color !border-4 !border-button_color hover:!border-accent rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
+                                            'classes' => ' hover_accent bg-accent bg-button_color !border-4 !border-button_color hover:text-xl hover hover:!border-accent rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
                                         ]); ?>
                                     <?php } ?>
 

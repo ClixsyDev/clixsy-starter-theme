@@ -2003,7 +2003,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  font-family: Noto Serif;
+  font-family: ArialRounded;
   font-size: 5rem;
   font-weight: 900;
 }
@@ -2055,7 +2055,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  font-family: Noto Serif;
+  font-family: ArialRounded;
   font-size: 3rem;
   font-weight: 700;
   line-height: 60px;
@@ -3400,7 +3400,7 @@ h2 span {
   margin-bottom: 1.25rem;
   padding-left: 5rem;
   padding-right: 1.75rem;
-  font-family: Noto Serif;
+  font-family: ArialRounded;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -6329,10 +6329,6 @@ html body .edit-post-visual-editor__content-area .w-7\/24 {
   width: 29.1667%;
 }
 
-html body .edit-post-visual-editor__content-area .\!w-full {
-  width: 100% !important;
-}
-
 html body .edit-post-visual-editor__content-area .\!w-\[250px\] {
   width: 250px !important;
 }
@@ -7343,7 +7339,7 @@ html body .edit-post-visual-editor__content-area .font-main {
 }
 
 html body .edit-post-visual-editor__content-area .font-second {
-  font-family: Noto Serif;
+  font-family: ArialRounded;
 }
 
 html body .edit-post-visual-editor__content-area .text-10xl {
@@ -7917,6 +7913,10 @@ html :where(.wp-block) {
 .hover\:bg-button_color:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 56 58 / var(--tw-bg-opacity));
+}
+
+.hover\:text-xl:hover {
+  font-size: 1.25rem;
 }
 
 .hover\:text-headings:hover {
@@ -8626,10 +8626,6 @@ html :where(.wp-block) {
 
   .xl\:text-10xl {
     font-size: 100px;
-  }
-
-  .xl\:text-base {
-    font-size: 1rem;
   }
 
   .xl\:shadow-none {
@@ -9455,10 +9451,6 @@ html :where(.wp-block) {
 
   .lg\:\!pb-0 {
     padding-bottom: 0 !important;
-  }
-
-  .lg\:pb-8 {
-    padding-bottom: 2rem;
   }
 
   .lg\:pt-16 {
