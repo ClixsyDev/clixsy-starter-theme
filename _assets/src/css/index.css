@@ -151,7 +151,9 @@ html {
 
 /* Big Auto Footer Form */
 @layer components {
-  .big-auto-footer-form {  
+  .big-auto-footer-form {
+    margin-bottom: -150px;
+  
     .fields {
       display: flex;
       flex-direction: row;
