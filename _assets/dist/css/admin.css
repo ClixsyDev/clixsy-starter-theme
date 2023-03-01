@@ -6458,12 +6458,20 @@ html body .edit-post-visual-editor__content-area .max-w-\[240px\] {
   max-width: 240px;
 }
 
+html body .edit-post-visual-editor__content-area .max-w-\[1100px\] {
+  max-width: 1100px;
+}
+
 html body .edit-post-visual-editor__content-area .max-w-\[900px\] {
   max-width: 900px;
 }
 
 html body .edit-post-visual-editor__content-area .max-w-md {
   max-width: 28rem;
+}
+
+html body .edit-post-visual-editor__content-area .max-w-\[1140px\] {
+  max-width: 1140px;
 }
 
 html body .edit-post-visual-editor__content-area .flex-1 {
@@ -7430,6 +7438,10 @@ html body .edit-post-visual-editor__content-area .text-\[75px\] {
   font-size: 75px;
 }
 
+html body .edit-post-visual-editor__content-area .\!text-3xl {
+  font-size: 1.875rem !important;
+}
+
 html body .edit-post-visual-editor__content-area .text-\[500px\] {
   font-size: 500px;
 }
@@ -7444,14 +7456,6 @@ html body .edit-post-visual-editor__content-area .text-12xl {
 
 html body .edit-post-visual-editor__content-area .text-15xl {
   font-size: 250px;
-}
-
-html body .edit-post-visual-editor__content-area .\!text-2xl {
-  font-size: 1.5rem !important;
-}
-
-html body .edit-post-visual-editor__content-area .\!text-3xl {
-  font-size: 1.875rem !important;
 }
 
 html body .edit-post-visual-editor__content-area .font-bold {
