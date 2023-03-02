@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 justify-center">
                 <div class="w-11/24 z-10 lg:items-center lg:w-full lg:text-center">
                     <?php if ($how_much_cost_two__title) { ?>
-                        <h3 class="text-headings font-second pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $how_much_cost_two__title ?></h3>
+                        <h3 class="text-headings font-second font-bold pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $how_much_cost_two__title ?></h3>
                     <?php } ?>
                     <?php if ($how_much_cost_two__description) { ?>
                         <p class="text-xl pb-16 leading-tight xl:text-lg lg:pb-10"><?php echo $how_much_cost_two__description ?></p>

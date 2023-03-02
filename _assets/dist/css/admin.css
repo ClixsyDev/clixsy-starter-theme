@@ -492,6 +492,7 @@
   padding: 0;
   font-size: 1.125rem;
   min-width: 340px !important;
+  align-items: center !important;
 }
 
 @media (max-width: 768px) {
