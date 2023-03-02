@@ -48,8 +48,6 @@
         @apply p-0;
 
         span {
-          @apply !rounded-md;
-
           input {
             @apply sm:m-0;
             outline-width: 0;
@@ -90,6 +88,10 @@
     .wpcf7-response-output {
       @apply block text-white text-center text-2xl py-4 px-4;
     }
+  }
+
+  .wpcf7-form-control-wrap {
+    @apply !bg-inherit
   }
 }
 
