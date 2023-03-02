@@ -896,10 +896,6 @@ h2 span {
   padding: 0;
 }
 
-.form_elements_design_one form .fields label span {
-  border-radius: .375rem !important;
-}
-
 @media (max-width: 640px) {
   .form_elements_design_one form .fields label span input {
     margin: 0;
@@ -953,6 +949,10 @@ h2 span {
   padding: 1rem;
   font-size: 1.5rem;
   display: block;
+}
+
+.form_elements_design_one .wpcf7-form-control-wrap {
+  background-color: inherit !important;
 }
 
 .subscribe_form--style-1 {
