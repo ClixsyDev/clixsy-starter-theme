@@ -52,10 +52,17 @@ if (function_exists('acf_add_local_field_group')) :
         ),
         'fields' => array(
             array(
+                'key' => $block_key . 'subtitle',
+                'name' => $block_key . 'subtitle',
+                'type' => 'text',
+                'label' => 'Subtitle',
+                'instructions' => 'Wrap words with <b>span</b> tag to make them highlighted with accent color',
+            ),
+            array(
                 'key' => $block_key . 'title',
                 'name' => $block_key . 'title',
-                'type' => 'textarea',
-                'label' => 'title',
+                'type' => 'text',
+                'label' => 'Title',
                 'instructions' => 'Wrap words with <b>span</b> tag to make them highlighted with accent color',
             ),
             array(

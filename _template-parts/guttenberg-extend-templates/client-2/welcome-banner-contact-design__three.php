@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="w-5/12 xl1240:w-6/12 mdt:w-20/24 pb-5 lg:w-9/12 lg:m-auto sm:w-full">
                         <div class="form banner-form big-auto-footer-form px-10 py-7 md:!p-5 !mb-0" style="background-color: <?php echo $welcome_banner_contact_design_three__form_bg ?: ''  ?> ;">
                             <div class="text-white font-thin text-2xl 2xl:!text-[20px] mdt:!pb-3 xl:!text-lg xs:!text-base"><?php echo $welcome_banner_contact_design_three__form_subtitle ?></div>
-                            <div class="text-white font-second uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $welcome_banner_contact_design_three__form_title ?></div>
+                            <div class="text-white font-bold font-second uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $welcome_banner_contact_design_three__form_title ?></div>
                             <?php echo $welcome_banner_contact_design_three__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner_contact_design_three__form_select['0'] . '" title=""]') : '' ?>
                             <?php
                             Template::load('_template-parts/components/thank-you-message.php', [

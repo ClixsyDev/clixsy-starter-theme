@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="dots-bg h-10 absolute w-full bottom-0 left-0"></div>
         <div class="sm:pb-14 xs:h-full  ">
             <div class="container flex flex-row mdt:flex-col justify-center items-end">
-                <div class="text-button_color text-center text-8xl 2xl:text-[70px] xl:text-6xl xs:!text-[44px] text font-second z-[1] w-1/2 mdt:w-full">
+                <div class="text-button_color font-bold text-center text-8xl 2xl:text-[70px] xl:text-6xl xs:!text-[44px] text font-second z-[1] w-1/2 mdt:w-full">
                     <?php echo wp_get_attachment_image($big_auto_footer_form__image, 'full', '', ['class' => 'block mx-auto ']) ?>
 
                     <a href="tel:<?php echo $big_auto_footer_form__number ?>"><?php echo $big_auto_footer_form__number ?></a>
@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                                 </div>
                             <?php } ?>
                             <?php if ($big_auto_footer_form__description_form) { ?>
-                                <div class="text-white font-second uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $big_auto_footer_form__description_form ?></div>
+                                <div class="text-white font-second font-bold uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $big_auto_footer_form__description_form ?></div>
                             <?php } ?>
                             <?php echo $big_auto_footer_form__form_select ? do_shortcode('[contact-form-7 id="' . $big_auto_footer_form__form_select['0'] . '" title=""]') : '' ?>
                         </div>
