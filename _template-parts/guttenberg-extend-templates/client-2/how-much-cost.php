@@ -15,10 +15,10 @@ if ($is_preview && !empty($previewImage)) {
     $how_much_cost__block_bg = get_field('how_much_cost__block_bg');
     $how_much_cost__select = get_field('how_much_cost__select'); ?>
 
-    <div class="overflow-hidden">
-        <div class="container relative rounded-2xl" style="background-color: <?php echo $how_much_cost__block_bg ?: ''  ?> ;">
+    <div class="overflow-hidden relative">
+        <div class="container relative z-10 rounded-2xl" style="background-color: <?php echo $how_much_cost__block_bg ?: ''  ?> ;">
             <?php if ($how_much_cost__title || $how_much_cost__description || $how_much_cost__link) { ?>
-                <div class="flex gap-44 pt-12 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $how_much_cost__select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-20' ?>">
+                <div class="flex gap-44 pt-12 rounded-2xl shadow-siteWide xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $how_much_cost__select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-20' ?>">
                     <div class="w-12/24 z-10 flex flex-col lg:items-center lg:w-full lg:text-center">
                         <?php if ($how_much_cost__title) { ?>
                             <h3 class="text-headings font-second pb-10 leading-[65px] text-6xl font-medium xl:!text-5xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $how_much_cost__title ?></h3>
@@ -41,8 +41,8 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
             <?php } ?>
-            <div class="dots-bg h-28 left-0 absolute w-full bottom-0 lg:h-20"></div>
         </div>
+        <div class="dots-bg h-28 left-0 absolute w-full bottom-0 lg:h-20"></div>
     </div>
 
     </div>
