@@ -3140,7 +3140,6 @@ h2 span {
 }
 
 .subscribe_form--style-1 {
-  justify-content: flex-end;
   align-items: flex-end;
   column-gap: 1rem;
   display: flex;
@@ -6458,8 +6457,8 @@ html body .edit-post-visual-editor__content-area .max-w-\[240px\] {
   max-width: 240px;
 }
 
-html body .edit-post-visual-editor__content-area .max-w-\[1100px\] {
-  max-width: 1100px;
+html body .edit-post-visual-editor__content-area .max-w-\[1140px\] {
+  max-width: 1140px;
 }
 
 html body .edit-post-visual-editor__content-area .max-w-\[900px\] {
@@ -6468,10 +6467,6 @@ html body .edit-post-visual-editor__content-area .max-w-\[900px\] {
 
 html body .edit-post-visual-editor__content-area .max-w-md {
   max-width: 28rem;
-}
-
-html body .edit-post-visual-editor__content-area .max-w-\[1140px\] {
-  max-width: 1140px;
 }
 
 html body .edit-post-visual-editor__content-area .flex-1 {
