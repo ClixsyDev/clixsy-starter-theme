@@ -21,7 +21,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10">
              <?php if ($settlement_case_type__title) { ?>
-                <h3 class="font-second pb-11 text-6xl leading-[65px] lg:!text-5xl lg:pb-7 sm:!text-4xl lg:leading-[1.25]"> <?php echo $settlement_case_type__title ?></h3>
+                <h3 class="font-second font-bold pb-11 text-6xl leading-[65px] lg:!text-5xl lg:pb-7 sm:!text-4xl lg:leading-[1.25]"> <?php echo $settlement_case_type__title ?></h3>
             <?php } ?>
             <div class="flex gap-28 uniq_xl:gap-20 lg:flex-col-reverse xs:gap-10">
                 <div class="flex flex-col gap-10 w-9/24 lg:w-full xs:gap-6">

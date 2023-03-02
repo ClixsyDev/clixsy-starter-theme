@@ -51,6 +51,7 @@ module.exports = {
       boxShadow: {
         siteWide: '0px 3px 6px rgba(0, 0, 0, 0.16)',
         reviews: '3px 3px 15px rgba(141, 141, 141, 0.47)',
+        bannerForm: '0px 3px 10px rgba(0, 0, 0, 0.5)',
       },
       dropShadow: {
         circleShadow: '0px 3px 6px rgba(0, 0, 0, 0.16)',
