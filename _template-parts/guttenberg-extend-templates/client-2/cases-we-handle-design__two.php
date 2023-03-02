@@ -71,7 +71,7 @@ if ($is_preview && !empty($previewImage)) {
             <?php if ($button1) { ?>
                 <?php
                 Template::load('_template-parts/components/button.php', [
-                    'link' => $$button1['url'],
+                    'link' => $button1['url'],
                     'text' => __($button1['title'], 'law'),
                     'text_hover' => false,
                     'classes' => 'btn_sm bigauto_red !border-button_color hover:!border-accent hover_accent  !max-w-[460px] rounded-xl xs:!text-xl md:w-4/5', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
@@ -80,7 +80,7 @@ if ($is_preview && !empty($previewImage)) {
             <?php if ($button2) { ?>
                 <?php
                 Template::load('_template-parts/components/button.php', [
-                    'link' => $$button2['url'],
+                    'link' => $button2['url'],
                     'text' => __($button2['title'], 'law'),
                     'text_hover' => false,
                     'classes' => 'btn_sm bg-white !text-button_color hover:!text-white !border-button_color hover:!border-accent hover_accent !max-w-[460px] rounded-xl xs:!text-xl md:w-4/5', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
