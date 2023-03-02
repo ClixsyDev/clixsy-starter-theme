@@ -33,10 +33,10 @@ if ($is_preview && !empty($previewImage)) {
                                     <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mx-auto !max-h-24 md:-mt-24 object-contain ']) ?>
                                 <?php } ?>
                                 <?php if ($item['number']) { ?>
-                                    <h3 class="font-fourth font-bold text-5xl mt-8 mb-2 text-white 2xl:!text-2xl"><?php echo $item['number'] ?></h3>
+                                    <h3 class="font-fourth font-bold text-5xl mt-8 mb-2 text-white 2xl:!text-2xl text-left"><?php echo $item['number'] ?></h3>
                                 <?php } ?>
                                 <?php if ($item['title']) { ?>
-                                    <h3 class="text-white font-third font-bold text-2xl"><?php echo $item['title'] ?></h3>
+                                    <h3 class="text-white font-third font-bold text-2xl text-left"><?php echo $item['title'] ?></h3>
                                 <?php } ?>
                             </div>
                         <?php } ?>
