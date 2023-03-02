@@ -73,7 +73,7 @@
     }
 
     &.btn-form-newsletter {
-      @apply text-lg bg-accent text-button_color p-0 min-w-[170px] h-11;
+      @apply text-lg bg-accent text-button_color p-0 !min-w-[340px] h-11 md:!min-w-[280px];
 
       &:hover {
         @apply min-w-[190px];
