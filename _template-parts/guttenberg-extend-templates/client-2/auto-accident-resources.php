@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="container mt-14 lg:!mt-0">
         <?php if ($auto_accident_resources__title) { ?>
             <div id="<?php echo $auto_accident_resources__title ?>" class="flex justify-center">
-                <h2 class="font-second text-6xl xl:pb-5 2xl:text-4xl xl:text-3xl"> <?php echo $auto_accident_resources__title ?></h2>
+                <h2 class="heading_h2 text-black font-bold text-6xl pb-10  capitalize md:!text-5xl md:leading-10"> <?php echo $auto_accident_resources__title ?></h2>
             </div>
         <?php } ?>
 
@@ -40,8 +40,8 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="text-3xl font-fourth mb-4">
                             <h3 class=""><?php echo $item['auto_accident_resources__faq_title'] ?></h3>
                         </div>
-                        <div class="text-base px-8 py-8 lg:px-4  faq-shadow font-fourth faq-content-box">
-                            <div class="mb-16 xs:mb-8">
+                        <div class="text-base px-8 py-8 lg:px-4 shadow-siteWide font-fourth faq-content-box">
+                            <div class="font-main text-lg mb-16 xs:mb-8">
                                 <?php echo $item['auto_accident_resources__faq_description'] ?>
                             </div>
                             <div class="flex justify-between xs:flex-wrap-reverse">
@@ -61,11 +61,11 @@ if ($is_preview && !empty($previewImage)) {
                                         'link' => 'tel:' . $item['auto_accident_resources__faq_number'],
                                         'text' => __($item['auto_accident_resources__faq_number'], 'law'),
                                         'text_hover' => false,
-                                        'classes' => 'bg-white text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
+                                        'classes' => 'bg-white !text-3xl text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
                                     ]); ?>
                                 </div>
                                 <div class="flex justify-center items-end bxs:ml-auto bxs:mb-4 ">
-                                    <a href="#<?php echo $auto_accident_resources__title ?>" class=" flex justify-center items-center text-4xl  mdt:text-2xl md:text-[17px] text-button_color border-4 border-button_color rounded-xl h-[75px] w-16 hover:text-white hover:bg-button_color ">↑</a>
+                                    <a href="#<?php echo $auto_accident_resources__title ?>" class=" flex justify-center items-center text-4xl  mdt:text-2xl md:text-[17px] text-button_color rounded-xl h-[75px] w-16 hover:text-white hover:bg-button_color ">↑</a>
                                 </div>
                             </div>
 

@@ -16,9 +16,9 @@ if ($is_preview && !empty($previewImage)) {
     $auto_accident_fault__block_color = get_field('auto_accident_fault__block_color');
     $auto_accident_fault__description_repeater = get_field('auto_accident_fault__description_repeater'); ?>
 
-    <section class="pt-20 xl:pt-10">
+    <section class="pt-20 xl:pt-10 mdt:mb-10">
         <div class="container">
-            <div class="flex gap-16 px-6 xl:flex-col-reverse xl:items-center md:gap-9 xs:px-0">
+            <div class="flex gap-16 px-6 xl:flex-col-reverse xl:items-center md:gap-9 xs:px-0 ">
                 <?php if ($auto_accident_fault__image) { ?>
                     <div class="w-12/24 md:w-19/24">
                         <?php echo wp_get_attachment_image($auto_accident_fault__image, 'full', '', ['class' => 'w-full rounded-md']) ?>
@@ -44,12 +44,12 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                         <div class="grid grid-cols-3 gap-y-10 gap-x-3 md:!grid-cols-2 xs:!gap-x-16 xs:!gap-y-5 xs:g!rid-cols-1">
                             <?php foreach ($auto_accident_fault__items as $item) { ?>
-                                <div class="flex items-center gap-2 xl:justify-center md:justify-start xs:justify-center">
+                                <div class="flex justify-start items-center gap-2 xl:justify-center md:justify-start xs:justify-center">
                                     <?php if ($item['icons']) { ?>
                                         <?php echo wp_get_attachment_image($item['icons'], 'full', '', ['class' => '']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h4 class="text-white font-second font-bold text-xl mdt:!text-base xs:!text-xs"><?php echo $item['title'] ?></h4>
+                                        <h4 class="text-white font-third uppercase font-bold text-xl mdt:!text-base "><?php echo $item['title'] ?></h4>
                                     <?php } ?>
                                 </div>
                             <?php } ?>

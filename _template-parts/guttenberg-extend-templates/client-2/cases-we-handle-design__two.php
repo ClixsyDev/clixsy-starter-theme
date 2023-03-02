@@ -50,7 +50,7 @@ if ($is_preview && !empty($previewImage)) {
                     ?>
                         <a href="<?= get_permalink($item) ?>" class="flex-1 group flex flex-col items-center -mt-20 mdt:w-[250px] mdt:flex-none">
                             <span class="relative">
-                                <?php echo get_the_post_thumbnail($item, 'full', ['class' => 'w-full object-cover rounded-md h-40 2xl:!w-max 2xl:m-auto']) ?>
+                                <?php echo get_the_post_thumbnail($item, 'full', ['class' => 'w-full max-w-[240px] object-cover rounded-md h-40 2xl:!w-max 2xl:m-auto']) ?>
                                 <?php if ($case_description) { ?>
                                     <span class="group-hover:opacity-100 rounded-md opacity-0 transition-all  px-2 text-sm py-3 absolute bottom-0 left-0 bg-white bg-opacity-75 flex gap-2 items-center w-full">
                                         <span><?= $case_description ?></span>
@@ -67,23 +67,23 @@ if ($is_preview && !empty($previewImage)) {
             </div>
 
         </div>
-        <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4 md:w-full">
+        <div class=" mt-11 flex justify-center gap-11 md:flex-col md:items-center md:gap-4 md:w-full ">
             <?php if ($button1) { ?>
                 <?php
                 Template::load('_template-parts/components/button.php', [
-                    'link' => $button1['url'],
+                    'link' => $$button1['url'],
                     'text' => __($button1['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => $button_size . ' hover_accent !border-[#d1383a] bg-accent bg-button_color rounded-xl uppercase max-w-[470px] md:w-full', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => 'btn_sm bigauto_red !border-button_color hover:!border-accent hover_accent  !max-w-[460px] rounded-xl xs:!text-xl md:w-4/5', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             <?php } ?>
             <?php if ($button2) { ?>
                 <?php
                 Template::load('_template-parts/components/button.php', [
-                    'link' => $button2['url'],
+                    'link' => $$button2['url'],
                     'text' => __($button2['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => $button_size . '  bg-white text-button_color border-4 !border-[#d1383a]  hover:!text-white hover:!bg-button_color  rounded-xl uppercase max-w-[470px] md:w-full', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => 'btn_sm bg-white !text-button_color hover:!text-white !border-button_color hover:!border-accent hover_accent !max-w-[460px] rounded-xl xs:!text-xl md:w-4/5', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             <?php } ?>
         </div>
