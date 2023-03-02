@@ -94,7 +94,7 @@
 }
 
 .subscribe_form--style-1 {
-  @apply flex gap-x-4 items-end justify-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
+  @apply flex gap-x-4 items-end sm:flex-col sm:items-center sm:justify-center sm:gap-y-4;
   input {
     @apply focus:text-black font-medium w-80 h-12 py-4 pl-5 border-headings border-2 focus:outline-none focus:border-accent active:border-accent;
   }
