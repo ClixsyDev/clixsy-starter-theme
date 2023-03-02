@@ -4651,7 +4651,7 @@ html body .edit-post-visual-editor__content-area .bg-accent {
 
 html body .edit-post-visual-editor__content-area .bg-smoke {
   --tw-bg-opacity: 1;
-  background-color: rgb(165 172 175 / var(--tw-bg-opacity));
+  background-color: rgb(128 128 128 / var(--tw-bg-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .bg-headings_second {
@@ -5117,12 +5117,12 @@ html body .edit-post-visual-editor__content-area .pt-48 {
   padding-top: 12rem;
 }
 
-html body .edit-post-visual-editor__content-area .pb-32 {
-  padding-bottom: 8rem;
-}
-
 html body .edit-post-visual-editor__content-area .pb-11 {
   padding-bottom: 2.75rem;
+}
+
+html body .edit-post-visual-editor__content-area .pb-32 {
+  padding-bottom: 8rem;
 }
 
 html body .edit-post-visual-editor__content-area .text-left {
@@ -5368,7 +5368,7 @@ html body .edit-post-visual-editor__content-area .text-slate-400 {
 
 html body .edit-post-visual-editor__content-area .text-smoke {
   --tw-text-opacity: 1;
-  color: rgb(165 172 175 / var(--tw-text-opacity));
+  color: rgb(128 128 128 / var(--tw-text-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .text-headings_second {
@@ -7088,10 +7088,6 @@ html :where(.wp-block) {
     width: 45%;
   }
 
-  .lg\:w-23\/24 {
-    width: 95.8333%;
-  }
-
   .lg\:w-2\/4 {
     width: 50%;
   }
@@ -7304,32 +7300,20 @@ html :where(.wp-block) {
     padding-bottom: 0 !important;
   }
 
+  .lg\:\!pt-5 {
+    padding-top: 1.25rem !important;
+  }
+
+  .lg\:pb-7 {
+    padding-bottom: 1.75rem;
+  }
+
   .lg\:pt-16 {
     padding-top: 4rem;
   }
 
   .lg\:pb-32 {
     padding-bottom: 8rem;
-  }
-
-  .lg\:\!pt-10 {
-    padding-top: 2.5rem !important;
-  }
-
-  .lg\:\!pt-7 {
-    padding-top: 1.75rem !important;
-  }
-
-  .lg\:\!pt-5 {
-    padding-top: 1.25rem !important;
-  }
-
-  .lg\:pb-5 {
-    padding-bottom: 1.25rem;
-  }
-
-  .lg\:pb-7 {
-    padding-bottom: 1.75rem;
   }
 
   .lg\:text-left {
@@ -8137,12 +8121,12 @@ html :where(.wp-block) {
     margin-top: 2rem;
   }
 
-  .md\:-mt-24 {
-    margin-top: -6rem;
-  }
-
   .md\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .md\:-mt-24 {
+    margin-top: -6rem;
   }
 
   .md\:block {
