@@ -40,7 +40,7 @@ if ($is_preview && !empty($previewImage)) {
                         'link' => $decorated_text_design_one__button['url'],
                         'text' => __($decorated_text_design_one__button['title'], 'law'),
                         'text_hover' => false,
-                        'classes' => 'btn_xl hover_outline_accent uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        'classes' => 'hover_outline_accent uppercase max-w-[460px] center', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                     ]); ?>
                 </div>
             <?php } ?>
