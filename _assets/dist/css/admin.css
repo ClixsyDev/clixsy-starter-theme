@@ -7206,6 +7206,10 @@ html :where(.wp-block) {
     padding: 3.5rem;
   }
 
+  .lg\:p-0 {
+    padding: 0;
+  }
+
   .lg\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -7496,8 +7500,8 @@ html :where(.wp-block) {
     margin-top: .5rem;
   }
 
-  .mdt\:mb-\[60\%\] {
-    margin-bottom: 60%;
+  .mdt\:mb-\[65\%\] {
+    margin-bottom: 65%;
   }
 
   .mdt\:-mt-\[70\%\] {

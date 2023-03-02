@@ -28,9 +28,9 @@ if ($is_preview && !empty($previewImage)) {
     <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1] lg:!pt-8">
         <div class="container">
             <?php if ($about_us__title) { ?>
-                <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[60%] md:text-5xl"><?php echo $about_us__title ?></h2>
+                <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
-            <div class="flex pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 lg:px-5 md:gap-8" style="background-color: <?php echo $about_us__block_color ?: ''  ?> ;">
+            <div class="flex pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 lg:px-5 md:gap-8 lg:p-0" style="background-color: <?php echo $about_us__block_color ?: ''  ?> ;">
                 <div class="flex flex-col -mt-80 w-12/24 lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full">
                     <?php if ($about_us__image) { ?>
                         <?php echo wp_get_attachment_image($about_us__image, 'full', '', ['class' => '2xl:mx-auto']) ?>
