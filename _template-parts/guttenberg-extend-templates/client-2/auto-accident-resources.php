@@ -16,7 +16,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="container mt-14 lg:!mt-0">
         <?php if ($auto_accident_resources__title) { ?>
             <div id="<?php echo $auto_accident_resources__title ?>" class="flex justify-center">
-                <h2 class="font-second text-6xl xl:pb-5 2xl:text-4xl xl:text-3xl"> <?php echo $auto_accident_resources__title ?></h2>
+                <h2 class="heading_h2 text-black font-bold text-6xl pb-10  capitalize md:!text-5xl md:leading-10"> <?php echo $auto_accident_resources__title ?></h2>
             </div>
         <?php } ?>
 
@@ -45,14 +45,14 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php echo $item['auto_accident_resources__faq_description'] ?>
                             </div>
                             <div class="flex justify-between xs:flex-wrap-reverse">
-                                <div class=" flex justify-start gap-11 xl:flex-col md:items-center xl:gap-4 bxs:w-full ">
+                                <div class=" flex justify-start gap-11 xl:flex-col md:items-center xl:gap-4 bxs:w-full  ">
                                     <?php if ($item['auto_accident_resources__faq_link']) { ?>
                                         <?php
                                         Template::load('_template-parts/components/button.php', [
                                             'link' => $item['auto_accident_resources__faq_link']['url'],
                                             'text' => __($item['auto_accident_resources__faq_link']['title'], 'law'),
                                             'text_hover' => false,
-                                            'classes' => ' hover_accent bg-accent bg-button_color !border-4 !border-button_color hover:!border-accent rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
+                                            'classes' => ' hover_accent bg-accent bg-button_color !border-4 !border-button_color hover:text-xl hover hover:!border-accent rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
                                         ]); ?>
                                     <?php } ?>
 
