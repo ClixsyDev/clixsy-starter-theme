@@ -151,7 +151,9 @@ html {
 
 /* Big Auto Footer Form */
 @layer components {
-  .big-auto-footer-form {  
+  .big-auto-footer-form {
+    margin-bottom: -150px;
+  
     .fields {
       display: flex;
       flex-direction: row;
@@ -209,5 +211,7 @@ html {
 .iframe-full-width {
   iframe {
     width: 100% !important;
+    min-height: 270px;
+    height: 100%;
   }
 }

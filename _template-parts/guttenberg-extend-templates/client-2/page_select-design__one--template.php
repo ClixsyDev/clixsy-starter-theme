@@ -29,7 +29,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php foreach ($page_select_design_one__select_pages as $selected_post) { ?>
                     <?php $thumbnail = get_the_post_thumbnail_url($selected_post, 'full');
                     $thumbnail_placeholder = get_stylesheet_directory_uri() . '/_assets_child/src/img/placeholder.jpg'; ?>
-                    <article class="h-full">
+                    <article class="h-full max-w-[1140px] m-auto">
                         <a class="relative group min-h-[300px] h-full flex bg-cover items-end" style="background-image: url(<?php echo $thumbnail ?: $thumbnail_placeholder ?>);" href="<?= get_permalink($selected_post) ?>">
                             <div class="bg-black bg-opacity-60 absolute z-20 w-full h-full top-0 left-0"></div>
                             <div class="relative z-30 mx-4 w-full group">

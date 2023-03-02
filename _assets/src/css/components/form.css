@@ -218,7 +218,8 @@
 
 .banner-form {
   select {
-    @apply rounded-2xl text-headings border-1 border-black text-2xl font-second font-bold min-w-[450px] min-h-[65px] shadow-siteWide pr-7 pl-20 mb-5 outline-0 appearance-none bg-no-repeat lg:min-w-[430px] xs:min-w-min xs:w-full;
+    @apply rounded-2xl text-headings border-black text-2xl font-second font-bold min-w-[450px] min-h-[65px] shadow-siteWide pr-7 pl-20 mb-5 outline-0 appearance-none bg-no-repeat lg:min-w-[430px] xs:min-w-min xs:w-full;
+    border: 1px;
   }
 
   select {
@@ -289,7 +290,8 @@
   }
 
   .wpcf7-not-valid-tip {
-    @apply text-white border-button_color border-b-1;
+    @apply text-white border-button_color;
+    border-bottom: 1px solid;
   }
 }
 
