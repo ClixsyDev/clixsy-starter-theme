@@ -51,7 +51,7 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="font-main text-xl pb-12 font-light text-white lg:!text-xl lg:pb-4 leading-tight">
                             <?php echo $about_us__first_description ?>
                         </div>
-                        <div class="text-white text-6xl xs:!text-4xl font-second"> <?php echo $about_us__number ?></div>
+                        <div class="text-white text-6xl xs:!text-4xl font-second font-bold"> <?php echo $about_us__number ?></div>
                     </div>
                 <?php } ?>
             </div>

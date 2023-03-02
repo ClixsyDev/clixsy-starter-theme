@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => '']) ?>
                 <?php } ?>
                 <?php if ($fights_for_you__title) { ?>
-                    <h2 class="text-6xl capitalize pt-8 text-black font-medium font-second 2xl:!text-5xl xl:text-3xl mdt:pt-0"><?php echo $fights_for_you__title ?></h2>
+                    <h2 class="text-6xl capitalize pt-8 text-black font-bold font-second 2xl:!text-5xl xl:text-3xl mdt:pt-0"><?php echo $fights_for_you__title ?></h2>
                 <?php } ?>
                 <?php if ($fights_for_you__rating_image) { ?>
                     <?php echo wp_get_attachment_image($fights_for_you__rating_image, 'full', '', ['class' => 'object-contain h-full pt-16 ml-32 2xl:ml-0 2xl:!pt-12 mdt:!pt-5']) ?>
