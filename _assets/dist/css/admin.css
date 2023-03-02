@@ -7008,6 +7008,10 @@ html :where(.wp-block) {
     margin-top: -55%;
   }
 
+  .lg\:mt-2 {
+    margin-top: .5rem;
+  }
+
   .lg\:\!mt-0 {
     margin-top: 0 !important;
   }
@@ -7202,12 +7206,12 @@ html :where(.wp-block) {
     padding: .25rem;
   }
 
-  .lg\:p-14 {
-    padding: 3.5rem;
-  }
-
   .lg\:p-0 {
     padding: 0;
+  }
+
+  .lg\:p-14 {
+    padding: 3.5rem;
   }
 
   .lg\:py-6 {
@@ -7294,6 +7298,10 @@ html :where(.wp-block) {
 
   .lg\:\!pt-8 {
     padding-top: 2rem !important;
+  }
+
+  .lg\:pb-4 {
+    padding-bottom: 1rem;
   }
 
   .lg\:\!pt-0 {
