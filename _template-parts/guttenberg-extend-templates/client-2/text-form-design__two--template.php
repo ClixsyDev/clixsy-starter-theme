@@ -24,10 +24,10 @@ if ($is_preview && !empty($previewImage)) {
         <div class="w-18/24 lg:w-2/4 mdt:w-full">
           <div class="pb-8 relative px-11 py-7 h-full bg-white drop-shadow-lg xs:p-6  ">
             <?php if ($text_form_design_two__subtitle) { ?>
-              <h2 class="heading_h2 uppercase text-black font-second font-thin text-4xl text-left"><?php echo $text_form_design_two__subtitle ?></h2>
+              <h2 class="heading_h2 uppercase text-black font-second font-thin text-4xl text-left mdt:pb-3 xs:!text-3xl"><?php echo $text_form_design_two__subtitle ?></h2>
             <?php } ?>
             <?php if ($text_form_design_two__title) { ?>
-              <h3 class="heading_h2 uppercase text-black text-6xl text-left pb-3"><?php echo $text_form_design_two__title ?></h3>
+              <h3 class="heading_h2 uppercase text-black text-6xl text-left pb-3 lg:!text-5xl lg:leading-none xs:!text-4xl"><?php echo $text_form_design_two__title ?></h3>
             <?php } ?>
             <?php if ($text_form_design_two__main_content) {
               $content_len =  strlen(strip_tags($text_form_design_two__main_content));
