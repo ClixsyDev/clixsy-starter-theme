@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="">
         <div class="container mb-64 mdt:mb-10">
             <div class="flex justify-center">
-                <h2 class="font-second text-center text-5xl xl:pb-5 2xl:text-4xl xl:text-3xl"><?php echo $the_process__title ?></h2>
+                <h2 class="font-second text-center font-bold text-5xl xl:pb-5 2xl:text-4xl xl:text-3xl"><?php echo $the_process__title ?></h2>
             </div>
         </div>
 

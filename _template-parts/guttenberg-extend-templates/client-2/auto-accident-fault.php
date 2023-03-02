@@ -27,7 +27,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($auto_accident_fault__title || $auto_accident_fault__description) { ?>
                     <div class="w-12/24 pt-3 xl:w-22/24 xl:text-center">
                         <?php if ($auto_accident_fault__title) { ?>
-                            <h2 class="font-second text-5xl xl:pb-5 2xl:text-4xl xl:text-3xl"><?php echo $auto_accident_fault__title ?></h2>
+                            <h2 class="font-second font-bold text-5xl xl:pb-5 2xl:text-4xl xl:text-3xl"><?php echo $auto_accident_fault__title ?></h2>
                         <?php } ?>
                         <?php if ($auto_accident_fault__description) { ?>
                             <div class="text-xl xs:text-base"><?php echo $auto_accident_fault__description ?></div>
