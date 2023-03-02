@@ -31,7 +31,7 @@ if ($is_preview && !empty($previewImage)) {
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-96 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[60%] md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
             <div class="flex pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 lg:px-5 md:gap-8" style="background-color: <?php echo $about_us__block_color ?: ''  ?> ;">
-                <div class="flex flex-col -mt-80 w-12/24 lg:w-23/24 lg:-mt-[55%] mdt:-mt-[70%]  leading-none">
+                <div class="flex flex-col -mt-80 w-12/24 lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full">
                     <?php if ($about_us__image) { ?>
                         <?php echo wp_get_attachment_image($about_us__image, 'full', '', ['class' => '2xl:mx-auto']) ?>
                     <?php } ?>
