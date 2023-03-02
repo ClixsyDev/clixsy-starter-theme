@@ -893,6 +893,7 @@ h2 span {
 }
 
 .form_elements_design_one form .fields label {
+  width: 100%;
   padding: 0;
 }
 
@@ -7175,10 +7176,6 @@ html :where(.wp-block) {
     flex-direction: column-reverse;
   }
 
-  .lg\:flex-wrap-reverse {
-    flex-wrap: wrap-reverse;
-  }
-
   .lg\:items-center {
     align-items: center;
   }
@@ -7714,12 +7711,12 @@ html :where(.wp-block) {
     gap: 4rem;
   }
 
-  .mdt\:\!gap-12 {
-    gap: 3rem !important;
-  }
-
   .mdt\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .mdt\:\!gap-12 {
+    gap: 3rem !important;
   }
 
   .mdt\:bg-white\/75 {
@@ -7789,10 +7786,6 @@ html :where(.wp-block) {
 
   .mdt\:\!pb-3 {
     padding-bottom: .75rem !important;
-  }
-
-  .mdt\:pb-4 {
-    padding-bottom: 1rem;
   }
 
   .mdt\:pb-3 {

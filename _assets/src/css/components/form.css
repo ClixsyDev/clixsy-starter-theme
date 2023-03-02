@@ -45,7 +45,7 @@
       @apply flex gap-5 sm:flex-col sm:mb-5;
 
       label {
-        @apply p-0;
+        @apply p-0 w-full;
 
         span {
           input {
