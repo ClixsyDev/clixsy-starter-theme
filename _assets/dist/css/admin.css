@@ -6121,6 +6121,10 @@ html :where(.wp-block) {
     font-size: 1.5rem;
   }
 
+  .\32 xl\:\!text-3xl {
+    font-size: 1.875rem !important;
+  }
+
   .\32 xl\:before\:w-24:before, .\32 xl\:after\:w-24:after {
     content: var(--tw-content);
     width: 6rem;
@@ -9324,6 +9328,14 @@ html :where(.wp-block) {
 
   .xs\:\!text-lg {
     font-size: 1.125rem !important;
+  }
+
+  .xs\:\!text-2xl {
+    font-size: 1.5rem !important;
+  }
+
+  .xs\:text-lg {
+    font-size: 1.125rem;
   }
 }
 
