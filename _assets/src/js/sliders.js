@@ -110,10 +110,10 @@ if (document.querySelector(verdictsSliderBa) != undefined && document.querySelec
           perView: 3,
         },
         868: {
-          perView: 2,
+          perView: 3,
         },
         640: {
-          perView: 1,
+          perView: 2,
         },
       },
     }).mount();
