@@ -4193,6 +4193,10 @@ html body .edit-post-visual-editor__content-area .min-w-\[460px\] {
   min-width: 460px;
 }
 
+html body .edit-post-visual-editor__content-area .min-w-\[240px\] {
+  min-width: 240px;
+}
+
 html body .edit-post-visual-editor__content-area .max-w-\[460px\] {
   max-width: 460px;
 }
