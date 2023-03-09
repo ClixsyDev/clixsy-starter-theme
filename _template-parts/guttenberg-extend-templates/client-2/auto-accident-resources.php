@@ -52,7 +52,7 @@ if ($is_preview && !empty($previewImage)) {
                                             'link' => $item['auto_accident_resources__faq_link']['url'],
                                             'text' => __($item['auto_accident_resources__faq_link']['title'], 'law'),
                                             'text_hover' => false,
-                                            'classes' => 'btn !items-center btn-smaller border-none'
+                                            'classes' => 'btn w-full !items-center btn-smaller border-none xs:!max-w-[340px]'
                                         ]); ?>
                                     <?php } ?>
 
@@ -61,7 +61,7 @@ if ($is_preview && !empty($previewImage)) {
                                         'link' => 'tel:' . $item['auto_accident_resources__faq_number'],
                                         'text' => __($item['auto_accident_resources__faq_number'], 'law'),
                                         'text_hover' => false,
-                                        'classes' => 'btn !text-3xl btn-smaller transparent'
+                                        'classes' => 'btn w-full !text-3xl btn-smaller transparent xs:!max-w-[340px]'
                                     ]); ?>
                                 </div>
                                 <div class="flex justify-center items-end bxs:ml-auto bxs:mb-4 ">
