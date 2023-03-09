@@ -60,7 +60,7 @@ if ($is_preview && !empty($previewImage)) {
                     'link' => $articles_link['url'],
                     'text' => __($articles_link['title'], 'law'),
                     'text_hover' => false,
-                    'classes' => 'btn-medium transparent hover_accent m-auto uppercase lg:m-auto ', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                    'classes' => 'btn-medium transparent m-auto uppercase lg:m-auto ', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]); ?>
             <?php } ?>
         </div>

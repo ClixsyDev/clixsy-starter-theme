@@ -89,7 +89,7 @@ if ($is_preview && !empty($previewImage)) {
                                         'link' => $fights_for_you__link['url'],
                                         'text' => __($fights_for_you__link['title'], 'law'),
                                         'text_hover' => false,
-                                        'classes' => 'bigauto_red hover_accent uppercase min-w-[460px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                        'classes' => 'uppercase disabled:hover min-w-[460px]', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                                     ]); ?>
                                 <?php } ?>
                             </div>

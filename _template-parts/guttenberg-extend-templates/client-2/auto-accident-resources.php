@@ -52,7 +52,7 @@ if ($is_preview && !empty($previewImage)) {
                                             'link' => $item['auto_accident_resources__faq_link']['url'],
                                             'text' => __($item['auto_accident_resources__faq_link']['title'], 'law'),
                                             'text_hover' => false,
-                                            'classes' => ' hover_accent bg-accent bg-button_color !border-4 !border-button_color hover:text-xl hover hover:!border-accent rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
+                                            'classes' => ' hover_accent bg-button_color !border-4 !border-white hover:text-xl hover:!items-center hover rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
                                         ]); ?>
                                     <?php } ?>
 
@@ -61,7 +61,7 @@ if ($is_preview && !empty($previewImage)) {
                                         'link' => 'tel:' . $item['auto_accident_resources__faq_number'],
                                         'text' => __($item['auto_accident_resources__faq_number'], 'law'),
                                         'text_hover' => false,
-                                        'classes' => 'bg-white !text-3xl text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
+                                        'classes' => 'bg-white transparent !text-3xl text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
                                     ]); ?>
                                 </div>
                                 <div class="flex justify-center items-end bxs:ml-auto bxs:mb-4 ">

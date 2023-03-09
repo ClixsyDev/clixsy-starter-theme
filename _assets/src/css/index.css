@@ -161,7 +161,7 @@ html {
     }
 
     button {
-      @apply rounded-md;
+      @apply rounded-2xl;
     }
 
     .fields label {
