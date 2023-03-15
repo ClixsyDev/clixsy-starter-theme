@@ -261,7 +261,7 @@
   height: 3.5rem;
   width: max-content;
   --tw-bg-opacity: 1;
-  background-color: rgb(217 21 28 / var(--tw-bg-opacity));
+  background-color: rgb(224 33 46 / var(--tw-bg-opacity));
   text-align: center;
   text-transform: uppercase;
   --tw-text-opacity: 1;
@@ -391,7 +391,7 @@
   height: 5rem;
   width: max-content;
   --tw-bg-opacity: 1;
-  background-color: rgb(217 21 28 / var(--tw-bg-opacity));
+  background-color: rgb(224 33 46 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   margin: 1.25rem auto auto;
@@ -469,7 +469,7 @@
 .btn.btn_form_design_one:hover {
   min-width: 270px;
   --tw-text-opacity: 1;
-  color: rgb(217 21 28 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
   font-size: 1.5rem;
 }
 
@@ -478,7 +478,7 @@
   --tw-bg-opacity: 1;
   background-color: rgb(0 115 189 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(217 21 28 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
   padding: 0;
   font-size: 1.125rem;
   min-width: 340px !important;
@@ -497,7 +497,7 @@
 
 .btn.btn_form_design_one.btn-form-newsletter:hover span {
   --tw-text-opacity: 1;
-  color: rgb(217 21 28 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
 }
 
 .btn.hover_white {
@@ -668,7 +668,7 @@ h2 span {
 .hero_heading_h1 span {
   --tw-border-opacity: 1;
   border-bottom-width: 4px;
-  border-color: rgb(217 21 28 / var(--tw-border-opacity));
+  border-color: rgb(224 33 46 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 115 189 / var(--tw-text-opacity));
 }
@@ -771,7 +771,7 @@ h2 span {
 .heading_verdicts span {
   --tw-border-opacity: 1;
   border-bottom-width: 4px;
-  border-color: rgb(217 21 28 / var(--tw-border-opacity));
+  border-color: rgb(224 33 46 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 115 189 / var(--tw-text-opacity));
 }
@@ -1393,7 +1393,7 @@ h2 span {
 
 .banner-form .wpcf7-not-valid-tip {
   --tw-border-opacity: 1;
-  border-color: rgb(217 21 28 / var(--tw-border-opacity));
+  border-color: rgb(224 33 46 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   border-bottom: 1px solid;
@@ -4614,7 +4614,7 @@ html body .edit-post-visual-editor__content-area .border-headings {
 
 html body .edit-post-visual-editor__content-area .\!border-button_color {
   --tw-border-opacity: 1 !important;
-  border-color: rgb(217 21 28 / var(--tw-border-opacity)) !important;
+  border-color: rgb(224 33 46 / var(--tw-border-opacity)) !important;
 }
 
 html body .edit-post-visual-editor__content-area .border-transparent {
@@ -4682,7 +4682,7 @@ html body .edit-post-visual-editor__content-area .bg-black {
 
 html body .edit-post-visual-editor__content-area .bg-button_color {
   --tw-bg-opacity: 1;
-  background-color: rgb(217 21 28 / var(--tw-bg-opacity));
+  background-color: rgb(224 33 46 / var(--tw-bg-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .bg-\[\#393939\] {
@@ -5393,12 +5393,12 @@ html body .edit-post-visual-editor__content-area .text-\[\#C6C5C5\] {
 
 html body .edit-post-visual-editor__content-area .text-button_color {
   --tw-text-opacity: 1;
-  color: rgb(217 21 28 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .\!text-button_color {
   --tw-text-opacity: 1 !important;
-  color: rgb(217 21 28 / var(--tw-text-opacity)) !important;
+  color: rgb(224 33 46 / var(--tw-text-opacity)) !important;
 }
 
 html body .edit-post-visual-editor__content-area .underline {
@@ -5732,7 +5732,7 @@ html :where(.wp-block) {
 
 .hover\:bg-button_color:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(217 21 28 / var(--tw-bg-opacity));
+  background-color: rgb(224 33 46 / var(--tw-bg-opacity));
 }
 
 .hover\:text-headings:hover {

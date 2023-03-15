@@ -1,1 +1,0 @@
-module.exports = {main: 'Open Sans', second: 'Bebas Neue Pro', third: 'Industry' };
