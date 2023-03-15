@@ -25,10 +25,10 @@ if ($is_preview && !empty($previewImage)) {
         <div>
             <div class="container text-center">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
-                    <h2 class="text-white text-3xl lg:!text-2xl sm:!text-xl xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h2>
+                    <h3 class="font-main font-semibold text-white tracking-widest text-2xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
-                    <h1 class="hero_heading_h1 banner"><?php echo $welcome_banner__design_three__title ?></h1>
+                    <h2 class="hero_heading_h2 multi-step-form mb-4"><?php echo $welcome_banner__design_three__title ?></h2>
                 <?php } ?>
             </div>    
         </div>

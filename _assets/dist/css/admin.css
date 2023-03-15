@@ -1391,6 +1391,10 @@ h2 span {
   }
 }
 
+.banner-form .next_step {
+  box-shadow: 0 10px 15px #80808059;
+}
+
 .banner-form .wpcf7-not-valid-tip {
   --tw-border-opacity: 1;
   border-color: rgb(224 33 46 / var(--tw-border-opacity));
@@ -5122,6 +5126,10 @@ html body .edit-post-visual-editor__content-area .pt-2 {
   padding-top: .5rem;
 }
 
+html body .edit-post-visual-editor__content-area .pb-48 {
+  padding-bottom: 12rem;
+}
+
 html body .edit-post-visual-editor__content-area .pt-11 {
   padding-top: 2.75rem;
 }
@@ -5344,6 +5352,10 @@ html body .edit-post-visual-editor__content-area .leading-\[370px\] {
 
 html body .edit-post-visual-editor__content-area .leading-\[1\] {
   line-height: 1;
+}
+
+html body .edit-post-visual-editor__content-area .tracking-widest {
+  letter-spacing: .1em;
 }
 
 html body .edit-post-visual-editor__content-area .text-gray-900 {
@@ -6181,6 +6193,10 @@ html :where(.wp-block) {
     height: 600px;
   }
 
+  .xl\:h-16 {
+    height: 4rem;
+  }
+
   .xl\:min-h-\[195px\] {
     min-height: 195px;
   }
@@ -6387,6 +6403,14 @@ html :where(.wp-block) {
 
   .xl\:pt-7 {
     padding-top: 1.75rem;
+  }
+
+  .xl\:pb-28 {
+    padding-bottom: 7rem;
+  }
+
+  .xl\:pb-0 {
+    padding-bottom: 0;
   }
 
   .xl\:text-center {
@@ -7392,6 +7416,10 @@ html :where(.wp-block) {
     font-size: 1.5rem !important;
   }
 
+  .lg\:\!text-3xl {
+    font-size: 1.875rem !important;
+  }
+
   .lg\:leading-tight, .lg\:leading-\[1\.25\] {
     line-height: 1.25;
   }
@@ -8229,6 +8257,10 @@ html :where(.wp-block) {
     width: 75%;
   }
 
+  .md\:w-5\/24 {
+    width: 20.8333%;
+  }
+
   .md\:max-w-none {
     max-width: none;
   }
@@ -8714,6 +8746,10 @@ html :where(.wp-block) {
     padding-bottom: 1rem;
   }
 
+  .sm\:pt-4 {
+    padding-top: 1rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
@@ -8756,6 +8792,10 @@ html :where(.wp-block) {
 
   .sm\:text-base {
     font-size: 1rem;
+  }
+
+  .sm\:\!text-lg {
+    font-size: 1.125rem !important;
   }
 
   .sm\:leading-none {
@@ -9101,6 +9141,10 @@ html :where(.wp-block) {
     height: 1.5rem;
   }
 
+  .xs\:h-12 {
+    height: 3rem;
+  }
+
   .xs\:max-h-64 {
     max-height: 16rem;
   }
@@ -9139,6 +9183,10 @@ html :where(.wp-block) {
 
   .xs\:w-14\/24 {
     width: 58.3333%;
+  }
+
+  .xs\:w-6\/24 {
+    width: 25%;
   }
 
   .xs\:max-w-\[80px\] {
@@ -9274,6 +9322,14 @@ html :where(.wp-block) {
 
   .xs\:\!pb-7 {
     padding-bottom: 1.75rem !important;
+  }
+
+  .xs\:pb-3 {
+    padding-bottom: .75rem;
+  }
+
+  .xs\:pb-2 {
+    padding-bottom: .5rem;
   }
 
   .xs\:text-3xl {
