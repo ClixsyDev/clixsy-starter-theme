@@ -400,6 +400,12 @@
                 'maxlength' => '',
             ),
             array(
+                'key' => 'field_633da2059aa98',
+                'name' => 'Map',
+                'type' => 'textarea',
+                'label' => 'Iframe with map',
+            ),
+            array(
                 'key' => 'field_63112131a9206',
                 'label' => 'Phone',
                 'name' => 'phone',

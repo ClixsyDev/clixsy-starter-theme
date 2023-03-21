@@ -57,30 +57,6 @@ if (function_exists('acf_add_local_field_group')) :
                     'type' => 'text',
                     'label' => 'Title',
                 ),
-                array(
-                    'key' => $block_key . 'map',
-                    'name' => $block_key . 'map',
-                    'type' => 'textarea',
-                    'label' => 'Iframe with map',
-                ),
-                array(
-                    'key' => $block_key . 'address',
-                    'name' => $block_key . 'address',
-                    'type' => 'text',
-                    'label' => 'Address',
-                ),
-                array(
-                    'key' => $block_key . 'email',
-                    'name' => $block_key . 'email',
-                    'type' => 'text',
-                    'label' => 'Email',
-                ),
-                array(
-                    'key' => $block_key . 'phone',
-                    'name' => $block_key . 'phone',
-                    'type' => 'text',
-                    'label' => 'Phone',
-                ),
             ),
 
         )
