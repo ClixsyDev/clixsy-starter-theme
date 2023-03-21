@@ -95,7 +95,7 @@
     align-items: center;
     margin-top: 2rem;
     padding: .5rem 1rem;
-    font-family: Open Sans;
+    font-family: Open Sans, sans-serif;
     font-weight: 700;
     display: flex;
   }
@@ -140,7 +140,7 @@
   color: rgb(255 255 255 / var(--tw-text-opacity));
   border-radius: 9999px;
   padding: .375rem 1.5rem;
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   --tw-bg-opacity: 1 !important;
@@ -184,7 +184,7 @@
 
 .footer-menu a {
   margin-bottom: .75rem;
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-size: 1.25rem;
   line-height: 1.375;
   display: block;
@@ -270,7 +270,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-weight: 700;
   transition-property: all;
   transition-duration: .1s;
@@ -598,7 +598,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 115 189 / var(--tw-text-opacity));
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-size: 5rem;
   font-weight: 700;
 }
@@ -622,7 +622,7 @@ h2 span {
 }
 
 .heading_default_color {
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-size: 4rem;
   font-weight: 700;
 }
@@ -674,7 +674,7 @@ h2 span {
 }
 
 .heading_default_color {
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-size: 4rem;
   font-weight: 700;
 }
@@ -997,7 +997,7 @@ h2 span {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter, backdrop-filter;
@@ -5155,7 +5155,7 @@ html body .edit-post-visual-editor__content-area .text-end {
 }
 
 html body .edit-post-visual-editor__content-area .font-main {
-  font-family: Open Sans;
+  font-family: Open Sans, sans-serif;
 }
 
 html body .edit-post-visual-editor__content-area .font-second {
@@ -7416,10 +7416,6 @@ html :where(.wp-block) {
     font-size: 1.5rem !important;
   }
 
-  .lg\:\!text-3xl {
-    font-size: 1.875rem !important;
-  }
-
   .lg\:leading-tight, .lg\:leading-\[1\.25\] {
     line-height: 1.25;
   }
@@ -9322,10 +9318,6 @@ html :where(.wp-block) {
 
   .xs\:\!pb-7 {
     padding-bottom: 1.75rem !important;
-  }
-
-  .xs\:pb-3 {
-    padding-bottom: .75rem;
   }
 
   .xs\:pb-2 {
