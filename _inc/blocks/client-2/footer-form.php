@@ -94,6 +94,12 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                     'return_format' => 'id',
                 ),
+                array(
+                    'key' => $block_key . 'disclaimer',
+                    'name' => $block_key . 'disclaimer',
+                    'type' => 'wysiwyg',
+                    'label' => 'Form disclaimer',
+                ),
             ),
 
         )

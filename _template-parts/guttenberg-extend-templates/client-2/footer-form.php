@@ -14,7 +14,7 @@ if ($is_preview && !empty($previewImage)) {
     $big_auto_footer_form__title_form = get_field('big_auto_footer_form__title_form');
     $big_auto_footer_form__description_form = get_field('big_auto_footer_form__description_form');
     $big_auto_footer_form__form_select = get_field('big_auto_footer_form__form_select');
-?>
+    $big_auto_footer_form__disclaimer = get_field('big_auto_footer_form__disclaimer'); ?>
     <!-- welcome-banner-design__two.php -->
     <section class="relative mt-10" id="footer-form">
         <div class="dots-bg h-10 absolute w-full bottom-0 left-0"></div>
@@ -38,6 +38,9 @@ if ($is_preview && !empty($previewImage)) {
                                 <div class="text-white font-second font-bold uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $big_auto_footer_form__description_form ?></div>
                             <?php } ?>
                             <?php echo $big_auto_footer_form__form_select ? do_shortcode('[contact-form-7 id="' . $big_auto_footer_form__form_select['0'] . '" title=""]') : '' ?>
+                            <?php if ($big_auto_footer_form__disclaimer) { ?>
+                                <div class="text-left"><?php echo $big_auto_footer_form__disclaimer ?></div>
+                            <?php } ?>
                         </div>
                     </div>
                 <?php } ?>

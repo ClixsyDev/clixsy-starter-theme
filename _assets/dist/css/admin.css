@@ -1326,12 +1326,10 @@ h2 span {
 
 .banner-form p {
   width: 100%;
-  text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  margin-top: 1.25rem;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 100;
 }
 
 @media (max-width: 640px) {
