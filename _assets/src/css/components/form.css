@@ -280,7 +280,7 @@
   }
 
   p {
-    @apply w-full text-center font-thin text-white text-2xl mb-4 sm:text-xl;
+    @apply w-full mt-5 text-white mb-4 sm:text-xl;
 
     span {
       @apply font-bold
