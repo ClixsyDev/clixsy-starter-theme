@@ -761,6 +761,12 @@
                 'ui' => 1,
             ),
             array(
+                'key' => 'field_635086d79fa30',
+                'name' => 'sidebar_form_disclaimer',
+                'type' => 'wysiwyg',
+                'label' => 'Sidebar form disclaimer',
+            ),
+            array(
                 'key' => 'field_633dad6f123bb83e1a',
                 'label' => 'Webhook for contact form 7',
                 'name' => '',
