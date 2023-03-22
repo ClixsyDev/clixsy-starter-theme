@@ -41,7 +41,7 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="container flex flex-col items-center">
                         <div class="form banner-form pt-4">
                             <?php if ($welcome_banner__design_three__description_form) { ?>
-                                <p><?php echo $welcome_banner__design_three__description_form ?></p>
+                                <p class="text-center !text-xl"><?php echo $welcome_banner__design_three__description_form ?></p>
                             <?php } ?>
                             <?php echo $welcome_banner__design_three__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_three__form_select['0'] . '" title=""]') : '' ?>
                         </div>

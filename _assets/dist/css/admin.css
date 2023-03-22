@@ -5264,6 +5264,10 @@ html body .edit-post-visual-editor__content-area .text-15xl {
   font-size: 250px;
 }
 
+html body .edit-post-visual-editor__content-area .\!text-xl {
+  font-size: 1.25rem !important;
+}
+
 html body .edit-post-visual-editor__content-area .font-bold {
   font-weight: 700;
 }
