@@ -27,7 +27,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
     <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1] lg:!pt-8">
         <div class="container lg:relative lg:z-10">
-            <span class="absolute right-0 left-0 min-h-[67%] top-72 -z-10 w-full bg-smoke hidden lg:!block sm:min-h-[59%] xs:top-60 xs:min-h-[65%]"></span>
+            <span class="absolute right-0 left-0 min-h-[69%] top-72 -z-10 w-full bg-smoke hidden lg:!block sm:min-h-[59%] xs:top-80 xs:min-h-[65%]"></span>
             <?php if ($about_us__title) { ?>
                 <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
