@@ -148,7 +148,7 @@ if ($is_preview && !empty($previewImage)) {
             <div class="relative lg:!pt-5 hidden rounded-2xl shadow-siteWide lg:!block" style="background-color: <?php echo $fights_for_you__cost_block_bg ?: ''  ?> ;">
                 <?php if ($fights_for_you__cost_title || $fights_for_you__cost_description || $fights_for_you__cost_link) { ?>
                     <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 <?php echo $fights_for_you__cost_select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'px-24' ?>">
-                        <div class="w-12/24 z-10 lg:items-center lg:w-full lg:text-left lg:max-w-[60%] sm:max-w-[80%]">
+                        <div class="w-12/24 z-10 lg:items-center lg:w-full lg:text-left lg:max-w-[60%] sm:max-w-[90%]">
                             <?php if ($fights_for_you__cost_title) { ?>
                                 <h3 class="text-headings font-bold capitalize font-second pb-10 leading-[65px] text-6xl xl:!text-5xl lg:pb-0 sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $fights_for_you__cost_title ?></h3>
                             <?php } ?>

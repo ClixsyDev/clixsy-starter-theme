@@ -3921,6 +3921,10 @@ html body .edit-post-visual-editor__content-area .min-h-\[300px\] {
   min-height: 300px;
 }
 
+html body .edit-post-visual-editor__content-area .min-h-\[69\%\] {
+  min-height: 69%;
+}
+
 html body .edit-post-visual-editor__content-area .w-full {
   width: 100%;
 }
@@ -5982,16 +5986,16 @@ html :where(.wp-block) {
     margin-top: -5rem;
   }
 
+  .\32 xl\:-mt-52 {
+    margin-top: -13rem;
+  }
+
   .\32 xl\:ml-3 {
     margin-left: .75rem;
   }
 
   .\32 xl\:-mt-24 {
     margin-top: -6rem;
-  }
-
-  .\32 xl\:-mt-52 {
-    margin-top: -13rem;
   }
 
   .\32 xl\:h-64 {
@@ -6006,12 +6010,12 @@ html :where(.wp-block) {
     height: 100%;
   }
 
-  .\32 xl\:min-h-\[300px\] {
-    min-height: 300px;
-  }
-
   .\32 xl\:min-h-\[700px\] {
     min-height: 700px;
+  }
+
+  .\32 xl\:min-h-\[300px\] {
+    min-height: 300px;
   }
 
   .\32 xl\:w-\[65\%\] {
@@ -6223,10 +6227,6 @@ html :where(.wp-block) {
     margin-left: 0;
   }
 
-  .xl\:-mt-52 {
-    margin-top: -13rem;
-  }
-
   .xl\:\!ml-0 {
     margin-left: 0 !important;
   }
@@ -6273,10 +6273,6 @@ html :where(.wp-block) {
 
   .xl\:min-h-full {
     min-height: 100%;
-  }
-
-  .xl\:min-h-\[700px\] {
-    min-height: 700px;
   }
 
   .xl\:min-h-\[230px\] {
@@ -7167,6 +7163,10 @@ html :where(.wp-block) {
     margin-top: -55%;
   }
 
+  .lg\:mt-3 {
+    margin-top: .75rem;
+  }
+
   .lg\:\!mt-0 {
     margin-top: 0 !important;
   }
@@ -7181,10 +7181,6 @@ html :where(.wp-block) {
 
   .lg\:-mt-5 {
     margin-top: -1.25rem;
-  }
-
-  .lg\:mt-3 {
-    margin-top: .75rem;
   }
 
   .lg\:block {
@@ -7273,10 +7269,6 @@ html :where(.wp-block) {
 
   .lg\:max-w-\[160px\] {
     max-width: 160px;
-  }
-
-  .lg\:max-w-\[57\%\] {
-    max-width: 57%;
   }
 
   .lg\:max-w-\[60\%\] {
@@ -8405,8 +8397,8 @@ html :where(.wp-block) {
     margin-bottom: 0;
   }
 
-  .md\:mt-3 {
-    margin-top: .75rem;
+  .md\:mt-5 {
+    margin-top: 1.25rem;
   }
 
   .md\:mb-9 {
@@ -8431,14 +8423,6 @@ html :where(.wp-block) {
 
   .md\:-mt-24 {
     margin-top: -6rem;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0;
-  }
-
-  .md\:mt-5 {
-    margin-top: 1.25rem;
   }
 
   .md\:block {
@@ -8663,11 +8647,6 @@ html :where(.wp-block) {
     padding-right: 5rem;
   }
 
-  .md\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -8676,6 +8655,11 @@ html :where(.wp-block) {
   .md\:px-3 {
     padding-left: .75rem;
     padding-right: .75rem;
+  }
+
+  .md\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   .md\:pb-5 {
@@ -8736,10 +8720,6 @@ html :where(.wp-block) {
 
   .md\:pt-28 {
     padding-top: 7rem;
-  }
-
-  .md\:pr-0 {
-    padding-right: 0;
   }
 
   .md\:text-left {
@@ -8928,12 +8908,12 @@ html :where(.wp-block) {
     max-width: 200px;
   }
 
-  .sm\:max-w-\[70\%\] {
-    max-width: 70%;
-  }
-
   .sm\:max-w-\[80\%\] {
     max-width: 80%;
+  }
+
+  .sm\:max-w-\[90\%\] {
+    max-width: 90%;
   }
 
   .sm\:translate-y-8 {
@@ -9410,6 +9390,14 @@ html :where(.wp-block) {
     right: -10rem;
   }
 
+  .xs\:top-72 {
+    top: 18rem;
+  }
+
+  .xs\:top-80 {
+    top: 20rem;
+  }
+
   .xs\:m-auto {
     margin: auto;
   }
@@ -9550,10 +9538,6 @@ html :where(.wp-block) {
     justify-content: flex-start;
   }
 
-  .xs\:justify-center {
-    justify-content: center;
-  }
-
   .xs\:gap-36 {
     gap: 9rem;
   }
@@ -9564,6 +9548,10 @@ html :where(.wp-block) {
 
   .xs\:\!gap-4 {
     gap: 1rem !important;
+  }
+
+  .xs\:\!gap-0 {
+    gap: 0 !important;
   }
 
   .xs\:gap-3 {
@@ -9582,20 +9570,12 @@ html :where(.wp-block) {
     gap: .25rem;
   }
 
-  .xs\:\!gap-0 {
-    gap: 0 !important;
-  }
-
-  .xs\:\!gap-x-16 {
-    column-gap: 4rem !important;
+  .xs\:\!gap-x-1 {
+    column-gap: .25rem !important;
   }
 
   .xs\:\!gap-y-5 {
     row-gap: 1.25rem !important;
-  }
-
-  .xs\:\!gap-x-1 {
-    column-gap: .25rem !important;
   }
 
   .xs\:p-0 {
@@ -9730,12 +9710,12 @@ html :where(.wp-block) {
     font-size: 1rem;
   }
 
-  .xs\:\!text-\[44px\] {
-    font-size: 44px !important;
-  }
-
   .xs\:\!text-base {
     font-size: 1rem !important;
+  }
+
+  .xs\:\!text-\[44px\] {
+    font-size: 44px !important;
   }
 
   .xs\:\!text-3xl {
