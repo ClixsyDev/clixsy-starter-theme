@@ -27,7 +27,7 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($the_process__process_box) { ?>
                     <div class="flex justify-center gap-24 xl:gap-5 w-full mb-7 mdt:mb-4 md:flex-wrap">
                         <?php foreach ($the_process__process_box as $item) { ?>
-                            <div class="bg-black shadow-siteWide !-mt-32 mdt:!mt-28 xs:!mt-20 !w-[250px] rounded-md px-6 pb-7 h-56 2xl:px-4 mdt:h-full mdt:pb-4 md:pt-10 md:text-center md:relative md:!w-[230px] sm:!w-[150px]">
+                            <div class="bg-black shadow-siteWide !-mt-32 mdt:!mt-28 xs:!mt-20 !w-[250px] rounded-md px-6 pb-7 h-56 2xl:px-4 mdt:h-full mdt:pb-4 md:pt-10 md:text-center md:relative md:!w-[230px] sm:!w-[145px]">
                                 <?php if ($item['icon']) { ?>
                                     <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mx-auto !max-h-24 md:-mt-24 object-contain ']) ?>
                                 <?php } ?>
