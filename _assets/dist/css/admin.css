@@ -8864,6 +8864,10 @@ html :where(.wp-block) {
     min-height: 59%;
   }
 
+  .sm\:min-h-\[65\%\] {
+    min-height: 65%;
+  }
+
   .sm\:w-full {
     width: 100%;
   }
@@ -9458,8 +9462,8 @@ html :where(.wp-block) {
     max-height: 16rem;
   }
 
-  .xs\:min-h-\[65\%\] {
-    min-height: 65%;
+  .xs\:min-h-\[61\%\] {
+    min-height: 61%;
   }
 
   .xs\:\!min-h-\[148px\] {
