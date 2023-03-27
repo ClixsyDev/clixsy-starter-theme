@@ -16,10 +16,10 @@ if ($is_preview && !empty($previewImage)) {
     $the_process__number = get_field('the_process__number');
     $the_process__block_bg = get_field('the_process__block_bg'); ?>
 
-    <section>
+    <section class="pt-8">
         <div class="container mb-64 mdt:mb-10">
             <div class="flex justify-center">
-                <h2 class="font-second text-center font-bold text-5xl xl:pb-5 xs:leading-none"><?php echo $the_process__title ?></h2>
+                <h2 class="font-second text-center font-bold text-6xl xl:pb-5 sm:!text-5xl xs:leading-none"><?php echo $the_process__title ?></h2>
             </div>
         </div>
         <div class="max-w-[1610px] rounded-lg mx-auto sm:!bg-inherit" style="background-color: <?php echo $the_process__block_bg ?: ''  ?> ;">
