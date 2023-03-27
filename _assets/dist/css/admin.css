@@ -8820,6 +8820,10 @@ html :where(.wp-block) {
     grid-column: span 12 / span 12;
   }
 
+  .sm\:m-0 {
+    margin: 0;
+  }
+
   .sm\:ml-0 {
     margin-left: 0;
   }
@@ -9087,10 +9091,6 @@ html :where(.wp-block) {
 
   .sm\:\!text-lg {
     font-size: 1.125rem !important;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
   }
 
   .sm\:leading-none {

@@ -164,7 +164,7 @@ if ($is_preview && !empty($previewImage)) {
                                     'link' => $fights_for_you__cost_link['url'],
                                     'text' => __($fights_for_you__cost_link['title'], 'law'),
                                     'text_hover' => false,
-                                    'classes' => 'btn-medium hover_accent uppercase lg:m-auto ', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                    'classes' => 'btn-medium hover_accent uppercase lg:m-auto sm:m-0', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                                 ]); ?>
                             <?php } ?>
                         </div>
