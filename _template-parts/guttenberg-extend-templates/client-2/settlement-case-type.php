@@ -87,18 +87,17 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($settlement_case_type__description_settlement) { ?>
                     <div class="description_settlement mb-12 mt-7 text-lg md:mt-6 xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
                 <?php } ?>
-            </div>
-            <?php if ($settlement_case_type__link) {
-                Template::load('_template-parts/components/button.php', [
-                    'link' => $settlement_case_type__link['url'],
-                    'text' => __($settlement_case_type__link['title'], 'law'),
-                    'text_hover' => false,
-                    'classes' => 'btn-smaller hover_accent', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                <?php if ($settlement_case_type__link) {
+                    Template::load('_template-parts/components/button.php', [
+                        'link' => $settlement_case_type__link['url'],
+                        'text' => __($settlement_case_type__link['title'], 'law'),
+                        'text_hover' => false,
+                        'classes' => 'btn-smaller hover_accent', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]);
-            } ?>
+                } ?>
+            </div>
         </div>
     </section>
-
 
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';
