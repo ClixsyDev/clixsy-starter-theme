@@ -121,7 +121,12 @@ if (function_exists('acf_add_local_field_group')) :
                     'type' => 'text',
                     'label' => 'Number',
                 ),
-
+                array(
+                    'key' => $block_key . 'block_bg',
+                    'name' => $block_key . 'block_bg',
+                    'type' => 'color_picker',
+                    'label' => 'Set background color for section',
+                ),
             ),
 
         )
