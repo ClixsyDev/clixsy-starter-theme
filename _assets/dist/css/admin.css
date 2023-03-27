@@ -3909,8 +3909,8 @@ html body .edit-post-visual-editor__content-area .min-h-\[246px\] {
   min-height: 246px;
 }
 
-html body .edit-post-visual-editor__content-area .min-h-\[69\%\] {
-  min-height: 69%;
+html body .edit-post-visual-editor__content-area .min-h-\[71\%\] {
+  min-height: 71%;
 }
 
 html body .edit-post-visual-editor__content-area .min-h-\[500px\] {
@@ -8858,10 +8858,6 @@ html :where(.wp-block) {
 
   .sm\:h-\[486px\] {
     height: 486px;
-  }
-
-  .sm\:min-h-\[59\%\] {
-    min-height: 59%;
   }
 
   .sm\:min-h-\[65\%\] {
