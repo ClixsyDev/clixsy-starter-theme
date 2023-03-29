@@ -8896,14 +8896,6 @@ html :where(.wp-block) {
     width: 62.5%;
   }
 
-  .sm\:\!w-\[140px\] {
-    width: 140px !important;
-  }
-
-  .sm\:\!w-\[1456px\] {
-    width: 1456px !important;
-  }
-
   .sm\:\!w-\[145px\] {
     width: 145px !important;
   }
