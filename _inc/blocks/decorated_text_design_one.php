@@ -67,13 +67,6 @@ if (function_exists('acf_add_local_field_group')) :
                     'instructions' => '',
                 ),
                 array(
-                    'key' => $block_key . 'after_description',
-                    'name' => $block_key . 'after_description',
-                    'type' => 'wysiwyg',
-                    'label' => 'Text after description (bolder and bigger)',
-                    'instructions' => '',
-                ),
-                array(
                     'key' => $block_key . 'button',
                     'name' => $block_key . 'button',
                     'label' => 'Button',
