@@ -16,15 +16,14 @@ if ($is_preview && !empty($previewImage)) {
     $about_us__attorney_title = get_field('about_us__attorney_title');
     $about_us__attorney_block_color = get_field('about_us__attorney_block_color');
     $about_us__first_description = get_field('about_us__first_description');
-    $about_us__number = get_field('about_us__number');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     $about_us__second_description = get_field('about_us__second_description');
     $about_us__title_items = get_field('about_us__title_items');
     $about_us__items = get_field('about_us__items');
     $about_us__link = get_field('about_us__link');
-    $about_us__background = get_field('about_us__background');
+    $about_us__background = get_field('about_us__background'); ?>
 
-
-?>
     <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1] lg:!pt-8">
         <div class="container lg:relative lg:z-10">
             <span class="absolute right-0 left-0 min-h-[71%] top-72 -z-10 w-full bg-smoke hidden lg:!block sm:min-h-[65%] xs:top-80 xs:min-h-[61%]"></span>
@@ -52,7 +51,9 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="font-main text-xl pb-12 font-light text-white lg:!text-xl lg:!pb-4 leading-tight">
                             <?php echo $about_us__first_description ?>
                         </div>
-                        <div class="text-white text-6xl font-second font-bold lg:text-center xs:!text-5xl"> <?php echo $about_us__number ?></div>
+                        <?php if ($phone && $phone_link) { ?>
+                            <a href="tel:<?php echo $phone_link ?>" class="text-white text-6xl font-second font-bold lg:text-center xs:!text-5xl"> <?php echo $phone ?></a>
+                        <?php } ?>
                     </div>
                 <?php } ?>
             </div>

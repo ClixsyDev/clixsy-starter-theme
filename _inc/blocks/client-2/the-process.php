@@ -116,12 +116,6 @@ if (function_exists('acf_add_local_field_group')) :
                     'return_format' => 'array',
                 ),
                 array(
-                    'key' => $block_key . 'number',
-                    'name' => $block_key . 'number',
-                    'type' => 'text',
-                    'label' => 'Number',
-                ),
-                array(
                     'key' => $block_key . 'block_bg',
                     'name' => $block_key . 'block_bg',
                     'type' => 'color_picker',

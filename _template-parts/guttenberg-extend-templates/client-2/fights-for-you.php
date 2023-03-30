@@ -19,7 +19,8 @@ if ($is_preview && !empty($previewImage)) {
     $fights_for_you__color_available = get_field('fights_for_you__color_available');
     $fights_for_you__benefits = get_field('fights_for_you__benefits');
     $fights_for_you__description = get_field('fights_for_you__description');
-    $fights_for_you__number = get_field('fights_for_you__number');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     $fights_for_you__link = get_field('fights_for_you__link');
     $fights_for_you__cost_title = get_field('fights_for_you__cost_title');
     $fights_for_you__cost_description = get_field('fights_for_you__cost_description');
@@ -94,16 +95,16 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     <?php } ?>  
                 </div>
-                <?php if ($fights_for_you__description || $fights_for_you__number || $fights_for_you__link) { ?>
+                <?php if ($fights_for_you__description || $phone || $phone_link || $fights_for_you__link) { ?>
                     <div>
                         <?php if ($fights_for_you__description) { ?>
                             <div class="text-left py-10 px-16 text-white text-2xl font-light xl:px-0 lg:!text-xl">
                                 <?php echo $fights_for_you__description ?>
                             </div>
                         <?php } ?>
-                        <?php if ($fights_for_you__number || $fights_for_you__link) { ?>
+                        <?php if ($phone || $phone_link || $fights_for_you__link) { ?>
                             <div class="flex items-center justify-center gap-16 xl:!justify-between lg:flex-col lg:gap-0">
-                                <a href="tel:+<?php echo $fights_for_you__number ?>" class="font-second font-black text-white text-6xl sm:!text-5xl"><?php echo $fights_for_you__number ?></a>
+                                <a href="tel:<?php echo $phone_link ?>" class="font-second font-black text-white text-6xl sm:!text-5xl"><?php echo $phone ?></a>
                                 <?php if ($fights_for_you__link && $fights_for_you__link['url']) { ?>
                                     <?php
                                     Template::load('_template-parts/components/button.php', [

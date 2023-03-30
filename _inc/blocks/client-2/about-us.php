@@ -127,12 +127,6 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'First description',
                 ),
                 array(
-                    'key' => $block_key . 'number',
-                    'name' => $block_key . 'number',
-                    'type' => 'text',
-                    'label' => 'Number',
-                ),
-                array(
                     'key' => $block_key . 'background',
                     'name' => $block_key . 'background',
                     'type' => 'image',

@@ -13,7 +13,8 @@ if ($is_preview && !empty($previewImage)) {
     $the_process__process_box = get_field('the_process__process_box');
     $the_process__process_text = get_field('the_process__process_text');
     $the_process__link = get_field('the_process__link');
-    $the_process__number = get_field('the_process__number');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     $the_process__block_bg = get_field('the_process__block_bg'); ?>
 
     <section class="pt-8">
@@ -65,18 +66,20 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                     </div>
                 <?php } ?>
-                <div class=" flex flex-wrap items-center justify-center flex-row mx-auto w-3/5 md:w-full pb-20 gap-5">
-                    <?php if ($the_process__link) { ?>
-                        <?php
-                        Template::load('_template-parts/components/button.php', [
-                            'link' => $the_process__link['url'],
-                            'text' => __($the_process__link['title'], 'law'),
-                            'text_hover' => false,
-                            'classes' => 'bigauto_red shadow-siteWide hover_accent !max-w-[460px] rounded-xl sm:shadow-btn', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
-                        ]); ?>
-                    <?php } ?>
-                    <div class="text-accent font-bold text-6xl xs:!text-5xl font-second"> <?php echo $the_process__number ?></div>
-                </div>
+                <?php if ($the_process__link || $phone || $phone_link) { ?>
+                    <div class=" flex flex-wrap items-center justify-center flex-row mx-auto w-3/5 md:w-full pb-20 gap-5">
+                        <?php if ($the_process__link) { ?>
+                            <?php
+                            Template::load('_template-parts/components/button.php', [
+                                'link' => $the_process__link['url'],
+                                'text' => __($the_process__link['title'], 'law'),
+                                'text_hover' => false,
+                                'classes' => 'bigauto_red shadow-siteWide hover_accent !max-w-[460px] rounded-xl sm:shadow-btn', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                            ]); ?>
+                        <?php } ?>
+                        <a href="<?php echo $phone_link ?>" class="text-accent font-bold text-6xl xs:!text-5xl font-second"> <?php echo $phone ?></a>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </section>
