@@ -28,10 +28,13 @@ if ($is_preview && !empty($previewImage)) {
             <div class="flex gap-28 uniq_xl:gap-20 lg:flex-col-reverse xs:gap-10">
                 <di class="flex flex-col gap-10 w-9/24 lg:w-full xs:gap-6">
                     <?php if ($settlement_case_type__description) { ?>
-                        <div class="settlement_case_type_description text-lg xs:!text-base"><?php echo $settlement_case_type__description ?></div>
-                        <?php if ($phone && $phone_link) { ?>
-                            <strong>Call <a href="tel:<?php echo $phone_link ?>"><?php echo $phone ?></a> for a FREE case evaluation.</strong>
-                        <?php } ?>
+                        <div class="settlement_case_type_description text-lg xs:!text-base">
+                            <?php echo $settlement_case_type__description ?>
+                            <?php if ($phone && $phone_link) { ?>
+                                <br>
+                                <strong>Call <a href="tel:<?php echo $phone_link ?>"><?php echo $phone ?></a> for a FREE case evaluation.</strong>
+                            <?php } ?>
+                        </div>
                     <?php } ?>
                     <?php if ($settlement_case_type__link) {
                         Template::load('_template-parts/components/button.php', [
