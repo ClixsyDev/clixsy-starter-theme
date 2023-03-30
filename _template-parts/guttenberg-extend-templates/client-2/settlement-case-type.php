@@ -100,7 +100,7 @@ if ($is_preview && !empty($previewImage)) {
                         'link' => $settlement_case_type__link['url'],
                         'text' => __($settlement_case_type__link['title'], 'law'),
                         'text_hover' => false,
-                        'classes' => 'btn-smaller hover_accent', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                        'classes' => 'btn-smaller hover_accent sm:mx-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                 ]);
                 } ?>
             </div>
