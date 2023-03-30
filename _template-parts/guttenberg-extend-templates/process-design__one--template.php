@@ -47,9 +47,11 @@ if ($is_preview && !empty($previewImage)) {
                                         <div class="text-4xl font-main xl:text-3xl lg:text-2xl xs:text-xl">
                                             <div class="text-headings process_text_design__one">
                                                 <?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?>
-                                                <?php if ($phone && $phone_link) { ?>
-                                                    <br>
-                                                    <a class="" href="tel:<?php echo $phone_link ?>"><strong><?php echo $phone ?></strong></a>
+                                                <?php if ($key == 1) { ?>
+                                                    <?php if ($phone && $phone_link) { ?>
+                                                        <br>
+                                                        <a class="" href="tel:<?php echo $phone_link ?>"><strong><?php echo $phone ?></strong></a>
+                                                    <?php } ?>
                                                 <?php } ?>
                                             </div>
                                             <?php if ($process_design_one__sercive_repeater_item['process_design_one__service_link'] && $process_design_one__sercive_repeater_item['process_design_one__service_link']['url']) { ?>
