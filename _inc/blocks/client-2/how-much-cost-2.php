@@ -64,13 +64,6 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Description',
                 ),
                 array(
-                    'key' => $block_key . 'link',
-                    'name' => $block_key . 'link',
-                    'label' => 'Button',
-                    'type' => 'link',
-                    'return_format' => 'array',
-                ),
-                array(
                     'key' => $block_key . 'block_bg',
                     'name' => $block_key . 'block_bg',
                     'type' => 'color_picker',

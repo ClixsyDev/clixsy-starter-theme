@@ -13,6 +13,7 @@ if ($is_preview && !empty($previewImage)) {
     $location = get_field('location', 'options');
     $map = get_field('map', 'options');
     $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     $mail = get_field('mail', 'options'); ?>
 
     <section class="py-8">
@@ -45,7 +46,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php if ($phone) { ?>
                                 <div>
                                     <h4 class="font-second font-bold text-3xl xs:text-2xl">Phone</h4>
-                                    <a class="font-main text-4xl xs:text-xl" href="tel:<?php $phone ?>"><?php echo $phone ?></a>
+                                    <a class="font-main text-4xl xs:text-xl" href="tel:<?php $phone_link ?>"><?php echo $phone ?></a>
                                 </div>
                             <?php } ?>
                         </div>

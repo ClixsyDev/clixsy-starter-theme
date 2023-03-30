@@ -11,7 +11,8 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $how_much_cost_two__title = get_field('how_much_cost_two__title');
     $how_much_cost_two__description = get_field('how_much_cost_two__description');
-    $how_much_cost_two__link = get_field('how_much_cost_two__link');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     $how_much_cost_two__block_bg = get_field('how_much_cost_two__block_bg');
     $how_much_cost_two__select = get_field('how_much_cost_two__select'); ?>
 
@@ -25,11 +26,11 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($how_much_cost_two__description) { ?>
                         <p class="text-xl pb-16 leading-tight xl:text-lg lg:pb-10"><?php echo $how_much_cost_two__description ?></p>
                     <?php } ?>
-                    <?php if ($how_much_cost_two__link && $how_much_cost_two__link['url']) { ?>
+                    <?php if ($phone && $phone_link) { ?>
                         <?php
                         Template::load('_template-parts/components/button.php', [
-                            'link' => $how_much_cost_two__link['url'],
-                            'text' => __($how_much_cost_two__link['title'], 'law'),
+                            'link' => 'tel:' . $phone_link,
+                            'text' => __($phone, 'law'),
                             'text_hover' => false,
                             'classes' => 'btn-medium hover_accent uppercase lg:m-auto ', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                         ]); ?>
