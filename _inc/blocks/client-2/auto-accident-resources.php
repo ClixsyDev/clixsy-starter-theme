@@ -78,12 +78,6 @@ if (function_exists('acf_add_local_field_group')) :
                             'type' => 'link',
                             'return_format' => 'array',
                         ),
-                        array(
-                            'key' =>  $block_key . 'faq_number',
-                            'label' => 'Faq Number',
-                            'name' => $block_key . 'faq_number',
-                            'type' => 'text',
-                        ),
                     ),
                 ),
                 array(
