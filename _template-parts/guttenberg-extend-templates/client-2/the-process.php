@@ -24,8 +24,9 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
         <div class="max-w-[1610px] rounded-lg mx-auto sm:!bg-inherit" style="background-color: <?php echo $the_process__block_bg ?: ''  ?> ;">
-            <div class="container">
+            <div class="container sm:relative sm:overflow-auto">
                 <?php if ($the_process__process_box) { ?>
+                    <span class="hidden absolute top-32 left-0 w-full h-full -z-10 sm:!block" style="background-color: <?php echo $the_process__block_bg ?: ''  ?> ;"></span>
                     <div class="flex justify-center gap-24 xl:gap-5 w-full mb-7 mdt:mb-4 md:flex-wrap">
                         <?php foreach ($the_process__process_box as $item) { ?>
                             <div class="bg-black shadow-siteWide !-mt-32 mdt:!mt-28 xs:!mt-20 !w-[250px] rounded-md px-6 pb-7 h-56 2xl:px-4 mdt:h-full mdt:pb-4 md:pt-10 md:text-center md:relative md:!w-[230px] sm:!w-[145px]">
@@ -53,7 +54,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 <?php } ?>
                 <?php if ($the_process__process_text) { ?>
-                    <div class=" w-4/6 xl:w-5/6 mdt:w-full mx-auto mb-16 md:mt-12">
+                    <div class=" w-4/6 xl:w-5/6 mdt:w-full mx-auto mb-16 md:mt-12 sm:px-4">
                         <?php foreach ($the_process__process_text as $item) { ?>
                             <div class="mb-8">
                                 <?php if ($item['title']) { ?>
@@ -67,7 +68,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 <?php } ?>
                 <?php if ($the_process__link || $phone || $phone_link) { ?>
-                    <div class=" flex flex-wrap items-center justify-center flex-row mx-auto w-3/5 md:w-full pb-20 gap-5">
+                    <div class=" flex flex-wrap items-center justify-center flex-row mx-auto w-3/5 md:w-full pb-20 gap-5 sm:!pb-5">
                         <?php if ($the_process__link) { ?>
                             <?php
                             Template::load('_template-parts/components/button.php', [

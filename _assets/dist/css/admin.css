@@ -3344,6 +3344,10 @@ html body .edit-post-visual-editor__content-area .-right-96 {
   right: -24rem;
 }
 
+html body .edit-post-visual-editor__content-area .top-32 {
+  top: 8rem;
+}
+
 html body .edit-post-visual-editor__content-area .z-50 {
   z-index: 50;
 }
@@ -8784,6 +8788,10 @@ html :where(.wp-block) {
 }
 
 @media (max-width: 640px) {
+  .sm\:relative {
+    position: relative;
+  }
+
   .sm\:right-\[61\%\] {
     right: 61%;
   }
@@ -8846,6 +8854,14 @@ html :where(.wp-block) {
 
   .sm\:-mt-12 {
     margin-top: -3rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:\!block {
+    display: block !important;
   }
 
   .sm\:hidden {
@@ -8949,6 +8965,10 @@ html :where(.wp-block) {
     gap: 0;
   }
 
+  .sm\:overflow-auto {
+    overflow: auto;
+  }
+
   .sm\:border-\[1px\] {
     border-width: 1px;
   }
@@ -9039,6 +9059,10 @@ html :where(.wp-block) {
 
   .sm\:pb-10 {
     padding-bottom: 2.5rem;
+  }
+
+  .sm\:\!pb-5 {
+    padding-bottom: 1.25rem !important;
   }
 
   .sm\:text-center {
