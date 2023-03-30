@@ -13,6 +13,8 @@ if ($is_preview && !empty($previewImage)) {
     $settlement_case_type__title = get_field('settlement_case_type__title');
     $settlement_case_type__description = get_field('settlement_case_type__description');
     $settlement_case_type__link = get_field('settlement_case_type__link');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     $settlement_case_type__insurance_offer = get_field('settlement_case_type__insurance_offer');
     $settlement_case_type__final_settlement = get_field('settlement_case_type__final_settlement');
     $settlement_case_type__description_settlement = get_field('settlement_case_type__description_settlement'); ?>
@@ -24,9 +26,12 @@ if ($is_preview && !empty($previewImage)) {
                 <h3 class="font-second font-bold pb-11 text-6xl leading-[65px] lg:!text-5xl lg:pb-7 sm:!text-4xl lg:leading-[1.25]"> <?php echo $settlement_case_type__title ?></h3>
             <?php } ?>
             <div class="flex gap-28 uniq_xl:gap-20 lg:flex-col-reverse xs:gap-10">
-                <div class="flex flex-col gap-10 w-9/24 lg:w-full xs:gap-6">
+                <di class="flex flex-col gap-10 w-9/24 lg:w-full xs:gap-6">
                     <?php if ($settlement_case_type__description) { ?>
                         <div class="settlement_case_type_description text-lg xs:!text-base"><?php echo $settlement_case_type__description ?></div>
+                        <?php if ($phone && $phone_link) { ?>
+                            <strong>Call <a href="tel:<?php echo $phone_link ?>"><?php echo $phone ?></a> for a FREE case evaluation.</strong>
+                        <?php } ?>
                     <?php } ?>
                     <?php if ($settlement_case_type__link) {
                         Template::load('_template-parts/components/button.php', [
