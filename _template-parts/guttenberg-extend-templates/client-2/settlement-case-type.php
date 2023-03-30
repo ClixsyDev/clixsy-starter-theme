@@ -19,7 +19,7 @@ if ($is_preview && !empty($previewImage)) {
     $settlement_case_type__final_settlement = get_field('settlement_case_type__final_settlement');
     $settlement_case_type__description_settlement = get_field('settlement_case_type__description_settlement'); ?>
 
-    <section class="pt-48 pb-16 bg-cover relative -mt-28 xs:pt-36 xl:bg-bottom lg:bg-[70%_top]" style="background-image:url('<?php echo !empty($settlement_case_type__background_image) ? wp_get_attachment_image_url($settlement_case_type__background_image['ID'], 'full') : ''; ?>');">
+    <section class="pt-48 pb-16 bg-cover bg-center relative -mt-28 xs:pt-36 xl:bg-bottom lg:bg-[70%_top]" style="background-image:url('<?php echo !empty($settlement_case_type__background_image) ? wp_get_attachment_image_url($settlement_case_type__background_image['ID'], 'full') : ''; ?>');">
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10 xl:hidden">
              <?php if ($settlement_case_type__title) { ?>
