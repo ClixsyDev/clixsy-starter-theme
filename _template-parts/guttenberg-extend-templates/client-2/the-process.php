@@ -24,7 +24,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
         <div class="max-w-[1610px] rounded-lg mx-auto sm:!bg-inherit" style="background-color: <?php echo $the_process__block_bg ?: ''  ?> ;">
-            <div class="container sm:relative sm:overflow-auto">
+            <div class="container sm:relative sm:overflow-hidden">
                 <?php if ($the_process__process_box) { ?>
                     <span class="hidden absolute top-32 left-0 w-full h-full -z-10 sm:!block" style="background-color: <?php echo $the_process__block_bg ?: ''  ?> ;"></span>
                     <div class="flex justify-center gap-24 xl:gap-5 w-full mb-7 mdt:mb-4 md:flex-wrap">
