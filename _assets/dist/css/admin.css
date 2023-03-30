@@ -1385,6 +1385,7 @@ h2 span {
 
 @media (max-width: 540px) {
   .banner-form .next_step {
+    font-size: 1.125rem;
     min-width: 100% !important;
   }
 }
@@ -3324,6 +3325,10 @@ html body .edit-post-visual-editor__content-area .-bottom-\[16\%\] {
   bottom: -16%;
 }
 
+html body .edit-post-visual-editor__content-area .top-32 {
+  top: 8rem;
+}
+
 html body .edit-post-visual-editor__content-area .-bottom-6 {
   bottom: -1.5rem;
 }
@@ -3342,10 +3347,6 @@ html body .edit-post-visual-editor__content-area .top-7 {
 
 html body .edit-post-visual-editor__content-area .-right-96 {
   right: -24rem;
-}
-
-html body .edit-post-visual-editor__content-area .top-32 {
-  top: 8rem;
 }
 
 html body .edit-post-visual-editor__content-area .z-50 {
@@ -8856,10 +8857,6 @@ html :where(.wp-block) {
     margin-top: -3rem;
   }
 
-  .sm\:block {
-    display: block;
-  }
-
   .sm\:\!block {
     display: block !important;
   }
@@ -8965,8 +8962,8 @@ html :where(.wp-block) {
     gap: 0;
   }
 
-  .sm\:overflow-auto {
-    overflow: auto;
+  .sm\:overflow-hidden {
+    overflow: hidden;
   }
 
   .sm\:border-\[1px\] {
@@ -9053,16 +9050,16 @@ html :where(.wp-block) {
     padding-bottom: 1rem;
   }
 
+  .sm\:\!pb-5 {
+    padding-bottom: 1.25rem !important;
+  }
+
   .sm\:pt-4 {
     padding-top: 1rem;
   }
 
   .sm\:pb-10 {
     padding-bottom: 2.5rem;
-  }
-
-  .sm\:\!pb-5 {
-    padding-bottom: 1.25rem !important;
   }
 
   .sm\:text-center {

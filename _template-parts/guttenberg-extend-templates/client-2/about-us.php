@@ -75,7 +75,7 @@ if ($is_preview && !empty($previewImage)) {
                                 'link' => $about_us__link['url'],
                                 'text' => __($about_us__link['title'], 'law'),
                                 'text_hover' => false,
-                                'classes' => 'btn_sm bigauto_red hover_accent !max-w-[460px] rounded-xl xs:!text-xl', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
+                                'classes' => 'btn_sm bigauto_red hover_accent !max-w-[460px] rounded-xl', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
                     </div>
