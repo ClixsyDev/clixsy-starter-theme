@@ -4612,6 +4612,10 @@ html body .edit-post-visual-editor__content-area .border-1 {
   border-width: 1px;
 }
 
+html body .edit-post-visual-editor__content-area .border-0 {
+  border-width: 0;
+}
+
 html body .edit-post-visual-editor__content-area .border-b {
   border-bottom-width: 1px;
 }
@@ -4630,6 +4634,10 @@ html body .edit-post-visual-editor__content-area .border-solid {
 
 html body .edit-post-visual-editor__content-area .border-none {
   border-style: none;
+}
+
+html body .edit-post-visual-editor__content-area .\!border-none {
+  border-style: none !important;
 }
 
 html body .edit-post-visual-editor__content-area .border-gray-200 {
@@ -8831,6 +8839,11 @@ html :where(.wp-block) {
 
   .sm\:m-0 {
     margin: 0;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .sm\:ml-0 {
