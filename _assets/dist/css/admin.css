@@ -4282,10 +4282,6 @@ html body .edit-post-visual-editor__content-area .max-w-\[1177px\] {
   max-width: 1177px;
 }
 
-html body .edit-post-visual-editor__content-area .\!max-w-\[460px\] {
-  max-width: 460px !important;
-}
-
 html body .edit-post-visual-editor__content-area .max-w-\[830px\] {
   max-width: 830px;
 }
@@ -4320,6 +4316,10 @@ html body .edit-post-visual-editor__content-area .max-w-md {
 
 html body .edit-post-visual-editor__content-area .max-w-\[1610px\] {
   max-width: 1610px;
+}
+
+html body .edit-post-visual-editor__content-area .\!max-w-\[460px\] {
+  max-width: 460px !important;
 }
 
 html body .edit-post-visual-editor__content-area .flex-1 {
@@ -4610,10 +4610,6 @@ html body .edit-post-visual-editor__content-area .border-\[25px\] {
 
 html body .edit-post-visual-editor__content-area .border-1 {
   border-width: 1px;
-}
-
-html body .edit-post-visual-editor__content-area .border-0 {
-  border-width: 0;
 }
 
 html body .edit-post-visual-editor__content-area .border-b {
@@ -5471,11 +5467,6 @@ html body .edit-post-visual-editor__content-area .text-button_color {
   color: rgb(224 33 46 / var(--tw-text-opacity));
 }
 
-html body .edit-post-visual-editor__content-area .\!text-button_color {
-  --tw-text-opacity: 1 !important;
-  color: rgb(224 33 46 / var(--tw-text-opacity)) !important;
-}
-
 html body .edit-post-visual-editor__content-area .underline {
   text-decoration-line: underline;
 }
@@ -5818,11 +5809,6 @@ html :where(.wp-block) {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:\!text-white:hover {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:opacity-80:hover {
@@ -8506,10 +8492,6 @@ html :where(.wp-block) {
     width: 79.1667%;
   }
 
-  .md\:w-4\/5 {
-    width: 80%;
-  }
-
   .md\:w-12\/24 {
     width: 50%;
   }
@@ -9762,12 +9744,6 @@ html :where(.wp-block) {
 
   .xs\:leading-none {
     line-height: 1;
-  }
-
-  .xs\:shadow-btn {
-    --tw-shadow: 0px 10px 15px #80808059;
-    --tw-shadow-colored: 0px 10px 15px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
