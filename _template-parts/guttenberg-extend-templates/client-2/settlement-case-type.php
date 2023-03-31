@@ -45,7 +45,7 @@ if ($is_preview && !empty($previewImage)) {
                         ]);
                     } ?>
                 </div>
-                <div class="flex flex-col gap-24 justify-center pt-24 lg:!pt-0 lg:gap-8">
+                <div class="flex flex-col gap-24 justify-start lg:!pt-0 lg:gap-8">
                     <?php if ($settlement_case_type__insurance_offer) { ?>
                         <div>
                             <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Insurance Offer</h4>
