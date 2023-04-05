@@ -648,7 +648,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  font-family: Bebas Neue;
+  font-family: Bebas Neue Pro;
   font-size: 5rem;
   font-weight: 900;
 }
@@ -700,7 +700,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  font-family: Bebas Neue;
+  font-family: Bebas Neue Pro;
   font-size: 3rem;
   font-weight: 700;
   line-height: 60px;
@@ -4608,8 +4608,16 @@ html body .edit-post-visual-editor__content-area .border-\[25px\] {
   border-width: 25px;
 }
 
+html body .edit-post-visual-editor__content-area .border-\[5px\] {
+  border-width: 5px;
+}
+
 html body .edit-post-visual-editor__content-area .border-1 {
   border-width: 1px;
+}
+
+html body .edit-post-visual-editor__content-area .\!border-\[5px\] {
+  border-width: 5px !important;
 }
 
 html body .edit-post-visual-editor__content-area .border-b {
@@ -4666,14 +4674,6 @@ html body .edit-post-visual-editor__content-area .border-black {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-<<<<<<< HEAD
-html body .edit-post-visual-editor__content-area .\!border-button_color {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(224 33 46 / var(--tw-border-opacity)) !important;
-}
-
-=======
->>>>>>> origin/bigauto
 html body .edit-post-visual-editor__content-area .border-headings {
   --tw-border-opacity: 1;
   border-color: rgb(57 57 57 / var(--tw-border-opacity));
@@ -4681,6 +4681,11 @@ html body .edit-post-visual-editor__content-area .border-headings {
 
 html body .edit-post-visual-editor__content-area .border-transparent {
   border-color: #0000;
+}
+
+html body .edit-post-visual-editor__content-area .\!border-white {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
 }
 
 html body .edit-post-visual-editor__content-area .border-t-\[\#e2e4e8\] {
@@ -5315,6 +5320,10 @@ html body .edit-post-visual-editor__content-area .text-\[75px\] {
 
 html body .edit-post-visual-editor__content-area .\!text-3xl {
   font-size: 1.875rem !important;
+}
+
+html body .edit-post-visual-editor__content-area .text-\[28px\] {
+  font-size: 28px;
 }
 
 html body .edit-post-visual-editor__content-area .text-\[500px\] {
