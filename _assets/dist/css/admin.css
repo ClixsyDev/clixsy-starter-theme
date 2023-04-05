@@ -648,7 +648,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  font-family: Bebas Neue Pro;
+  font-family: Bebas Neue;
   font-size: 5rem;
   font-weight: 900;
 }
@@ -700,7 +700,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  font-family: Bebas Neue Pro;
+  font-family: Bebas Neue;
   font-size: 3rem;
   font-weight: 700;
   line-height: 60px;
@@ -4666,6 +4666,14 @@ html body .edit-post-visual-editor__content-area .border-black {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+<<<<<<< HEAD
+html body .edit-post-visual-editor__content-area .\!border-button_color {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(224 33 46 / var(--tw-border-opacity)) !important;
+}
+
+=======
+>>>>>>> origin/bigauto
 html body .edit-post-visual-editor__content-area .border-headings {
   --tw-border-opacity: 1;
   border-color: rgb(57 57 57 / var(--tw-border-opacity));
