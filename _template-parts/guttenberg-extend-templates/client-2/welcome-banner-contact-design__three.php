@@ -25,7 +25,7 @@ if ($is_preview && !empty($previewImage)) {
     background-image:url('<?php echo !empty($welcome_banner_contact_design_three__block_bg) ? wp_get_attachment_image_url($welcome_banner_contact_design_three__block_bg['ID'], 'full') : ''; ?>');">
         <div class="container">
             <?php if ($welcome_banner_contact_design_three__title) { ?>
-                <h1 class="font-bold text-center font-third capitalize md:!text-[36px] text-5xl text-black pt-6 pb-6  md:leading-snug"><?php echo $welcome_banner_contact_design_three__title ?></h1>
+                <h1 class="font-bold text-center font-third capitalize md:!text-[36px] text-5xl text-white pt-6 pb-6  md:leading-snug"><?php echo $welcome_banner_contact_design_three__title ?></h1>
             <?php } ?>
             <div class="flex items-end lg:flex-col-reverse">
                 <div class="w-7/12 xl1240:w-6/12 lg:w-10/12 lg:m-auto sm:w-full sm:hidden">
@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <?php if ($welcome_banner_contact_design_three__form_select) { ?>
                     <div class="w-5/12 xl1240:w-6/12 mdt:w-20/24 pb-5 lg:w-9/12 lg:m-auto sm:w-full">
-                        <div class="form banner-form big-auto-footer-form px-10 py-7 md:!p-5 !mb-0" style="background-color: <?php echo $welcome_banner_contact_design_three__form_bg ?: ''  ?> ;">
+                        <div class="form banner-form big-auto-footer-form px-10 py-7 md:!p-5 !mb-0 !border-[5px] !border-white" style="background-color: <?php echo $welcome_banner_contact_design_three__form_bg ?: ''  ?> ;">
                             <div class="text-white font-thin text-2xl 2xl:!text-[20px] mdt:!pb-3 xl:!text-lg xs:!text-base"><?php echo $welcome_banner_contact_design_three__form_subtitle ?></div>
                             <div class="text-white font-bold font-second uppercase leading-[1] pb-5 text-6xl 2xl:!text-[50px] xs:!text-3xl "><?php echo $welcome_banner_contact_design_three__form_title ?></div>
                             <?php echo $welcome_banner_contact_design_three__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner_contact_design_three__form_select['0'] . '" title=""]') : '' ?>

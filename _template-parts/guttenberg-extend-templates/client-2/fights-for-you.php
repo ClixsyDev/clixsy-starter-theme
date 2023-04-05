@@ -33,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
             <?php echo wp_get_attachment_image($fights_for_you__bg_image, 'full', '', ['class' => 'absolute shadow-siteWide max-h-[525px] w-full h-full top-0 -z-10 lg:max-h-[655px]']) ?>
         <?php } ?>
         <div class="container">
-            <div class="flex gap-16 justify-start items-start xl:gap-8 mdt:mb-44 mdt:flex-col-reverse"> 
+            <div class="flex gap-16 justify-start items-start xl:gap-8 mdt:mb-44 mdt:flex-col-reverse">
                 <?php if ($fights_for_you__singleattorney_image) { ?>
                     <?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => 'mdt:hidden']) ?>
                 <?php } ?>
@@ -85,7 +85,7 @@ if ($is_preview && !empty($previewImage)) {
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 !max-h-24 xl:min-h-[120px] xl:min-w-[120px] xl:-mt-20 md:m-auto md:-mt-32']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h3 class="font-bold font-third text-3xl mt-8 mb-6 text-white xl:!my-4 2xl:!text-2xl xs:!text-xl"><?php echo $item['title'] ?></h3>
+                                        <h3 class="font-bold font-third text-[28px] mt-8 mb-6 text-white xl:!my-4 2xl:!text-2xl xs:!text-xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
                                         <div class="text-white"><?php echo $item['description'] ?></div>
@@ -93,7 +93,7 @@ if ($is_preview && !empty($previewImage)) {
                                 </div>
                             <?php } ?>
                         </div>
-                    <?php } ?>  
+                    <?php } ?>
                 </div>
                 <?php if ($fights_for_you__description || $phone || $phone_link || $fights_for_you__link) { ?>
                     <div>
