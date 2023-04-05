@@ -13,8 +13,9 @@ if ($is_preview && !empty($previewImage)) {
     $process_design_one__image = get_field('process_design_one__image');
     $process_design_one__image_mobile = get_field('process_design_one__image_mobile');
     $process_design_one__button = get_field('process_design_one__button');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options'); ?>
 
-?>
     <?php if ($process_design_one__sercive_repeater || $process_design_one__title || $process_design_one__image || $process_design_one__button) { ?>
         <div class="pt-20 pb-24 xs:pb-16">
             <div class="container md:p-0">
@@ -44,7 +45,15 @@ if ($is_preview && !empty($previewImage)) {
                                             <?php echo str_pad(++$key, 2, '0', STR_PAD_LEFT) ?>
                                         </div>
                                         <div class="text-4xl font-main xl:text-3xl lg:text-2xl xs:text-xl">
-                                            <div class="text-headings process_text_design__one"><?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?></div>
+                                            <div class="text-headings process_text_design__one">
+                                                <?php echo $process_design_one__sercive_repeater_item['process_design_one__service_text'] ?>
+                                                <?php if ($key == 1) { ?>
+                                                    <?php if ($phone && $phone_link) { ?>
+                                                        <br>
+                                                        <a class="" href="tel:<?php echo $phone_link ?>"><strong><?php echo $phone ?></strong></a>
+                                                    <?php } ?>
+                                                <?php } ?>
+                                            </div>
                                             <?php if ($process_design_one__sercive_repeater_item['process_design_one__service_link'] && $process_design_one__sercive_repeater_item['process_design_one__service_link']['url']) { ?>
                                                 <div class="mt-3">
                                                     <?php

@@ -60,13 +60,6 @@ if (function_exists('acf_add_local_field_group')) :
                     'return_format' => 'id',
                     'preview_size' => 'thumbnail'
                 ),
-
-                array(
-                    'key' => $block_key . 'number',
-                    'name' => $block_key . 'number',
-                    'type' => 'text',
-                    'label' => 'Number',
-                ),
                 array(
                     'key' => $block_key . 'title_form',
                     'name' => $block_key . 'title_form',
@@ -94,8 +87,13 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                     'return_format' => 'id',
                 ),
+                array(
+                    'key' => $block_key . 'disclaimer',
+                    'name' => $block_key . 'disclaimer',
+                    'type' => 'wysiwyg',
+                    'label' => 'Form disclaimer',
+                ),
             ),
-
         )
     );
 

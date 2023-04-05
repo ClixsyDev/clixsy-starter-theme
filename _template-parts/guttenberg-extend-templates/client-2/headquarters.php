@@ -10,10 +10,11 @@ if ($is_preview && !empty($previewImage)) {
     return;
 } else {
     $headquarters__title = get_field('headquarters__title');
-    $headquarters__map = get_field('headquarters__map');
-    $headquarters__address = get_field('headquarters__address');
-    $headquarters__email = get_field('headquarters__email');
-    $headquarters__phone = get_field('headquarters__phone'); ?>
+    $location = get_field('location', 'options');
+    $map = get_field('map', 'options');
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
+    $mail = get_field('mail', 'options'); ?>
 
     <section class="py-8">
         <div class="container">
@@ -23,29 +24,29 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <div class="pt-12 md:pt-10">
                 <div class=" flex justify-center gap-10  md:flex-col md:items-center shadow-siteWide">
-                    <?php if ($headquarters__map) { ?>
+                    <?php if ($map) { ?>
                         <div class="w-6/12 iframe-full-width md:w-full">
-                            <?php echo $headquarters__map ?>
+                            <?php echo $map ?>
                         </div>
                     <?php } ?>
-                    <?php if ($headquarters__address || $headquarters__email || $headquarters__phone) { ?>
+                    <?php if ($location || $mail || $phone) { ?>
                         <div class="w-6/12 flex flex-col gap-5 md:text-center xs:gap-3 md:w-full pb-6">
-                            <?php if ($headquarters__address) { ?>
+                            <?php if ($location) { ?>
                                 <div>
                                     <h4 class="font-second font-bold text-3xl xs:text-2xl">Address</h4>
-                                    <p class="font-main text-xl"><?php echo $headquarters__address ?></p>
+                                    <p class="font-main text-xl"><?php echo $location ?></p>
                                 </div>
                             <?php } ?>
-                            <?php if ($headquarters__email) { ?>
+                            <?php if ($mail) { ?>
                                 <div>
                                     <h4 class="font-second font-bold text-3xl xs:text-2xl">Email</h4>
-                                    <a class="font-main text-xl" href="mailto:<?php $headquarters__email ?>"><?php echo $headquarters__email ?></a>
+                                    <a class="font-main text-xl" href="mailto:<?php $mail ?>"><?php echo $mail ?></a>
                                 </div>
                             <?php } ?>
-                            <?php if ($headquarters__phone) { ?>
+                            <?php if ($phone) { ?>
                                 <div>
                                     <h4 class="font-second font-bold text-3xl xs:text-2xl">Phone</h4>
-                                    <a class="font-main text-4xl xs:text-xl" href="tel:<?php $headquarters__phone ?>"><?php echo $headquarters__phone ?></a>
+                                    <a class="font-main text-4xl xs:text-xl" href="tel:<?php echo $phone_link ?>"><?php echo $phone ?></a>
                                 </div>
                             <?php } ?>
                         </div>

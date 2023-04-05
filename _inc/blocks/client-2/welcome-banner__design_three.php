@@ -112,10 +112,10 @@ if (function_exists('acf_add_local_field_group')) :
                     'return_format' => 'id',
                 ),
                 array(
-                    'key' => $block_key . 'description_second_form',
-                    'name' => $block_key . 'description_second_form',
-                    'type' => 'text',
-                    'label' => 'Second description to form',
+                    'key' => $block_key . 'form_disclaimer',
+                    'name' => $block_key . 'form_disclaimer',
+                    'type' => 'wysiwyg',
+                    'label' => 'Disclaimer to form',
                 ),
             ),
 

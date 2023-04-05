@@ -12,7 +12,9 @@ if ($is_preview && !empty($previewImage)) {
     $auto_accident_resources__title = get_field('auto_accident_resources__title');
     $auto_accident_resources__subtitle = get_field('auto_accident_resources__subtitle');
     $auto_accident_resources__items = get_field('auto_accident_resources__items');
-?>
+    $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options'); ?>
+
     <section class="container mt-14 lg:!mt-0">
         <?php if ($auto_accident_resources__title) { ?>
             <div id="<?php echo $auto_accident_resources__title ?>" class="flex justify-center">
@@ -52,35 +54,27 @@ if ($is_preview && !empty($previewImage)) {
                                             'link' => $item['auto_accident_resources__faq_link']['url'],
                                             'text' => __($item['auto_accident_resources__faq_link']['title'], 'law'),
                                             'text_hover' => false,
-                                            'classes' => ' hover_accent bg-accent bg-button_color !border-4 !border-button_color hover:text-xl hover hover:!border-accent rounded-xl uppercase !max-w-96 !min-w-[300px]  w-full'
+                                            'classes' => 'btn w-full !items-center btn-smaller border-none xs:!max-w-[340px]'
                                         ]); ?>
                                     <?php } ?>
 
                                     <?php
                                     Template::load('_template-parts/components/button.php', [
-                                        'link' => 'tel:' . $item['auto_accident_resources__faq_number'],
-                                        'text' => __($item['auto_accident_resources__faq_number'], 'law'),
+                                        'link' => 'tel:' . $phone_link,
+                                        'text' => __($phone, 'law'),
                                         'text_hover' => false,
-                                        'classes' => 'bg-white !text-3xl text-button_color  !border-4 !border-button_color rounded-xl uppercase hover:text-white  hover:!bg-button_color !max-w-96 !min-w-[340px] text-4xl  w-full'
+                                        'classes' => 'btn w-full !text-3xl btn-smaller transparent xs:!max-w-[340px]'
                                     ]); ?>
                                 </div>
                                 <div class="flex justify-center items-end bxs:ml-auto bxs:mb-4 ">
                                     <a href="#<?php echo $auto_accident_resources__title ?>" class=" flex justify-center items-center text-4xl  mdt:text-2xl md:text-[17px] text-button_color rounded-xl h-[75px] w-16 hover:text-white hover:bg-button_color ">↑</a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 <?php } ?>
             </div>
-
-
         </div>
-
-
-
-
     </section>
 
 <?php }

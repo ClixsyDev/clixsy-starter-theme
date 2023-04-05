@@ -49,7 +49,7 @@
                     <div class="font-main font-bold text-2xl leading-none">
                         <a href="tel:<?php echo $phone ?>"><?= get_field('phone_with_letters', 'option') ?></a>
                     </div>
-                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
+                    <a class="font-main btn font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
                     </a>
                 </div>
