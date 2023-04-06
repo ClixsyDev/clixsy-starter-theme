@@ -28,10 +28,10 @@ if ($is_preview && !empty($previewImage)) {
                             <div class="w-full flex justify-center">
                                 <span class="h-1 my-4 bg-accent w-20 block"></span>
                             </div>
-                            <div class="font-avenir text-xl 2xl:text-2xl mdt:!text-lg xs:!text-base">
+                            <div class="font-third font-normal text-xl mdt:!text-lg xs:!text-base">
                                 <?= $verdict['verdicts_description'] ?>
                             </div>
-                            <div class="font-avenir text-base xs:!text-xs">
+                            <div class="font-third font-normal  text-[15px] xs:!text-xs">
                                 <?= $verdict['verdicts_resolved'] ?>
                             </div>
                             <div class="dots-bg h-8 absolute w-full bottom-0 left-0 xs:h-6"></div>
