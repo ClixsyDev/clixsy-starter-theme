@@ -31,6 +31,9 @@ if ($is_preview && !empty($previewImage)) {
                             <div class="font-avenir text-xl 2xl:text-2xl mdt:!text-lg xs:!text-base">
                                 <?= $verdict['verdicts_description'] ?>
                             </div>
+                            <div class="font-avenir text-lg xs:!text-xs">
+                                <?= $verdict['verdicts_resolved'] ?>
+                            </div>
                             <div class="dots-bg h-8 absolute w-full bottom-0 left-0 xs:h-6"></div>
                         </div>
                     <?php

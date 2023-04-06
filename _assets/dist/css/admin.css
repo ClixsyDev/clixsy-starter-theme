@@ -9745,6 +9745,10 @@ html :where(.wp-block) {
     font-size: 1.125rem !important;
   }
 
+  .xs\:\!text-xs {
+    font-size: .75rem !important;
+  }
+
   .xs\:leading-none {
     line-height: 1;
   }
