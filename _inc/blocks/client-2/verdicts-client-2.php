@@ -73,6 +73,12 @@ if (function_exists('acf_add_local_field_group')) {
                         'label' => 'Description',
                         'type' => 'text',
                     ),
+                    array(
+                        'key' => 'verdicts_resolved',
+                        'name' => 'verdicts_resolved',
+                        'label' => 'Resolved In',
+                        'type' => 'text',
+                    ),
                 ),
             ),
             array(
