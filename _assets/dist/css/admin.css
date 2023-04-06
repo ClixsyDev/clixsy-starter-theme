@@ -261,7 +261,7 @@
   height: 3.5rem;
   width: max-content;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(224 33 46 / var(--tw-bg-opacity));
   text-align: center;
   text-transform: uppercase;
   --tw-text-opacity: 1;
@@ -280,7 +280,7 @@
 
 .btn:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(209 100 102 / var(--tw-bg-opacity));
 }
 
 .btn:active {
@@ -390,13 +390,13 @@
 .btn.btn_form {
   height: 5rem;
   width: max-content;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   margin: 1.25rem auto auto;
   font-size: 1.5rem;
   min-width: 100% !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(224 33 46 / var(--tw-bg-opacity)) !important;
   border-width: 5px !important;
 }
 
@@ -404,7 +404,7 @@
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(57 57 57 / var(--tw-text-opacity));
 }
 
 @media (max-width: 1024px) {
@@ -443,7 +443,7 @@
 
 .btn.btn_headings {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -469,19 +469,19 @@
 .btn.btn_form_design_one:hover {
   min-width: 270px;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
   font-size: 1.5rem;
 }
 
 .btn.btn_form_design_one.btn-form-newsletter {
   height: 2.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
   padding: 0;
   font-size: 1.125rem;
   min-width: 340px !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(0 115 189 / var(--tw-bg-opacity)) !important;
   align-items: center !important;
 }
 
@@ -495,9 +495,14 @@
   min-width: 190px;
 }
 
-.btn.btn_form_design_one.btn-form-newsletter:hover span, .btn.hover_white {
+.btn.btn_form_design_one.btn-form-newsletter:hover span {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(224 33 46 / var(--tw-text-opacity));
+}
+
+.btn.hover_white {
+  --tw-text-opacity: 1;
+  color: rgb(57 57 57 / var(--tw-text-opacity));
 }
 
 .btn.hover_white:hover, .btn.hover_white_text_accent:hover {
@@ -507,15 +512,20 @@
 
 .btn.hover_white_text_accent:hover .btn_text_1, .btn.hover_white_text_accent:hover .btn_text_2 {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(0 115 189 / var(--tw-text-opacity));
 }
 
-.btn.hover_accent:hover, .btn.hover_headings:hover {
+.btn.hover_accent:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(0 115 189 / var(--tw-bg-opacity));
 }
 
-.btn.hover_outline_white:hover, .btn.hover_outline_accent:hover {
+.btn.hover_headings:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(57 57 57 / var(--tw-bg-opacity));
+}
+
+.btn.hover_outline_white:hover {
   --tw-border-opacity: 1;
   border-width: 2px;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -524,11 +534,20 @@
   background-color: #0000;
 }
 
+.btn.hover_outline_accent:hover {
+  --tw-border-opacity: 1;
+  border-width: 2px;
+  border-color: rgb(0 115 189 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 115 189 / var(--tw-text-opacity));
+  background-color: #0000;
+}
+
 .btn.white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(57 57 57 / var(--tw-text-opacity));
 }
 
 .btn.center {
@@ -5444,6 +5463,11 @@ html body .edit-post-visual-editor__content-area .text-\[\#C6C5C5\] {
 html body .edit-post-visual-editor__content-area .text-button_color {
   --tw-text-opacity: 1;
   color: rgb(224 33 46 / var(--tw-text-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .\!text-accent {
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 115 189 / var(--tw-text-opacity)) !important;
 }
 
 html body .edit-post-visual-editor__content-area .underline {
