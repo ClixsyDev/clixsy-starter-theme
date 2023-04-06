@@ -16,7 +16,9 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_three__description_form = get_field('welcome_banner__design_three__description_form');
     $welcome_banner__design_three__form_select = get_field('welcome_banner__design_three__form_select');
     $welcome_banner__design_three__form_disclaimer = get_field('welcome_banner__design_three__form_disclaimer');
-    $welcome_banner__design_three__select_font = get_field('welcome_banner__design_three__select_font'); ?>
+    $welcome_banner__design_three__select_font = get_field('welcome_banner__design_three__select_font');
+    $phone_link = get_field('phone_link', 'options');
+?>
 
     <section class="pb-8 pt-11 overflow-x-clip relative" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
         <?php if ($welcome_banner__design_three__background_image) { ?>
@@ -28,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
                     <h3 class="font-main font-semibold text-white tracking-widest text-2xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
-                    <h2 class="hero_heading_h2 multi-step-form mb-4"><?php echo $welcome_banner__design_three__title ?></h2>
+                    <h2 class="hero_heading_h2 multi-step-form mb-4"><a href="tel:<?php echo $phone_link ?>"><?php echo $welcome_banner__design_three__title ?></a></h2>
                 <?php } ?>
             </div>
         </div>
