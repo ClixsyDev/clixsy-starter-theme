@@ -301,8 +301,11 @@ window.addEventListener('scroll', () => {
 });
 
 
-// window.addEventListener('load', function () {
-//   const banner = document.querySelector('.banner');
+// homepage header bg animation
 
-//   banner.classList.add('revealUpp');
-// });
+window.addEventListener("scroll", () => {
+  let scroll = scrollY;
+  const section = document.querySelector(".zoom-animation");
+  section.style.backgroundSize = `${100 + (scroll * 0.1)}%`;
+  
+})
