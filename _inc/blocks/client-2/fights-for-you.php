@@ -82,6 +82,23 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
                 array(
+                    'key' => $block_key . 'foryoutag',
+                    'label' => 'For You Heading Tag',
+                    'name' => 'for_you_heading_tag',
+                    'type' => 'radio',
+                    'instructions' => 'Select the heading tag to use.',
+                    'choices' => array(
+                        'h1' => 'H1',
+                        'h2' => 'H2',
+                        'h3' => 'H3',
+                        'h4' => 'H4',
+                        'h5' => 'H5',
+                        'h6' => 'H6'
+                    ),
+                    'default_value' => 'h1',
+                    'layout' => 'horizontal'
+                ),
+                array(
                     'key' => $block_key . 'title',
                     'name' => $block_key . 'title',
                     'type' => 'text',

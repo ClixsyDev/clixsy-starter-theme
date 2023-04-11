@@ -10,6 +10,7 @@ if ($is_preview && !empty($previewImage)) {
     return;
 } else {
     $fights_for_you__title = get_field('fights_for_you__title');
+    $for_you_heading_tag = get_field('for_you_heading_tag');
     $fights_for_you__singleattorney_image = get_field('fights_for_you__singleattorney_image');
     $fights_for_you__rating_image = get_field('fights_for_you__rating_image');
     $fights_for_you__color = get_field('fights_for_you__color');
@@ -40,7 +41,7 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="flex xl:flex-col xl:gap-5 2xl:items-center xl:items-baseline mdt:!flex-row mdt:w-full mdt:justify-between">
                     <div class="flex items-center xl:flex-col xl:!items-start md:w-full md:gap-6 md:!items-center md:mb-9">
                         <?php if ($fights_for_you__title) { ?>
-                            <h2 class="text-6xl capitalize pt-8 text-black font-bold font-second xl:pt-0 mdt:pt-0 md:!text-5xl"><?php echo $fights_for_you__title ?></h2>
+                            <?php echo '<' .  $for_you_heading_tag . ' class="text-6xl capitalize pt-8 text-black font-bold font-second xl:pt-0 mdt:pt-0 md:!text-5xl leading-none">' . $fights_for_you__title . '</' .  $for_you_heading_tag . '>'; ?>
                         <?php } ?>
                         <div class="hidden shadow-siteWide px-3 w-9/12 h-full justify-center font-main gap-3 py-4 !items-center rounded-2xl text-white md:!flex xs:!py-2" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                             <div class="flex flex-col">
@@ -64,7 +65,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
             </div>
-            <div class="px-20 rounded-md pb-10 xl:pt-7 mdt:px-7 sm:px-4" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
+            <div class="px-20 rounded-md pb-10 xl:pt-7 mdt:px-7 sm:px-4 pt-5 2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
                 <div class="flex items-center md:-mt-44 md:justify-center">
                     <?php if ($fights_for_you__text_available || $fights_for_you__time_available) { ?>
                         <div class="flex items-center shadow-siteWide pl-10 pr-12 w-5/12 h-full mt-2.5 font-main gap-3 py-1 rounded-l-2xl -mr-1 text-white xl:px-5 xl:flex-col xl:w-6/24 xl:gap-1 xl:py-2 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
