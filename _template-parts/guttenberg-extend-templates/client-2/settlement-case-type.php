@@ -22,7 +22,7 @@ if ($is_preview && !empty($previewImage)) {
     <section class="pt-48 pb-16 bg-cover bg-center relative -mt-28 xs:pt-36 xl:bg-bottom lg:bg-[70%_top]" style="background-image:url('<?php echo !empty($settlement_case_type__background_image) ? wp_get_attachment_image_url($settlement_case_type__background_image['ID'], 'full') : ''; ?>');">
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10 xl:hidden">
-             <?php if ($settlement_case_type__title) { ?>
+            <?php if ($settlement_case_type__title) { ?>
                 <h3 class="font-second font-bold pb-11 text-6xl leading-[65px] lg:!text-5xl lg:pb-7 sm:!text-4xl lg:leading-[1.25]"> <?php echo $settlement_case_type__title ?></h3>
             <?php } ?>
             <div class="flex gap-28 uniq_xl:gap-20 lg:flex-col-reverse xs:gap-10">
@@ -59,7 +59,7 @@ if ($is_preview && !empty($previewImage)) {
                             <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Final Settlement* </h4>
                             <div class="font-second text-15xl font-bold leading-none text-accent xxxl:text-13xl xl:text-10xl xs:text-8xl xxs:text-6xl"><?php echo $settlement_case_type__final_settlement ?></div>
                             <?php if ($settlement_case_type__description_settlement) { ?>
-                                <div class="description_settlement mt-12 max-w-[900px] text-lg md:mt-6 xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
+                                <div class="description_settlement mt-28 xxxl:mt-44 2xl:mt-[19rem] text-right max-w-[900px] text-lg md:mt-6 xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
                             <?php } ?>
                         </div>
                     <?php } ?>
@@ -101,7 +101,7 @@ if ($is_preview && !empty($previewImage)) {
                         'text' => __($settlement_case_type__link['title'], 'law'),
                         'text_hover' => false,
                         'classes' => 'btn-smaller hover_accent sm:mx-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
-                ]);
+                    ]);
                 } ?>
             </div>
         </div>

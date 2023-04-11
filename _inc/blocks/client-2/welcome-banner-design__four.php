@@ -10,7 +10,8 @@
 
 
 
-function register_welcome_banner__case_design_four() {
+function register_welcome_banner__case_design_four()
+{
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -68,6 +69,23 @@ if (function_exists('acf_add_local_field_group')) {
                 'label' => 'Logo',
                 'return_format' => 'id',
                 'preview_size' => 'thumbnail'
+            ),
+            array(
+                'key' => $block_key . 'bannertag',
+                'label' => 'Banner Heading Tag',
+                'name' => 'banner_heading_tag',
+                'type' => 'radio',
+                'instructions' => 'Select the heading tag to use.',
+                'choices' => array(
+                    'h1' => 'H1',
+                    'h2' => 'H2',
+                    'h3' => 'H3',
+                    'h4' => 'H4',
+                    'h5' => 'H5',
+                    'h6' => 'H6'
+                ),
+                'default_value' => 'h1',
+                'layout' => 'horizontal'
             ),
             array(
                 'key' => $block_key . 'title',

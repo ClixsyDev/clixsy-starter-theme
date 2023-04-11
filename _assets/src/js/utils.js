@@ -301,11 +301,14 @@ window.addEventListener('scroll', () => {
 });
 
 
+
+
 // homepage header bg animation
 
 window.addEventListener("scroll", () => {
   let scroll = scrollY;
   const section = document.querySelector(".zoom-animation");
-  section.style.backgroundSize = `${100 + (scroll * 0.1)}%`;
+  section.style.backgroundSize = `${100 + (scroll * 0.05)}%`;
   
 })
+

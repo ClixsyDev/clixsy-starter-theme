@@ -15,7 +15,6 @@
 @import './components/_toc.css';
 @import './components/_breadcrumbs.css';
 @import './components/_thank-you-messages.css';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -227,3 +226,4 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
