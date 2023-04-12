@@ -4762,11 +4762,6 @@ html body .edit-post-visual-editor__content-area .bg-\[\#393939\] {
   background-color: rgb(57 57 57 / var(--tw-bg-opacity));
 }
 
-html body .edit-post-visual-editor__content-area .bg-slate-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
-}
-
 html body .edit-post-visual-editor__content-area .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }
