@@ -4,9 +4,9 @@
 @import './_case-types.css';
 @import './_blog.css';
 @import './_home-page.css';
-
 @import './_footer.css';
 @import './_bio-page.css';
+@import '../../../node_modules/aos/dist/aos.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
 @import './components/_headings.css';
@@ -226,4 +226,3 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
-

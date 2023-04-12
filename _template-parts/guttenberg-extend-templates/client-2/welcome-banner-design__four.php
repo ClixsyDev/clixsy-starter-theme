@@ -13,7 +13,10 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_four_logo = get_field('welcome_banner__design_four_logo');
     $welcome_banner__design_four_subtitle = get_field('welcome_banner__design_four_subtitle');
     $welcome_banner__banner_heading_tag = get_field('banner_heading_tag');
-    $welcome_banner__design_four_title = get_field('welcome_banner__design_four_title'); ?>
+    $welcome_banner__design_four_title = get_field('welcome_banner__design_four_title');
+
+?>
+
 
     <section class="bg-cover bg-no-repeat bg-center relative pb-48 pt-8 xl:pb-28 xs:pb-16 sm:pt-4 zoom-animation" style="background-image:url('<?php echo !empty($welcome_banner__design_four_bg) ? wp_get_attachment_image_url($welcome_banner__design_four_bg, 'full') : ''; ?>');">
         <?php if ($welcome_banner__design_four_title || $welcome_banner__design_four_logo || $welcome_banner__design_four_subtitle) { ?>
@@ -31,7 +34,6 @@ if ($is_preview && !empty($previewImage)) {
             <div class="dots-bg h-24 absolute w-full bottom-0 left-0 xl:h-16 xs:h-12"></div>
         <?php } ?>
     </section>
-
-
+    <div class="flex items-center justify-center w-max h-28 bg-slate-600 m-auto p-5 mt-4 mb-4 text-white" data-aos="flip-up">Take a look predrag</div>
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

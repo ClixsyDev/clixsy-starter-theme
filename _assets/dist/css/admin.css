@@ -3425,6 +3425,10 @@ html body .edit-post-visual-editor__content-area .\!m-0 {
   margin: 0 !important;
 }
 
+html body .edit-post-visual-editor__content-area .m-5 {
+  margin: 1.25rem;
+}
+
 html body .edit-post-visual-editor__content-area .my-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -3702,6 +3706,10 @@ html body .edit-post-visual-editor__content-area .-mt-28 {
   margin-top: -7rem;
 }
 
+html body .edit-post-visual-editor__content-area .mt-28 {
+  margin-top: 7rem;
+}
+
 html body .edit-post-visual-editor__content-area .mb-12 {
   margin-bottom: 3rem;
 }
@@ -3720,10 +3728,6 @@ html body .edit-post-visual-editor__content-area .ml-3 {
 
 html body .edit-post-visual-editor__content-area .\!mb-0 {
   margin-bottom: 0 !important;
-}
-
-html body .edit-post-visual-editor__content-area .mt-28 {
-  margin-top: 7rem;
 }
 
 html body .edit-post-visual-editor__content-area .block {
@@ -4760,6 +4764,16 @@ html body .edit-post-visual-editor__content-area .bg-\[\#cbcbcb\] {
 html body .edit-post-visual-editor__content-area .bg-\[\#393939\] {
   --tw-bg-opacity: 1;
   background-color: rgb(57 57 57 / var(--tw-bg-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .bg-opacity-75 {
@@ -6021,10 +6035,6 @@ html :where(.wp-block) {
 
   .\32 xl\:-mt-24 {
     margin-top: -6rem;
-  }
-
-  .\32 xl\:mt-72 {
-    margin-top: 18rem;
   }
 
   .\32 xl\:mt-\[19rem\] {

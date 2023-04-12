@@ -7,6 +7,8 @@ import { hoverOnButton } from './button-hover';
 import { tocAnchor } from './toc';
 import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
+import { aosAnimations } from './aos-animations';
+
 
 
 /* FAQ start */
@@ -172,4 +174,5 @@ ready(() => {
   secondStep();
   nextArrow();
   btnMoreFormDesignTwo();
+  aosAnimations();
 });
