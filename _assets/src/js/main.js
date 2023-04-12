@@ -11,6 +11,7 @@ import { aosAnimations } from './aos-animations';
 import { smoothScrollFn } from './smooth-site-scrolling';
 
 
+
 /* FAQ start */
 const initFAQ = () => {
   const acc = getElements('.faq__header');

@@ -274,29 +274,7 @@ export const listAllEventListeners = () => {
   });
 };
 
-/* homepage h1 animation */
 
-const revealElems = document.querySelectorAll('.revealUp');
-
-revealElems.forEach((elem) => {
-  if (elem.offsetTop < window.innerHeight) {
-    revealElement(elem);
-  }
-});
-
-function revealElement(elem) {
-  elem.style.opacity = 1;
-  elem.style.visibility = 'visible';
-  elem.style.transform = 'translateY(0)';
-}
-
-window.addEventListener('scroll', () => {
-  revealElems.forEach((elem) => {
-    if (elem.offsetTop < window.innerHeight) {
-      revealElement(elem);
-    }
-  });
-});
 
 // homepage header bg animation
 
