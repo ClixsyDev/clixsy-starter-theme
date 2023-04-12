@@ -274,13 +274,11 @@ export const listAllEventListeners = () => {
   });
 };
 
-
-
 /* homepage h1 animation */
 
 const revealElems = document.querySelectorAll('.revealUp');
 
-revealElems.forEach(elem => {
+revealElems.forEach((elem) => {
   if (elem.offsetTop < window.innerHeight) {
     revealElement(elem);
   }
@@ -293,22 +291,24 @@ function revealElement(elem) {
 }
 
 window.addEventListener('scroll', () => {
-  revealElems.forEach(elem => {
+  revealElems.forEach((elem) => {
     if (elem.offsetTop < window.innerHeight) {
       revealElement(elem);
     }
   });
 });
 
-
-
-
 // homepage header bg animation
 
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
   let scroll = scrollY;
-  const section = document.querySelector(".zoom-animation");
-  section.style.backgroundSize = `${100 + (scroll * 0.05)}%`;
-  
-})
-
+  // const section = getElement('.zoom-animation');
+  // section.style.backgroundSize = `${100 + scroll * 0.05}%`;
+  imageSelector = getElement('.animated-image');
+  if (ifSelectorExist(imageSelector)) {
+    css(imageSelector, {
+      // transform: `${this.collapseOffsetHeight}px`,
+      transform: `translate3d(0px, ${scroll}px, 0px) scale(${1+(scroll * 0.001)})`,
+    });
+  }
+});

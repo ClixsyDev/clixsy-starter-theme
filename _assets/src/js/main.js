@@ -8,7 +8,7 @@ import { tocAnchor } from './toc';
 import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
 import { aosAnimations } from './aos-animations';
-
+import { smoothScrollFn } from './smooth-site-scrolling';
 
 
 /* FAQ start */
@@ -175,4 +175,5 @@ ready(() => {
   nextArrow();
   btnMoreFormDesignTwo();
   aosAnimations();
+  smoothScrollFn();
 });

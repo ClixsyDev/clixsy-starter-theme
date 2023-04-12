@@ -18,7 +18,10 @@ if ($is_preview && !empty($previewImage)) {
 ?>
 
 
-    <section class="bg-cover bg-no-repeat bg-center relative pb-48 pt-8 xl:pb-28 xs:pb-16 sm:pt-4 zoom-animation" style="background-image:url('<?php echo !empty($welcome_banner__design_four_bg) ? wp_get_attachment_image_url($welcome_banner__design_four_bg, 'full') : ''; ?>');">
+    <section class="bg-cover overflow-hidden bg-no-repeat bg-center relative pb-48 pt-8 xl:pb-28 xs:pb-16 sm:pt-4 zoom-animation">
+        <?php if (!empty($welcome_banner__design_four_bg)) { ?>
+            <img class="animated-image -z-10 absolute top-0 left-0 object-cover h-full w-full" src="<?php echo wp_get_attachment_image_url($welcome_banner__design_four_bg, 'full') ?>" alt="background">
+        <?php } ?>
         <?php if ($welcome_banner__design_four_title || $welcome_banner__design_four_logo || $welcome_banner__design_four_subtitle) { ?>
             <div class="container text-center">
                 <?php if ($welcome_banner__design_four_logo) { ?>

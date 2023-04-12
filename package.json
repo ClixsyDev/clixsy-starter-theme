@@ -30,6 +30,7 @@
     "browser-sync": "^2.27.10",
     "concurrently": "^7.4.0",
     "dotenv": "^16.0.1",
+    "smoothscroll-for-websites": "^1.4.10",
     "vanilla-marquee": "^1.1.2"
   }
 }

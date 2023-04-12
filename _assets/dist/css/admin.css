@@ -3425,10 +3425,6 @@ html body .edit-post-visual-editor__content-area .\!m-0 {
   margin: 0 !important;
 }
 
-html body .edit-post-visual-editor__content-area .m-5 {
-  margin: 1.25rem;
-}
-
 html body .edit-post-visual-editor__content-area .my-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -4764,11 +4760,6 @@ html body .edit-post-visual-editor__content-area .bg-\[\#cbcbcb\] {
 html body .edit-post-visual-editor__content-area .bg-\[\#393939\] {
   --tw-bg-opacity: 1;
   background-color: rgb(57 57 57 / var(--tw-bg-opacity));
-}
-
-html body .edit-post-visual-editor__content-area .bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .bg-slate-600 {
