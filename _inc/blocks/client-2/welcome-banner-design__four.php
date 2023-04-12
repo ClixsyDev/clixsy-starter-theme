@@ -100,6 +100,12 @@ if (function_exists('acf_add_local_field_group')) {
                 'label' => 'Subtitle',
             ),
             array(
+                'key' => $block_key . 'info',
+                'name' => $block_key . 'info',
+                'type' => 'text',
+                'label' => 'Info',
+            ),
+            array(
                 'key' => $block_key . 'link',
                 'name' => $block_key . 'link',
                 'label' => 'Select link',

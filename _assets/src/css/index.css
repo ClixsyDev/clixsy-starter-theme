@@ -214,15 +214,3 @@ html {
     height: 100%;
   }
 }
-
-/* homepage h1 animation css */
-.revealUp {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1.25s ease-out, transform 1.25s ease-out;
-}
-
-.revealUp.active {
-  opacity: 1;
-  transform: translateY(0);
-}
