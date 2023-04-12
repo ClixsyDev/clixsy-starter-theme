@@ -35,7 +35,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php echo '<' . $welcome_banner__banner_heading_tag . ' class="hero_heading_h1 banner !leading-none revealUp" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000">' . $welcome_banner__design_four_title . '</' . $welcome_banner__banner_heading_tag . '>'; ?>
                 <?php } ?>
                 <?php if ($welcome_banner__design_four_info) { ?>
-                    <h2 class="text-button_color font-semibold text-3xl pb-4 tracking-widest lg:!text-2xl xl:pb-0 sm:!text-lg" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1000"><?php echo $welcome_banner__design_four_info ?></h2>
+                    <h2 class="text-button_color font-semibold text-3xl pb-4 tracking-widest lg:!text-2xl xl:pb-0 sm:!text-lg" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="1200"><?php echo $welcome_banner__design_four_info ?></h2>
                 <?php } ?>
             </div>
             <div class="dots-bg h-24 absolute w-full bottom-0 left-0 xl:h-16 xs:h-12"></div>
