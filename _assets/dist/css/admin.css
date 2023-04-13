@@ -1319,7 +1319,7 @@ h2 span {
   --tw-border-opacity: 1;
   border-width: 2px;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  border-radius: .25rem;
+  border-radius: 1rem;
   height: 55px !important;
   min-width: 100% !important;
 }
@@ -3724,10 +3724,6 @@ html body .edit-post-visual-editor__content-area .ml-3 {
 
 html body .edit-post-visual-editor__content-area .\!mb-0 {
   margin-bottom: 0 !important;
-}
-
-html body .edit-post-visual-editor__content-area .mb-\[4\%\] {
-  margin-bottom: 4%;
 }
 
 html body .edit-post-visual-editor__content-area .block {
