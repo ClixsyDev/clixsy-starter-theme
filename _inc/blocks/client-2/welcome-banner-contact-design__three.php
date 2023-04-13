@@ -10,7 +10,8 @@
 
 
 
-function register_welcome_banner_contact_design_three() {
+function register_welcome_banner_contact_design_three()
+{
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(

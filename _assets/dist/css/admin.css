@@ -1194,7 +1194,7 @@ h2 span {
 }
 
 .banner-form select {
-  min-height: 65px;
+  min-height: 50px;
   min-width: 450px;
   appearance: none;
   --tw-border-opacity: 1;
@@ -1205,7 +1205,7 @@ h2 span {
   --tw-shadow-colored: 0px 3px 6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   background-repeat: no-repeat;
-  border-radius: 1rem;
+  border-radius: .25rem;
   outline-width: 0;
   margin-bottom: 1.25rem;
   padding-left: 5rem;
@@ -1248,7 +1248,7 @@ h2 span {
   --tw-shadow-colored: 0px 3px 10px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   margin: -3.5rem auto auto;
-  padding: 4rem 5rem 2.5rem;
+  padding: 1rem 5rem 2.5rem;
 }
 
 @media (max-width: 640px) {
@@ -1319,9 +1319,9 @@ h2 span {
   --tw-border-opacity: 1;
   border-width: 2px;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-  margin-left: -.75rem;
+  border-radius: .25rem;
   height: 55px !important;
-  min-width: 106% !important;
+  min-width: 100% !important;
 }
 
 .banner-form p {
@@ -3724,6 +3724,10 @@ html body .edit-post-visual-editor__content-area .ml-3 {
 
 html body .edit-post-visual-editor__content-area .\!mb-0 {
   margin-bottom: 0 !important;
+}
+
+html body .edit-post-visual-editor__content-area .mb-\[4\%\] {
+  margin-bottom: 4%;
 }
 
 html body .edit-post-visual-editor__content-area .block {
