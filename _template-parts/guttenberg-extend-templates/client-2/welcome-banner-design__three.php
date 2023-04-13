@@ -51,12 +51,12 @@ if ($is_preview && !empty($previewImage)) {
                             <?php } ?>
                             <?php echo $welcome_banner__design_three__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_three__form_select['0'] . '" title=""]') : '' ?>
                         </div>
+                        <?php if ($welcome_banner__design_three__form_disclaimer) { ?>
+                            <div class="hidden disclaimer_multistep_form text-base font-thin text-white text-left pt-4 mt-8">
+                                <?php echo $welcome_banner__design_three__form_disclaimer ?>
+                            </div>
+                        <?php } ?>
                     </div>
-                    <?php if ($welcome_banner__design_three__form_disclaimer) { ?>
-                        <div class="hidden disclaimer_multistep_form text-base font-thin text-white text-left pt-4 mt-8">
-                            <?php echo $welcome_banner__design_three__form_disclaimer ?>
-                        </div>
-                    <?php } ?>
                 </div>
             </div>
         <?php } ?>
