@@ -11,6 +11,7 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $welcome_banner__design_three__title = get_field('welcome_banner__design_three__title');
     $welcome_banner__design_three__subtitle = get_field('welcome_banner__design_three__subtitle');
+    $welcome_banner__design_three__subtitle_second = get_field('welcome_banner__design_three__subtitle_second');
     $welcome_banner__design_three__bg = get_field('welcome_banner__design_three__bg');
     $welcome_banner__design_three__background_image = get_field('welcome_banner__design_three__background_image');
     $welcome_banner__design_three__description_form = get_field('welcome_banner__design_three__description_form');
@@ -24,10 +25,13 @@ if ($is_preview && !empty($previewImage)) {
         <?php if ($welcome_banner__design_three__background_image) { ?>
             <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-left-72 xs:-left-40 xs:!-top-[60px]']) ?>
         <?php } ?>
-        <div>
+        <div class="mb-4%">
             <div class="container text-center relative z-10">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
-                    <h3 class="font-main font-semibold text-white tracking-widest text-2xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
+                    <h3 class="font-main font-semibold text-white tracking-widest text-4xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
+                <?php } ?>
+                <?php if ($welcome_banner__design_three__subtitle_second) { ?>
+                    <h3 class="font-main font-semibold text-white tracking-widest text-2xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle_second ?></h3>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
                     <h2 class="hero_heading_h2 multi-step-form mb-4"><a href="tel:<?php echo $phone_link ?>"><?php echo $welcome_banner__design_three__title ?></a></h2>
@@ -58,6 +62,6 @@ if ($is_preview && !empty($previewImage)) {
         <?php } ?>
     </section>
 
-    </div>
+
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

@@ -10,7 +10,8 @@
 
 
 
-function register_welcome_banner_design_three() {
+function register_welcome_banner_design_three()
+{
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
@@ -75,6 +76,12 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                     'layout' => 'vertical',
                     'return_format' => 'value',
+                ),
+                array(
+                    'key' => $block_key . 'subtitle_second',
+                    'name' => $block_key . 'subtitle_second',
+                    'type' => 'text',
+                    'label' => 'Subtitle second',
                 ),
                 array(
                     'key' => $block_key . 'bg',
