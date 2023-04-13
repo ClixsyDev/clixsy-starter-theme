@@ -36,7 +36,7 @@
   }
 
   &.btn_form {
-    @apply w-max !border-[5px] !min-w-[100%] h-20 !bg-button_color hover:bg-white hover:text-headings text-2xl text-white lg:h-[70px] md:w-[300px] md:h-[60px] md:text-[18px] sm:w-[195px] sm:min-w-[195px] sm:text-[17px] m-auto mt-5;
+    @apply w-max !rounded-2xl !border-[5px] !min-w-[100%] h-20 !bg-button_color hover:bg-white hover:text-headings text-2xl text-white lg:h-[70px] md:w-[300px] md:h-[60px] md:text-[18px] sm:w-[195px] sm:min-w-[195px] sm:text-[17px] m-auto mt-5;
     span {
       @apply text-white;
     }

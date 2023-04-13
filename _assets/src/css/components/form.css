@@ -277,8 +277,7 @@
     }
 
     button {
-      @apply !h-[55px] !min-w-[100%] rounded-2xl  border-2 border-white;
-
+      @apply !h-[55px] !min-w-[100%] rounded  border-2 border-white;
       
     }
 
