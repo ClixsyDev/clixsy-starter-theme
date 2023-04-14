@@ -398,6 +398,7 @@
   --tw-bg-opacity: 1 !important;
   background-color: rgb(224 33 46 / var(--tw-bg-opacity)) !important;
   border-width: 5px !important;
+  border-radius: 1rem !important;
 }
 
 .btn.btn_form:hover {
@@ -3702,10 +3703,6 @@ html body .edit-post-visual-editor__content-area .-mt-28 {
   margin-top: -7rem;
 }
 
-html body .edit-post-visual-editor__content-area .mt-28 {
-  margin-top: 7rem;
-}
-
 html body .edit-post-visual-editor__content-area .mb-12 {
   margin-bottom: 3rem;
 }
@@ -3724,10 +3721,6 @@ html body .edit-post-visual-editor__content-area .ml-3 {
 
 html body .edit-post-visual-editor__content-area .\!mb-0 {
   margin-bottom: 0 !important;
-}
-
-html body .edit-post-visual-editor__content-area .mb-\[4\%\] {
-  margin-bottom: 4%;
 }
 
 html body .edit-post-visual-editor__content-area .block {
@@ -4304,10 +4297,6 @@ html body .edit-post-visual-editor__content-area .max-w-\[240px\] {
 
 html body .edit-post-visual-editor__content-area .max-w-\[1140px\] {
   max-width: 1140px;
-}
-
-html body .edit-post-visual-editor__content-area .max-w-\[900px\] {
-  max-width: 900px;
 }
 
 html body .edit-post-visual-editor__content-area .max-w-\[355px\] {
@@ -5928,10 +5917,6 @@ html :where(.wp-block) {
 }
 
 @media (max-width: 1750px) {
-  .xxxl\:mt-44 {
-    margin-top: 11rem;
-  }
-
   .xxxl\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -6025,10 +6010,6 @@ html :where(.wp-block) {
 
   .\32 xl\:-mt-24 {
     margin-top: -6rem;
-  }
-
-  .\32 xl\:mt-\[19rem\] {
-    margin-top: 19rem;
   }
 
   .\32 xl\:h-64 {

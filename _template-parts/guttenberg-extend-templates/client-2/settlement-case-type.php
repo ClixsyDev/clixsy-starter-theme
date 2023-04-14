@@ -58,13 +58,15 @@ if ($is_preview && !empty($previewImage)) {
                         <div>
                             <h4 class="font-main font-light uppercase text-3xl lg:!text-2xl xs:!text-xl xxs:!text-base">Final Settlement* </h4>
                             <div class="font-second text-15xl font-bold leading-none text-accent xxxl:text-13xl xl:text-10xl xs:text-8xl xxs:text-6xl"><?php echo $settlement_case_type__final_settlement ?></div>
-                            <?php if ($settlement_case_type__description_settlement) { ?>
-                                <div class="description_settlement mt-28 xxxl:mt-44 2xl:mt-[19rem] text-right max-w-[900px] text-lg md:mt-6 xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
-                            <?php } ?>
+
                         </div>
                     <?php } ?>
                 </div>
+
             </div>
+            <?php if ($settlement_case_type__description_settlement) { ?>
+                <div class="description_settlement  text-lg mt-9 xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
+            <?php } ?>
         </div>
         <div class="container hidden z-10 relative xl:!block">
             <div class="flex items-center justify-around mdt:flex-col mdt:!items-start">
@@ -103,6 +105,9 @@ if ($is_preview && !empty($previewImage)) {
                         'classes' => 'btn-smaller hover_accent sm:mx-auto', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                     ]);
                 } ?>
+                <?php if ($settlement_case_type__description_settlement) { ?>
+                    <div class="description_settlement mt-6 text-lg  xs:!text-sm"><?php echo $settlement_case_type__description_settlement ?></div>
+                <?php } ?>
             </div>
         </div>
     </section>

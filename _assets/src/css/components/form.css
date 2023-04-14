@@ -278,7 +278,11 @@
 
     button {
       @apply !h-[55px] !min-w-[100%] rounded  border-2 border-white;
+      
     }
+
+    
+    
   }
 
   p {
