@@ -25,7 +25,7 @@ if ($is_preview && !empty($previewImage)) {
         <?php if ($welcome_banner__design_three__background_image) { ?>
             <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-left-72 xs:-left-40 xs:!-top-[60px]']) ?>
         <?php } ?>
-        <div class="mb-4%">
+        <div class="mdt:mb-[4%]">
             <div class="container text-center relative z-10">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
                     <h3 class="font-main font-semibold text-white tracking-widest text-4xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
