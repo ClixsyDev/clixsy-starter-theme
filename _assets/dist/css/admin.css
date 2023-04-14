@@ -5603,6 +5603,10 @@ html body .edit-post-visual-editor__content-area .ease-in-out {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
+html body .edit-post-visual-editor__content-area .ease-in {
+  transition-timing-function: cubic-bezier(.4, 0, 1, 1);
+}
+
 html body .edit-post-visual-editor__content-area .html-active .switch-html, html body .edit-post-visual-editor__content-area .tmce-active .switch-tmce {
   color: #50575e;
   background: #f6f7f7;
