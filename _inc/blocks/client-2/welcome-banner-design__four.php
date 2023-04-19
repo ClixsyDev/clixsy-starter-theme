@@ -62,13 +62,13 @@ if (function_exists('acf_add_local_field_group')) {
                 'return_format' => 'id',
                 'preview_size' => 'thumbnail'
             ),
+
+
             array(
-                'key' => $block_key . 'logo',
-                'name' => $block_key . 'logo',
-                'type' => 'image',
-                'label' => 'Logo',
-                'return_format' => 'id',
-                'preview_size' => 'thumbnail'
+                'key' => $block_key . 'subtitle',
+                'name' => $block_key . 'subtitle',
+                'type' => 'text',
+                'label' => 'Subtitle',
             ),
             array(
                 'key' => $block_key . 'bannertag',
@@ -94,16 +94,18 @@ if (function_exists('acf_add_local_field_group')) {
                 'label' => 'Title',
             ),
             array(
-                'key' => $block_key . 'subtitle',
-                'name' => $block_key . 'subtitle',
-                'type' => 'text',
-                'label' => 'Subtitle',
-            ),
-            array(
                 'key' => $block_key . 'info',
                 'name' => $block_key . 'info',
                 'type' => 'text',
                 'label' => 'Info',
+            ),
+            array(
+                'key' => $block_key . 'logo',
+                'name' => $block_key . 'logo',
+                'type' => 'image',
+                'label' => 'Logo',
+                'return_format' => 'id',
+                'preview_size' => 'thumbnail'
             ),
             array(
                 'key' => $block_key . 'link',

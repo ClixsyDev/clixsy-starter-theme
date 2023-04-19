@@ -667,11 +667,7 @@ h2 span {
 }
 
 .hero_heading_h1 span {
-  --tw-border-opacity: 1;
-  border-bottom-width: 4px;
-  border-color: rgb(224 33 46 / var(--tw-border-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 115 189 / var(--tw-text-opacity));
+  font-size: 120px;
 }
 
 .heading_default_color {
@@ -3728,10 +3724,6 @@ html body .edit-post-visual-editor__content-area .ml-3 {
 
 html body .edit-post-visual-editor__content-area .\!mb-0 {
   margin-bottom: 0 !important;
-}
-
-html body .edit-post-visual-editor__content-area .mb-\[4\%\] {
-  margin-bottom: 4%;
 }
 
 html body .edit-post-visual-editor__content-area .block {
@@ -7739,12 +7731,12 @@ html :where(.wp-block) {
     margin-bottom: 3rem;
   }
 
-  .mdt\:-mt-36 {
-    margin-top: -9rem;
-  }
-
   .mdt\:mb-\[4\%\] {
     margin-bottom: 4%;
+  }
+
+  .mdt\:-mt-36 {
+    margin-top: -9rem;
   }
 
   .mdt\:block {

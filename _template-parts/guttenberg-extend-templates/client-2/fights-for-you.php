@@ -45,7 +45,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                         <div class="hidden shadow-siteWide px-3 w-9/12 h-full justify-center font-main gap-3 py-4 !items-center rounded-2xl text-white md:!flex xs:!py-2" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                             <div class="flex flex-col">
-                                <p class="text-xl text-right font-light">Calls open</p>
+                                <p class="text-xl text-right font-light br-remove"><?php echo $fights_for_you__text_available ?></p>
                             </div>
                             <?php if ($fights_for_you__time_available) { ?>
                                 <p class="font-second text-6xl leading-[77px] xl:!text-3xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
@@ -57,7 +57,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                     <div class="hidden shadow-siteWide px-3 w-5/12 h-full font-main gap-3 py-4 !items-center rounded-2xl text-white xl:w-6/24 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!flex md:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                         <div class="flex flex-col">
-                            <p class="text-xl text-right font-light">Calls open</p>
+                            <p class="text-xl text-right font-light br-remove"><?php echo $fights_for_you__text_available ?></p>
                         </div>
                         <?php if ($fights_for_you__time_available) { ?>
                             <p class="font-second text-6xl leading-[77px] xl:!text-3xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
@@ -70,8 +70,7 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($fights_for_you__text_available || $fights_for_you__time_available) { ?>
                         <div class="flex items-center shadow-siteWide pl-10 pr-12 w-5/12 h-full mt-2.5 font-main gap-3 py-1 rounded-l-2xl -mr-1 text-white xl:px-5 xl:flex-col xl:w-6/24 xl:gap-1 xl:py-2 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                             <div class="flex flex-col">
-                                <p class="text-xl text-right font-light leading-6 xl:hidden">Big Auto</p>
-                                <p class="text-xl text-right font-light leading-6">Calls open</p>
+                                <p class="text-xl text-right font-light leading-6"><?php echo $fights_for_you__text_available ?></p>
                             </div>
                             <?php if ($fights_for_you__time_available) { ?>
                                 <p class="font-second text-6xl leading-[77px] xl:!text-3xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>

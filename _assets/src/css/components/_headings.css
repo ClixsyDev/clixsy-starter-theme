@@ -27,7 +27,8 @@ h2 span {
   @apply font-second text-black text-7xl text-center font-black lg:text-5xl xs:text-4xl;
 
   span {
-    @apply text-accent border-b-4 border-button_color;
+    /* @apply text-accent border-b-4 border-button_color; */
+    @apply text-[120px];
   }
 }
 
