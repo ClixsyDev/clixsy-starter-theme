@@ -13,6 +13,7 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner__design_four_logo = get_field('welcome_banner__design_four_logo');
     $welcome_banner__design_four_subtitle = get_field('welcome_banner__design_four_subtitle');
     $welcome_banner__design_four_info = get_field('welcome_banner__design_four_info');
+    $welcome_banner__design_four_link = get_field('welcome_banner__design_four_link');
     $welcome_banner__banner_heading_tag = get_field('banner_heading_tag');
     $welcome_banner__design_four_title = get_field('welcome_banner__design_four_title');
 
@@ -25,9 +26,6 @@ if ($is_preview && !empty($previewImage)) {
         <?php } ?>
         <?php if ($welcome_banner__design_four_title || $welcome_banner__design_four_logo || $welcome_banner__design_four_subtitle) { ?>
             <div class="container text-center">
-                <?php if ($welcome_banner__design_four_logo) { ?>
-                    <?php echo wp_get_attachment_image($welcome_banner__design_four_logo, 'full', '', ['class' => 'mx-auto mb-3 md:w-5/24 xs:w-6/24', 'data-aos' => 'fade-up', 'data-aos-easing' => 'ease-in', 'data-aos-duration' => '600',]) ?>
-                <?php } ?>
                 <?php if ($welcome_banner__design_four_subtitle) { ?>
                     <h2 class="text-button_color font-semibold text-4xl pb-4 tracking-widest lg:!text-2xl xl:pb-0 sm:!text-lg " data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="700"><?php echo $welcome_banner__design_four_subtitle ?></h2>
                 <?php } ?>
@@ -36,6 +34,10 @@ if ($is_preview && !empty($previewImage)) {
                 <?php } ?>
                 <?php if ($welcome_banner__design_four_info) { ?>
                     <h2 class="text-button_color font-semibold text-3xl pb-4 tracking-widest lg:!text-2xl xl:pb-0 sm:!text-lg" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1200"><?php echo $welcome_banner__design_four_info ?></h2>
+                <?php } ?>
+                <?php if ($welcome_banner__design_four_logo || $welcome_banner__design_four_link) { ?>
+                    <a href="<?php echo $welcome_banner__design_four_link['url'] ?>"> <?php echo wp_get_attachment_image($welcome_banner__design_four_logo, 'full', '', ['class' => 'mx-auto mb-3 md:w-5/24 xs:w-6/24', 'data-aos' => 'fade-up', 'data-aos-easing' => 'ease-in', 'data-aos-duration' => '600',]) ?>
+                    </a>
                 <?php } ?>
             </div>
             <div class="dots-bg h-24 absolute w-full bottom-0 left-0 xl:h-16 xs:h-12">
