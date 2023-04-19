@@ -20,7 +20,7 @@ if ($is_preview && !empty($previewImage)) {
 ?>
 
 
-    <section class="bg-cover overflow-hidden bg-no-repeat bg-center relative pb-48 pt-8 xl:pb-28 xs:pb-16 sm:pt-4 zoom-animation">
+    <section class="bg-cover overflow-hidden bg-no-repeat bg-center relative pb-32 pt-24 xl:pb-28 xs:pb-16 sm:pt-4 zoom-animation">
         <?php if (!empty($welcome_banner__design_four_bg)) { ?>
             <img class="animated-image -z-10 absolute top-0 left-0 object-cover h-full w-full" src="<?php echo wp_get_attachment_image_url($welcome_banner__design_four_bg, 'full') ?>" alt="background">
         <?php } ?>
@@ -36,7 +36,7 @@ if ($is_preview && !empty($previewImage)) {
                     <h2 class="text-button_color font-semibold text-3xl pb-4 tracking-widest lg:!text-2xl xl:pb-0 sm:!text-lg" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1200"><?php echo $welcome_banner__design_four_info ?></h2>
                 <?php } ?>
                 <?php if ($welcome_banner__design_four_logo || $welcome_banner__design_four_link) { ?>
-                    <a href="<?php echo $welcome_banner__design_four_link['url'] ?>"> <?php echo wp_get_attachment_image($welcome_banner__design_four_logo, 'full', '', ['class' => 'mx-auto mb-3 md:w-5/24 xs:w-6/24', 'data-aos' => 'fade-up', 'data-aos-easing' => 'ease-in', 'data-aos-duration' => '600',]) ?>
+                    <a href="<?php echo $welcome_banner__design_four_link['url'] ?>"> <?php echo wp_get_attachment_image($welcome_banner__design_four_logo, 'full', '', ['class' => 'mx-auto mb-3 md:w-5/24 xs:w-6/24', 'data-aos' => 'fade-up', 'data-aos-easing' => 'ease-in', 'data-aos-duration' => '1400',]) ?>
                     </a>
                 <?php } ?>
             </div>
