@@ -28,7 +28,9 @@ h2 span {
 
   span {
     /* @apply text-accent border-b-4 border-button_color; */
-    @apply text-[120px];
+    font-size: 130px;
+    vertical-align: -10px;
+    
   }
 }
 
