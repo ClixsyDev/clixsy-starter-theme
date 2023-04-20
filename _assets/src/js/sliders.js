@@ -237,3 +237,4 @@ if (document.querySelector(merits) != undefined && document.querySelector(merits
     }).mount();
   });
 }
+
