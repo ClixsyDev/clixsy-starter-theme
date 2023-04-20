@@ -50,6 +50,11 @@ if ($is_preview && !empty($previewImage)) {
                                 <p class="text-center !text-xl"><?php echo $welcome_banner__design_three__description_form ?></p>
                             <?php } ?>
                             <?php echo $welcome_banner__design_three__form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__design_three__form_select['0'] . '" title=""]') : '' ?>
+                            <?php
+                            Template::load('_template-parts/components/thank-you-message-homepage.php', [
+                                'classes_disclaimer' => 'text-white',
+                                'classes_thankyou' => 'text-white'
+                            ]); ?>
                         </div>
                         <?php if ($welcome_banner__design_three__form_disclaimer) { ?>
                             <div class="hidden disclaimer_multistep_form text-base font-thin text-white text-left pt-4 mt-8">
