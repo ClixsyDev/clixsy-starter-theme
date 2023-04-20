@@ -7190,12 +7190,12 @@ img, video {
   font-size: 15px;
 }
 
-.\!text-xl {
-  font-size: 1.25rem !important;
-}
-
 .text-\[41px\] {
   font-size: 41px;
+}
+
+.\!text-xl {
+  font-size: 1.25rem !important;
 }
 
 .font-bold {
