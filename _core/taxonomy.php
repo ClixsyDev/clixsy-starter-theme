@@ -6,20 +6,28 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 //Register Taxonomy and Post types
-function bigauto_attorneys_cpt() {
+function bigauto_attorneys_cpt()
+{
 	register_post_type('attorneys', array(
 		'labels'             => array('name' => __('Attorneys', 'law')),
 		'hierarchical'       => true,
 		'menu_icon'          => 'dashicons-businessperson',
 		'public'             => true,
+		'show_in_rest'       => true,
 		'has_archive'        => true,
 		'show_ui'            => true,
 		'show_admin_column'  => true,
 		'show_in_nav_menus'  => true,
 		'query_var'          => true,
-		'publicly_queryable' => false,
+		'publicly_queryable' => true,
 		'supports'           => array('title', 'excerpt', 'thumbnail', 'editor'),
 		'rewrite'            => array('slug' => 'attorneys', 'with_front' => true, 'hierarchical' => false),
+		'template' => array(
+			array('acf/welcome-banner-single-team-member'),
+			array('acf/text-form-design-two'),
+			array('acf/articles'),
+		),
+
 	));
 
 	register_post_type('reviews', array(
