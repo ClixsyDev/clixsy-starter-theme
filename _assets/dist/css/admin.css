@@ -3879,6 +3879,10 @@ html body .edit-post-visual-editor__content-area .h-\[110\%\] {
   height: 110%;
 }
 
+html body .edit-post-visual-editor__content-area .h-\[150px\] {
+  height: 150px;
+}
+
 html body .edit-post-visual-editor__content-area .h-56 {
   height: 14rem;
 }
@@ -3893,6 +3897,14 @@ html body .edit-post-visual-editor__content-area .h-8 {
 
 html body .edit-post-visual-editor__content-area .h-32 {
   height: 8rem;
+}
+
+html body .edit-post-visual-editor__content-area .h-20 {
+  height: 5rem;
+}
+
+html body .edit-post-visual-editor__content-area .\!h-96 {
+  height: 24rem !important;
 }
 
 html body .edit-post-visual-editor__content-area .max-h-96 {
@@ -4205,6 +4217,14 @@ html body .edit-post-visual-editor__content-area .w-7\/12 {
 
 html body .edit-post-visual-editor__content-area .w-10\/12 {
   width: 83.3333%;
+}
+
+html body .edit-post-visual-editor__content-area .\!w-96 {
+  width: 24rem !important;
+}
+
+html body .edit-post-visual-editor__content-area .w-80 {
+  width: 20rem;
 }
 
 html body .edit-post-visual-editor__content-area .min-w-\[45px\] {
@@ -5203,6 +5223,10 @@ html body .edit-post-visual-editor__content-area .pb-0 {
   padding-bottom: 0;
 }
 
+html body .edit-post-visual-editor__content-area .pl-6 {
+  padding-left: 1.5rem;
+}
+
 html body .edit-post-visual-editor__content-area .text-left {
   text-align: left;
 }
@@ -5345,6 +5369,18 @@ html body .edit-post-visual-editor__content-area .text-\[41px\] {
 
 html body .edit-post-visual-editor__content-area .\!text-xl {
   font-size: 1.25rem !important;
+}
+
+html body .edit-post-visual-editor__content-area .text-13xl {
+  font-size: 150px;
+}
+
+html body .edit-post-visual-editor__content-area .text-\[70px\] {
+  font-size: 70px;
+}
+
+html body .edit-post-visual-editor__content-area .text-\[17px\] {
+  font-size: 17px;
 }
 
 html body .edit-post-visual-editor__content-area .font-bold {
@@ -5496,6 +5532,11 @@ html body .edit-post-visual-editor__content-area .text-button_color {
 html body .edit-post-visual-editor__content-area .\!text-accent {
   --tw-text-opacity: 1 !important;
   color: rgb(0 115 189 / var(--tw-text-opacity)) !important;
+}
+
+html body .edit-post-visual-editor__content-area .text-accent_hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 85 183 / var(--tw-text-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .underline {
@@ -6077,6 +6118,14 @@ html :where(.wp-block) {
 
   .\32 xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .\32 xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .\32 xl\:\!grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
   .\32 xl\:flex-wrap {

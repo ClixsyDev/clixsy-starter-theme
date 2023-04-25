@@ -10,7 +10,8 @@
 
 
 
-function register_reviews_design__one() {
+function register_reviews_design__one()
+{
     if (function_exists('acf_register_block_type')) {
         acf_register_block_type(
             array(
