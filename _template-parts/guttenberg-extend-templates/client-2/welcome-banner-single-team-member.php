@@ -24,19 +24,19 @@ if ($is_preview && !empty($previewImage)) {
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
 
         <div class="container relative z-10 h">
-            <div class="flex">
+            <div class="flex md:flex-wrap md:justify-center">
                 <div class="shadow-siteWide">
                     <?php echo wp_get_attachment_image($welcome_banner__single_team_member_image, 'full', '', ['class' => 'block relative object-cover !h-96 !w-96 ']) ?>
                 </div>
                 <div class=" pl-6 flex flex-col justify-between ">
                     <div class="leading-none">
-                        <h1 class="text-[75px] text-accent font-bold font-second "><?php echo $welcome_banner__single_team_member_name ?></h1>
+                        <h1 class="text-[75px] sm:text-5xl text-accent font-bold font-second "><?php echo $welcome_banner__single_team_member_name ?></h1>
                         <p class="text-xl font-third"><?php echo $welcome_banner__single_team_member_title ?></p>
                         <p class="text-xl font-third"><?php echo $welcome_banner__single_team_member_position ?></p>
                     </div>
 
                     <div>
-                        <a href="tel:<?php echo $phone_link ?>" class=" text-[70px] font-second font-bold ">1 (844) BIG-AUTO</a>
+                        <a href="tel:<?php echo $phone_link ?>" class=" text-[70px] sm:text-5xl font-second font-bold ">1 (844) BIG-AUTO</a>
                         <?php if ($welcome_banner__single_team_member_link) { ?>
                             <?php
                             Template::load('_template-parts/components/button.php', [
