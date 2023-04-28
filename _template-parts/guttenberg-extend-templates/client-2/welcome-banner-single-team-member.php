@@ -30,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <div class=" pl-6 flex flex-col justify-between ">
                     <div class="leading-none">
-                        <h1 class="text-[75px] sm:text-5xl text-accent font-bold font-second "><?php echo $welcome_banner__single_team_member_name ?></h1>
+                        <h1 class="text-[75px] sm:text-5xl text-accent font-bold font-second pb-2"><?php echo $welcome_banner__single_team_member_name ?></h1>
                         <p class="text-xl font-third"><?php echo $welcome_banner__single_team_member_title ?></p>
                         <p class="text-xl font-third"><?php echo $welcome_banner__single_team_member_position ?></p>
                     </div>

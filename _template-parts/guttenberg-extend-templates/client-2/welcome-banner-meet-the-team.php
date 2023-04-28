@@ -18,7 +18,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10">
             <?php if ($welcome_banner__meet_the_team_title) { ?>
-                <h1 class="hero_heading_h1 uppercase text-13xl text-accent lg:pb-2"><?php echo $welcome_banner__meet_the_team_title ?></h1>
+                <h1 class="hero_heading_h1 uppercase text-13xl md:text-12xl sm:text-10xl leading-none text-accent lg:pb-2"><?php echo $welcome_banner__meet_the_team_title ?></h1>
             <?php } ?>
 
             <?php if ($welcome_banner__meet_the_team_link) { ?>

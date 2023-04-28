@@ -7245,10 +7245,6 @@ html :where(.wp-block) {
     margin-top: -1.25rem;
   }
 
-  .lg\:mb-5 {
-    margin-bottom: 1.25rem;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -7562,10 +7558,6 @@ html :where(.wp-block) {
 
   .lg\:pb-32 {
     padding-bottom: 8rem;
-  }
-
-  .lg\:pb-5 {
-    padding-bottom: 1.25rem;
   }
 
   .lg\:text-left {
@@ -8852,6 +8844,10 @@ html :where(.wp-block) {
     font-size: 36px !important;
   }
 
+  .md\:text-12xl {
+    font-size: 125px;
+  }
+
   .md\:leading-\[190px\] {
     line-height: 190px;
   }
@@ -9194,6 +9190,10 @@ html :where(.wp-block) {
 
   .sm\:\!text-lg {
     font-size: 1.125rem !important;
+  }
+
+  .sm\:text-10xl {
+    font-size: 100px;
   }
 
   .sm\:text-5xl {

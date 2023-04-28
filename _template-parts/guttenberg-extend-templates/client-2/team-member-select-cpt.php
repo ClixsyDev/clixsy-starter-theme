@@ -23,7 +23,7 @@ if ($is_preview && !empty($previewImage)) {
                     $thumbnail_placeholder = get_stylesheet_directory_uri() . '/_assets_child/src/img/placeholder.jpg';
                     ?>
                     <article class="h-full max-w-[1140px] w-full m-auto lg:flex lg:flex-col lg:items-center">
-                        <a class="relative group h-80 w-80 flex bg-cover items-end shadow-siteWide lg:mb-5" style="background-image: url(<?php echo $thumbnail ?: $thumbnail_placeholder ?>);" href="<?= get_permalink($selected_post) ?>">
+                        <a class="relative group h-80 w-80 flex bg-cover items-end shadow-siteWide mb-3" style="background-image: url(<?php echo $thumbnail ?: $thumbnail_placeholder ?>);" href="<?= get_permalink($selected_post) ?>">
                         </a>
                         <a href="<?= get_permalink($selected_post) ?>">
                             <div class=" text-black font-third font-normal text-3xl leading-tight ">
@@ -33,8 +33,6 @@ if ($is_preview && !empty($previewImage)) {
                                 <?php echo get_the_excerpt($selected_post) ?>
                             </div>
                         </a>
-
-
                     </article>
             <?php }
             } ?>
