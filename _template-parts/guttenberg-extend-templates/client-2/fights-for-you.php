@@ -82,7 +82,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php foreach ($fights_for_you__benefits as $item) { ?>
                                 <div class="bg-black w-4/12 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-7/24 xl:min-h-[230px] mdt:w-full mdt:min-h-[270px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
                                     <?php if ($item['icon']) { ?>
-                                        <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 !max-h-24 xl:min-h-[120px] xl:min-w-[120px] xl:-mt-20 md:m-auto md:-mt-32']) ?>
+                                        <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mb-7 !max-h-24 xl:min-h-[120px] xl:min-w-[120px] xl:-mt-20 md:m-auto md:-mt-32']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
                                         <h3 class="font-bold font-third text-[28px] mt-8 mb-6 text-white xl:!my-4 2xl:!text-2xl xs:!text-xl"><?php echo $item['title'] ?></h3>
