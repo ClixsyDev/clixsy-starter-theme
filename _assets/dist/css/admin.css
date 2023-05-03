@@ -671,6 +671,20 @@ h2 span {
   font-size: 130px;
 }
 
+@media (max-width: 1024px) {
+  .hero_heading_h1 span {
+    vertical-align: -10px;
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero_heading_h1 span {
+    vertical-align: -10px;
+    font-size: 80px;
+  }
+}
+
 .heading_default_color {
   font-family: Open Sans, sans-serif;
   font-size: 4rem;

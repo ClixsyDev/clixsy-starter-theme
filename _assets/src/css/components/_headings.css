@@ -34,6 +34,28 @@ h2 span {
   }
 }
 
+@media (max-width:1024px) {
+  .hero_heading_h1 {  
+    span {
+      font-size: 100px;
+      vertical-align: -10px;
+      
+    }
+  }
+  
+}
+
+@media (max-width:640px) {
+  .hero_heading_h1 {  
+    span {
+      font-size: 80px;
+      vertical-align: -10px;
+      
+    }
+  }
+  
+}
+
 .heading_default_color {
   @apply font-main text-6xl font-bold lg:text-5xl xs:text-4xl;
   span {
