@@ -13,6 +13,8 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner_contact_design_three__block_bg = get_field('welcome_banner_contact_design_three__block_bg');
     $welcome_banner_contact_design_three__title = get_field('welcome_banner_contact_design_three__title');
     $welcome_banner_contact_design_three__image = get_field('welcome_banner_contact_design_three__image');
+    $welcome_banner_contact_design_three__attorney_link = get_field('welcome_banner_contact_design_three__attorney_link');
+    $welcome_banner_contact_design_three__attorney_position = get_field('welcome_banner_contact_design_three__attorney_position');
     $welcome_banner_contact_design_three__form_bg = get_field('welcome_banner_contact_design_three__form_bg');
     $welcome_banner_contact_design_three__form_subtitle = get_field('welcome_banner_contact_design_three__form_subtitle');
     $welcome_banner_contact_design_three__form_title = get_field('welcome_banner_contact_design_three__form_title');
@@ -28,10 +30,21 @@ if ($is_preview && !empty($previewImage)) {
                 <h1 class="font-bold text-center font-third capitalize md:!text-[36px] text-5xl text-white pt-6 pb-6  md:leading-snug"><?php echo $welcome_banner_contact_design_three__title ?></h1>
             <?php } ?>
             <div class="flex items-end lg:flex-col-reverse">
-                <div class="w-7/12 xl1240:w-6/12 lg:w-10/12 lg:m-auto sm:w-full sm:hidden">
+                <div class="w-7/12 xl1240:w-6/12 lg:w-10/12 lg:m-auto sm:w-full sm:hidden relative">
                     <?php if ($welcome_banner_contact_design_three__image) { ?>
-                        <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative bottom-[-1px]']) ?>
+                        <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>"> <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative bottom-[-1px]']) ?>
+                        </a>
                     <?php } ?>
+                    <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>" class="absolute bottom-[10%] right-[10%] rounded-2xl bg-[#707070] h-20 w-56 text-white flex flex-col justify-center items-center">
+                        <div class="font-third font-bold text-2xl ">
+                            <?php echo $welcome_banner_contact_design_three__attorney_link['title'] ?>
+                        </div>
+                        <?php if ($welcome_banner_contact_design_three__attorney_position) { ?>
+                            <div class="font-main font-normal text-base ">
+                                <?php echo $welcome_banner_contact_design_three__attorney_position ?>
+                            </div>
+                        <?php } ?>
+                    </a>
                 </div>
                 <?php if ($welcome_banner_contact_design_three__form_select) { ?>
                     <div class="w-5/12 xl1240:w-6/12 mdt:w-20/24 pb-5 lg:w-9/12 lg:m-auto sm:w-full">

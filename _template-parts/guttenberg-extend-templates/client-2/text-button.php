@@ -15,9 +15,9 @@ if ($is_preview && !empty($previewImage)) {
 ?>
 
     <section class="container ">
-        <div class="relative pt-12 rounded-md shadow-siteWide " style="background-color: <?php echo $text_button__cost_block_bg ?: ''  ?> ;">
+        <div class="relative pt-20 pb-36 xs:!pt-12 xs:!pb-24 rounded-md shadow-siteWide " style="background-color: <?php echo $text_button__cost_block_bg ?: ''  ?> ;">
             <?php if ($text_button__cost_title || $text_button__cost_description || $text_button__cost_link) { ?>
-                <div class="flex justify-center items-center">
+                <div class="flex justify-center items-center px-2">
                     <div class="z-10 items-center text-center">
                         <?php if ($text_button__cost_title) { ?>
                             <h3 class="text-headings font-bold capitalize font-second pb-10 leading-[65px] text-6xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $text_button__cost_title ?></h3>

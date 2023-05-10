@@ -3368,6 +3368,14 @@ html body .edit-post-visual-editor__content-area .-right-96 {
   right: -24rem;
 }
 
+html body .edit-post-visual-editor__content-area .bottom-\[10\%\] {
+  bottom: 10%;
+}
+
+html body .edit-post-visual-editor__content-area .right-\[10\%\] {
+  right: 10%;
+}
+
 html body .edit-post-visual-editor__content-area .z-50 {
   z-index: 50;
 }
@@ -3701,10 +3709,6 @@ html body .edit-post-visual-editor__content-area .-mr-1 {
   margin-right: -.25rem;
 }
 
-html body .edit-post-visual-editor__content-area .-mt-40 {
-  margin-top: -10rem;
-}
-
 html body .edit-post-visual-editor__content-area .-mt-16 {
   margin-top: -4rem;
 }
@@ -3919,10 +3923,6 @@ html body .edit-post-visual-editor__content-area .h-20 {
 
 html body .edit-post-visual-editor__content-area .\!h-96 {
   height: 24rem !important;
-}
-
-html body .edit-post-visual-editor__content-area .h-\[220px\] {
-  height: 220px;
 }
 
 html body .edit-post-visual-editor__content-area .max-h-96 {
@@ -4249,8 +4249,8 @@ html body .edit-post-visual-editor__content-area .\!w-96 {
   width: 24rem !important;
 }
 
-html body .edit-post-visual-editor__content-area .w-\[300px\] {
-  width: 300px;
+html body .edit-post-visual-editor__content-area .w-56 {
+  width: 14rem;
 }
 
 html body .edit-post-visual-editor__content-area .min-w-\[45px\] {
@@ -4805,6 +4805,16 @@ html body .edit-post-visual-editor__content-area .bg-\[\#393939\] {
   background-color: rgb(57 57 57 / var(--tw-bg-opacity));
 }
 
+html body .edit-post-visual-editor__content-area .bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .bg-\[\#707070\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(112 112 112 / var(--tw-bg-opacity));
+}
+
 html body .edit-post-visual-editor__content-area .bg-opacity-75 {
   --tw-bg-opacity: .75;
 }
@@ -5235,6 +5245,10 @@ html body .edit-post-visual-editor__content-area .pb-11 {
 
 html body .edit-post-visual-editor__content-area .pt-11 {
   padding-top: 2.75rem;
+}
+
+html body .edit-post-visual-editor__content-area .pb-36 {
+  padding-bottom: 9rem;
 }
 
 html body .edit-post-visual-editor__content-area .pt-2 {
@@ -6082,10 +6096,6 @@ html :where(.wp-block) {
     margin-left: .75rem;
   }
 
-  .\32 xl\:-mt-24 {
-    margin-top: -6rem;
-  }
-
   .\32 xl\:h-64 {
     height: 16rem;
   }
@@ -6327,10 +6337,6 @@ html :where(.wp-block) {
     margin-right: 0;
   }
 
-  .xl\:-mt-24 {
-    margin-top: -6rem;
-  }
-
   .xl\:-mt-20 {
     margin-top: -5rem;
   }
@@ -6367,16 +6373,12 @@ html :where(.wp-block) {
     min-height: 100%;
   }
 
-  .xl\:min-h-\[230px\] {
-    min-height: 230px;
+  .xl\:min-h-\[250px\] {
+    min-height: 250px;
   }
 
   .xl\:min-h-\[120px\] {
     min-height: 120px;
-  }
-
-  .xl\:min-h-\[250px\] {
-    min-height: 250px;
   }
 
   .xl\:w-14\/24 {
@@ -7864,10 +7866,6 @@ html :where(.wp-block) {
 
   .mdt\:min-h-\[780px\] {
     min-height: 780px;
-  }
-
-  .mdt\:min-h-\[270px\] {
-    min-height: 270px;
   }
 
   .mdt\:min-h-\[280px\] {
@@ -9783,6 +9781,14 @@ html :where(.wp-block) {
     padding-top: 9rem;
   }
 
+  .xs\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .xs\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
   .xs\:\!pt-7 {
     padding-top: 1.75rem !important;
   }
@@ -9797,6 +9803,14 @@ html :where(.wp-block) {
 
   .xs\:pb-2 {
     padding-bottom: .5rem;
+  }
+
+  .xs\:\!pt-12 {
+    padding-top: 3rem !important;
+  }
+
+  .xs\:\!pb-24 {
+    padding-bottom: 6rem !important;
   }
 
   .xs\:text-3xl {
