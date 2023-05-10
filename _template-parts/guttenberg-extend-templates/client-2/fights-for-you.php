@@ -73,7 +73,7 @@ if ($is_preview && !empty($previewImage)) {
                     <div class="flex flex-col">
                         <?php if ($fights_for_you__attorney_link) { ?>
                             <a href="<?php echo $fights_for_you__attorney_link['url'] ?>" class="flex flex-col  text-white mdt:!hidden">
-                                <div class="font-third font-bold text-2x ">
+                                <div class="font-third font-bold text-2xl xl:text-xl ">
                                     <?php echo $fights_for_you__attorney_link['title'] ?>
                                 </div>
                                 <?php if ($fights_for_you__attorney_position) { ?>
