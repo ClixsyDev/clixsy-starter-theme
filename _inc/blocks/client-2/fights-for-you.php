@@ -114,6 +114,19 @@ if (function_exists('acf_add_local_field_group')) :
                     'library' => 'all',
                 ),
                 array(
+                    'key' => $block_key . 'attorney_link',
+                    'name' => $block_key . 'attorney_link',
+                    'label' => 'Attorney Link',
+                    'type' => 'link',
+                    'return_format' => 'array',
+                ),
+                array(
+                    'key' => $block_key . 'attorney_position',
+                    'name' => $block_key . 'attorney_position',
+                    'type' => 'text',
+                    'label' => 'Attorney position',
+                ),
+                array(
                     'key' => $block_key . 'rating_image',
                     'label' => 'Rating image',
                     'name' => 'rating_image',

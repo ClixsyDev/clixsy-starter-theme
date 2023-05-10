@@ -12,6 +12,8 @@ if ($is_preview && !empty($previewImage)) {
     $fights_for_you__title = get_field('fights_for_you__title');
     $for_you_heading_tag = get_field('for_you_heading_tag');
     $fights_for_you__singleattorney_image = get_field('fights_for_you__singleattorney_image');
+    $fights_for_you__attorney_link = get_field('fights_for_you__attorney_link');
+    $fights_for_you__attorney_position = get_field('fights_for_you__attorney_position');
     $fights_for_you__rating_image = get_field('fights_for_you__rating_image');
     $fights_for_you__color = get_field('fights_for_you__color');
     $fights_for_you__bg_image = get_field('fights_for_you__bg_image');
@@ -34,9 +36,9 @@ if ($is_preview && !empty($previewImage)) {
             <?php echo wp_get_attachment_image($fights_for_you__bg_image, 'full', '', ['class' => 'absolute shadow-siteWide max-h-[525px] w-full h-full top-0 -z-10 lg:max-h-[655px]']) ?>
         <?php } ?>
         <div class="container">
-            <div class="flex gap-16 justify-start items-start xl:gap-8 mdt:mb-44 mdt:flex-col-reverse">
+            <div class="flex gap-16 justify-start items-start xl:gap-8 mdt:mb-44 mdt:flex-col-reverse  ">
                 <?php if ($fights_for_you__singleattorney_image) { ?>
-                    <?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => 'mdt:hidden']) ?>
+                    <a href="<?php echo $fights_for_you__attorney_link['url'] ?>"><?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => 'mdt:hidden h-[376px] w-[376px] object-contain']) ?></a>
                 <?php } ?>
                 <div class="flex xl:flex-col xl:gap-5 2xl:items-center xl:items-baseline mdt:!flex-row mdt:w-full mdt:justify-between">
                     <div class="flex items-center xl:flex-col xl:!items-start md:w-full md:gap-6 md:!items-center md:mb-9">
@@ -65,22 +67,39 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
             </div>
-            <div class="px-20 rounded-md pb-10 xl:pt-7 mdt:px-7 sm:px-4 pt-5 2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
+            <div class="px-20 pt-3 rounded-md pb-10 xl:pt-7 mdt:px-7 sm:px-4  2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
+
                 <div class="flex items-center md:-mt-44 md:justify-center">
-                    <?php if ($fights_for_you__text_available || $fights_for_you__time_available) { ?>
-                        <div class="flex items-center shadow-siteWide pl-10 pr-12 w-5/12 h-full mt-2.5 font-main gap-3 py-1 rounded-l-2xl -mr-1 text-white xl:px-5 xl:flex-col xl:w-6/24 xl:gap-1 xl:py-2 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
-                            <div class="flex flex-col">
-                                <p class="text-xl text-right font-light leading-6"><?php echo $fights_for_you__text_available ?></p>
+                    <div class="flex flex-col">
+                        <?php if ($fights_for_you__attorney_link) { ?>
+                            <a href="<?php echo $fights_for_you__attorney_link['url'] ?>" class="flex flex-col  text-white mdt:!hidden">
+                                <div class="font-third font-bold text-2x ">
+                                    <?php echo $fights_for_you__attorney_link['title'] ?>
+                                </div>
+                                <?php if ($fights_for_you__attorney_position) { ?>
+                                    <div class="font-main font-normal text-base ">
+                                        <?php echo $fights_for_you__attorney_position ?>
+                                    </div>
+                                <?php } ?>
+                            </a>
+                        <?php } ?>
+
+                        <?php if ($fights_for_you__text_available || $fights_for_you__time_available) { ?>
+                            <div class="flex items-center shadow-siteWide pl-10 pr-12 w-full h-full mt-2.5 font-main gap-3 py-1 rounded-l-2xl -mr-1 text-white xl:px-5 xl:flex-col xl:w-6/24 xl:gap-1 xl:py-2 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
+                                <div class="flex flex-col">
+                                    <p class="text-xl text-right font-light leading-6"><?php echo $fights_for_you__text_available ?></p>
+                                </div>
+                                <?php if ($fights_for_you__time_available) { ?>
+                                    <p class="font-second text-6xl leading-[77px] xl:!text-3xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
+                                <?php } ?>
                             </div>
-                            <?php if ($fights_for_you__time_available) { ?>
-                                <p class="font-second text-6xl leading-[77px] xl:!text-3xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
-                            <?php } ?>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
+
                     <?php if ($fights_for_you__benefits) { ?>
-                        <div class="flex gap-14 -mt-40 2xl:-mt-24 2xl:gap-7 xl:-mt-24 xl:gap-11 mdt:gap-4 md:flex-col md:items-center md:gap-28 md:mt-12">
+                        <div class="flex gap-14 -mt-24  2xl:gap-7 xl:gap-11 mdt:gap-4 md:flex-col md:items-center md:gap-28 md:mt-12">
                             <?php foreach ($fights_for_you__benefits as $item) { ?>
-                                <div class="bg-black w-4/12 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-7/24 xl:min-h-[230px] mdt:w-full mdt:min-h-[270px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
+                                <div class="bg-black w-4/12 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-7/24 xl:min-h-[250px] mdt:w-full mdt:min-h-[280px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
                                     <?php if ($item['icon']) { ?>
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mb-7 !max-h-24 xl:min-h-[120px] xl:min-w-[120px] xl:-mt-20 md:m-auto md:-mt-32']) ?>
                                     <?php } ?>
@@ -144,7 +163,6 @@ if ($is_preview && !empty($previewImage)) {
                         </div>
                     </div>
                 <?php } ?>
-                <div class="dots-bg h-28 absolute w-full bottom-0 lg:h-20"></div>
             </div>
             <div class="relative lg:!pt-5 hidden rounded-2xl shadow-siteWide lg:!block" style="background-color: <?php echo $fights_for_you__cost_block_bg ?: ''  ?> ;">
                 <?php if ($fights_for_you__cost_title || $fights_for_you__cost_description || $fights_for_you__cost_link) { ?>
