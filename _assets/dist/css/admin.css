@@ -3885,6 +3885,10 @@ html body .edit-post-visual-editor__content-area .h-28 {
   height: 7rem;
 }
 
+html body .edit-post-visual-editor__content-area .h-\[376px\] {
+  height: 376px;
+}
+
 html body .edit-post-visual-editor__content-area .h-10 {
   height: 2.5rem;
 }
@@ -3915,6 +3919,10 @@ html body .edit-post-visual-editor__content-area .h-20 {
 
 html body .edit-post-visual-editor__content-area .\!h-96 {
   height: 24rem !important;
+}
+
+html body .edit-post-visual-editor__content-area .h-\[220px\] {
+  height: 220px;
 }
 
 html body .edit-post-visual-editor__content-area .max-h-96 {
@@ -4181,6 +4189,10 @@ html body .edit-post-visual-editor__content-area .w-4\/5 {
   width: 80%;
 }
 
+html body .edit-post-visual-editor__content-area .w-\[376px\] {
+  width: 376px;
+}
+
 html body .edit-post-visual-editor__content-area .w-5\/12 {
   width: 41.6667%;
 }
@@ -4235,6 +4247,10 @@ html body .edit-post-visual-editor__content-area .w-10\/12 {
 
 html body .edit-post-visual-editor__content-area .\!w-96 {
   width: 24rem !important;
+}
+
+html body .edit-post-visual-editor__content-area .w-\[300px\] {
+  width: 300px;
 }
 
 html body .edit-post-visual-editor__content-area .min-w-\[45px\] {
@@ -5373,8 +5389,8 @@ html body .edit-post-visual-editor__content-area .text-\[17px\] {
   font-size: 17px;
 }
 
-html body .edit-post-visual-editor__content-area .text-\[15px\] {
-  font-size: 15px;
+html body .edit-post-visual-editor__content-area .text-\[10px\] {
+  font-size: 10px;
 }
 
 html body .edit-post-visual-editor__content-area .text-\[41px\] {
@@ -6357,6 +6373,10 @@ html :where(.wp-block) {
 
   .xl\:min-h-\[120px\] {
     min-height: 120px;
+  }
+
+  .xl\:min-h-\[250px\] {
+    min-height: 250px;
   }
 
   .xl\:w-14\/24 {
@@ -7848,6 +7868,10 @@ html :where(.wp-block) {
 
   .mdt\:min-h-\[270px\] {
     min-height: 270px;
+  }
+
+  .mdt\:min-h-\[280px\] {
+    min-height: 280px;
   }
 
   .mdt\:w-full {
@@ -9841,10 +9865,6 @@ html :where(.wp-block) {
 
   .xs\:\!text-4xl {
     font-size: 2.25rem !important;
-  }
-
-  .xs\:\!text-xs {
-    font-size: .75rem !important;
   }
 
   .xs\:\!text-lg {

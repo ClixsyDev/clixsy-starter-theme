@@ -31,7 +31,8 @@ if ($is_preview && !empty($previewImage)) {
                             <div class="font-third font-normal text-xl mdt:!text-lg xs:!text-base">
                                 <?= $verdict['verdicts_description'] ?>
                             </div>
-                            <div class="font-third font-normal  text-[15px] xs:!text-xs">
+                            <div class="font-main font-normal text-[10px]">
+                                Settlements achieved by Big Auto Co-Counsel Lawyers
                                 <?= $verdict['verdicts_resolved'] ?>
                             </div>
                             <div class="dots-bg h-8 absolute w-full bottom-0 left-0 xs:h-6"></div>
