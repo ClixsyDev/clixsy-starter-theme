@@ -13,7 +13,7 @@ if ($is_preview && !empty($previewImage)) {
   $text_form_design_two__main_content = get_field('text_form_design_two__main_content');
   $text_form_design_two__form_description = get_field('text_form_design_two__form_description');
   $text_form_design_two__form_title = get_field('text_form_design_two__form_title');
-  $text_form_design_two__form_select = get_field('text_form_design_two__form_select');
+  $text_form_design_two__form_select = get_field('select_form', 'options');
   $text_form_design_two__button = get_field('text_form_design_two__button');
   $text_form_design_two__disclaimer = get_field('text_form_design_two__disclaimer'); ?>
 

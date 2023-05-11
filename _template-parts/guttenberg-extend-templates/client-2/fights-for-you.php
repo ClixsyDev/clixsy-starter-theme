@@ -67,7 +67,7 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
             </div>
-            <div class="px-20 pt-3 rounded-md pb-10 xl:pt-7 mdt:px-7 sm:px-4  2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
+            <div class="px-20 pt-3 rounded-md rounded-tl-none pb-10 xl:pt-7 mdt:px-7 sm:px-4  2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
 
                 <div class="flex items-center md:-mt-44 md:justify-center">
                     <div class="flex flex-col">
@@ -99,12 +99,12 @@ if ($is_preview && !empty($previewImage)) {
                     <?php if ($fights_for_you__benefits) { ?>
                         <div class="flex gap-14 -mt-24  2xl:gap-7 xl:gap-11 mdt:gap-4 md:flex-col md:items-center md:gap-28 md:mt-12">
                             <?php foreach ($fights_for_you__benefits as $item) { ?>
-                                <div class="bg-black w-4/12 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-7/24 xl:min-h-[250px] mdt:w-full mdt:min-h-[280px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
+                                <div class="bg-black w-72 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-7/24 xl:min-h-[250px] mdt:w-full mdt:min-h-[280px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
                                     <?php if ($item['icon']) { ?>
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mb-7 !max-h-24 xl:min-h-[120px] xl:min-w-[120px] xl:-mt-20 md:m-auto md:-mt-32']) ?>
                                     <?php } ?>
                                     <?php if ($item['title']) { ?>
-                                        <h3 class="font-bold font-third text-[28px] mt-8 mb-6 text-white xl:!my-4 2xl:!text-2xl xs:!text-xl"><?php echo $item['title'] ?></h3>
+                                        <h3 class="font-bold font-third text-[28px] my-4 text-white  2xl:!text-2xl xs:!text-xl"><?php echo $item['title'] ?></h3>
                                     <?php } ?>
                                     <?php if ($item['description']) { ?>
                                         <div class="text-white"><?php echo $item['description'] ?></div>
