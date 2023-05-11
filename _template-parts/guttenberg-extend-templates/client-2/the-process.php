@@ -78,7 +78,7 @@ if ($is_preview && !empty($previewImage)) {
                                 'classes' => 'bigauto_red shadow-siteWide hover_accent !max-w-[460px] rounded-xl sm:shadow-btn', // hover_headings hover_accent hover_white btn_headings btn_xl btn_md btn_sm
                             ]); ?>
                         <?php } ?>
-                        <a href="<?php echo $phone_link ?>" class="text-accent font-bold text-6xl xs:!text-5xl font-second"> <?php echo $phone ?></a>
+                        <a href="tel:<?php echo $phone_link ?>" class="text-accent font-bold text-6xl xs:!text-5xl font-second"> <?php echo $phone ?></a>
                     </div>
                 <?php } ?>
             </div>
