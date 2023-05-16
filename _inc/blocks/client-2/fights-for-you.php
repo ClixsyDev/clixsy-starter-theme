@@ -105,6 +105,12 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Title',
                 ),
                 array(
+                    'key' => $block_key . 'subtitle',
+                    'name' => $block_key . 'subtitle',
+                    'type' => 'text',
+                    'label' => 'Subtitle',
+                ),
+                array(
                     'key' => $block_key . 'singleattorney_image',
                     'label' => 'Attorney image',
                     'name' => 'attorney_image',

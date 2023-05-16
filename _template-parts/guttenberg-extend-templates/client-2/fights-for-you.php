@@ -10,6 +10,7 @@ if ($is_preview && !empty($previewImage)) {
     return;
 } else {
     $fights_for_you__title = get_field('fights_for_you__title');
+    $fights_for_you__subtitle = get_field('fights_for_you__subtitle');
     $for_you_heading_tag = get_field('for_you_heading_tag');
     $fights_for_you__singleattorney_image = get_field('fights_for_you__singleattorney_image');
     $fights_for_you__attorney_link = get_field('fights_for_you__attorney_link');
@@ -41,9 +42,12 @@ if ($is_preview && !empty($previewImage)) {
                     <a href="<?php echo $fights_for_you__attorney_link['url'] ?>"><?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => 'mdt:hidden h-[376px] w-[376px] object-contain']) ?></a>
                 <?php } ?>
                 <div class="flex xl:flex-col xl:gap-5 2xl:items-center xl:items-baseline mdt:!flex-row mdt:w-full mdt:justify-between">
-                    <div class="flex items-center xl:flex-col xl:!items-start md:w-full md:gap-6 md:!items-center md:mb-9">
+                    <div class="flex items-center flex-col xl:!items-start md:w-full md:gap-6 md:!items-center md:mb-9">
                         <?php if ($fights_for_you__title) { ?>
                             <?php echo '<' .  $for_you_heading_tag . ' class="text-6xl capitalize pt-8 text-black font-bold font-second xl:pt-0 mdt:pt-0 md:!text-5xl leading-none">' . $fights_for_you__title . '</' .  $for_you_heading_tag . '>'; ?>
+                        <?php } ?>
+                        <?php if ($fights_for_you__subtitle) { ?>
+                            <span class=" text-3xl capitalize pt-4 text-black text-center font-bold font-main leading-none"><?php echo $fights_for_you__subtitle ?></span>
                         <?php } ?>
                         <div class="hidden shadow-siteWide px-3 w-9/12 h-full justify-center font-main gap-3 py-4 !items-center rounded-2xl text-white md:!flex xs:!py-2" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                             <div class="flex flex-col">
