@@ -4364,16 +4364,16 @@ html body .edit-post-visual-editor__content-area .max-w-md {
   max-width: 28rem;
 }
 
+html body .edit-post-visual-editor__content-area .max-w-\[1050px\] {
+  max-width: 1050px;
+}
+
 html body .edit-post-visual-editor__content-area .max-w-\[1610px\] {
   max-width: 1610px;
 }
 
 html body .edit-post-visual-editor__content-area .\!max-w-\[460px\] {
   max-width: 460px !important;
-}
-
-html body .edit-post-visual-editor__content-area .max-w-\[1050px\] {
-  max-width: 1050px;
 }
 
 html body .edit-post-visual-editor__content-area .flex-1 {
@@ -9591,12 +9591,12 @@ html :where(.wp-block) {
     height: 100%;
   }
 
-  .xs\:h-6 {
-    height: 1.5rem;
-  }
-
   .xs\:h-12 {
     height: 3rem;
+  }
+
+  .xs\:h-6 {
+    height: 1.5rem;
   }
 
   .xs\:max-h-64 {
@@ -9783,12 +9783,16 @@ html :where(.wp-block) {
     padding-top: 9rem;
   }
 
-  .xs\:\!pt-12 {
-    padding-top: 3rem !important;
-  }
-
   .xs\:\!pb-24 {
     padding-bottom: 6rem !important;
+  }
+
+  .xs\:\!pb-8 {
+    padding-bottom: 2rem !important;
+  }
+
+  .xs\:\!pt-12 {
+    padding-top: 3rem !important;
   }
 
   .xs\:\!pt-7 {
@@ -9805,10 +9809,6 @@ html :where(.wp-block) {
 
   .xs\:pb-2 {
     padding-bottom: .5rem;
-  }
-
-  .xs\:\!pb-8 {
-    padding-bottom: 2rem !important;
   }
 
   .xs\:text-3xl {

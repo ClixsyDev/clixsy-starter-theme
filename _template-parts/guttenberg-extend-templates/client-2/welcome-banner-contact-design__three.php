@@ -40,7 +40,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative z-10 bottom-[-1px]']) ?>
                         <?php } ?>
                         <?php if ($welcome_banner_contact_design_three__attorney_link) { ?>
-                            <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>" class="absolute bottom-[10%] right-[10%] rounded-2xl bg-[#707070] h-20 w-56 text-white flex flex-col justify-center items-center">
+                            <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>" class="absolute z-10 bottom-[10%] right-[10%] rounded-2xl bg-[#707070] h-20 w-56 text-white flex flex-col justify-center items-center">
                                 <div class="font-third font-bold text-2xl ">
                                     <?php echo $welcome_banner_contact_design_three__attorney_link['title'] ?>
                                 </div>
