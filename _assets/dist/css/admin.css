@@ -1375,7 +1375,6 @@ h2 span {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
   align-items: center;
   margin: auto;
-  font-family: Industry;
   font-size: 1.5rem;
   min-width: 450px !important;
 }
@@ -4373,6 +4372,10 @@ html body .edit-post-visual-editor__content-area .\!max-w-\[460px\] {
   max-width: 460px !important;
 }
 
+html body .edit-post-visual-editor__content-area .max-w-\[1050px\] {
+  max-width: 1050px;
+}
+
 html body .edit-post-visual-editor__content-area .flex-1 {
   flex: 1;
 }
@@ -5062,6 +5065,11 @@ html body .edit-post-visual-editor__content-area .px-11 {
   padding-right: 2.75rem;
 }
 
+html body .edit-post-visual-editor__content-area .py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
 html body .edit-post-visual-editor__content-area .pt-12 {
   padding-top: 3rem;
 }
@@ -5288,10 +5296,6 @@ html body .edit-post-visual-editor__content-area .font-main {
 
 html body .edit-post-visual-editor__content-area .font-second {
   font-family: Bebas Neue Pro;
-}
-
-html body .edit-post-visual-editor__content-area .font-third {
-  font-family: Industry;
 }
 
 html body .edit-post-visual-editor__content-area .text-10xl {
@@ -9551,6 +9555,10 @@ html :where(.wp-block) {
     margin-bottom: 2rem;
   }
 
+  .xs\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .xs\:\!mt-20 {
     margin-top: 5rem !important;
   }
@@ -9797,6 +9805,10 @@ html :where(.wp-block) {
 
   .xs\:pb-2 {
     padding-bottom: .5rem;
+  }
+
+  .xs\:\!pb-8 {
+    padding-bottom: 2rem !important;
   }
 
   .xs\:text-3xl {
