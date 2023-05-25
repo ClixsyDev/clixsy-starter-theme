@@ -5274,6 +5274,10 @@ html body .edit-post-visual-editor__content-area .pl-6 {
   padding-left: 1.5rem;
 }
 
+html body .edit-post-visual-editor__content-area .pb-80 {
+  padding-bottom: 20rem;
+}
+
 html body .edit-post-visual-editor__content-area .text-left {
   text-align: left;
 }
@@ -5426,6 +5430,10 @@ html body .edit-post-visual-editor__content-area .text-\[70px\] {
   font-size: 70px;
 }
 
+html body .edit-post-visual-editor__content-area .text-\[100px\] {
+  font-size: 100px;
+}
+
 html body .edit-post-visual-editor__content-area .font-bold {
   font-weight: 700;
 }
@@ -5516,6 +5524,10 @@ html body .edit-post-visual-editor__content-area .leading-\[1\] {
 
 html body .edit-post-visual-editor__content-area .\!leading-none {
   line-height: 1 !important;
+}
+
+html body .edit-post-visual-editor__content-area .leading-\[120px\] {
+  line-height: 120px;
 }
 
 html body .edit-post-visual-editor__content-area .tracking-widest {
@@ -6635,6 +6647,14 @@ html :where(.wp-block) {
 
   .xl\:pb-0 {
     padding-bottom: 0;
+  }
+
+  .xl\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .xl\:pb-64 {
+    padding-bottom: 16rem;
   }
 
   .xl\:text-xl {
@@ -8762,6 +8782,11 @@ html :where(.wp-block) {
     padding-right: 1.75rem;
   }
 
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .md\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -8820,6 +8845,14 @@ html :where(.wp-block) {
 
   .md\:pt-28 {
     padding-top: 7rem;
+  }
+
+  .md\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
+  .md\:pb-28 {
+    padding-bottom: 7rem;
   }
 
   .md\:text-left {
