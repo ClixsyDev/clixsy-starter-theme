@@ -21,7 +21,7 @@ if ($is_preview && !empty($previewImage)) {
     $phone_link = get_field('phone_link', 'options');
 ?>
 
-    <section class="pb-8 pt-11 overflow-x-clip relative" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
+    <section class="pb-8 pt-11 overflow-hidden relative" style="background-color: <?php echo $welcome_banner__design_three__bg ?: ''  ?> ;">
         <?php if ($welcome_banner__design_three__background_image) { ?>
             <?php echo wp_get_attachment_image($welcome_banner__design_three__background_image, 'full', '', ['class' => 'absolute top-0 -left-96 h-full object-contain xxl:w-11/24 lg:w-15/24 md:-left-72 xs:-left-40 xs:!-top-[60px]']) ?>
         <?php } ?>

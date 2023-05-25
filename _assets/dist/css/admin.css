@@ -4606,10 +4606,6 @@ html body .edit-post-visual-editor__content-area .overflow-visible {
   overflow: visible;
 }
 
-html body .edit-post-visual-editor__content-area .overflow-x-clip {
-  overflow-x: clip;
-}
-
 html body .edit-post-visual-editor__content-area .truncate {
   text-overflow: ellipsis;
   white-space: nowrap;
