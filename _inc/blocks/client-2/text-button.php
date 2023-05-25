@@ -59,6 +59,12 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Title',
                 ),
                 array(
+                    'key' => $block_key . 'cost_description',
+                    'name' => $block_key . 'cost_description',
+                    'type' => 'wysiwyg',
+                    'label' => 'Description',
+                ),
+                array(
                     'key' => $block_key . 'cost_link',
                     'name' => $block_key . 'cost_link',
                     'label' => 'Button',
@@ -66,12 +72,33 @@ if (function_exists('acf_add_local_field_group')) :
                     'return_format' => 'array',
                 ),
                 array(
+                    'key' => $block_key . 'phone',
+                    'name' => $block_key . 'phone',
+                    'label' => 'Use phone on the link?',
+                    'type' => 'checkbox',
+                    'choices' => array(
+                        'Yes' => 'Yes',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
+                array(
                     'key' => $block_key . 'cost_block_bg',
                     'name' => $block_key . 'cost_block_bg',
                     'type' => 'color_picker',
                     'label' => 'Set background color for first section',
                 ),
-
+                array(
+                    'key' => $block_key . 'dots',
+                    'name' => $block_key . 'dots',
+                    'label' => 'Add dots pattern?',
+                    'type' => 'checkbox',
+                    'choices' => array(
+                        'Yes' => 'Yes',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
             ),
 
         )

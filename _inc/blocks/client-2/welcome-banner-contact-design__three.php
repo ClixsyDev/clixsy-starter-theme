@@ -79,8 +79,19 @@ if (function_exists('acf_add_local_field_group')) {
                 'name' => $block_key . 'title',
                 'type' => 'text',
                 'label' => 'Title',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
             ),
-
+            array(
+                'key' => $block_key . 'title_color',
+                'name' => $block_key . 'title_color',
+                'type' => 'text',
+                'label' => 'Set color for title',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
+            ),
             array(
                 'key' => $block_key . 'image',
                 'name' => $block_key . 'image',
@@ -101,6 +112,17 @@ if (function_exists('acf_add_local_field_group')) {
                 'name' => $block_key . 'attorney_position',
                 'type' => 'text',
                 'label' => 'Attorney position',
+            ),
+            array(
+                'key' => $block_key . 'dots',
+                'name' => $block_key . 'dots',
+                'label' => 'Add dots pattern?',
+                'type' => 'checkbox',
+                'choices' => array(
+                    'Yes' => 'Yes',
+                ),
+                'layout' => 'vertical',
+                'return_format' => 'value',
             ),
             array(
                 'key' => $block_key . 'form_bg',
