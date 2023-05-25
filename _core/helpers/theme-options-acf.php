@@ -1022,6 +1022,50 @@
                 'return_format' => 'id',
                 'ui' => 1,
             ),
+            array(
+                'key' => 'field_631123120d2a9202',
+                'label' => 'Slider Verdicts',
+                'name' => '',
+                'aria-label' => '',
+                'type' => 'tab',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'placement' => 'left',
+                'endpoint' => 0,
+            ),
+            array(
+                'key' =>  'verdicts_repeater3',
+                'name' => 'verdicts_repeater3',
+                'label' => 'Verdicts',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'verdicts_value',
+                        'name' => 'verdicts_value',
+                        'label' => 'Value',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'key' => 'verdicts_description',
+                        'name' => 'verdicts_description',
+                        'label' => 'Description',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'key' => 'verdicts_resolved',
+                        'name' => 'verdicts_resolved',
+                        'label' => 'Resolved In',
+                        'type' => 'text',
+                    ),
+                ),
+            ),
         ),
         'location' => array(
             array(

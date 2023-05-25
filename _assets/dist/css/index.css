@@ -6454,10 +6454,6 @@ img, video {
   overflow: visible;
 }
 
-.overflow-x-clip {
-  overflow-x: clip;
-}
-
 .truncate {
   text-overflow: ellipsis;
   white-space: nowrap;
