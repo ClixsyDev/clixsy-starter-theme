@@ -11,6 +11,8 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $about_us__title = get_field('about_us__title');
     $about_us__block_color = get_field('about_us__block_color');
+    $about_us__video_id = get_field('about_us__video_id');
+    $about_us__select_img = get_field('about_us__select_img');
     $about_us__image = get_field('about_us__image');
     $about_us__attorney_subtitle = get_field('about_us__attorney_subtitle');
     $about_us__attorney_title = get_field('about_us__attorney_title');
@@ -32,8 +34,19 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <div class="flex bg-smoke pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 md:gap-8 lg:p-0 lg:bg-inherit md:mb-0 xs:!gap-4">
                 <div class="flex flex-col -mt-80 w-12/24 lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full xs:-mt-[42%]">
-                    <?php if ($about_us__image) { ?>
-                        <?php echo wp_get_attachment_image($about_us__image, 'full', '', ['class' => '2xl:mx-auto']) ?>
+                    <?php if ($about_us__select_img) { ?>
+                        <?php if ($about_us__image) { ?>
+                            <?php echo wp_get_attachment_image($about_us__image, 'full', '', ['class' => '2xl:mx-auto']) ?>
+                        <?php } ?>
+                    <?php }
+                    if ($about_us__video_id) { ?>
+                        <div data-yt-url="https://www.youtube.com/embed/<?php echo $about_us__video_id ?>?enablejsapi=1" class="relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[250px]  max-h-72 bg-cover fireTestimonialModal " data-a11y-dialog-show="testimonialDialog" style="background-image: url('http://img.youtube.com/vi/<?php echo $about_us__video_id ?>/maxresdefault.jpg');">
+                            <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="67.011" height="67.011" viewBox="0 0 67.011 67.011">
+                                    <path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle" d="M34.068.563A33.506,33.506,0,1,0,67.574,34.068,33.5,33.5,0,0,0,34.068.563ZM49.7,37.311,25.921,50.956A3.248,3.248,0,0,1,21.1,48.119v-28.1a3.25,3.25,0,0,1,4.823-2.837L49.7,31.636A3.253,3.253,0,0,1,49.7,37.311Z" transform="translate(-0.563 -0.563)" fill="rgba(255,255,255,0.84)"></path>
+                                </svg>
+                            </span>
+                        </div>
                     <?php } ?>
                     <?php if ($about_us__attorney_subtitle || $about_us__attorney_title) { ?>
                         <div class=" py-7 px-8 text-center rounded-md shadow-siteWide sm:px-9 sm:py-4" style="background-color: <?php echo $about_us__attorney_block_color ?: ''  ?> ;">
@@ -108,6 +121,16 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
         </div>
     </section>
+
+    <div class="dialog-container" id="testimonialDialog" aria-hidden="true">
+        <div class="dialog-overlay" data-a11y-dialog-hide></div>
+        <div class="dialog-content">
+            <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
+                &times;
+            </button>
+            <iframe class="w-full aspect-video h-full" src="" id="testimonialVideoIdSelector" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
 
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';
