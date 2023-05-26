@@ -9,6 +9,7 @@ import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
 import { aosAnimations } from './aos-animations';
 import { smoothScrollFn } from './smooth-site-scrolling';
+import { modalDialog } from './modals';
 
 
 
@@ -177,4 +178,5 @@ ready(() => {
   btnMoreFormDesignTwo();
   aosAnimations();
   smoothScrollFn();
+  modalDialog();
 });

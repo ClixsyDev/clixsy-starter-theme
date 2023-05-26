@@ -95,6 +95,23 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Set background color for block',
                 ),
                 array(
+                    'key' => $block_key . 'video_id',
+                    'name' => $block_key . 'video_id',
+                    'type' => 'text',
+                    'label' => 'Video ID',
+                ),
+                array(
+                    'key' => $block_key . 'select_img',
+                    'name' => $block_key . 'select_img',
+                    'label' => 'Select img insted of video',
+                    'type' => 'checkbox',
+                    'choices' => array(
+                        'Yes' => 'Yes',
+                    ),
+                    'layout' => 'vertical',
+                    'return_format' => 'value',
+                ),
+                array(
                     'key' => $block_key . 'image',
                     'name' => $block_key . 'image',
                     'type' => 'image',

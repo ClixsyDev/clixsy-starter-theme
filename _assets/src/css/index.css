@@ -3,6 +3,7 @@
 @import './_mobile-menu.css';
 @import './_case-types.css';
 @import './_blog.css';
+@import "./components/_dialogs.css";
 @import './_home-page.css';
 @import './_footer.css';
 @import './_bio-page.css';
