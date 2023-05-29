@@ -55,29 +55,20 @@ function starter_scripts()
 // Update CSS within in Admin
 function admin_style()
 {
-    $version = '5.0.0';
-    wp_enqueue_style(
-        'starter-style',
-        trailingslashit(get_template_directory_uri()) . '_assets/dist/css/admin.css',
-        [],
-        $version
-    );
+    if (isset($_GET['action']) && $_GET['action'] == 'edit') {
 
-    // wp_enqueue_style(
-    //     'builded-starter-style',
-    //     trailingslashit(get_template_directory_uri()) . '_assets/src/builded_css_admin/builded_css_admin.css',
-    //     [],
-    //     $version
-    // );
-
-     // Main Script
-     wp_enqueue_script(
-        'starter-script-admin',
-        trailingslashit(get_template_directory_uri()) . '_assets/dist/js/main.js',
-        [],
-        $version,
-        true
-    );
-    
+        $version = '5.0.0';
+        wp_enqueue_style(
+            'starter-style',
+            trailingslashit(get_template_directory_uri()) . '_assets/dist/css/admin.css',
+            [],
+            $version
+        );
+        $style_path_main = get_stylesheet_directory() . '/_assets/dist/js/main.js';
+        $style_url_main = get_stylesheet_directory_uri() . '_assets/dist/js/main.js';
+        $style_version_main = filemtime($style_path_main);
+        wp_enqueue_script('child-style-admin', $style_url_main, false, $style_version_main);
+    }
 }
+
 add_action('admin_enqueue_scripts', 'admin_style');
