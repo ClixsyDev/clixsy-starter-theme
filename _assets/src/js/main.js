@@ -10,6 +10,7 @@ import { gclid } from './gclid';
 import { aosAnimations } from './aos-animations';
 import { smoothScrollFn } from './smooth-site-scrolling';
 import { modalDialog } from './modals';
+import { gaEventsCF7 } from './ga-events-cf7';
 
 
 
@@ -179,4 +180,5 @@ ready(() => {
   aosAnimations();
   smoothScrollFn();
   modalDialog();
+  gaEventsCF7();
 });

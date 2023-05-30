@@ -1,5 +1,5 @@
 import Glide from '@glidejs/glide';
-import { getElements, ifSelectorExist } from './utils';
+import { getElement, getElements, ifSelectorExist } from './utils';
 import Marquee from 'vanilla-marquee';
 
 const testmonialsSlider = '.testmonialsSlider';
@@ -180,8 +180,8 @@ if (document.querySelector(communitySliderAbout) != undefined && document.queryS
   });
 }
 
-const marqueEl1 = document.getElementById('marquee');
-if (document.body.contains(marqueEl1)) {
+const marqueEl1 = getElement('#marquee');
+if (ifSelectorExist(marqueEl1)) {
   const marqueOne = new Marquee(marqueEl1, {
     css3easing: 'linear',
     speed: window.innerWidth < 768 ? 40 : 60,
