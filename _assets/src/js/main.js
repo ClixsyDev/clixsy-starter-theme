@@ -180,5 +180,5 @@ ready(() => {
   aosAnimations();
   smoothScrollFn();
   modalDialog();
-  // gaEventsCF7();
+  gaEventsCF7();
 });
