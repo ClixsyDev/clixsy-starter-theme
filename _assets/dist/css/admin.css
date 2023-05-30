@@ -9018,6 +9018,10 @@ html :where(.wp-block) {
     margin-bottom: 1rem;
   }
 
+  .sm\:mb-\[45\%\] {
+    margin-bottom: 45%;
+  }
+
   .sm\:\!mb-5 {
     margin-bottom: 1.25rem !important;
   }
@@ -9626,6 +9630,10 @@ html :where(.wp-block) {
 
   .xs\:\!mt-20 {
     margin-top: 5rem !important;
+  }
+
+  .xs\:mb-\[45\%\] {
+    margin-bottom: 45%;
   }
 
   .xs\:h-1\.5 {

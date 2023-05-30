@@ -25,7 +25,7 @@ if ($is_preview && !empty($previewImage)) {
                 <div class="flex justify-center items-center px-2">
                     <div class="z-10 items-center text-center">
                         <?php if ($text_button__cost_title) { ?>
-                            <h3 class="text-headings font-bold capitalize font-second pb-10 leading-[65px] text-6xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $text_button__cost_title ?></h3>
+                            <h3 class="text-headings font-bold font-second pb-10 leading-[65px] text-6xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $text_button__cost_title ?></h3>
                         <?php } ?>
                         <?php if ($text_button__cost_description) { ?>
                             <div class="pb-12 text-left max-w-[1050px]"><?php echo $text_button__cost_description ?></div>
