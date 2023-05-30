@@ -30,7 +30,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="container lg:relative lg:z-10">
             <span class="absolute right-0 left-0 min-h-[71%] top-72 -z-10 w-full bg-smoke hidden lg:!block sm:min-h-[65%] xs:top-80 xs:min-h-[61%]"></span>
             <?php if ($about_us__title) { ?>
-                <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] md:text-5xl"><?php echo $about_us__title ?></h2>
+                <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] xs:mb-[45%] md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
             <div class="flex bg-smoke pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 md:gap-8 lg:p-0 lg:bg-inherit md:mb-0 xs:!gap-4">
                 <div class="flex flex-col -mt-80 w-12/24 lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full xs:-mt-[42%]">
