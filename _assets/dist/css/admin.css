@@ -3980,6 +3980,10 @@ html body .edit-post-visual-editor__content-area .min-h-\[300px\] {
   min-height: 300px;
 }
 
+html body .edit-post-visual-editor__content-area .min-h-screen {
+  min-height: 100vh;
+}
+
 html body .edit-post-visual-editor__content-area .w-full {
   width: 100%;
 }

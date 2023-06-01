@@ -2,7 +2,9 @@ import A11yDialog from 'a11y-dialog';
 import { getElement, getElements, ifSelectorExist } from './utils';
 export const modalDialog = () => {
   console.log('test');
+
   
+
   const dialogContainer = document.querySelector('#testimonialDialog');
   if (ifSelectorExist(dialogContainer)) {
     const videoReviewsDialog = new A11yDialog(dialogContainer);
@@ -16,11 +18,13 @@ export const modalDialog = () => {
           let testimonialVideoIdSelector = getElement('#testimonialVideoIdSelector');
           if (ifSelectorExist(testimonialVideoIdSelector)) {
             let itemYtUrl = item.getAttribute('data-yt-url');
+            console.log(itemYtUrl);
             testimonialVideoIdSelector.src = itemYtUrl;
           }
         });
       });
     }
+
 
     videoReviewsDialog.on('hide', function (dialogEl, event) {
       dialogEl.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');

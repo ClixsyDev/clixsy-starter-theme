@@ -26,6 +26,9 @@ if ($is_preview && !empty($previewImage)) {
     $about_us__link = get_field('about_us__link');
     $about_us__background = get_field('about_us__background'); ?>
 
+
+
+
     <section class="pt-40  -mb-[4%] lg:-mb-[6%] 2xl:pt-44 md:pt-28 relative z-[1] lg:!pt-8">
         <div class="container lg:relative lg:z-10">
             <span class="absolute right-0 left-0 min-h-[71%] top-72 -z-10 w-full bg-smoke hidden lg:!block sm:min-h-[65%] xs:top-80 xs:min-h-[61%]"></span>
@@ -40,7 +43,7 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
                     <?php }
                     if ($about_us__video_id) { ?>
-                        <div data-yt-url="https://www.youtube.com/embed/<?php echo $about_us__video_id ?>?enablejsapi=1" class="relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[250px]  max-h-72 bg-cover fireTestimonialModal " data-a11y-dialog-show="testimonialDialog" style="background-image: url('http://img.youtube.com/vi/<?php echo $about_us__video_id ?>/maxresdefault.jpg');">
+                        <div data-yt-url="https://www.youtube.com/embed/<?php echo $about_us__video_id ?>?enablejsapi=1?rel=0" class="relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[250px]  max-h-72 bg-cover fireTestimonialModal " data-a11y-dialog-show="testimonialDialog" style="background-image: url('http://img.youtube.com/vi/<?php echo $about_us__video_id ?>/maxresdefault.jpg');">
                             <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="67.011" height="67.011" viewBox="0 0 67.011 67.011">
                                     <path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle" d="M34.068.563A33.506,33.506,0,1,0,67.574,34.068,33.5,33.5,0,0,0,34.068.563ZM49.7,37.311,25.921,50.956A3.248,3.248,0,0,1,21.1,48.119v-28.1a3.25,3.25,0,0,1,4.823-2.837L49.7,31.636A3.253,3.253,0,0,1,49.7,37.311Z" transform="translate(-0.563 -0.563)" fill="rgba(255,255,255,0.84)"></path>
@@ -122,13 +125,30 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </section>
 
+
+
     <div class="dialog-container" id="testimonialDialog" aria-hidden="true">
         <div class="dialog-overlay" data-a11y-dialog-hide></div>
         <div class="dialog-content">
+
+
+
+
             <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
                 &times;
             </button>
-            <iframe class="w-full aspect-video h-full" src="" id="testimonialVideoIdSelector" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+
+            <!-- <iframe class="w-full aspect-video h-full" src="" id="testimonialVideoIdSelector" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
+
+
+            <div class="hytPlayerWrapOuter w-full h-full">
+                <div class="hytPlayerWrap w-full h-full">
+                    <iframe class="h-full w-full aspect-video" class="" src="https://www.youtube.com/embed/<?php echo $about_us__video_id ?>?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" frameborder="0"></iframe>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 

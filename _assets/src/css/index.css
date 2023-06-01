@@ -3,7 +3,7 @@
 @import './_mobile-menu.css';
 @import './_case-types.css';
 @import './_blog.css';
-@import "./components/_dialogs.css";
+@import './components/_dialogs.css';
 @import './_home-page.css';
 @import './_footer.css';
 @import './_bio-page.css';
@@ -153,7 +153,7 @@ html {
 @layer components {
   .big-auto-footer-form {
     margin-bottom: -150px;
-  
+
     .fields {
       display: flex;
       flex-direction: row;
@@ -166,19 +166,18 @@ html {
 
     .fields label {
       padding: 0;
-      width: 50%;       
-
+      width: 50%;
     }
 
-    .fields .textarea-label  {
+    .fields .textarea-label {
       padding: 0;
       width: 100%;
     }
 
-    @media (max-width:576px) {
+    @media (max-width: 576px) {
       .fields {
         flex-direction: column;
-        gap:0px;
+        gap: 0px;
       }
 
       .fields label {
@@ -186,9 +185,7 @@ html {
         width: 100%;
       }
     }
-
   }
-
 }
 
 /* FAQ Content Box */
@@ -196,9 +193,7 @@ html {
 @layer components {
   .faq-content-box ul,
   .faq-content-box ol {
-  padding-left: 20px;
-     
-    
+    padding-left: 20px;
   }
 }
 
@@ -214,4 +209,41 @@ html {
     min-height: 270px;
     height: 100%;
   }
+}
+
+/* styles for the youtube video */
+.hytPlayerWrap {
+  display: inline-block;
+  position: relative;
+}
+
+.hytPlayerWrap.ended::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px 64px;
+  background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgNTEwIDUxMCI+PHBhdGggZD0iTTI1NSAxMDJWMEwxMjcuNSAxMjcuNSAyNTUgMjU1VjE1M2M4NC4xNSAwIDE1MyA2OC44NSAxNTMgMTUzcy02OC44NSAxNTMtMTUzIDE1My0xNTMtNjguODUtMTUzLTE1M0g1MWMwIDExMi4yIDkxLjggMjA0IDIwNCAyMDRzMjA0LTkxLjggMjA0LTIwNC05MS44LTIwNC0yMDQtMjA0eiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==);
+}
+
+.hytPlayerWrap.paused::after {
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: 0;
+  bottom: 50px;
+  right: 0;
+  cursor: pointer;
+  inset: 0px 0 0px !important;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxNzA2LjY2NyIgaGVpZ2h0PSIxNzA2LjY2NyIgdmlld0JveD0iMCAwIDEyODAgMTI4MCI+PHBhdGggZD0iTTE1Ny42MzUgMi45ODRMMTI2MC45NzkgNjQwIDE1Ny42MzUgMTI3Ny4wMTZ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);
 }
