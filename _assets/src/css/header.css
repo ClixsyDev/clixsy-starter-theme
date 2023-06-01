@@ -29,3 +29,14 @@ header {
     }
   }
 }
+
+/* homepage hero br */
+.hero-br {
+  display: none;
+}
+
+@media (max-width:1500px) {
+  .hero-br {
+    display: block;
+  }
+}
