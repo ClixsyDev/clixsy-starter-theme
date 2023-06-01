@@ -5427,6 +5427,10 @@ html body .edit-post-visual-editor__content-area .text-\[28px\] {
   font-size: 28px;
 }
 
+html body .edit-post-visual-editor__content-area .text-\[3\.5rem\] {
+  font-size: 3.5rem;
+}
+
 html body .edit-post-visual-editor__content-area .text-\[430px\] {
   font-size: 430px;
 }
@@ -9018,10 +9022,6 @@ html :where(.wp-block) {
     margin-bottom: 1rem;
   }
 
-  .sm\:mb-\[45\%\] {
-    margin-bottom: 45%;
-  }
-
   .sm\:\!mb-5 {
     margin-bottom: 1.25rem !important;
   }
@@ -9620,6 +9620,10 @@ html :where(.wp-block) {
     margin-top: -42%;
   }
 
+  .xs\:mb-\[45\%\] {
+    margin-bottom: 45%;
+  }
+
   .xs\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -9630,10 +9634,6 @@ html :where(.wp-block) {
 
   .xs\:\!mt-20 {
     margin-top: 5rem !important;
-  }
-
-  .xs\:mb-\[45\%\] {
-    margin-bottom: 45%;
   }
 
   .xs\:h-1\.5 {

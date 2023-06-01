@@ -30,6 +30,7 @@ header {
   }
 }
 
+/* homepage hero br */
 .hero-br {
   display: none;
 }
@@ -38,5 +39,4 @@ header {
   .hero-br {
     display: block;
   }
-  
 }
