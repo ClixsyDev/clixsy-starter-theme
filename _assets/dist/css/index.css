@@ -1910,7 +1910,18 @@ h2 span {
   padding-left: .5rem;
 }
 
-.attorney-group__form .wpcf7-spinner, .attorney-group__form br {
+.attorney-group__form .wpcf7-spinner {
+  display: none;
+}
+
+.attorney-group__form .wpcf7-spinner.active {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  right: 10%;
+}
+
+.attorney-group__form br {
   display: none;
 }
 
@@ -1976,6 +1987,13 @@ h2 span {
 
 .form .wpcf7-spinner {
   display: none;
+}
+
+.form .wpcf7-spinner.active {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  right: 10%;
 }
 
 .form .wpcf7-form-control-wrap {

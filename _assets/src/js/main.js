@@ -1,17 +1,17 @@
 import { mainMenu, dropdownMenu } from './menu';
 import headerInit from './header';
 import { getElement, getElements, ifSelectorExist, isOverflown, ready } from './utils';
-import testimonialSlider from './sliders';
+import { initSliders } from './sliders';
 import { formEntry } from './form_entry';
 import { hoverOnButton } from './button-hover';
 import { tocAnchor } from './toc';
-import { sentNewMessage } from './thank-you-messages';
 import { gclid } from './gclid';
+import { sentNewMessage } from './thank-you-messages';
 import { aosAnimations } from './aos-animations';
 import { smoothScrollFn } from './smooth-site-scrolling';
 import { modalDialog } from './modals';
 import { gaEventsCF7 } from './ga-events-cf7';
-
+import { cf7Events } from './cf7-events';
 
 
 /* FAQ start */
@@ -161,51 +161,51 @@ const btnMoreFormDesignTwo = () => {
 
 
 const preventRelatedVideoYT = () => {
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     if (window.hideYTActivated) return;
     if (typeof YT === 'undefined') {
-        let tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        let firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      let tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      let firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     }
     let onYouTubeIframeAPIReadyCallbacks = [];
     for (let playerWrap of document.querySelectorAll(".hytPlayerWrap")) {
-        let playerFrame = playerWrap.querySelector("iframe");
-        let onPlayerStateChange = function(event) {
-            if (event.data == YT.PlayerState.ENDED) {
-                playerWrap.classList.add("ended");
-            } else if (event.data == YT.PlayerState.PAUSED) {
-                playerWrap.classList.add("paused");
-            } else if (event.data == YT.PlayerState.PLAYING) {
-                playerWrap.classList.remove("ended");
-                playerWrap.classList.remove("paused");
-            }
-        };
-        let player;
-        onYouTubeIframeAPIReadyCallbacks.push(function() {
-            player = new YT.Player(playerFrame, {
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        });
-        playerWrap.addEventListener("click", function() {
-            let playerState = player.getPlayerState();
-            if (playerState == YT.PlayerState.ENDED) {
-                player.seekTo(0);
-            } else if (playerState == YT.PlayerState.PAUSED) {
-                player.playVideo();
-            }
-        });
-    }
-    window.onYouTubeIframeAPIReady = function() {
-        for (let callback of onYouTubeIframeAPIReadyCallbacks) {
-            callback();
+      let playerFrame = playerWrap.querySelector("iframe");
+      let onPlayerStateChange = function (event) {
+        if (event.data == YT.PlayerState.ENDED) {
+          playerWrap.classList.add("ended");
+        } else if (event.data == YT.PlayerState.PAUSED) {
+          playerWrap.classList.add("paused");
+        } else if (event.data == YT.PlayerState.PLAYING) {
+          playerWrap.classList.remove("ended");
+          playerWrap.classList.remove("paused");
         }
+      };
+      let player;
+      onYouTubeIframeAPIReadyCallbacks.push(function () {
+        player = new YT.Player(playerFrame, {
+          events: {
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      });
+      playerWrap.addEventListener("click", function () {
+        let playerState = player.getPlayerState();
+        if (playerState == YT.PlayerState.ENDED) {
+          player.seekTo(0);
+        } else if (playerState == YT.PlayerState.PAUSED) {
+          player.playVideo();
+        }
+      });
+    }
+    window.onYouTubeIframeAPIReady = function () {
+      for (let callback of onYouTubeIframeAPIReadyCallbacks) {
+        callback();
+      }
     };
     window.hideYTActivated = true;
-});
+  });
 }
 
 ready(() => {
@@ -230,6 +230,8 @@ ready(() => {
   smoothScrollFn();
   modalDialog();
   gaEventsCF7();
+  initSliders();
+  cf7Events();
 });
 
 preventRelatedVideoYT();

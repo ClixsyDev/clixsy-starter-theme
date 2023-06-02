@@ -538,16 +538,16 @@ var _header = require("./header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _utils = require("./utils");
 var _sliders = require("./sliders");
-var _slidersDefault = parcelHelpers.interopDefault(_sliders);
 var _formEntry = require("./form_entry");
 var _buttonHover = require("./button-hover");
 var _toc = require("./toc");
-var _thankYouMessages = require("./thank-you-messages");
 var _gclid = require("./gclid");
+var _thankYouMessages = require("./thank-you-messages");
 var _aosAnimations = require("./aos-animations");
 var _smoothSiteScrolling = require("./smooth-site-scrolling");
 var _modals = require("./modals");
 var _gaEventsCf7 = require("./ga-events-cf7");
+var _cf7Events = require("./cf7-events");
 /* FAQ start */ const initFAQ = ()=>{
     const acc = (0, _utils.getElements)(".faq__header");
     if (acc && acc.length) for(let i = 0; i < acc.length; i++)acc[i].addEventListener("click", function() {
@@ -720,10 +720,12 @@ const preventRelatedVideoYT = ()=>{
     (0, _smoothSiteScrolling.smoothScrollFn)();
     (0, _modals.modalDialog)();
     (0, _gaEventsCf7.gaEventsCF7)();
+    (0, _sliders.initSliders)();
+    (0, _cf7Events.cf7Events)();
 });
 preventRelatedVideoYT();
 
-},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./thank-you-messages":"9IJ1s","./gclid":"bvTDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./aos-animations":"3V3c2","./smooth-site-scrolling":"adhDo","./modals":"axBGC","./ga-events-cf7":"iwJiV"}],"2uPGB":[function(require,module,exports) {
+},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./thank-you-messages":"9IJ1s","./gclid":"bvTDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./aos-animations":"3V3c2","./smooth-site-scrolling":"adhDo","./modals":"axBGC","./ga-events-cf7":"iwJiV","./cf7-events":"3NM30"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mainMenu", ()=>mainMenu);
@@ -1153,211 +1155,215 @@ exports.default = headerInit;
 
 },{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pa5Q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "initSliders", ()=>initSliders);
 var _glide = require("@glidejs/glide");
 var _glideDefault = parcelHelpers.interopDefault(_glide);
 var _utils = require("./utils");
 var _vanillaMarquee = require("vanilla-marquee");
 var _vanillaMarqueeDefault = parcelHelpers.interopDefault(_vanillaMarquee);
-const testmonialsSlider = ".testmonialsSlider";
-if (document.querySelector(testmonialsSlider) != undefined && document.querySelector(testmonialsSlider) != null) Array.from((0, _utils.getElements)(testmonialsSlider)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 1,
-        type: "slider",
-        autoplay: 3500,
-        breakpoints: {}
-    }).mount();
-});
-const awardsSlider = ".awardsSlider";
-if (document.querySelector(awardsSlider) != undefined && document.querySelector(awardsSlider) != null) Array.from((0, _utils.getElements)(awardsSlider)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 5.2,
-        type: "carousel",
-        autoplay: 2500,
-        breakpoints: {
-            1024: {
-                perView: 4.5
-            },
-            768: {
-                perView: 3.5
-            },
-            540: {
-                perView: 2.5
-            }
-        }
-    }).mount();
-});
-const awardsSlider2 = ".awards_slider";
-if (document.querySelector(awardsSlider2) != undefined && document.querySelector(awardsSlider2) != null) Array.from((0, _utils.getElements)(awardsSlider2)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 8,
-        type: "carousel",
-        autoplay: 3000,
-        breakpoints: {
-            1100: {
-                perView: 5
-            },
-            768: {
-                perView: 3
-            }
-        }
-    }).mount();
-});
-const lifeSlider = ".lifeSlider";
-if (document.querySelector(lifeSlider) != undefined && document.querySelector(lifeSlider) != null) Array.from((0, _utils.getElements)(lifeSlider)).forEach((item)=>{
-    new (0, _glideDefault.default)(lifeSlider, {
-        perView: 1,
-        type: "carousel",
-        breakpoints: {}
-    }).mount();
-});
-const verdictsSlider = ".verdicts_slider";
-if (document.querySelector(verdictsSlider) != undefined && document.querySelector(verdictsSlider) != null) Array.from((0, _utils.getElements)(verdictsSlider)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        type: "carousel",
-        autoplay: 1,
-        animationDuration: 4000,
-        // animationTimingFunc: 'linear',
-        perView: 4,
-        breakpoints: {
-            1400: {
-                perView: 3
-            },
-            1100: {
-                perView: 3
-            },
-            768: {
-                perView: 2
-            },
-            640: {
-                perView: 1
-            }
-        }
-    }).mount();
-});
-const verdictsSliderBa = ".verdicts_slider_ba";
-if (document.querySelector(verdictsSliderBa) != undefined && document.querySelector(verdictsSliderBa) != null) Array.from((0, _utils.getElements)(verdictsSliderBa)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        type: "carousel",
-        autoplay: 1,
-        animationDuration: 4000,
-        // animationTimingFunc: 'linear',
-        perView: 5,
-        breakpoints: {
-            1496: {
-                perView: 4
-            },
-            1200: {
-                perView: 3
-            },
-            868: {
-                perView: 3
-            },
-            640: {
-                perView: 2
-            }
-        }
-    }).mount();
-});
-const memorableSlider = ".memorableSlider";
-if (document.querySelector(memorableSlider) != undefined && document.querySelector(memorableSlider) != null) Array.from((0, _utils.getElements)(memorableSlider)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 1,
-        type: "slider",
-        breakpoints: {}
-    }).mount();
-});
-const grSlider = ".google_reviews_slider";
-if (document.querySelector(grSlider) != undefined && document.querySelector(grSlider) != null) Array.from((0, _utils.getElements)(grSlider)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 3,
-        type: "carousel",
-        breakpoints: {
-            1100: {
-                perView: 2
-            },
-            768: {
-                perView: 1
-            }
-        }
-    }).mount();
-});
-const awardsSliderAbout = ".awardsSliderAbout";
-if (document.querySelector(awardsSliderAbout) != undefined && document.querySelector(awardsSliderAbout) != null) Array.from((0, _utils.getElements)(awardsSliderAbout)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 8,
-        type: "carousel",
-        autoplay: 2500,
-        breakpoints: {
-            540: {
-                perView: 4.5
-            }
-        }
-    }).mount();
-});
-const communitySliderAbout = ".communitySliderAbout";
-if (document.querySelector(communitySliderAbout) != undefined && document.querySelector(communitySliderAbout) != null) Array.from((0, _utils.getElements)(communitySliderAbout)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 2,
-        type: "carousel",
-        breakpoints: {
-            540: {
-                perView: 1
-            }
-        }
-    }).mount();
-});
-const marqueEl1 = (0, _utils.getElement)("#marquee");
-if ((0, _utils.ifSelectorExist)(marqueEl1)) {
-    const marqueOne = new (0, _vanillaMarqueeDefault.default)(marqueEl1, {
-        css3easing: "linear",
-        speed: window.innerWidth < 768 ? 40 : 60,
-        gap: 100,
-        delayBeforeStart: 0,
-        direction: "left",
-        duplicated: true,
-        duration: 5000,
-        startVisible: true
+const initSliders = ()=>{
+    const testmonialsSlider = ".testmonialsSlider";
+    if (document.querySelector(testmonialsSlider) != undefined && document.querySelector(testmonialsSlider) != null) Array.from((0, _utils.getElements)(testmonialsSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 1,
+            type: "slider",
+            autoplay: 3500,
+            breakpoints: {}
+        }).mount();
     });
-    marqueOne.resume();
-}
-const verdicts = document.querySelector(".verdicts-marquee");
-if ((0, _utils.ifSelectorExist)(verdicts)) {
-    const verdictsMarquee = new (0, _vanillaMarqueeDefault.default)(verdicts, {
-        css3easing: "linear",
-        speed: window.innerWidth < 768 ? 60 : 100,
-        gap: 100,
-        delayBeforeStart: 0,
-        direction: "left",
-        duplicated: true,
-        duration: 5000,
-        startVisible: true
-    });
-    verdictsMarquee.resume();
-}
-// client 2
-const merits = ".merits";
-if (document.querySelector(merits) != undefined && document.querySelector(merits) != null) Array.from((0, _utils.getElements)(merits)).forEach((item)=>{
-    new (0, _glideDefault.default)(item, {
-        perView: 4,
-        type: "carousel",
-        animationDuration: 4000,
-        autoplay: 1,
-        breakpoints: {
-            1496: {
-                perView: 3,
-                autoplay: 1
-            },
-            1200: {
-                perView: 2,
-                autoplay: 3000
-            },
-            640: {
-                perView: 1,
-                autoplay: 3000
+    const awardsSlider = ".awardsSlider";
+    if (document.querySelector(awardsSlider) != undefined && document.querySelector(awardsSlider) != null) Array.from((0, _utils.getElements)(awardsSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 5.2,
+            type: "carousel",
+            autoplay: 2500,
+            breakpoints: {
+                1024: {
+                    perView: 4.5
+                },
+                768: {
+                    perView: 3.5
+                },
+                540: {
+                    perView: 2.5
+                }
             }
-        }
-    }).mount();
-});
+        }).mount();
+    });
+    const awardsSlider2 = ".awards_slider";
+    if (document.querySelector(awardsSlider2) != undefined && document.querySelector(awardsSlider2) != null) Array.from((0, _utils.getElements)(awardsSlider2)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 8,
+            type: "carousel",
+            autoplay: 3000,
+            breakpoints: {
+                1100: {
+                    perView: 5
+                },
+                768: {
+                    perView: 3
+                }
+            }
+        }).mount();
+    });
+    const lifeSlider = ".lifeSlider";
+    if (document.querySelector(lifeSlider) != undefined && document.querySelector(lifeSlider) != null) Array.from((0, _utils.getElements)(lifeSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(lifeSlider, {
+            perView: 1,
+            type: "carousel",
+            breakpoints: {}
+        }).mount();
+    });
+    const verdictsSlider = ".verdicts_slider";
+    if (document.querySelector(verdictsSlider) != undefined && document.querySelector(verdictsSlider) != null) Array.from((0, _utils.getElements)(verdictsSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            type: "carousel",
+            autoplay: 1,
+            animationDuration: 4000,
+            // animationTimingFunc: 'linear',
+            perView: 4,
+            breakpoints: {
+                1400: {
+                    perView: 3
+                },
+                1100: {
+                    perView: 3
+                },
+                768: {
+                    perView: 2
+                },
+                640: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+    const verdictsSliderBa = ".verdicts_slider_ba";
+    if (document.querySelector(verdictsSliderBa) != undefined && document.querySelector(verdictsSliderBa) != null) Array.from((0, _utils.getElements)(verdictsSliderBa)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            type: "carousel",
+            autoplay: 1,
+            animationDuration: 4000,
+            // animationTimingFunc: 'linear',
+            perView: 5,
+            breakpoints: {
+                1496: {
+                    perView: 4
+                },
+                1200: {
+                    perView: 3
+                },
+                868: {
+                    perView: 3
+                },
+                640: {
+                    perView: 2
+                }
+            }
+        }).mount();
+    });
+    const memorableSlider = ".memorableSlider";
+    if (document.querySelector(memorableSlider) != undefined && document.querySelector(memorableSlider) != null) Array.from((0, _utils.getElements)(memorableSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 1,
+            type: "slider",
+            breakpoints: {}
+        }).mount();
+    });
+    const grSlider = ".google_reviews_slider";
+    if (document.querySelector(grSlider) != undefined && document.querySelector(grSlider) != null) Array.from((0, _utils.getElements)(grSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 3,
+            type: "carousel",
+            breakpoints: {
+                1100: {
+                    perView: 2
+                },
+                768: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+    const awardsSliderAbout = ".awardsSliderAbout";
+    if (document.querySelector(awardsSliderAbout) != undefined && document.querySelector(awardsSliderAbout) != null) Array.from((0, _utils.getElements)(awardsSliderAbout)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 8,
+            type: "carousel",
+            autoplay: 2500,
+            breakpoints: {
+                540: {
+                    perView: 4.5
+                }
+            }
+        }).mount();
+    });
+    const communitySliderAbout = ".communitySliderAbout";
+    if (document.querySelector(communitySliderAbout) != undefined && document.querySelector(communitySliderAbout) != null) Array.from((0, _utils.getElements)(communitySliderAbout)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 2,
+            type: "carousel",
+            breakpoints: {
+                540: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+    const marqueEl1 = (0, _utils.getElement)("#marquee");
+    if ((0, _utils.ifSelectorExist)(marqueEl1)) {
+        const marqueOne = new (0, _vanillaMarqueeDefault.default)(marqueEl1, {
+            css3easing: "linear",
+            speed: window.innerWidth < 768 ? 40 : 60,
+            gap: 100,
+            delayBeforeStart: 0,
+            direction: "left",
+            duplicated: true,
+            duration: 5000,
+            startVisible: true
+        });
+        marqueOne.resume();
+    }
+    const verdicts = document.querySelector(".verdicts-marquee");
+    if ((0, _utils.ifSelectorExist)(verdicts)) {
+        const verdictsMarquee = new (0, _vanillaMarqueeDefault.default)(verdicts, {
+            css3easing: "linear",
+            speed: window.innerWidth < 768 ? 60 : 100,
+            gap: 100,
+            delayBeforeStart: 0,
+            direction: "left",
+            duplicated: true,
+            duration: 5000,
+            startVisible: true
+        });
+        verdictsMarquee.resume();
+    }
+    // client 2
+    const merits = ".merits";
+    if (document.querySelector(merits) != undefined && document.querySelector(merits) != null) Array.from((0, _utils.getElements)(merits)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 4,
+            type: "carousel",
+            animationDuration: 4000,
+            autoplay: 1,
+            breakpoints: {
+                1496: {
+                    perView: 3,
+                    autoplay: 1
+                },
+                1200: {
+                    perView: 2,
+                    autoplay: 3000
+                },
+                640: {
+                    perView: 1,
+                    autoplay: 3000
+                }
+            }
+        }).mount();
+    });
+};
 
 },{"@glidejs/glide":"cS4lK","./utils":"blFj3","vanilla-marquee":"aRzML","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -6236,6 +6242,49 @@ const gaEventsCF7 = ()=>{
     });
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3NM30":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cf7Events", ()=>cf7Events);
+var _utils = require("./utils");
+const cf7Events = ()=>{
+    var wpcf7Elm = (0, _utils.getElements)(".wpcf7");
+    if ((0, _utils.ifSelectorExist)(wpcf7Elm)) Array.from(wpcf7Elm).forEach((item)=>{
+        item.addEventListener("submit", (event)=>{
+            let formSpinner = (0, _utils.getElement)(".wpcf7-spinner", event.target);
+            let submitButton = (0, _utils.getElement)("button", event.target);
+            submitButton.disabled = true;
+            let submitButtonSpans = (0, _utils.getElements)("span", submitButton);
+            if ((0, _utils.ifSelectorExist)(submitButtonSpans)) Array.from(submitButtonSpans).forEach((span)=>{
+                span.classList.add("hidden");
+            });
+            if ((0, _utils.ifSelectorExist)(formSpinner)) formSpinner.classList.add("active");
+        });
+        document.addEventListener("wpcf7invalid", function(event) {
+            unblockBtn(event.target);
+        }, false);
+        document.addEventListener("wpcf7spam", function(event) {
+            unblockBtn(event.target);
+        }, false);
+        document.addEventListener("wpcf7mailsent", function(event) {
+            unblockBtn(event.target);
+        }, false);
+        document.addEventListener("wpcf7mailfailed", function(event) {
+            unblockBtn(event.target);
+        }, false);
+    });
+    let unblockBtn = (form)=>{
+        let submitButton = (0, _utils.getElement)("button", form);
+        let formSpinner = (0, _utils.getElement)(".wpcf7-spinner", form);
+        let submitButtonSpans = (0, _utils.getElements)("span", submitButton);
+        if ((0, _utils.ifSelectorExist)(submitButtonSpans)) Array.from(submitButtonSpans).forEach((span)=>{
+            span.classList.remove("hidden");
+        });
+        submitButton.disabled = false;
+        if ((0, _utils.ifSelectorExist)(formSpinner)) formSpinner.classList.remove("active");
+    };
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map
