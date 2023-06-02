@@ -152,5 +152,7 @@ if ($is_preview && !empty($previewImage)) {
         </div>
     </div>
 
+    <div class="hidden opacity-50 !opacity-50"></div>
+
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

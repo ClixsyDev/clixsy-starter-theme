@@ -164,7 +164,7 @@
       right: 10%;
     }
   }
-  
+
   br {
     @apply hidden;
   }
@@ -334,4 +334,8 @@
       }
     }
   }
+}
+
+.common-class {
+  @apply !opacity-50 opacity-50;
 }

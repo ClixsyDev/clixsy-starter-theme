@@ -1463,6 +1463,10 @@ h2 span {
   text-decoration-line: underline;
 }
 
+.common-class {
+  opacity: .5;
+}
+
 .faq__text {
   max-height: 0;
   -o-transition: max-height .25s linear;
@@ -3998,10 +4002,6 @@ html body .edit-post-visual-editor__content-area .min-h-\[300px\] {
   min-height: 300px;
 }
 
-html body .edit-post-visual-editor__content-area .min-h-screen {
-  min-height: 100vh;
-}
-
 html body .edit-post-visual-editor__content-area .w-full {
   width: 100%;
 }
@@ -5658,6 +5658,14 @@ html body .edit-post-visual-editor__content-area .\!no-underline {
 
 html body .edit-post-visual-editor__content-area .opacity-0 {
   opacity: 0;
+}
+
+html body .edit-post-visual-editor__content-area .opacity-50 {
+  opacity: .5;
+}
+
+html body .edit-post-visual-editor__content-area .\!opacity-50 {
+  opacity: .5 !important;
 }
 
 html body .edit-post-visual-editor__content-area .shadow-xl {

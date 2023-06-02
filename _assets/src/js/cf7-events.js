@@ -15,7 +15,7 @@ export const cf7Events = () => {
         let submitButtonSpans = getElements('span', submitButton);
         if (ifSelectorExist(submitButtonSpans)) {
           Array.from(submitButtonSpans).forEach(span => {
-            span.classList.add('hidden');
+            span.classList.add('!opacity-50');
           })
         }
 
@@ -56,7 +56,7 @@ export const cf7Events = () => {
     let submitButtonSpans = getElements('span', submitButton);
     if (ifSelectorExist(submitButtonSpans)) {
       Array.from(submitButtonSpans).forEach(span => {
-        span.classList.remove('hidden');
+        span.classList.remove('!opacity-50');
       })
     }
 
