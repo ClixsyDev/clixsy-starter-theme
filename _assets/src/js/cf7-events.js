@@ -13,11 +13,11 @@ export const cf7Events = () => {
         submitButton.disabled = true;
 
         let submitButtonSpans = getElements('span', submitButton);
-        if (ifSelectorExist(submitButtonSpans)) {
-          Array.from(submitButtonSpans).forEach(span => {
-            span.classList.add('!opacity-50');
-          })
-        }
+        // if (ifSelectorExist(submitButtonSpans)) {
+        //   Array.from(submitButtonSpans).forEach(span => {
+        //     span.classList.add('!opacity-50');
+        //   })
+        // }
 
         if (ifSelectorExist(formSpinner)) {
           formSpinner.classList.add('active');
@@ -53,12 +53,12 @@ export const cf7Events = () => {
     let submitButton = getElement('button', form);
     let formSpinner = getElement('.wpcf7-spinner', form);
 
-    let submitButtonSpans = getElements('span', submitButton);
-    if (ifSelectorExist(submitButtonSpans)) {
-      Array.from(submitButtonSpans).forEach(span => {
-        span.classList.remove('!opacity-50');
-      })
-    }
+    // let submitButtonSpans = getElements('span', submitButton);
+    // if (ifSelectorExist(submitButtonSpans)) {
+    //   Array.from(submitButtonSpans).forEach(span => {
+    //     span.classList.remove('!opacity-50');
+    //   })
+    // }
 
     submitButton.disabled = false;
 
