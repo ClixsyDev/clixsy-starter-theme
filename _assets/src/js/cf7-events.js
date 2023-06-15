@@ -1,11 +1,20 @@
 import { getElements, ifSelectorExist, getElement } from "./utils";
 
 export const cf7Events = () => {
+
+  // setup page id to the form
+
+  let containerPostFields = getElements('input[name="post_id"]');
+  
+  if (ifSelectorExist(containerPostFields)) {
+    Array.from(containerPostFields).forEach(input => {
+      input.value = ajax_url.page_id;
+    })
+  }
+
   var wpcf7Elm = getElements('.wpcf7');
   if (ifSelectorExist(wpcf7Elm)) {
     Array.from(wpcf7Elm).forEach(item => {
-
-
       item.addEventListener("submit", (event) => {
         let formSpinner = getElement('.wpcf7-spinner', event.target);
         let submitButton = getElement('button', event.target);

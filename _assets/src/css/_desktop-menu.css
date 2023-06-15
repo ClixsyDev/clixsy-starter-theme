@@ -108,7 +108,7 @@ header {
 }
 
 .sub-menu.lvl-2 {
-  @apply absolute p-0 bg-bg_second;
+  @apply absolute p-0;
   top: -11px;
   min-width: 300px;
   left: 100%;

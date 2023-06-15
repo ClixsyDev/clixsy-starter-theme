@@ -42,6 +42,7 @@ function starter_scripts() {
 
     wp_localize_script('starter-script', 'ajax_url', [
         'ajaxurl' => admin_url('admin-ajax.php'),
+        'page_id' => get_the_ID(),
     ]);
 }
 

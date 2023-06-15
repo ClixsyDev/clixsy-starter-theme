@@ -173,6 +173,8 @@ const preventRelatedVideoYT = () => {
     for (let playerWrap of document.querySelectorAll(".hytPlayerWrap")) {
       let playerFrame = playerWrap.querySelector("iframe");
       let onPlayerStateChange = function (event) {
+        console.log(event.data);
+        console.log('console log from youtube event')
         if (event.data == YT.PlayerState.ENDED) {
           playerWrap.classList.add("ended");
         } else if (event.data == YT.PlayerState.PAUSED) {
