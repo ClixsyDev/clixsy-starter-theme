@@ -24,66 +24,68 @@ function webhook_integration_clixsy($contact_form) {
 
 
         foreach ($map_fields_and_forms as $key => $fields_and_forms) {
-            foreach ($fields_and_forms['select_form'] as $acf_form_id) {
-                if ($acf_form_id == $form_id) {
-                    $url = $fields_and_forms['endpoint'];
-                    $curl = curl_init($url);
-                    curl_setopt_array($curl, [
-                        CURLOPT_URL => $url,
-                        CURLOPT_POST => true,
-                        CURLOPT_RETURNTRANSFER => true,
-                        CURLOPT_VERBOSE => true,
-                        CURLOPT_HTTPHEADER => [
-                            "Content-Type: application/json",
-                        ],
-                    ]);
+            if (!$fields_and_forms['disable_single_integration']) {
+                foreach ($fields_and_forms['select_form'] as $acf_form_id) {
+                    if ($acf_form_id == $form_id) {
+                        $url = $fields_and_forms['endpoint'];
+                        $curl = curl_init($url);
+                        curl_setopt_array($curl, [
+                            CURLOPT_URL => $url,
+                            CURLOPT_POST => true,
+                            CURLOPT_RETURNTRANSFER => true,
+                            CURLOPT_VERBOSE => true,
+                            CURLOPT_HTTPHEADER => [
+                                "Content-Type: application/json",
+                            ],
+                        ]);
 
-                    $acf_mapped_fields = $fields_and_forms['fields'];
-                    $empty_arr = [];
+                        $acf_mapped_fields = $fields_and_forms['fields'];
+                        $empty_arr = [];
 
-                    foreach ($acf_mapped_fields as $f_id => $acf_data) {
-                        $empty_arr[$acf_data['third_party_field']] = $acf_data['default_value'] ?: '';
-                    }
-
-                    foreach ($posted_data as $p_id => $post_data) {
                         foreach ($acf_mapped_fields as $f_id => $acf_data) {
-                            if ($p_id == $acf_data['form_submission_field']) {
-                                $empty_arr[$acf_data['third_party_field']] = $post_data;
-                                break;
+                            $empty_arr[$acf_data['third_party_field']] = $acf_data['default_value'] ?: '';
+                        }
+
+                        foreach ($posted_data as $p_id => $post_data) {
+                            foreach ($acf_mapped_fields as $f_id => $acf_data) {
+                                if ($p_id == $acf_data['form_submission_field']) {
+                                    $empty_arr[$acf_data['third_party_field']] = $post_data;
+                                    break;
+                                }
                             }
                         }
+
+
+                        // additional fields to array
+                        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+                        $post_id = $posted_data['post_id'];
+                        $post_url = get_permalink($post_id);
+                        $post_name = get_post($post_id)->post_name;
+                        $post_title = get_the_title($post_id);
+                        $remote_ip = $_SERVER['REMOTE_ADDR'];
+
+
+
+                        $empty_arr['_user_agent'] =  $user_agent;
+                        $empty_arr['_post_id'] =  $post_id;
+                        $empty_arr['_post_url'] =  $post_url;
+                        $empty_arr['_post_name'] =  $post_name;
+                        $empty_arr['_post_title'] =  $post_title;
+                        $empty_arr['_remote_ip'] =  $remote_ip;
+
+                        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($empty_arr));
+
+                        // Uncomment the following lines for debugging only!
+                        // curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+                        // curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+                        $resp = curl_exec($curl);
+                        $responseInfo = curl_getinfo($curl);
+                        curl_close($curl);
+
+                        // logging everything
+                        wh_log($resp, $responseInfo);
                     }
-
-
-                    // additional fields to array
-                    $user_agent = $_SERVER['HTTP_USER_AGENT'];
-                    $post_id = $posted_data['post_id'];
-                    $post_url = get_permalink($post_id);
-                    $post_name = get_post($post_id)->post_name;
-                    $post_title = get_the_title($post_id);
-                    $remote_ip = $_SERVER['REMOTE_ADDR'];
-
-
-
-                    $empty_arr['_user_agent'] =  $user_agent;
-                    $empty_arr['_post_id'] =  $post_id;
-                    $empty_arr['_post_url'] =  $post_url;
-                    $empty_arr['_post_name'] =  $post_name;
-                    $empty_arr['_post_title'] =  $post_title;
-                    $empty_arr['_remote_ip'] =  $remote_ip;
-
-                    curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($empty_arr));
-
-                    // Uncomment the following lines for debugging only!
-                    // curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-                    // curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-                    $resp = curl_exec($curl);
-                    $responseInfo = curl_getinfo($curl);
-                    curl_close($curl);
-
-                    // logging everything
-                    wh_log($resp, $responseInfo);
                 }
             }
         }

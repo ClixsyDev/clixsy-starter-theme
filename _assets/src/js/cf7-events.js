@@ -9,6 +9,7 @@ export const cf7Events = () => {
   if (ifSelectorExist(containerPostFields)) {
     Array.from(containerPostFields).forEach(input => {
       input.value = ajax_url.page_id;
+      console.log('page ID is == ', input.value)
     })
   }
 

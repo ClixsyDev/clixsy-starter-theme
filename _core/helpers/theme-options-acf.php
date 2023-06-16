@@ -831,6 +831,21 @@
                 'button_label' => 'Add new endpoint',
                 'sub_fields' => array(
                     array(
+                        'key' => 'field_123oierwalkdjfw',
+                        'name' => 'disable_single_integration',
+                        'label' => 'Disable integration',
+                        'type' => 'true_false',
+                        'instructions' => '',
+                        'required' => 0,
+                    ),
+                    array(
+                        'key' => 'field_adsfkaqoiwe1',
+                        'name' => 'form_submitssion_name_optional',
+                        'label' => 'Name',
+                        'type' => 'text',
+                        'instructions' => 'Use this field for instructions or additional info.',
+                    ),
+                    array(
                         'key' => 'field_63811aee30c55',
                         'label' => 'Endpoint',
                         'name' => 'endpoint',
