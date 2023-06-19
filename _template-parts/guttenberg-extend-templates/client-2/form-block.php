@@ -29,6 +29,11 @@ if ($is_preview && !empty($previewImage)) {
                                 <div class="text-white font-second font-bold uppercase leading-[1] pb-5 text-[3.5rem] 2xl:!text-[50px] xs:!text-3xl "><?php echo $form_block__form_title ?></div>
                             <?php } ?>
                             <?php echo $form_block__form_select ? do_shortcode('[contact-form-7 id="' . $form_block__form_select['0'] . '" title=""]') : '' ?>
+                            <?php
+                            Template::load('_template-parts/components/thank-you-message-homepage.php', [
+                                'classes_disclaimer' => 'text-white',
+                                'classes_thankyou' => 'text-white'
+                            ]); ?>
                         </div>
                     </div>
                 <?php } ?>
