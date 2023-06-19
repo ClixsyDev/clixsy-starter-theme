@@ -60,6 +60,11 @@ if ($is_preview && !empty($previewImage)) {
           <?php if ($text_form_design_two__form_select && $text_form_design_two__form_select[0]) { ?>
             <?php echo do_shortcode('[contact-form-7 id="' . $text_form_design_two__form_select[0] . '"]'); ?>
           <?php } ?>
+          <?php
+          Template::load('_template-parts/components/thank-you-message-homepage.php', [
+            'classes_disclaimer' => 'text-white',
+            'classes_thankyou' => 'text-white'
+          ]); ?>
           <?php if ($text_form_design_two__disclaimer) { ?>
             <div class="text-white sm:text-base"><?php echo $text_form_design_two__disclaimer ?></div>
           <?php } ?>
