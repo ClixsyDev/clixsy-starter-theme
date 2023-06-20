@@ -224,6 +224,7 @@ ready(() => {
   sentNewMessage('.attorney-group__form');
   sentNewMessage('.form');
   sentNewMessage('.how_can_help_form');
+  sentNewMessage('.big-auto-footer-form');
   gclid();
   secondStep();
   nextArrow();
