@@ -17,7 +17,7 @@ if ($is_preview && !empty($previewImage)) {
     $how_much_cost_two__select = get_field('how_much_cost_two__select'); ?>
 
     <div class="relative pt-12 lg:!pt-0 rounded-2xl shadow-siteWide overflow-hidden <?php echo $how_much_cost_two__select == 'Wider' ? 'max-w-full w-full px-48 xxxl:px-24' : 'container px-24' ?>"" style="background-color: <?php echo $how_much_cost_two__block_bg ?: ''  ?> ;">
-        <?php if ($how_much_cost_two__title || $how_much_cost_two__description || $how_much_cost_two__link) { ?>
+        <?php if ($how_much_cost_two__title || $how_much_cost_two__description) { ?>
             <div class="flex gap-44 rounded-2xl xl:w-23/24 xl:gap-32 xl:px-16 lg:flex-col-reverse lg:items-center lg:gap-0 lg:pb-10 sm:px-2 justify-center">
                 <div class="w-11/24 z-10 lg:items-center lg:w-full lg:text-center">
                     <?php if ($how_much_cost_two__title) { ?>

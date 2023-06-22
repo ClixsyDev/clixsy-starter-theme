@@ -91,3 +91,15 @@ function webhook_integration_clixsy($contact_form) {
         }
     }
 }
+
+
+function redirect_cf7_js_variable() {
+    // Retrieve the value you want to pass to JavaScript
+    $redirect_forms_repeater = get_field('redirect_forms_repeater', 'options');
+
+    // Echo the JavaScript variable within a <script> tag
+    echo '<script>';
+    echo 'var cf7RedirectToArray = ' . json_encode($redirect_forms_repeater) . ';';
+    echo '</script>';
+}
+add_action('wp_footer', 'redirect_cf7_js_variable');
