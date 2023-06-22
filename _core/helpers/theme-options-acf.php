@@ -158,7 +158,7 @@
             ),
             array(
                 'key' => 'field_63111ff6a3b60',
-                'label' => 'Color palette',
+                'label' => 'Color Palette',
                 'name' => '',
                 'aria-label' => '',
                 'type' => 'tab',
@@ -788,7 +788,7 @@
             ),
             array(
                 'key' => 'field_633dad6f123bb83e1a',
-                'label' => 'Webhook for contact form 7',
+                'label' => 'Webhooks for Contact Form 7',
                 'name' => '',
                 'aria-label' => '',
                 'type' => 'tab',
@@ -969,7 +969,7 @@
             ),
             array(
                 'key' => 'field_633d123qad6f123bb83e1a',
-                'label' => 'Archive blog fields',
+                'label' => 'Archive Blog Fields',
                 'name' => '',
                 'aria-label' => '',
                 'type' => 'tab',
@@ -1000,7 +1000,7 @@
             ),
             array(
                 'key' => 'archive_attorneys',
-                'label' => 'Archive attorneys',
+                'label' => 'Archive Attorneys',
                 'name' => '',
                 'aria-label' => '',
                 'type' => 'tab',
