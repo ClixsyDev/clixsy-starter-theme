@@ -210,7 +210,9 @@ const preventRelatedVideoYT = () => {
   });
 }
 
+
 ready(() => {
+  cf7Events();
   mainMenu();
   dropdownMenu();
   headerInit();
@@ -234,7 +236,7 @@ ready(() => {
   modalDialog();
   // gaEventsCF7();
   initSliders();
-  cf7Events();
+  
 });
 
 preventRelatedVideoYT();

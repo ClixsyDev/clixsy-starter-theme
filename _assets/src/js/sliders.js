@@ -213,8 +213,9 @@ export const initSliders = () => {
 
   // client 2
 
+  
   const merits = '.merits';
-  if (document.querySelector(merits) != undefined && document.querySelector(merits) != null) {
+  if (ifSelectorExist(getElements(merits))) {
     Array.from(getElements(merits)).forEach((item) => {
       new Glide(item, {
         perView: 4,

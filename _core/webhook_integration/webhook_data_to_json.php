@@ -11,6 +11,14 @@ function wh_log($log_msg, $log_msg_info = '') {
     file_put_contents($log_file_data, $log_msg . "\r\n" . ' ======================= Start ' . date('Y/m/d H:i:s') . ' ======================' . "\r\n" . json_encode($log_msg_info) . "\r\n" . ' ======================= end of log ======================' . "\n", FILE_APPEND);
 }
 
+function stringify($value) {
+    if(is_array($value)) {
+        return implode(', ', $value);
+    } else {
+        return (string) $value;
+    }
+}
+
 add_action('wpcf7_mail_sent', 'webhook_integration_clixsy');
 function webhook_integration_clixsy($contact_form) {
     $remove_litify_integration = get_field('remove_litify_integration', 'options');
@@ -28,6 +36,7 @@ function webhook_integration_clixsy($contact_form) {
                 foreach ($fields_and_forms['select_form'] as $acf_form_id) {
                     if ($acf_form_id == $form_id) {
                         $url = $fields_and_forms['endpoint'];
+                        $content_type = $fields_and_forms['content_type']['label'];
                         $curl = curl_init($url);
                         curl_setopt_array($curl, [
                             CURLOPT_URL => $url,
@@ -35,10 +44,18 @@ function webhook_integration_clixsy($contact_form) {
                             CURLOPT_RETURNTRANSFER => true,
                             CURLOPT_VERBOSE => true,
                             CURLOPT_HTTPHEADER => [
-                                "Content-Type: application/json",
+                                $content_type
                             ],
                         ]);
 
+
+                              // additional fields to array
+                        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+                        $post_id = $posted_data['post_id'];
+                        $post_url = get_permalink($post_id);
+                        $post_name = get_post($post_id)->post_name;
+                        $post_title = get_the_title($post_id);
+                        $remote_ip = $_SERVER['REMOTE_ADDR'];
                         $acf_mapped_fields = $fields_and_forms['fields'];
                         $empty_arr = [];
 
@@ -48,30 +65,37 @@ function webhook_integration_clixsy($contact_form) {
 
                         foreach ($posted_data as $p_id => $post_data) {
                             foreach ($acf_mapped_fields as $f_id => $acf_data) {
-                                if ($p_id == $acf_data['form_submission_field']) {
-                                    $empty_arr[$acf_data['third_party_field']] = $post_data;
+                                if ($acf_data['form_submission_field'] == '_post_url') {
+                                    $empty_arr[$acf_data['third_party_field']] = $post_url;
+                                    
+                                }
+                                else if ($acf_data['form_submission_field'] == '_user_agent') {
+                                    $empty_arr[$acf_data['third_party_field']] = $user_agent;
+                                    
+                                }
+                                else if ($acf_data['form_submission_field'] == '_post_id') {
+                                    $empty_arr[$acf_data['third_party_field']] = $post_id;
+                                    
+                                }
+                                else if ($acf_data['form_submission_field'] == '_post_name') {
+                                    $empty_arr[$acf_data['third_party_field']] = $post_name;
+                                    
+                                }
+                                else if ($acf_data['form_submission_field'] == '_post_title') {
+                                    $empty_arr[$acf_data['third_party_field']] = $post_title;
+                                    
+                                }
+                                else if ($acf_data['form_submission_field'] == '_remote_ip') {
+                                    $empty_arr[$acf_data['third_party_field']] = $remote_ip;
+                                    
+                                }
+                                else if ($p_id == $acf_data['form_submission_field']) {
+                                    $preppedned_value = !empty($acf_data['preppended_value']) ? $acf_data['preppended_value'] : '';
+                                    $empty_arr[$acf_data['third_party_field']] = $preppedned_value . stringify($post_data);
                                     break;
                                 }
                             }
                         }
-
-
-                        // additional fields to array
-                        $user_agent = $_SERVER['HTTP_USER_AGENT'];
-                        $post_id = $posted_data['post_id'];
-                        $post_url = get_permalink($post_id);
-                        $post_name = get_post($post_id)->post_name;
-                        $post_title = get_the_title($post_id);
-                        $remote_ip = $_SERVER['REMOTE_ADDR'];
-
-
-
-                        $empty_arr['_user_agent'] =  $user_agent;
-                        $empty_arr['_post_id'] =  $post_id;
-                        $empty_arr['_post_url'] =  $post_url;
-                        $empty_arr['_post_name'] =  $post_name;
-                        $empty_arr['_post_title'] =  $post_title;
-                        $empty_arr['_remote_ip'] =  $remote_ip;
 
                         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($empty_arr));
 

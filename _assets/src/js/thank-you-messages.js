@@ -84,20 +84,20 @@ export const sentNewMessage = (formContainerSelector) => {
 
 
   // Redirect after form submit
-  document.addEventListener('wpcf7mailsent', function (event) {
+  // document.addEventListener('wpcf7mailsent', function (event) {
 
-    // Function to handle form submission
-    function handleFormSubmission(formId) {
-      // Loop through the array to find a match
-      for (var i = 0; i < cf7RedirectToArray.length; i++) {
-        if (cf7RedirectToArray[i].select_form === formId) {
-          // Redirect to the corresponding link
-          window.location.href = cf7RedirectToArray[i].link_to_redirect_after_submit;
-          break; // Exit the loop once a match is found
-        }
-      }
-    }
-    var formId = event.detail.contactFormId;
-    handleFormSubmission(formId);
-  }, false);
+  //   // Function to handle form submission
+  //   function handleFormSubmission(formId) {
+  //     // Loop through the array to find a match
+  //     for (var i = 0; i < cf7RedirectToArray.length; i++) {
+  //       if (cf7RedirectToArray[i].select_form === formId) {
+  //         // Redirect to the corresponding link
+  //         window.location.href = cf7RedirectToArray[i].link_to_redirect_after_submit;
+  //         break; // Exit the loop once a match is found
+  //       }
+  //     }
+  //   }
+  //   var formId = event.detail.contactFormId;
+  //   handleFormSubmission(formId);
+  // }, false);
 };

@@ -701,6 +701,7 @@ const preventRelatedVideoYT = ()=>{
     });
 };
 (0, _utils.ready)(()=>{
+    (0, _cf7Events.cf7Events)();
     (0, _menu.mainMenu)();
     (0, _menu.dropdownMenu)();
     (0, _headerDefault.default)();
@@ -724,7 +725,6 @@ const preventRelatedVideoYT = ()=>{
     (0, _modals.modalDialog)();
     // gaEventsCF7();
     (0, _sliders.initSliders)();
-    (0, _cf7Events.cf7Events)();
 });
 preventRelatedVideoYT();
 
@@ -1344,7 +1344,7 @@ const initSliders = ()=>{
     }
     // client 2
     const merits = ".merits";
-    if (document.querySelector(merits) != undefined && document.querySelector(merits) != null) Array.from((0, _utils.getElements)(merits)).forEach((item)=>{
+    if ((0, _utils.ifSelectorExist)((0, _utils.getElements)(merits))) Array.from((0, _utils.getElements)(merits)).forEach((item)=>{
         new (0, _glideDefault.default)(item, {
             perView: 4,
             type: "carousel",
@@ -4870,20 +4870,22 @@ const sentNewMessage = (formContainerSelector)=>{
             });
         });
     }
-    // Redirect after form submit
-    document.addEventListener("wpcf7mailsent", function(event) {
-        // Function to handle form submission
-        function handleFormSubmission(formId) {
-            // Loop through the array to find a match
-            for(var i = 0; i < cf7RedirectToArray.length; i++)if (cf7RedirectToArray[i].select_form === formId) {
-                // Redirect to the corresponding link
-                window.location.href = cf7RedirectToArray[i].link_to_redirect_after_submit;
-                break; // Exit the loop once a match is found
-            }
-        }
-        var formId = event.detail.contactFormId;
-        handleFormSubmission(formId);
-    }, false);
+// Redirect after form submit
+// document.addEventListener('wpcf7mailsent', function (event) {
+//   // Function to handle form submission
+//   function handleFormSubmission(formId) {
+//     // Loop through the array to find a match
+//     for (var i = 0; i < cf7RedirectToArray.length; i++) {
+//       if (cf7RedirectToArray[i].select_form === formId) {
+//         // Redirect to the corresponding link
+//         window.location.href = cf7RedirectToArray[i].link_to_redirect_after_submit;
+//         break; // Exit the loop once a match is found
+//       }
+//     }
+//   }
+//   var formId = event.detail.contactFormId;
+//   handleFormSubmission(formId);
+// }, false);
 };
 
 },{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bvTDu":[function(require,module,exports) {
@@ -6244,6 +6246,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "cf7Events", ()=>cf7Events);
 var _utils = require("./utils");
 const cf7Events = ()=>{
+    console.log("events");
     // setup page id to the form
     let containerPostFields = (0, _utils.getElements)('input[name="post_id"]');
     if ((0, _utils.ifSelectorExist)(containerPostFields)) Array.from(containerPostFields).forEach((input)=>{

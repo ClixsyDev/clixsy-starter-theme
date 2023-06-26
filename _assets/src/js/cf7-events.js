@@ -2,6 +2,8 @@ import { getElements, ifSelectorExist, getElement } from "./utils";
 
 export const cf7Events = () => {
 
+  console.log('events')
+
   // setup page id to the form
 
   let containerPostFields = getElements('input[name="post_id"]');
