@@ -990,7 +990,7 @@
                             ),
                             array(
                                 'key' => 'default_6381123121b2a30c57',
-                                'label' => 'Value',
+                                'label' => 'Preppended value',
                                 'name' => 'preppended_value',
                                 'type' => 'text',
                                 'instructions' => '',
