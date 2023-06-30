@@ -8,7 +8,7 @@ function wh_log($log_msg, $log_msg_info = '') {
     }
     $log_file_data = $log_filename . 'log_' . date('Y-M-d') . '.log';
     // if you don't add `FILE_APPEND`, the file will be erased each time you add a log
-    file_put_contents($log_file_data, $log_msg . "\r\n" . ' ======================= Start ' . date('Y/m/d H:i:s') . ' ======================' . "\r\n" . json_encode($log_msg_info) . "\r\n" . ' ======================= end of log ======================' . "\n", FILE_APPEND);
+    file_put_contents($log_file_data,  "\r\n" . ' ======================= Start ' . date('Y/m/d H:i:s') . ' ======================' . "\r\n" . $log_msg . "\r\n" . json_encode($log_msg_info) . "\r\n" . "\r\n" . ' ======================= end of log ======================' . "\n" . "\r\n", FILE_APPEND);
 }
 
 function stringify($value) {
