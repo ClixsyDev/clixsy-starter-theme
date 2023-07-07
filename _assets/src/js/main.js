@@ -12,6 +12,7 @@ import { smoothScrollFn } from './smooth-site-scrolling';
 import { modalDialog } from './modals';
 // import { gaEventsCF7 } from './ga-events-cf7';
 import { cf7Events } from './cf7-events';
+import { cf7MaskTelValidation } from './cf7-mask-for-tel';
 
 
 /* FAQ start */
@@ -236,7 +237,7 @@ ready(() => {
   modalDialog();
   // gaEventsCF7();
   initSliders();
-  
+  cf7MaskTelValidation();
 });
 
 preventRelatedVideoYT();
