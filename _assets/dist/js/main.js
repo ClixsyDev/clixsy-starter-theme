@@ -702,6 +702,7 @@ const preventRelatedVideoYT = ()=>{
     });
 };
 (0, _utils.ready)(()=>{
+    (0, _cf7MaskForTel.cf7MaskTelValidation)();
     (0, _cf7Events.cf7Events)();
     (0, _menu.mainMenu)();
     (0, _menu.dropdownMenu)();
@@ -726,7 +727,6 @@ const preventRelatedVideoYT = ()=>{
     (0, _modals.modalDialog)();
     // gaEventsCF7();
     (0, _sliders.initSliders)();
-    (0, _cf7MaskForTel.cf7MaskTelValidation)();
 });
 preventRelatedVideoYT();
 
@@ -6303,13 +6303,55 @@ var _imaskDefault = parcelHelpers.interopDefault(_imask);
 var _utils = require("./utils");
 const cf7MaskTelValidation = ()=>{
     let maskedPhoneInputs = (0, _utils.getElements)(".masked_phone");
-    if ((0, _utils.ifSelectorExist)(maskedPhoneInputs)) Array.from(maskedPhoneInputs).forEach((element)=>{
-        var phoneMask = (0, _imaskDefault.default)(element, {
-            mask: "(000) 000-0000",
-            lazy: true,
-            placeholderChar: "_" // defaults to '_'
+    let phoneMasks = new Map();
+    if ((0, _utils.ifSelectorExist)(maskedPhoneInputs)) {
+        Array.from(maskedPhoneInputs).forEach((element)=>{
+            let mask = (0, _imaskDefault.default)(element, {
+                mask: "(000) 000-0000",
+                prepare: (value, masked)=>{
+                    // Remove any non-numeric characters
+                    let onlyNums = value.replace(/\D/g, "");
+                    // If it starts with 0 or 1, remove that character
+                    if (onlyNums.startsWith("0") || onlyNums.startsWith("1")) onlyNums = onlyNums.substring(1);
+                    return onlyNums;
+                },
+                lazy: false,
+                placeholderChar: "_"
+            });
+            // Event listener for user input
+            element.addEventListener("input", ()=>{
+                if (!mask.masked.isComplete) element.style.border = ""; // Reset border if valid
+                else element.style.border = ""; // Reset border if valid
+            });
+            phoneMasks.set(element.name, mask); // store the mask with the input's name
         });
-    });
+        let submitButtons = (0, _utils.getElements)(".btn_form");
+        if ((0, _utils.ifSelectorExist)(submitButtons)) Array.from(submitButtons).forEach((button)=>{
+            button.addEventListener("click", function(event) {
+                let form = button.closest("form"); // get the form containing the button
+                let phoneInvalid = Array.from(maskedPhoneInputs).some((input)=>{
+                    let mask = phoneMasks.get(input.name); // get the mask for this input
+                    if (mask && !mask.masked.isComplete) {
+                        input.classList.add("invalid-phone-number");
+                        input.style.border = "2px solid red"; // Add red border
+                        return true;
+                    } else {
+                        input.style.border = ""; // Reset border
+                        input.classList.remove("invalid-phone-number");
+                        return false;
+                    }
+                });
+                let checkIfFormHasInvalidPhoneNumber = (0, _utils.getElement)("input.invalid-phone-number", form);
+                console.log("form tag == ", form);
+                if ((0, _utils.ifSelectorExist)(checkIfFormHasInvalidPhoneNumber)) {
+                    if (phoneInvalid) {
+                        event.preventDefault(); // Prevent form from submitting
+                        return false;
+                    }
+                }
+            });
+        });
+    }
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","imask":"aLznl","./utils":"blFj3"}],"aLznl":[function(require,module,exports) {

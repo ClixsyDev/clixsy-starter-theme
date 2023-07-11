@@ -213,6 +213,7 @@ const preventRelatedVideoYT = () => {
 
 
 ready(() => {
+  cf7MaskTelValidation();
   cf7Events();
   mainMenu();
   dropdownMenu();
@@ -237,7 +238,6 @@ ready(() => {
   modalDialog();
   // gaEventsCF7();
   initSliders();
-  cf7MaskTelValidation();
 });
 
 preventRelatedVideoYT();
