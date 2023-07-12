@@ -1,7 +1,7 @@
 import IMask from 'imask';
 import { getElement, getElements, ifSelectorExist } from './utils';
-
 export const cf7MaskTelValidation = () => {
+  
   let maskedPhoneInputs = getElements('.masked_phone');
   let phoneMasks = new Map();
 
@@ -11,11 +11,7 @@ export const cf7MaskTelValidation = () => {
         mask: '(000) 000-0000',
         prepare: (value, masked) => {
           // Remove any non-numeric characters
-          let onlyNums = value.replace(/\D/g, '');
-          // If it starts with 0 or 1, remove that character
-          if (onlyNums.startsWith('0') || onlyNums.startsWith('1')) {
-            onlyNums = onlyNums.substring(1);
-          }
+          let onlyNums = value.replace(/\D/g,'');
           return onlyNums;
         },
         lazy: false,
@@ -27,7 +23,12 @@ export const cf7MaskTelValidation = () => {
         if (!mask.masked.isComplete) { // Check if input value is complete
           element.style.border = ''; // Reset border if valid
         } else {
-          element.style.border = ''; // Reset border if valid
+          let phoneValue = mask.unmaskedValue;
+          if (phoneValue.startsWith('0') || phoneValue.startsWith('1')) {
+            element.style.border = '2px solid red'; // Add red border if the first digit is 0 or 1
+          } else {
+            element.style.border = ''; // Reset border if valid
+          }
         }
       });
 
@@ -46,16 +47,22 @@ export const cf7MaskTelValidation = () => {
               input.style.border = '2px solid red'; // Add red border
               return true;
             } else {
-              input.style.border = ''; // Reset border
-              input.classList.remove('invalid-phone-number')
-              return false;
+              let phoneValue = mask.unmaskedValue;
+              if (phoneValue.startsWith('0') || phoneValue.startsWith('1')) {
+                input.classList.add('invalid-phone-number')
+                input.style.border = '2px solid red'; // Add red border
+                return true;
+              } else {
+                input.style.border = ''; // Reset border
+                input.classList.remove('invalid-phone-number')
+                return false;
+              }
             }
           });
 
           let checkIfFormHasInvalidPhoneNumber = getElement('input.invalid-phone-number', form)
           console.log('form tag == ', form);
           if (ifSelectorExist(checkIfFormHasInvalidPhoneNumber)) {
-
             if (phoneInvalid) {
               event.preventDefault(); // Prevent form from submitting
               return false;
