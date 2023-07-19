@@ -113,7 +113,7 @@ function webhook_integration_clixsy($contact_form) {
                                 $subject = 'BigAuto Hook Failed';
                                 $headers = array('from: no-reply@host.clixsy.com');
 
-                                wp_mail($error_notification_emails, $subject, $resp . "\n", $headers);
+                                wp_mail($error_notification_emails, $subject, $resp . "\n" . 'response info:' . "\n" . json_encode($responseInfo) . "\n" . 'Fields data:' . "\n" . json_encode($empty_arr), $headers);
                             }
                         }
                     }
