@@ -6302,35 +6302,35 @@ var _imask = require("imask");
 var _imaskDefault = parcelHelpers.interopDefault(_imask);
 var _utils = require("./utils");
 const cf7MaskTelValidation = ()=>{
-    let maskedPhoneInputs = (0, _utils.getElements)(".masked_phone");
-    let phoneMasks = new Map();
-    if ((0, _utils.ifSelectorExist)(maskedPhoneInputs)) {
-        Array.from(maskedPhoneInputs).forEach((element)=>{
-            let mask = (0, _imaskDefault.default)(element, {
-                mask: "(000) 000-0000",
-                prepare: (value, masked)=>{
-                    // Remove any non-numeric characters
-                    let onlyNums = value.replace(/\D/g, "");
-                    return onlyNums;
-                },
-                lazy: false,
-                placeholderChar: "_"
+    let forms = (0, _utils.getElements)("form");
+    if ((0, _utils.ifSelectorExist)(forms)) Array.from(forms).forEach((form)=>{
+        let maskedPhoneInputs = (0, _utils.getElements)(".masked_phone", form);
+        let phoneMasks = new Map();
+        if ((0, _utils.ifSelectorExist)(maskedPhoneInputs)) {
+            Array.from(maskedPhoneInputs).forEach((element)=>{
+                let mask = (0, _imaskDefault.default)(element, {
+                    mask: "(000) 000-0000",
+                    prepare: (value, masked)=>{
+                        // Remove any non-numeric characters
+                        let onlyNums = value.replace(/\D/g, "");
+                        return onlyNums;
+                    },
+                    lazy: false,
+                    placeholderChar: "_"
+                });
+                // Event listener for user input
+                element.addEventListener("input", ()=>{
+                    if (!mask.masked.isComplete) element.style.border = ""; // Reset border if valid
+                    else {
+                        let phoneValue = mask.unmaskedValue;
+                        if (phoneValue.startsWith("0") || phoneValue.startsWith("1")) element.style.border = "2px solid red"; // Add red border if the first digit is 0 or 1
+                        else element.style.border = ""; // Reset border if valid
+                    }
+                });
+                phoneMasks.set(element.name, mask); // store the mask with the input's name
             });
-            // Event listener for user input
-            element.addEventListener("input", ()=>{
-                if (!mask.masked.isComplete) element.style.border = ""; // Reset border if valid
-                else {
-                    let phoneValue = mask.unmaskedValue;
-                    if (phoneValue.startsWith("0") || phoneValue.startsWith("1")) element.style.border = "2px solid red"; // Add red border if the first digit is 0 or 1
-                    else element.style.border = ""; // Reset border if valid
-                }
-            });
-            phoneMasks.set(element.name, mask); // store the mask with the input's name
-        });
-        let submitButtons = (0, _utils.getElements)(".btn_form");
-        if ((0, _utils.ifSelectorExist)(submitButtons)) Array.from(submitButtons).forEach((button)=>{
-            button.addEventListener("click", function(event) {
-                let form = button.closest("form"); // get the form containing the button
+            let submitButton = (0, _utils.getElement)(".btn_form", form);
+            if (submitButton) submitButton.addEventListener("click", function(event) {
                 let phoneInvalid = Array.from(maskedPhoneInputs).some((input)=>{
                     let mask = phoneMasks.get(input.name); // get the mask for this input
                     if (mask && !mask.masked.isComplete) {
@@ -6350,17 +6350,13 @@ const cf7MaskTelValidation = ()=>{
                         }
                     }
                 });
-                let checkIfFormHasInvalidPhoneNumber = (0, _utils.getElement)("input.invalid-phone-number", form);
-                console.log("form tag == ", form);
-                if ((0, _utils.ifSelectorExist)(checkIfFormHasInvalidPhoneNumber)) {
-                    if (phoneInvalid) {
-                        event.preventDefault(); // Prevent form from submitting
-                        return false;
-                    }
+                if (phoneInvalid) {
+                    event.preventDefault(); // Prevent form from submitting
+                    return false;
                 }
             });
-        });
-    }
+        }
+    });
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","imask":"aLznl","./utils":"blFj3"}],"aLznl":[function(require,module,exports) {
