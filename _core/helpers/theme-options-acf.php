@@ -812,6 +812,20 @@
                 'required' => 0,
             ),
             array(
+                'key' => 'field_640baaa70cd402123',
+                'label' => 'Error Notification Emails',
+                'name' => 'error_notification_emails',
+                'type' => 'text',
+                'instructions' => 'Add emails via comma.',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array(
                 'key' => 'field_63811ac830c531',
                 'label' => 'Map fields and forms',
                 'name' => 'map_fields_and_forms',

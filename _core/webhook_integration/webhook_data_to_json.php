@@ -12,7 +12,7 @@ function wh_log($log_msg, $log_msg_info = '') {
 }
 
 function stringify($value) {
-    if(is_array($value)) {
+    if (is_array($value)) {
         return implode(', ', $value);
     } else {
         return (string) $value;
@@ -49,7 +49,7 @@ function webhook_integration_clixsy($contact_form) {
                         ]);
 
 
-                              // additional fields to array
+                        // additional fields to array
                         $user_agent = $_SERVER['HTTP_USER_AGENT'];
                         $post_id = $posted_data['post_id'];
                         $post_url = get_permalink($post_id);
@@ -67,29 +67,17 @@ function webhook_integration_clixsy($contact_form) {
                             foreach ($acf_mapped_fields as $f_id => $acf_data) {
                                 if ($acf_data['form_submission_field'] == '_post_url') {
                                     $empty_arr[$acf_data['third_party_field']] = $post_url;
-                                    
-                                }
-                                else if ($acf_data['form_submission_field'] == '_user_agent') {
+                                } else if ($acf_data['form_submission_field'] == '_user_agent') {
                                     $empty_arr[$acf_data['third_party_field']] = $user_agent;
-                                    
-                                }
-                                else if ($acf_data['form_submission_field'] == '_post_id') {
+                                } else if ($acf_data['form_submission_field'] == '_post_id') {
                                     $empty_arr[$acf_data['third_party_field']] = $post_id;
-                                    
-                                }
-                                else if ($acf_data['form_submission_field'] == '_post_name') {
+                                } else if ($acf_data['form_submission_field'] == '_post_name') {
                                     $empty_arr[$acf_data['third_party_field']] = $post_name;
-                                    
-                                }
-                                else if ($acf_data['form_submission_field'] == '_post_title') {
+                                } else if ($acf_data['form_submission_field'] == '_post_title') {
                                     $empty_arr[$acf_data['third_party_field']] = $post_title;
-                                    
-                                }
-                                else if ($acf_data['form_submission_field'] == '_remote_ip') {
+                                } else if ($acf_data['form_submission_field'] == '_remote_ip') {
                                     $empty_arr[$acf_data['third_party_field']] = $remote_ip;
-                                    
-                                }
-                                else if ($p_id == $acf_data['form_submission_field']) {
+                                } else if ($p_id == $acf_data['form_submission_field']) {
                                     $preppedned_value = !empty($acf_data['preppended_value']) ? $acf_data['preppended_value'] : '';
                                     $empty_arr[$acf_data['third_party_field']] = $preppedned_value . stringify($post_data);
                                     break;
@@ -109,6 +97,25 @@ function webhook_integration_clixsy($contact_form) {
 
                         // logging everything
                         wh_log($resp, $responseInfo);
+
+
+                        $jsonResponse = json_decode($resp, true);  // Convert JSON to associative array
+
+                        // Check if 'success' key is present and is true
+                        $success = isset($jsonResponse['success']) && $jsonResponse['success'] === true;
+
+                        // Check if 'status' key is present and is 'success'
+                        $status = isset($jsonResponse['status']) && $jsonResponse['status'] === 'success';
+
+                        if (!$success && !$status) {
+                            $error_notification_emails = get_field('error_notification_emails', 'options');
+                            if (!empty($error_notification_emails)) {
+                                $subject = 'BigAuto Hook Failed';
+                                $headers = array('from: no-reply@host.clixsy.com');
+
+                                wp_mail($error_notification_emails, $subject, $resp . "\n", $headers);
+                            }
+                        }
                     }
                 }
             }
