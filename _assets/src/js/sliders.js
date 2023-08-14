@@ -240,4 +240,14 @@ export const initSliders = () => {
     });
   }
 
+  const videoSlider = '.videoSlider';
+  if (document.querySelector(videoSlider) != undefined && document.querySelector(videoSlider) != null) {
+    Array.from(getElements(videoSlider)).forEach((item) => {
+      new Glide(item, {
+        perView: 0.91,
+        type: 'carousel',
+        drag: false,
+      }).mount();
+    });
+  }
 }
