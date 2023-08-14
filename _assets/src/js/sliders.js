@@ -247,6 +247,11 @@ export const initSliders = () => {
         perView: 0.91,
         type: 'carousel',
         drag: false,
+        breakpoints: {
+          1200: {
+            perView: 1,
+          },
+        },
       }).mount();
     });
   }
