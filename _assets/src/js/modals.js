@@ -1,9 +1,6 @@
 import A11yDialog from 'a11y-dialog';
 import { getElement, getElements, ifSelectorExist } from './utils';
 export const modalDialog = () => {
-  console.log('test');
-
-  
 
   const dialogContainer = document.querySelector('#testimonialDialog');
   if (ifSelectorExist(dialogContainer)) {
