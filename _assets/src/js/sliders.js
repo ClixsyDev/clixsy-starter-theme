@@ -244,7 +244,7 @@ export const initSliders = () => {
   if (document.querySelector(videoSlider) != undefined && document.querySelector(videoSlider) != null) {
     Array.from(getElements(videoSlider)).forEach((item) => {
       new Glide(item, {
-        perView: 0.9,
+        perView: 1,
         type: 'slider',
       }).mount();
     });
