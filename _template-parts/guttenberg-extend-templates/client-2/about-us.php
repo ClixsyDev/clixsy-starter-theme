@@ -37,7 +37,7 @@ if ($is_preview && !empty($previewImage)) {
                 <h2 class="font-second font-bold leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] xs:mb-[45%] md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
             <div class="flex bg-smoke pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 md:gap-8 lg:p-0 lg:bg-inherit md:mb-0 xs:!gap-4">
-                <div class="flex flex-col -mt-80 w-12/24 lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full xs:-mt-[42%]">
+                <div class="flex flex-col -mt-80 w-[46%] lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full xs:-mt-[42%]">
                     <?php if ($about_us__select_img) { ?>
                         <?php if ($about_us__image) { ?>
                             <?php echo wp_get_attachment_image($about_us__image, 'full', '', ['class' => '2xl:mx-auto']) ?>
