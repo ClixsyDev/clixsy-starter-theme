@@ -1,0 +1,1 @@
+module.exports = {main: 'Open Sans, sans-serif', second: 'Bebas Neue Pro', third: 'Industry' };
