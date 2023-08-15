@@ -660,44 +660,42 @@ const btnMoreFormDesignTwo = ()=>{
     });
 };
 const preventRelatedVideoYT = ()=>{
-    document.addEventListener("DOMContentLoaded", function() {
-        if (window.hideYTActivated) return;
-        if (typeof YT === "undefined") {
-            let tag = document.createElement("script");
-            tag.src = "https://www.youtube.com/iframe_api";
-            let firstScriptTag = document.getElementsByTagName("script")[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        }
-        let onYouTubeIframeAPIReadyCallbacks = [];
-        for (let playerWrap of document.querySelectorAll(".hytPlayerWrap")){
-            let playerFrame = playerWrap.querySelector("iframe");
-            let onPlayerStateChange = function(event1) {
-                if (event1.data == YT.PlayerState.ENDED) playerWrap.classList.add("ended");
-                else if (event1.data == YT.PlayerState.PAUSED) playerWrap.classList.add("paused");
-                else if (event1.data == YT.PlayerState.PLAYING) {
-                    playerWrap.classList.remove("ended");
-                    playerWrap.classList.remove("paused");
-                }
-            };
-            let player;
-            onYouTubeIframeAPIReadyCallbacks.push(function() {
-                player = new YT.Player(playerFrame, {
-                    events: {
-                        "onStateChange": onPlayerStateChange
-                    }
-                });
-            });
-            playerWrap.addEventListener("click", function() {
-                let playerState = player.getPlayerState();
-                if (playerState == YT.PlayerState.ENDED) player.seekTo(0);
-                else if (playerState == YT.PlayerState.PAUSED) player.playVideo();
-            });
-        }
-        window.onYouTubeIframeAPIReady = function() {
-            for (let callback of onYouTubeIframeAPIReadyCallbacks)callback();
+    if (window.hideYTActivated) return;
+    if (typeof YT === "undefined") {
+        let tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+    let onYouTubeIframeAPIReadyCallbacks = [];
+    for (let playerWrap of document.querySelectorAll(".hytPlayerWrap")){
+        let playerFrame = playerWrap.querySelector("iframe");
+        let onPlayerStateChange = function(event1) {
+            if (event1.data == YT.PlayerState.ENDED) playerWrap.classList.add("ended");
+            else if (event1.data == YT.PlayerState.PAUSED) playerWrap.classList.add("paused");
+            else if (event1.data == YT.PlayerState.PLAYING) {
+                playerWrap.classList.remove("ended");
+                playerWrap.classList.remove("paused");
+            }
         };
-        window.hideYTActivated = true;
-    });
+        let player;
+        onYouTubeIframeAPIReadyCallbacks.push(function() {
+            player = new YT.Player(playerFrame, {
+                events: {
+                    "onStateChange": onPlayerStateChange
+                }
+            });
+        });
+        playerWrap.addEventListener("click", function() {
+            let playerState = player.getPlayerState();
+            if (playerState == YT.PlayerState.ENDED) player.seekTo(0);
+            else if (playerState == YT.PlayerState.PAUSED) player.playVideo();
+        });
+    }
+    window.onYouTubeIframeAPIReady = function() {
+        for (let callback of onYouTubeIframeAPIReadyCallbacks)callback();
+    };
+    window.hideYTActivated = true;
 };
 (0, _utils.ready)(()=>{
     (0, _cf7MaskForTel.cf7MaskTelValidation)();
@@ -725,8 +723,8 @@ const preventRelatedVideoYT = ()=>{
     (0, _modals.modalDialog)();
     // gaEventsCF7();
     (0, _sliders.initSliders)();
+    preventRelatedVideoYT();
 });
-preventRelatedVideoYT();
 
 },{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./thank-you-messages":"9IJ1s","./gclid":"bvTDu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./aos-animations":"3V3c2","./smooth-site-scrolling":"adhDo","./modals":"axBGC","./cf7-events":"3NM30","./cf7-mask-for-tel":"dStXI"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

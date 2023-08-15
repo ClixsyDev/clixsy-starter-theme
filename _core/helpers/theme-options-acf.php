@@ -623,7 +623,7 @@
                             'class' => '',
                             'id' => '',
                         ),
-                        'default_value' => 'Bebas Neue',
+                        'default_value' => 'Bebas Neue Pro',
                         'placeholder' => '',
                         'prepend' => '',
                         'append' => '',
