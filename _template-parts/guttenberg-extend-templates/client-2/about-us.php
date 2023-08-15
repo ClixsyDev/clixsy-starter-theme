@@ -61,7 +61,7 @@ if ($is_preview && !empty($previewImage)) {
                                             }
                                             ?>
 
-                                            <div data-yt-url="<?php echo $key ?>" class="bg-center relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[250px] max-h-72 bg-cover fireTestimonialModal" style="background-image: url('<?php echo $imageUrl; ?>');">
+                                            <div data-yt-url="<?php echo $key ?>" class="bg-center relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[360px] sm:min-h-[190px] max-h-72 bg-cover fireTestimonialModal" style="background-image: url('<?php echo $imageUrl; ?>');">
                                                 <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="67.011" height="67.011" viewBox="0 0 67.011 67.011">
                                                         <path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle" d="M34.068.563A33.506,33.506,0,1,0,67.574,34.068,33.5,33.5,0,0,0,34.068.563ZM49.7,37.311,25.921,50.956A3.248,3.248,0,0,1,21.1,48.119v-28.1a3.25,3.25,0,0,1,4.823-2.837L49.7,31.636A3.253,3.253,0,0,1,49.7,37.311Z" transform="translate(-0.563 -0.563)" fill="rgba(255,255,255,0.84)"></path>
