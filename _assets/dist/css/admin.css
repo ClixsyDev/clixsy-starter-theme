@@ -3710,6 +3710,10 @@ html body .edit-post-visual-editor__content-area .-mt-80 {
   margin-top: -20rem;
 }
 
+html body .edit-post-visual-editor__content-area .mt-40 {
+  margin-top: 10rem;
+}
+
 html body .edit-post-visual-editor__content-area .mr-5 {
   margin-right: 1.25rem;
 }
