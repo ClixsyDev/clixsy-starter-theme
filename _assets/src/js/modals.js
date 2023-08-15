@@ -1,36 +1,53 @@
 import A11yDialog from 'a11y-dialog';
 import { getElement, getElements, ifSelectorExist } from './utils';
-export const modalDialog = () => {
 
+export const modalDialog = () => {
   const dialogContainer = document.querySelector('#testimonialDialog');
+
+  // Variable to keep track of the currently active video iframe
+  let activeIframe = null;
+
   if (ifSelectorExist(dialogContainer)) {
     const videoReviewsDialog = new A11yDialog(dialogContainer);
 
     let fireTestimonialModalSelector = getElements('.fireTestimonialModal');
     if (ifSelectorExist(fireTestimonialModalSelector)) {
-      console.log(fireTestimonialModalSelector);
-
       Array.from(fireTestimonialModalSelector).forEach((item) => {
         item.addEventListener('click', () => {
-          let testimonialVideoIdSelector = getElement('#testimonialVideoIdSelector');
-          if (ifSelectorExist(testimonialVideoIdSelector)) {
-            let itemYtUrl = item.getAttribute('data-yt-url');
-            console.log(itemYtUrl);
-            testimonialVideoIdSelector.src = itemYtUrl;
+          // Hide all modal videos
+          let modalVideos = getElements('.hytPlayerWrapOuter');
+          Array.from(modalVideos).forEach(item => {
+            item.classList.add('hidden');
+          });
+
+          // Find the clicked video's container and set its iframe as the active iframe
+          let itemYtUrl = item.getAttribute('data-yt-url');
+          let container = document.querySelector(`.hytPlayerWrapOuter-${itemYtUrl}`);
+          if (container) {
+            activeIframe = container.querySelector('iframe');
+            container.classList.toggle('hidden');
           }
+
+          // Manually show the modal after setting activeIframe
+          videoReviewsDialog.show();
         });
       });
     }
 
-
     videoReviewsDialog.on('hide', function (dialogEl, event) {
-      dialogEl.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      // Pause the active iframe
+      if (activeIframe && activeIframe.contentWindow) {
+        activeIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', 'https://www.youtube.com');
+      }
+
+      // Reset activeIframe to prevent it from being played again when opening another video
+      activeIframe = null;
     });
 
     videoReviewsDialog.on('show', function (dialogEl, event) {
-      dialogEl.querySelector('iframe').onload = () => {
-        dialogEl.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-      };
+      setTimeout(() => {
+        activeIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', 'https://www.youtube.com');
+      }, 500); // 500ms delay
     });
   }
 };

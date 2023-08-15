@@ -34,7 +34,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="container lg:relative lg:z-10">
             <span class="absolute right-0 left-0 min-h-[71%] top-72 -z-10 w-full bg-smoke hidden lg:!block sm:min-h-[65%] xs:top-80 xs:min-h-[61%]"></span>
             <?php if ($about_us__title) { ?>
-                <h2 class="heading_h2 leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] xs:mb-[45%] md:text-5xl"><?php echo $about_us__title ?></h2>
+                <h2 class="font-second font-bold leading-relaxed text-black text-7xl text-center ml-72 lg:text-left lg:ml-0 lg:mb-[45%] mdt:mb-[65%] xs:mb-[45%] md:text-5xl"><?php echo $about_us__title ?></h2>
             <?php } ?>
             <div class="flex bg-smoke pb-8 px-9 gap-16 lg:gap-8 items-center max-h-96  2xl:pt-8 lg:flex-col lg:max-h-max lg:mb-8 md:gap-8 lg:p-0 lg:bg-inherit md:mb-0 xs:!gap-4">
                 <div class="flex flex-col -mt-80 w-12/24 lg:-mt-[55%] mdt:-mt-[70%] leading-none lg:w-full xs:-mt-[42%]">
@@ -47,9 +47,9 @@ if ($is_preview && !empty($previewImage)) {
                         <div class="videoSlider glide">
                             <div class="glide__track z-[11] relative" data-glide-el="track">
                                 <div class="glide__slides">
-                                    <?php foreach ($about_us__video_id_repeater as $item) { ?>
+                                    <?php foreach ($about_us__video_id_repeater as $key => $item) { ?>
                                         <div class="glide__slide">
-                                            <div data-yt-url="https://www.youtube.com/embed/<?php echo $item['video_id'] ?>?enablejsapi=1?rel=0" class="videoSlider glide relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[250px]  max-h-72 bg-cover fireTestimonialModal" data-a11y-dialog-show="testimonialDialog" style="background-image: url('http://img.youtube.com/vi/<?php echo $item['video_id'] ?>/maxresdefault.jpg');">
+                                            <div data-yt-url="<?php echo $key ?>" class=" relative mt-48 lg:mt-[15%] h-[15vw] lg:h-[380px] sm:h-auto min-h-[250px]  max-h-72 bg-cover fireTestimonialModal"  style="background-image: url('http://img.youtube.com/vi/<?php echo $item['video_id'] ?>/maxresdefault.jpg');">
                                                 <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="67.011" height="67.011" viewBox="0 0 67.011 67.011">
                                                         <path id="Icon_awesome-play-circle" data-name="Icon awesome-play-circle" d="M34.068.563A33.506,33.506,0,1,0,67.574,34.068,33.5,33.5,0,0,0,34.068.563ZM49.7,37.311,25.921,50.956A3.248,3.248,0,0,1,21.1,48.119v-28.1a3.25,3.25,0,0,1,4.823-2.837L49.7,31.636A3.253,3.253,0,0,1,49.7,37.311Z" transform="translate(-0.563 -0.563)" fill="rgba(255,255,255,0.84)"></path>
@@ -62,8 +62,7 @@ if ($is_preview && !empty($previewImage)) {
                             </div>
                             <div class="glide__arrows mr-5 sm:mr-3" data-glide-el="controls">
                                 <button class="text-white glide__arrow glide__arrow--left" data-glide-dir="<">
-                                    <
-                                </button>
+                                    < </button>
                             </div>
                             <div class="flex justify-center mt-3">
                                 <div class="glide__bullets flex justify-center items-center gap-1" data-glide-el="controls[nav]">
@@ -166,17 +165,19 @@ if ($is_preview && !empty($previewImage)) {
                 &times;
             </button>
 
-            <!-- <iframe class="w-full aspect-video h-full" src="" id="testimonialVideoIdSelector" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
+            <?php foreach ($about_us__video_id_repeater as $key => $item) { ?>
 
-            
-            <div class="hytPlayerWrapOuter w-full h-full">
-                <div class="hytPlayerWrap w-full h-full">
-                    <iframe class="h-full w-full aspect-video" src="" id="testimonialVideoIdSelector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <div class="hytPlayerWrapOuter w-full h-full hytPlayerWrapOuter-<?php echo $key ?>">
+                    <div class="hytPlayerWrap w-full h-full">
+                        <!-- <iframe class="h-full w-full aspect-video" src="" id="testimonialVideoIdSelector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
 
-                    <!-- <iframe class="h-full w-full aspect-video" src="https://www.youtube.com/embed/AjWfY7SnMBI?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" frameborder="0"></iframe> -->
+
+                        <iframe class="h-full w-full aspect-video modal__iframe-video  data-youtube-key-<?php echo $key ?>" src="https://www.youtube.com/embed/<?php echo $item['video_id'] ?>?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
+
+                        <!-- <iframe class="h-full w-full aspect-video" src="https://www.youtube.com/embed/AjWfY7SnMBI?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" frameborder="0"></iframe> -->
+                    </div>
                 </div>
-            </div>
-
+            <?php } ?>
 
 
         </div>
