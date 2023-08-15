@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="13" viewBox="0 0 20 13">
-  <path id="caret" d="M10,0,20,13H0Z" transform="translate(20 13) rotate(180)" fill="#595959"></path>
-</svg>
+<svg height="13" viewBox="0 0 20 13" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m10 0 10 13h-20z" fill="#595959" transform="matrix(-1 0 0 -1 20 13)"/></svg>
