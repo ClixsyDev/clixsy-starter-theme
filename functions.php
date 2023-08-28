@@ -79,3 +79,6 @@ require_once('_core/webhook_integration/webhook_data_to_json.php');
 
 // Filter for external links
 require_once('_core/filters/external_link_new_tab.php');
+
+// Filter @mailinator.com to prevent submissions.
+require_once('_core/cf7-email-filtering.php');
