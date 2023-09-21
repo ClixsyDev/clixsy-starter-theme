@@ -4960,7 +4960,7 @@ const aosAnimations = ()=>{
     });
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","aos":"eRzTM"}],"eRzTM":[function(require,module,exports) {
+},{"aos":"eRzTM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
 var global = arguments[3];
 !function(e, t) {
     module.exports = t();
@@ -6048,6 +6048,15 @@ var ESCAPE_KEY = "Escape";
     // Keep a reference to the currently focused element to be able to restore
     // it later
     this._previouslyFocused = document.activeElement;
+    // Due to a long lasting bug in Safari, clicking an interactive element (like
+    // a <button>) does *not* move the focus to that element, which means
+    // `document.activeElement` is whatever element is currently focused (like an
+    // <input>), or the <body> element otherwise. We can work around that problem
+    // by checking whether the focused element is the <body>, and if it, store the
+    // click event target.
+    // See: https://bugs.webkit.org/show_bug.cgi?id=22261
+    const target = event && event.target ? event.target : null;
+    if (target && Object.is(this._previouslyFocused, document.body)) this._previouslyFocused = target;
     this.$el.removeAttribute("aria-hidden");
     this.shown = true;
     // Set the focus to the dialog element
@@ -6371,7 +6380,7 @@ const cf7MaskTelValidation = ()=>{
     });
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","imask":"aLznl","./utils":"blFj3"}],"aLznl":[function(require,module,exports) {
+},{"imask":"aLznl","./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aLznl":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "InputMask", ()=>(0, _inputJsDefault.default));
