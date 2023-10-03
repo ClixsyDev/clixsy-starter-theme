@@ -339,3 +339,26 @@
 .common-class {
   @apply !opacity-50 opacity-50;
 }
+
+.acceptance__wrapper {
+  .wpcf7-form-control-wrap {
+    background-color: transparent !important;
+  }
+  .wpcf7-list-item {
+    margin: 20px 0;
+    label {
+      display: flex;
+      gap: 15px;
+
+      input {
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        min-width: 25px;
+        min-height: 25px;
+        display: block;
+      }
+    }
+  }
+}

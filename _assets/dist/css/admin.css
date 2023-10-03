@@ -649,7 +649,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  font-family: Bebas Neue Pro;
+  font-family: Bebas Neue;
   font-size: 5rem;
   font-weight: 900;
 }
@@ -712,7 +712,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  font-family: Bebas Neue Pro;
+  font-family: Bebas Neue;
   font-size: 3rem;
   font-weight: 700;
   line-height: 60px;
@@ -1465,6 +1465,29 @@ h2 span {
 
 .common-class {
   opacity: .5;
+}
+
+.acceptance__wrapper .wpcf7-form-control-wrap {
+  background-color: #0000 !important;
+}
+
+.acceptance__wrapper .wpcf7-list-item {
+  margin: 20px 0;
+}
+
+.acceptance__wrapper .wpcf7-list-item label {
+  gap: 15px;
+  display: flex;
+}
+
+.acceptance__wrapper .wpcf7-list-item label input {
+  width: 20px;
+  height: 20px;
+  min-width: 25px;
+  min-height: 25px;
+  display: block;
+  position: relative;
+  top: 4px;
 }
 
 .faq__text {
@@ -5367,6 +5390,10 @@ html body .edit-post-visual-editor__content-area .font-main {
 
 html body .edit-post-visual-editor__content-area .font-second {
   font-family: Bebas Neue Pro;
+}
+
+html body .edit-post-visual-editor__content-area .font-third {
+  font-family: Industry;
 }
 
 html body .edit-post-visual-editor__content-area .text-10xl {
