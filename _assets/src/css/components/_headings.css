@@ -64,7 +64,7 @@ h2 span {
 }
 
 .heading_h2 {
-  @apply text-5xl font-bold font-second text-headings text-center leading-[60px] lg:text-4xl lg:leading-[42px] md:text-3xl md:leading-[36px] sm:text-2xl sm:leading-[30px];
+  @apply text-5xl font-bold !font-second text-headings text-center leading-[60px] lg:text-4xl lg:leading-[42px] md:text-3xl md:leading-[36px] sm:text-2xl sm:leading-[30px];
 
   &.heading_second {
     @apply text-headings_second;

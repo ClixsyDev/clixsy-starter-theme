@@ -649,7 +649,7 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  font-family: Bebas Neue;
+  font-family: Bebas Neue Pro;
   font-size: 5rem;
   font-weight: 900;
 }
@@ -712,10 +712,10 @@ h2 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
-  font-family: Bebas Neue;
   font-size: 3rem;
   font-weight: 700;
   line-height: 60px;
+  font-family: Bebas Neue Pro !important;
 }
 
 @media (max-width: 1024px) {
@@ -1122,18 +1122,7 @@ h2 span {
   padding-left: .5rem;
 }
 
-.attorney-group__form .wpcf7-spinner {
-  display: none;
-}
-
-.attorney-group__form .wpcf7-spinner.active {
-  visibility: visible;
-  display: block;
-  position: absolute;
-  right: 10%;
-}
-
-.attorney-group__form br {
+.attorney-group__form .wpcf7-spinner, .attorney-group__form br {
   display: none;
 }
 
@@ -1199,13 +1188,6 @@ h2 span {
 
 .form .wpcf7-spinner {
   display: none;
-}
-
-.form .wpcf7-spinner.active {
-  visibility: visible;
-  display: block;
-  position: absolute;
-  right: 10%;
 }
 
 .form .wpcf7-form-control-wrap {
@@ -1461,33 +1443,6 @@ h2 span {
 .sidebar-form form .disclaimer a {
   font-weight: 600;
   text-decoration-line: underline;
-}
-
-.common-class {
-  opacity: .5;
-}
-
-.acceptance__wrapper .wpcf7-form-control-wrap {
-  background-color: #0000 !important;
-}
-
-.acceptance__wrapper .wpcf7-list-item {
-  margin: 20px 0;
-}
-
-.acceptance__wrapper .wpcf7-list-item label {
-  gap: 15px;
-  display: flex;
-}
-
-.acceptance__wrapper .wpcf7-list-item label input {
-  width: 20px;
-  height: 20px;
-  min-width: 25px;
-  min-height: 25px;
-  display: block;
-  position: relative;
-  top: 4px;
 }
 
 .faq__text {
@@ -3372,10 +3327,6 @@ html body .edit-post-visual-editor__content-area .top-72 {
   top: 18rem;
 }
 
-html body .edit-post-visual-editor__content-area .top-1\/2 {
-  top: 50%;
-}
-
 html body .edit-post-visual-editor__content-area .right-2 {
   right: .5rem;
 }
@@ -3454,10 +3405,6 @@ html body .edit-post-visual-editor__content-area .z-\[-1\], html body .edit-post
 
 html body .edit-post-visual-editor__content-area .-z-10 {
   z-index: -10;
-}
-
-html body .edit-post-visual-editor__content-area .z-\[11\] {
-  z-index: 11;
 }
 
 html body .edit-post-visual-editor__content-area .order-1 {
@@ -3733,18 +3680,6 @@ html body .edit-post-visual-editor__content-area .-mt-80 {
   margin-top: -20rem;
 }
 
-html body .edit-post-visual-editor__content-area .mt-40 {
-  margin-top: 10rem;
-}
-
-html body .edit-post-visual-editor__content-area .mr-5 {
-  margin-right: 1.25rem;
-}
-
-html body .edit-post-visual-editor__content-area .-mt-7 {
-  margin-top: -1.75rem;
-}
-
 html body .edit-post-visual-editor__content-area .mb-11 {
   margin-bottom: 2.75rem;
 }
@@ -3843,10 +3778,6 @@ html body .edit-post-visual-editor__content-area .contents {
 
 html body .edit-post-visual-editor__content-area .hidden {
   display: none;
-}
-
-html body .edit-post-visual-editor__content-area .aspect-video {
-  aspect-ratio: 16 / 9;
 }
 
 html body .edit-post-visual-editor__content-area .h-14 {
@@ -3957,10 +3888,6 @@ html body .edit-post-visual-editor__content-area .h-28 {
   height: 7rem;
 }
 
-html body .edit-post-visual-editor__content-area .h-\[15vw\] {
-  height: 15vw;
-}
-
 html body .edit-post-visual-editor__content-area .h-\[376px\] {
   height: 376px;
 }
@@ -4005,10 +3932,6 @@ html body .edit-post-visual-editor__content-area .max-h-\[570px\] {
   max-height: 570px;
 }
 
-html body .edit-post-visual-editor__content-area .max-h-72 {
-  max-height: 18rem;
-}
-
 html body .edit-post-visual-editor__content-area .max-h-\[525px\] {
   max-height: 525px;
 }
@@ -4027,10 +3950,6 @@ html body .edit-post-visual-editor__content-area .min-h-\[246px\] {
 
 html body .edit-post-visual-editor__content-area .min-h-\[71\%\] {
   min-height: 71%;
-}
-
-html body .edit-post-visual-editor__content-area .min-h-\[360px\] {
-  min-height: 360px;
 }
 
 html body .edit-post-visual-editor__content-area .min-h-\[500px\] {
@@ -4257,10 +4176,6 @@ html body .edit-post-visual-editor__content-area .w-1\/4 {
   width: 25%;
 }
 
-html body .edit-post-visual-editor__content-area .w-\[46\%\] {
-  width: 46%;
-}
-
 html body .edit-post-visual-editor__content-area .w-1\/2 {
   width: 50%;
 }
@@ -4479,11 +4394,6 @@ html body .edit-post-visual-editor__content-area .-translate-x-1\/2 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-html body .edit-post-visual-editor__content-area .-translate-y-1\/2 {
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 html body .edit-post-visual-editor__content-area .skew-y-2 {
   --tw-skew-y: 2deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4650,10 +4560,6 @@ html body .edit-post-visual-editor__content-area .gap-20 {
   gap: 5rem;
 }
 
-html body .edit-post-visual-editor__content-area .gap-1 {
-  gap: .25rem;
-}
-
 html body .edit-post-visual-editor__content-area .gap-24 {
   gap: 6rem;
 }
@@ -4668,6 +4574,10 @@ html body .edit-post-visual-editor__content-area .gap-10 {
 
 html body .edit-post-visual-editor__content-area .gap-28 {
   gap: 7rem;
+}
+
+html body .edit-post-visual-editor__content-area .gap-1 {
+  gap: .25rem;
 }
 
 html body .edit-post-visual-editor__content-area .gap-x-4 {
@@ -4895,6 +4805,10 @@ html body .edit-post-visual-editor__content-area .bg-button_color {
 html body .edit-post-visual-editor__content-area .bg-\[\#cbcbcb\] {
   --tw-bg-opacity: 1;
   background-color: rgb(203 203 203 / var(--tw-bg-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .bg-inherit {
+  background-color: inherit;
 }
 
 html body .edit-post-visual-editor__content-area .bg-\[\#707070\] {
@@ -5392,10 +5306,6 @@ html body .edit-post-visual-editor__content-area .font-second {
   font-family: Bebas Neue Pro;
 }
 
-html body .edit-post-visual-editor__content-area .font-third {
-  font-family: Industry;
-}
-
 html body .edit-post-visual-editor__content-area .text-10xl {
   font-size: 100px;
 }
@@ -5490,10 +5400,6 @@ html body .edit-post-visual-editor__content-area .\!text-3xl {
 
 html body .edit-post-visual-editor__content-area .text-\[28px\] {
   font-size: 28px;
-}
-
-html body .edit-post-visual-editor__content-area .text-\[3\.5rem\] {
-  font-size: 3.5rem;
 }
 
 html body .edit-post-visual-editor__content-area .text-\[430px\] {
@@ -7381,10 +7287,6 @@ html :where(.wp-block) {
     margin-bottom: 0;
   }
 
-  .lg\:mt-\[15\%\] {
-    margin-top: 15%;
-  }
-
   .lg\:mt-3 {
     margin-top: .75rem;
   }
@@ -7427,10 +7329,6 @@ html :where(.wp-block) {
 
   .lg\:h-20 {
     height: 5rem;
-  }
-
-  .lg\:h-\[380px\] {
-    height: 380px;
   }
 
   .lg\:max-h-\[80px\] {
@@ -9087,14 +8985,6 @@ html :where(.wp-block) {
     margin-bottom: 1rem;
   }
 
-  .sm\:mr-3 {
-    margin-right: .75rem;
-  }
-
-  .sm\:ml-3 {
-    margin-left: .75rem;
-  }
-
   .sm\:\!mb-5 {
     margin-bottom: 1.25rem !important;
   }
@@ -9123,16 +9013,8 @@ html :where(.wp-block) {
     height: 486px;
   }
 
-  .sm\:h-auto {
-    height: auto;
-  }
-
   .sm\:min-h-\[65\%\] {
     min-height: 65%;
-  }
-
-  .sm\:min-h-\[190px\] {
-    min-height: 190px;
   }
 
   .sm\:w-full {
@@ -9695,10 +9577,6 @@ html :where(.wp-block) {
 
   .xs\:-mt-\[42\%\] {
     margin-top: -42%;
-  }
-
-  .xs\:mb-\[45\%\] {
-    margin-bottom: 45%;
   }
 
   .xs\:mb-8 {
