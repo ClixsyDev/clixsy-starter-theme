@@ -271,3 +271,9 @@ html {
     @apply right-[2%];
   }
 }
+
+p {
+  a {
+    @apply text-[#0000EE] hover:underline;
+  }
+}
