@@ -33,7 +33,7 @@ if ($is_preview && !empty($previewImage)) {
               $content_len =  strlen(strip_tags($text_form_design_two__main_content));
             ?>
               <div class="pb-5 prose-lg max-w-full">
-                <div class="fixedHeight mb-5 relative" style="max-height: 580px;">
+                <div class="fixedHeight mb-5 relative" >
                   <?php if ($text_form_design_two__main_content) { ?>
                     <div class="innerContentHeight">
                       <?php echo $text_form_design_two__main_content ?>
