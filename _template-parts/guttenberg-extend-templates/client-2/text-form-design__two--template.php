@@ -42,8 +42,8 @@ if ($is_preview && !empty($previewImage)) {
                 </div>
                 <?php //if ($content_len > 1170) { 
                 ?>
-                <p class="toggleFixedHeight cursor-pointer hidden">Read more...</p>
-                <?php //} 
+<!--                 <p class="toggleFixedHeight cursor-pointer hidden">Read more...</p>
+                <?php //}  -->
                 ?>
               </div>
             <?php } ?>
