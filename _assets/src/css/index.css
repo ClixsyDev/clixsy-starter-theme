@@ -10,6 +10,7 @@
 @import '../../../node_modules/aos/dist/aos.css';
 @import '../../../node_modules/@glidejs/glide/dist/css/glide.core.css';
 @import './components/buttons.css';
+@import './components/_dropdown.css';
 @import './components/_headings.css';
 @import './components/form.css';
 @import './components/_faq.css';
@@ -275,5 +276,19 @@ html {
 p {
   a {
     @apply text-[#0000EE] hover:underline;
+  }
+}
+
+.description_settlement p a {
+  @apply text-accent;
+}
+
+.settlement_case_type_description p a {
+  @apply text-accent;
+}
+
+.single-content {
+  ul, ol {
+      list-style-type: disc;
   }
 }

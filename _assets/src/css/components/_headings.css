@@ -27,7 +27,6 @@ h2 span {
   @apply font-second text-black text-7xl text-center font-black lg:text-5xl xs:text-4xl;
 
   span {
-    /* @apply text-accent border-b-4 border-button_color; */
     font-size: 130px;
     vertical-align: -10px;
     
@@ -92,4 +91,38 @@ h2 span {
   }
 }
 
+h4 span {
+  @apply text-accent;
+}
 
+.hero_heading_h1 {
+  &.banner {
+    @apply text-10xl text-accent leading-[115px] uppercase font-second 2xl:text-10xl lg:text-6xl lg:leading-[75px] sm:text-5xl sm:leading-[55px];
+
+    &.location {
+      @apply !text-12xl !text-black lg:!text-7xl lg:!leading-[75px] xs:!text-5xl xs:!leading-[55px];
+    }
+  }
+
+  &.banner-case-type {
+    @apply !text-[200px] leading-[1.1] uppercase !text-black lg:!text-7xl lg:!leading-[75px] xs:!text-5xl xs:!leading-[55px];
+  }
+}
+
+.hero_heading_h2 {
+  @apply text-10xl font-bold font-second text-center uppercase text-black lg:!text-7xl lg:!leading-[75px] xs:!text-5xl xs:!leading-[55px];
+
+  &.multi-step-form {
+    @apply text-white leading-[110px];
+  }
+}
+
+
+.hero-br {
+  display: none;
+}
+@media (max-width: 1500px) {
+  .hero-br {
+    display: block;
+  }
+}

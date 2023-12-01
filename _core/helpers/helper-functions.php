@@ -47,3 +47,15 @@ if (!function_exists('deploy_compress_css_code')) {
         return $code;
     }
 }
+
+function theme_excerpt_length($length)
+{
+    return 23;
+}
+add_filter('excerpt_length', 'theme_excerpt_length', 999);
+
+function new_excerpt_more($more)
+{
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

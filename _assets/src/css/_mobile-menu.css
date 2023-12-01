@@ -2,6 +2,7 @@
   --bg-blue: #000261;
   --bg-darkblue: #041e42;
   --bg-bg_second: #264c6d;
+  --bg-accent: #3171b8;
 }
 
 #main-menu-button {
@@ -80,7 +81,7 @@ nav.main-menu {
 
   .wrapper {
     overflow: hidden;
-    
+
     height: calc(100vh - 64px);
     min-height: calc(100vh - 64px);
     width: 100%;
@@ -88,7 +89,7 @@ nav.main-menu {
     flex-flow: row nowrap;
     position: fixed;
     top: 80px;
-    @media(max-width: 1024px) {
+    @media (max-width: 1024px) {
       overflow-y: scroll;
     }
   }
@@ -196,7 +197,6 @@ nav.main-menu {
     transform: translateX(-100%);
     transition: all 0.2s ease-in-out;
     z-index: 7;
-    
 
     ul {
       display: block;
@@ -261,7 +261,6 @@ nav.main-menu {
     }
   }
 }
-
 
 nav.main-menu.open {
   pointer-events: all;
@@ -418,7 +417,7 @@ nav.main-menu.active-level-3 {
 
   > span {
     content: '';
-    background-color: #ffffff;
+    background-color: var(--bg-accent);
     position: absolute;
     top: 0;
     left: 0;
@@ -429,7 +428,7 @@ nav.main-menu.active-level-3 {
 
   &:before {
     content: '';
-    background-color: #ffffff;
+    background-color: var(--bg-accent);
     position: absolute;
     left: 0;
     width: 100%;
@@ -440,7 +439,7 @@ nav.main-menu.active-level-3 {
 
   &:after {
     content: '';
-    background-color: #ffffff;
+    background-color: var(--bg-accent);
     position: absolute;
     left: 0;
     width: 100%;
@@ -456,7 +455,7 @@ nav.main-menu.active-level-3 {
 
   &:before {
     content: '';
-    background-color: #ffffff;
+    background-color: var(--bg-accent);
     position: absolute;
     top: -2px;
     left: 12px;
@@ -468,7 +467,7 @@ nav.main-menu.active-level-3 {
 
   &:after {
     content: '';
-    background-color: #ffffff;
+    background-color: var(--bg-accent);
     position: absolute;
     top: -2px;
     left: 12px;
@@ -582,4 +581,19 @@ nav.main-menu.active-level-3 {
     border: none !important;
     pointer-events: all !important;
   }
+}
+
+.logged-in {
+  nav.main-menu .wrapper {
+    top: 110px;
+  }
+  .sticked {
+    nav.main-menu .wrapper {
+      top: 80px;
+    }
+  }
+}
+
+#main-menu-button {
+    z-index: 400;
 }

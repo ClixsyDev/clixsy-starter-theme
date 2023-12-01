@@ -1,20 +1,25 @@
+:root {
+  --bg-blue: #000261;
+  --bg-darkblue: #041e42;
+  --bg-bg_second: #264c6d;
+  --bg-accent: #3171b8;
+}
+
 .main-menu {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
   margin: 0;
-  gap: 0 15px;
+  gap: 0 20px;
   a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 2em;
     text-align: left;
-    color: #393939;
+    color: #000;
     text-transform: uppercase;
     position: relative;
     transition: 0.3s all;
-
-    @apply 2xl:!text-[15px];
     &:after {
       @apply bg-accent w-6/12 h-1 absolute -bottom-2 left-[25%] hidden;
       content: '';
@@ -41,7 +46,6 @@
         position: relative;
         left: 5px;
         top: -1px;
-        content: url('../img/dropdown-down.svg');
       }
 
       &:hover {
@@ -71,7 +75,7 @@ header {
 }
 
 .sub-menu.lvl-1 {
-  @apply absolute p-0 bg-headings;
+  @apply absolute p-0 bg-white shadow-lg border-2 border-gray-300;
   top: 100%;
   min-width: 300px;
   left: -5px;
@@ -110,7 +114,7 @@ header {
 }
 
 .sub-menu.lvl-2 {
-  @apply absolute p-0;
+  @apply absolute p-0 bg-bg_second;
   top: -11px;
   min-width: 300px;
   left: 100%;
@@ -135,7 +139,6 @@ header {
 
 .footer-menu li {
   color: white;
-  font-family: Avenir;
   font-size: 17px;
   padding-left: 12px;
 }
@@ -146,6 +149,5 @@ header {
 }
 
 .footer-menu {
-  @apply border-l-4 border-accent
-  /* border-left: 4px solid #69be26; */
+  border-left: 4px solid var(--bg-accent);
 }

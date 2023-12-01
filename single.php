@@ -4,7 +4,6 @@ use App\Template;
 ?>
 
 <?php get_header(); ?>
-
 <!-- Main Content -->
 <main>
     <!-- Entry -->

@@ -12,10 +12,38 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <style type="text/css">
+        @font-face {
+            font-family: "ArialRounded";
+            src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+            src: url(<?php echo get_stylesheet_directory_uri() . '/_assets/src/fonts/ArialRoundedBold.ttf' ?>) format("truetype");
+        }
+
+        @font-face {
+            font-family: "Bebas Neue Pro";
+            src: url("<?php echo get_stylesheet_directory_uri() . '/_assets/src/fonts/BebasNeuePro.ttf' ?>") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Bebas Neue Pro";
+            src: url("<?php echo get_stylesheet_directory_uri() . '/_assets/src/fonts/BebasNeueProBook.ttf' ?>") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Industry";
+            src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+            src: url(<?php echo get_stylesheet_directory_uri() . '/_assets/src/fonts/IndustryBold.ttf' ?>) format("truetype");
+        }
+    </style>
     <!-- Google fonts -->
 
     <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri() ?>/_child/src/img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri() ?>/_assets/src/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri() ?>/_assets/src/img/favicons/favicon-16x16.png">
     <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri() ?>/_assets/src/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
@@ -25,15 +53,16 @@
 </head>
 
 <body <?php body_class('font-main body'); ?>>
-    <?php $logo = get_field('logo', 'options');
+    <?php
+    $logo = get_field('logo', 'options');
     $phone = get_field('phone', 'options');
+    $phone_link = get_field('phone_link', 'options');
     ?>
 
     <!-- testing mega menu -->
 
-    <header class="sticky top-0 w-full z-50 h-40 lg:h-[80px] lg:max-h-[80px] lg:p-1">
-        <img src="<?= wp_get_attachment_image_url(get_field('site_header_bg', 'option'), 'full') ?>" class="z-10 absolute left-0 top-0 w-full h-full object-cover" alt="">
-        <div class="z-10 absolute left-0 top-0 w-full h-full object-cover"></div>
+    <header class="sticky top-0 w-full z-50 h-32 lg:h-[80px] lg:max-h-[80px] lg:p-1 shadow">
+        <div class="z-10 absolute left-0 top-0 w-full h-full object-cover bg-white"></div>
         <div class="relative z-20 container flex justify-between items-center h-full">
             <a href="<?php echo home_url() ?>" class="logo-desktop lg:hidden">
                 <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => '']) ?>
@@ -48,7 +77,7 @@
                     <div class="font-main font-bold text-2xl leading-none">
                         <a href="tel:<?php echo $phone ?>"><?= get_field('phone_with_letters', 'option') ?></a>
                     </div>
-                    <a class="font-main btn font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
+                    <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings" href="tel:<?= get_field('phone', 'option') ?>">
                         Call Now
                     </a>
                 </div>
@@ -93,15 +122,15 @@
                     <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => 'block w-36 h-auto transform transition-all my-0 mx-auto mobile-logo']) ?>
                 </a>
             </div>
-            <div class="call_header flex justify-center items-center flex-col text-white font-main gap-2 xl:hidden">
-                <div class="font-main text-lg leading-none">
+            <div class="call_header flex justify-center items-center flex-col font-main gap-2 xl:hidden">
+                <div class="font-main text-lg leading-none text-smoke font-thin">
                     <?= get_field('phone_available', 'option') ?>
                 </div>
-                <div class="font-main font-bold text-2xl leading-none">
-                    <a href="tel:<?php echo $phone ?>"><?= get_field('phone_with_letters', 'option') ?></a>
+                <div class="font-main font-bold text-3xl text-button_color leading-none">
+                    <a href="tel:<?php echo $phone_link ?>"><?= get_field('phone_with_letters', 'option') ?></a>
                 </div>
-                <a class="font-main font-bold flex justify-center items-center bg-accent px-10 py-2 rounded-full text-2xl leading-none h-11 hover:bg-white hover:text-headings hover:shadow-siteWide" href="tel:<?php echo $phone ?>">
-                    Call Now
+                <a class="btn !pl-5 !pr-5" href="tel:<?php echo $phone_link ?>">
+                    1 (844) 244-2886
                 </a>
             </div>
         </div>

@@ -4,7 +4,7 @@ import { getElement, getElements, ifSelectorExist, off } from './utils';
 // mobile menu
 export const mainMenu = () => {
   const menuButton = getElement('#main-menu-button');
-  const menu = getElement('nav.main-menu');
+  const menu = getElement('.main-menu');
   function menuOpen() {
     menu.classList.add('open');
     menuButton.classList.add('open');

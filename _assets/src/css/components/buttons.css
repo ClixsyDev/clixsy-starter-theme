@@ -121,8 +121,102 @@
   &.center {
     @apply mx-auto;
   }
-
-  
 }
 
+.btn {
+  min-width: 450px;
+  @apply font-third relative !items-center bg-button_color hover:!bg-button_color text-2xl min-h-[75px] rounded-2xl border-white border-[5px] md:!items-center;
 
+  &:after {
+    @apply !bg-accent ;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .35s;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    width: 100% ;
+  }
+
+  @media (max-width: 1024px) {
+    min-width: 390px;
+    font-size: 19px;
+  }
+
+  @media (max-width: 540px) {
+    min-width: 315px !important;
+    font-size: 17px;
+  }
+
+  @media (max-width: 390px) {
+    min-width: 245px !important;
+  }
+
+  .btn_arrow {
+    @apply transform inline-block -translate-y-[0.2rem];
+  }
+
+  &.btn-medium {
+    min-width: 405px;
+
+    @media (max-width: 1024px) {
+      min-width: 350px;
+    }
+  }
+
+  &.btn-smaller {
+    min-width: 370px;
+
+    @media (max-width: 1024px) {
+      min-width: 340px;
+    }
+  }
+
+  &.transparent {
+    @apply bg-transparent border-button_color hover:!bg-transparent border-[5px] text-button_color hover:text-white;
+
+    &:after {
+      @apply !bg-button_color;
+    }
+  
+    &:hover::after {
+      width: 100% !important;
+    }
+  }
+
+  &.next_step,
+  &.btn_form,
+  &.btn-form-newsletter {
+    &:after {
+      @apply !bg-smoke ;
+      z-index: 1;
+    }
+
+    span {
+      @apply z-50
+    }
+  }
+
+
+  &.btn-form-newsletter {
+    &:hover {
+      span {
+        @apply !text-white;
+      }
+    }
+  }
+}
+
+.call_header {
+  .btn {
+    min-width: 200px;
+    min-height: 45px;
+    @apply font-third z-10 !items-center rounded-2xl capitalize font-bold flex justify-center bg-button_color px-10 py-2 text-2xl leading-none text-white 
+  }
+}

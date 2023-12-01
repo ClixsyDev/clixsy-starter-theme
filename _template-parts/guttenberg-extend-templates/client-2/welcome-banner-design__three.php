@@ -28,10 +28,10 @@ if ($is_preview && !empty($previewImage)) {
         <div class="mdt:mb-[4%]">
             <div class="container text-center relative z-10">
                 <?php if ($welcome_banner__design_three__subtitle) { ?>
-                    <h3 class="font-main font-semibold text-white tracking-widest text-4xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
+                    <h3 class="font-main !font-semibold text-white tracking-widest text-4xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle ?></h3>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__subtitle_second) { ?>
-                    <h3 class="font-main font-semibold text-white tracking-widest text-2xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle_second ?></h3>
+                    <h3 class="font-main !font-semibold text-white tracking-widest text-2xl lg:!text-xl xs:pb-2 xs:!text-lg <?php echo $welcome_banner__design_three__select_font == 'Bold' ? 'font-bold pb-4 capitalize' : 'font-thin uppercase' ?>"><?php echo $welcome_banner__design_three__subtitle_second ?></h3>
                 <?php } ?>
                 <?php if ($welcome_banner__design_three__title) { ?>
                     <h2 class="hero_heading_h2 multi-step-form mb-4"><a href="tel:<?php echo $phone_link ?>"><?php echo $welcome_banner__design_three__title ?></a></h2>

@@ -2,16 +2,16 @@ header {
   @apply transition-all duration-300;
 
   a.logo-desktop img {
-    @apply h-[82px] w-auto object-contain transition-all duration-300;
+    @apply h-[140px] w-auto object-contain transition-all duration-300;
   }
   .call_header {
     @apply transition-all duration-300;
   }
 
   &.sticked {
-    @apply h-[100px];
+    @apply h-[100px] bg-white;
     a.logo-desktop img {
-      @apply h-[58px] w-auto object-contain;
+      @apply h-[80px] w-auto object-contain;
     }
     .call_header {
       margin-bottom: -43px;
@@ -27,16 +27,5 @@ header {
     &.sticked {
       @apply lg:p-1;
     }
-  }
-}
-
-/* homepage hero br */
-.hero-br {
-  display: none;
-}
-
-@media (max-width:1500px) {
-  .hero-br {
-    display: block;
   }
 }
