@@ -40,14 +40,8 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                   <?php } ?>
                 </div>
-                <?php //if ($content_len > 1170) { 
-                ?>
-<!--                 <p class="toggleFixedHeight cursor-pointer hidden">Read more...</p>
-                <?php //}  -->
-                ?>
               </div>
             <?php } ?>
-
           </div>
         </div>
         <div class="form w-10/24 bg-accent px-9 py-5 lg:w-2/4 lg:py-9  mdt:max-h-full mdt:w-full xs:p-6 form_elements_design_one">
