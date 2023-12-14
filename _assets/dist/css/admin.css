@@ -190,6 +190,19 @@
   display: block;
 }
 
+@media (max-width: 1280px) {
+  .footer-map iframe {
+    max-width: 24rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-map iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .background-image-bio {
   background-image: url("../background-bio.7f777ba3.jpg");
 }
@@ -4974,6 +4987,10 @@ html body .edit-post-visual-editor__content-area .gap-64 {
   gap: 16rem;
 }
 
+html body .edit-post-visual-editor__content-area .gap-72 {
+  gap: 18rem;
+}
+
 html body .edit-post-visual-editor__content-area .gap-x-4 {
   column-gap: 1rem;
 }
@@ -6578,6 +6595,10 @@ html :where(.wp-block) {
     max-width: 280px;
   }
 
+  .\32 xl\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+
   .\32 xl\:-translate-y-16 {
     --tw-translate-y: -4rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -6611,6 +6632,10 @@ html :where(.wp-block) {
 
   .\32 xl\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .\32 xl\:gap-28 {
+    gap: 7rem;
   }
 
   .\32 xl\:gap-y-32 {
@@ -6713,6 +6738,10 @@ html :where(.wp-block) {
 
   .\32 xl\:\!text-3xl {
     font-size: 1.875rem !important;
+  }
+
+  .\32 xl\:text-2xl {
+    font-size: 1.5rem;
   }
 
   .\32 xl\:before\:w-24:before, .\32 xl\:after\:w-24:after {
@@ -7112,6 +7141,14 @@ html :where(.wp-block) {
 
   .xl\:pb-0 {
     padding-bottom: 0;
+  }
+
+  .xl\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .xl\:pb-6 {
+    padding-bottom: 1.5rem;
   }
 
   .xl\:text-xl {
@@ -7920,6 +7957,10 @@ html :where(.wp-block) {
 
   .lg\:justify-center {
     justify-content: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
   }
 
   .lg\:gap-8 {

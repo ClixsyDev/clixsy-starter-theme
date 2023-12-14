@@ -64,7 +64,7 @@
     <header class="sticky top-0 w-full z-50 h-32 lg:h-[80px] lg:max-h-[80px] lg:p-1 shadow">
         <div class="z-10 absolute left-0 top-0 w-full h-full object-cover bg-white"></div>
         <div class="relative z-20 container flex justify-between items-center h-full">
-            <a href="<?php echo home_url() ?>" class="logo-desktop lg:hidden">
+            <a href="<?php echo home_url() ?>" class="logo-desktop 2xl:max-w-[200px] lg:hidden">
                 <?php echo wp_get_attachment_image($logo, 'full', '', ['class' => '']) ?>
             </a>
             <?php main_menu(); ?>
@@ -126,7 +126,7 @@
                 <div class="font-main text-lg leading-none text-smoke font-thin">
                     <?= get_field('phone_available', 'option') ?>
                 </div>
-                <div class="font-main font-bold text-3xl text-button_color leading-none">
+                <div class="font-main font-bold text-3xl 2xl:text-2xl text-button_color leading-none">
                     <a href="tel:<?php echo $phone_link ?>"><?= get_field('phone_with_letters', 'option') ?></a>
                 </div>
                 <a class="btn !pl-5 !pr-5" href="tel:<?php echo $phone_link ?>">

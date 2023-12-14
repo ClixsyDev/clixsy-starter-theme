@@ -26,3 +26,9 @@
         @apply text-xl font-main block mb-3 leading-snug
     }
 }
+
+.footer-map{
+    iframe{
+       @apply xl:max-w-sm lg:max-w-full lg:w-full;
+    }
+ }

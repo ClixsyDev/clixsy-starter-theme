@@ -13,11 +13,11 @@ global $post;
 <article class="blog-article ">
 
     <?php if (!$remove_title) { ?>
-        <div class=" mb-6  bg-headings_second bg-cover <?php echo !empty(get_the_post_thumbnail_url()) ? 'h-[350px] md:h-auto' : '' ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url() ?>');">
+        <div class="mb-6 bg-headings_second bg-cover <?php echo !empty(get_the_post_thumbnail_url()) ? 'md:h-auto' : '' ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url() ?>');">
             <div class="overlay">
-                <div class="container pt-24 pb-12">
+                <div class="container pt-24 pb-12 xl:pt-12 xl:pb-6">
                     <div class="blog-article__title-wrapper">
-                        <h1 class="font-bold  text-6xl lg:text-4xl sm:text-2xl text-white mb-3"><?php the_title() ?></h1>
+                        <h1 class="font-bold  text-6xl xl:text-5xl lg:text-4xl sm:text-2xl text-white mb-3"><?php the_title() ?></h1>
                     </div>
                 </div>
             </div>

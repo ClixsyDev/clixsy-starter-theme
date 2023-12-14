@@ -22,20 +22,20 @@ $bottom_links = get_field('bottom_links', 'options');
                 <?php } ?>
             </div>
             <?php if ($subscribe_form) { ?>
-                <div class="xl:ml-16 sm:w-full sm:ml-0">
+                <div class="sm:w-full">
                     <?php
                     echo do_shortcode('[contact-form-7 id="' . $subscribe_form . '" title="Subscribe form"]');
                     ?>
                 </div>
             <?php } ?>
         </div>
-        <div class="flex pt-10 gap-8 xl:gap-5 mdt:flex-col lg:pt-8 lg:gap-8">
+        <div class="flex pt-10 gap-8 xl:gap-5 lg:flex-col lg:pt-8 lg:gap-8">
             <div class="flex gap-8 xl:gap-5 mdt:flex-col">
-                <div class="mdt:w-full">
+                <div class="footer-map lg:w-full">
                     <?php echo $map ?>
                 </div>
             </div>
-            <div class="flex gap-80 sm:flex-col sm:gap-8 xl:gap-28 mdt:justify-between">
+            <div class="flex gap-72 2xl:gap-28 lg:justify-between sm:flex-col sm:gap-8">
                 <div class="flex flex-col gap-6">
                     <?php if ($location) { ?>
                         <div>
@@ -79,7 +79,7 @@ $bottom_links = get_field('bottom_links', 'options');
         <div class="flex justify-between w-21/24 mt-8 lg:w-full sm:flex-col-reverse">
             <?php if ($info_site) { ?>
                 <div class="sm:mt-5">
-                    <p class="text-white font-avnir text-lg"><?php echo $info_site ?></p>
+                    <p class="info-site text-white font-avnir text-lg"><?php echo $info_site ?></p>
                 </div>
             <?php } ?>
             <?php if ($footer_logo) { ?>
