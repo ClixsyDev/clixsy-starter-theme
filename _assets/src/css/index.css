@@ -42,13 +42,11 @@ body.logged-in {
     span {
         @apply text-headings_second;
     }
-
     b,
     strong {
         @apply text-headings_second font-bold;
     }
 }
-
 .span-change_color_2 {
     span {
         @apply block text-white;
@@ -65,7 +63,6 @@ body.logged-in {
     span {
         @apply font-bold text-accent;
     }
-
     b,
     strong {
         @apply text-headings;
@@ -76,7 +73,6 @@ body.logged-in {
     ul {
         @apply list-disc;
     }
-
     ol {
         @apply list-decimal;
     }
@@ -145,12 +141,12 @@ body.logged-in {
     height: 40px;
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: linear-gradient(to bottom,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#f4f2f2', GradientType=0);
-    /* IE6-8 */
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    ); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f4f2f2',GradientType=0 ); /* IE6-8 */
 }
 
 /* Smooth Scrool */
@@ -200,7 +196,6 @@ html {
 /* FAQ Content Box */
 
 @layer components {
-
     .faq-content-box ul,
     .faq-content-box ol {
         padding-left: 20px;
@@ -297,7 +292,6 @@ p {
 }
 
 .single-content {
-
     ul,
     ol {
         list-style-type: disc;
@@ -308,14 +302,14 @@ p {
     @apply w-[1000px] h-[500px] xl:w-[750px] xl:h-[400px] mdt:w-[550px] mdt:h-[350px] sm:w-[300px] sm:h-[250px];
 }
 
-.info-site a {
+.info-site a{
     @apply text-accent font-semibold;
 }
 
-.link-white {
+.link-white{
     @apply text-white underline;
 }
 
-.grecaptcha-badge {
+.grecaptcha-badge{
     @apply !opacity-0;
 }

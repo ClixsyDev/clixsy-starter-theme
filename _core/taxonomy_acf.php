@@ -39,6 +39,43 @@ if (function_exists('acf_add_local_field_group')) {
 
 // End of ACF for reviews
 
+// ACF for media/news
+if (function_exists('acf_add_local_field_group')) {
+	acf_add_local_field_group(array(
+		'key'            => 'media_news_acf',
+		'title'          => 'Screenshot and link:',
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'in-the-news',
+					'required' => 0,
+					'conditional_logic' => 0,
+				),
+			),
+		),
+		'fields'         => array(
+			array(
+				'key' => 'media_news_acf_screen',
+				'name' => 'media_news_acf_screen',
+				'type' => 'image',
+				'label' => 'Screenshot:',
+				'return_format' => 'id',
+				'preview_size' => 'thumbnail',
+			),
+			array(
+				'key' => 'media_news_acf_link',
+				'name' => 'media_news_acf_link',
+				'label' => 'Link:',
+				'type' => 'link',
+			),
+		)
+	));
+}
+
+// ACF for media/news
+
 
 // Acf for mark page as case type
 if (function_exists('acf_add_local_field_group')) :

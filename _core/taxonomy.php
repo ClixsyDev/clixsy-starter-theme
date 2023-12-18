@@ -30,6 +30,22 @@ function bigauto_attorneys_cpt()
 
 	));
 
+	register_post_type('in-the-news', array(
+		'labels'             => array('name' => __('News / Media', 'law')),
+		'hierarchical'       => true,
+		'menu_icon'          => 'dashicons-welcome-write-blog',
+		'public'             => true,
+		'show_in_rest'       => true,
+		'has_archive'        => true,
+		'show_ui'            => true,
+		'show_admin_column'  => true,
+		'show_in_nav_menus'  => true,
+		'query_var'          => true,
+		'publicly_queryable' => true,
+		'supports'           => array('title', 'excerpt', 'thumbnail', 'editor'),
+		'rewrite'            => array('slug' => 'in-the-news', 'with_front' => true, 'hierarchical' => false),
+	));
+
 	register_post_type('reviews', array(
 		'labels'             => array('name' => __('Reviews', 'law')),
 		'hierarchical'       => false,

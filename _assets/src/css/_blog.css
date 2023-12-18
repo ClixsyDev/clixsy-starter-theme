@@ -4,3 +4,25 @@
         @apply h-full w-full;
     }
 }
+
+.news-media-single-content{
+    img {
+        @apply w-full m-0;
+    }
+
+    a{
+        @apply my-0 text-accent font-semibold text-xl underline sm:text-lg;
+    }
+
+    p{
+        @apply mt-0 mb-10 text-xl leading-relaxed sm:text-lg;
+    }
+}
+
+.news-media-article-content{
+    @apply mt-6 mb-3 sm:mt-3 sm:mb-2;
+
+    p{
+        @apply mt-0 text-xl leading-relaxed sm:text-lg;
+    }
+}
