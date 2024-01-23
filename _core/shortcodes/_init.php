@@ -1,5 +1,7 @@
 <?php
 
+require_once('_sitemap.php');
+
 function currentYear( $atts ){
     return date('Y');
 }
