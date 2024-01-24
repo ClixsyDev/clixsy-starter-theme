@@ -3,7 +3,7 @@
 function custom_sitemap_fn() {
     ob_start();
 
-    $post_types = array('page', 'post'); // specify the post types you want to include
+    $post_types = array('page', 'post', 'attorneys', 'in-the-news'); // specify the post types you want to include
 
     echo '<div class="container py-12">'; // Add container here
 
