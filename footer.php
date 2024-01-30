@@ -11,7 +11,7 @@ $info_site = get_field('info_site', 'options');
 $bottom_links = get_field('bottom_links', 'options');
 ?>
 
-<footer class="pb-6 pt-40 bg-headings">
+<footer class="pb-6 pt-40 bg-headings nitro-lazy-render">
     <div class="container">
         <div class="flex gap-5 flex-col justify-between items-baseline md:items-center xl:flex-col xl:gap-10">
             <div class="flex pt-3 gap-x-4">
