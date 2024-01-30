@@ -313,3 +313,13 @@ p {
 .grecaptcha-badge{
     @apply !opacity-0;
 }
+
+.nitro-lazy-render {
+    content-visibility: visible !important;
+}
+
+.footer-map{
+    iframe{
+       @apply lg:!w-full;
+    }
+ }

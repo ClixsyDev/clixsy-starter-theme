@@ -4808,10 +4808,6 @@ html body .edit-post-visual-editor__content-area .cursor-pointer {
   cursor: pointer;
 }
 
-html body .edit-post-visual-editor__content-area .list-none {
-  list-style-type: none;
-}
-
 html body .edit-post-visual-editor__content-area .\!list-none {
   list-style-type: none !important;
 }
@@ -5571,6 +5567,14 @@ html body .edit-post-visual-editor__content-area .pr-6 {
   padding-right: 1.5rem;
 }
 
+html body .edit-post-visual-editor__content-area .pb-3 {
+  padding-bottom: .75rem;
+}
+
+html body .edit-post-visual-editor__content-area .pl-5 {
+  padding-left: 1.25rem;
+}
+
 html body .edit-post-visual-editor__content-area .pt-6 {
   padding-top: 1.5rem;
 }
@@ -5645,10 +5649,6 @@ html body .edit-post-visual-editor__content-area .\!pr-9 {
 
 html body .edit-post-visual-editor__content-area .pb-44 {
   padding-bottom: 11rem;
-}
-
-html body .edit-post-visual-editor__content-area .pb-3 {
-  padding-bottom: .75rem;
 }
 
 html body .edit-post-visual-editor__content-area .pr-\[308px\] {
@@ -5731,10 +5731,6 @@ html body .edit-post-visual-editor__content-area .pl-6 {
   padding-left: 1.5rem;
 }
 
-html body .edit-post-visual-editor__content-area .pl-5 {
-  padding-left: 1.25rem;
-}
-
 html body .edit-post-visual-editor__content-area .text-left {
   text-align: left;
 }
@@ -5795,12 +5791,12 @@ html body .edit-post-visual-editor__content-area .text-5xl {
   font-size: 3rem;
 }
 
-html body .edit-post-visual-editor__content-area .text-base {
-  font-size: 1rem;
-}
-
 html body .edit-post-visual-editor__content-area .text-4xl {
   font-size: 2.25rem;
+}
+
+html body .edit-post-visual-editor__content-area .text-base {
+  font-size: 1rem;
 }
 
 html body .edit-post-visual-editor__content-area .text-xs {
