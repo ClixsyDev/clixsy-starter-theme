@@ -306,6 +306,14 @@
     }
   }
 
+  .disclaimer{
+    &.cols{
+      p{
+        @apply my-1;
+      }
+    }
+  }
+
   input {
     @apply h-[50px] outline-0 rounded;
   }
@@ -359,6 +367,13 @@
         min-height: 25px;
         display: block;
       }
+    }
+  }
+
+  &.cols{
+    @apply mt-4;
+    .wpcf7-list-item{
+      @apply my-1.5;
     }
   }
 }
