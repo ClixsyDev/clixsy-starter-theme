@@ -120,30 +120,16 @@ if ($is_preview && !empty($previewImage)) {
         <div class="dialog-container" id="testimonialDialog" aria-hidden="true">
             <div class="dialog-overlay" data-a11y-dialog-hide></div>
             <div class="dialog-content">
-
-
-
-
                 <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
                     &times;
                 </button>
-
-
                 <div class="hytPlayerWrapOuter w-full h-full hytPlayerWrapOuter-1">
                     <div class="hytPlayerWrap w-full h-full">
-                        <!-- <iframe class="h-full w-full aspect-video" src="" id="testimonialVideoIdSelector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
-
-
                         <iframe class="h-full w-full aspect-video modal__iframe-video  data-youtube-key-1" src="https://www.youtube.com/embed/<?php echo $welcome_banner_contact_design_three__video_id ?>?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
-
-                        <!-- <iframe class="h-full w-full aspect-video" src="https://www.youtube.com/embed/AjWfY7SnMBI?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" frameborder="0"></iframe> -->
                     </div>
                 </div>
-
-
             </div>
         </div>
     <?php } ?>
-
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';
