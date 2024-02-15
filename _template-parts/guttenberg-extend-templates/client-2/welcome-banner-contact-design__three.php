@@ -22,6 +22,8 @@ if ($is_preview && !empty($previewImage)) {
     $welcome_banner_contact_design_three__dots = get_field('welcome_banner_contact_design_three__dots');
     $welcome_banner_contact_design_three__form_select = get_field('welcome_banner_contact_design_three__form_select');
     $welcome_banner_contact_design_three__form_description = get_field('welcome_banner_contact_design_three__form_description');
+    $welcome_banner_contact_design_three__video_id = get_field('welcome_banner_contact_design_three__video_id');
+    $welcome_banner_contact_design_three__video_image = get_field('welcome_banner_contact_design_three__video_image');
 ?>
     <!-- welcome-banner-contact-design__three.php -->
     <section class="bg-cover overflow-hidden" style="
@@ -32,24 +34,48 @@ if ($is_preview && !empty($previewImage)) {
                 <?php if ($welcome_banner_contact_design_three__title) { ?>
                     <h1 class="text-<?php echo $welcome_banner_contact_design_three__title_color ?: 'white' ?> font-bold text-center font-third capitalize md:!text-[36px] text-5xl py-9 md:leading-snug"><?php echo $welcome_banner_contact_design_three__title ?></h1>
                 <?php } ?>
-                <div class="flex items-end lg:flex-col-reverse">
-                    <div class="w-7/12 xl1240:w-6/12 lg:w-10/12 lg:m-auto sm:w-full sm:hidden relative">
-                        <?php if ($welcome_banner_contact_design_three__attorney_link) { ?>
-                            <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>"> <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative z-10 bottom-[-1px]']) ?></a>
-                        <?php } else { ?>
-                            <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative z-10 bottom-[-1px]']) ?>
+                <div class="flex lg:flex-col-reverse <?php echo $welcome_banner_contact_design_three__video_id ? "items-center gap-10 md:gap-5" : "items-end" ?>">
+                    <div class="w-7/12 xl1240:w-6/12 lg:w-10/12 lg:m-auto sm:w-full relative <?php echo $welcome_banner_contact_design_three__video_id ? "" : "sm:hidden" ?>">
+                        <?php if ($welcome_banner_contact_design_three__video_id) { 
+                            // Check if 'maxresdefault.jpg' exists
+                            $headers = @get_headers("http://img.youtube.com/vi/{$welcome_banner_contact_design_three__video_id}/maxresdefault.jpg");
+
+                            if ($headers && strpos($headers[0], '200 OK')) {
+                                $imageUrl = "http://img.youtube.com/vi/{$welcome_banner_contact_design_three__video_id}/maxresdefault.jpg";
+                            } else {
+                                $imageUrl = "http://img.youtube.com/vi/{$welcome_banner_contact_design_three__video_id}/hqdefault.jpg";
+                            }    
+                        ?>
+                            <div data-yt-url="1" class="bg-center shadow-bannerForm hover:cursor-pointer relative h-[15vw] lg:h-[380px] sm:h-auto min-h-[510px] sm:min-h-[190px] max-h-72 bg-cover lg:mb-10 fireTestimonialModal" style="background-image: url('<?php echo $welcome_banner_contact_design_three__video_image ?>');">
+                                <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <svg width="100" height="67" viewBox="0 0 100 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="66.7683" rx="18" fill="black" fill-opacity="0.65"/>
+                                        <path d="M65.3728 33.662L42.8229 48.483L42.5767 19.2224L65.3728 33.662Z" fill="white"/>
+                                        <path d="M65.3728 33.662L42.8229 48.483L42.5767 19.2224L65.3728 33.662Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </div>
                         <?php } ?>
-                        <?php if ($welcome_banner_contact_design_three__attorney_link) { ?>
-                            <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>" class="absolute z-10 bottom-[10%] right-[10%] rounded-2xl bg-[#707070] h-20 w-56 text-white flex flex-col justify-center items-center">
-                                <div class="font-third font-bold text-2xl ">
-                                    <?php echo $welcome_banner_contact_design_three__attorney_link['title'] ?>
-                                </div>
-                                <?php if ($welcome_banner_contact_design_three__attorney_position) { ?>
-                                    <div class="font-main font-normal text-base ">
-                                        <?php echo $welcome_banner_contact_design_three__attorney_position ?>
+                        <?php if (!$welcome_banner_contact_design_three__video_id) { ?>
+                            <?php if ($welcome_banner_contact_design_three__attorney_link) { ?>
+                                <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>"> <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative z-10 bottom-[-1px]']) ?></a>
+                            <?php } else { ?>
+                                <?php echo wp_get_attachment_image($welcome_banner_contact_design_three__image, 'full', '', ['class' => 'relative z-10 bottom-[-1px]']) ?>
+                            <?php } ?>
+                        <?php } ?>
+                        <?php if (!$welcome_banner_contact_design_three__video_id) { ?>
+                            <?php if ($welcome_banner_contact_design_three__attorney_link) { ?>
+                                <a href="<?php echo $welcome_banner_contact_design_three__attorney_link['url'] ?>" class="absolute z-10 bottom-[10%] right-[10%] rounded-2xl bg-[#707070] h-20 w-56 text-white flex flex-col justify-center items-center">
+                                    <div class="font-third font-bold text-2xl ">
+                                        <?php echo $welcome_banner_contact_design_three__attorney_link['title'] ?>
                                     </div>
-                                <?php } ?>
-                            </a>
+                                    <?php if ($welcome_banner_contact_design_three__attorney_position) { ?>
+                                        <div class="font-main font-normal text-base ">
+                                            <?php echo $welcome_banner_contact_design_three__attorney_position ?>
+                                        </div>
+                                    <?php } ?>
+                                </a>
+                            <?php } ?>
                         <?php } ?>
                     </div>
                     <?php if ($welcome_banner_contact_design_three__form_select) { ?>
@@ -89,6 +115,35 @@ if ($is_preview && !empty($previewImage)) {
             </div>
         </div>
     </section>
+
+    <?php if ($welcome_banner_contact_design_three__video_id) { ?>
+        <div class="dialog-container" id="testimonialDialog" aria-hidden="true">
+            <div class="dialog-overlay" data-a11y-dialog-hide></div>
+            <div class="dialog-content">
+
+
+
+
+                <button data-a11y-dialog-hide class="dialog-close" aria-label="Close this dialog window">
+                    &times;
+                </button>
+
+
+                <div class="hytPlayerWrapOuter w-full h-full hytPlayerWrapOuter-1">
+                    <div class="hytPlayerWrap w-full h-full">
+                        <!-- <iframe class="h-full w-full aspect-video" src="" id="testimonialVideoIdSelector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
+
+
+                        <iframe class="h-full w-full aspect-video modal__iframe-video  data-youtube-key-1" src="https://www.youtube.com/embed/<?php echo $welcome_banner_contact_design_three__video_id ?>?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen frameborder="0"></iframe>
+
+                        <!-- <iframe class="h-full w-full aspect-video" src="https://www.youtube.com/embed/AjWfY7SnMBI?rel=0&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" frameborder="0"></iframe> -->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    <?php } ?>
 
 <?php }
 if (!get_fields()) echo '<p class="text-center bg-accent py-8">Fill block with content</p>';

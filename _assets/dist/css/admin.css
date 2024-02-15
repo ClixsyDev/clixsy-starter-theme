@@ -1658,6 +1658,11 @@ h4 span {
   font-weight: 700;
 }
 
+.banner-form .disclaimer.cols p {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
 .banner-form input {
   height: 50px;
   border-radius: .25rem;
@@ -1767,6 +1772,15 @@ h4 span {
   display: block;
   position: relative;
   top: 4px;
+}
+
+.acceptance__wrapper.cols {
+  margin-top: 1rem;
+}
+
+.acceptance__wrapper.cols .wpcf7-list-item {
+  margin-top: .375rem;
+  margin-bottom: .375rem;
 }
 
 .faq__text {
@@ -4347,6 +4361,18 @@ html body .edit-post-visual-editor__content-area .min-h-\[300px\] {
   min-height: 300px;
 }
 
+html body .edit-post-visual-editor__content-area .min-h-\[860px\] {
+  min-height: 860px;
+}
+
+html body .edit-post-visual-editor__content-area .min-h-\[850px\] {
+  min-height: 850px;
+}
+
+html body .edit-post-visual-editor__content-area .min-h-\[510px\] {
+  min-height: 510px;
+}
+
 html body .edit-post-visual-editor__content-area .w-14\/24 {
   width: 58.3333%;
 }
@@ -6114,6 +6140,12 @@ html body .edit-post-visual-editor__content-area .shadow-\[inset_0_-1px_6px_rgba
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+html body .edit-post-visual-editor__content-area .shadow-bannerForm {
+  --tw-shadow: 0px 3px 10px #00000080;
+  --tw-shadow-colored: 0px 3px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 html body .edit-post-visual-editor__content-area .ring {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -6360,6 +6392,10 @@ html :where(.wp-block) {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(0 115 189 / var(--tw-bg-opacity));
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
 }
 
 .hover\:bg-white:hover {
@@ -9244,6 +9280,10 @@ html :where(.wp-block) {
 
   .md\:gap-14 {
     gap: 3.5rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
   }
 
   .md\:overflow-hidden {

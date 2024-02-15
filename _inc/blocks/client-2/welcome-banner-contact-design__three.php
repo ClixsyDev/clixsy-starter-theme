@@ -84,6 +84,23 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
             array(
+                'key' => $block_key . 'video_id',
+                'name' => $block_key . 'video_id',
+                'type' => 'text',
+                'label' => 'Video ID',
+                'wrapper' => array(
+                    'width' => '50%',
+                ),
+            ),
+            array(
+                'key' => $block_key . 'video_image',
+                'name' => $block_key . 'video_image',
+                'type' => 'image',
+                'label' => 'Video Image',
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail'
+            ),
+            array(
                 'key' => $block_key . 'title_color',
                 'name' => $block_key . 'title_color',
                 'type' => 'text',
