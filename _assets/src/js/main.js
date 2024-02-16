@@ -13,6 +13,7 @@ import { modalDialog } from './modals';
 // import { gaEventsCF7 } from './ga-events-cf7';
 import { cf7Events } from './cf7-events';
 import { cf7MaskTelValidation } from './cf7-mask-for-tel';
+import { coCounselForm } from './co-counsel-form';
 
 
 /* FAQ start */
@@ -264,6 +265,7 @@ ready(() => {
   preventRelatedVideoYT();
   toggleAnimation();
   showDisclaimerMultiStepForm();
+  coCounselForm();
 });
 
 

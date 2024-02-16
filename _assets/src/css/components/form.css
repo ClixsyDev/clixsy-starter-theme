@@ -377,3 +377,87 @@
     }
   }
 }
+
+.co-counsel-form {
+  h3 {
+    @apply text-3xl text-white text-center mb-3 font-bold sm:text-2xl;
+  }
+
+  label {
+    .italic-text {
+      @apply italic block;
+    }
+  }
+
+  h4 {
+    @apply text-2xl text-white text-center mb-10 sm:text-xl;
+  }
+
+  p {
+    @apply text-base font-black mt-10 mb-2 sm:mt-6;
+  }
+
+  textarea {
+    @apply text-base text-[#707070] font-light leading-[22px] p-3;
+  }
+
+  input, textarea {
+    @apply mb-5;
+  }
+
+  label {
+    &.hidden_label {
+      @apply hidden;
+    }
+  }
+
+  .checkbox_label {
+    @apply flex pb-5 lg:flex-col lg:gap-6 lg:items-center;
+
+    .wpcf7-form-control-wrap {
+      @apply bg-transparent;
+
+      .wpcf7-radio {
+        @apply flex gap-4 items-center;
+
+        .wpcf7-list-item {
+          @apply !flex gap-1 items-center;
+
+          .wpcf7-list-item-label {
+            @apply text-white;
+          }
+          
+          input {
+            @apply mb-0 w-6 h-6;
+          }
+        }
+      }
+    }
+  }
+
+  .wpcf7-checkbox {
+    @apply grid grid-cols-2 w-max gap-x-9 py-5 pl-14 lg:w-full xs:grid-cols-1 xs:pl-0;
+
+    input {
+      @apply w-6 h-6 m-0;
+    }
+
+    .wpcf7-list-item-label {
+      @apply text-xl;
+    }
+
+    .wpcf7-list-item {
+      label {
+        @apply !flex gap-1 items-center xs:justify-center;
+      }
+    }
+  }
+
+  .conditional_input_disciplinary {
+    @apply pl-6 pb-6 pt-2;
+  }
+
+  .wpcf7-not-valid-tip {
+    @apply border-none pb-8;
+  }
+}

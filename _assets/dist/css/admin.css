@@ -1783,6 +1783,166 @@ h4 span {
   margin-bottom: .375rem;
 }
 
+.co-counsel-form h3 {
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  margin-bottom: .75rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .co-counsel-form h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.co-counsel-form label .italic-text {
+  font-style: italic;
+  display: block;
+}
+
+.co-counsel-form h4 {
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .co-counsel-form h4 {
+    font-size: 1.25rem;
+  }
+}
+
+.co-counsel-form p {
+  margin-top: 2.5rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .co-counsel-form p {
+    margin-top: 1.5rem;
+  }
+}
+
+.co-counsel-form textarea {
+  --tw-text-opacity: 1;
+  color: rgb(112 112 112 / var(--tw-text-opacity));
+  padding: .75rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.co-counsel-form input, .co-counsel-form textarea {
+  margin-bottom: 1.25rem;
+}
+
+.co-counsel-form label.hidden_label {
+  display: none;
+}
+
+.co-counsel-form .checkbox_label {
+  padding-bottom: 1.25rem;
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .co-counsel-form .checkbox_label {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap {
+  background-color: #0000;
+}
+
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item {
+  align-items: center;
+  gap: .25rem;
+  display: flex !important;
+}
+
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item .wpcf7-list-item-label {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item input {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-bottom: 0;
+}
+
+.co-counsel-form .wpcf7-checkbox {
+  width: max-content;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 3.5rem;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .co-counsel-form .wpcf7-checkbox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .co-counsel-form .wpcf7-checkbox {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-left: 0;
+  }
+}
+
+.co-counsel-form .wpcf7-checkbox input {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0;
+}
+
+.co-counsel-form .wpcf7-checkbox .wpcf7-list-item-label {
+  font-size: 1.25rem;
+}
+
+.co-counsel-form .wpcf7-checkbox .wpcf7-list-item label {
+  align-items: center;
+  gap: .25rem;
+  display: flex !important;
+}
+
+@media (max-width: 540px) {
+  .co-counsel-form .wpcf7-checkbox .wpcf7-list-item label {
+    justify-content: center;
+  }
+}
+
+.co-counsel-form .conditional_input_disciplinary {
+  padding-top: .5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.co-counsel-form .wpcf7-not-valid-tip {
+  border-style: none;
+  padding-bottom: 2rem;
+}
+
 .faq__text {
   max-height: 0;
   -o-transition: max-height .25s linear;
@@ -4359,14 +4519,6 @@ html body .edit-post-visual-editor__content-area .min-h-\[360px\] {
 
 html body .edit-post-visual-editor__content-area .min-h-\[300px\] {
   min-height: 300px;
-}
-
-html body .edit-post-visual-editor__content-area .min-h-\[860px\] {
-  min-height: 860px;
-}
-
-html body .edit-post-visual-editor__content-area .min-h-\[850px\] {
-  min-height: 850px;
 }
 
 html body .edit-post-visual-editor__content-area .min-h-\[510px\] {
