@@ -15,20 +15,22 @@ if ($is_preview && !empty($previewImage)) {
     $text_button__cost_block_bg = get_field('text_button__cost_block_bg');
     $text_button__dots = get_field('text_button__dots');
     $text_button__phone = get_field('text_button__phone');
+    $text_button__form_select = get_field('text_button__form_select');
+    $text_button__form_title = get_field('text_button__form_title');
     $phone = get_field('phone', 'options');
     $phone_link = get_field('phone_link', 'options');
 ?>
 
-    <section class="container">
+    <section class="container text-button-block <?php echo $text_button__form_select ? 'form-modal' : '' ?>">
         <div class="relative pt-20 <?php echo in_array('Yes', $text_button__dots) ? 'pb-36 xs:!pb-24' : 'pb-16 xs:!pb-8' ?> mb-10 xs:!pt-12 rounded-md shadow-siteWide xs:mb-6" style="background-color: <?php echo $text_button__cost_block_bg ?: ''  ?> ;">
             <?php if ($text_button__cost_title || $text_button__cost_description || $text_button__cost_link) { ?>
                 <div class="flex justify-center items-center px-2">
                     <div class="z-10 items-center text-center">
                         <?php if ($text_button__cost_title) { ?>
-                            <h3 class="text-headings font-bold font-second pb-10 leading-[65px] text-6xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $text_button__cost_title ?></h3>
+                            <h3 class="text-headings font-bold font-second pb-5 leading-[65px] text-6xl sm:!text-4xl sm:leading-none sm:pt-9 sm:pb-5"><?php echo $text_button__cost_title ?></h3>
                         <?php } ?>
                         <?php if ($text_button__cost_description) { ?>
-                            <div class="pb-12 text-left max-w-[1050px]"><?php echo $text_button__cost_description ?></div>
+                            <div class="pb-6 text-left max-w-[1050px]"><?php echo $text_button__cost_description ?></div>
                         <?php } ?>
                         <?php if (in_array('Yes', $text_button__phone)) {
                             if ($phone && $phone_link) {
@@ -54,6 +56,23 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <?php if (in_array('Yes', $text_button__dots)) { ?>
                 <div class="dots-bg h-24 absolute w-full bottom-0 left-0 xl:h-16 xs:h-12"></div>
+            <?php } ?>
+            <?php if ($text_button__form_select) { ?>
+                <div class="form-modal-window">
+                    <div class="form-modal-window-wrapper first-step text-left  z-[1] w-1/2 mdt:w-full ">
+                        <div class="form banner-form my-0 big-auto-footer-form p-10 xl:p-7 bg-accent font-main w-22/24 2xl:w-full mx-auto 2xl:mx-0 mdt:text-center">
+                            <?php if ($text_button__form_title) { ?>
+                                <div class="text-white text-center font-second font-bold uppercase leading-[1] pb-5 text-[3.5rem] 2xl:!text-[50px] xs:!text-3xl "><?php echo $text_button__form_title ?></div>
+                            <?php } ?>
+                            <?php echo $text_button__form_select ? do_shortcode('[contact-form-7 id="' . $text_button__form_select['0'] . '" title=""]') : '' ?>
+                            <?php
+                            Template::load('_template-parts/components/thank-you-message-homepage.php', [
+                                'classes_disclaimer' => 'text-white',
+                                'classes_thankyou' => 'text-white'
+                            ]); ?>
+                        </div>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </section>

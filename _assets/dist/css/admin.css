@@ -1807,7 +1807,7 @@ h4 span {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
   font-size: 1.5rem;
 }
 
@@ -1818,7 +1818,7 @@ h4 span {
 }
 
 .co-counsel-form p {
-  margin-top: 2.5rem;
+  margin-top: .5rem;
   margin-bottom: .5rem;
   font-size: 1rem;
   font-weight: 900;
@@ -1843,7 +1843,11 @@ h4 span {
   margin-bottom: 1.25rem;
 }
 
-.co-counsel-form label.hidden_label {
+.co-counsel-form .wpcf7-date {
+  display: block;
+}
+
+.co-counsel-form label.hidden_label, .co-counsel-form span.hidden_label {
   display: none;
 }
 

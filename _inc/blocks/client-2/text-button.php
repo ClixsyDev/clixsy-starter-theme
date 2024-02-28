@@ -89,6 +89,26 @@ if (function_exists('acf_add_local_field_group')) :
                     'label' => 'Set background color for first section',
                 ),
                 array(
+                    'key' => $block_key . 'form_select',
+                    'name' => $block_key . 'form_select',
+                    'label' => 'Select form',
+                    'type' => 'relationship',
+                    'post_type' => array(
+                        0 => 'wpcf7_contact_form',
+                    ),
+                    'taxonomy' => '',
+                    'filters' => array(
+                        0 => 'search',
+                    ),
+                    'return_format' => 'id',
+                ),
+                array(
+                    'key' => $block_key . 'form_title',
+                    'name' => $block_key . 'form_title',
+                    'type' => 'text',
+                    'label' => 'Form title',
+                ),
+                array(
                     'key' => $block_key . 'dots',
                     'name' => $block_key . 'dots',
                     'label' => 'Add dots pattern?',

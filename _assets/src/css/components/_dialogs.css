@@ -6,13 +6,13 @@
     bottom: 0;
     right: 0;
     z-index: 1000;
-  }
-  
-  .dialog-container[aria-hidden='true'] {
+}
+
+.dialog-container[aria-hidden='true'] {
     display: none;
-  }
-  
-  .dialog-overlay {
+}
+
+.dialog-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,9 +20,9 @@
     right: 0;
     background-color: rgba(43, 46, 56, 0.9);
     animation: fade-in 200ms both;
-  }
-  
-  .dialog-content {
+}
+
+.dialog-content {
     background-color: rgb(255, 255, 255);
     margin: auto;
     z-index: 2;
@@ -31,26 +31,26 @@
     max-width: 90%;
     width: 90%;
     height: 70vh;
-  }
-  
-  @keyframes fade-in {
+}
+
+@keyframes fade-in {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
-  @keyframes slide-up {
+}
+
+@keyframes slide-up {
     from {
-      transform: translateY(10%);
+        transform: translateY(10%);
     }
-  }
-  
-  .dialog h1 {
+}
+
+.dialog h1 {
     margin: 0;
     font-size: 1.25em;
-  }
-  
-  .dialog-close {
+}
+
+.dialog-close {
     position: absolute;
     top: 0.5em;
     right: 0.5em;
@@ -64,12 +64,58 @@
     text-align: center;
     cursor: pointer;
     transition: 0.15s;
-  }
-  
-  @media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 700px) {
     .dialog-close {
-      top: 1em;
-      right: 1em;
+        top: 1em;
+        right: 1em;
     }
-  }
-  
+}
+
+/* Form Modal Window */
+
+.form-modal-window {
+    @apply hidden fixed px-3 py-20 top-0 left-0 z-[1050] w-full h-full overflow-hidden mdt:py-20;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &.open {
+        @apply flex justify-center;
+
+        .form-modal-window-wrapper {
+            animation: fadeZoomIn 0.3s ease-in-out forwards;
+        }
+    }
+
+    &.fade-out {
+        .form-modal-window-wrapper {
+            animation: fadeZoomOut 0.3s ease-in-out forwards;
+        }
+    }
+
+    .form-modal-window-wrapper {
+        @apply h-full overflow-y-auto mx-auto relative max-w-[780px] md:max-w-[500px];
+    }
+
+    @keyframes fadeZoomIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fadeZoomOut {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+    }
+}

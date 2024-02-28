@@ -302,15 +302,15 @@ p {
     @apply w-[1000px] h-[500px] xl:w-[750px] xl:h-[400px] mdt:w-[550px] mdt:h-[350px] sm:w-[300px] sm:h-[250px];
 }
 
-.info-site a{
+.info-site a {
     @apply text-accent font-semibold;
 }
 
-.link-white{
+.link-white {
     @apply text-white underline;
 }
 
-.grecaptcha-badge{
+.grecaptcha-badge {
     @apply !opacity-0;
 }
 
@@ -318,8 +318,14 @@ p {
     content-visibility: visible !important;
 }
 
-.footer-map{
-    iframe{
-       @apply lg:!w-full;
+.footer-map {
+    iframe {
+        @apply lg:!w-full;
     }
- }
+}
+
+.text-button-block {
+    h5 {
+        @apply font-bold font-second text-[35px] pt-5;
+    }
+}
