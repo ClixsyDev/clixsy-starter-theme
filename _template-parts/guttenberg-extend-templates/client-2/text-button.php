@@ -59,8 +59,8 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
             <?php if ($text_button__form_select) { ?>
                 <div class="form-modal-window">
-                    <div class="form-modal-window-wrapper first-step text-left  z-[1] w-1/2 mdt:w-full ">
-                        <div class="form banner-form my-0 big-auto-footer-form p-10 xl:p-7 bg-accent font-main w-22/24 2xl:w-full mx-auto 2xl:mx-0 mdt:text-center">
+                    <div class="form-modal-window-wrapper">
+                        <div class="form banner-form w-full my-0 big-auto-footer-form p-10 xl:p-7 bg-accent font-main 2xl:w-full mx-auto 2xl:mx-0 mdt:text-center">
                             <?php if ($text_button__form_title) { ?>
                                 <div class="text-white text-center font-second font-bold uppercase leading-[1] pb-5 text-[3.5rem] 2xl:!text-[50px] xs:!text-3xl "><?php echo $text_button__form_title ?></div>
                             <?php } ?>
