@@ -328,4 +328,20 @@ p {
     h5 {
         @apply font-bold font-second text-[35px] pt-5;
     }
+
+    .subtitle {
+        @apply text-[45px] font-second pb-3 lg:text-[28px] sm:text-2xl;
+    }
+
+    .info-text {
+        @apply text-[21px] leading-6 pb-10 sm:text-[19px] sm:pb-5 sm:leading-normal;
+    }
+
+    .careers-video {
+        @apply mt-24 mb-12 mx-auto md:mt-12 md:mb-6;
+    }
+}
+
+.refferal-page-text {
+    @apply max-w-[1080px] mx-auto;
 }

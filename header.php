@@ -29,7 +29,7 @@
 
         @font-face {
             font-family: "Bebas Neue Pro";
-            src: url("<?php echo get_stylesheet_directory_uri() . '/_assets/src/fonts/BebasNeueProBook.ttf' ?>") format("truetype");
+            src: url("<?php echo get_stylesheet_directory_uri() . '/_assets/src/fonts/BebasNeueProRegular.ttf' ?>") format("truetype");
             font-weight: normal;
             font-style: normal;
         }
