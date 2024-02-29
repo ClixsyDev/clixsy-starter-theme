@@ -299,7 +299,7 @@
     }
 
     p {
-        @apply w-full mt-5 text-white mb-4 sm:text-xl;
+        @apply w-full mt-5 text-xl font-bold text-white mb-4 sm:text-xl;
 
         span {
             @apply font-bold;

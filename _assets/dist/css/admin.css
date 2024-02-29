@@ -1646,6 +1646,8 @@ h4 span {
   color: rgb(255 255 255 / var(--tw-text-opacity));
   margin-top: 1.25rem;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 @media (max-width: 640px) {
