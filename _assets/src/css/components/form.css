@@ -429,7 +429,7 @@
 
                 .wpcf7-list-item {
                     label {
-                        @apply !flex gap-1 items-center;
+                        @apply !flex gap-1 items-center hover:cursor-pointer;
                     }
 
                     .wpcf7-list-item-label {

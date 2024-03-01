@@ -1896,6 +1896,10 @@ h4 span {
   display: flex !important;
 }
 
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item label:hover {
+  cursor: pointer;
+}
+
 .co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item .wpcf7-list-item-label {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
