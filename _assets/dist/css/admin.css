@@ -1664,6 +1664,13 @@ h4 span {
   margin-bottom: .25rem;
 }
 
+@media (max-width: 992px) {
+  .banner-form .disclaimer.cols p {
+    text-align: left;
+    font-size: .875rem;
+  }
+}
+
 .banner-form input {
   height: 50px;
   border-radius: .25rem;
@@ -1717,10 +1724,11 @@ h4 span {
 
 .banner-form .wpcf7-not-valid-tip {
   --tw-border-opacity: 1;
-  border-color: rgb(224 33 46 / var(--tw-border-opacity));
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(224 33 46 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  border-bottom: 1px solid;
+  margin-bottom: .75rem;
 }
 
 .sidebar-form form p {
@@ -1750,6 +1758,13 @@ h4 span {
 
 .common-class {
   opacity: .5;
+}
+
+@media (max-width: 992px) {
+  .acceptance__wrapper {
+    text-align: left;
+    font-size: .875rem;
+  }
 }
 
 .acceptance__wrapper .wpcf7-form-control-wrap {
@@ -1875,7 +1890,7 @@ h4 span {
   display: flex;
 }
 
-.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item {
+.co-counsel-form .checkbox_label .wpcf7-form-control-wrap .wpcf7-radio .wpcf7-list-item label {
   align-items: center;
   gap: .25rem;
   display: flex !important;
@@ -1944,8 +1959,9 @@ h4 span {
 }
 
 .co-counsel-form .wpcf7-not-valid-tip {
-  border-style: none;
-  padding-bottom: 2rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(224 33 46 / var(--tw-border-opacity));
+  margin-bottom: 2rem;
 }
 
 .faq__text {

@@ -343,5 +343,5 @@ p {
 }
 
 .refferal-page-text {
-    @apply max-w-[1080px] mx-auto pt-24 pb-12 lg:pb-6 lg:pt-12;
+    @apply max-w-[1080px] mx-auto pt-24 pb-12 lg:pb-6 lg:pt-12 sm:pt-0 sm:mt-0;
 }

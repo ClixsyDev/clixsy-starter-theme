@@ -309,7 +309,7 @@
     .disclaimer {
         &.cols {
             p {
-                @apply my-1;
+                @apply mdt:text-left mdt:text-tiny my-1;
             }
         }
     }
@@ -325,8 +325,7 @@
     }
 
     .wpcf7-not-valid-tip {
-        @apply text-white border-button_color;
-        border-bottom: 1px solid;
+        @apply text-white mb-3 border-b border-b-button_color;
     }
 }
 
@@ -349,6 +348,8 @@
 }
 
 .acceptance__wrapper {
+    @apply mdt:text-left mdt:text-tiny;
+
     .wpcf7-form-control-wrap {
         background-color: transparent !important;
     }
@@ -427,7 +428,9 @@
                 @apply flex gap-4 items-center;
 
                 .wpcf7-list-item {
-                    @apply !flex gap-1 items-center;
+                    label {
+                        @apply !flex gap-1 items-center;
+                    }
 
                     .wpcf7-list-item-label {
                         @apply text-white;
@@ -464,6 +467,6 @@
     }
 
     .wpcf7-not-valid-tip {
-        @apply border-none pb-8;
+        @apply mb-8 border-button_color;
     }
 }
