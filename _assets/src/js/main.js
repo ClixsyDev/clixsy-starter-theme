@@ -19,7 +19,7 @@ import { modalDialog, formModal } from './modals';
 // import { gaEventsCF7 } from './ga-events-cf7';
 import { cf7Events } from './cf7-events';
 import { cf7MaskTelValidation } from './cf7-mask-for-tel';
-import { coCounselForm } from './co-counsel-form';
+import { coCounselForm, refferalForm } from './co-counsel-form';
 
 /* FAQ start */
 const initFAQ = () => {
@@ -298,4 +298,5 @@ ready(() => {
     showDisclaimerMultiStepForm();
     coCounselForm();
     formModal();
+    refferalForm();
 });
