@@ -19,7 +19,8 @@ import { modalDialog, formModal } from './modals';
 // import { gaEventsCF7 } from './ga-events-cf7';
 import { cf7Events } from './cf7-events';
 import { cf7MaskTelValidation } from './cf7-mask-for-tel';
-import { coCounselForm, refferalForm } from './co-counsel-form';
+import { coCounselForm } from './co-counsel-form';
+import { refferalForm } from './refferal-form';
 
 /* FAQ start */
 const initFAQ = () => {
