@@ -1,8 +1,9404 @@
-(()=>{function t(t){return t&&t.__esModule?t.default:t}var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{};const i=t=>null!=t,s=(t,e=document)=>{if(null!=t&&"string"==typeof t)try{return e.querySelector(t)||void 0}catch({message:t}){return void console.error(t)}},n=(t,e=document)=>{if(null!=t&&"string"==typeof t)try{return e.querySelectorAll(t)||void 0}catch({message:t}){return void console.error(t)}},r=(t,e=500)=>{t.style.transitionProperty="height, margin, padding",t.style.transitionDuration=e+"ms",t.style.boxSizing="border-box",t.style.height=t.offsetHeight+"px",t.offsetHeight,t.style.overflow="hidden",t.style.height=0,t.style.paddingTop=0,t.style.paddingBottom=0,t.style.marginTop=0,t.style.marginBottom=0,window.setTimeout((()=>{t.style.display="none",t.style.removeProperty("height"),t.style.removeProperty("padding-top"),t.style.removeProperty("padding-bottom"),t.style.removeProperty("margin-top"),t.style.removeProperty("margin-bottom"),t.style.removeProperty("overflow"),t.style.removeProperty("transition-duration"),t.style.removeProperty("transition-property")}),e)},a=(t,e=500,i="block")=>{t.style.removeProperty("display");let s=window.getComputedStyle(t).display;"none"===s&&(s=i),t.style.display=s;let n=t.offsetHeight;t.style.overflow="hidden",t.style.height=0,t.style.paddingTop=0,t.style.paddingBottom=0,t.style.marginTop=0,t.style.marginBottom=0,t.offsetHeight,t.style.boxSizing="border-box",t.style.transitionProperty="height, margin, padding",t.style.transitionDuration=e+"ms",t.style.height=n+"px",t.style.removeProperty("padding-top"),t.style.removeProperty("padding-bottom"),t.style.removeProperty("margin-top"),t.style.removeProperty("margin-bottom"),window.setTimeout((()=>{t.style.removeProperty("height"),t.style.removeProperty("overflow"),t.style.removeProperty("transition-duration"),t.style.removeProperty("transition-property")}),e)},o=function(t,e,i,s){"function"==typeof e&&(s=i,i=e,e=window),s=!!s,(e="string"==typeof e?document.querySelector(e):e)&&e.removeEventListener(t,i,s)};window.innerWidth;window.addEventListener("scroll",(()=>{let t=scrollY;var e,n;imageSelector=s(".animated-image"),i(imageSelector)&&(e=imageSelector,n={transform:`translate3d(0px, ${t}px, 0px) scale(${1+.001*t})`},Object.keys(n).forEach((t=>{e.style[t]=n[t]})))}));const u=()=>{const t=s("#main-menu-button"),e=s(".main-menu");function n(){t.classList.remove("open"),e.classList.remove("open"),r(0),a(),e.scrollTo(0,0),o("click",window,l)}function r(t){e.classList.remove("active-level-1","active-level-2","active-level-3"),-1!==[1,2,3].indexOf(t)&&e.classList.add("active-level-"+t)}function a(t){t=void 0!==t?t:0;var i=e.querySelectorAll("[class*=level-]");Array.from(i).forEach((e=>{var i=e;t<=parseInt(i.getAttribute("data-level"))&&(i.classList.remove("open"),null!==i.querySelector("ul.open")&&i.querySelector("ul.open").classList.remove("open"),i.querySelector(".o-sub.open")&&i.querySelector(".o-sub.open").classList.remove("open"))}))}i(t)&&t.addEventListener("click",(i=>{i.stopPropagation(),i.preventDefault(),t.classList.contains("open")?n():(e.classList.add("open"),t.classList.add("open"),window.addEventListener("click",l),r(1))}));const u=document.querySelectorAll(".o-sub[data-target-alias]");function l(t){(null!==t.target.closest("#main-menu-button")&&null!==t.target.closest(".o-sub")&&null!==t.target.closest("nav.main-menu")||t.target.classList.contains("wrapper"))&&n()}if(null!==u&&Array.from(u).forEach((t=>{t.addEventListener("click",(function(i){let s=t.getAttribute("data-item-title"),n=t.getAttribute("data-url");if(null!=s&&null!=s&&null!=n&&null!=n){let e=t.getAttribute("data-target-alias"),i=document.querySelector(`[data-alias=${e}] .level-url`);i.textContent=s,i.setAttribute("href",n)}i.preventDefault(),i.stopPropagation();let o=this.getAttribute("data-target-alias"),u=this.closest("div[class*=level-]");this.classList.contains("open")?(r(parseInt(u.getAttribute("data-level"))),this.classList.remove("open"),a(parseInt(u.getAttribute("data-level")))):(r(parseInt(u.getAttribute("data-level"))+1),a(parseInt(u.getAttribute("data-level"))),function(t){var i=e.querySelector("[data-alias="+t+"]");if(null!==i.length){var s=i.closest("div[data-level]");s.classList.add("open"),null!==s.querySelector("ul.visible")&&s.querySelector("ul.visible").classList.remove("visible"),i.classList.add("visible")}}(o),null!==u.querySelector(".o-sub[data-target-alias].open")&&u.querySelector(".o-sub[data-target-alias].open").classList.remove("open"),this.classList.add("open"))}))})),null!=e&&null!=e&&null!=e.querySelector(".evt-close-level")){let t=e.querySelectorAll(".evt-close-level");Array.from(t).forEach((t=>{t.addEventListener("click",(function(e){e.stopPropagation(),e.preventDefault();var i=parseInt(t.getAttribute("data-current-level"));r(i-1),a(i-1)}))}))}};
+// modules are defined as an array
+// [ module function, map of requires ]
+//
+// map of requires is short require name -> numeric require
+//
+// anything defined in a previous bundle is accessed via the
+// orig method which is the require for previous bundles
+
+(function (modules, entry, mainEntry, parcelRequireName, globalName) {
+  /* eslint-disable no-undef */
+  var globalObject =
+    typeof globalThis !== 'undefined'
+      ? globalThis
+      : typeof self !== 'undefined'
+      ? self
+      : typeof window !== 'undefined'
+      ? window
+      : typeof global !== 'undefined'
+      ? global
+      : {};
+  /* eslint-enable no-undef */
+
+  // Save the require from previous bundle to this closure if any
+  var previousRequire =
+    typeof globalObject[parcelRequireName] === 'function' &&
+    globalObject[parcelRequireName];
+
+  var cache = previousRequire.cache || {};
+  // Do not use `require` to prevent Webpack from trying to bundle this call
+  var nodeRequire =
+    typeof module !== 'undefined' &&
+    typeof module.require === 'function' &&
+    module.require.bind(module);
+
+  function newRequire(name, jumped) {
+    if (!cache[name]) {
+      if (!modules[name]) {
+        // if we cannot find the module within our internal map or
+        // cache jump to the current global require ie. the last bundle
+        // that was added to the page.
+        var currentRequire =
+          typeof globalObject[parcelRequireName] === 'function' &&
+          globalObject[parcelRequireName];
+        if (!jumped && currentRequire) {
+          return currentRequire(name, true);
+        }
+
+        // If there are other bundles on this page the require from the
+        // previous one is saved to 'previousRequire'. Repeat this as
+        // many times as there are bundles until the module is found or
+        // we exhaust the require chain.
+        if (previousRequire) {
+          return previousRequire(name, true);
+        }
+
+        // Try the node require function if it exists.
+        if (nodeRequire && typeof name === 'string') {
+          return nodeRequire(name);
+        }
+
+        var err = new Error("Cannot find module '" + name + "'");
+        err.code = 'MODULE_NOT_FOUND';
+        throw err;
+      }
+
+      localRequire.resolve = resolve;
+      localRequire.cache = {};
+
+      var module = (cache[name] = new newRequire.Module(name));
+
+      modules[name][0].call(
+        module.exports,
+        localRequire,
+        module,
+        module.exports,
+        this
+      );
+    }
+
+    return cache[name].exports;
+
+    function localRequire(x) {
+      var res = localRequire.resolve(x);
+      return res === false ? {} : newRequire(res);
+    }
+
+    function resolve(x) {
+      var id = modules[name][1][x];
+      return id != null ? id : x;
+    }
+  }
+
+  function Module(moduleName) {
+    this.id = moduleName;
+    this.bundle = newRequire;
+    this.exports = {};
+  }
+
+  newRequire.isParcelRequire = true;
+  newRequire.Module = Module;
+  newRequire.modules = modules;
+  newRequire.cache = cache;
+  newRequire.parent = previousRequire;
+  newRequire.register = function (id, exports) {
+    modules[id] = [
+      function (require, module) {
+        module.exports = exports;
+      },
+      {},
+    ];
+  };
+
+  Object.defineProperty(newRequire, 'root', {
+    get: function () {
+      return globalObject[parcelRequireName];
+    },
+  });
+
+  globalObject[parcelRequireName] = newRequire;
+
+  for (var i = 0; i < entry.length; i++) {
+    newRequire(entry[i]);
+  }
+
+  if (mainEntry) {
+    // Expose entry point to Node, AMD or browser globals
+    // Based on https://github.com/ForbesLindesay/umd/blob/master/template.js
+    var mainExports = newRequire(mainEntry);
+
+    // CommonJS
+    if (typeof exports === 'object' && typeof module !== 'undefined') {
+      module.exports = mainExports;
+
+      // RequireJS
+    } else if (typeof define === 'function' && define.amd) {
+      define(function () {
+        return mainExports;
+      });
+
+      // <script>
+    } else if (globalName) {
+      this[globalName] = mainExports;
+    }
+  }
+})({"cljb4":[function(require,module,exports) {
+"use strict";
+var global = arguments[3];
+var HMR_HOST = null;
+var HMR_PORT = null;
+var HMR_SECURE = false;
+var HMR_ENV_HASH = "d6ea1d42532a7575";
+module.bundle.HMR_BUNDLE_ID = "9cd2d0feeb818713";
+/* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
+import type {
+  HMRAsset,
+  HMRMessage,
+} from '@parcel/reporter-dev-server/src/HMRServer.js';
+interface ParcelRequire {
+  (string): mixed;
+  cache: {|[string]: ParcelModule|};
+  hotData: mixed;
+  Module: any;
+  parent: ?ParcelRequire;
+  isParcelRequire: true;
+  modules: {|[string]: [Function, {|[string]: string|}]|};
+  HMR_BUNDLE_ID: string;
+  root: ParcelRequire;
+}
+interface ParcelModule {
+  hot: {|
+    data: mixed,
+    accept(cb: (Function) => void): void,
+    dispose(cb: (mixed) => void): void,
+    // accept(deps: Array<string> | string, cb: (Function) => void): void,
+    // decline(): void,
+    _acceptCallbacks: Array<(Function) => void>,
+    _disposeCallbacks: Array<(mixed) => void>,
+  |};
+}
+interface ExtensionContext {
+  runtime: {|
+    reload(): void,
+    getURL(url: string): string;
+    getManifest(): {manifest_version: number, ...};
+  |};
+}
+declare var module: {bundle: ParcelRequire, ...};
+declare var HMR_HOST: string;
+declare var HMR_PORT: string;
+declare var HMR_ENV_HASH: string;
+declare var HMR_SECURE: boolean;
+declare var chrome: ExtensionContext;
+declare var browser: ExtensionContext;
+declare var __parcel__import__: (string) => Promise<void>;
+declare var __parcel__importScripts__: (string) => Promise<void>;
+declare var globalThis: typeof self;
+declare var ServiceWorkerGlobalScope: Object;
+*/ var OVERLAY_ID = "__parcel__error__overlay__";
+var OldModule = module.bundle.Module;
+function Module(moduleName) {
+    OldModule.call(this, moduleName);
+    this.hot = {
+        data: module.bundle.hotData,
+        _acceptCallbacks: [],
+        _disposeCallbacks: [],
+        accept: function(fn) {
+            this._acceptCallbacks.push(fn || function() {});
+        },
+        dispose: function(fn) {
+            this._disposeCallbacks.push(fn);
+        }
+    };
+    module.bundle.hotData = undefined;
+}
+module.bundle.Module = Module;
+var checkedAssets, acceptedAssets, assetsToAccept /*: Array<[ParcelRequire, string]> */ ;
+function getHostname() {
+    return HMR_HOST || (location.protocol.indexOf("http") === 0 ? location.hostname : "localhost");
+}
+function getPort() {
+    return HMR_PORT || location.port;
+} // eslint-disable-next-line no-redeclare
+var parent = module.bundle.parent;
+if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
+    var hostname = getHostname();
+    var port = getPort();
+    var protocol = HMR_SECURE || location.protocol == "https:" && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? "wss" : "ws";
+    var ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/"); // Web extension context
+    var extCtx = typeof chrome === "undefined" ? typeof browser === "undefined" ? null : browser : chrome; // Safari doesn't support sourceURL in error stacks.
+    // eval may also be disabled via CSP, so do a quick check.
+    var supportsSourceURL = false;
+    try {
+        (0, eval)('throw new Error("test"); //# sourceURL=test.js');
+    } catch (err) {
+        supportsSourceURL = err.stack.includes("test.js");
+    } // $FlowFixMe
+    ws.onmessage = async function(event) {
+        checkedAssets = {} /*: {|[string]: boolean|} */ ;
+        acceptedAssets = {} /*: {|[string]: boolean|} */ ;
+        assetsToAccept = [];
+        var data = JSON.parse(event.data);
+        if (data.type === "update") {
+            // Remove error overlay if there is one
+            if (typeof document !== "undefined") removeErrorOverlay();
+            let assets = data.assets.filter((asset)=>asset.envHash === HMR_ENV_HASH); // Handle HMR Update
+            let handled = assets.every((asset)=>{
+                return asset.type === "css" || asset.type === "js" && hmrAcceptCheck(module.bundle.root, asset.id, asset.depsByBundle);
+            });
+            if (handled) {
+                console.clear(); // Dispatch custom event so other runtimes (e.g React Refresh) are aware.
+                if (typeof window !== "undefined" && typeof CustomEvent !== "undefined") window.dispatchEvent(new CustomEvent("parcelhmraccept"));
+                await hmrApplyUpdates(assets);
+                for(var i = 0; i < assetsToAccept.length; i++){
+                    var id = assetsToAccept[i][1];
+                    if (!acceptedAssets[id]) hmrAcceptRun(assetsToAccept[i][0], id);
+                }
+            } else fullReload();
+        }
+        if (data.type === "error") {
+            // Log parcel errors to console
+            for (let ansiDiagnostic of data.diagnostics.ansi){
+                let stack = ansiDiagnostic.codeframe ? ansiDiagnostic.codeframe : ansiDiagnostic.stack;
+                console.error("\uD83D\uDEA8 [parcel]: " + ansiDiagnostic.message + "\n" + stack + "\n\n" + ansiDiagnostic.hints.join("\n"));
+            }
+            if (typeof document !== "undefined") {
+                // Render the fancy html overlay
+                removeErrorOverlay();
+                var overlay = createErrorOverlay(data.diagnostics.html); // $FlowFixMe
+                document.body.appendChild(overlay);
+            }
+        }
+    };
+    ws.onerror = function(e) {
+        console.error(e.message);
+    };
+    ws.onclose = function() {
+        console.warn("[parcel] \uD83D\uDEA8 Connection to the HMR server was lost");
+    };
+}
+function removeErrorOverlay() {
+    var overlay = document.getElementById(OVERLAY_ID);
+    if (overlay) {
+        overlay.remove();
+        console.log("[parcel] ✨ Error resolved");
+    }
+}
+function createErrorOverlay(diagnostics) {
+    var overlay = document.createElement("div");
+    overlay.id = OVERLAY_ID;
+    let errorHTML = '<div style="background: black; opacity: 0.85; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; font-family: Menlo, Consolas, monospace; z-index: 9999;">';
+    for (let diagnostic of diagnostics){
+        let stack = diagnostic.frames.length ? diagnostic.frames.reduce((p, frame)=>{
+            return `${p}
+<a href="/__parcel_launch_editor?file=${encodeURIComponent(frame.location)}" style="text-decoration: underline; color: #888" onclick="fetch(this.href); return false">${frame.location}</a>
+${frame.code}`;
+        }, "") : diagnostic.stack;
+        errorHTML += `
+      <div>
+        <div style="font-size: 18px; font-weight: bold; margin-top: 20px;">
+          🚨 ${diagnostic.message}
+        </div>
+        <pre>${stack}</pre>
+        <div>
+          ${diagnostic.hints.map((hint)=>"<div>\uD83D\uDCA1 " + hint + "</div>").join("")}
+        </div>
+        ${diagnostic.documentation ? `<div>📝 <a style="color: violet" href="${diagnostic.documentation}" target="_blank">Learn more</a></div>` : ""}
+      </div>
+    `;
+    }
+    errorHTML += "</div>";
+    overlay.innerHTML = errorHTML;
+    return overlay;
+}
+function fullReload() {
+    if ("reload" in location) location.reload();
+    else if (extCtx && extCtx.runtime && extCtx.runtime.reload) extCtx.runtime.reload();
+}
+function getParents(bundle, id) /*: Array<[ParcelRequire, string]> */ {
+    var modules = bundle.modules;
+    if (!modules) return [];
+    var parents = [];
+    var k, d, dep;
+    for(k in modules)for(d in modules[k][1]){
+        dep = modules[k][1][d];
+        if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) parents.push([
+            bundle,
+            k
+        ]);
+    }
+    if (bundle.parent) parents = parents.concat(getParents(bundle.parent, id));
+    return parents;
+}
+function updateLink(link) {
+    var newLink = link.cloneNode();
+    newLink.onload = function() {
+        if (link.parentNode !== null) // $FlowFixMe
+        link.parentNode.removeChild(link);
+    };
+    newLink.setAttribute("href", link.getAttribute("href").split("?")[0] + "?" + Date.now()); // $FlowFixMe
+    link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+    if (cssTimeout) return;
+    cssTimeout = setTimeout(function() {
+        var links = document.querySelectorAll('link[rel="stylesheet"]');
+        for(var i = 0; i < links.length; i++){
+            // $FlowFixMe[incompatible-type]
+            var href = links[i].getAttribute("href");
+            var hostname = getHostname();
+            var servedFromHMRServer = hostname === "localhost" ? new RegExp("^(https?:\\/\\/(0.0.0.0|127.0.0.1)|localhost):" + getPort()).test(href) : href.indexOf(hostname + ":" + getPort());
+            var absolute = /^https?:\/\//i.test(href) && href.indexOf(location.origin) !== 0 && !servedFromHMRServer;
+            if (!absolute) updateLink(links[i]);
+        }
+        cssTimeout = null;
+    }, 50);
+}
+function hmrDownload(asset) {
+    if (asset.type === "js") {
+        if (typeof document !== "undefined") {
+            let script = document.createElement("script");
+            script.src = asset.url + "?t=" + Date.now();
+            if (asset.outputFormat === "esmodule") script.type = "module";
+            return new Promise((resolve, reject)=>{
+                var _document$head;
+                script.onload = ()=>resolve(script);
+                script.onerror = reject;
+                (_document$head = document.head) === null || _document$head === void 0 || _document$head.appendChild(script);
+            });
+        } else if (typeof importScripts === "function") {
+            // Worker scripts
+            if (asset.outputFormat === "esmodule") return import(asset.url + "?t=" + Date.now());
+            else return new Promise((resolve, reject)=>{
+                try {
+                    importScripts(asset.url + "?t=" + Date.now());
+                    resolve();
+                } catch (err) {
+                    reject(err);
+                }
+            });
+        }
+    }
+}
+async function hmrApplyUpdates(assets) {
+    global.parcelHotUpdate = Object.create(null);
+    let scriptsToRemove;
+    try {
+        // If sourceURL comments aren't supported in eval, we need to load
+        // the update from the dev server over HTTP so that stack traces
+        // are correct in errors/logs. This is much slower than eval, so
+        // we only do it if needed (currently just Safari).
+        // https://bugs.webkit.org/show_bug.cgi?id=137297
+        // This path is also taken if a CSP disallows eval.
+        if (!supportsSourceURL) {
+            let promises = assets.map((asset)=>{
+                var _hmrDownload;
+                return (_hmrDownload = hmrDownload(asset)) === null || _hmrDownload === void 0 ? void 0 : _hmrDownload.catch((err)=>{
+                    // Web extension bugfix for Chromium
+                    // https://bugs.chromium.org/p/chromium/issues/detail?id=1255412#c12
+                    if (extCtx && extCtx.runtime && extCtx.runtime.getManifest().manifest_version == 3) {
+                        if (typeof ServiceWorkerGlobalScope != "undefined" && global instanceof ServiceWorkerGlobalScope) {
+                            extCtx.runtime.reload();
+                            return;
+                        }
+                        asset.url = extCtx.runtime.getURL("/__parcel_hmr_proxy__?url=" + encodeURIComponent(asset.url + "?t=" + Date.now()));
+                        return hmrDownload(asset);
+                    }
+                    throw err;
+                });
+            });
+            scriptsToRemove = await Promise.all(promises);
+        }
+        assets.forEach(function(asset) {
+            hmrApply(module.bundle.root, asset);
+        });
+    } finally{
+        delete global.parcelHotUpdate;
+        if (scriptsToRemove) scriptsToRemove.forEach((script)=>{
+            if (script) {
+                var _document$head2;
+                (_document$head2 = document.head) === null || _document$head2 === void 0 || _document$head2.removeChild(script);
+            }
+        });
+    }
+}
+function hmrApply(bundle, asset) {
+    var modules = bundle.modules;
+    if (!modules) return;
+    if (asset.type === "css") reloadCSS();
+    else if (asset.type === "js") {
+        let deps = asset.depsByBundle[bundle.HMR_BUNDLE_ID];
+        if (deps) {
+            if (modules[asset.id]) {
+                // Remove dependencies that are removed and will become orphaned.
+                // This is necessary so that if the asset is added back again, the cache is gone, and we prevent a full page reload.
+                let oldDeps = modules[asset.id][1];
+                for(let dep in oldDeps)if (!deps[dep] || deps[dep] !== oldDeps[dep]) {
+                    let id = oldDeps[dep];
+                    let parents = getParents(module.bundle.root, id);
+                    if (parents.length === 1) hmrDelete(module.bundle.root, id);
+                }
+            }
+            if (supportsSourceURL) // Global eval. We would use `new Function` here but browser
+            // support for source maps is better with eval.
+            (0, eval)(asset.output);
+             // $FlowFixMe
+            let fn = global.parcelHotUpdate[asset.id];
+            modules[asset.id] = [
+                fn,
+                deps
+            ];
+        } else if (bundle.parent) hmrApply(bundle.parent, asset);
+    }
+}
+function hmrDelete(bundle, id) {
+    let modules = bundle.modules;
+    if (!modules) return;
+    if (modules[id]) {
+        // Collect dependencies that will become orphaned when this module is deleted.
+        let deps = modules[id][1];
+        let orphans = [];
+        for(let dep in deps){
+            let parents = getParents(module.bundle.root, deps[dep]);
+            if (parents.length === 1) orphans.push(deps[dep]);
+        } // Delete the module. This must be done before deleting dependencies in case of circular dependencies.
+        delete modules[id];
+        delete bundle.cache[id]; // Now delete the orphans.
+        orphans.forEach((id)=>{
+            hmrDelete(module.bundle.root, id);
+        });
+    } else if (bundle.parent) hmrDelete(bundle.parent, id);
+}
+function hmrAcceptCheck(bundle, id, depsByBundle) {
+    if (hmrAcceptCheckOne(bundle, id, depsByBundle)) return true;
+     // Traverse parents breadth first. All possible ancestries must accept the HMR update, or we'll reload.
+    let parents = getParents(module.bundle.root, id);
+    let accepted = false;
+    while(parents.length > 0){
+        let v = parents.shift();
+        let a = hmrAcceptCheckOne(v[0], v[1], null);
+        if (a) // If this parent accepts, stop traversing upward, but still consider siblings.
+        accepted = true;
+        else {
+            // Otherwise, queue the parents in the next level upward.
+            let p = getParents(module.bundle.root, v[1]);
+            if (p.length === 0) {
+                // If there are no parents, then we've reached an entry without accepting. Reload.
+                accepted = false;
+                break;
+            }
+            parents.push(...p);
+        }
+    }
+    return accepted;
+}
+function hmrAcceptCheckOne(bundle, id, depsByBundle) {
+    var modules = bundle.modules;
+    if (!modules) return;
+    if (depsByBundle && !depsByBundle[bundle.HMR_BUNDLE_ID]) {
+        // If we reached the root bundle without finding where the asset should go,
+        // there's nothing to do. Mark as "accepted" so we don't reload the page.
+        if (!bundle.parent) return true;
+        return hmrAcceptCheck(bundle.parent, id, depsByBundle);
+    }
+    if (checkedAssets[id]) return true;
+    checkedAssets[id] = true;
+    var cached = bundle.cache[id];
+    assetsToAccept.push([
+        bundle,
+        id
+    ]);
+    if (!cached || cached.hot && cached.hot._acceptCallbacks.length) return true;
+}
+function hmrAcceptRun(bundle, id) {
+    var cached = bundle.cache[id];
+    bundle.hotData = {};
+    if (cached && cached.hot) cached.hot.data = bundle.hotData;
+    if (cached && cached.hot && cached.hot._disposeCallbacks.length) cached.hot._disposeCallbacks.forEach(function(cb) {
+        cb(bundle.hotData);
+    });
+    delete bundle.cache[id];
+    bundle(id);
+    cached = bundle.cache[id];
+    if (cached && cached.hot && cached.hot._acceptCallbacks.length) cached.hot._acceptCallbacks.forEach(function(cb) {
+        var assetsToAlsoAccept = cb(function() {
+            return getParents(module.bundle.root, id);
+        });
+        if (assetsToAlsoAccept && assetsToAccept.length) // $FlowFixMe[method-unbinding]
+        assetsToAccept.push.apply(assetsToAccept, assetsToAlsoAccept);
+    });
+    acceptedAssets[id] = true;
+}
+
+},{}],"4R5xk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "showDisclaimerMultiStepForm", ()=>showDisclaimerMultiStepForm);
+var _menu = require("./menu");
+var _header = require("./header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _utils = require("./utils");
+var _sliders = require("./sliders");
+var _formEntry = require("./form_entry");
+var _buttonHover = require("./button-hover");
+var _toc = require("./toc");
+var _gclid = require("./gclid");
+var _thankYouMessages = require("./thank-you-messages");
+var _aosAnimations = require("./aos-animations");
+var _smoothSiteScrolling = require("./smooth-site-scrolling");
+var _modals = require("./modals");
+// import { gaEventsCF7 } from './ga-events-cf7';
+var _cf7Events = require("./cf7-events");
+var _cf7MaskForTel = require("./cf7-mask-for-tel");
+var _coCounselForm = require("./co-counsel-form");
+var _refferalForm = require("./refferal-form");
+/* FAQ start */ const initFAQ = ()=>{
+    const acc = (0, _utils.getElements)(".faq__header");
+    if (acc && acc.length) for(let i = 0; i < acc.length; i++)acc[i].addEventListener("click", function() {
+        if (this.parentNode.classList.contains("faq__position__active")) {
+            this.nextElementSibling.style.maxHeight = null;
+            this.parentNode.classList.remove("faq__position__active");
+        } else {
+            for(let j = 0; j < acc.length; j++){
+                acc[j].parentNode.classList.remove("faq__position__active");
+                acc[j].nextElementSibling.style.maxHeight = null;
+            }
+            this.parentNode.classList.add("faq__position__active");
+            const panel = this.nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+    let moreBtn = (0, _utils.getElement)(".faq-without-image__btn");
+    if ((0, _utils.ifSelectorExist)(moreBtn)) moreBtn.addEventListener("click", ()=>{
+        let hiddenFaqImageLeft = (0, _utils.getElement)(".hidden_faq_image_left");
+        moreBtn.textContent = "- show less";
+        if (moreBtn.classList.contains("clicked")) {
+            hiddenFaqImageLeft.classList.add("hidden");
+            moreBtn.textContent = "+ show more...";
+            moreBtn.classList.remove("clicked");
+        } else if ((0, _utils.ifSelectorExist)(hiddenFaqImageLeft)) {
+            moreBtn.classList.add("clicked");
+            hiddenFaqImageLeft.classList.remove("hidden");
+        }
+    });
+};
+/* FAQ end */ // Show more FAQ item
+const btnMore = ()=>{
+    let hiddenBlock = document.querySelector(".hidden-text");
+    let btn = document.querySelector(".more-btn");
+    let faqMore = ()=>{
+        let hiddenBlock = document.querySelector(".hidden-faqs");
+        let btn = document.querySelector(".more-btn-faq");
+        if (btn) btn.addEventListener("click", ()=>{
+            hiddenBlock.classList.toggle("hidden");
+            event.preventDefault();
+            if (hiddenBlock.classList.contains("hidden")) btn.textContent = "read more...";
+            else btn.textContent = "show less...";
+        });
+    };
+};
+// Text education btnMore
+const btnMoreEducation = ()=>{
+    let hiddenBlock = document.querySelector(".hidden-text-education");
+    let btn = document.querySelector(".more-btn-education");
+    if ((0, _utils.ifSelectorExist)(btn) && (0, _utils.ifSelectorExist)(hiddenBlock)) btn.addEventListener("click", (event1)=>{
+        event1.preventDefault();
+        hiddenBlock.classList.toggle("hidden");
+        console.log("clicking");
+        if (hiddenBlock.classList.contains("hidden")) btn.textContent = "read more...";
+        else btn.textContent = "show less...";
+    });
+};
+// Scroll to [data-go-to] attr
+const nextArrow = ()=>{
+    const arrows = Array.from(document.querySelectorAll("[data-go-to]"));
+    arrows.map((arrow)=>{
+        arrow.addEventListener("click", (e)=>{
+            e.preventDefault();
+            const selector = arrow.getAttribute("data-go-to");
+            window.scrollTo({
+                top: document.querySelector(selector).offsetTop - document.querySelector("header").offsetHeight,
+                behavior: "smooth"
+            });
+        });
+    });
+};
+// Show form after submit dropdown in <!-- welcome-banner-design__two.php -->
+const secondStep = ()=>{
+    let btnForm = document.querySelector(".send_form_btn");
+    let secondStep = document.querySelector(".second-step-form");
+    let nextStep = document.querySelector(".next_step");
+    if ((0, _utils.ifSelectorExist)(nextStep)) nextStep.addEventListener("click", ()=>{
+        nextStep.style.display = "none";
+        secondStep.classList.remove("hidden");
+        btnForm.classList.remove("hidden-btn");
+    });
+};
+// Show more content in <!-- text-form-design__two--template.php -->
+const btnMoreFormDesignTwo = ()=>{
+    fixedHeightContainerSelector = (0, _utils.getElements)(".fixedHeightContainer");
+    if ((0, _utils.ifSelectorExist)(fixedHeightContainerSelector)) Array.from(fixedHeightContainerSelector).forEach((item)=>{
+        fixedHeightElemSelector = (0, _utils.getElement)(".fixedHeight", item);
+        toggleFixedHeight = (0, _utils.getElement)(".toggleFixedHeight", item);
+        innerContentHeight = (0, _utils.getElement)(".innerContentHeight", item);
+        checkHeight = innerContentHeight.offsetHeight > parseInt(fixedHeightElemSelector.style.maxHeight);
+        console.log(innerContentHeight.offsetHeight + " || " + parseInt(fixedHeightElemSelector.style.maxHeight));
+        if ((0, _utils.ifSelectorExist)(fixedHeightContainerSelector) && (0, _utils.ifSelectorExist)(toggleFixedHeight) && checkHeight) {
+            fixedHeightElemSelector.classList.add("overflow-hidden", "hidden-with-shadow");
+            toggleFixedHeight.classList.remove("hidden");
+            toggleFixedHeight.addEventListener("click", ()=>{
+                if (fixedHeightElemSelector.classList.contains("overflow-hidden")) {
+                    fixedHeightElemSelector.classList.remove("overflow-hidden", "hidden-with-shadow");
+                    fixedHeightElemSelector.style.maxHeight = "1000000px";
+                    console.log(fixedHeightElemSelector);
+                    toggleFixedHeight.textContent = "Show less";
+                    console.log("clicked 1");
+                } else {
+                    fixedHeightElemSelector.classList.add("overflow-hidden", "hidden-with-shadow");
+                    fixedHeightElemSelector.style.maxHeight = "580px";
+                    toggleFixedHeight.textContent = "Read more...";
+                }
+            });
+        }
+    });
+};
+const preventRelatedVideoYT = ()=>{
+    if (window.hideYTActivated) return;
+    if (typeof YT === "undefined") {
+        let tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName("script")[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+    let onYouTubeIframeAPIReadyCallbacks = [];
+    for (let playerWrap of document.querySelectorAll(".hytPlayerWrap")){
+        let playerFrame = playerWrap.querySelector("iframe");
+        let onPlayerStateChange = function(event1) {
+            if (event1.data == YT.PlayerState.ENDED) playerWrap.classList.add("ended");
+            else if (event1.data == YT.PlayerState.PAUSED) playerWrap.classList.add("paused");
+            else if (event1.data == YT.PlayerState.PLAYING) {
+                playerWrap.classList.remove("ended");
+                playerWrap.classList.remove("paused");
+            }
+        };
+        let player;
+        onYouTubeIframeAPIReadyCallbacks.push(function() {
+            player = new YT.Player(playerFrame, {
+                events: {
+                    onStateChange: onPlayerStateChange
+                }
+            });
+        });
+        playerWrap.addEventListener("click", function() {
+            let playerState = player.getPlayerState();
+            if (playerState == YT.PlayerState.ENDED) player.seekTo(0);
+            else if (playerState == YT.PlayerState.PAUSED) player.playVideo();
+        });
+    }
+    window.onYouTubeIframeAPIReady = function() {
+        for (let callback of onYouTubeIframeAPIReadyCallbacks)callback();
+    };
+    window.hideYTActivated = true;
+};
+const toggleAnimation = ()=>{
+    const repeatAnimation = (0, _utils.getElements)(".repeat-animation");
+    if ((0, _utils.ifSelectorExist)(repeatAnimation)) Array.from(repeatAnimation).forEach((item)=>{
+        setInterval(function() {
+            item.classList.add("aos-animate");
+            setTimeout(function() {
+                item.classList.remove("aos-animate");
+            }, 7000); // stay on screen for 7 seconds
+        }, 8500); // trigger the same animation after 1.5 seconds
+    });
+};
+const showDisclaimerMultiStepForm = ()=>{
+    const nextStepBtn = (0, _utils.getElement)(".next_step");
+    if ((0, _utils.ifSelectorExist)(nextStepBtn)) nextStepBtn.addEventListener("click", ()=>{
+        const disclaimer = (0, _utils.getElement)(".disclaimer_multistep_form");
+        disclaimer.classList.remove("hidden");
+    });
+};
+(0, _utils.ready)(()=>{
+    (0, _cf7MaskForTel.cf7MaskTelValidation)();
+    (0, _cf7Events.cf7Events)();
+    (0, _menu.mainMenu)();
+    (0, _menu.dropdownMenu)();
+    (0, _headerDefault.default)();
+    (0, _formEntry.formEntry)();
+    (0, _buttonHover.hoverOnButton)();
+    btnMore();
+    btnMoreEducation();
+    initFAQ();
+    (0, _toc.tocAnchor)();
+    (0, _thankYouMessages.sentNewMessage)(".sidebar-form");
+    (0, _thankYouMessages.sentNewMessage)(".attorney-group__form");
+    (0, _thankYouMessages.sentNewMessage)(".form");
+    (0, _thankYouMessages.sentNewMessage)(".how_can_help_form");
+    (0, _thankYouMessages.sentNewMessage)(".big-auto-footer-form");
+    (0, _gclid.gclid)();
+    secondStep();
+    nextArrow();
+    btnMoreFormDesignTwo();
+    (0, _aosAnimations.aosAnimations)();
+    (0, _smoothSiteScrolling.smoothScrollFn)();
+    (0, _modals.modalDialog)();
+    // gaEventsCF7();
+    (0, _sliders.initSliders)();
+    preventRelatedVideoYT();
+    toggleAnimation();
+    showDisclaimerMultiStepForm();
+    (0, _coCounselForm.coCounselForm)();
+    (0, _modals.formModal)();
+    (0, _refferalForm.refferalForm)();
+});
+
+},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./gclid":"bvTDu","./thank-you-messages":"9IJ1s","./aos-animations":"3V3c2","./smooth-site-scrolling":"adhDo","./modals":"axBGC","./cf7-events":"3NM30","./cf7-mask-for-tel":"dStXI","./co-counsel-form":"keO6v","./refferal-form":"8gVxI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "mainMenu", ()=>mainMenu);
+parcelHelpers.export(exports, "dropdownMenu", ()=>dropdownMenu);
+// Main Menu
+var _utils = require("./utils");
+const mainMenu = ()=>{
+    const menuButton = (0, _utils.getElement)("#main-menu-button");
+    const menu = (0, _utils.getElement)(".main-menu");
+    function menuOpen() {
+        menu.classList.add("open");
+        menuButton.classList.add("open");
+        window.addEventListener("click", closeOnBackgroundClick);
+    }
+    function menuClose() {
+        menuButton.classList.remove("open");
+        menu.classList.remove("open");
+        setMenuLevel(0);
+        menuCloseSubmenus();
+        menu.scrollTo(0, 0);
+        (0, _utils.off)("click", window, closeOnBackgroundClick);
+    }
+    function setMenuLevel(n) {
+        menu.classList.remove("active-level-1", "active-level-2", "active-level-3");
+        function inArray(needle, haystack) {
+            if (haystack.indexOf(needle) !== -1) return true;
+            else return false;
+        }
+        if (inArray(n, [
+            1,
+            2,
+            3
+        ])) menu.classList.add("active-level-" + n);
+    }
+    function menuOpenSubmenu(submenuAlias) {
+        var submenu = menu.querySelector("[data-alias=" + submenuAlias + "]");
+        if (submenu.length !== null) {
+            var levelBlock = submenu.closest("div[data-level]");
+            levelBlock.classList.add("open");
+            if (levelBlock.querySelector("ul.visible") !== null) levelBlock.querySelector("ul.visible").classList.remove("visible");
+            submenu.classList.add("visible");
+        }
+    }
+    function menuCloseSubmenus(closeLevels) {
+        closeLevels = typeof closeLevels !== "undefined" ? closeLevels : 0;
+        var levelBlocks = menu.querySelectorAll("[class*=level-]");
+        Array.from(levelBlocks).forEach((elem)=>{
+            var levelBlock = elem;
+            if (closeLevels <= parseInt(levelBlock.getAttribute("data-level"))) {
+                levelBlock.classList.remove("open");
+                if (levelBlock.querySelector("ul.open") !== null) levelBlock.querySelector("ul.open").classList.remove("open");
+                if (levelBlock.querySelector(".o-sub.open")) levelBlock.querySelector(".o-sub.open").classList.remove("open");
+            }
+        });
+    }
+    if ((0, _utils.ifSelectorExist)(menuButton)) menuButton.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        e.preventDefault();
+        if (menuButton.classList.contains("open")) menuClose();
+        else {
+            menuOpen();
+            setMenuLevel(1);
+        }
+    });
+    const subMenus = document.querySelectorAll(".o-sub[data-target-alias]");
+    // click on subMenu
+    if (subMenus !== null) Array.from(subMenus).forEach((link)=>{
+        link.addEventListener("click", function(event) {
+            let parentTitle = link.getAttribute("data-item-title");
+            let parentUrl = link.getAttribute("data-url");
+            if (parentTitle != null && parentTitle != undefined && parentUrl != undefined && parentUrl != null) {
+                let parentAlias = link.getAttribute("data-target-alias");
+                let levelTitle = document.querySelector(`[data-alias=${parentAlias}] .level-url`);
+                levelTitle.textContent = parentTitle;
+                levelTitle.setAttribute("href", parentUrl);
+            }
+            event.preventDefault();
+            event.stopPropagation();
+            let elementAlias = this.getAttribute("data-target-alias"), levelBlock = this.closest("div[class*=level-]");
+            if (this.classList.contains("open")) {
+                setMenuLevel(parseInt(levelBlock.getAttribute("data-level")));
+                this.classList.remove("open");
+                menuCloseSubmenus(parseInt(levelBlock.getAttribute("data-level")));
+            } else {
+                setMenuLevel(parseInt(levelBlock.getAttribute("data-level")) + 1);
+                menuCloseSubmenus(parseInt(levelBlock.getAttribute("data-level")));
+                menuOpenSubmenu(elementAlias);
+                if (levelBlock.querySelector(".o-sub[data-target-alias].open") !== null) levelBlock.querySelector(".o-sub[data-target-alias].open").classList.remove("open");
+                this.classList.add("open");
+            }
+        });
+    });
+    // Close menu by click on background
+    function closeOnBackgroundClick(e) {
+        if (e.target.closest("#main-menu-button") !== null && e.target.closest(".o-sub") !== null && e.target.closest("nav.main-menu") !== null || e.target.classList.contains("wrapper")) menuClose();
+    }
+    // Mobile back buttons
+    if (menu != null && menu != undefined && menu.querySelector(".evt-close-level") != null) {
+        let closeSubmenuArrowSelector = menu.querySelectorAll(".evt-close-level");
+        Array.from(closeSubmenuArrowSelector).forEach((item)=>{
+            item.addEventListener("click", function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                var currentLevel = parseInt(item.getAttribute("data-current-level"));
+                setMenuLevel(currentLevel - 1);
+                menuCloseSubmenus(currentLevel - 1);
+            });
+        });
+    }
+};
+const dropdownMenu = ()=>{
+    let headerSelector = (0, _utils.getElement)("header");
+    if ((0, _utils.ifSelectorExist)(headerSelector)) {
+        let itemsHasChildren = (0, _utils.getElements)(".menu-item-has-children");
+        if ((0, _utils.ifSelectorExist)(itemsHasChildren)) Array.from(itemsHasChildren).forEach((item)=>{
+            let subMenuSelector = (0, _utils.getElement)(".sub-menu", item);
+            if ((0, _utils.ifSelectorExist)(subMenuSelector)) subMenuSelector.style.top = headerSelector.clientHeight + "px";
+        });
+    }
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"blFj3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ifSelectorExist", ()=>ifSelectorExist);
+parcelHelpers.export(exports, "getElement", ()=>getElement);
+parcelHelpers.export(exports, "getElements", ()=>getElements);
+parcelHelpers.export(exports, "style", ()=>style);
+parcelHelpers.export(exports, "css", ()=>css);
+parcelHelpers.export(exports, "ready", ()=>ready);
+parcelHelpers.export(exports, "stopAndPrevent", ()=>stopAndPrevent);
+parcelHelpers.export(exports, "slideUp", ()=>slideUp);
+parcelHelpers.export(exports, "slideDown", ()=>slideDown);
+parcelHelpers.export(exports, "slideToggle", ()=>slideToggle);
+parcelHelpers.export(exports, "off", ()=>off);
+parcelHelpers.export(exports, "humanDate", ()=>humanDate);
+parcelHelpers.export(exports, "setCookie", ()=>setCookie);
+parcelHelpers.export(exports, "getCookie", ()=>getCookie);
+parcelHelpers.export(exports, "eraseCookie", ()=>eraseCookie);
+parcelHelpers.export(exports, "windowsWidth", ()=>windowsWidth);
+parcelHelpers.export(exports, "scrollTo", ()=>scrollTo);
+parcelHelpers.export(exports, "fadeOut", ()=>fadeOut);
+parcelHelpers.export(exports, "fadeIn", ()=>fadeIn);
+parcelHelpers.export(exports, "listAllEventListeners", ()=>listAllEventListeners);
+const ifSelectorExist = (selector)=>{
+    if (selector !== null && selector !== undefined) return true;
+    else return false;
+};
+const getElement = (el, wrap = document)=>{
+    if (el == null) return undefined;
+    if (typeof el === "string") try {
+        return wrap.querySelector(el) || undefined;
+    } catch ({ message  }) {
+        console.error(message);
+        return undefined;
+    }
+};
+const getElements = (el, wrap = document)=>{
+    if (el == null) return undefined;
+    if (typeof el === "string") try {
+        return wrap.querySelectorAll(el) || undefined;
+    } catch ({ message  }) {
+        console.error(message);
+        return undefined;
+    }
+};
+const style = (el, property)=>window.getComputedStyle(el).getPropertyValue(property);
+const css = (el, css)=>{
+    Object.keys(css).forEach((prop)=>{
+        el.style[prop] = css[prop];
+    });
+};
+const ready = (callback)=>{
+    if (document.readyState !== "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+};
+const stopAndPrevent = (e)=>{
+    e.cancelable !== false && e.preventDefault();
+    e.stopPropagation();
+};
+const slideUp = (target, duration = 500)=>{
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + "ms";
+    target.style.boxSizing = "border-box";
+    target.style.height = target.offsetHeight + "px";
+    target.offsetHeight;
+    target.style.overflow = "hidden";
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(()=>{
+        target.style.display = "none";
+        target.style.removeProperty("height");
+        target.style.removeProperty("padding-top");
+        target.style.removeProperty("padding-bottom");
+        target.style.removeProperty("margin-top");
+        target.style.removeProperty("margin-bottom");
+        target.style.removeProperty("overflow");
+        target.style.removeProperty("transition-duration");
+        target.style.removeProperty("transition-property");
+    //alert("!");
+    }, duration);
+};
+const slideDown = (target, duration = 500, displayStyle = "block")=>{
+    target.style.removeProperty("display");
+    let display = window.getComputedStyle(target).display;
+    if (display === "none") display = displayStyle;
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = "hidden";
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = "border-box";
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + "ms";
+    target.style.height = height + "px";
+    target.style.removeProperty("padding-top");
+    target.style.removeProperty("padding-bottom");
+    target.style.removeProperty("margin-top");
+    target.style.removeProperty("margin-bottom");
+    window.setTimeout(()=>{
+        target.style.removeProperty("height");
+        target.style.removeProperty("overflow");
+        target.style.removeProperty("transition-duration");
+        target.style.removeProperty("transition-property");
+    }, duration);
+};
+const slideToggle = (target, duration = 500, displayStyle = "block")=>{
+    if (window.getComputedStyle(target).display === "none") return slideDown(target, duration, displayStyle);
+    else return slideUp(target, duration);
+};
+const off = function(event, elem, callback, capture) {
+    if (typeof elem === "function") {
+        capture = callback;
+        callback = elem;
+        elem = window;
+    }
+    capture = capture ? true : false;
+    elem = typeof elem === "string" ? document.querySelector(elem) : elem;
+    if (!elem) return;
+    elem.removeEventListener(event, callback, capture);
+};
+const humanDate = (date)=>{
+    let dateObj = void 0;
+    if (typeof date === "string") dateObj = new Date(date);
+    else dateObj = date;
+    let options = {
+        month: "long",
+        day: "numeric"
+    };
+    let dateYear = dateObj.toLocaleString("latn", {
+        year: "numeric"
+    });
+    let dateMonth = dateObj.toLocaleString("latn", {
+        month: "numeric"
+    });
+    let dateDay = dateObj.toLocaleString("latn", {
+        day: "numeric"
+    });
+    let dateHour = dateObj.getHours();
+    let dateMinute = dateObj.getMinutes();
+    let now = new Date();
+    let nowYear = now.toLocaleString("latn", {
+        year: "numeric"
+    });
+    let nowMonth = now.toLocaleString("latn", {
+        month: "numeric"
+    });
+    let nowDay = now.toLocaleString("latn", {
+        day: "numeric"
+    });
+    let nowHour = now.getHours();
+    let nowMinute = now.getMinutes();
+    // set year only if not the same year as now
+    if (dateYear !== nowYear) options.year = "numeric";
+    // if today, display relative time
+    if (dateYear === nowYear && dateMonth === nowMonth && dateDay === nowDay) {
+        let diffHour = nowHour - dateHour;
+        let diffMinute = Math.abs(nowMinute - dateMinute);
+        if (diffHour === 0 && diffMinute > 30) return "1 h";
+        else if (diffHour === 0) return diffMinute + " min";
+        else if (diffMinute >= 30) return diffHour + 1 + " h";
+        return diffHour + " h";
+    }
+    return dateObj.toLocaleString("latn", options);
+};
+const setCookie = (name, value, days)=>{
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + days * 86400000);
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+};
+const getCookie = (name)=>{
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(";");
+    for(let i = 0; i < ca.length; i++){
+        let c = ca[i];
+        while(c.charAt(0) == " ")c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+};
+const eraseCookie = (name)=>{
+    document.cookie = name + "=; Max-Age=-99999999;";
+};
+const windowsWidth = window.innerWidth;
+const scrollTo = (element, to, duration)=>{
+    if (duration <= 0) return;
+    var difference = to - element.scrollTop;
+    var perTick = difference / duration * 10;
+    setTimeout(function() {
+        element.scrollTop = element.scrollTop + perTick;
+        if (element.scrollTop === to) return;
+        scrollTo(element, to, duration - 10);
+    }, 10);
+};
+const fadeOut = (el)=>{
+    el.style.opacity = 1;
+    (function fade() {
+        if ((el.style.opacity -= 0.1) < 0) el.style.display = "none";
+        else requestAnimationFrame(fade);
+    })();
+};
+const fadeIn = (el, display)=>{
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += 0.1) >= 1)) {
+            if (!((val += 0.1) > 1)) {
+                el.style.opacity = val;
+                requestAnimationFrame(fade);
+            }
+        }
+    })();
+};
+const listAllEventListeners = ()=>{
+    const allElements = Array.prototype.slice.call(document.querySelectorAll("*"));
+    allElements.push(document);
+    allElements.push(window);
+    const types = [];
+    for(let ev in window)if (/^on/.test(ev)) types[types.length] = ev;
+    let elements = [];
+    for(let i = 0; i < allElements.length; i++){
+        const currentElement = allElements[i];
+        for(let j = 0; j < types.length; j++)if (typeof currentElement[types[j]] === "function") elements.push({
+            node: currentElement,
+            type: types[j],
+            func: currentElement[types[j]].toString()
+        });
+    }
+    return elements.sort(function(a, b) {
+        return a.type.localeCompare(b.type);
+    });
+};
+// homepage header bg animation
+window.addEventListener("scroll", ()=>{
+    let scroll = scrollY;
+    // const section = getElement('.zoom-animation');
+    // section.style.backgroundSize = `${100 + scroll * 0.05}%`;
+    imageSelector = getElement(".animated-image");
+    if (ifSelectorExist(imageSelector)) css(imageSelector, {
+        // transform: `${this.collapseOffsetHeight}px`,
+        transform: `translate3d(0px, ${scroll}px, 0px) scale(${1 + scroll * 0.001})`
+    });
+});
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"9ZRJh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// Main Menu
+var _utils = require("./utils");
+function headerInit() {
+    const header = (0, _utils.getElement)("header");
+    let isSticked = false;
+    document.addEventListener("scroll", (e)=>{
+        if (!isSticked && window.scrollY >= 160) {
+            header.classList.add("sticked");
+            isSticked = true;
+        }
+        if (isSticked && window.scrollY <= 70) {
+            header.classList.remove("sticked");
+            isSticked = false;
+        }
+    });
+}
+exports.default = headerInit;
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pa5Q":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "initSliders", ()=>initSliders);
+var _glide = require("@glidejs/glide");
+var _glideDefault = parcelHelpers.interopDefault(_glide);
+var _utils = require("./utils");
+var _vanillaMarquee = require("vanilla-marquee");
+var _vanillaMarqueeDefault = parcelHelpers.interopDefault(_vanillaMarquee);
+const initSliders = ()=>{
+    const testmonialsSlider = ".testmonialsSlider";
+    if (document.querySelector(testmonialsSlider) != undefined && document.querySelector(testmonialsSlider) != null) Array.from((0, _utils.getElements)(testmonialsSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 1,
+            type: "slider",
+            autoplay: 3500,
+            breakpoints: {}
+        }).mount();
+    });
+    const awardsSlider = ".awardsSlider";
+    if (document.querySelector(awardsSlider) != undefined && document.querySelector(awardsSlider) != null) Array.from((0, _utils.getElements)(awardsSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 5.2,
+            type: "carousel",
+            autoplay: 2500,
+            breakpoints: {
+                1024: {
+                    perView: 4.5
+                },
+                768: {
+                    perView: 3.5
+                },
+                540: {
+                    perView: 2.5
+                }
+            }
+        }).mount();
+    });
+    const awardsSlider2 = ".awards_slider";
+    if (document.querySelector(awardsSlider2) != undefined && document.querySelector(awardsSlider2) != null) Array.from((0, _utils.getElements)(awardsSlider2)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 8,
+            type: "carousel",
+            autoplay: 3000,
+            breakpoints: {
+                1100: {
+                    perView: 5
+                },
+                768: {
+                    perView: 3
+                }
+            }
+        }).mount();
+    });
+    const lifeSlider = ".lifeSlider";
+    if (document.querySelector(lifeSlider) != undefined && document.querySelector(lifeSlider) != null) Array.from((0, _utils.getElements)(lifeSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(lifeSlider, {
+            perView: 1,
+            type: "carousel",
+            breakpoints: {}
+        }).mount();
+    });
+    const verdictsSlider = ".verdicts_slider";
+    if (document.querySelector(verdictsSlider) != undefined && document.querySelector(verdictsSlider) != null) Array.from((0, _utils.getElements)(verdictsSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            type: "carousel",
+            autoplay: 1,
+            animationDuration: 4000,
+            // animationTimingFunc: 'linear',
+            perView: 4,
+            breakpoints: {
+                1400: {
+                    perView: 3
+                },
+                1100: {
+                    perView: 3
+                },
+                768: {
+                    perView: 2
+                },
+                640: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+    const verdictsSliderBa = ".verdicts_slider_ba";
+    if (document.querySelector(verdictsSliderBa) != undefined && document.querySelector(verdictsSliderBa) != null) Array.from((0, _utils.getElements)(verdictsSliderBa)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            type: "carousel",
+            autoplay: 1,
+            animationDuration: 4000,
+            // animationTimingFunc: 'linear',
+            perView: 5,
+            breakpoints: {
+                1496: {
+                    perView: 4
+                },
+                1200: {
+                    perView: 3
+                },
+                868: {
+                    perView: 3
+                },
+                640: {
+                    perView: 2
+                }
+            }
+        }).mount();
+    });
+    const memorableSlider = ".memorableSlider";
+    if (document.querySelector(memorableSlider) != undefined && document.querySelector(memorableSlider) != null) Array.from((0, _utils.getElements)(memorableSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 1,
+            type: "slider",
+            breakpoints: {}
+        }).mount();
+    });
+    const grSlider = ".google_reviews_slider";
+    if (document.querySelector(grSlider) != undefined && document.querySelector(grSlider) != null) Array.from((0, _utils.getElements)(grSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 3,
+            type: "carousel",
+            breakpoints: {
+                1100: {
+                    perView: 2
+                },
+                768: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+    const awardsSliderAbout = ".awardsSliderAbout";
+    if (document.querySelector(awardsSliderAbout) != undefined && document.querySelector(awardsSliderAbout) != null) Array.from((0, _utils.getElements)(awardsSliderAbout)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 8,
+            type: "carousel",
+            autoplay: 2500,
+            breakpoints: {
+                540: {
+                    perView: 4.5
+                }
+            }
+        }).mount();
+    });
+    const communitySliderAbout = ".communitySliderAbout";
+    if (document.querySelector(communitySliderAbout) != undefined && document.querySelector(communitySliderAbout) != null) Array.from((0, _utils.getElements)(communitySliderAbout)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 2,
+            type: "carousel",
+            breakpoints: {
+                540: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    });
+    const marqueEl1 = (0, _utils.getElement)("#marquee");
+    if ((0, _utils.ifSelectorExist)(marqueEl1)) {
+        const marqueOne = new (0, _vanillaMarqueeDefault.default)(marqueEl1, {
+            css3easing: "linear",
+            speed: window.innerWidth < 768 ? 40 : 60,
+            gap: 100,
+            delayBeforeStart: 0,
+            direction: "left",
+            duplicated: true,
+            duration: 5000,
+            startVisible: true
+        });
+        marqueOne.resume();
+    }
+    const verdicts = document.querySelector(".verdicts-marquee");
+    if ((0, _utils.ifSelectorExist)(verdicts)) {
+        const verdictsMarquee = new (0, _vanillaMarqueeDefault.default)(verdicts, {
+            css3easing: "linear",
+            speed: window.innerWidth < 768 ? 60 : 100,
+            gap: 100,
+            delayBeforeStart: 0,
+            direction: "left",
+            duplicated: true,
+            duration: 5000,
+            startVisible: true
+        });
+        verdictsMarquee.resume();
+    }
+    // client 2
+    const merits = ".merits";
+    if ((0, _utils.ifSelectorExist)((0, _utils.getElements)(merits))) Array.from((0, _utils.getElements)(merits)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 4,
+            type: "carousel",
+            animationDuration: 4000,
+            autoplay: 1,
+            breakpoints: {
+                1496: {
+                    perView: 3,
+                    autoplay: 1
+                },
+                1200: {
+                    perView: 2,
+                    autoplay: 3000
+                },
+                640: {
+                    perView: 1,
+                    autoplay: 3000
+                }
+            }
+        }).mount();
+    });
+    const videoSlider = ".videoSlider";
+    if (document.querySelector(videoSlider) != undefined && document.querySelector(videoSlider) != null) Array.from((0, _utils.getElements)(videoSlider)).forEach((item)=>{
+        new (0, _glideDefault.default)(item, {
+            perView: 1,
+            type: "slider"
+        }).mount();
+    });
+};
+
+},{"@glidejs/glide":"cS4lK","./utils":"blFj3","vanilla-marquee":"aRzML","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cS4lK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Glide);
 /*!
  * Glide.js v3.6.0
  * (c) 2013-2022 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
  * Released under the MIT License.
- */
-function l(t){return l="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},l(t)}function c(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function d(t,e){for(var i=0;i<e.length;i++){var s=e[i];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(t,s.key,s)}}function h(t,e,i){return e&&d(t.prototype,e),i&&d(t,i),t}function p(t){return p=Object.setPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__||Object.getPrototypeOf(t)},p(t)}function f(t,e){return f=Object.setPrototypeOf||function(t,e){return t.__proto__=e,t},f(t,e)}function m(t,e){if(e&&("object"==typeof e||"function"==typeof e))return e;if(void 0!==e)throw new TypeError("Derived constructors may only return object or undefined");return function(t){if(void 0===t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return t}(t)}function g(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(t){return!1}}();return function(){var i,s=p(t);if(e){var n=p(this).constructor;i=Reflect.construct(s,arguments,n)}else i=s.apply(this,arguments);return m(this,i)}}function v(t,e){for(;!Object.prototype.hasOwnProperty.call(t,e)&&null!==(t=p(t)););return t}function y(){return y="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(t,e,i){var s=v(t,e);if(s){var n=Object.getOwnPropertyDescriptor(s,e);return n.get?n.get.call(arguments.length<3?t:i):n.value}},y.apply(this,arguments)}var _={type:"slider",startAt:0,perView:1,focusAt:0,gap:10,autoplay:!1,hoverpause:!0,keyboard:!0,bound:!1,swipeThreshold:80,dragThreshold:120,perSwipe:"",touchRatio:.5,touchAngle:45,animationDuration:400,rewind:!0,rewindDuration:800,animationTimingFunc:"cubic-bezier(.165, .840, .440, 1)",waitForTransition:!0,throttle:10,direction:"ltr",peek:0,cloningRatio:1,breakpoints:{},classes:{swipeable:"glide--swipeable",dragging:"glide--dragging",direction:{ltr:"glide--ltr",rtl:"glide--rtl"},type:{slider:"glide--slider",carousel:"glide--carousel"},slide:{clone:"glide__slide--clone",active:"glide__slide--active"},arrow:{disabled:"glide__arrow--disabled"},nav:{active:"glide__bullet--active"}}};function b(t){console.error("[Glide warn]: ".concat(t))}function k(t){return parseInt(t)}function w(t){return"string"==typeof t}function E(t){var e=l(t);return"function"===e||"object"===e&&!!t}function S(t){return"function"==typeof t}function A(t){return void 0===t}function x(t){return t.constructor===Array}function C(t,e,i){var s={};for(var n in e)S(e[n])?s[n]=e[n](t,s,i):b("Extension must be a function");for(var r in s)S(s[r].mount)&&s[r].mount();return s}function F(t,e,i){Object.defineProperty(t,e,i)}function D(t,e){var i=Object.assign({},t,e);return e.hasOwnProperty("classes")&&(i.classes=Object.assign({},t.classes,e.classes),e.classes.hasOwnProperty("direction")&&(i.classes.direction=Object.assign({},t.classes.direction,e.classes.direction)),e.classes.hasOwnProperty("type")&&(i.classes.type=Object.assign({},t.classes.type,e.classes.type)),e.classes.hasOwnProperty("slide")&&(i.classes.slide=Object.assign({},t.classes.slide,e.classes.slide)),e.classes.hasOwnProperty("arrow")&&(i.classes.arrow=Object.assign({},t.classes.arrow,e.classes.arrow)),e.classes.hasOwnProperty("nav")&&(i.classes.nav=Object.assign({},t.classes.nav,e.classes.nav))),e.hasOwnProperty("breakpoints")&&(i.breakpoints=Object.assign({},t.breakpoints,e.breakpoints)),i}var T=function(){function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};c(this,t),this.events=e,this.hop=e.hasOwnProperty}return h(t,[{key:"on",value:function(t,e){if(!x(t)){this.hop.call(this.events,t)||(this.events[t]=[]);var i=this.events[t].push(e)-1;return{remove:function(){delete this.events[t][i]}}}for(var s=0;s<t.length;s++)this.on(t[s],e)}},{key:"emit",value:function(t,e){if(x(t))for(var i=0;i<t.length;i++)this.emit(t[i],e);else this.hop.call(this.events,t)&&this.events[t].forEach((function(t){t(e||{})}))}}]),t}(),B=function(){function t(e){var i=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};c(this,t),this._c={},this._t=[],this._e=new T,this.disabled=!1,this.selector=e,this.settings=D(_,i),this.index=this.settings.startAt}return h(t,[{key:"mount",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return this._e.emit("mount.before"),E(t)?this._c=C(this,t,this._e):b("You need to provide a object on `mount()`"),this._e.emit("mount.after"),this}},{key:"mutate",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[];return x(t)?this._t=t:b("You need to provide a array on `mutate()`"),this}},{key:"update",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return this.settings=D(this.settings,t),t.hasOwnProperty("startAt")&&(this.index=t.startAt),this._e.emit("update"),this}},{key:"go",value:function(t){return this._c.Run.make(t),this}},{key:"move",value:function(t){return this._c.Transition.disable(),this._c.Move.make(t),this}},{key:"destroy",value:function(){return this._e.emit("destroy"),this}},{key:"play",value:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];return t&&(this.settings.autoplay=t),this._e.emit("play"),this}},{key:"pause",value:function(){return this._e.emit("pause"),this}},{key:"disable",value:function(){return this.disabled=!0,this}},{key:"enable",value:function(){return this.disabled=!1,this}},{key:"on",value:function(t,e){return this._e.on(t,e),this}},{key:"isType",value:function(t){return this.settings.type===t}},{key:"settings",get:function(){return this._o},set:function(t){E(t)?this._o=t:b("Options must be an `object` instance.")}},{key:"index",get:function(){return this._i},set:function(t){this._i=k(t)}},{key:"type",get:function(){return this.settings.type}},{key:"disabled",get:function(){return this._d},set:function(t){this._d=!!t}}]),t}();function L(){return(new Date).getTime()}function M(t,e,i){var s,n,r,a,o=0;i||(i={});var u=function(){o=!1===i.leading?0:L(),s=null,a=t.apply(n,r),s||(n=r=null)},l=function(){var l=L();o||!1!==i.leading||(o=l);var c=e-(l-o);return n=this,r=arguments,c<=0||c>e?(s&&(clearTimeout(s),s=null),o=l,a=t.apply(n,r),s||(n=r=null)):s||!1===i.trailing||(s=setTimeout(u,c)),a};return l.cancel=function(){clearTimeout(s),o=0,s=n=r=null},l}var V={ltr:["marginLeft","marginRight"],rtl:["marginRight","marginLeft"]};function O(t){if(t&&t.parentNode){for(var e=t.parentNode.firstChild,i=[];e;e=e.nextSibling)1===e.nodeType&&e!==t&&i.push(e);return i}return[]}function P(t){return!!(t&&t instanceof window.HTMLElement)}function I(t){return Array.prototype.slice.call(t)}var R='[data-glide-el="track"]';var H=function(){function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};c(this,t),this.listeners=e}return h(t,[{key:"on",value:function(t,e,i){var s=arguments.length>3&&void 0!==arguments[3]&&arguments[3];w(t)&&(t=[t]);for(var n=0;n<t.length;n++)this.listeners[t[n]]=i,e.addEventListener(t[n],this.listeners[t[n]],s)}},{key:"off",value:function(t,e){var i=arguments.length>2&&void 0!==arguments[2]&&arguments[2];w(t)&&(t=[t]);for(var s=0;s<t.length;s++)e.removeEventListener(t[s],this.listeners[t[s]],i)}},{key:"destroy",value:function(){delete this.listeners}}]),t}();var q=["ltr","rtl"],N={">":"<","<":">","=":"="};function j(t,e){return{modify:function(t){return e.Direction.is("rtl")?-t:t}}}function z(t,e){return{modify:function(t){var i=Math.floor(t/e.Sizes.slideWidth);return t+e.Gaps.value*i}}}function $(t,e){return{modify:function(t){return t+e.Clones.grow/2}}}function W(t,e){return{modify:function(i){if(t.settings.focusAt>=0){var s=e.Peek.value;return E(s)?i-s.before:i-s}return i}}}function Y(t,e){return{modify:function(i){var s=e.Gaps.value,n=e.Sizes.width,r=t.settings.focusAt,a=e.Sizes.slideWidth;return"center"===r?i-(n/2-a/2):i-a*r-s*r}}}var U=!1;try{var G=Object.defineProperty({},"passive",{get:function(){U=!0}});window.addEventListener("testPassive",null,G),window.removeEventListener("testPassive",null,G)}catch(_t){}var K=U,X=["touchstart","mousedown"],Z=["touchmove","mousemove"],J=["touchend","touchcancel","mouseup","mouseleave"],Q=["mousedown","mousemove","mouseup","mouseleave"];var tt='[data-glide-el^="controls"]',et="".concat(tt,' [data-glide-dir*="<"]'),it="".concat(tt,' [data-glide-dir*=">"]');function st(t){return E(t)?(e=t,Object.keys(e).sort().reduce((function(t,i){return t[i]=e[i],t[i],t}),{})):(b("Breakpoints option must be an object"),{});var e}var nt={Html:function(t,e,i){var s={mount:function(){this.root=t.selector,this.track=this.root.querySelector(R),this.collectSlides()},collectSlides:function(){this.slides=I(this.wrapper.children).filter((function(e){return!e.classList.contains(t.settings.classes.slide.clone)}))}};return F(s,"root",{get:function(){return s._r},set:function(t){w(t)&&(t=document.querySelector(t)),P(t)?s._r=t:b("Root element must be a existing Html node")}}),F(s,"track",{get:function(){return s._t},set:function(t){P(t)?s._t=t:b("Could not find track element. Please use ".concat(R," attribute."))}}),F(s,"wrapper",{get:function(){return s.track.children[0]}}),i.on("update",(function(){s.collectSlides()})),s},Translate:function(t,e,i){var s={set:function(i){var s=function(t,e,i){var s=[z,$,W,Y].concat(t._t,[j]);return{mutate:function(n){for(var r=0;r<s.length;r++){var a=s[r];S(a)&&S(a().modify)?n=a(t,e,i).modify(n):b("Transformer should be a function that returns an object with `modify()` method")}return n}}}(t,e).mutate(i),n="translate3d(".concat(-1*s,"px, 0px, 0px)");e.Html.wrapper.style.mozTransform=n,e.Html.wrapper.style.webkitTransform=n,e.Html.wrapper.style.transform=n},remove:function(){e.Html.wrapper.style.transform=""},getStartIndex:function(){var i=e.Sizes.length,s=t.index,n=t.settings.perView;return e.Run.isOffset(">")||e.Run.isOffset("|>")?i+(s-n):(s+n)%i},getTravelDistance:function(){var i=e.Sizes.slideWidth*t.settings.perView;return e.Run.isOffset(">")||e.Run.isOffset("|>")?-1*i:i}};return i.on("move",(function(n){if(!t.isType("carousel")||!e.Run.isOffset())return s.set(n.movement);e.Transition.after((function(){i.emit("translate.jump"),s.set(e.Sizes.slideWidth*t.index)}));var r=e.Sizes.slideWidth*e.Translate.getStartIndex();return s.set(r-e.Translate.getTravelDistance())})),i.on("destroy",(function(){s.remove()})),s},Transition:function(t,e,i){var s=!1,n={compose:function(e){var i=t.settings;return s?"".concat(e," 0ms ").concat(i.animationTimingFunc):"".concat(e," ").concat(this.duration,"ms ").concat(i.animationTimingFunc)},set:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"transform";e.Html.wrapper.style.transition=this.compose(t)},remove:function(){e.Html.wrapper.style.transition=""},after:function(t){setTimeout((function(){t()}),this.duration)},enable:function(){s=!1,this.set()},disable:function(){s=!0,this.set()}};return F(n,"duration",{get:function(){var i=t.settings;return t.isType("slider")&&e.Run.offset?i.rewindDuration:i.animationDuration}}),i.on("move",(function(){n.set()})),i.on(["build.before","resize","translate.jump"],(function(){n.disable()})),i.on("run",(function(){n.enable()})),i.on("destroy",(function(){n.remove()})),n},Direction:function(t,e,i){var s={mount:function(){this.value=t.settings.direction},resolve:function(t){var e=t.slice(0,1);return this.is("rtl")?t.split(e).join(N[e]):t},is:function(t){return this.value===t},addClass:function(){e.Html.root.classList.add(t.settings.classes.direction[this.value])},removeClass:function(){e.Html.root.classList.remove(t.settings.classes.direction[this.value])}};return F(s,"value",{get:function(){return s._v},set:function(t){q.indexOf(t)>-1?s._v=t:b("Direction value must be `ltr` or `rtl`")}}),i.on(["destroy","update"],(function(){s.removeClass()})),i.on("update",(function(){s.mount()})),i.on(["build.before","update"],(function(){s.addClass()})),s},Peek:function(t,e,i){var s={mount:function(){this.value=t.settings.peek}};return F(s,"value",{get:function(){return s._v},set:function(t){E(t)?(t.before=k(t.before),t.after=k(t.after)):t=k(t),s._v=t}}),F(s,"reductor",{get:function(){var e=s.value,i=t.settings.perView;return E(e)?e.before/i+e.after/i:2*e/i}}),i.on(["resize","update"],(function(){s.mount()})),s},Sizes:function(t,e,i){var s={setupSlides:function(){for(var t="".concat(this.slideWidth,"px"),i=e.Html.slides,s=0;s<i.length;s++)i[s].style.width=t},setupWrapper:function(){e.Html.wrapper.style.width="".concat(this.wrapperSize,"px")},remove:function(){for(var t=e.Html.slides,i=0;i<t.length;i++)t[i].style.width="";e.Html.wrapper.style.width=""}};return F(s,"length",{get:function(){return e.Html.slides.length}}),F(s,"width",{get:function(){return e.Html.track.offsetWidth}}),F(s,"wrapperSize",{get:function(){return s.slideWidth*s.length+e.Gaps.grow+e.Clones.grow}}),F(s,"slideWidth",{get:function(){return s.width/t.settings.perView-e.Peek.reductor-e.Gaps.reductor}}),i.on(["build.before","resize","update"],(function(){s.setupSlides(),s.setupWrapper()})),i.on("destroy",(function(){s.remove()})),s},Gaps:function(t,e,i){var s={apply:function(t){for(var i=0,s=t.length;i<s;i++){var n=t[i].style,r=e.Direction.value;n[V[r][0]]=0!==i?"".concat(this.value/2,"px"):"",i!==t.length-1?n[V[r][1]]="".concat(this.value/2,"px"):n[V[r][1]]=""}},remove:function(t){for(var e=0,i=t.length;e<i;e++){var s=t[e].style;s.marginLeft="",s.marginRight=""}}};return F(s,"value",{get:function(){return k(t.settings.gap)}}),F(s,"grow",{get:function(){return s.value*e.Sizes.length}}),F(s,"reductor",{get:function(){var e=t.settings.perView;return s.value*(e-1)/e}}),i.on(["build.after","update"],M((function(){s.apply(e.Html.wrapper.children)}),30)),i.on("destroy",(function(){s.remove(e.Html.wrapper.children)})),s},Move:function(t,e,i){var s={mount:function(){this._o=0},make:function(){var t=this,s=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0;this.offset=s,i.emit("move",{movement:this.value}),e.Transition.after((function(){i.emit("move.after",{movement:t.value})}))}};return F(s,"offset",{get:function(){return s._o},set:function(t){s._o=A(t)?0:k(t)}}),F(s,"translate",{get:function(){return e.Sizes.slideWidth*t.index}}),F(s,"value",{get:function(){var t=this.offset,i=this.translate;return e.Direction.is("rtl")?i+t:i-t}}),i.on(["build.before","run"],(function(){s.make()})),s},Clones:function(t,e,i){var s={mount:function(){this.items=[],t.isType("carousel")&&(this.items=this.collect())},collect:function(){var i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],s=e.Html.slides,n=t.settings,r=n.perView,a=n.classes,o=n.cloningRatio;if(0!==s.length)for(var u=+!!t.settings.peek,l=r+u+Math.round(r/2),c=s.slice(0,l).reverse(),d=s.slice(-1*l),h=0;h<Math.max(o,Math.floor(r/s.length));h++){for(var p=0;p<c.length;p++){var f=c[p].cloneNode(!0);f.classList.add(a.slide.clone),i.push(f)}for(var m=0;m<d.length;m++){var g=d[m].cloneNode(!0);g.classList.add(a.slide.clone),i.unshift(g)}}return i},append:function(){for(var t=this.items,i=e.Html,s=i.wrapper,n=i.slides,r=Math.floor(t.length/2),a=t.slice(0,r).reverse(),o=t.slice(-1*r).reverse(),u="".concat(e.Sizes.slideWidth,"px"),l=0;l<o.length;l++)s.appendChild(o[l]);for(var c=0;c<a.length;c++)s.insertBefore(a[c],n[0]);for(var d=0;d<t.length;d++)t[d].style.width=u},remove:function(){for(var t=this.items,i=0;i<t.length;i++)e.Html.wrapper.removeChild(t[i])}};return F(s,"grow",{get:function(){return(e.Sizes.slideWidth+e.Gaps.value)*s.items.length}}),i.on("update",(function(){s.remove(),s.mount(),s.append()})),i.on("build.before",(function(){t.isType("carousel")&&s.append()})),i.on("destroy",(function(){s.remove()})),s},Resize:function(t,e,i){var s=new H,n={mount:function(){this.bind()},bind:function(){s.on("resize",window,M((function(){i.emit("resize")}),t.settings.throttle))},unbind:function(){s.off("resize",window)}};return i.on("destroy",(function(){n.unbind(),s.destroy()})),n},Build:function(t,e,i){var s={mount:function(){i.emit("build.before"),this.typeClass(),this.activeClass(),i.emit("build.after")},typeClass:function(){e.Html.root.classList.add(t.settings.classes.type[t.settings.type])},activeClass:function(){var i=t.settings.classes,s=e.Html.slides[t.index];s&&(s.classList.add(i.slide.active),O(s).forEach((function(t){t.classList.remove(i.slide.active)})))},removeClasses:function(){var i=t.settings.classes,s=i.type,n=i.slide;e.Html.root.classList.remove(s[t.settings.type]),e.Html.slides.forEach((function(t){t.classList.remove(n.active)}))}};return i.on(["destroy","update"],(function(){s.removeClasses()})),i.on(["resize","update"],(function(){s.mount()})),i.on("move.after",(function(){s.activeClass()})),s},Run:function(t,e,i){var s={mount:function(){this._o=!1},make:function(s){var n=this;t.disabled||(!t.settings.waitForTransition||t.disable(),this.move=s,i.emit("run.before",this.move),this.calculate(),i.emit("run",this.move),e.Transition.after((function(){n.isStart()&&i.emit("run.start",n.move),n.isEnd()&&i.emit("run.end",n.move),n.isOffset()&&(n._o=!1,i.emit("run.offset",n.move)),i.emit("run.after",n.move),t.enable()})))},calculate:function(){var e=this.move,i=this.length,n=e.steps,r=e.direction,a=1;if("="===r)return t.settings.bound&&k(n)>i?void(t.index=i):void(t.index=n);if(">"!==r||">"!==n)if("<"!==r||"<"!==n){if("|"===r&&(a=t.settings.perView||1),">"===r||"|"===r&&">"===n){var o=function(e){var i=t.index;return t.isType("carousel")?i+e:i+(e-i%e)}(a);return o>i&&(this._o=!0),void(t.index=function(e,i){var n=s.length;if(e<=n)return e;if(t.isType("carousel"))return e-(n+1);if(t.settings.rewind)return s.isBound()&&!s.isEnd()?n:0;return s.isBound()?n:Math.floor(n/i)*i}(o,a))}if("<"===r||"|"===r&&"<"===n){var u=function(e){var i=t.index;return t.isType("carousel")?i-e:(Math.ceil(i/e)-1)*e}(a);return u<0&&(this._o=!0),void(t.index=function(e,i){var n=s.length;if(e>=0)return e;if(t.isType("carousel"))return e+(n+1);if(t.settings.rewind)return s.isBound()&&s.isStart()?n:Math.floor(n/i)*i;return 0}(u,a))}b("Invalid direction pattern [".concat(r).concat(n,"] has been used"))}else t.index=0;else t.index=i},isStart:function(){return t.index<=0},isEnd:function(){return t.index>=this.length},isOffset:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:void 0;return t?!!this._o&&("|>"===t?"|"===this.move.direction&&">"===this.move.steps:"|<"===t?"|"===this.move.direction&&"<"===this.move.steps:this.move.direction===t):this._o},isBound:function(){return t.isType("slider")&&"center"!==t.settings.focusAt&&t.settings.bound}};return F(s,"move",{get:function(){return this._m},set:function(t){var e=t.substr(1);this._m={direction:t.substr(0,1),steps:e?k(e)?k(e):e:0}}}),F(s,"length",{get:function(){var i=t.settings,s=e.Html.slides.length;return this.isBound()?s-1-(k(i.perView)-1)+k(i.focusAt):s-1}}),F(s,"offset",{get:function(){return this._o}}),s},Swipe:function(t,e,i){var s=new H,n=0,r=0,a=0,o=!1,u=!!K&&{passive:!0},l={mount:function(){this.bindSwipeStart()},start:function(e){if(!o&&!t.disabled){this.disable();var s=this.touches(e);n=null,r=k(s.pageX),a=k(s.pageY),this.bindSwipeMove(),this.bindSwipeEnd(),i.emit("swipe.start")}},move:function(s){if(!t.disabled){var o=t.settings,u=o.touchAngle,l=o.touchRatio,c=o.classes,d=this.touches(s),h=k(d.pageX)-r,p=k(d.pageY)-a,f=Math.abs(h<<2),m=Math.abs(p<<2),g=Math.sqrt(f+m),v=Math.sqrt(m);if(!(180*(n=Math.asin(v/g))/Math.PI<u))return!1;s.stopPropagation(),e.Move.make(h*parseFloat(l)),e.Html.root.classList.add(c.dragging),i.emit("swipe.move")}},end:function(s){if(!t.disabled){var a=t.settings,o=a.perSwipe,u=a.touchAngle,l=a.classes,c=this.touches(s),d=this.threshold(s),h=c.pageX-r,p=180*n/Math.PI;this.enable(),h>d&&p<u?e.Run.make(e.Direction.resolve("".concat(o,"<"))):h<-d&&p<u?e.Run.make(e.Direction.resolve("".concat(o,">"))):e.Move.make(),e.Html.root.classList.remove(l.dragging),this.unbindSwipeMove(),this.unbindSwipeEnd(),i.emit("swipe.end")}},bindSwipeStart:function(){var i=this,n=t.settings,r=n.swipeThreshold,a=n.dragThreshold;r&&s.on(X[0],e.Html.wrapper,(function(t){i.start(t)}),u),a&&s.on(X[1],e.Html.wrapper,(function(t){i.start(t)}),u)},unbindSwipeStart:function(){s.off(X[0],e.Html.wrapper,u),s.off(X[1],e.Html.wrapper,u)},bindSwipeMove:function(){var i=this;s.on(Z,e.Html.wrapper,M((function(t){i.move(t)}),t.settings.throttle),u)},unbindSwipeMove:function(){s.off(Z,e.Html.wrapper,u)},bindSwipeEnd:function(){var t=this;s.on(J,e.Html.wrapper,(function(e){t.end(e)}))},unbindSwipeEnd:function(){s.off(J,e.Html.wrapper)},touches:function(t){return Q.indexOf(t.type)>-1?t:t.touches[0]||t.changedTouches[0]},threshold:function(e){var i=t.settings;return Q.indexOf(e.type)>-1?i.dragThreshold:i.swipeThreshold},enable:function(){return o=!1,e.Transition.enable(),this},disable:function(){return o=!0,e.Transition.disable(),this}};return i.on("build.after",(function(){e.Html.root.classList.add(t.settings.classes.swipeable)})),i.on("destroy",(function(){l.unbindSwipeStart(),l.unbindSwipeMove(),l.unbindSwipeEnd(),s.destroy()})),l},Images:function(t,e,i){var s=new H,n={mount:function(){this.bind()},bind:function(){s.on("dragstart",e.Html.wrapper,this.dragstart)},unbind:function(){s.off("dragstart",e.Html.wrapper)},dragstart:function(t){t.preventDefault()}};return i.on("destroy",(function(){n.unbind(),s.destroy()})),n},Anchors:function(t,e,i){var s=new H,n=!1,r=!1,a={mount:function(){this._a=e.Html.wrapper.querySelectorAll("a"),this.bind()},bind:function(){s.on("click",e.Html.wrapper,this.click)},unbind:function(){s.off("click",e.Html.wrapper)},click:function(t){r&&(t.stopPropagation(),t.preventDefault())},detach:function(){if(r=!0,!n){for(var t=0;t<this.items.length;t++)this.items[t].draggable=!1;n=!0}return this},attach:function(){if(r=!1,n){for(var t=0;t<this.items.length;t++)this.items[t].draggable=!0;n=!1}return this}};return F(a,"items",{get:function(){return a._a}}),i.on("swipe.move",(function(){a.detach()})),i.on("swipe.end",(function(){e.Transition.after((function(){a.attach()}))})),i.on("destroy",(function(){a.attach(),a.unbind(),s.destroy()})),a},Controls:function(t,e,i){var s=new H,n=!!K&&{passive:!0},r={mount:function(){this._n=e.Html.root.querySelectorAll('[data-glide-el="controls[nav]"]'),this._c=e.Html.root.querySelectorAll(tt),this._arrowControls={previous:e.Html.root.querySelectorAll(et),next:e.Html.root.querySelectorAll(it)},this.addBindings()},setActive:function(){for(var t=0;t<this._n.length;t++)this.addClass(this._n[t].children)},removeActive:function(){for(var t=0;t<this._n.length;t++)this.removeClass(this._n[t].children)},addClass:function(e){var i=t.settings,s=e[t.index];s&&s&&(s.classList.add(i.classes.nav.active),O(s).forEach((function(t){t.classList.remove(i.classes.nav.active)})))},removeClass:function(e){var i=e[t.index];i&&i.classList.remove(t.settings.classes.nav.active)},setArrowState:function(){if(!t.settings.rewind){var i=r._arrowControls.next,s=r._arrowControls.previous;this.resetArrowState(i,s),0===t.index&&this.disableArrow(s),t.index===e.Run.length&&this.disableArrow(i)}},resetArrowState:function(){for(var e=t.settings,i=arguments.length,s=new Array(i),n=0;n<i;n++)s[n]=arguments[n];s.forEach((function(t){I(t).forEach((function(t){t.classList.remove(e.classes.arrow.disabled)}))}))},disableArrow:function(){for(var e=t.settings,i=arguments.length,s=new Array(i),n=0;n<i;n++)s[n]=arguments[n];s.forEach((function(t){I(t).forEach((function(t){t.classList.add(e.classes.arrow.disabled)}))}))},addBindings:function(){for(var t=0;t<this._c.length;t++)this.bind(this._c[t].children)},removeBindings:function(){for(var t=0;t<this._c.length;t++)this.unbind(this._c[t].children)},bind:function(t){for(var e=0;e<t.length;e++)s.on("click",t[e],this.click),s.on("touchstart",t[e],this.click,n)},unbind:function(t){for(var e=0;e<t.length;e++)s.off(["click","touchstart"],t[e])},click:function(t){K||"touchstart"!==t.type||t.preventDefault();var i=t.currentTarget.getAttribute("data-glide-dir");e.Run.make(e.Direction.resolve(i))}};return F(r,"items",{get:function(){return r._c}}),i.on(["mount.after","move.after"],(function(){r.setActive()})),i.on(["mount.after","run"],(function(){r.setArrowState()})),i.on("destroy",(function(){r.removeBindings(),r.removeActive(),s.destroy()})),r},Keyboard:function(t,e,i){var s=new H,n={mount:function(){t.settings.keyboard&&this.bind()},bind:function(){s.on("keyup",document,this.press)},unbind:function(){s.off("keyup",document)},press:function(i){var s=t.settings.perSwipe;"ArrowRight"===i.code&&e.Run.make(e.Direction.resolve("".concat(s,">"))),"ArrowLeft"===i.code&&e.Run.make(e.Direction.resolve("".concat(s,"<")))}};return i.on(["destroy","update"],(function(){n.unbind()})),i.on("update",(function(){n.mount()})),i.on("destroy",(function(){s.destroy()})),n},Autoplay:function(t,e,i){var s=new H,n={mount:function(){this.enable(),this.start(),t.settings.hoverpause&&this.bind()},enable:function(){this._e=!0},disable:function(){this._e=!1},start:function(){var s=this;this._e&&(this.enable(),t.settings.autoplay&&A(this._i)&&(this._i=setInterval((function(){s.stop(),e.Run.make(">"),s.start(),i.emit("autoplay")}),this.time)))},stop:function(){this._i=clearInterval(this._i)},bind:function(){var t=this;s.on("mouseover",e.Html.root,(function(){t._e&&t.stop()})),s.on("mouseout",e.Html.root,(function(){t._e&&t.start()}))},unbind:function(){s.off(["mouseover","mouseout"],e.Html.root)}};return F(n,"time",{get:function(){var i=e.Html.slides[t.index].getAttribute("data-glide-autoplay");return k(i||t.settings.autoplay)}}),i.on(["destroy","update"],(function(){n.unbind()})),i.on(["run.before","swipe.start","update"],(function(){n.stop()})),i.on(["pause","destroy"],(function(){n.disable(),n.stop()})),i.on(["run.after","swipe.end"],(function(){n.start()})),i.on(["play"],(function(){n.enable(),n.start()})),i.on("update",(function(){n.mount()})),i.on("destroy",(function(){s.destroy()})),n},Breakpoints:function(t,e,i){var s=new H,n=t.settings,r=st(n.breakpoints),a=Object.assign({},n),o={match:function(t){if(void 0!==window.matchMedia)for(var e in t)if(t.hasOwnProperty(e)&&window.matchMedia("(max-width: ".concat(e,"px)")).matches)return t[e];return a}};return Object.assign(n,o.match(r)),s.on("resize",window,M((function(){t.settings=D(n,o.match(r))}),t.settings.throttle)),i.on("update",(function(){r=st(r),a=Object.assign({},n)})),i.on("destroy",(function(){s.off("resize",window)})),o}},rt=function(t){!function(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,writable:!0,configurable:!0}}),e&&f(t,e)}(i,t);var e=g(i);function i(){return c(this,i),e.apply(this,arguments)}return h(i,[{key:"mount",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return y(p(i.prototype),"mount",this).call(this,Object.assign({},nt,t))}}]),i}(B);function at(t,e=document){return e.getElementsByClassName(t)}function ot(t,e,i){for(let s=0,n=t.length;s<n;s++)e.call(i,t[s],s)}function ut(t,e,i,s){t.addEventListener(e,i,s)}function lt(t,e,i,s){t.removeEventListener(e,i,s)}function ct(t,e){return t.getAttribute(e)}function dt(t,e,i){t.setAttribute(e,i)}const ht={css3easing:"linear",delayBeforeStart:1e3,direction:"left",duplicated:!1,duration:5e3,gap:20,pauseOnHover:!1,recalcResize:!1,speed:0,startVisible:!1};let pt=0;class ft{constructor(t,e){if(void 0===t)throw new Error("el cannot be undefined");if("string"==typeof t)throw new Error("el cannot be just a selector");if(null===t)throw new Error("el cannot be null");e={...ht,...e},this.el=t,this._loopCount=3;for(const i in ht){let s=ct(t,`data-${ht[i]}`);null!==s&&""!==s&&("true"!==s&&"false"!==s||(s=Boolean(s)),e[i]=s)}e.speed&&(e.duration=parseInt(t.clientWidth)/e.speed*1e3),e.gap=e.duplicated?parseInt(e.gap):0,t.innerHTML=`<div class="js-marquee">${t.innerHTML}</div>`;const i=at("js-marquee",t)[0];i.style.marginRight=`${e.gap}px`,i.style.willChange="transform",i.style.float="left",e.duplicated&&t.appendChild(i.cloneNode(!0)),t.innerHTML=`<div style="width:100000px" class="js-marquee-wrapper">${t.innerHTML}</div>`;const s=at("js-marquee-wrapper",t)[0],n="up"===e.direction||"down"===e.direction;this._marqWrap=s,this._vertical=n,this._duration=e.duration,this._opts=e,this._calcSizes();const r=`marqueeAnimation-${Math.floor(1e7*Math.random())}`,a=this._animationStr(r,e.duration/1e3,e.delayBeforeStart/1e3,"infinite");this._animName=r,this._animStr=a,e.duplicated?(n?e.startVisible?this._marqWrap.style.transform="translateY(0px)":this._marqWrap.style.transform=`translateY(${"up"===e.direction?this._contHeight:-1*(2*this._elHeight-e.gap)}px)`:e.startVisible?this._marqWrap.style.transform="translateX(0px)":this._marqWrap.style.transform=`translateX(${"left"===e.direction?this._contWidth:-1*(2*this._elWidth-e.gap)}px)`,e.startVisible||(this._loopCount=1)):e.startVisible?this._loopCount=2:n?this._repositionVert():this._repositionHor(),ut(this.el,"pause",this.pause.bind(this)),ut(this.el,"resume",this.resume.bind(this)),e.pauseOnHover&&(ut(this.el,"mouseover",this.pause.bind(this)),ut(this.el,"mouseout",this.resume.bind(this))),this._animEnd=()=>{this._animate(n),this.el.dispatchEvent(new CustomEvent("finished"))},this._instance=pt,pt++,this._animate(n),e.recalcResize&&ut(window,"resize",this._recalcResize.bind(this))}_animationStr(t="",e=0,i=0,s=""){return`${t} ${e}s ${i}s ${s} ${this._opts.css3easing}`}_animate(t=!1){const e=this._opts;if(e.duplicated){if(1===this._loopCount){let i=e.duration;i=t?"up"===e.direction?i+this._contHeight/(this._elHeight/i):2*i:"left"===e.direction?i+this._contWidth/(this._elWidth/i):2*i,this._animStr=this._animationStr(this._animName,i/1e3,e.delayBeforeStart/1e3)}else 2===this._loopCount&&(this._animName=`${this._animName}0`,this._animStr=this._animationStr(this._animName,e.duration/1e3,0,"infinite"));this._loopCount++}let i="";t?e.duplicated?(this._loopCount>2&&(this._marqWrap.style.transform=`translateY(${"up"===e.direction?0:-1*this._elHeight}px)`),i=`translateY(${"up"===e.direction?-1*this._elHeight:0}px)`):e.startVisible?2===this._loopCount?(this._animStr=this._animationStr(this._animName,e.duration/1e3,e.delayBeforeStart/1e3),i=`translateY(${"up"===e.direction?-1*this._elHeight:this._contHeight}px)`,this._loopCount++):3===this._loopCount&&(this._animName=`${this._animName}0`,this._animStr=this._animationStr(this._animName,this._completeDuration/1e3,0,"infinite"),this._repositionVert()):(this._repositionVert(),i=`translateY(${"up"===e.direction?-1*this._marqWrap.clientHeight:this._contHeight}px)`):e.duplicated?(this._loopCount>2&&(this._marqWrap.style.transform=`translateX(${"left"===e.direction?0:-1*this._elWidth}px)`),i=`translateX(${"left"===e.direction?-1*this._elWidth:0}px)`):e.startVisible?2===this._loopCount?(this._animStr=this._animationStr(this._animName,e.duration/1e3,e.delayBeforeStart/1e3),i=`translateX(${"left"===e.direction?-1*this._elWidth:this._contWidth}px)`,this._loopCount++):3===this._loopCount&&(this._animName=`${this._animName}0`,this._animStr=this._animationStr(this._animName,e.duration/1e3,0,"infinite"),this._repositionHor()):(this._repositionHor(),i=`translateX(${"left"===e.direction?-1*this._elWidth:this._contWidth}px)`),this.el.dispatchEvent(new CustomEvent("beforeStarting")),this._marqWrap.style.animation=this._animStr;const s=`@keyframes ${this._animName} {\n        100% {\n          transform: ${i};\n        }\n      }`,n=function(t,e=document){return e.querySelectorAll(t)}("style",this._marqWrap);if(n.length)n[n.length-1].innerHTML=s;else if(at(`marq-wrap-style-${this._instance}`).length)at(`marq-wrap-style-${this._instance}`)[0].innerHTML=s;else{const t=document.createElement("style");!function(t,...e){function i(t,...e){e.forEach((e=>{t.classList.add(e)}))}void 0===t.length?i(t,...e):ot(t,(t=>{i(t,...e)}))}(t,`marq-wrap-style-${this._instance}`),t.innerHTML=s,function(t,e=document){return e.querySelector(t)}("head").appendChild(t)}ut(this._marqWrap,"animationiteration",this._animIter.bind(this),{once:!0}),ut(this._marqWrap,"animationend",this._animEnd.bind(this),{once:!0}),this._status="running",dt(this.el,"data-runningStatus","resumed")}_animIter(){this.el.dispatchEvent(new CustomEvent("finished"))}_repositionVert(){this._marqWrap.style.transform=`translateY(${"up"===this._opts.direction?this._contHeight:-1*this._elHeight}px)`}_repositionHor(){this._marqWrap.style.transform=`translateX(${"left"===this._opts.direction?this._contWidth:-1*this._elWidth}px)`}_calcSizes(){const t=this.el,e=this._opts;if(this._vertical){const i=t.clientHeight;this._contHeight=i,function(t,e){t.removeAttribute(e)}(this._marqWrap,"style"),t.style.clientHeight=`${i}px`;const s=at("js-marquee",t),n=s.length-1;ot(s,((t,i)=>{t.style.float="none",t.style.marginRight="0px",e.duplicated&&i===n?t.style.marginBottom="0px":t.style.marginBottom=`${e.gap}px`}));const r=parseInt(s[0].clientHeight+e.gap);this._elHeight=r,e.startVisible&&!e.duplicated?(this._completeDuration=(r+i)/parseInt(i)*this._duration,e.duration=r/parseInt(i)*this._duration):e.duration=r/parseInt(i)/parseInt(i)*this._duration}else{const i=parseInt(at("js-marquee",t)[0].clientWidth+e.gap),s=t.clientWidth;this._contWidth=s,this._elWidth=i,e.startVisible&&!e.duplicated?(this._completeDuration=(i+s)/parseInt(s)*this._duration,e.duration=i/parseInt(s)*this._duration):e.duration=(i+parseInt(s))/parseInt(s)*this._duration}e.duplicated&&(e.duration=e.duration/2)}_recalcResize(){this._calcSizes(),this._loopCount=2,this._animEnd()}pause(){this._marqWrap.style.animationPlayState="paused",this._status="paused",dt(this.el,"data-runningStatus","paused"),this.el.dispatchEvent(new CustomEvent("paused"))}resume(){this._marqWrap.style.animationPlayState="running",this._status="running",dt(this.el,"data-runningStatus","resumed"),this.el.dispatchEvent(new CustomEvent("resumed"))}toggle(){"paused"===this._status?this.resume():"running"===this._status&&this.pause()}destroy(){lt(this.el,"pause",this.pause.bind(this)),lt(this.el,"resume",this.resume.bind(this)),this._opts.pauseOnHover&&(lt(this.el,"mouseover",this.pause.bind(this)),lt(this.el,"mouseout",this.resume.bind(this))),lt(this._marqWrap,"animationiteration",this._animIter.bind(this),{once:!0}),lt(this._marqWrap,"animationend",this._animEnd.bind(this),{once:!0}),this._opts.recalcResize&&lt(window,"resize",this._recalcResize.bind(this))}refresh(){this._recalcResize()}}const mt=t=>{document.addEventListener("wpcf7mailsent",(function(t){var e=t.detail.inputs,i=Object.keys(e).map((t=>[Number(t),e[t]]));console.log("inputs = ",i),async function(t){let e=t,i={method:"POST",headers:{"Content-type":"application/json; charset=UTF-8"},body:JSON.stringify(e)};await fetch(ajax_url.ajaxurl+"?action=form_entry_sucess",i)}(e)}),!1),document.addEventListener("wpcf7mailfailed",(function(t){var e=t.detail.inputs;Object.keys(e).map((t=>[Number(t),e[t]]));!async function(t){let e=t,i={method:"POST",headers:{"Content-type":"application/json; charset=UTF-8"},body:JSON.stringify(e)};await fetch(ajax_url.ajaxurl+"?action=form_entry_fail",i)}(e)}),!1)},gt=()=>{function t(t){var e=RegExp("[?&]"+t+"=([^&]*)").exec(window.location.search);return e&&decodeURIComponent(e[1].replace(/\+/g," "))}window.addEventListener("load",(function(){var e=t("gclid"),r=null,a=t("gclsrc"),o=!a||-1!==a.indexOf("aw");e&&o&&(r={value:e,expiryDate:(new Date).getTime()+7776e6},localStorage.setItem("gclid",JSON.stringify(r)));var u=r||JSON.parse(localStorage.getItem("gclid"));if(u&&(new Date).getTime()<u.expiryDate){let t=n(".wpcf7-form");i(t)&&Array.from(t).forEach((t=>{let e=s(".gclid_field",t);i(e)&&(e.value=u.value);let n=s(".clixsy",t);i(n)&&(n.value=u.value)}))}}))},vt=t=>{if(i(document.querySelector(t))){s("button",document.querySelector(t)).addEventListener("click",(()=>{document.addEventListener("wpcf7mailsent",(function(e){let n=s(".contacts__success",document.querySelector(t)),r=e.target,a=s(".disclaimer",document.querySelector(t)),o=s(".wpcf7-response-output",document.querySelector(t));null!=n&&(n.style.display="flex",r.style.display="none",o.classList.toggle("hidden"),i(a)&&a.classList.add("hidden"))}),!1);document.querySelector(".wpcf7").addEventListener("wpcf7submit",(function(e){let n=s(".wpcf7-acceptance input",document.querySelector(t)),r=s(".wpcf7-acceptance",document.querySelector(t)),a=s(".disclaimer",document.querySelector(t));i(n)&&(n.checked?(r.classList.remove("acceptance-required"),i(a)&&a.classList.add("hidden")):(r.classList.add("acceptance-required"),i(a)&&a.classList.remove("hidden")))}),!1);let e=s(".wpcf7-acceptance",document.querySelector(t));i(e)&&e.addEventListener("click",(()=>{e.classList.remove("acceptance-required")}));let n=s(".reset-form",document.querySelector(t));i(n)&&n.addEventListener("click",(()=>{let e=s(".contacts__success",document.querySelector(t)),n=s(".wpcf7-form",document.querySelector(t)),o=s(".disclaimer",document.querySelector(t));i(o)&&o.classList.toggle("hidden");let u=s(".wpcf7-response-output",document.querySelector(t));i(u)&&u.classList.add("hidden"),i(e)&&r(e),i(n)&&a(n)}))}))}document.addEventListener("wpcf7mailsent",(function(t){!function(t){for(var e=0;e<cf7RedirectToArray.length;e++)if(cf7RedirectToArray[e].select_form===t){window.location.href=cf7RedirectToArray[e].link_to_redirect_after_submit;break}}(t.detail.contactFormId)}),!1)};var yt={};yt=function(){"use strict";var t="undefined"!=typeof window?window:void 0!==e?e:"undefined"!=typeof self?self:{},i="Expected a function",s=NaN,n="[object Symbol]",r=/^\s+|\s+$/g,a=/^[-+]0x[0-9a-f]+$/i,o=/^0b[01]+$/i,u=/^0o[0-7]+$/i,l=parseInt,c="object"==typeof t&&t&&t.Object===Object&&t,d="object"==typeof self&&self&&self.Object===Object&&self,h=c||d||Function("return this")(),p=Object.prototype.toString,f=Math.max,m=Math.min,g=function(){return h.Date.now()};function v(t,e,s){var n,r,a,o,u,l,c=0,d=!1,h=!1,p=!0;if("function"!=typeof t)throw new TypeError(i);function v(e){var i=n,s=r;return n=r=void 0,c=e,o=t.apply(s,i)}function b(t){var i=t-l;return void 0===l||i>=e||i<0||h&&t-c>=a}function k(){var t=g();if(b(t))return w(t);u=setTimeout(k,function(t){var i=e-(t-l);return h?m(i,a-(t-c)):i}(t))}function w(t){return u=void 0,p&&n?v(t):(n=r=void 0,o)}function E(){var t=g(),i=b(t);if(n=arguments,r=this,l=t,i){if(void 0===u)return function(t){return c=t,u=setTimeout(k,e),d?v(t):o}(l);if(h)return u=setTimeout(k,e),v(l)}return void 0===u&&(u=setTimeout(k,e)),o}return e=_(e)||0,y(s)&&(d=!!s.leading,a=(h="maxWait"in s)?f(_(s.maxWait)||0,e):a,p="trailing"in s?!!s.trailing:p),E.cancel=function(){void 0!==u&&clearTimeout(u),c=0,n=l=r=u=void 0},E.flush=function(){return void 0===u?o:w(g())},E}function y(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}function _(t){if("number"==typeof t)return t;if(function(t){return"symbol"==typeof t||function(t){return!!t&&"object"==typeof t}(t)&&p.call(t)==n}(t))return s;if(y(t)){var e="function"==typeof t.valueOf?t.valueOf():t;t=y(e)?e+"":e}if("string"!=typeof t)return 0===t?t:+t;t=t.replace(r,"");var i=o.test(t);return i||u.test(t)?l(t.slice(2),i?2:8):a.test(t)?s:+t}var b=function(t,e,s){var n=!0,r=!0;if("function"!=typeof t)throw new TypeError(i);return y(s)&&(n="leading"in s?!!s.leading:n,r="trailing"in s?!!s.trailing:r),v(t,e,{leading:n,maxWait:e,trailing:r})},k="Expected a function",w=NaN,E="[object Symbol]",S=/^\s+|\s+$/g,A=/^[-+]0x[0-9a-f]+$/i,x=/^0b[01]+$/i,C=/^0o[0-7]+$/i,F=parseInt,D="object"==typeof t&&t&&t.Object===Object&&t,T="object"==typeof self&&self&&self.Object===Object&&self,B=D||T||Function("return this")(),L=Object.prototype.toString,M=Math.max,V=Math.min,O=function(){return B.Date.now()};function P(t){var e=typeof t;return!!t&&("object"==e||"function"==e)}function I(t){if("number"==typeof t)return t;if(function(t){return"symbol"==typeof t||function(t){return!!t&&"object"==typeof t}(t)&&L.call(t)==E}(t))return w;if(P(t)){var e="function"==typeof t.valueOf?t.valueOf():t;t=P(e)?e+"":e}if("string"!=typeof t)return 0===t?t:+t;t=t.replace(S,"");var i=x.test(t);return i||C.test(t)?F(t.slice(2),i?2:8):A.test(t)?w:+t}var R=function(t,e,i){var s,n,r,a,o,u,l=0,c=!1,d=!1,h=!0;if("function"!=typeof t)throw new TypeError(k);function p(e){var i=s,r=n;return s=n=void 0,l=e,a=t.apply(r,i)}function f(t){var i=t-u;return void 0===u||i>=e||i<0||d&&t-l>=r}function m(){var t=O();if(f(t))return g(t);o=setTimeout(m,function(t){var i=e-(t-u);return d?V(i,r-(t-l)):i}(t))}function g(t){return o=void 0,h&&s?p(t):(s=n=void 0,a)}function v(){var t=O(),i=f(t);if(s=arguments,n=this,u=t,i){if(void 0===o)return function(t){return l=t,o=setTimeout(m,e),c?p(t):a}(u);if(d)return o=setTimeout(m,e),p(u)}return void 0===o&&(o=setTimeout(m,e)),a}return e=I(e)||0,P(i)&&(c=!!i.leading,r=(d="maxWait"in i)?M(I(i.maxWait)||0,e):r,h="trailing"in i?!!i.trailing:h),v.cancel=function(){void 0!==o&&clearTimeout(o),l=0,s=u=n=o=void 0},v.flush=function(){return void 0===o?a:g(O())},v},H=function(){};function q(t){t&&t.forEach((function(t){var e=Array.prototype.slice.call(t.addedNodes),i=Array.prototype.slice.call(t.removedNodes);if(function t(e){var i=void 0,s=void 0;for(i=0;i<e.length;i+=1){if((s=e[i]).dataset&&s.dataset.aos)return!0;if(s.children&&t(s.children))return!0}return!1}(e.concat(i)))return H()}))}function N(){return window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver}var j={isSupported:function(){return!!N()},ready:function(t,e){var i=window.document,s=new(N())(q);H=e,s.observe(i.documentElement,{childList:!0,subtree:!0,removedNodes:!0})}},z=function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")},$=function(){function t(t,e){for(var i=0;i<e.length;i++){var s=e[i];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(t,s.key,s)}}return function(e,i,s){return i&&t(e.prototype,i),s&&t(e,s),e}}(),W=Object.assign||function(t){for(var e=1;e<arguments.length;e++){var i=arguments[e];for(var s in i)Object.prototype.hasOwnProperty.call(i,s)&&(t[s]=i[s])}return t},Y=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,U=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,G=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,K=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;function X(){return navigator.userAgent||navigator.vendor||window.opera||""}var Z=new(function(){function t(){z(this,t)}return $(t,[{key:"phone",value:function(){var t=X();return!(!Y.test(t)&&!U.test(t.substr(0,4)))}},{key:"mobile",value:function(){var t=X();return!(!G.test(t)&&!K.test(t.substr(0,4)))}},{key:"tablet",value:function(){return this.mobile()&&!this.phone()}},{key:"ie11",value:function(){return"-ms-scroll-limit"in document.documentElement.style&&"-ms-ime-align"in document.documentElement.style}}]),t}()),J=function(t,e){var i=void 0;return Z.ie11()?(i=document.createEvent("CustomEvent")).initCustomEvent(t,!0,!0,{detail:e}):i=new CustomEvent(t,{detail:e}),document.dispatchEvent(i)},Q=function(t){return t.forEach((function(t,e){return function(t,e){var i=t.options,s=t.position,n=t.node,r=(t.data,function(){t.animated&&(function(t,e){e&&e.forEach((function(e){return t.classList.remove(e)}))}(n,i.animatedClassNames),J("aos:out",n),t.options.id&&J("aos:in:"+t.options.id,n),t.animated=!1)});i.mirror&&e>=s.out&&!i.once?r():e>=s.in?t.animated||(function(t,e){e&&e.forEach((function(e){return t.classList.add(e)}))}(n,i.animatedClassNames),J("aos:in",n),t.options.id&&J("aos:in:"+t.options.id,n),t.animated=!0):t.animated&&!i.once&&r()}(t,window.pageYOffset)}))},tt=function(t){for(var e=0,i=0;t&&!isNaN(t.offsetLeft)&&!isNaN(t.offsetTop);)e+=t.offsetLeft-("BODY"!=t.tagName?t.scrollLeft:0),i+=t.offsetTop-("BODY"!=t.tagName?t.scrollTop:0),t=t.offsetParent;return{top:i,left:e}},et=function(t,e,i){var s=t.getAttribute("data-aos-"+e);if(void 0!==s){if("true"===s)return!0;if("false"===s)return!1}return s||i},it=function(t,e){return t.forEach((function(t,i){var s=et(t.node,"mirror",e.mirror),n=et(t.node,"once",e.once),r=et(t.node,"id"),a=e.useClassNames&&t.node.getAttribute("data-aos"),o=[e.animatedClassName].concat(a?a.split(" "):[]).filter((function(t){return"string"==typeof t}));e.initClassName&&t.node.classList.add(e.initClassName),t.position={in:function(t,e,i){var s=window.innerHeight,n=et(t,"anchor"),r=et(t,"anchor-placement"),a=Number(et(t,"offset",r?0:e)),o=r||i,u=t;n&&document.querySelectorAll(n)&&(u=document.querySelectorAll(n)[0]);var l=tt(u).top-s;switch(o){case"top-bottom":break;case"center-bottom":l+=u.offsetHeight/2;break;case"bottom-bottom":l+=u.offsetHeight;break;case"top-center":l+=s/2;break;case"center-center":l+=s/2+u.offsetHeight/2;break;case"bottom-center":l+=s/2+u.offsetHeight;break;case"top-top":l+=s;break;case"bottom-top":l+=s+u.offsetHeight;break;case"center-top":l+=s+u.offsetHeight/2}return l+a}(t.node,e.offset,e.anchorPlacement),out:s&&function(t,e){window.innerHeight;var i=et(t,"anchor"),s=et(t,"offset",e),n=t;return i&&document.querySelectorAll(i)&&(n=document.querySelectorAll(i)[0]),tt(n).top+n.offsetHeight-s}(t.node,e.offset)},t.options={once:n,mirror:s,animatedClassNames:o,id:r}})),t},st=function(){var t=document.querySelectorAll("[data-aos]");return Array.prototype.map.call(t,(function(t){return{node:t}}))},nt=[],rt=!1,at={offset:120,delay:0,easing:"ease",duration:400,disable:!1,once:!1,mirror:!1,anchorPlacement:"top-bottom",startEvent:"DOMContentLoaded",animatedClassName:"aos-animate",initClassName:"aos-init",useClassNames:!1,disableMutationObserver:!1,throttleDelay:99,debounceDelay:50},ot=function(){return document.all&&!window.atob},ut=function(){arguments.length>0&&void 0!==arguments[0]&&arguments[0]&&(rt=!0),rt&&(nt=it(nt,at),Q(nt),window.addEventListener("scroll",b((function(){Q(nt,at.once)}),at.throttleDelay)))},lt=function(){if(nt=st(),dt(at.disable)||ot())return ct();ut()},ct=function(){nt.forEach((function(t,e){t.node.removeAttribute("data-aos"),t.node.removeAttribute("data-aos-easing"),t.node.removeAttribute("data-aos-duration"),t.node.removeAttribute("data-aos-delay"),at.initClassName&&t.node.classList.remove(at.initClassName),at.animatedClassName&&t.node.classList.remove(at.animatedClassName)}))},dt=function(t){return!0===t||"mobile"===t&&Z.mobile()||"phone"===t&&Z.phone()||"tablet"===t&&Z.tablet()||"function"==typeof t&&!0===t()};return{init:function(t){return at=W(at,t),nt=st(),at.disableMutationObserver||j.isSupported()||(console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '),at.disableMutationObserver=!0),at.disableMutationObserver||j.ready("[data-aos]",lt),dt(at.disable)||ot()?ct():(document.querySelector("body").setAttribute("data-aos-easing",at.easing),document.querySelector("body").setAttribute("data-aos-duration",at.duration),document.querySelector("body").setAttribute("data-aos-delay",at.delay),-1===["DOMContentLoaded","load"].indexOf(at.startEvent)?document.addEventListener(at.startEvent,(function(){ut(!0)})):window.addEventListener("load",(function(){ut(!0)})),"DOMContentLoaded"===at.startEvent&&["complete","interactive"].indexOf(document.readyState)>-1&&ut(!0),window.addEventListener("resize",R(ut,at.debounceDelay,!0)),window.addEventListener("orientationchange",R(ut,at.debounceDelay,!0)),nt)},refresh:ut,refreshHard:lt}}();var _t,bt,kt,wt,Et={};_t=Et,bt="smoothScrollFn",kt=()=>St,wt=t=>St=t,Object.defineProperty(_t,bt,{get:kt,set:wt,enumerable:!0,configurable:!0});const St=()=>{!function(){var t,e,i,s,n={frameRate:150,animationTime:800,stepSize:90,pulseAlgorithm:!0,pulseScale:4,pulseNormalize:1,accelerationDelta:50,accelerationMax:3,keyboardSupport:!0,arrowScroll:50,fixedBackground:!0,excluded:""},r=n,a=!1,o={x:0,y:0},u=!1,l=document.documentElement,c=[],d=/^Mac/.test(navigator.platform),h=37,p=38,f=39,m=40,g=32,v=33,y=34,_=35,b=36,k={37:1,38:1,39:1,40:1};function w(){if(!u&&document.body){u=!0;var s=document.body,n=document.documentElement,o=window.innerHeight,c=s.scrollHeight;if(l=document.compatMode.indexOf("CSS")>=0?n:s,t=s,r.keyboardSupport&&z("keydown",F),top!=self)a=!0;else if(at&&c>o&&(s.offsetHeight<=o||n.offsetHeight<=o)){var d,h=document.createElement("div");h.style.cssText="position:absolute; z-index:-10000; top:0; left:0; right:0; height:"+l.scrollHeight+"px",document.body.appendChild(h),i=function(){d||(d=setTimeout((function(){h.style.height="0",h.style.height=l.scrollHeight+"px",d=null}),500))},setTimeout(i,10),z("resize",i);if((e=new X(i)).observe(s,{attributes:!0,childList:!0,characterData:!1}),l.offsetHeight<=o){var p=document.createElement("div");p.style.clear="both",s.appendChild(p)}}r.fixedBackground||(s.style.backgroundAttachment="scroll",n.style.backgroundAttachment="scroll")}}var E=[],S=!1,A=Date.now();function x(t,e,i){var s,n;if(s=(s=e)>0?1:-1,n=(n=i)>0?1:-1,(o.x!==s||o.y!==n)&&(o.x=s,o.y=n,E=[],A=0),1!=r.accelerationMax){var a=Date.now()-A;if(a<r.accelerationDelta){var u=(1+50/a)/2;u>1&&(u=Math.min(u,r.accelerationMax),e*=u,i*=u)}A=Date.now()}if(E.push({x:e,y:i,lastX:e<0?.99:-.99,lastY:i<0?.99:-.99,start:Date.now()}),!S){var l=Z(),c=t===l||t===document.body;null==t.$scrollBehavior&&function(t){var e=L(t);if(null==O[e]){var i=getComputedStyle(t,"")["scroll-behavior"];O[e]="smooth"==i}return O[e]}(t)&&(t.$scrollBehavior=t.style.scrollBehavior,t.style.scrollBehavior="auto");var d=function(s){for(var n=Date.now(),a=0,o=0,u=0;u<E.length;u++){var l=E[u],h=n-l.start,p=h>=r.animationTime,f=p?1:h/r.animationTime;r.pulseAlgorithm&&(f=Q(f));var m=l.x*f-l.lastX>>0,g=l.y*f-l.lastY>>0;a+=m,o+=g,l.lastX+=m,l.lastY+=g,p&&(E.splice(u,1),u--)}c?window.scrollBy(a,o):(a&&(t.scrollLeft+=a),o&&(t.scrollTop+=o)),e||i||(E=[]),E.length?K(d,t,1e3/r.frameRate+1):(S=!1,null!=t.$scrollBehavior&&(t.style.scrollBehavior=t.$scrollBehavior,t.$scrollBehavior=null))};K(d,t,0),S=!0}}function C(e){u||w();var i=e.target;if(e.defaultPrevented||e.ctrlKey)return!0;if(W(t,"embed")||W(i,"embed")&&/\.pdf/i.test(i.src)||W(t,"object")||i.shadowRoot)return!0;var n=-e.wheelDeltaX||e.deltaX||0,o=-e.wheelDeltaY||e.deltaY||0;d&&(e.wheelDeltaX&&Y(e.wheelDeltaX,120)&&(n=e.wheelDeltaX/Math.abs(e.wheelDeltaX)*-120),e.wheelDeltaY&&Y(e.wheelDeltaY,120)&&(o=e.wheelDeltaY/Math.abs(e.wheelDeltaY)*-120)),n||o||(o=-e.wheelDelta||0),1===e.deltaMode&&(n*=40,o*=40);var l=H(i);return l?!!function(t){if(!t)return;c.length||(c=[t,t,t]);t=Math.abs(t),c.push(t),c.shift(),clearTimeout(s),s=setTimeout((function(){try{localStorage.SS_deltaBuffer=c.join(",")}catch(t){}}),1e3);var e=t>120&&U(t),i=!U(120)&&!U(100)&&!e;return t<50||i}(o)||(Math.abs(n)>1.2&&(n*=r.stepSize/120),Math.abs(o)>1.2&&(o*=r.stepSize/120),x(l,n,o),e.preventDefault(),void P()):!a||!it||(Object.defineProperty(e,"target",{value:window.frameElement}),parent.wheel(e))}function F(e){var i=e.target,s=e.ctrlKey||e.altKey||e.metaKey||e.shiftKey&&e.keyCode!==g;document.body.contains(t)||(t=document.activeElement);var n=/^(button|submit|radio|checkbox|file|color|image)$/i;if(e.defaultPrevented||/^(textarea|select|embed|object)$/i.test(i.nodeName)||W(i,"input")&&!n.test(i.type)||W(t,"video")||function(t){var e=t.target,i=!1;if(-1!=document.URL.indexOf("www.youtube.com/watch"))do{if(i=e.classList&&e.classList.contains("html5-video-controls"))break}while(e=e.parentNode);return i}(e)||i.isContentEditable||s)return!0;if((W(i,"button")||W(i,"input")&&n.test(i.type))&&e.keyCode===g)return!0;if(W(i,"input")&&"radio"==i.type&&k[e.keyCode])return!0;var o=0,u=0,l=H(t);if(!l)return!a||!it||parent.keydown(e);var c=l.clientHeight;switch(l==document.body&&(c=window.innerHeight),e.keyCode){case p:u=-r.arrowScroll;break;case m:u=r.arrowScroll;break;case g:u=-(e.shiftKey?1:-1)*c*.9;break;case v:u=.9*-c;break;case y:u=.9*c;break;case b:l==document.body&&document.scrollingElement&&(l=document.scrollingElement),u=-l.scrollTop;break;case _:var d=l.scrollHeight-l.scrollTop-c;u=d>0?d+10:0;break;case h:o=-r.arrowScroll;break;case f:o=r.arrowScroll;break;default:return!0}x(l,o,u),e.preventDefault(),P()}function D(e){t=e.target}var T,B,L=(T=0,function(t){return t.uniqueID||(t.uniqueID=T++)}),M={},V={},O={};function P(){clearTimeout(B),B=setInterval((function(){M=V=O={}}),1e3)}function I(t,e,i){for(var s=i?M:V,n=t.length;n--;)s[L(t[n])]=e;return e}function R(t,e){return(e?M:V)[L(t)]}function H(t){var e=[],i=document.body,s=l.scrollHeight;do{var n=R(t,!1);if(n)return I(e,n);if(e.push(t),s===t.scrollHeight){var r=N(l)&&N(i)||j(l);if(a&&q(l)||!a&&r)return I(e,Z())}else if(q(t)&&j(t))return I(e,t)}while(t=t.parentElement)}function q(t){return t.clientHeight+10<t.scrollHeight}function N(t){return"hidden"!==getComputedStyle(t,"").getPropertyValue("overflow-y")}function j(t){var e=getComputedStyle(t,"").getPropertyValue("overflow-y");return"scroll"===e||"auto"===e}function z(t,e,i){window.addEventListener(t,e,i||!1)}function $(t,e,i){window.removeEventListener(t,e,i||!1)}function W(t,e){return t&&(t.nodeName||"").toLowerCase()===e.toLowerCase()}if(window.localStorage&&localStorage.SS_deltaBuffer)try{c=localStorage.SS_deltaBuffer.split(",")}catch(t){}function Y(t,e){return Math.floor(t/e)==t/e}function U(t){return Y(c[0],t)&&Y(c[1],t)&&Y(c[2],t)}var G,K=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(t,e,i){window.setTimeout(t,i||1e3/60)},X=window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver,Z=(G=document.scrollingElement,function(){if(!G){var t=document.createElement("div");t.style.cssText="height:10000px;width:1px;",document.body.appendChild(t);var e=document.body.scrollTop;document.documentElement.scrollTop,window.scrollBy(0,3),G=document.body.scrollTop!=e?document.body:document.documentElement,window.scrollBy(0,-3),document.body.removeChild(t)}return G});function J(t){var e,i;return(t*=r.pulseScale)<1?e=t-(1-Math.exp(-t)):(t-=1,e=(i=Math.exp(-1))+(1-Math.exp(-t))*(1-i)),e*r.pulseNormalize}function Q(t){return t>=1?1:t<=0?0:(1==r.pulseNormalize&&(r.pulseNormalize/=J(1)),J(t))}var tt=window.navigator.userAgent,et=/Edge/.test(tt),it=/chrome/i.test(tt)&&!et,st=/safari/i.test(tt)&&!et,nt=/mobile/i.test(tt),rt=/Windows NT 6.1/i.test(tt)&&/rv:11/i.test(tt),at=st&&(/Version\/8/i.test(tt)||/Version\/9/i.test(tt)),ot=(it||st||rt)&&!nt,ut=!1;try{window.addEventListener("test",null,Object.defineProperty({},"passive",{get:function(){ut=!0}}))}catch(t){}var lt=!!ut&&{passive:!1},ct="onwheel"in document.createElement("div")?"wheel":"mousewheel";function dt(t){for(var e in t)n.hasOwnProperty(e)&&(r[e]=t[e])}ct&&ot&&(z(ct,C,lt),z("mousedown",D),z("load",w)),dt.destroy=function(){e&&e.disconnect(),$(ct,C),$("mousedown",D),$("keydown",F),$("resize",i),$("load",w)},window.SmoothScrollOptions&&dt(window.SmoothScrollOptions),"function"==typeof define&&define.amd?define((function(){return dt})):Et=dt}()};var At=['a[href]:not([tabindex^="-"])','area[href]:not([tabindex^="-"])','input:not([type="hidden"]):not([type="radio"]):not([disabled]):not([tabindex^="-"])','input[type="radio"]:not([disabled]):not([tabindex^="-"])','select:not([disabled]):not([tabindex^="-"])','textarea:not([disabled]):not([tabindex^="-"])','button:not([disabled]):not([tabindex^="-"])','iframe:not([tabindex^="-"])','audio[controls]:not([tabindex^="-"])','video[controls]:not([tabindex^="-"])','[contenteditable]:not([tabindex^="-"])','[tabindex]:not([tabindex^="-"])'];function xt(t){this._show=this.show.bind(this),this._hide=this.hide.bind(this),this._maintainFocus=this._maintainFocus.bind(this),this._bindKeypress=this._bindKeypress.bind(this),this.$el=t,this.shown=!1,this._id=this.$el.getAttribute("data-a11y-dialog")||this.$el.id,this._previouslyFocused=null,this._listeners={},this.create()}function Ct(t,e){return i=(e||document).querySelectorAll(t),Array.prototype.slice.call(i);var i}function Ft(t){(t.querySelector("[autofocus]")||t).focus()}function Dt(){Ct("[data-a11y-dialog]").forEach((function(t){new xt(t)}))}xt.prototype.create=function(){this.$el.setAttribute("aria-hidden",!0),this.$el.setAttribute("aria-modal",!0),this.$el.setAttribute("tabindex",-1),this.$el.hasAttribute("role")||this.$el.setAttribute("role","dialog"),this._openers=Ct('[data-a11y-dialog-show="'+this._id+'"]'),this._openers.forEach(function(t){t.addEventListener("click",this._show)}.bind(this));const t=this.$el;return this._closers=Ct("[data-a11y-dialog-hide]",this.$el).filter((function(e){return e.closest('[aria-modal="true"], [data-a11y-dialog]')===t})).concat(Ct('[data-a11y-dialog-hide="'+this._id+'"]')),this._closers.forEach(function(t){t.addEventListener("click",this._hide)}.bind(this)),this._fire("create"),this},xt.prototype.show=function(t){return this.shown||(this._previouslyFocused=document.activeElement,this.$el.removeAttribute("aria-hidden"),this.shown=!0,Ft(this.$el),document.body.addEventListener("focus",this._maintainFocus,!0),document.addEventListener("keydown",this._bindKeypress),this._fire("show",t)),this},xt.prototype.hide=function(t){return this.shown?(this.shown=!1,this.$el.setAttribute("aria-hidden","true"),this._previouslyFocused&&this._previouslyFocused.focus&&this._previouslyFocused.focus(),document.body.removeEventListener("focus",this._maintainFocus,!0),document.removeEventListener("keydown",this._bindKeypress),this._fire("hide",t),this):this},xt.prototype.destroy=function(){return this.hide(),this._openers.forEach(function(t){t.removeEventListener("click",this._show)}.bind(this)),this._closers.forEach(function(t){t.removeEventListener("click",this._hide)}.bind(this)),this._fire("destroy"),this._listeners={},this},xt.prototype.on=function(t,e){return void 0===this._listeners[t]&&(this._listeners[t]=[]),this._listeners[t].push(e),this},xt.prototype.off=function(t,e){var i=(this._listeners[t]||[]).indexOf(e);return i>-1&&this._listeners[t].splice(i,1),this},xt.prototype._fire=function(t,e){var i=this._listeners[t]||[],s=new CustomEvent(t,{detail:e});this.$el.dispatchEvent(s),i.forEach(function(t){t(this.$el,e)}.bind(this))},xt.prototype._bindKeypress=function(t){const e=document.activeElement;e&&e.closest('[aria-modal="true"]')!==this.$el||(this.shown&&"Escape"===t.key&&"alertdialog"!==this.$el.getAttribute("role")&&(t.preventDefault(),this.hide(t)),this.shown&&"Tab"===t.key&&function(t,e){var i=function(t){return Ct(At.join(","),t).filter((function(t){return!!(t.offsetWidth||t.offsetHeight||t.getClientRects().length)}))}(t),s=i.indexOf(document.activeElement);e.shiftKey&&0===s?(i[i.length-1].focus(),e.preventDefault()):e.shiftKey||s!==i.length-1||(i[0].focus(),e.preventDefault())}(this.$el,t))},xt.prototype._maintainFocus=function(t){!this.shown||t.target.closest('[aria-modal="true"]')||t.target.closest("[data-a11y-dialog-ignore-focus-trap]")||Ft(this.$el)},"undefined"!=typeof document&&("loading"===document.readyState?document.addEventListener("DOMContentLoaded",Dt):window.requestAnimationFrame?window.requestAnimationFrame(Dt):window.setTimeout(Dt,16));const Tt=()=>{let t=s(".form-modal-window"),e=s(".text-button-block.form-modal .btn"),n=()=>{t.classList.add("fade-out"),setTimeout((()=>{t.classList.remove("open","fade-out"),document.body.style.overflow=null}),300)};i(e)&&e.addEventListener("click",(()=>{t.classList.add("open"),document.body.style.overflow="hidden"})),i(t)&&(t.addEventListener("click",(e=>{e.target===t&&n()})),window.onkeydown=t=>{"Escape"===t.key&&n()})};function Bt(t,e){return new Bt.InputMask(t,e)}function Lt(t){return"string"==typeof t||t instanceof String}function Mt(t){var e;return"object"==typeof t&&null!=t&&"Object"===(null==t||null==(e=t.constructor)?void 0:e.name)}function Vt(t,e){return Array.isArray(e)?Vt(t,((t,i)=>e.includes(i))):Object.entries(t).reduce(((t,i)=>{let[s,n]=i;return e(n,s)&&(t[s]=n),t}),{})}const Ot={NONE:"NONE",LEFT:"LEFT",FORCE_LEFT:"FORCE_LEFT",RIGHT:"RIGHT",FORCE_RIGHT:"FORCE_RIGHT"};function Pt(t){switch(t){case Ot.LEFT:return Ot.FORCE_LEFT;case Ot.RIGHT:return Ot.FORCE_RIGHT;default:return t}}function It(t){return t.replace(/([.*+?^=!:${}()|[\]/\\])/g,"\\$1")}function Rt(t,e){if(e===t)return!0;const i=Array.isArray(e),s=Array.isArray(t);let n;if(i&&s){if(e.length!=t.length)return!1;for(n=0;n<e.length;n++)if(!Rt(e[n],t[n]))return!1;return!0}if(i!=s)return!1;if(e&&t&&"object"==typeof e&&"object"==typeof t){const i=e instanceof Date,s=t instanceof Date;if(i&&s)return e.getTime()==t.getTime();if(i!=s)return!1;const r=e instanceof RegExp,a=t instanceof RegExp;if(r&&a)return e.toString()==t.toString();if(r!=a)return!1;const o=Object.keys(e);for(n=0;n<o.length;n++)if(!Object.prototype.hasOwnProperty.call(t,o[n]))return!1;for(n=0;n<o.length;n++)if(!Rt(t[o[n]],e[o[n]]))return!1;return!0}return!(!e||!t||"function"!=typeof e||"function"!=typeof t)&&e.toString()===t.toString()}class Ht{constructor(t){for(Object.assign(this,t);this.value.slice(0,this.startChangePos)!==this.oldValue.slice(0,this.startChangePos);)--this.oldSelection.start}get startChangePos(){return Math.min(this.cursorPos,this.oldSelection.start)}get insertedCount(){return this.cursorPos-this.startChangePos}get inserted(){return this.value.substr(this.startChangePos,this.insertedCount)}get removedCount(){return Math.max(this.oldSelection.end-this.startChangePos||this.oldValue.length-this.value.length,0)}get removed(){return this.oldValue.substr(this.startChangePos,this.removedCount)}get head(){return this.value.substring(0,this.startChangePos)}get tail(){return this.value.substring(this.startChangePos+this.insertedCount)}get removeDirection(){return!this.removedCount||this.insertedCount?Ot.NONE:this.oldSelection.end!==this.cursorPos&&this.oldSelection.start!==this.cursorPos||this.oldSelection.end!==this.oldSelection.start?Ot.LEFT:Ot.RIGHT}}class qt{constructor(t,e,i){void 0===t&&(t=""),void 0===e&&(e=0),this.value=t,this.from=e,this.stop=i}toString(){return this.value}extend(t){this.value+=String(t)}appendTo(t){return t.append(this.toString(),{tail:!0}).aggregate(t._appendPlaceholder())}get state(){return{value:this.value,from:this.from,stop:this.stop}}set state(t){Object.assign(this,t)}unshift(t){if(!this.value.length||null!=t&&this.from>=t)return"";const e=this.value[0];return this.value=this.value.slice(1),e}shift(){if(!this.value.length)return"";const t=this.value[this.value.length-1];return this.value=this.value.slice(0,-1),t}}class Nt{constructor(t,e){this.masked=t,this._log=[];const{offset:i,index:s}=t._mapPosToBlock(e)||(e<0?{index:0,offset:0}:{index:this.masked._blocks.length,offset:0});this.offset=i,this.index=s,this.ok=!1}get block(){return this.masked._blocks[this.index]}get pos(){return this.masked._blockStartPos(this.index)+this.offset}get state(){return{index:this.index,offset:this.offset,ok:this.ok}}set state(t){Object.assign(this,t)}pushState(){this._log.push(this.state)}popState(){const t=this._log.pop();return t&&(this.state=t),t}bindBlock(){this.block||(this.index<0&&(this.index=0,this.offset=0),this.index>=this.masked._blocks.length&&(this.index=this.masked._blocks.length-1,this.offset=this.block.displayValue.length))}_pushLeft(t){for(this.pushState(),this.bindBlock();0<=this.index;--this.index,this.offset=(null==(e=this.block)?void 0:e.displayValue.length)||0){var e;if(t())return this.ok=!0}return this.ok=!1}_pushRight(t){for(this.pushState(),this.bindBlock();this.index<this.masked._blocks.length;++this.index,this.offset=0)if(t())return this.ok=!0;return this.ok=!1}pushLeftBeforeFilled(){return this._pushLeft((()=>{if(!this.block.isFixed&&this.block.value)return this.offset=this.block.nearestInputPos(this.offset,Ot.FORCE_LEFT),0!==this.offset||void 0}))}pushLeftBeforeInput(){return this._pushLeft((()=>{if(!this.block.isFixed)return this.offset=this.block.nearestInputPos(this.offset,Ot.LEFT),!0}))}pushLeftBeforeRequired(){return this._pushLeft((()=>{if(!(this.block.isFixed||this.block.isOptional&&!this.block.value))return this.offset=this.block.nearestInputPos(this.offset,Ot.LEFT),!0}))}pushRightBeforeFilled(){return this._pushRight((()=>{if(!this.block.isFixed&&this.block.value)return this.offset=this.block.nearestInputPos(this.offset,Ot.FORCE_RIGHT),this.offset!==this.block.value.length||void 0}))}pushRightBeforeInput(){return this._pushRight((()=>{if(!this.block.isFixed)return this.offset=this.block.nearestInputPos(this.offset,Ot.NONE),!0}))}pushRightBeforeRequired(){return this._pushRight((()=>{if(!(this.block.isFixed||this.block.isOptional&&!this.block.value))return this.offset=this.block.nearestInputPos(this.offset,Ot.NONE),!0}))}}function jt(t){if(null==t)throw new Error("mask property should be defined");return t instanceof RegExp?Bt.MaskedRegExp:Lt(t)?Bt.MaskedPattern:t===Date?Bt.MaskedDate:t===Number?Bt.MaskedNumber:Array.isArray(t)||t===Array?Bt.MaskedDynamic:Bt.Masked&&t.prototype instanceof Bt.Masked?t:Bt.Masked&&t instanceof Bt.Masked?t.constructor:t instanceof Function?Bt.MaskedFunction:(console.warn("Mask not found for mask",t),Bt.Masked)}function zt(t){if(!t)throw new Error("Options in not defined");if(Bt.Masked){if(t.prototype instanceof Bt.Masked)return{mask:t};const{mask:e,...i}=t instanceof Bt.Masked?{mask:t}:Mt(t)&&t.mask instanceof Bt.Masked?t:{};if(e){const t=e.mask;return{...Vt(e,((t,e)=>!e.startsWith("_"))),mask:e.constructor,_mask:t,...i}}}return Mt(t)?{...t}:{mask:t}}function $t(t){if(Bt.Masked&&t instanceof Bt.Masked)return t;const e=zt(t),i=jt(e.mask);if(!i)throw new Error("Masked class is not found for provided mask, appropriate module needs to be imported manually before creating mask.");return e.mask===i&&delete e.mask,e._mask&&(e.mask=e._mask,delete e._mask),new i(e)}Bt.createMask=$t;class Wt{get selectionStart(){let t;try{t=this._unsafeSelectionStart}catch{}return null!=t?t:this.value.length}get selectionEnd(){let t;try{t=this._unsafeSelectionEnd}catch{}return null!=t?t:this.value.length}select(t,e){if(null!=t&&null!=e&&(t!==this.selectionStart||e!==this.selectionEnd))try{this._unsafeSelect(t,e)}catch{}}get isActive(){return!1}}Bt.MaskElement=Wt;class Yt extends Wt{constructor(t){super(),this.input=t,this._handlers={}}get rootElement(){var t,e,i;return null!=(t=null==(e=(i=this.input).getRootNode)?void 0:e.call(i))?t:document}get isActive(){return this.input===this.rootElement.activeElement}bindEvents(t){Object.keys(t).forEach((e=>this._toggleEventHandler(Yt.EVENTS_MAP[e],t[e])))}unbindEvents(){Object.keys(this._handlers).forEach((t=>this._toggleEventHandler(t)))}_toggleEventHandler(t,e){this._handlers[t]&&(this.input.removeEventListener(t,this._handlers[t]),delete this._handlers[t]),e&&(this.input.addEventListener(t,e),this._handlers[t]=e)}}Yt.EVENTS_MAP={selectionChange:"keydown",input:"input",drop:"drop",click:"click",focus:"focus",commit:"blur"},Bt.HTMLMaskElement=Yt;class Ut extends Yt{constructor(t){super(t),this.input=t,this._handlers={}}get _unsafeSelectionStart(){return null!=this.input.selectionStart?this.input.selectionStart:this.value.length}get _unsafeSelectionEnd(){return this.input.selectionEnd}_unsafeSelect(t,e){this.input.setSelectionRange(t,e)}get value(){return this.input.value}set value(t){this.input.value=t}}Bt.HTMLMaskElement=Yt;class Gt extends Yt{get _unsafeSelectionStart(){const t=this.rootElement,e=t.getSelection&&t.getSelection(),i=e&&e.anchorOffset,s=e&&e.focusOffset;return null==s||null==i||i<s?i:s}get _unsafeSelectionEnd(){const t=this.rootElement,e=t.getSelection&&t.getSelection(),i=e&&e.anchorOffset,s=e&&e.focusOffset;return null==s||null==i||i>s?i:s}_unsafeSelect(t,e){if(!this.rootElement.createRange)return;const i=this.rootElement.createRange();i.setStart(this.input.firstChild||this.input,t),i.setEnd(this.input.lastChild||this.input,e);const s=this.rootElement,n=s.getSelection&&s.getSelection();n&&(n.removeAllRanges(),n.addRange(i))}get value(){return this.input.textContent||""}set value(t){this.input.textContent=t}}Bt.HTMLContenteditableMaskElement=Gt;Bt.InputMask=class{constructor(t,e){this.el=t instanceof Wt?t:t.isContentEditable&&"INPUT"!==t.tagName&&"TEXTAREA"!==t.tagName?new Gt(t):new Ut(t),this.masked=$t(e),this._listeners={},this._value="",this._unmaskedValue="",this._saveSelection=this._saveSelection.bind(this),this._onInput=this._onInput.bind(this),this._onChange=this._onChange.bind(this),this._onDrop=this._onDrop.bind(this),this._onFocus=this._onFocus.bind(this),this._onClick=this._onClick.bind(this),this.alignCursor=this.alignCursor.bind(this),this.alignCursorFriendly=this.alignCursorFriendly.bind(this),this._bindEvents(),this.updateValue(),this._onChange()}maskEquals(t){var e;return null==t||(null==(e=this.masked)?void 0:e.maskEquals(t))}get mask(){return this.masked.mask}set mask(t){if(this.maskEquals(t))return;if(!(t instanceof Bt.Masked)&&this.masked.constructor===jt(t))return void this.masked.updateOptions({mask:t});const e=t instanceof Bt.Masked?t:$t({mask:t});e.unmaskedValue=this.masked.unmaskedValue,this.masked=e}get value(){return this._value}set value(t){this.value!==t&&(this.masked.value=t,this.updateControl(),this.alignCursor())}get unmaskedValue(){return this._unmaskedValue}set unmaskedValue(t){this.unmaskedValue!==t&&(this.masked.unmaskedValue=t,this.updateControl(),this.alignCursor())}get typedValue(){return this.masked.typedValue}set typedValue(t){this.masked.typedValueEquals(t)||(this.masked.typedValue=t,this.updateControl(),this.alignCursor())}get displayValue(){return this.masked.displayValue}_bindEvents(){this.el.bindEvents({selectionChange:this._saveSelection,input:this._onInput,drop:this._onDrop,click:this._onClick,focus:this._onFocus,commit:this._onChange})}_unbindEvents(){this.el&&this.el.unbindEvents()}_fireEvent(t,e){const i=this._listeners[t];i&&i.forEach((t=>t(e)))}get selectionStart(){return this._cursorChanging?this._changingCursorPos:this.el.selectionStart}get cursorPos(){return this._cursorChanging?this._changingCursorPos:this.el.selectionEnd}set cursorPos(t){this.el&&this.el.isActive&&(this.el.select(t,t),this._saveSelection())}_saveSelection(){this.displayValue!==this.el.value&&console.warn("Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly."),this._selection={start:this.selectionStart,end:this.cursorPos}}updateValue(){this.masked.value=this.el.value,this._value=this.masked.value}updateControl(){const t=this.masked.unmaskedValue,e=this.masked.value,i=this.displayValue,s=this.unmaskedValue!==t||this.value!==e;this._unmaskedValue=t,this._value=e,this.el.value!==i&&(this.el.value=i),s&&this._fireChangeEvents()}updateOptions(t){const{mask:e,...i}=t,s=!this.maskEquals(e),n=!Rt(this.masked,i);s&&(this.mask=e),n&&this.masked.updateOptions(i),(s||n)&&this.updateControl()}updateCursor(t){null!=t&&(this.cursorPos=t,this._delayUpdateCursor(t))}_delayUpdateCursor(t){this._abortUpdateCursor(),this._changingCursorPos=t,this._cursorChanging=setTimeout((()=>{this.el&&(this.cursorPos=this._changingCursorPos,this._abortUpdateCursor())}),10)}_fireChangeEvents(){this._fireEvent("accept",this._inputEvent),this.masked.isComplete&&this._fireEvent("complete",this._inputEvent)}_abortUpdateCursor(){this._cursorChanging&&(clearTimeout(this._cursorChanging),delete this._cursorChanging)}alignCursor(){this.cursorPos=this.masked.nearestInputPos(this.masked.nearestInputPos(this.cursorPos,Ot.LEFT))}alignCursorFriendly(){this.selectionStart===this.cursorPos&&this.alignCursor()}on(t,e){return this._listeners[t]||(this._listeners[t]=[]),this._listeners[t].push(e),this}off(t,e){if(!this._listeners[t])return this;if(!e)return delete this._listeners[t],this;const i=this._listeners[t].indexOf(e);return i>=0&&this._listeners[t].splice(i,1),this}_onInput(t){if(this._inputEvent=t,this._abortUpdateCursor(),!this._selection)return this.updateValue();const e=new Ht({value:this.el.value,cursorPos:this.cursorPos,oldValue:this.displayValue,oldSelection:this._selection}),i=this.masked.rawInputValue,s=this.masked.splice(e.startChangePos,e.removed.length,e.inserted,e.removeDirection,{input:!0,raw:!0}).offset,n=i===this.masked.rawInputValue?e.removeDirection:Ot.NONE;let r=this.masked.nearestInputPos(e.startChangePos+s,n);n!==Ot.NONE&&(r=this.masked.nearestInputPos(r,Ot.NONE)),this.updateControl(),this.updateCursor(r),delete this._inputEvent}_onChange(){this.displayValue!==this.el.value&&this.updateValue(),this.masked.doCommit(),this.updateControl(),this._saveSelection()}_onDrop(t){t.preventDefault(),t.stopPropagation()}_onFocus(t){this.alignCursorFriendly()}_onClick(t){this.alignCursorFriendly()}destroy(){this._unbindEvents(),this._listeners.length=0,delete this.el}};class Kt{static normalize(t){return Array.isArray(t)?t:[t,new Kt]}constructor(t){Object.assign(this,{inserted:"",rawInserted:"",skip:!1,tailShift:0},t)}aggregate(t){return this.rawInserted+=t.rawInserted,this.skip=this.skip||t.skip,this.inserted+=t.inserted,this.tailShift+=t.tailShift,this}get offset(){return this.tailShift+this.inserted.length}}Bt.ChangeDetails=Kt;class Xt{constructor(t){this._value="",this._update({...Xt.DEFAULTS,...t}),this._initialized=!0}updateOptions(t){Object.keys(t).length&&this.withValueRefresh(this._update.bind(this,t))}_update(t){Object.assign(this,t)}get state(){return{_value:this.value,_rawInputValue:this.rawInputValue}}set state(t){this._value=t._value}reset(){this._value=""}get value(){return this._value}set value(t){this.resolve(t,{input:!0})}resolve(t,e){void 0===e&&(e={input:!0}),this.reset(),this.append(t,e,""),this.doCommit()}get unmaskedValue(){return this.value}set unmaskedValue(t){this.resolve(t,{})}get typedValue(){return this.parse?this.parse(this.value,this):this.unmaskedValue}set typedValue(t){this.format?this.value=this.format(t,this):this.unmaskedValue=String(t)}get rawInputValue(){return this.extractInput(0,this.displayValue.length,{raw:!0})}set rawInputValue(t){this.resolve(t,{raw:!0})}get displayValue(){return this.value}get isComplete(){return!0}get isFilled(){return this.isComplete}nearestInputPos(t,e){return t}totalInputPositions(t,e){return void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),Math.min(this.displayValue.length,e-t)}extractInput(t,e,i){return void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),this.displayValue.slice(t,e)}extractTail(t,e){return void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),new qt(this.extractInput(t,e),t)}appendTail(t){return Lt(t)&&(t=new qt(String(t))),t.appendTo(this)}_appendCharRaw(t,e){return t?(this._value+=t,new Kt({inserted:t,rawInserted:t})):new Kt}_appendChar(t,e,i){void 0===e&&(e={});const s=this.state;let n;if([t,n]=this.doPrepareChar(t,e),n=n.aggregate(this._appendCharRaw(t,e)),n.inserted){let t,r=!1!==this.doValidate(e);if(r&&null!=i){const e=this.state;!0===this.overwrite&&(t=i.state,i.unshift(this.displayValue.length-n.tailShift));let s=this.appendTail(i);r=s.rawInserted===i.toString(),r&&s.inserted||"shift"!==this.overwrite||(this.state=e,t=i.state,i.shift(),s=this.appendTail(i),r=s.rawInserted===i.toString()),r&&s.inserted&&(this.state=e)}r||(n=new Kt,this.state=s,i&&t&&(i.state=t))}return n}_appendPlaceholder(){return new Kt}_appendEager(){return new Kt}append(t,e,i){if(!Lt(t))throw new Error("value should be string");const s=Lt(i)?new qt(String(i)):i;let n;null!=e&&e.tail&&(e._beforeTailState=this.state),[t,n]=this.doPrepare(t,e);for(let i=0;i<t.length;++i){const r=this._appendChar(t[i],e,s);if(!r.rawInserted&&!this.doSkipInvalid(t[i],e,s))break;n.aggregate(r)}return(!0===this.eager||"append"===this.eager)&&null!=e&&e.input&&t&&n.aggregate(this._appendEager()),null!=s&&(n.tailShift+=this.appendTail(s).tailShift),n}remove(t,e){return void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),this._value=this.displayValue.slice(0,t)+this.displayValue.slice(e),new Kt}withValueRefresh(t){if(this._refreshing||!this._initialized)return t();this._refreshing=!0;const e=this.rawInputValue,i=this.value,s=t();return this.rawInputValue=e,this.value&&this.value!==i&&0===i.indexOf(this.value)&&this.append(i.slice(this.displayValue.length),{},""),delete this._refreshing,s}runIsolated(t){if(this._isolated||!this._initialized)return t(this);this._isolated=!0;const e=this.state,i=t(this);return this.state=e,delete this._isolated,i}doSkipInvalid(t,e,i){return Boolean(this.skipInvalid)}doPrepare(t,e){return void 0===e&&(e={}),Kt.normalize(this.prepare?this.prepare(t,this,e):t)}doPrepareChar(t,e){return void 0===e&&(e={}),Kt.normalize(this.prepareChar?this.prepareChar(t,this,e):t)}doValidate(t){return(!this.validate||this.validate(this.value,this,t))&&(!this.parent||this.parent.doValidate(t))}doCommit(){this.commit&&this.commit(this.value,this)}splice(t,e,i,s,n){void 0===s&&(s=Ot.NONE),void 0===n&&(n={input:!0});const r=t+e,a=this.extractTail(r),o=!0===this.eager||"remove"===this.eager;let u;o&&(s=Pt(s),u=this.extractInput(0,r,{raw:!0}));let l=t;const c=new Kt;if(s!==Ot.NONE&&(l=this.nearestInputPos(t,e>1&&0!==t&&!o?Ot.NONE:s),c.tailShift=l-t),c.aggregate(this.remove(l)),o&&s!==Ot.NONE&&u===this.rawInputValue)if(s===Ot.FORCE_LEFT){let t;for(;u===this.rawInputValue&&(t=this.displayValue.length);)c.aggregate(new Kt({tailShift:-1})).aggregate(this.remove(t-1))}else s===Ot.FORCE_RIGHT&&a.unshift();return c.aggregate(this.append(i,n,a))}maskEquals(t){return this.mask===t}typedValueEquals(t){const e=this.typedValue;return t===e||Xt.EMPTY_VALUES.includes(t)&&Xt.EMPTY_VALUES.includes(e)||!!this.format&&this.format(t,this)===this.format(this.typedValue,this)}}Xt.DEFAULTS={skipInvalid:!0},Xt.EMPTY_VALUES=[void 0,null,""],Bt.Masked=Xt;class Zt{constructor(t,e){void 0===t&&(t=[]),void 0===e&&(e=0),this.chunks=t,this.from=e}toString(){return this.chunks.map(String).join("")}extend(t){if(!String(t))return;t=Lt(t)?new qt(String(t)):t;const e=this.chunks[this.chunks.length-1],i=e&&(e.stop===t.stop||null==t.stop)&&t.from===e.from+e.toString().length;if(t instanceof qt)i?e.extend(t.toString()):this.chunks.push(t);else if(t instanceof Zt){if(null==t.stop){let e;for(;t.chunks.length&&null==t.chunks[0].stop;)e=t.chunks.shift(),e.from+=t.from,this.extend(e)}t.toString()&&(t.stop=t.blockIndex,this.chunks.push(t))}}appendTo(t){if(!(t instanceof Bt.MaskedPattern)){return new qt(this.toString()).appendTo(t)}const e=new Kt;for(let i=0;i<this.chunks.length&&!e.skip;++i){const s=this.chunks[i],n=t._mapPosToBlock(t.displayValue.length),r=s.stop;let a;if(null!=r&&(!n||n.index<=r)){if(s instanceof Zt||t._stops.indexOf(r)>=0){const i=t._appendPlaceholder(r);e.aggregate(i)}a=s instanceof Zt&&t._blocks[r]}if(a){const i=a.appendTail(s);i.skip=!1,e.aggregate(i),t._value+=i.inserted;const n=s.toString().slice(i.rawInserted.length);n&&e.aggregate(t.append(n,{tail:!0}))}else e.aggregate(t.append(s.toString(),{tail:!0}))}return e}get state(){return{chunks:this.chunks.map((t=>t.state)),from:this.from,stop:this.stop,blockIndex:this.blockIndex}}set state(t){const{chunks:e,...i}=t;Object.assign(this,i),this.chunks=e.map((t=>{const e="chunks"in t?new Zt:new qt;return e.state=t,e}))}unshift(t){if(!this.chunks.length||null!=t&&this.from>=t)return"";const e=null!=t?t-this.from:t;let i=0;for(;i<this.chunks.length;){const t=this.chunks[i],s=t.unshift(e);if(t.toString()){if(!s)break;++i}else this.chunks.splice(i,1);if(s)return s}return""}shift(){if(!this.chunks.length)return"";let t=this.chunks.length-1;for(;0<=t;){const e=this.chunks[t],i=e.shift();if(e.toString()){if(!i)break;--t}else this.chunks.splice(t,1);if(i)return i}return""}}class Jt{constructor(t){Object.assign(this,t),this._value="",this.isFixed=!0}get value(){return this._value}get unmaskedValue(){return this.isUnmasking?this.value:""}get rawInputValue(){return this._isRawInput?this.value:""}get displayValue(){return this.value}reset(){this._isRawInput=!1,this._value=""}remove(t,e){return void 0===t&&(t=0),void 0===e&&(e=this._value.length),this._value=this._value.slice(0,t)+this._value.slice(e),this._value||(this._isRawInput=!1),new Kt}nearestInputPos(t,e){void 0===e&&(e=Ot.NONE);const i=this._value.length;switch(e){case Ot.LEFT:case Ot.FORCE_LEFT:return 0;default:return i}}totalInputPositions(t,e){return void 0===t&&(t=0),void 0===e&&(e=this._value.length),this._isRawInput?e-t:0}extractInput(t,e,i){return void 0===t&&(t=0),void 0===e&&(e=this._value.length),void 0===i&&(i={}),i.raw&&this._isRawInput&&this._value.slice(t,e)||""}get isComplete(){return!0}get isFilled(){return Boolean(this._value)}_appendChar(t,e){void 0===e&&(e={});const i=new Kt;if(this.isFilled)return i;const s=!0===this.eager||"append"===this.eager,n=this.char===t&&(this.isUnmasking||e.input||e.raw)&&(!e.raw||!s)&&!e.tail;return n&&(i.rawInserted=this.char),this._value=i.inserted=this.char,this._isRawInput=n&&(e.raw||e.input),i}_appendEager(){return this._appendChar(this.char,{tail:!0})}_appendPlaceholder(){const t=new Kt;return this.isFilled||(this._value=t.inserted=this.char),t}extractTail(){return new qt("")}appendTail(t){return Lt(t)&&(t=new qt(String(t))),t.appendTo(this)}append(t,e,i){const s=this._appendChar(t[0],e);return null!=i&&(s.tailShift+=this.appendTail(i).tailShift),s}doCommit(){}get state(){return{_value:this._value,_rawInputValue:this.rawInputValue}}set state(t){this._value=t._value,this._isRawInput=Boolean(t._rawInputValue)}}class Qt{constructor(t){const{parent:e,isOptional:i,placeholderChar:s,displayChar:n,lazy:r,eager:a,...o}=t;this.masked=$t(o),Object.assign(this,{parent:e,isOptional:i,placeholderChar:s,displayChar:n,lazy:r,eager:a})}reset(){this.isFilled=!1,this.masked.reset()}remove(t,e){return void 0===t&&(t=0),void 0===e&&(e=this.value.length),0===t&&e>=1?(this.isFilled=!1,this.masked.remove(t,e)):new Kt}get value(){return this.masked.value||(this.isFilled&&!this.isOptional?this.placeholderChar:"")}get unmaskedValue(){return this.masked.unmaskedValue}get rawInputValue(){return this.masked.rawInputValue}get displayValue(){return this.masked.value&&this.displayChar||this.value}get isComplete(){return Boolean(this.masked.value)||this.isOptional}_appendChar(t,e){if(void 0===e&&(e={}),this.isFilled)return new Kt;const i=this.masked.state,s=this.masked._appendChar(t,this.currentMaskFlags(e));return s.inserted&&!1===this.doValidate(e)&&(s.inserted=s.rawInserted="",this.masked.state=i),s.inserted||this.isOptional||this.lazy||e.input||(s.inserted=this.placeholderChar),s.skip=!s.inserted&&!this.isOptional,this.isFilled=Boolean(s.inserted),s}append(t,e,i){return this.masked.append(t,this.currentMaskFlags(e),i)}_appendPlaceholder(){const t=new Kt;return this.isFilled||this.isOptional||(this.isFilled=!0,t.inserted=this.placeholderChar),t}_appendEager(){return new Kt}extractTail(t,e){return this.masked.extractTail(t,e)}appendTail(t){return this.masked.appendTail(t)}extractInput(t,e,i){return void 0===t&&(t=0),void 0===e&&(e=this.value.length),this.masked.extractInput(t,e,i)}nearestInputPos(t,e){void 0===e&&(e=Ot.NONE);const i=this.value.length,s=Math.min(Math.max(t,0),i);switch(e){case Ot.LEFT:case Ot.FORCE_LEFT:return this.isComplete?s:0;case Ot.RIGHT:case Ot.FORCE_RIGHT:return this.isComplete?s:i;default:return s}}totalInputPositions(t,e){return void 0===t&&(t=0),void 0===e&&(e=this.value.length),this.value.slice(t,e).length}doValidate(t){return this.masked.doValidate(this.currentMaskFlags(t))&&(!this.parent||this.parent.doValidate(this.currentMaskFlags(t)))}doCommit(){this.masked.doCommit()}get state(){return{_value:this.value,_rawInputValue:this.rawInputValue,masked:this.masked.state,isFilled:this.isFilled}}set state(t){this.masked.state=t.masked,this.isFilled=t.isFilled}currentMaskFlags(t){var e;return{...t,_beforeTailState:(null==t||null==(e=t._beforeTailState)?void 0:e.masked)||(null==t?void 0:t._beforeTailState)}}}Qt.DEFAULT_DEFINITIONS={0:/\d/,a:/[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC]/,"*":/./};Bt.MaskedRegExp=class extends Xt{updateOptions(t){super.updateOptions(t)}_update(t){const e=t.mask;e&&(t.validate=t=>t.search(e)>=0),super._update(t)}};class te extends Xt{constructor(t){super({...te.DEFAULTS,...t,definitions:Object.assign({},Qt.DEFAULT_DEFINITIONS,null==t?void 0:t.definitions)})}updateOptions(t){super.updateOptions(t)}_update(t){t.definitions=Object.assign({},this.definitions,t.definitions),super._update(t),this._rebuildMask()}_rebuildMask(){const t=this.definitions;this._blocks=[],this.exposeBlock=void 0,this._stops=[],this._maskedBlocks={};const e=this.mask;if(!e||!t)return;let i=!1,s=!1;for(let n=0;n<e.length;++n){if(this.blocks){const t=e.slice(n),i=Object.keys(this.blocks).filter((e=>0===t.indexOf(e)));i.sort(((t,e)=>e.length-t.length));const s=i[0];if(s){const{expose:t,...e}=zt(this.blocks[s]),i=$t({lazy:this.lazy,eager:this.eager,placeholderChar:this.placeholderChar,displayChar:this.displayChar,overwrite:this.overwrite,...e,parent:this});i&&(this._blocks.push(i),t&&(this.exposeBlock=i),this._maskedBlocks[s]||(this._maskedBlocks[s]=[]),this._maskedBlocks[s].push(this._blocks.length-1)),n+=s.length-1;continue}}let r=e[n],a=r in t;if(r===te.STOP_CHAR){this._stops.push(this._blocks.length);continue}if("{"===r||"}"===r){i=!i;continue}if("["===r||"]"===r){s=!s;continue}if(r===te.ESCAPE_CHAR){if(++n,r=e[n],!r)break;a=!1}const o=a?new Qt({isOptional:s,lazy:this.lazy,eager:this.eager,placeholderChar:this.placeholderChar,displayChar:this.displayChar,...zt(t[r]),parent:this}):new Jt({char:r,eager:this.eager,isUnmasking:i});this._blocks.push(o)}}get state(){return{...super.state,_blocks:this._blocks.map((t=>t.state))}}set state(t){const{_blocks:e,...i}=t;this._blocks.forEach(((t,i)=>t.state=e[i])),super.state=i}reset(){super.reset(),this._blocks.forEach((t=>t.reset()))}get isComplete(){return this.exposeBlock?this.exposeBlock.isComplete:this._blocks.every((t=>t.isComplete))}get isFilled(){return this._blocks.every((t=>t.isFilled))}get isFixed(){return this._blocks.every((t=>t.isFixed))}get isOptional(){return this._blocks.every((t=>t.isOptional))}doCommit(){this._blocks.forEach((t=>t.doCommit())),super.doCommit()}get unmaskedValue(){return this.exposeBlock?this.exposeBlock.unmaskedValue:this._blocks.reduce(((t,e)=>t+e.unmaskedValue),"")}set unmaskedValue(t){if(this.exposeBlock){const e=this.extractTail(this._blockStartPos(this._blocks.indexOf(this.exposeBlock))+this.exposeBlock.displayValue.length);this.exposeBlock.unmaskedValue=t,this.appendTail(e),this.doCommit()}else super.unmaskedValue=t}get value(){return this.exposeBlock?this.exposeBlock.value:this._blocks.reduce(((t,e)=>t+e.value),"")}set value(t){if(this.exposeBlock){const e=this.extractTail(this._blockStartPos(this._blocks.indexOf(this.exposeBlock))+this.exposeBlock.displayValue.length);this.exposeBlock.value=t,this.appendTail(e),this.doCommit()}else super.value=t}get typedValue(){return this.exposeBlock?this.exposeBlock.typedValue:super.typedValue}set typedValue(t){if(this.exposeBlock){const e=this.extractTail(this._blockStartPos(this._blocks.indexOf(this.exposeBlock))+this.exposeBlock.displayValue.length);this.exposeBlock.typedValue=t,this.appendTail(e),this.doCommit()}else super.typedValue=t}get displayValue(){return this._blocks.reduce(((t,e)=>t+e.displayValue),"")}appendTail(t){return super.appendTail(t).aggregate(this._appendPlaceholder())}_appendEager(){var t;const e=new Kt;let i=null==(t=this._mapPosToBlock(this.displayValue.length))?void 0:t.index;if(null==i)return e;this._blocks[i].isFilled&&++i;for(let t=i;t<this._blocks.length;++t){const i=this._blocks[t]._appendEager();if(!i.inserted)break;e.aggregate(i)}return e}_appendCharRaw(t,e){void 0===e&&(e={});const i=this._mapPosToBlock(this.displayValue.length),s=new Kt;if(!i)return s;for(let a=i.index;;++a){var n,r;const i=this._blocks[a];if(!i)break;const o=i._appendChar(t,{...e,_beforeTailState:null==(n=e._beforeTailState)||null==(r=n._blocks)?void 0:r[a]}),u=o.skip;if(s.aggregate(o),u||o.rawInserted)break}return s}extractTail(t,e){void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length);const i=new Zt;return t===e||this._forEachBlocksInRange(t,e,((t,e,s,n)=>{const r=t.extractTail(s,n);r.stop=this._findStopBefore(e),r.from=this._blockStartPos(e),r instanceof Zt&&(r.blockIndex=e),i.extend(r)})),i}extractInput(t,e,i){if(void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),void 0===i&&(i={}),t===e)return"";let s="";return this._forEachBlocksInRange(t,e,((t,e,n,r)=>{s+=t.extractInput(n,r,i)})),s}_findStopBefore(t){let e;for(let i=0;i<this._stops.length;++i){const s=this._stops[i];if(!(s<=t))break;e=s}return e}_appendPlaceholder(t){const e=new Kt;if(this.lazy&&null==t)return e;const i=this._mapPosToBlock(this.displayValue.length);if(!i)return e;const s=i.index,n=null!=t?t:this._blocks.length;return this._blocks.slice(s,n).forEach((i=>{if(!i.lazy||null!=t){var s;const t=i._appendPlaceholder(null==(s=i._blocks)?void 0:s.length);this._value+=t.inserted,e.aggregate(t)}})),e}_mapPosToBlock(t){let e="";for(let i=0;i<this._blocks.length;++i){const s=this._blocks[i],n=e.length;if(e+=s.displayValue,t<=e.length)return{index:i,offset:t-n}}}_blockStartPos(t){return this._blocks.slice(0,t).reduce(((t,e)=>t+e.displayValue.length),0)}_forEachBlocksInRange(t,e,i){void 0===e&&(e=this.displayValue.length);const s=this._mapPosToBlock(t);if(s){const t=this._mapPosToBlock(e),n=t&&s.index===t.index,r=s.offset,a=t&&n?t.offset:this._blocks[s.index].displayValue.length;if(i(this._blocks[s.index],s.index,r,a),t&&!n){for(let e=s.index+1;e<t.index;++e)i(this._blocks[e],e,0,this._blocks[e].displayValue.length);i(this._blocks[t.index],t.index,0,t.offset)}}}remove(t,e){void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length);const i=super.remove(t,e);return this._forEachBlocksInRange(t,e,((t,e,s,n)=>{i.aggregate(t.remove(s,n))})),i}nearestInputPos(t,e){if(void 0===e&&(e=Ot.NONE),!this._blocks.length)return 0;const i=new Nt(this,t);if(e===Ot.NONE)return i.pushRightBeforeInput()?i.pos:(i.popState(),i.pushLeftBeforeInput()?i.pos:this.displayValue.length);if(e===Ot.LEFT||e===Ot.FORCE_LEFT){if(e===Ot.LEFT){if(i.pushRightBeforeFilled(),i.ok&&i.pos===t)return t;i.popState()}if(i.pushLeftBeforeInput(),i.pushLeftBeforeRequired(),i.pushLeftBeforeFilled(),e===Ot.LEFT){if(i.pushRightBeforeInput(),i.pushRightBeforeRequired(),i.ok&&i.pos<=t)return i.pos;if(i.popState(),i.ok&&i.pos<=t)return i.pos;i.popState()}return i.ok?i.pos:e===Ot.FORCE_LEFT?0:(i.popState(),i.ok?i.pos:(i.popState(),i.ok?i.pos:0))}return e===Ot.RIGHT||e===Ot.FORCE_RIGHT?(i.pushRightBeforeInput(),i.pushRightBeforeRequired(),i.pushRightBeforeFilled()?i.pos:e===Ot.FORCE_RIGHT?this.displayValue.length:(i.popState(),i.ok?i.pos:(i.popState(),i.ok?i.pos:this.nearestInputPos(t,Ot.LEFT)))):t}totalInputPositions(t,e){void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length);let i=0;return this._forEachBlocksInRange(t,e,((t,e,s,n)=>{i+=t.totalInputPositions(s,n)})),i}maskedBlock(t){return this.maskedBlocks(t)[0]}maskedBlocks(t){const e=this._maskedBlocks[t];return e?e.map((t=>this._blocks[t])):[]}}te.DEFAULTS={lazy:!0,placeholderChar:"_"},te.STOP_CHAR="`",te.ESCAPE_CHAR="\\",te.InputDefinition=Qt,te.FixedDefinition=Jt,Bt.MaskedPattern=te;class ee extends te{get _matchFrom(){return this.maxLength-String(this.from).length}constructor(t){super(t)}updateOptions(t){super.updateOptions(t)}_update(t){const{to:e=this.to||0,from:i=this.from||0,maxLength:s=this.maxLength||0,autofix:n=this.autofix,...r}=t;this.to=e,this.from=i,this.maxLength=Math.max(String(e).length,s),this.autofix=n;const a=String(this.from).padStart(this.maxLength,"0"),o=String(this.to).padStart(this.maxLength,"0");let u=0;for(;u<o.length&&o[u]===a[u];)++u;r.mask=o.slice(0,u).replace(/0/g,"\\0")+"0".repeat(this.maxLength-u),super._update(r)}get isComplete(){return super.isComplete&&Boolean(this.value)}boundaries(t){let e="",i="";const[,s,n]=t.match(/^(\D*)(\d*)(\D*)/)||[];return n&&(e="0".repeat(s.length)+n,i="9".repeat(s.length)+n),e=e.padEnd(this.maxLength,"0"),i=i.padEnd(this.maxLength,"9"),[e,i]}doPrepareChar(t,e){let i;if(void 0===e&&(e={}),[t,i]=super.doPrepareChar(t.replace(/\D/g,""),e),!this.autofix||!t)return[t,i];const s=String(this.from).padStart(this.maxLength,"0"),n=String(this.to).padStart(this.maxLength,"0"),r=this.value+t;if(r.length>this.maxLength)return["",i];const[a,o]=this.boundaries(r);return Number(o)<this.from?[s[r.length-1],i]:Number(a)>this.to?"pad"===this.autofix&&r.length<this.maxLength?["",i.aggregate(this.append(s[r.length-1]+t,e))]:[n[r.length-1],i]:[t,i]}doValidate(t){const e=this.value;if(-1===e.search(/[^0]/)&&e.length<=this._matchFrom)return!0;const[i,s]=this.boundaries(e);return this.from<=Number(s)&&Number(i)<=this.to&&super.doValidate(t)}}Bt.MaskedRange=ee;class ie extends te{constructor(t){const{mask:e,pattern:i,...s}={...ie.DEFAULTS,...t};super({...s,mask:Lt(e)?e:i})}updateOptions(t){super.updateOptions(t)}_update(t){const{mask:e,pattern:i,blocks:s,...n}={...ie.DEFAULTS,...t},r=Object.assign({},ie.GET_DEFAULT_BLOCKS());t.min&&(r.Y.from=t.min.getFullYear()),t.max&&(r.Y.to=t.max.getFullYear()),t.min&&t.max&&r.Y.from===r.Y.to&&(r.m.from=t.min.getMonth()+1,r.m.to=t.max.getMonth()+1,r.m.from===r.m.to&&(r.d.from=t.min.getDate(),r.d.to=t.max.getDate())),Object.assign(r,this.blocks,s),Object.keys(r).forEach((e=>{const i=r[e];!("autofix"in i)&&"autofix"in t&&(i.autofix=t.autofix)})),super._update({...n,mask:Lt(e)?e:i,blocks:r})}doValidate(t){const e=this.date;return super.doValidate(t)&&(!this.isComplete||this.isDateExist(this.value)&&null!=e&&(null==this.min||this.min<=e)&&(null==this.max||e<=this.max))}isDateExist(t){return this.format(this.parse(t,this),this).indexOf(t)>=0}get date(){return this.typedValue}set date(t){this.typedValue=t}get typedValue(){return this.isComplete?super.typedValue:null}set typedValue(t){super.typedValue=t}maskEquals(t){return t===Date||super.maskEquals(t)}}ie.GET_DEFAULT_BLOCKS=()=>({d:{mask:ee,from:1,to:31,maxLength:2},m:{mask:ee,from:1,to:12,maxLength:2},Y:{mask:ee,from:1900,to:9999}}),ie.DEFAULTS={mask:Date,pattern:"d{.}`m{.}`Y",format:(t,e)=>{if(!t)return"";return[String(t.getDate()).padStart(2,"0"),String(t.getMonth()+1).padStart(2,"0"),t.getFullYear()].join(".")},parse:(t,e)=>{const[i,s,n]=t.split(".").map(Number);return new Date(n,s-1,i)}},Bt.MaskedDate=ie;class se extends Xt{constructor(t){super({...se.DEFAULTS,...t}),this.currentMask=void 0}updateOptions(t){super.updateOptions(t)}_update(t){super._update(t),"mask"in t&&(this.exposeMask=void 0,this.compiledMasks=Array.isArray(t.mask)?t.mask.map((t=>{const{expose:e,...i}=zt(t),s=$t({overwrite:this._overwrite,eager:this._eager,skipInvalid:this._skipInvalid,...i});return e&&(this.exposeMask=s),s})):[])}_appendCharRaw(t,e){void 0===e&&(e={});const i=this._applyDispatch(t,e);return this.currentMask&&i.aggregate(this.currentMask._appendChar(t,this.currentMaskFlags(e))),i}_applyDispatch(t,e,i){void 0===t&&(t=""),void 0===e&&(e={}),void 0===i&&(i="");const s=e.tail&&null!=e._beforeTailState?e._beforeTailState._value:this.value,n=this.rawInputValue,r=e.tail&&null!=e._beforeTailState?e._beforeTailState._rawInputValue:n,a=n.slice(r.length),o=this.currentMask,u=new Kt,l=null==o?void 0:o.state;if(this.currentMask=this.doDispatch(t,{...e},i),this.currentMask)if(this.currentMask!==o){if(this.currentMask.reset(),r){const t=this.currentMask.append(r,{raw:!0});u.tailShift=t.inserted.length-s.length}a&&(u.tailShift+=this.currentMask.append(a,{raw:!0,tail:!0}).tailShift)}else l&&(this.currentMask.state=l);return u}_appendPlaceholder(){const t=this._applyDispatch();return this.currentMask&&t.aggregate(this.currentMask._appendPlaceholder()),t}_appendEager(){const t=this._applyDispatch();return this.currentMask&&t.aggregate(this.currentMask._appendEager()),t}appendTail(t){const e=new Kt;return t&&e.aggregate(this._applyDispatch("",{},t)),e.aggregate(this.currentMask?this.currentMask.appendTail(t):super.appendTail(t))}currentMaskFlags(t){var e,i;return{...t,_beforeTailState:(null==(e=t._beforeTailState)?void 0:e.currentMaskRef)===this.currentMask&&(null==(i=t._beforeTailState)?void 0:i.currentMask)||t._beforeTailState}}doDispatch(t,e,i){return void 0===e&&(e={}),void 0===i&&(i=""),this.dispatch(t,this,e,i)}doValidate(t){return super.doValidate(t)&&(!this.currentMask||this.currentMask.doValidate(this.currentMaskFlags(t)))}doPrepare(t,e){void 0===e&&(e={});let[i,s]=super.doPrepare(t,e);if(this.currentMask){let t;[i,t]=super.doPrepare(i,this.currentMaskFlags(e)),s=s.aggregate(t)}return[i,s]}doPrepareChar(t,e){void 0===e&&(e={});let[i,s]=super.doPrepareChar(t,e);if(this.currentMask){let t;[i,t]=super.doPrepareChar(i,this.currentMaskFlags(e)),s=s.aggregate(t)}return[i,s]}reset(){var t;null==(t=this.currentMask)||t.reset(),this.compiledMasks.forEach((t=>t.reset()))}get value(){return this.exposeMask?this.exposeMask.value:this.currentMask?this.currentMask.value:""}set value(t){this.exposeMask?(this.exposeMask.value=t,this.currentMask=this.exposeMask,this._applyDispatch()):super.value=t}get unmaskedValue(){return this.exposeMask?this.exposeMask.unmaskedValue:this.currentMask?this.currentMask.unmaskedValue:""}set unmaskedValue(t){this.exposeMask?(this.exposeMask.unmaskedValue=t,this.currentMask=this.exposeMask,this._applyDispatch()):super.unmaskedValue=t}get typedValue(){return this.exposeMask?this.exposeMask.typedValue:this.currentMask?this.currentMask.typedValue:""}set typedValue(t){if(this.exposeMask)return this.exposeMask.typedValue=t,this.currentMask=this.exposeMask,void this._applyDispatch();let e=String(t);this.currentMask&&(this.currentMask.typedValue=t,e=this.currentMask.unmaskedValue),this.unmaskedValue=e}get displayValue(){return this.currentMask?this.currentMask.displayValue:""}get isComplete(){var t;return Boolean(null==(t=this.currentMask)?void 0:t.isComplete)}get isFilled(){var t;return Boolean(null==(t=this.currentMask)?void 0:t.isFilled)}remove(t,e){const i=new Kt;return this.currentMask&&i.aggregate(this.currentMask.remove(t,e)).aggregate(this._applyDispatch()),i}get state(){var t;return{...super.state,_rawInputValue:this.rawInputValue,compiledMasks:this.compiledMasks.map((t=>t.state)),currentMaskRef:this.currentMask,currentMask:null==(t=this.currentMask)?void 0:t.state}}set state(t){const{compiledMasks:e,currentMaskRef:i,currentMask:s,...n}=t;e&&this.compiledMasks.forEach(((t,i)=>t.state=e[i])),null!=i&&(this.currentMask=i,this.currentMask.state=s),super.state=n}extractInput(t,e,i){return this.currentMask?this.currentMask.extractInput(t,e,i):""}extractTail(t,e){return this.currentMask?this.currentMask.extractTail(t,e):super.extractTail(t,e)}doCommit(){this.currentMask&&this.currentMask.doCommit(),super.doCommit()}nearestInputPos(t,e){return this.currentMask?this.currentMask.nearestInputPos(t,e):super.nearestInputPos(t,e)}get overwrite(){return this.currentMask?this.currentMask.overwrite:this._overwrite}set overwrite(t){this._overwrite=t}get eager(){return this.currentMask?this.currentMask.eager:this._eager}set eager(t){this._eager=t}get skipInvalid(){return this.currentMask?this.currentMask.skipInvalid:this._skipInvalid}set skipInvalid(t){this._skipInvalid=t}maskEquals(t){return Array.isArray(t)?this.compiledMasks.every(((e,i)=>{if(!t[i])return;const{mask:s,...n}=t[i];return Rt(e,n)&&e.maskEquals(s)})):super.maskEquals(t)}typedValueEquals(t){var e;return Boolean(null==(e=this.currentMask)?void 0:e.typedValueEquals(t))}}se.DEFAULTS=void 0,se.DEFAULTS={dispatch:(t,e,i,s)=>{if(!e.compiledMasks.length)return;const n=e.rawInputValue,r=e.compiledMasks.map(((r,a)=>{const o=e.currentMask===r,u=o?r.displayValue.length:r.nearestInputPos(r.displayValue.length,Ot.FORCE_LEFT);return r.rawInputValue!==n?(r.reset(),r.append(n,{raw:!0})):o||r.remove(u),r.append(t,e.currentMaskFlags(i)),r.appendTail(s),{index:a,weight:r.rawInputValue.length,totalInputPositions:r.totalInputPositions(0,Math.max(u,r.nearestInputPos(r.displayValue.length,Ot.FORCE_LEFT)))}}));return r.sort(((t,e)=>e.weight-t.weight||e.totalInputPositions-t.totalInputPositions)),e.compiledMasks[r[0].index]}},Bt.MaskedDynamic=se;Bt.MaskedEnum=class extends te{updateOptions(t){super.updateOptions(t)}_update(t){const{enum:e,...i}=t;e&&(i.mask="*".repeat(e[0].length),this.enum=e),super._update(i)}doValidate(t){return this.enum.some((t=>t.indexOf(this.unmaskedValue)>=0))&&super.doValidate(t)}};Bt.MaskedFunction=class extends Xt{updateOptions(t){super.updateOptions(t)}_update(t){super._update({...t,validate:t.mask})}};class ne extends Xt{constructor(t){super({...ne.DEFAULTS,...t})}updateOptions(t){super.updateOptions(t)}_update(t){super._update(t),this._updateRegExps()}_updateRegExps(){const t="^"+(this.allowNegative?"[+|\\-]?":""),e=(this.scale?"("+It(this.radix)+"\\d{0,"+this.scale+"})?":"")+"$";this._numberRegExp=new RegExp(t+"\\d*"+e),this._mapToRadixRegExp=new RegExp("["+this.mapToRadix.map(It).join("")+"]","g"),this._thousandsSeparatorRegExp=new RegExp(It(this.thousandsSeparator),"g")}_removeThousandsSeparators(t){return t.replace(this._thousandsSeparatorRegExp,"")}_insertThousandsSeparators(t){const e=t.split(this.radix);return e[0]=e[0].replace(/\B(?=(\d{3})+(?!\d))/g,this.thousandsSeparator),e.join(this.radix)}doPrepareChar(t,e){void 0===e&&(e={}),t=this._removeThousandsSeparators(this.scale&&this.mapToRadix.length&&(e.input&&e.raw||!e.input&&!e.raw)?t.replace(this._mapToRadixRegExp,this.radix):t);const[i,s]=super.doPrepareChar(t,e);return t&&!i&&(s.skip=!0),!i||this.allowPositive||this.value||"-"===i||s.aggregate(this._appendChar("-")),[i,s]}_separatorsCount(t,e){void 0===e&&(e=!1);let i=0;for(let s=0;s<t;++s)this._value.indexOf(this.thousandsSeparator,s)===s&&(++i,e&&(t+=this.thousandsSeparator.length));return i}_separatorsCountFromSlice(t){return void 0===t&&(t=this._value),this._separatorsCount(this._removeThousandsSeparators(t).length,!0)}extractInput(t,e,i){return void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),[t,e]=this._adjustRangeWithSeparators(t,e),this._removeThousandsSeparators(super.extractInput(t,e,i))}_appendCharRaw(t,e){if(void 0===e&&(e={}),!this.thousandsSeparator)return super._appendCharRaw(t,e);const i=e.tail&&e._beforeTailState?e._beforeTailState._value:this._value,s=this._separatorsCountFromSlice(i);this._value=this._removeThousandsSeparators(this.value);const n=super._appendCharRaw(t,e);this._value=this._insertThousandsSeparators(this._value);const r=e.tail&&e._beforeTailState?e._beforeTailState._value:this._value,a=this._separatorsCountFromSlice(r);return n.tailShift+=(a-s)*this.thousandsSeparator.length,n.skip=!n.rawInserted&&t===this.thousandsSeparator,n}_findSeparatorAround(t){if(this.thousandsSeparator){const e=t-this.thousandsSeparator.length+1,i=this.value.indexOf(this.thousandsSeparator,e);if(i<=t)return i}return-1}_adjustRangeWithSeparators(t,e){const i=this._findSeparatorAround(t);i>=0&&(t=i);const s=this._findSeparatorAround(e);return s>=0&&(e=s+this.thousandsSeparator.length),[t,e]}remove(t,e){void 0===t&&(t=0),void 0===e&&(e=this.displayValue.length),[t,e]=this._adjustRangeWithSeparators(t,e);const i=this.value.slice(0,t),s=this.value.slice(e),n=this._separatorsCount(i.length);this._value=this._insertThousandsSeparators(this._removeThousandsSeparators(i+s));const r=this._separatorsCountFromSlice(i);return new Kt({tailShift:(r-n)*this.thousandsSeparator.length})}nearestInputPos(t,e){if(!this.thousandsSeparator)return t;switch(e){case Ot.NONE:case Ot.LEFT:case Ot.FORCE_LEFT:{const i=this._findSeparatorAround(t-1);if(i>=0){const s=i+this.thousandsSeparator.length;if(t<s||this.value.length<=s||e===Ot.FORCE_LEFT)return i}break}case Ot.RIGHT:case Ot.FORCE_RIGHT:{const e=this._findSeparatorAround(t);if(e>=0)return e+this.thousandsSeparator.length}}return t}doValidate(t){let e=Boolean(this._removeThousandsSeparators(this.value).match(this._numberRegExp));if(e){const t=this.number;e=e&&!isNaN(t)&&(null==this.min||this.min>=0||this.min<=this.number)&&(null==this.max||this.max<=0||this.number<=this.max)}return e&&super.doValidate(t)}doCommit(){if(this.value){const t=this.number;let e=t;null!=this.min&&(e=Math.max(e,this.min)),null!=this.max&&(e=Math.min(e,this.max)),e!==t&&(this.unmaskedValue=this.format(e,this));let i=this.value;this.normalizeZeros&&(i=this._normalizeZeros(i)),this.padFractionalZeros&&this.scale>0&&(i=this._padFractionalZeros(i)),this._value=i}super.doCommit()}_normalizeZeros(t){const e=this._removeThousandsSeparators(t).split(this.radix);return e[0]=e[0].replace(/^(\D*)(0*)(\d*)/,((t,e,i,s)=>e+s)),t.length&&!/\d$/.test(e[0])&&(e[0]=e[0]+"0"),e.length>1&&(e[1]=e[1].replace(/0*$/,""),e[1].length||(e.length=1)),this._insertThousandsSeparators(e.join(this.radix))}_padFractionalZeros(t){if(!t)return t;const e=t.split(this.radix);return e.length<2&&e.push(""),e[1]=e[1].padEnd(this.scale,"0"),e.join(this.radix)}doSkipInvalid(t,e,i){void 0===e&&(e={});const s=0===this.scale&&t!==this.thousandsSeparator&&(t===this.radix||t===ne.UNMASKED_RADIX||this.mapToRadix.includes(t));return super.doSkipInvalid(t,e,i)&&!s}get unmaskedValue(){return this._removeThousandsSeparators(this._normalizeZeros(this.value)).replace(this.radix,ne.UNMASKED_RADIX)}set unmaskedValue(t){super.unmaskedValue=t}get typedValue(){return this.parse(this.unmaskedValue,this)}set typedValue(t){this.rawInputValue=this.format(t,this).replace(ne.UNMASKED_RADIX,this.radix)}get number(){return this.typedValue}set number(t){this.typedValue=t}get allowNegative(){return null!=this.min&&this.min<0||null!=this.max&&this.max<0}get allowPositive(){return null!=this.min&&this.min>0||null!=this.max&&this.max>0}typedValueEquals(t){return(super.typedValueEquals(t)||ne.EMPTY_VALUES.includes(t)&&ne.EMPTY_VALUES.includes(this.typedValue))&&!(0===t&&""===this.value)}}ne.UNMASKED_RADIX=".",ne.EMPTY_VALUES=[...Xt.EMPTY_VALUES,0],ne.DEFAULTS={mask:Number,radix:",",thousandsSeparator:"",mapToRadix:[ne.UNMASKED_RADIX],min:Number.MIN_SAFE_INTEGER,max:Number.MAX_SAFE_INTEGER,scale:2,normalizeZeros:!0,padFractionalZeros:!1,parse:Number,format:t=>t.toLocaleString("en-US",{useGrouping:!1,maximumFractionDigits:20})},Bt.MaskedNumber=ne;const re={MASKED:"value",UNMASKED:"unmaskedValue",TYPED:"typedValue"};function ae(t,e,i){void 0===e&&(e=re.MASKED),void 0===i&&(i=re.MASKED);const s=$t(t);return t=>s.runIsolated((s=>(s[e]=t,s[i])))}Bt.PIPE_TYPE=re,Bt.createPipe=ae,Bt.pipe=function(t,e,i,s){return ae(e,i,s)(t)};try{globalThis.IMask=Bt}catch{}const oe=()=>{const t=s("#add-field-button");let e=1;i(t)&&t.addEventListener("click",(function(){e++;const n=this,r=s(".wpcf7-form");if(i(r)){const t=document.createElement("div");t.innerHTML=`<div class="fields">\n                        <label for="" class="">\n                            <span class="wpcf7-form-control-wrap" data-name="person_first_name_${e}"><input type="text" name="person_first_name_${e}" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="First Initial"></span>\n                        </label>\n                        <label for="" class="">\n                            <span class="wpcf7-form-control-wrap" data-name="person_last_name_${e}"><input type="text" name="person_last_name_${e}" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Last Name"></span>\n                        </label>\n                    </div>`,r.insertBefore(t,n)}3==e&&t.remove()}))},ue=()=>{const t=n(".faq__header");if(t&&t.length)for(let e=0;e<t.length;e++)t[e].addEventListener("click",(function(){if(this.parentNode.classList.contains("faq__position__active"))this.nextElementSibling.style.maxHeight=null,this.parentNode.classList.remove("faq__position__active");else{for(let e=0;e<t.length;e++)t[e].parentNode.classList.remove("faq__position__active"),t[e].nextElementSibling.style.maxHeight=null;this.parentNode.classList.add("faq__position__active");const e=this.nextElementSibling;e.style.maxHeight=e.scrollHeight+"px"}}));let e=s(".faq-without-image__btn");i(e)&&e.addEventListener("click",(()=>{let t=s(".hidden_faq_image_left");e.textContent="- show less",e.classList.contains("clicked")?(t.classList.add("hidden"),e.textContent="+ show more...",e.classList.remove("clicked")):i(t)&&(e.classList.add("clicked"),t.classList.remove("hidden"))}))};var le;le=()=>{(()=>{let t=n("form");i(t)&&Array.from(t).forEach((t=>{let e=n(".masked_phone",t),r=new Map;if(i(e)){Array.from(e).forEach((t=>{let e=Bt(t,{mask:"(000) 000-0000",prepare:(t,e)=>t.replace(/\D/g,""),lazy:!1,placeholderChar:"_"});t.addEventListener("input",(()=>{if(e.masked.isComplete){let i=e.unmaskedValue;i.startsWith("0")||i.startsWith("1")?t.style.border="2px solid red":t.style.border=""}else t.style.border=""})),r.set(t.name,e)}));let i=s(".btn_form",t);i&&i.addEventListener("click",(function(t){if(Array.from(e).some((t=>{let e=r.get(t.name);if(e&&!e.masked.isComplete)return t.classList.add("invalid-phone-number"),t.style.border="2px solid red",!0;{let i=e.unmaskedValue;return i.startsWith("0")||i.startsWith("1")?(t.classList.add("invalid-phone-number"),t.style.border="2px solid red",!0):(t.style.border="",t.classList.remove("invalid-phone-number"),!1)}})))return t.preventDefault(),!1}))}}))})(),(()=>{console.log("events");let t=n('input[name="post_id"]');i(t)&&Array.from(t).forEach((t=>{t.value=ajax_url.page_id,console.log("page ID is == ",t.value)}));var e=n(".wpcf7");i(e)&&Array.from(e).forEach((t=>{t.addEventListener("submit",(t=>{let e=s(".wpcf7-spinner",t.target),r=s("button",t.target);r.disabled=!0,n("span",r),i(e)&&e.classList.add("active")})),document.addEventListener("wpcf7invalid",(function(t){r(t.target)}),!1),document.addEventListener("wpcf7spam",(function(t){r(t.target)}),!1),document.addEventListener("wpcf7mailsent",(function(t){r(t.target)}),!1),document.addEventListener("wpcf7mailfailed",(function(t){r(t.target)}),!1)}));let r=t=>{let e=s("button",t),n=s(".wpcf7-spinner",t);e.disabled=!1,i(n)&&n.classList.remove("active")}})(),u(),(()=>{let t=s("header");if(i(t)){let e=n(".menu-item-has-children");i(e)&&Array.from(e).forEach((e=>{let n=s(".sub-menu",e);i(n)&&(n.style.top=t.clientHeight+"px")}))}})(),function(){const t=s("header");let e=!1;document.addEventListener("scroll",(i=>{!e&&window.scrollY>=160&&(t.classList.add("sticked"),e=!0),e&&window.scrollY<=70&&(t.classList.remove("sticked"),e=!1)}))}(),mt(),(()=>{let t=n(".btn.no-text");i(t)&&t.length>0&&Array.from(t).forEach((t=>{t.addEventListener("mouseover",(()=>{let e=t.querySelector(".btn-fade-in");i(e)&&(e.classList.add("opacity-100"),e.classList.remove("opacity-0"),e.style.width="28px",e.style.marginLeft="8px")})),t.addEventListener("mouseout",(()=>{let e=t.querySelector(".btn-fade-in");i(e)&&(e.classList.remove("opacity-100"),e.classList.add("opacity-0"),e.style.width="0px",e.style.marginLeft="0px")}))}))})(),document.querySelector(".hidden-text"),document.querySelector(".more-btn"),(()=>{let t=document.querySelector(".hidden-text-education"),e=document.querySelector(".more-btn-education");i(e)&&i(t)&&e.addEventListener("click",(i=>{i.preventDefault(),t.classList.toggle("hidden"),console.log("clicking"),t.classList.contains("hidden")?e.textContent="read more...":e.textContent="show less..."}))})(),ue(),(()=>{let t=n(".table_of_content a");i(t)&&Array.from(t).forEach((t=>{t.addEventListener("click",(e=>{e.preventDefault();const i=t.getAttribute("href"),n=s(i);n.style.backgroundColor="#e3e3e3",n.style.transition="0.5s all",setTimeout((()=>{n.style.backgroundColor="transparent"}),700),window.scrollTo({top:document.querySelector(i).offsetTop-document.querySelector("header").offsetHeight,behavior:"smooth"})}))}))})(),vt(".sidebar-form"),vt(".attorney-group__form"),vt(".form"),vt(".how_can_help_form"),vt(".big-auto-footer-form"),gt(),(()=>{let t=document.querySelector(".send_form_btn"),e=document.querySelector(".second-step-form"),s=document.querySelector(".next_step");i(s)&&s.addEventListener("click",(()=>{s.style.display="none",e.classList.remove("hidden"),t.classList.remove("hidden-btn")}))})(),Array.from(document.querySelectorAll("[data-go-to]")).map((t=>{t.addEventListener("click",(e=>{e.preventDefault();const i=t.getAttribute("data-go-to");window.scrollTo({top:document.querySelector(i).offsetTop-document.querySelector("header").offsetHeight,behavior:"smooth"})}))})),fixedHeightContainerSelector=n(".fixedHeightContainer"),i(fixedHeightContainerSelector)&&Array.from(fixedHeightContainerSelector).forEach((t=>{fixedHeightElemSelector=s(".fixedHeight",t),toggleFixedHeight=s(".toggleFixedHeight",t),innerContentHeight=s(".innerContentHeight",t),checkHeight=innerContentHeight.offsetHeight>parseInt(fixedHeightElemSelector.style.maxHeight),console.log(innerContentHeight.offsetHeight+" || "+parseInt(fixedHeightElemSelector.style.maxHeight)),i(fixedHeightContainerSelector)&&i(toggleFixedHeight)&&checkHeight&&(fixedHeightElemSelector.classList.add("overflow-hidden","hidden-with-shadow"),toggleFixedHeight.classList.remove("hidden"),toggleFixedHeight.addEventListener("click",(()=>{fixedHeightElemSelector.classList.contains("overflow-hidden")?(fixedHeightElemSelector.classList.remove("overflow-hidden","hidden-with-shadow"),fixedHeightElemSelector.style.maxHeight="1000000px",console.log(fixedHeightElemSelector),toggleFixedHeight.textContent="Show less",console.log("clicked 1")):(fixedHeightElemSelector.classList.add("overflow-hidden","hidden-with-shadow"),fixedHeightElemSelector.style.maxHeight="580px",toggleFixedHeight.textContent="Read more...")})))})),t(yt).init({disable:!1,startEvent:"DOMContentLoaded",initClassName:"aos-init",animatedClassName:"aos-animate",useClassNames:!1,disableMutationObserver:!1,debounceDelay:50,throttleDelay:99,offset:120,delay:500,duration:400,easing:"ease",once:!1,mirror:!1,anchorPlacement:"top-bottom"}),(0,Et.smoothScrollFn)(),(()=>{const t=document.querySelector("#testimonialDialog");let e=null;if(i(t)){const s=new xt(t);let r=n(".fireTestimonialModal");i(r)&&Array.from(r).forEach((t=>{t.addEventListener("click",(()=>{let i=n(".hytPlayerWrapOuter");Array.from(i).forEach((t=>{t.classList.add("hidden")}));let r=t.getAttribute("data-yt-url"),a=document.querySelector(`.hytPlayerWrapOuter-${r}`);a&&(e=a.querySelector("iframe"),a.classList.toggle("hidden")),s.show()}))})),s.on("hide",(function(t,i){e&&e.contentWindow&&e.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}',"https://www.youtube.com"),e=null})),s.on("show",(function(t,i){setTimeout((()=>{e.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}',"https://www.youtube.com")}),500)}))}})(),(()=>{const t=".testmonialsSlider";null!=document.querySelector(t)&&null!=document.querySelector(t)&&Array.from(n(t)).forEach((t=>{new rt(t,{perView:1,type:"slider",autoplay:3500,breakpoints:{}}).mount()}));const e=".awardsSlider";null!=document.querySelector(e)&&null!=document.querySelector(e)&&Array.from(n(e)).forEach((t=>{new rt(t,{perView:5.2,type:"carousel",autoplay:2500,breakpoints:{1024:{perView:4.5},768:{perView:3.5},540:{perView:2.5}}}).mount()}));const r=".awards_slider";null!=document.querySelector(r)&&null!=document.querySelector(r)&&Array.from(n(r)).forEach((t=>{new rt(t,{perView:8,type:"carousel",autoplay:3e3,breakpoints:{1100:{perView:5},768:{perView:3}}}).mount()}));const a=".lifeSlider";null!=document.querySelector(a)&&null!=document.querySelector(a)&&Array.from(n(a)).forEach((t=>{new rt(a,{perView:1,type:"carousel",breakpoints:{}}).mount()}));const o=".verdicts_slider";null!=document.querySelector(o)&&null!=document.querySelector(o)&&Array.from(n(o)).forEach((t=>{new rt(t,{type:"carousel",autoplay:1,animationDuration:4e3,perView:4,breakpoints:{1400:{perView:3},1100:{perView:3},768:{perView:2},640:{perView:1}}}).mount()}));const u=".verdicts_slider_ba";null!=document.querySelector(u)&&null!=document.querySelector(u)&&Array.from(n(u)).forEach((t=>{new rt(t,{type:"carousel",autoplay:1,animationDuration:4e3,perView:5,breakpoints:{1496:{perView:4},1200:{perView:3},868:{perView:3},640:{perView:2}}}).mount()}));const l=".memorableSlider";null!=document.querySelector(l)&&null!=document.querySelector(l)&&Array.from(n(l)).forEach((t=>{new rt(t,{perView:1,type:"slider",breakpoints:{}}).mount()}));const c=".google_reviews_slider";null!=document.querySelector(c)&&null!=document.querySelector(c)&&Array.from(n(c)).forEach((t=>{new rt(t,{perView:3,type:"carousel",breakpoints:{1100:{perView:2},768:{perView:1}}}).mount()}));const d=".awardsSliderAbout";null!=document.querySelector(d)&&null!=document.querySelector(d)&&Array.from(n(d)).forEach((t=>{new rt(t,{perView:8,type:"carousel",autoplay:2500,breakpoints:{540:{perView:4.5}}}).mount()}));const h=".communitySliderAbout";null!=document.querySelector(h)&&null!=document.querySelector(h)&&Array.from(n(h)).forEach((t=>{new rt(t,{perView:2,type:"carousel",breakpoints:{540:{perView:1}}}).mount()}));const p=s("#marquee");i(p)&&new ft(p,{css3easing:"linear",speed:window.innerWidth<768?40:60,gap:100,delayBeforeStart:0,direction:"left",duplicated:!0,duration:5e3,startVisible:!0}).resume();const f=document.querySelector(".verdicts-marquee");i(f)&&new ft(f,{css3easing:"linear",speed:window.innerWidth<768?60:100,gap:100,delayBeforeStart:0,direction:"left",duplicated:!0,duration:5e3,startVisible:!0}).resume();const m=".merits";i(n(m))&&Array.from(n(m)).forEach((t=>{new rt(t,{perView:4,type:"carousel",animationDuration:4e3,autoplay:1,breakpoints:{1496:{perView:3,autoplay:1},1200:{perView:2,autoplay:3e3},640:{perView:1,autoplay:3e3}}}).mount()}));const g=".videoSlider";null!=document.querySelector(g)&&null!=document.querySelector(g)&&Array.from(n(g)).forEach((t=>{new rt(t,{perView:1,type:"slider"}).mount()}))})(),(()=>{if(window.hideYTActivated)return;if("undefined"==typeof YT){let t=document.createElement("script");t.src="https://www.youtube.com/iframe_api";let e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}let t=[];for(let e of document.querySelectorAll(".hytPlayerWrap")){let i,s=e.querySelector("iframe"),n=function(t){t.data==YT.PlayerState.ENDED?e.classList.add("ended"):t.data==YT.PlayerState.PAUSED?e.classList.add("paused"):t.data==YT.PlayerState.PLAYING&&(e.classList.remove("ended"),e.classList.remove("paused"))};t.push((function(){i=new YT.Player(s,{events:{onStateChange:n}})})),e.addEventListener("click",(function(){let t=i.getPlayerState();t==YT.PlayerState.ENDED?i.seekTo(0):t==YT.PlayerState.PAUSED&&i.playVideo()}))}window.onYouTubeIframeAPIReady=function(){for(let e of t)e()},window.hideYTActivated=!0})(),(()=>{const t=n(".repeat-animation");i(t)&&Array.from(t).forEach((t=>{setInterval((function(){t.classList.add("aos-animate"),setTimeout((function(){t.classList.remove("aos-animate")}),7e3)}),8500)}))})(),(()=>{const t=s(".next_step");i(t)&&t.addEventListener("click",(()=>{s(".disclaimer_multistep_form").classList.remove("hidden")}))})(),(()=>{let t=n(".co-counsel-form");i(t)&&Array.from(t).forEach((t=>{let e=n('.trigger_input input[name="disciplinary_action"]');i(e)&&Array.from(e).forEach((t=>{let e=document.querySelector(".conditional_input_disciplinary");i(e)&&t.addEventListener("click",(t=>{"Yes"===t.target.value?e.classList.remove("hidden_label"):"No"===t.target.value&&e.classList.add("hidden_label")}))}));let s=n('.trigger_input input[name="staffed"]');i(s)&&Array.from(s).forEach((t=>{let e=document.querySelector(".conditional_input_staffed");i(e)&&t.addEventListener("click",(t=>{"No"===t.target.value?e.classList.remove("hidden_label"):"Yes"===t.target.value&&e.classList.add("hidden_label")}))}))}))})(),Tt(),oe()},"loading"!==document.readyState?le():document.addEventListener("DOMContentLoaded",le)})();
+ */ function _typeof(obj) {
+    "@babel/helpers - typeof";
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function(obj) {
+        return typeof obj;
+    };
+    else _typeof = function(obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+    return _typeof(obj);
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+}
+function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+        return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+}
+function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+        o.__proto__ = p;
+        return o;
+    };
+    return _setPrototypeOf(o, p);
+}
+function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+    try {
+        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {}));
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+function _assertThisInitialized(self) {
+    if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return self;
+}
+function _possibleConstructorReturn(self, call) {
+    if (call && (typeof call === "object" || typeof call === "function")) return call;
+    else if (call !== void 0) throw new TypeError("Derived constructors may only return object or undefined");
+    return _assertThisInitialized(self);
+}
+function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+    return function _createSuperInternal() {
+        var Super = _getPrototypeOf(Derived), result;
+        if (hasNativeReflectConstruct) {
+            var NewTarget = _getPrototypeOf(this).constructor;
+            result = Reflect.construct(Super, arguments, NewTarget);
+        } else result = Super.apply(this, arguments);
+        return _possibleConstructorReturn(this, result);
+    };
+}
+function _superPropBase(object, property) {
+    while(!Object.prototype.hasOwnProperty.call(object, property)){
+        object = _getPrototypeOf(object);
+        if (object === null) break;
+    }
+    return object;
+}
+function _get() {
+    if (typeof Reflect !== "undefined" && Reflect.get) _get = Reflect.get;
+    else _get = function _get(target, property, receiver) {
+        var base = _superPropBase(target, property);
+        if (!base) return;
+        var desc = Object.getOwnPropertyDescriptor(base, property);
+        if (desc.get) return desc.get.call(arguments.length < 3 ? target : receiver);
+        return desc.value;
+    };
+    return _get.apply(this, arguments);
+}
+var defaults = {
+    /**
+   * Type of the movement.
+   *
+   * Available types:
+   * `slider` - Rewinds slider to the start/end when it reaches the first or last slide.
+   * `carousel` - Changes slides without starting over when it reaches the first or last slide.
+   *
+   * @type {String}
+   */ type: "slider",
+    /**
+   * Start at specific slide number defined with zero-based index.
+   *
+   * @type {Number}
+   */ startAt: 0,
+    /**
+   * A number of slides visible on the single viewport.
+   *
+   * @type {Number}
+   */ perView: 1,
+    /**
+   * Focus currently active slide at a specified position in the track.
+   *
+   * Available inputs:
+   * `center` - Current slide will be always focused at the center of a track.
+   * `0,1,2,3...` - Current slide will be focused on the specified zero-based index.
+   *
+   * @type {String|Number}
+   */ focusAt: 0,
+    /**
+   * A size of the gap added between slides.
+   *
+   * @type {Number}
+   */ gap: 10,
+    /**
+   * Change slides after a specified interval. Use `false` for turning off autoplay.
+   *
+   * @type {Number|Boolean}
+   */ autoplay: false,
+    /**
+   * Stop autoplay on mouseover event.
+   *
+   * @type {Boolean}
+   */ hoverpause: true,
+    /**
+   * Allow for changing slides with left and right keyboard arrows.
+   *
+   * @type {Boolean}
+   */ keyboard: true,
+    /**
+   * Stop running `perView` number of slides from the end. Use this
+   * option if you don't want to have an empty space after
+   * a slider. Works only with `slider` type and a
+   * non-centered `focusAt` setting.
+   *
+   * @type {Boolean}
+   */ bound: false,
+    /**
+   * Minimal swipe distance needed to change the slide. Use `false` for turning off a swiping.
+   *
+   * @type {Number|Boolean}
+   */ swipeThreshold: 80,
+    /**
+   * Minimal mouse drag distance needed to change the slide. Use `false` for turning off a dragging.
+   *
+   * @type {Number|Boolean}
+   */ dragThreshold: 120,
+    /**
+   * A number of slides moved on single swipe.
+   *
+   * Available types:
+   * `` - Moves slider by one slide per swipe
+   * `|` - Moves slider between views per swipe (number of slides defined in `perView` options)
+   *
+   * @type {String}
+   */ perSwipe: "",
+    /**
+   * Moving distance ratio of the slides on a swiping and dragging.
+   *
+   * @type {Number}
+   */ touchRatio: 0.5,
+    /**
+   * Angle required to activate slides moving on swiping or dragging.
+   *
+   * @type {Number}
+   */ touchAngle: 45,
+    /**
+   * Duration of the animation in milliseconds.
+   *
+   * @type {Number}
+   */ animationDuration: 400,
+    /**
+   * Allows looping the `slider` type. Slider will rewind to the first/last slide when it's at the start/end.
+   *
+   * @type {Boolean}
+   */ rewind: true,
+    /**
+   * Duration of the rewinding animation of the `slider` type in milliseconds.
+   *
+   * @type {Number}
+   */ rewindDuration: 800,
+    /**
+   * Easing function for the animation.
+   *
+   * @type {String}
+   */ animationTimingFunc: "cubic-bezier(.165, .840, .440, 1)",
+    /**
+   * Wait for the animation to finish until the next user input can be processed
+   *
+   * @type {boolean}
+   */ waitForTransition: true,
+    /**
+   * Throttle costly events at most once per every wait milliseconds.
+   *
+   * @type {Number}
+   */ throttle: 10,
+    /**
+   * Moving direction mode.
+   *
+   * Available inputs:
+   * - 'ltr' - left to right movement,
+   * - 'rtl' - right to left movement.
+   *
+   * @type {String}
+   */ direction: "ltr",
+    /**
+   * The distance value of the next and previous viewports which
+   * have to peek in the current view. Accepts number and
+   * pixels as a string. Left and right peeking can be
+   * set up separately with a directions object.
+   *
+   * For example:
+   * `100` - Peek 100px on the both sides.
+   * { before: 100, after: 50 }` - Peek 100px on the left side and 50px on the right side.
+   *
+   * @type {Number|String|Object}
+   */ peek: 0,
+    /**
+   * Defines how many clones of current viewport will be generated.
+   *
+   * @type {Number}
+   */ cloningRatio: 1,
+    /**
+   * Collection of options applied at specified media breakpoints.
+   * For example: display two slides per view under 800px.
+   * `{
+   *   '800px': {
+   *     perView: 2
+   *   }
+   * }`
+   */ breakpoints: {},
+    /**
+   * Collection of internally used HTML classes.
+   *
+   * @todo Refactor `slider` and `carousel` properties to single `type: { slider: '', carousel: '' }` object
+   * @type {Object}
+   */ classes: {
+        swipeable: "glide--swipeable",
+        dragging: "glide--dragging",
+        direction: {
+            ltr: "glide--ltr",
+            rtl: "glide--rtl"
+        },
+        type: {
+            slider: "glide--slider",
+            carousel: "glide--carousel"
+        },
+        slide: {
+            clone: "glide__slide--clone",
+            active: "glide__slide--active"
+        },
+        arrow: {
+            disabled: "glide__arrow--disabled"
+        },
+        nav: {
+            active: "glide__bullet--active"
+        }
+    }
+};
+/**
+ * Outputs warning message to the bowser console.
+ *
+ * @param  {String} msg
+ * @return {Void}
+ */ function warn(msg) {
+    console.error("[Glide warn]: ".concat(msg));
+}
+/**
+ * Converts value entered as number
+ * or string to integer value.
+ *
+ * @param {String} value
+ * @returns {Number}
+ */ function toInt(value) {
+    return parseInt(value);
+}
+/**
+ * Converts value entered as number
+ * or string to flat value.
+ *
+ * @param {String} value
+ * @returns {Number}
+ */ function toFloat(value) {
+    return parseFloat(value);
+}
+/**
+ * Indicates whether the specified value is a string.
+ *
+ * @param  {*}   value
+ * @return {Boolean}
+ */ function isString(value) {
+    return typeof value === "string";
+}
+/**
+ * Indicates whether the specified value is an object.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ *
+ * @see https://github.com/jashkenas/underscore
+ */ function isObject(value) {
+    var type = _typeof(value);
+    return type === "function" || type === "object" && !!value; // eslint-disable-line no-mixed-operators
+}
+/**
+ * Indicates whether the specified value is a function.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */ function isFunction(value) {
+    return typeof value === "function";
+}
+/**
+ * Indicates whether the specified value is undefined.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */ function isUndefined(value) {
+    return typeof value === "undefined";
+}
+/**
+ * Indicates whether the specified value is an array.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */ function isArray(value) {
+    return value.constructor === Array;
+}
+/**
+ * Creates and initializes specified collection of extensions.
+ * Each extension receives access to instance of glide and rest of components.
+ *
+ * @param {Object} glide
+ * @param {Object} extensions
+ *
+ * @returns {Object}
+ */ function mount(glide, extensions, events) {
+    var components = {};
+    for(var name in extensions)if (isFunction(extensions[name])) components[name] = extensions[name](glide, components, events);
+    else warn("Extension must be a function");
+    for(var _name in components)if (isFunction(components[_name].mount)) components[_name].mount();
+    return components;
+}
+/**
+ * Defines getter and setter property on the specified object.
+ *
+ * @param  {Object} obj         Object where property has to be defined.
+ * @param  {String} prop        Name of the defined property.
+ * @param  {Object} definition  Get and set definitions for the property.
+ * @return {Void}
+ */ function define(obj, prop, definition) {
+    Object.defineProperty(obj, prop, definition);
+}
+/**
+ * Sorts aphabetically object keys.
+ *
+ * @param  {Object} obj
+ * @return {Object}
+ */ function sortKeys(obj) {
+    return Object.keys(obj).sort().reduce(function(r, k) {
+        r[k] = obj[k];
+        return r[k], r;
+    }, {});
+}
+/**
+ * Merges passed settings object with default options.
+ *
+ * @param  {Object} defaults
+ * @param  {Object} settings
+ * @return {Object}
+ */ function mergeOptions(defaults, settings) {
+    var options = Object.assign({}, defaults, settings); // `Object.assign` do not deeply merge objects, so we
+    // have to do it manually for every nested object
+    // in options. Although it does not look smart,
+    // it's smaller and faster than some fancy
+    // merging deep-merge algorithm script.
+    if (settings.hasOwnProperty("classes")) {
+        options.classes = Object.assign({}, defaults.classes, settings.classes);
+        if (settings.classes.hasOwnProperty("direction")) options.classes.direction = Object.assign({}, defaults.classes.direction, settings.classes.direction);
+        if (settings.classes.hasOwnProperty("type")) options.classes.type = Object.assign({}, defaults.classes.type, settings.classes.type);
+        if (settings.classes.hasOwnProperty("slide")) options.classes.slide = Object.assign({}, defaults.classes.slide, settings.classes.slide);
+        if (settings.classes.hasOwnProperty("arrow")) options.classes.arrow = Object.assign({}, defaults.classes.arrow, settings.classes.arrow);
+        if (settings.classes.hasOwnProperty("nav")) options.classes.nav = Object.assign({}, defaults.classes.nav, settings.classes.nav);
+    }
+    if (settings.hasOwnProperty("breakpoints")) options.breakpoints = Object.assign({}, defaults.breakpoints, settings.breakpoints);
+    return options;
+}
+var EventsBus = /*#__PURE__*/ function() {
+    /**
+   * Construct a EventBus instance.
+   *
+   * @param {Object} events
+   */ function EventsBus() {
+        var events = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        _classCallCheck(this, EventsBus);
+        this.events = events;
+        this.hop = events.hasOwnProperty;
+    }
+    /**
+   * Adds listener to the specifed event.
+   *
+   * @param {String|Array} event
+   * @param {Function} handler
+   */ _createClass(EventsBus, [
+        {
+            key: "on",
+            value: function on(event, handler) {
+                if (isArray(event)) {
+                    for(var i = 0; i < event.length; i++)this.on(event[i], handler);
+                    return;
+                } // Create the event's object if not yet created
+                if (!this.hop.call(this.events, event)) this.events[event] = [];
+                 // Add the handler to queue
+                var index = this.events[event].push(handler) - 1; // Provide handle back for removal of event
+                return {
+                    remove: function remove() {
+                        delete this.events[event][index];
+                    }
+                };
+            }
+        },
+        {
+            key: "emit",
+            value: function emit(event, context) {
+                if (isArray(event)) {
+                    for(var i = 0; i < event.length; i++)this.emit(event[i], context);
+                    return;
+                } // If the event doesn't exist, or there's no handlers in queue, just leave
+                if (!this.hop.call(this.events, event)) return;
+                 // Cycle through events queue, fire!
+                this.events[event].forEach(function(item) {
+                    item(context || {});
+                });
+            }
+        }
+    ]);
+    return EventsBus;
+}();
+var Glide$1 = /*#__PURE__*/ function() {
+    /**
+   * Construct glide.
+   *
+   * @param  {String} selector
+   * @param  {Object} options
+   */ function Glide(selector) {
+        var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+        _classCallCheck(this, Glide);
+        this._c = {};
+        this._t = [];
+        this._e = new EventsBus();
+        this.disabled = false;
+        this.selector = selector;
+        this.settings = mergeOptions(defaults, options);
+        this.index = this.settings.startAt;
+    }
+    /**
+   * Initializes glide.
+   *
+   * @param {Object} extensions Collection of extensions to initialize.
+   * @return {Glide}
+   */ _createClass(Glide, [
+        {
+            key: "mount",
+            value: function mount$1() {
+                var extensions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+                this._e.emit("mount.before");
+                if (isObject(extensions)) this._c = mount(this, extensions, this._e);
+                else warn("You need to provide a object on `mount()`");
+                this._e.emit("mount.after");
+                return this;
+            }
+        },
+        {
+            key: "mutate",
+            value: function mutate() {
+                var transformers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+                if (isArray(transformers)) this._t = transformers;
+                else warn("You need to provide a array on `mutate()`");
+                return this;
+            }
+        },
+        {
+            key: "update",
+            value: function update() {
+                var settings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+                this.settings = mergeOptions(this.settings, settings);
+                if (settings.hasOwnProperty("startAt")) this.index = settings.startAt;
+                this._e.emit("update");
+                return this;
+            }
+        },
+        {
+            key: "go",
+            value: function go(pattern) {
+                this._c.Run.make(pattern);
+                return this;
+            }
+        },
+        {
+            key: "move",
+            value: function move(distance) {
+                this._c.Transition.disable();
+                this._c.Move.make(distance);
+                return this;
+            }
+        },
+        {
+            key: "destroy",
+            value: function destroy() {
+                this._e.emit("destroy");
+                return this;
+            }
+        },
+        {
+            key: "play",
+            value: function play() {
+                var interval = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+                if (interval) this.settings.autoplay = interval;
+                this._e.emit("play");
+                return this;
+            }
+        },
+        {
+            key: "pause",
+            value: function pause() {
+                this._e.emit("pause");
+                return this;
+            }
+        },
+        {
+            key: "disable",
+            value: function disable() {
+                this.disabled = true;
+                return this;
+            }
+        },
+        {
+            key: "enable",
+            value: function enable() {
+                this.disabled = false;
+                return this;
+            }
+        },
+        {
+            key: "on",
+            value: function on(event, handler) {
+                this._e.on(event, handler);
+                return this;
+            }
+        },
+        {
+            key: "isType",
+            value: function isType(name) {
+                return this.settings.type === name;
+            }
+        },
+        {
+            key: "settings",
+            get: function get() {
+                return this._o;
+            },
+            set: function set(o) {
+                if (isObject(o)) this._o = o;
+                else warn("Options must be an `object` instance.");
+            }
+        },
+        {
+            key: "index",
+            get: function get() {
+                return this._i;
+            },
+            set: function set(i) {
+                this._i = toInt(i);
+            }
+        },
+        {
+            key: "type",
+            get: function get() {
+                return this.settings.type;
+            }
+        },
+        {
+            key: "disabled",
+            get: function get() {
+                return this._d;
+            },
+            set: function set(status) {
+                this._d = !!status;
+            }
+        }
+    ]);
+    return Glide;
+}();
+function Run(Glide, Components, Events) {
+    var Run = {
+        /**
+     * Initializes autorunning of the glide.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            this._o = false;
+        },
+        /**
+     * Makes glides running based on the passed moving schema.
+     *
+     * @param {String} move
+     */ make: function make(move) {
+            var _this = this;
+            if (!Glide.disabled) {
+                !Glide.settings.waitForTransition || Glide.disable();
+                this.move = move;
+                Events.emit("run.before", this.move);
+                this.calculate();
+                Events.emit("run", this.move);
+                Components.Transition.after(function() {
+                    if (_this.isStart()) Events.emit("run.start", _this.move);
+                    if (_this.isEnd()) Events.emit("run.end", _this.move);
+                    if (_this.isOffset()) {
+                        _this._o = false;
+                        Events.emit("run.offset", _this.move);
+                    }
+                    Events.emit("run.after", _this.move);
+                    Glide.enable();
+                });
+            }
+        },
+        /**
+     * Calculates current index based on defined move.
+     *
+     * @return {Number|Undefined}
+     */ calculate: function calculate() {
+            var move = this.move, length = this.length;
+            var steps = move.steps, direction = move.direction; // By default assume that size of view is equal to one slide
+            var viewSize = 1; // While direction is `=` we want jump to
+            // a specified index described in steps.
+            if (direction === "=") {
+                // Check if bound is true, 
+                // as we want to avoid whitespaces.
+                if (Glide.settings.bound && toInt(steps) > length) {
+                    Glide.index = length;
+                    return;
+                }
+                Glide.index = steps;
+                return;
+            } // When pattern is equal to `>>` we want
+            // fast forward to the last slide.
+            if (direction === ">" && steps === ">") {
+                Glide.index = length;
+                return;
+            } // When pattern is equal to `<<` we want
+            // fast forward to the first slide.
+            if (direction === "<" && steps === "<") {
+                Glide.index = 0;
+                return;
+            } // pagination movement
+            if (direction === "|") viewSize = Glide.settings.perView || 1;
+             // we are moving forward
+            if (direction === ">" || direction === "|" && steps === ">") {
+                var index = calculateForwardIndex(viewSize);
+                if (index > length) this._o = true;
+                Glide.index = normalizeForwardIndex(index, viewSize);
+                return;
+            } // we are moving backward
+            if (direction === "<" || direction === "|" && steps === "<") {
+                var _index = calculateBackwardIndex(viewSize);
+                if (_index < 0) this._o = true;
+                Glide.index = normalizeBackwardIndex(_index, viewSize);
+                return;
+            }
+            warn("Invalid direction pattern [".concat(direction).concat(steps, "] has been used"));
+        },
+        /**
+     * Checks if we are on the first slide.
+     *
+     * @return {Boolean}
+     */ isStart: function isStart() {
+            return Glide.index <= 0;
+        },
+        /**
+     * Checks if we are on the last slide.
+     *
+     * @return {Boolean}
+     */ isEnd: function isEnd() {
+            return Glide.index >= this.length;
+        },
+        /**
+     * Checks if we are making a offset run.
+     *
+     * @param {String} direction
+     * @return {Boolean}
+     */ isOffset: function isOffset() {
+            var direction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
+            if (!direction) return this._o;
+            if (!this._o) return false;
+             // did we view to the right?
+            if (direction === "|>") return this.move.direction === "|" && this.move.steps === ">";
+             // did we view to the left?
+            if (direction === "|<") return this.move.direction === "|" && this.move.steps === "<";
+            return this.move.direction === direction;
+        },
+        /**
+     * Checks if bound mode is active
+     *
+     * @return {Boolean}
+     */ isBound: function isBound() {
+            return Glide.isType("slider") && Glide.settings.focusAt !== "center" && Glide.settings.bound;
+        }
+    };
+    /**
+   * Returns index value to move forward/to the right
+   *
+   * @param viewSize
+   * @returns {Number}
+   */ function calculateForwardIndex(viewSize) {
+        var index = Glide.index;
+        if (Glide.isType("carousel")) return index + viewSize;
+        return index + (viewSize - index % viewSize);
+    }
+    /**
+   * Normalizes the given forward index based on glide settings, preventing it to exceed certain boundaries
+   *
+   * @param index
+   * @param length
+   * @param viewSize
+   * @returns {Number}
+   */ function normalizeForwardIndex(index, viewSize) {
+        var length = Run.length;
+        if (index <= length) return index;
+        if (Glide.isType("carousel")) return index - (length + 1);
+        if (Glide.settings.rewind) {
+            // bound does funny things with the length, therefor we have to be certain
+            // that we are on the last possible index value given by bound
+            if (Run.isBound() && !Run.isEnd()) return length;
+            return 0;
+        }
+        if (Run.isBound()) return length;
+        return Math.floor(length / viewSize) * viewSize;
+    }
+    /**
+   * Calculates index value to move backward/to the left
+   *
+   * @param viewSize
+   * @returns {Number}
+   */ function calculateBackwardIndex(viewSize) {
+        var index = Glide.index;
+        if (Glide.isType("carousel")) return index - viewSize;
+         // ensure our back navigation results in the same index as a forward navigation
+        // to experience a homogeneous paging
+        var view = Math.ceil(index / viewSize);
+        return (view - 1) * viewSize;
+    }
+    /**
+   * Normalizes the given backward index based on glide settings, preventing it to exceed certain boundaries
+   *
+   * @param index
+   * @param length
+   * @param viewSize
+   * @returns {*}
+   */ function normalizeBackwardIndex(index, viewSize) {
+        var length = Run.length;
+        if (index >= 0) return index;
+        if (Glide.isType("carousel")) return index + (length + 1);
+        if (Glide.settings.rewind) {
+            // bound does funny things with the length, therefor we have to be certain
+            // that we are on first possible index value before we to rewind to the length given by bound
+            if (Run.isBound() && Run.isStart()) return length;
+            return Math.floor(length / viewSize) * viewSize;
+        }
+        return 0;
+    }
+    define(Run, "move", {
+        /**
+     * Gets value of the move schema.
+     *
+     * @returns {Object}
+     */ get: function get() {
+            return this._m;
+        },
+        /**
+     * Sets value of the move schema.
+     *
+     * @returns {Object}
+     */ set: function set(value) {
+            var step = value.substr(1);
+            this._m = {
+                direction: value.substr(0, 1),
+                steps: step ? toInt(step) ? toInt(step) : step : 0
+            };
+        }
+    });
+    define(Run, "length", {
+        /**
+     * Gets value of the running distance based
+     * on zero-indexing number of slides.
+     *
+     * @return {Number}
+     */ get: function get() {
+            var settings = Glide.settings;
+            var length = Components.Html.slides.length; // If the `bound` option is active, a maximum running distance should be
+            // reduced by `perView` and `focusAt` settings. Running distance
+            // should end before creating an empty space after instance.
+            if (this.isBound()) return length - 1 - (toInt(settings.perView) - 1) + toInt(settings.focusAt);
+            return length - 1;
+        }
+    });
+    define(Run, "offset", {
+        /**
+     * Gets status of the offsetting flag.
+     *
+     * @return {Boolean}
+     */ get: function get() {
+            return this._o;
+        }
+    });
+    return Run;
+}
+/**
+ * Returns a current time.
+ *
+ * @return {Number}
+ */ function now() {
+    return new Date().getTime();
+}
+/**
+ * Returns a function, that, when invoked, will only be triggered
+ * at most once during a given window of time.
+ *
+ * @param {Function} func
+ * @param {Number} wait
+ * @param {Object=} options
+ * @return {Function}
+ *
+ * @see https://github.com/jashkenas/underscore
+ */ function throttle(func, wait, options) {
+    var timeout, context, args, result;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function later() {
+        previous = options.leading === false ? 0 : now();
+        timeout = null;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+    };
+    var throttled = function throttled() {
+        var at = now();
+        if (!previous && options.leading === false) previous = at;
+        var remaining = wait - (at - previous);
+        context = this;
+        args = arguments;
+        if (remaining <= 0 || remaining > wait) {
+            if (timeout) {
+                clearTimeout(timeout);
+                timeout = null;
+            }
+            previous = at;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+        } else if (!timeout && options.trailing !== false) timeout = setTimeout(later, remaining);
+        return result;
+    };
+    throttled.cancel = function() {
+        clearTimeout(timeout);
+        previous = 0;
+        timeout = context = args = null;
+    };
+    return throttled;
+}
+var MARGIN_TYPE = {
+    ltr: [
+        "marginLeft",
+        "marginRight"
+    ],
+    rtl: [
+        "marginRight",
+        "marginLeft"
+    ]
+};
+function Gaps(Glide, Components, Events) {
+    var Gaps = {
+        /**
+     * Applies gaps between slides. First and last
+     * slides do not receive it's edge margins.
+     *
+     * @param {HTMLCollection} slides
+     * @return {Void}
+     */ apply: function apply(slides) {
+            for(var i = 0, len = slides.length; i < len; i++){
+                var style = slides[i].style;
+                var direction = Components.Direction.value;
+                if (i !== 0) style[MARGIN_TYPE[direction][0]] = "".concat(this.value / 2, "px");
+                else style[MARGIN_TYPE[direction][0]] = "";
+                if (i !== slides.length - 1) style[MARGIN_TYPE[direction][1]] = "".concat(this.value / 2, "px");
+                else style[MARGIN_TYPE[direction][1]] = "";
+            }
+        },
+        /**
+     * Removes gaps from the slides.
+     *
+     * @param {HTMLCollection} slides
+     * @returns {Void}
+    */ remove: function remove(slides) {
+            for(var i = 0, len = slides.length; i < len; i++){
+                var style = slides[i].style;
+                style.marginLeft = "";
+                style.marginRight = "";
+            }
+        }
+    };
+    define(Gaps, "value", {
+        /**
+     * Gets value of the gap.
+     *
+     * @returns {Number}
+     */ get: function get() {
+            return toInt(Glide.settings.gap);
+        }
+    });
+    define(Gaps, "grow", {
+        /**
+     * Gets additional dimensions value caused by gaps.
+     * Used to increase width of the slides wrapper.
+     *
+     * @returns {Number}
+     */ get: function get() {
+            return Gaps.value * Components.Sizes.length;
+        }
+    });
+    define(Gaps, "reductor", {
+        /**
+     * Gets reduction value caused by gaps.
+     * Used to subtract width of the slides.
+     *
+     * @returns {Number}
+     */ get: function get() {
+            var perView = Glide.settings.perView;
+            return Gaps.value * (perView - 1) / perView;
+        }
+    });
+    /**
+   * Apply calculated gaps:
+   * - after building, so slides (including clones) will receive proper margins
+   * - on updating via API, to recalculate gaps with new options
+   */ Events.on([
+        "build.after",
+        "update"
+    ], throttle(function() {
+        Gaps.apply(Components.Html.wrapper.children);
+    }, 30));
+    /**
+   * Remove gaps:
+   * - on destroying to bring markup to its inital state
+   */ Events.on("destroy", function() {
+        Gaps.remove(Components.Html.wrapper.children);
+    });
+    return Gaps;
+}
+/**
+ * Finds siblings nodes of the passed node.
+ *
+ * @param  {Element} node
+ * @return {Array}
+ */ function siblings(node) {
+    if (node && node.parentNode) {
+        var n = node.parentNode.firstChild;
+        var matched = [];
+        for(; n; n = n.nextSibling)if (n.nodeType === 1 && n !== node) matched.push(n);
+        return matched;
+    }
+    return [];
+}
+/**
+ * Checks if passed node exist and is a valid element.
+ *
+ * @param  {Element} node
+ * @return {Boolean}
+ */ function exist(node) {
+    if (node && node instanceof window.HTMLElement) return true;
+    return false;
+}
+/**
+ * Coerces a NodeList to an Array.
+ *
+ * @param  {NodeList} nodeList
+ * @return {Array}
+ */ function toArray(nodeList) {
+    return Array.prototype.slice.call(nodeList);
+}
+var TRACK_SELECTOR = '[data-glide-el="track"]';
+function Html(Glide, Components, Events) {
+    var Html = {
+        /**
+     * Setup slider HTML nodes.
+     *
+     * @param {Glide} glide
+     */ mount: function mount() {
+            this.root = Glide.selector;
+            this.track = this.root.querySelector(TRACK_SELECTOR);
+            this.collectSlides();
+        },
+        /**
+     * Collect slides
+     */ collectSlides: function collectSlides() {
+            this.slides = toArray(this.wrapper.children).filter(function(slide) {
+                return !slide.classList.contains(Glide.settings.classes.slide.clone);
+            });
+        }
+    };
+    define(Html, "root", {
+        /**
+     * Gets node of the glide main element.
+     *
+     * @return {Object}
+     */ get: function get() {
+            return Html._r;
+        },
+        /**
+     * Sets node of the glide main element.
+     *
+     * @return {Object}
+     */ set: function set(r) {
+            if (isString(r)) r = document.querySelector(r);
+            if (exist(r)) Html._r = r;
+            else warn("Root element must be a existing Html node");
+        }
+    });
+    define(Html, "track", {
+        /**
+     * Gets node of the glide track with slides.
+     *
+     * @return {Object}
+     */ get: function get() {
+            return Html._t;
+        },
+        /**
+     * Sets node of the glide track with slides.
+     *
+     * @return {Object}
+     */ set: function set(t) {
+            if (exist(t)) Html._t = t;
+            else warn("Could not find track element. Please use ".concat(TRACK_SELECTOR, " attribute."));
+        }
+    });
+    define(Html, "wrapper", {
+        /**
+     * Gets node of the slides wrapper.
+     *
+     * @return {Object}
+     */ get: function get() {
+            return Html.track.children[0];
+        }
+    });
+    /**
+   * Add/remove/reorder dynamic slides
+   */ Events.on("update", function() {
+        Html.collectSlides();
+    });
+    return Html;
+}
+function Peek(Glide, Components, Events) {
+    var Peek = {
+        /**
+     * Setups how much to peek based on settings.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            this.value = Glide.settings.peek;
+        }
+    };
+    define(Peek, "value", {
+        /**
+     * Gets value of the peek.
+     *
+     * @returns {Number|Object}
+     */ get: function get() {
+            return Peek._v;
+        },
+        /**
+     * Sets value of the peek.
+     *
+     * @param {Number|Object} value
+     * @return {Void}
+     */ set: function set(value) {
+            if (isObject(value)) {
+                value.before = toInt(value.before);
+                value.after = toInt(value.after);
+            } else value = toInt(value);
+            Peek._v = value;
+        }
+    });
+    define(Peek, "reductor", {
+        /**
+     * Gets reduction value caused by peek.
+     *
+     * @returns {Number}
+     */ get: function get() {
+            var value = Peek.value;
+            var perView = Glide.settings.perView;
+            if (isObject(value)) return value.before / perView + value.after / perView;
+            return value * 2 / perView;
+        }
+    });
+    /**
+   * Recalculate peeking sizes on:
+   * - when resizing window to update to proper percents
+   */ Events.on([
+        "resize",
+        "update"
+    ], function() {
+        Peek.mount();
+    });
+    return Peek;
+}
+function Move(Glide, Components, Events) {
+    var Move = {
+        /**
+     * Constructs move component.
+     *
+     * @returns {Void}
+     */ mount: function mount() {
+            this._o = 0;
+        },
+        /**
+     * Calculates a movement value based on passed offset and currently active index.
+     *
+     * @param  {Number} offset
+     * @return {Void}
+     */ make: function make() {
+            var _this = this;
+            var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+            this.offset = offset;
+            Events.emit("move", {
+                movement: this.value
+            });
+            Components.Transition.after(function() {
+                Events.emit("move.after", {
+                    movement: _this.value
+                });
+            });
+        }
+    };
+    define(Move, "offset", {
+        /**
+     * Gets an offset value used to modify current translate.
+     *
+     * @return {Object}
+     */ get: function get() {
+            return Move._o;
+        },
+        /**
+     * Sets an offset value used to modify current translate.
+     *
+     * @return {Object}
+     */ set: function set(value) {
+            Move._o = !isUndefined(value) ? toInt(value) : 0;
+        }
+    });
+    define(Move, "translate", {
+        /**
+     * Gets a raw movement value.
+     *
+     * @return {Number}
+     */ get: function get() {
+            return Components.Sizes.slideWidth * Glide.index;
+        }
+    });
+    define(Move, "value", {
+        /**
+     * Gets an actual movement value corrected by offset.
+     *
+     * @return {Number}
+     */ get: function get() {
+            var offset = this.offset;
+            var translate = this.translate;
+            if (Components.Direction.is("rtl")) return translate + offset;
+            return translate - offset;
+        }
+    });
+    /**
+   * Make movement to proper slide on:
+   * - before build, so glide will start at `startAt` index
+   * - on each standard run to move to newly calculated index
+   */ Events.on([
+        "build.before",
+        "run"
+    ], function() {
+        Move.make();
+    });
+    return Move;
+}
+function Sizes(Glide, Components, Events) {
+    var Sizes = {
+        /**
+     * Setups dimensions of slides.
+     *
+     * @return {Void}
+     */ setupSlides: function setupSlides() {
+            var width = "".concat(this.slideWidth, "px");
+            var slides = Components.Html.slides;
+            for(var i = 0; i < slides.length; i++)slides[i].style.width = width;
+        },
+        /**
+     * Setups dimensions of slides wrapper.
+     *
+     * @return {Void}
+     */ setupWrapper: function setupWrapper() {
+            Components.Html.wrapper.style.width = "".concat(this.wrapperSize, "px");
+        },
+        /**
+     * Removes applied styles from HTML elements.
+     *
+     * @returns {Void}
+     */ remove: function remove() {
+            var slides = Components.Html.slides;
+            for(var i = 0; i < slides.length; i++)slides[i].style.width = "";
+            Components.Html.wrapper.style.width = "";
+        }
+    };
+    define(Sizes, "length", {
+        /**
+     * Gets count number of the slides.
+     *
+     * @return {Number}
+     */ get: function get() {
+            return Components.Html.slides.length;
+        }
+    });
+    define(Sizes, "width", {
+        /**
+     * Gets width value of the slider (visible area).
+     *
+     * @return {Number}
+     */ get: function get() {
+            return Components.Html.track.offsetWidth;
+        }
+    });
+    define(Sizes, "wrapperSize", {
+        /**
+     * Gets size of the slides wrapper.
+     *
+     * @return {Number}
+     */ get: function get() {
+            return Sizes.slideWidth * Sizes.length + Components.Gaps.grow + Components.Clones.grow;
+        }
+    });
+    define(Sizes, "slideWidth", {
+        /**
+     * Gets width value of a single slide.
+     *
+     * @return {Number}
+     */ get: function get() {
+            return Sizes.width / Glide.settings.perView - Components.Peek.reductor - Components.Gaps.reductor;
+        }
+    });
+    /**
+   * Apply calculated glide's dimensions:
+   * - before building, so other dimensions (e.g. translate) will be calculated propertly
+   * - when resizing window to recalculate sildes dimensions
+   * - on updating via API, to calculate dimensions based on new options
+   */ Events.on([
+        "build.before",
+        "resize",
+        "update"
+    ], function() {
+        Sizes.setupSlides();
+        Sizes.setupWrapper();
+    });
+    /**
+   * Remove calculated glide's dimensions:
+   * - on destoting to bring markup to its inital state
+   */ Events.on("destroy", function() {
+        Sizes.remove();
+    });
+    return Sizes;
+}
+function Build(Glide, Components, Events) {
+    var Build = {
+        /**
+     * Init glide building. Adds classes, sets
+     * dimensions and setups initial state.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            Events.emit("build.before");
+            this.typeClass();
+            this.activeClass();
+            Events.emit("build.after");
+        },
+        /**
+     * Adds `type` class to the glide element.
+     *
+     * @return {Void}
+     */ typeClass: function typeClass() {
+            Components.Html.root.classList.add(Glide.settings.classes.type[Glide.settings.type]);
+        },
+        /**
+     * Sets active class to current slide.
+     *
+     * @return {Void}
+     */ activeClass: function activeClass() {
+            var classes = Glide.settings.classes;
+            var slide = Components.Html.slides[Glide.index];
+            if (slide) {
+                slide.classList.add(classes.slide.active);
+                siblings(slide).forEach(function(sibling) {
+                    sibling.classList.remove(classes.slide.active);
+                });
+            }
+        },
+        /**
+     * Removes HTML classes applied at building.
+     *
+     * @return {Void}
+     */ removeClasses: function removeClasses() {
+            var _Glide$settings$class = Glide.settings.classes, type = _Glide$settings$class.type, slide = _Glide$settings$class.slide;
+            Components.Html.root.classList.remove(type[Glide.settings.type]);
+            Components.Html.slides.forEach(function(sibling) {
+                sibling.classList.remove(slide.active);
+            });
+        }
+    };
+    /**
+   * Clear building classes:
+   * - on destroying to bring HTML to its initial state
+   * - on updating to remove classes before remounting component
+   */ Events.on([
+        "destroy",
+        "update"
+    ], function() {
+        Build.removeClasses();
+    });
+    /**
+   * Remount component:
+   * - on resizing of the window to calculate new dimensions
+   * - on updating settings via API
+   */ Events.on([
+        "resize",
+        "update"
+    ], function() {
+        Build.mount();
+    });
+    /**
+   * Swap active class of current slide:
+   * - after each move to the new index
+   */ Events.on("move.after", function() {
+        Build.activeClass();
+    });
+    return Build;
+}
+function Clones(Glide, Components, Events) {
+    var Clones = {
+        /**
+     * Create pattern map and collect slides to be cloned.
+     */ mount: function mount() {
+            this.items = [];
+            if (Glide.isType("carousel")) this.items = this.collect();
+        },
+        /**
+     * Collect clones with pattern.
+     *
+     * @return {[]}
+     */ collect: function collect() {
+            var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+            var slides = Components.Html.slides;
+            var _Glide$settings = Glide.settings, perView = _Glide$settings.perView, classes = _Glide$settings.classes, cloningRatio = _Glide$settings.cloningRatio;
+            if (slides.length !== 0) {
+                var peekIncrementer = +!!Glide.settings.peek;
+                var cloneCount = perView + peekIncrementer + Math.round(perView / 2);
+                var append = slides.slice(0, cloneCount).reverse();
+                var prepend = slides.slice(cloneCount * -1);
+                for(var r = 0; r < Math.max(cloningRatio, Math.floor(perView / slides.length)); r++){
+                    for(var i = 0; i < append.length; i++){
+                        var clone = append[i].cloneNode(true);
+                        clone.classList.add(classes.slide.clone);
+                        items.push(clone);
+                    }
+                    for(var _i = 0; _i < prepend.length; _i++){
+                        var _clone = prepend[_i].cloneNode(true);
+                        _clone.classList.add(classes.slide.clone);
+                        items.unshift(_clone);
+                    }
+                }
+            }
+            return items;
+        },
+        /**
+     * Append cloned slides with generated pattern.
+     *
+     * @return {Void}
+     */ append: function append() {
+            var items = this.items;
+            var _Components$Html = Components.Html, wrapper = _Components$Html.wrapper, slides = _Components$Html.slides;
+            var half = Math.floor(items.length / 2);
+            var prepend = items.slice(0, half).reverse();
+            var append = items.slice(half * -1).reverse();
+            var width = "".concat(Components.Sizes.slideWidth, "px");
+            for(var i = 0; i < append.length; i++)wrapper.appendChild(append[i]);
+            for(var _i2 = 0; _i2 < prepend.length; _i2++)wrapper.insertBefore(prepend[_i2], slides[0]);
+            for(var _i3 = 0; _i3 < items.length; _i3++)items[_i3].style.width = width;
+        },
+        /**
+     * Remove all cloned slides.
+     *
+     * @return {Void}
+     */ remove: function remove() {
+            var items = this.items;
+            for(var i = 0; i < items.length; i++)Components.Html.wrapper.removeChild(items[i]);
+        }
+    };
+    define(Clones, "grow", {
+        /**
+     * Gets additional dimensions value caused by clones.
+     *
+     * @return {Number}
+     */ get: function get() {
+            return (Components.Sizes.slideWidth + Components.Gaps.value) * Clones.items.length;
+        }
+    });
+    /**
+   * Append additional slide's clones:
+   * - while glide's type is `carousel`
+   */ Events.on("update", function() {
+        Clones.remove();
+        Clones.mount();
+        Clones.append();
+    });
+    /**
+   * Append additional slide's clones:
+   * - while glide's type is `carousel`
+   */ Events.on("build.before", function() {
+        if (Glide.isType("carousel")) Clones.append();
+    });
+    /**
+   * Remove clones HTMLElements:
+   * - on destroying, to bring HTML to its initial state
+   */ Events.on("destroy", function() {
+        Clones.remove();
+    });
+    return Clones;
+}
+var EventsBinder = /*#__PURE__*/ function() {
+    /**
+   * Construct a EventsBinder instance.
+   */ function EventsBinder() {
+        var listeners = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+        _classCallCheck(this, EventsBinder);
+        this.listeners = listeners;
+    }
+    /**
+   * Adds events listeners to arrows HTML elements.
+   *
+   * @param  {String|Array} events
+   * @param  {Element|Window|Document} el
+   * @param  {Function} closure
+   * @param  {Boolean|Object} capture
+   * @return {Void}
+   */ _createClass(EventsBinder, [
+        {
+            key: "on",
+            value: function on(events, el, closure) {
+                var capture = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+                if (isString(events)) events = [
+                    events
+                ];
+                for(var i = 0; i < events.length; i++){
+                    this.listeners[events[i]] = closure;
+                    el.addEventListener(events[i], this.listeners[events[i]], capture);
+                }
+            }
+        },
+        {
+            key: "off",
+            value: function off(events, el) {
+                var capture = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+                if (isString(events)) events = [
+                    events
+                ];
+                for(var i = 0; i < events.length; i++)el.removeEventListener(events[i], this.listeners[events[i]], capture);
+            }
+        },
+        {
+            key: "destroy",
+            value: function destroy() {
+                delete this.listeners;
+            }
+        }
+    ]);
+    return EventsBinder;
+}();
+function Resize(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    var Resize = {
+        /**
+     * Initializes window bindings.
+     */ mount: function mount() {
+            this.bind();
+        },
+        /**
+     * Binds `rezsize` listener to the window.
+     * It's a costly event, so we are debouncing it.
+     *
+     * @return {Void}
+     */ bind: function bind() {
+            Binder.on("resize", window, throttle(function() {
+                Events.emit("resize");
+            }, Glide.settings.throttle));
+        },
+        /**
+     * Unbinds listeners from the window.
+     *
+     * @return {Void}
+     */ unbind: function unbind() {
+            Binder.off("resize", window);
+        }
+    };
+    /**
+   * Remove bindings from window:
+   * - on destroying, to remove added EventListener
+   */ Events.on("destroy", function() {
+        Resize.unbind();
+        Binder.destroy();
+    });
+    return Resize;
+}
+var VALID_DIRECTIONS = [
+    "ltr",
+    "rtl"
+];
+var FLIPED_MOVEMENTS = {
+    ">": "<",
+    "<": ">",
+    "=": "="
+};
+function Direction(Glide, Components, Events) {
+    var Direction = {
+        /**
+     * Setups gap value based on settings.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            this.value = Glide.settings.direction;
+        },
+        /**
+     * Resolves pattern based on direction value
+     *
+     * @param {String} pattern
+     * @returns {String}
+     */ resolve: function resolve(pattern) {
+            var token = pattern.slice(0, 1);
+            if (this.is("rtl")) return pattern.split(token).join(FLIPED_MOVEMENTS[token]);
+            return pattern;
+        },
+        /**
+     * Checks value of direction mode.
+     *
+     * @param {String} direction
+     * @returns {Boolean}
+     */ is: function is(direction) {
+            return this.value === direction;
+        },
+        /**
+     * Applies direction class to the root HTML element.
+     *
+     * @return {Void}
+     */ addClass: function addClass() {
+            Components.Html.root.classList.add(Glide.settings.classes.direction[this.value]);
+        },
+        /**
+     * Removes direction class from the root HTML element.
+     *
+     * @return {Void}
+     */ removeClass: function removeClass() {
+            Components.Html.root.classList.remove(Glide.settings.classes.direction[this.value]);
+        }
+    };
+    define(Direction, "value", {
+        /**
+     * Gets value of the direction.
+     *
+     * @returns {Number}
+     */ get: function get() {
+            return Direction._v;
+        },
+        /**
+     * Sets value of the direction.
+     *
+     * @param {String} value
+     * @return {Void}
+     */ set: function set(value) {
+            if (VALID_DIRECTIONS.indexOf(value) > -1) Direction._v = value;
+            else warn("Direction value must be `ltr` or `rtl`");
+        }
+    });
+    /**
+   * Clear direction class:
+   * - on destroy to bring HTML to its initial state
+   * - on update to remove class before reappling bellow
+   */ Events.on([
+        "destroy",
+        "update"
+    ], function() {
+        Direction.removeClass();
+    });
+    /**
+   * Remount component:
+   * - on update to reflect changes in direction value
+   */ Events.on("update", function() {
+        Direction.mount();
+    });
+    /**
+   * Apply direction class:
+   * - before building to apply class for the first time
+   * - on updating to reapply direction class that may changed
+   */ Events.on([
+        "build.before",
+        "update"
+    ], function() {
+        Direction.addClass();
+    });
+    return Direction;
+}
+/**
+ * Reflects value of glide movement.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */ function Rtl(Glide, Components) {
+    return {
+        /**
+     * Negates the passed translate if glide is in RTL option.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */ modify: function modify(translate) {
+            if (Components.Direction.is("rtl")) return -translate;
+            return translate;
+        }
+    };
+}
+/**
+ * Updates glide movement with a `gap` settings.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */ function Gap(Glide, Components) {
+    return {
+        /**
+     * Modifies passed translate value with number in the `gap` settings.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */ modify: function modify(translate) {
+            var multiplier = Math.floor(translate / Components.Sizes.slideWidth);
+            return translate + Components.Gaps.value * multiplier;
+        }
+    };
+}
+/**
+ * Updates glide movement with width of additional clones width.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */ function Grow(Glide, Components) {
+    return {
+        /**
+     * Adds to the passed translate width of the half of clones.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */ modify: function modify(translate) {
+            return translate + Components.Clones.grow / 2;
+        }
+    };
+}
+/**
+ * Updates glide movement with a `peek` settings.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */ function Peeking(Glide, Components) {
+    return {
+        /**
+     * Modifies passed translate value with a `peek` setting.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */ modify: function modify(translate) {
+            if (Glide.settings.focusAt >= 0) {
+                var peek = Components.Peek.value;
+                if (isObject(peek)) return translate - peek.before;
+                return translate - peek;
+            }
+            return translate;
+        }
+    };
+}
+/**
+ * Updates glide movement with a `focusAt` settings.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */ function Focusing(Glide, Components) {
+    return {
+        /**
+     * Modifies passed translate value with index in the `focusAt` setting.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */ modify: function modify(translate) {
+            var gap = Components.Gaps.value;
+            var width = Components.Sizes.width;
+            var focusAt = Glide.settings.focusAt;
+            var slideWidth = Components.Sizes.slideWidth;
+            if (focusAt === "center") return translate - (width / 2 - slideWidth / 2);
+            return translate - slideWidth * focusAt - gap * focusAt;
+        }
+    };
+}
+/**
+ * Applies diffrent transformers on translate value.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */ function mutator(Glide, Components, Events) {
+    /**
+   * Merge instance transformers with collection of default transformers.
+   * It's important that the Rtl component be last on the list,
+   * so it reflects all previous transformations.
+   *
+   * @type {Array}
+   */ var TRANSFORMERS = [
+        Gap,
+        Grow,
+        Peeking,
+        Focusing
+    ].concat(Glide._t, [
+        Rtl
+    ]);
+    return {
+        /**
+     * Piplines translate value with registered transformers.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */ mutate: function mutate(translate) {
+            for(var i = 0; i < TRANSFORMERS.length; i++){
+                var transformer = TRANSFORMERS[i];
+                if (isFunction(transformer) && isFunction(transformer().modify)) translate = transformer(Glide, Components, Events).modify(translate);
+                else warn("Transformer should be a function that returns an object with `modify()` method");
+            }
+            return translate;
+        }
+    };
+}
+function Translate(Glide, Components, Events) {
+    var Translate = {
+        /**
+     * Sets value of translate on HTML element.
+     *
+     * @param {Number} value
+     * @return {Void}
+     */ set: function set(value) {
+            var transform = mutator(Glide, Components).mutate(value);
+            var translate3d = "translate3d(".concat(-1 * transform, "px, 0px, 0px)");
+            Components.Html.wrapper.style.mozTransform = translate3d; // needed for supported Firefox 10-15
+            Components.Html.wrapper.style.webkitTransform = translate3d; // needed for supported Chrome 10-35, Safari 5.1-8, and Opera 15-22
+            Components.Html.wrapper.style.transform = translate3d;
+        },
+        /**
+     * Removes value of translate from HTML element.
+     *
+     * @return {Void}
+     */ remove: function remove() {
+            Components.Html.wrapper.style.transform = "";
+        },
+        /**
+     * @return {number}
+     */ getStartIndex: function getStartIndex() {
+            var length = Components.Sizes.length;
+            var index = Glide.index;
+            var perView = Glide.settings.perView;
+            if (Components.Run.isOffset(">") || Components.Run.isOffset("|>")) return length + (index - perView);
+             // "modulo length" converts an index that equals length to zero
+            return (index + perView) % length;
+        },
+        /**
+     * @return {number}
+     */ getTravelDistance: function getTravelDistance() {
+            var travelDistance = Components.Sizes.slideWidth * Glide.settings.perView;
+            if (Components.Run.isOffset(">") || Components.Run.isOffset("|>")) // reverse travel distance so that we don't have to change subtract operations
+            return travelDistance * -1;
+            return travelDistance;
+        }
+    };
+    /**
+   * Set new translate value:
+   * - on move to reflect index change
+   * - on updating via API to reflect possible changes in options
+   */ Events.on("move", function(context) {
+        if (!Glide.isType("carousel") || !Components.Run.isOffset()) return Translate.set(context.movement);
+        Components.Transition.after(function() {
+            Events.emit("translate.jump");
+            Translate.set(Components.Sizes.slideWidth * Glide.index);
+        });
+        var startWidth = Components.Sizes.slideWidth * Components.Translate.getStartIndex();
+        return Translate.set(startWidth - Components.Translate.getTravelDistance());
+    });
+    /**
+   * Remove translate:
+   * - on destroying to bring markup to its inital state
+   */ Events.on("destroy", function() {
+        Translate.remove();
+    });
+    return Translate;
+}
+function Transition(Glide, Components, Events) {
+    /**
+   * Holds inactivity status of transition.
+   * When true transition is not applied.
+   *
+   * @type {Boolean}
+   */ var disabled = false;
+    var Transition = {
+        /**
+     * Composes string of the CSS transition.
+     *
+     * @param {String} property
+     * @return {String}
+     */ compose: function compose(property) {
+            var settings = Glide.settings;
+            if (!disabled) return "".concat(property, " ").concat(this.duration, "ms ").concat(settings.animationTimingFunc);
+            return "".concat(property, " 0ms ").concat(settings.animationTimingFunc);
+        },
+        /**
+     * Sets value of transition on HTML element.
+     *
+     * @param {String=} property
+     * @return {Void}
+     */ set: function set() {
+            var property = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "transform";
+            Components.Html.wrapper.style.transition = this.compose(property);
+        },
+        /**
+     * Removes value of transition from HTML element.
+     *
+     * @return {Void}
+     */ remove: function remove() {
+            Components.Html.wrapper.style.transition = "";
+        },
+        /**
+     * Runs callback after animation.
+     *
+     * @param  {Function} callback
+     * @return {Void}
+     */ after: function after(callback) {
+            setTimeout(function() {
+                callback();
+            }, this.duration);
+        },
+        /**
+     * Enable transition.
+     *
+     * @return {Void}
+     */ enable: function enable() {
+            disabled = false;
+            this.set();
+        },
+        /**
+     * Disable transition.
+     *
+     * @return {Void}
+     */ disable: function disable() {
+            disabled = true;
+            this.set();
+        }
+    };
+    define(Transition, "duration", {
+        /**
+     * Gets duration of the transition based
+     * on currently running animation type.
+     *
+     * @return {Number}
+     */ get: function get() {
+            var settings = Glide.settings;
+            if (Glide.isType("slider") && Components.Run.offset) return settings.rewindDuration;
+            return settings.animationDuration;
+        }
+    });
+    /**
+   * Set transition `style` value:
+   * - on each moving, because it may be cleared by offset move
+   */ Events.on("move", function() {
+        Transition.set();
+    });
+    /**
+   * Disable transition:
+   * - before initial build to avoid transitioning from `0` to `startAt` index
+   * - while resizing window and recalculating dimensions
+   * - on jumping from offset transition at start and end edges in `carousel` type
+   */ Events.on([
+        "build.before",
+        "resize",
+        "translate.jump"
+    ], function() {
+        Transition.disable();
+    });
+    /**
+   * Enable transition:
+   * - on each running, because it may be disabled by offset move
+   */ Events.on("run", function() {
+        Transition.enable();
+    });
+    /**
+   * Remove transition:
+   * - on destroying to bring markup to its inital state
+   */ Events.on("destroy", function() {
+        Transition.remove();
+    });
+    return Transition;
+}
+/**
+ * Test via a getter in the options object to see
+ * if the passive property is accessed.
+ *
+ * @see https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
+ */ var supportsPassive = false;
+try {
+    var opts = Object.defineProperty({}, "passive", {
+        get: function get() {
+            supportsPassive = true;
+        }
+    });
+    window.addEventListener("testPassive", null, opts);
+    window.removeEventListener("testPassive", null, opts);
+} catch (e) {}
+var supportsPassive$1 = supportsPassive;
+var START_EVENTS = [
+    "touchstart",
+    "mousedown"
+];
+var MOVE_EVENTS = [
+    "touchmove",
+    "mousemove"
+];
+var END_EVENTS = [
+    "touchend",
+    "touchcancel",
+    "mouseup",
+    "mouseleave"
+];
+var MOUSE_EVENTS = [
+    "mousedown",
+    "mousemove",
+    "mouseup",
+    "mouseleave"
+];
+function Swipe(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    var swipeSin = 0;
+    var swipeStartX = 0;
+    var swipeStartY = 0;
+    var disabled = false;
+    var capture = supportsPassive$1 ? {
+        passive: true
+    } : false;
+    var Swipe = {
+        /**
+     * Initializes swipe bindings.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            this.bindSwipeStart();
+        },
+        /**
+     * Handler for `swipestart` event. Calculates entry points of the user's tap.
+     *
+     * @param {Object} event
+     * @return {Void}
+     */ start: function start(event) {
+            if (!disabled && !Glide.disabled) {
+                this.disable();
+                var swipe = this.touches(event);
+                swipeSin = null;
+                swipeStartX = toInt(swipe.pageX);
+                swipeStartY = toInt(swipe.pageY);
+                this.bindSwipeMove();
+                this.bindSwipeEnd();
+                Events.emit("swipe.start");
+            }
+        },
+        /**
+     * Handler for `swipemove` event. Calculates user's tap angle and distance.
+     *
+     * @param {Object} event
+     */ move: function move(event) {
+            if (!Glide.disabled) {
+                var _Glide$settings = Glide.settings, touchAngle = _Glide$settings.touchAngle, touchRatio = _Glide$settings.touchRatio, classes = _Glide$settings.classes;
+                var swipe = this.touches(event);
+                var subExSx = toInt(swipe.pageX) - swipeStartX;
+                var subEySy = toInt(swipe.pageY) - swipeStartY;
+                var powEX = Math.abs(subExSx << 2);
+                var powEY = Math.abs(subEySy << 2);
+                var swipeHypotenuse = Math.sqrt(powEX + powEY);
+                var swipeCathetus = Math.sqrt(powEY);
+                swipeSin = Math.asin(swipeCathetus / swipeHypotenuse);
+                if (swipeSin * 180 / Math.PI < touchAngle) {
+                    event.stopPropagation();
+                    Components.Move.make(subExSx * toFloat(touchRatio));
+                    Components.Html.root.classList.add(classes.dragging);
+                    Events.emit("swipe.move");
+                } else return false;
+            }
+        },
+        /**
+     * Handler for `swipeend` event. Finitializes user's tap and decides about glide move.
+     *
+     * @param {Object} event
+     * @return {Void}
+     */ end: function end(event) {
+            if (!Glide.disabled) {
+                var _Glide$settings2 = Glide.settings, perSwipe = _Glide$settings2.perSwipe, touchAngle = _Glide$settings2.touchAngle, classes = _Glide$settings2.classes;
+                var swipe = this.touches(event);
+                var threshold = this.threshold(event);
+                var swipeDistance = swipe.pageX - swipeStartX;
+                var swipeDeg = swipeSin * 180 / Math.PI;
+                this.enable();
+                if (swipeDistance > threshold && swipeDeg < touchAngle) Components.Run.make(Components.Direction.resolve("".concat(perSwipe, "<")));
+                else if (swipeDistance < -threshold && swipeDeg < touchAngle) Components.Run.make(Components.Direction.resolve("".concat(perSwipe, ">")));
+                else // While swipe don't reach distance apply previous transform.
+                Components.Move.make();
+                Components.Html.root.classList.remove(classes.dragging);
+                this.unbindSwipeMove();
+                this.unbindSwipeEnd();
+                Events.emit("swipe.end");
+            }
+        },
+        /**
+     * Binds swipe's starting event.
+     *
+     * @return {Void}
+     */ bindSwipeStart: function bindSwipeStart() {
+            var _this = this;
+            var _Glide$settings3 = Glide.settings, swipeThreshold = _Glide$settings3.swipeThreshold, dragThreshold = _Glide$settings3.dragThreshold;
+            if (swipeThreshold) Binder.on(START_EVENTS[0], Components.Html.wrapper, function(event) {
+                _this.start(event);
+            }, capture);
+            if (dragThreshold) Binder.on(START_EVENTS[1], Components.Html.wrapper, function(event) {
+                _this.start(event);
+            }, capture);
+        },
+        /**
+     * Unbinds swipe's starting event.
+     *
+     * @return {Void}
+     */ unbindSwipeStart: function unbindSwipeStart() {
+            Binder.off(START_EVENTS[0], Components.Html.wrapper, capture);
+            Binder.off(START_EVENTS[1], Components.Html.wrapper, capture);
+        },
+        /**
+     * Binds swipe's moving event.
+     *
+     * @return {Void}
+     */ bindSwipeMove: function bindSwipeMove() {
+            var _this2 = this;
+            Binder.on(MOVE_EVENTS, Components.Html.wrapper, throttle(function(event) {
+                _this2.move(event);
+            }, Glide.settings.throttle), capture);
+        },
+        /**
+     * Unbinds swipe's moving event.
+     *
+     * @return {Void}
+     */ unbindSwipeMove: function unbindSwipeMove() {
+            Binder.off(MOVE_EVENTS, Components.Html.wrapper, capture);
+        },
+        /**
+     * Binds swipe's ending event.
+     *
+     * @return {Void}
+     */ bindSwipeEnd: function bindSwipeEnd() {
+            var _this3 = this;
+            Binder.on(END_EVENTS, Components.Html.wrapper, function(event) {
+                _this3.end(event);
+            });
+        },
+        /**
+     * Unbinds swipe's ending event.
+     *
+     * @return {Void}
+     */ unbindSwipeEnd: function unbindSwipeEnd() {
+            Binder.off(END_EVENTS, Components.Html.wrapper);
+        },
+        /**
+     * Normalizes event touches points accorting to different types.
+     *
+     * @param {Object} event
+     */ touches: function touches(event) {
+            if (MOUSE_EVENTS.indexOf(event.type) > -1) return event;
+            return event.touches[0] || event.changedTouches[0];
+        },
+        /**
+     * Gets value of minimum swipe distance settings based on event type.
+     *
+     * @return {Number}
+     */ threshold: function threshold(event) {
+            var settings = Glide.settings;
+            if (MOUSE_EVENTS.indexOf(event.type) > -1) return settings.dragThreshold;
+            return settings.swipeThreshold;
+        },
+        /**
+     * Enables swipe event.
+     *
+     * @return {self}
+     */ enable: function enable() {
+            disabled = false;
+            Components.Transition.enable();
+            return this;
+        },
+        /**
+     * Disables swipe event.
+     *
+     * @return {self}
+     */ disable: function disable() {
+            disabled = true;
+            Components.Transition.disable();
+            return this;
+        }
+    };
+    /**
+   * Add component class:
+   * - after initial building
+   */ Events.on("build.after", function() {
+        Components.Html.root.classList.add(Glide.settings.classes.swipeable);
+    });
+    /**
+   * Remove swiping bindings:
+   * - on destroying, to remove added EventListeners
+   */ Events.on("destroy", function() {
+        Swipe.unbindSwipeStart();
+        Swipe.unbindSwipeMove();
+        Swipe.unbindSwipeEnd();
+        Binder.destroy();
+    });
+    return Swipe;
+}
+function Images(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    var Images = {
+        /**
+     * Binds listener to glide wrapper.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            this.bind();
+        },
+        /**
+     * Binds `dragstart` event on wrapper to prevent dragging images.
+     *
+     * @return {Void}
+     */ bind: function bind() {
+            Binder.on("dragstart", Components.Html.wrapper, this.dragstart);
+        },
+        /**
+     * Unbinds `dragstart` event on wrapper.
+     *
+     * @return {Void}
+     */ unbind: function unbind() {
+            Binder.off("dragstart", Components.Html.wrapper);
+        },
+        /**
+     * Event handler. Prevents dragging.
+     *
+     * @return {Void}
+     */ dragstart: function dragstart(event) {
+            event.preventDefault();
+        }
+    };
+    /**
+   * Remove bindings from images:
+   * - on destroying, to remove added EventListeners
+   */ Events.on("destroy", function() {
+        Images.unbind();
+        Binder.destroy();
+    });
+    return Images;
+}
+function Anchors(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    /**
+   * Holds detaching status of anchors.
+   * Prevents detaching of already detached anchors.
+   *
+   * @private
+   * @type {Boolean}
+   */ var detached = false;
+    /**
+   * Holds preventing status of anchors.
+   * If `true` redirection after click will be disabled.
+   *
+   * @private
+   * @type {Boolean}
+   */ var prevented = false;
+    var Anchors = {
+        /**
+     * Setups a initial state of anchors component.
+     *
+     * @returns {Void}
+     */ mount: function mount() {
+            /**
+       * Holds collection of anchors elements.
+       *
+       * @private
+       * @type {HTMLCollection}
+       */ this._a = Components.Html.wrapper.querySelectorAll("a");
+            this.bind();
+        },
+        /**
+     * Binds events to anchors inside a track.
+     *
+     * @return {Void}
+     */ bind: function bind() {
+            Binder.on("click", Components.Html.wrapper, this.click);
+        },
+        /**
+     * Unbinds events attached to anchors inside a track.
+     *
+     * @return {Void}
+     */ unbind: function unbind() {
+            Binder.off("click", Components.Html.wrapper);
+        },
+        /**
+     * Handler for click event. Prevents clicks when glide is in `prevent` status.
+     *
+     * @param  {Object} event
+     * @return {Void}
+     */ click: function click(event) {
+            if (prevented) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+        },
+        /**
+     * Detaches anchors click event inside glide.
+     *
+     * @return {self}
+     */ detach: function detach() {
+            prevented = true;
+            if (!detached) {
+                for(var i = 0; i < this.items.length; i++)this.items[i].draggable = false;
+                detached = true;
+            }
+            return this;
+        },
+        /**
+     * Attaches anchors click events inside glide.
+     *
+     * @return {self}
+     */ attach: function attach() {
+            prevented = false;
+            if (detached) {
+                for(var i = 0; i < this.items.length; i++)this.items[i].draggable = true;
+                detached = false;
+            }
+            return this;
+        }
+    };
+    define(Anchors, "items", {
+        /**
+     * Gets collection of the arrows HTML elements.
+     *
+     * @return {HTMLElement[]}
+     */ get: function get() {
+            return Anchors._a;
+        }
+    });
+    /**
+   * Detach anchors inside slides:
+   * - on swiping, so they won't redirect to its `href` attributes
+   */ Events.on("swipe.move", function() {
+        Anchors.detach();
+    });
+    /**
+   * Attach anchors inside slides:
+   * - after swiping and transitions ends, so they can redirect after click again
+   */ Events.on("swipe.end", function() {
+        Components.Transition.after(function() {
+            Anchors.attach();
+        });
+    });
+    /**
+   * Unbind anchors inside slides:
+   * - on destroying, to bring anchors to its initial state
+   */ Events.on("destroy", function() {
+        Anchors.attach();
+        Anchors.unbind();
+        Binder.destroy();
+    });
+    return Anchors;
+}
+var NAV_SELECTOR = '[data-glide-el="controls[nav]"]';
+var CONTROLS_SELECTOR = '[data-glide-el^="controls"]';
+var PREVIOUS_CONTROLS_SELECTOR = "".concat(CONTROLS_SELECTOR, ' [data-glide-dir*="<"]');
+var NEXT_CONTROLS_SELECTOR = "".concat(CONTROLS_SELECTOR, ' [data-glide-dir*=">"]');
+function Controls(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    var capture = supportsPassive$1 ? {
+        passive: true
+    } : false;
+    var Controls = {
+        /**
+     * Inits arrows. Binds events listeners
+     * to the arrows HTML elements.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            /**
+       * Collection of navigation HTML elements.
+       *
+       * @private
+       * @type {HTMLCollection}
+       */ this._n = Components.Html.root.querySelectorAll(NAV_SELECTOR);
+            /**
+       * Collection of controls HTML elements.
+       *
+       * @private
+       * @type {HTMLCollection}
+       */ this._c = Components.Html.root.querySelectorAll(CONTROLS_SELECTOR);
+            /**
+       * Collection of arrow control HTML elements.
+       *
+       * @private
+       * @type {Object}
+       */ this._arrowControls = {
+                previous: Components.Html.root.querySelectorAll(PREVIOUS_CONTROLS_SELECTOR),
+                next: Components.Html.root.querySelectorAll(NEXT_CONTROLS_SELECTOR)
+            };
+            this.addBindings();
+        },
+        /**
+     * Sets active class to current slide.
+     *
+     * @return {Void}
+     */ setActive: function setActive() {
+            for(var i = 0; i < this._n.length; i++)this.addClass(this._n[i].children);
+        },
+        /**
+     * Removes active class to current slide.
+     *
+     * @return {Void}
+     */ removeActive: function removeActive() {
+            for(var i = 0; i < this._n.length; i++)this.removeClass(this._n[i].children);
+        },
+        /**
+     * Toggles active class on items inside navigation.
+     *
+     * @param  {HTMLElement} controls
+     * @return {Void}
+     */ addClass: function addClass(controls) {
+            var settings = Glide.settings;
+            var item = controls[Glide.index];
+            if (!item) return;
+            if (item) {
+                item.classList.add(settings.classes.nav.active);
+                siblings(item).forEach(function(sibling) {
+                    sibling.classList.remove(settings.classes.nav.active);
+                });
+            }
+        },
+        /**
+     * Removes active class from active control.
+     *
+     * @param  {HTMLElement} controls
+     * @return {Void}
+     */ removeClass: function removeClass(controls) {
+            var item = controls[Glide.index];
+            if (item) item.classList.remove(Glide.settings.classes.nav.active);
+        },
+        /**
+     * Calculates, removes or adds `Glide.settings.classes.disabledArrow` class on the control arrows
+     */ setArrowState: function setArrowState() {
+            if (Glide.settings.rewind) return;
+            var next = Controls._arrowControls.next;
+            var previous = Controls._arrowControls.previous;
+            this.resetArrowState(next, previous);
+            if (Glide.index === 0) this.disableArrow(previous);
+            if (Glide.index === Components.Run.length) this.disableArrow(next);
+        },
+        /**
+     * Removes `Glide.settings.classes.disabledArrow` from given NodeList elements
+     *
+     * @param {NodeList[]} lists
+     */ resetArrowState: function resetArrowState() {
+            var settings = Glide.settings;
+            for(var _len = arguments.length, lists = new Array(_len), _key = 0; _key < _len; _key++)lists[_key] = arguments[_key];
+            lists.forEach(function(list) {
+                toArray(list).forEach(function(element) {
+                    element.classList.remove(settings.classes.arrow.disabled);
+                });
+            });
+        },
+        /**
+     * Adds `Glide.settings.classes.disabledArrow` to given NodeList elements
+     *
+     * @param {NodeList[]} lists
+     */ disableArrow: function disableArrow() {
+            var settings = Glide.settings;
+            for(var _len2 = arguments.length, lists = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)lists[_key2] = arguments[_key2];
+            lists.forEach(function(list) {
+                toArray(list).forEach(function(element) {
+                    element.classList.add(settings.classes.arrow.disabled);
+                });
+            });
+        },
+        /**
+     * Adds handles to the each group of controls.
+     *
+     * @return {Void}
+     */ addBindings: function addBindings() {
+            for(var i = 0; i < this._c.length; i++)this.bind(this._c[i].children);
+        },
+        /**
+     * Removes handles from the each group of controls.
+     *
+     * @return {Void}
+     */ removeBindings: function removeBindings() {
+            for(var i = 0; i < this._c.length; i++)this.unbind(this._c[i].children);
+        },
+        /**
+     * Binds events to arrows HTML elements.
+     *
+     * @param {HTMLCollection} elements
+     * @return {Void}
+     */ bind: function bind(elements) {
+            for(var i = 0; i < elements.length; i++){
+                Binder.on("click", elements[i], this.click);
+                Binder.on("touchstart", elements[i], this.click, capture);
+            }
+        },
+        /**
+     * Unbinds events binded to the arrows HTML elements.
+     *
+     * @param {HTMLCollection} elements
+     * @return {Void}
+     */ unbind: function unbind(elements) {
+            for(var i = 0; i < elements.length; i++)Binder.off([
+                "click",
+                "touchstart"
+            ], elements[i]);
+        },
+        /**
+     * Handles `click` event on the arrows HTML elements.
+     * Moves slider in direction given via the
+     * `data-glide-dir` attribute.
+     *
+     * @param {Object} event
+     * @return {void}
+     */ click: function click(event) {
+            if (!supportsPassive$1 && event.type === "touchstart") event.preventDefault();
+            var direction = event.currentTarget.getAttribute("data-glide-dir");
+            Components.Run.make(Components.Direction.resolve(direction));
+        }
+    };
+    define(Controls, "items", {
+        /**
+     * Gets collection of the controls HTML elements.
+     *
+     * @return {HTMLElement[]}
+     */ get: function get() {
+            return Controls._c;
+        }
+    });
+    /**
+   * Swap active class of current navigation item:
+   * - after mounting to set it to initial index
+   * - after each move to the new index
+   */ Events.on([
+        "mount.after",
+        "move.after"
+    ], function() {
+        Controls.setActive();
+    });
+    /**
+   * Add or remove disabled class of arrow elements
+   */ Events.on([
+        "mount.after",
+        "run"
+    ], function() {
+        Controls.setArrowState();
+    });
+    /**
+   * Remove bindings and HTML Classes:
+   * - on destroying, to bring markup to its initial state
+   */ Events.on("destroy", function() {
+        Controls.removeBindings();
+        Controls.removeActive();
+        Binder.destroy();
+    });
+    return Controls;
+}
+function Keyboard(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    var Keyboard = {
+        /**
+     * Binds keyboard events on component mount.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            if (Glide.settings.keyboard) this.bind();
+        },
+        /**
+     * Adds keyboard press events.
+     *
+     * @return {Void}
+     */ bind: function bind() {
+            Binder.on("keyup", document, this.press);
+        },
+        /**
+     * Removes keyboard press events.
+     *
+     * @return {Void}
+     */ unbind: function unbind() {
+            Binder.off("keyup", document);
+        },
+        /**
+     * Handles keyboard's arrows press and moving glide foward and backward.
+     *
+     * @param  {Object} event
+     * @return {Void}
+     */ press: function press(event) {
+            var perSwipe = Glide.settings.perSwipe;
+            if (event.code === "ArrowRight") Components.Run.make(Components.Direction.resolve("".concat(perSwipe, ">")));
+            if (event.code === "ArrowLeft") Components.Run.make(Components.Direction.resolve("".concat(perSwipe, "<")));
+        }
+    };
+    /**
+   * Remove bindings from keyboard:
+   * - on destroying to remove added events
+   * - on updating to remove events before remounting
+   */ Events.on([
+        "destroy",
+        "update"
+    ], function() {
+        Keyboard.unbind();
+    });
+    /**
+   * Remount component
+   * - on updating to reflect potential changes in settings
+   */ Events.on("update", function() {
+        Keyboard.mount();
+    });
+    /**
+   * Destroy binder:
+   * - on destroying to remove listeners
+   */ Events.on("destroy", function() {
+        Binder.destroy();
+    });
+    return Keyboard;
+}
+function Autoplay(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    var Autoplay = {
+        /**
+     * Initializes autoplaying and events.
+     *
+     * @return {Void}
+     */ mount: function mount() {
+            this.enable();
+            this.start();
+            if (Glide.settings.hoverpause) this.bind();
+        },
+        /**
+     * Enables autoplaying
+     *
+     * @returns {Void}
+     */ enable: function enable() {
+            this._e = true;
+        },
+        /**
+     * Disables autoplaying.
+     *
+     * @returns {Void}
+     */ disable: function disable() {
+            this._e = false;
+        },
+        /**
+     * Starts autoplaying in configured interval.
+     *
+     * @param {Boolean|Number} force Run autoplaying with passed interval regardless of `autoplay` settings
+     * @return {Void}
+     */ start: function start() {
+            var _this = this;
+            if (!this._e) return;
+            this.enable();
+            if (Glide.settings.autoplay) {
+                if (isUndefined(this._i)) this._i = setInterval(function() {
+                    _this.stop();
+                    Components.Run.make(">");
+                    _this.start();
+                    Events.emit("autoplay");
+                }, this.time);
+            }
+        },
+        /**
+     * Stops autorunning of the glide.
+     *
+     * @return {Void}
+     */ stop: function stop() {
+            this._i = clearInterval(this._i);
+        },
+        /**
+     * Stops autoplaying while mouse is over glide's area.
+     *
+     * @return {Void}
+     */ bind: function bind() {
+            var _this2 = this;
+            Binder.on("mouseover", Components.Html.root, function() {
+                if (_this2._e) _this2.stop();
+            });
+            Binder.on("mouseout", Components.Html.root, function() {
+                if (_this2._e) _this2.start();
+            });
+        },
+        /**
+     * Unbind mouseover events.
+     *
+     * @returns {Void}
+     */ unbind: function unbind() {
+            Binder.off([
+                "mouseover",
+                "mouseout"
+            ], Components.Html.root);
+        }
+    };
+    define(Autoplay, "time", {
+        /**
+     * Gets time period value for the autoplay interval. Prioritizes
+     * times in `data-glide-autoplay` attrubutes over options.
+     *
+     * @return {Number}
+     */ get: function get() {
+            var autoplay = Components.Html.slides[Glide.index].getAttribute("data-glide-autoplay");
+            if (autoplay) return toInt(autoplay);
+            return toInt(Glide.settings.autoplay);
+        }
+    });
+    /**
+   * Stop autoplaying and unbind events:
+   * - on destroying, to clear defined interval
+   * - on updating via API to reset interval that may changed
+   */ Events.on([
+        "destroy",
+        "update"
+    ], function() {
+        Autoplay.unbind();
+    });
+    /**
+   * Stop autoplaying:
+   * - before each run, to restart autoplaying
+   * - on pausing via API
+   * - on destroying, to clear defined interval
+   * - while starting a swipe
+   * - on updating via API to reset interval that may changed
+   */ Events.on([
+        "run.before",
+        "swipe.start",
+        "update"
+    ], function() {
+        Autoplay.stop();
+    });
+    Events.on([
+        "pause",
+        "destroy"
+    ], function() {
+        Autoplay.disable();
+        Autoplay.stop();
+    });
+    /**
+   * Start autoplaying:
+   * - after each run, to restart autoplaying
+   * - on playing via API
+   * - while ending a swipe
+   */ Events.on([
+        "run.after",
+        "swipe.end"
+    ], function() {
+        Autoplay.start();
+    });
+    /**
+   * Start autoplaying:
+   * - after each run, to restart autoplaying
+   * - on playing via API
+   * - while ending a swipe
+   */ Events.on([
+        "play"
+    ], function() {
+        Autoplay.enable();
+        Autoplay.start();
+    });
+    /**
+   * Remount autoplaying:
+   * - on updating via API to reset interval that may changed
+   */ Events.on("update", function() {
+        Autoplay.mount();
+    });
+    /**
+   * Destroy a binder:
+   * - on destroying glide instance to clearup listeners
+   */ Events.on("destroy", function() {
+        Binder.destroy();
+    });
+    return Autoplay;
+}
+/**
+ * Sorts keys of breakpoint object so they will be ordered from lower to bigger.
+ *
+ * @param {Object} points
+ * @returns {Object}
+ */ function sortBreakpoints(points) {
+    if (isObject(points)) return sortKeys(points);
+    else warn("Breakpoints option must be an object");
+    return {};
+}
+function Breakpoints(Glide, Components, Events) {
+    /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */ var Binder = new EventsBinder();
+    /**
+   * Holds reference to settings.
+   *
+   * @type {Object}
+   */ var settings = Glide.settings;
+    /**
+   * Holds reference to breakpoints object in settings. Sorts breakpoints
+   * from smaller to larger. It is required in order to proper
+   * matching currently active breakpoint settings.
+   *
+   * @type {Object}
+   */ var points = sortBreakpoints(settings.breakpoints);
+    /**
+   * Cache initial settings before overwritting.
+   *
+   * @type {Object}
+   */ var defaults = Object.assign({}, settings);
+    var Breakpoints = {
+        /**
+     * Matches settings for currectly matching media breakpoint.
+     *
+     * @param {Object} points
+     * @returns {Object}
+     */ match: function match(points) {
+            if (typeof window.matchMedia !== "undefined") {
+                for(var point in points)if (points.hasOwnProperty(point)) {
+                    if (window.matchMedia("(max-width: ".concat(point, "px)")).matches) return points[point];
+                }
+            }
+            return defaults;
+        }
+    };
+    /**
+   * Overwrite instance settings with currently matching breakpoint settings.
+   * This happens right after component initialization.
+   */ Object.assign(settings, Breakpoints.match(points));
+    /**
+   * Update glide with settings of matched brekpoint:
+   * - window resize to update slider
+   */ Binder.on("resize", window, throttle(function() {
+        Glide.settings = mergeOptions(settings, Breakpoints.match(points));
+    }, Glide.settings.throttle));
+    /**
+   * Resort and update default settings:
+   * - on reinit via API, so breakpoint matching will be performed with options
+   */ Events.on("update", function() {
+        points = sortBreakpoints(points);
+        defaults = Object.assign({}, settings);
+    });
+    /**
+   * Unbind resize listener:
+   * - on destroying, to bring markup to its initial state
+   */ Events.on("destroy", function() {
+        Binder.off("resize", window);
+    });
+    return Breakpoints;
+}
+var COMPONENTS = {
+    // Required
+    Html: Html,
+    Translate: Translate,
+    Transition: Transition,
+    Direction: Direction,
+    Peek: Peek,
+    Sizes: Sizes,
+    Gaps: Gaps,
+    Move: Move,
+    Clones: Clones,
+    Resize: Resize,
+    Build: Build,
+    Run: Run,
+    // Optional
+    Swipe: Swipe,
+    Images: Images,
+    Anchors: Anchors,
+    Controls: Controls,
+    Keyboard: Keyboard,
+    Autoplay: Autoplay,
+    Breakpoints: Breakpoints
+};
+var Glide = /*#__PURE__*/ function(_Core) {
+    _inherits(Glide, _Core);
+    var _super = _createSuper(Glide);
+    function Glide() {
+        _classCallCheck(this, Glide);
+        return _super.apply(this, arguments);
+    }
+    _createClass(Glide, [
+        {
+            key: "mount",
+            value: function mount() {
+                var extensions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+                return _get(_getPrototypeOf(Glide.prototype), "mount", this).call(this, Object.assign({}, COMPONENTS, extensions));
+            }
+        }
+    ]);
+    return Glide;
+}(Glide$1);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aRzML":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>marquee);
+// @ts-check
+/**
+ * Shorthand for `document.getElementsByClassName`
+ *
+ * @param {String} selClass - The selector's class
+ * @param {Element|HTMLElement|Document} [parent=document] - Parent element
+ *
+ * @returns {HTMLCollectionOf<Element>} - The selected elements
+ */ function byClass(selClass, parent = document) {
+    return parent.getElementsByClassName(selClass);
+}
+/**
+ * Shorthand for `document.querySelector`
+ *
+ * @param {String} selector - Selector
+ * @param {Element|HTMLElement|Document} [parent=document] - Parent element
+ *
+ * @returns {Element|HTMLElementTagNameMap|SVGElementTagNameMap|null} - The selected element
+ */ function query(selector, parent = document) {
+    return parent.querySelector(selector);
+}
+/**
+ * Shorthand for `document.querySelectorAll`
+ *
+ * @param {String} selector - Selector
+ * @param {Element|HTMLElement|Document} [parent=document] - Parent element
+ *
+ * @returns {NodeList} - The selected element
+ */ function queryAll(selector, parent = document) {
+    return parent.querySelectorAll(selector);
+}
+// @ts-check
+/**
+ * Foreach polyfill for NodeList and HTMLCollection
+ * https://toddmotto.com/ditch-the-array-foreach-call-nodelist-hack/
+ *
+ * @param {Array<any>|NodeList|HTMLCollection} els - A list of elements
+ * @param {foreachCB} fn - Callback containing ( value, index ) as arguments
+ * @param {Function} [scope] - Scope
+ */ function forEachHTML(els, fn, scope) {
+    for(let i = 0, numEls = els.length; i < numEls; i++)fn.call(scope, els[i], i);
+}
+// @ts-check
+/**
+ * Shorthand for `element.classList.add`, works with multiple nodes
+ *
+ * @param {Element|HTMLElement|HTMLCollection|NodeList} el - A list of elements
+ * @param {...String} classes - Classes to add
+ */ function addClass(el, ...classes) {
+    // @ts-ignore
+    if (el.length === undefined) // @ts-ignore
+    addClassEl(el, ...classes);
+    else // @ts-ignore
+    forEachHTML(el, (currEl)=>{
+        addClassEl(currEl, ...classes);
+    });
+    /**
+   * Adds classes to a single element
+   *
+   * @param {Element|HTMLElement} elem - An HTML element
+   * @param {...String} remClass - Classes to add
+   */ function addClassEl(elem, ...remClass) {
+        remClass.forEach((singleClass)=>{
+            elem.classList.add(singleClass);
+        });
+    }
+}
+// @ts-check
+/**
+ * Shorthand for `element.addEventListener`
+ *
+ * @param {Element|HTMLElement|Window|Document|MediaQueryList} el - A list of elements
+ * @param {String} ev - Event's name
+ * @param {EventListenerOrEventListenerObject} fn - Event's function
+ * @param {Object} [opts] - Optional event options
+ */ function addEvent(el, ev, fn, opts) {
+    el.addEventListener(ev, fn, opts);
+}
+/**
+ * Shorthand for `element.removeEventListener`
+ *
+ * @param {Element|HTMLElement|Window|Document|MediaQueryList} el - A list of elements
+ * @param {String} ev - Event's name
+ * @param {EventListenerOrEventListenerObject} fn - Event's function
+ * @param {Object} [opts] - Optional event options
+ */ function removeEvent(el, ev, fn, opts) {
+    el.removeEventListener(ev, fn, opts);
+}
+// @ts-check
+/**
+ * Shorthand for `element.getAttribute`
+ *
+ * @param {Element|HTMLElement} el - An HTML element
+ * @param {String} attr - The attribute to retrieve
+ *
+ * @returns {String|null} - The attribute's value
+ */ function getAttr(el, attr) {
+    return el.getAttribute(attr);
+}
+/**
+ * Shorthand for `element.setAttribute`
+ *
+ * @param {Element|HTMLElement} el - An HTML element
+ * @param {String} attr - The attribute to retrieve
+ * @param {String} val - The value to set to the attribute
+ */ function setAttr(el, attr, val) {
+    el.setAttribute(attr, val);
+}
+/**
+ * Shorthand for `element.removeAttribute`
+ *
+ * @param {Element|HTMLElement} el - An HTML element
+ * @param {String} attr - The attribute to remove
+ */ function remAttr(el, attr) {
+    el.removeAttribute(attr);
+}
+/**
+ * @typedef defaultOptions
+ * @property {String} [css3easing='linear'] - A css3 transtion timing
+ * @property {Number} [delayBeforeStart=1000] - Time in milliseconds before the marquee starts animating
+ * @property {String} [direction='left'] - Direction towards which the marquee will animate ` 'left' | 'right' | 'up' | 'down'`
+ * @property {Boolean} [duplicated=false] - Should the marquee be duplicated to show an effect of continuous flow. Use this only when the text is shorter than the container
+ * @property {Number} [duration=5000] - Duration in milliseconds in which you want your element to travel
+ * @property {Number} [gap=20] - Gap in pixels between the tickers. Will work only when the `duplicated` option is set to `true`
+ * @property {Boolean} [pauseOnHover=false] - Pause the marquee on hover
+ * @property {Boolean} [recalcResize=false] - Recalculate the marquee position on resize (breaks compatibility with jquery.marquee)
+ * @property {Number} [speed=0] - Speed will override duration. Speed allows you to set a relatively constant marquee speed regardless of the width of the containing element. Speed is measured in pixels/second
+ * @property {Boolean} [startVisible=false] - The marquee will be visible from the start if set to `true`
+ */ const defOpts = {
+    css3easing: "linear",
+    delayBeforeStart: 1000,
+    direction: "left",
+    duplicated: false,
+    duration: 5000,
+    gap: 20,
+    pauseOnHover: false,
+    recalcResize: false,
+    speed: 0,
+    startVisible: false
+};
+let instances = 0;
+/**
+ * Vanilla js marquee based on jQuery.marquee
+ * https://github.com/aamirafridi/jQuery.Marquee
+ */ class marquee {
+    /**
+   * Constructor
+   *
+   * @param {Element} el - The element where the marquee is applied
+   * @param {defaultOptions} opts - the options
+   */ constructor(el, opts){
+        if (typeof el === "undefined") throw new Error("el cannot be undefined");
+        if (typeof el === "string") throw new Error("el cannot be just a selector");
+        if (el === null) throw new Error("el cannot be null");
+        opts = {
+            ...defOpts,
+            ...opts
+        };
+        this.el = el;
+        this._loopCount = 3;
+        // Check for data-option since they have top priority
+        for(const option in defOpts){
+            let currData = getAttr(el, `data-${defOpts[option]}`);
+            if (currData !== null && currData !== "") {
+                if (currData === "true" || currData === "false") currData = Boolean(currData);
+                opts[option] = currData;
+            }
+        }
+        // Reintroduce speed as an option. It calculates duration as a factor of the container width
+        // measured in pixels per second.
+        if (opts.speed) opts.duration = parseInt(el.clientWidth) / opts.speed * 1000;
+        // no gap if not duplicated
+        opts.gap = opts.duplicated ? parseInt(opts.gap) : 0;
+        // wrap inner content into a div
+        el.innerHTML = `<div class="js-marquee">${el.innerHTML}</div>`;
+        // Make a copy of the element
+        const marq = byClass("js-marquee", el)[0];
+        marq.style.marginRight = `${opts.gap}px`;
+        marq.style.willChange = "transform";
+        marq.style.float = "left";
+        if (opts.duplicated) el.appendChild(marq.cloneNode(true));
+        // wrap both inner elements into one div
+        el.innerHTML = `<div style="width:100000px" class="js-marquee-wrapper">${el.innerHTML}</div>`;
+        // Save the reference of the wrapper
+        const marqWrap = byClass("js-marquee-wrapper", el)[0], vertical = opts.direction === "up" || opts.direction === "down";
+        this._marqWrap = marqWrap;
+        this._vertical = vertical;
+        this._duration = opts.duration;
+        this._opts = opts;
+        this._calcSizes();
+        const animationName = `marqueeAnimation-${Math.floor(Math.random() * 10000000)}`, animStr = this._animationStr(animationName, opts.duration / 1000, opts.delayBeforeStart / 1000, "infinite");
+        this._animName = animationName;
+        this._animStr = animStr;
+        // if duplicated option is set to true than position the wrapper
+        if (opts.duplicated) {
+            if (vertical) {
+                if (opts.startVisible) this._marqWrap.style.transform = "translateY(0px)";
+                else this._marqWrap.style.transform = `translateY(${opts.direction === "up" ? this._contHeight : -1 * (this._elHeight * 2 - opts.gap)}px)`;
+            } else if (opts.startVisible) this._marqWrap.style.transform = "translateX(0px)";
+            else this._marqWrap.style.transform = `translateX(${opts.direction === "left" ? this._contWidth : -1 * (this._elWidth * 2 - opts.gap)}px)`;
+            // If the text starts out visible we can skip the two initial loops
+            if (!opts.startVisible) this._loopCount = 1;
+        } else if (opts.startVisible) // We only have two different loops if marquee is duplicated and starts visible
+        this._loopCount = 2;
+        else if (vertical) this._repositionVert();
+        else this._repositionHor();
+        addEvent(this.el, "pause", this.pause.bind(this));
+        addEvent(this.el, "resume", this.resume.bind(this));
+        if (opts.pauseOnHover) {
+            addEvent(this.el, "mouseover", this.pause.bind(this));
+            addEvent(this.el, "mouseout", this.resume.bind(this));
+        }
+        /**
+     * Method for animation end event
+     */ this._animEnd = ()=>{
+            this._animate(vertical);
+            this.el.dispatchEvent(new CustomEvent("finished"));
+        };
+        this._instance = instances;
+        instances++;
+        this._animate(vertical);
+        if (opts.recalcResize) addEvent(window, "resize", this._recalcResize.bind(this));
+    }
+    /**
+   * Build the css string for the animation
+   *
+   * @privte
+   * @param {String} [name=''] - animation name
+   * @param {Number} [duration=0] - Animation duration (in s)
+   * @param {Number} [delay=0] - Animation delay before starting (in s)
+   * @param {String} [loops=''] - Animation iterations
+   *
+   * @returns {String} css animation string
+   */ _animationStr(name = "", duration = 0, delay = 0, loops = "") {
+        return `${name} ${duration}s ${delay}s ${loops} ${this._opts.css3easing}`;
+    }
+    /**
+   * Animation of the marquee
+   *
+   * @private
+   * @param {Boolean} vertical - Vertical direction
+   */ _animate(vertical = false) {
+        const opts = this._opts;
+        if (opts.duplicated) {
+            // When duplicated, the first loop will be scroll longer so double the duration
+            if (this._loopCount === 1) {
+                let duration = opts.duration;
+                if (vertical) duration = opts.direction === "up" ? duration + this._contHeight / (this._elHeight / duration) : duration * 2;
+                else duration = opts.direction === "left" ? duration + this._contWidth / (this._elWidth / duration) : duration * 2;
+                this._animStr = this._animationStr(this._animName, duration / 1000, opts.delayBeforeStart / 1000);
+            // On 2nd loop things back to normal, normal duration for the rest of animations
+            } else if (this._loopCount === 2) {
+                this._animName = `${this._animName}0`;
+                this._animStr = this._animationStr(this._animName, opts.duration / 1000, 0, "infinite");
+            }
+            this._loopCount++;
+        }
+        let animationCss = "";
+        if (vertical) {
+            if (opts.duplicated) {
+                // Adjust the starting point of animation only when first loops finishes
+                if (this._loopCount > 2) this._marqWrap.style.transform = `translateY(${opts.direction === "up" ? 0 : -1 * this._elHeight}px)`;
+                animationCss = `translateY(${opts.direction === "up" ? -1 * this._elHeight : 0}px)`;
+            } else if (opts.startVisible) {
+                // This loop moves the marquee out of the container
+                if (this._loopCount === 2) {
+                    // Adjust the css3 animation as well
+                    this._animStr = this._animationStr(this._animName, opts.duration / 1000, opts.delayBeforeStart / 1000);
+                    animationCss = `translateY(${opts.direction === "up" ? -1 * this._elHeight : this._contHeight}px)`;
+                    this._loopCount++;
+                } else if (this._loopCount === 3) {
+                    this._animName = `${this._animName}0`;
+                    this._animStr = this._animationStr(this._animName, this._completeDuration / 1000, 0, "infinite");
+                    this._repositionVert();
+                }
+            } else {
+                this._repositionVert();
+                animationCss = `translateY(${opts.direction === "up" ? -1 * this._marqWrap.clientHeight : this._contHeight}px)`;
+            }
+        } else {
+            if (opts.duplicated) {
+                // Adjust the starting point of animation only when first loops finishes
+                if (this._loopCount > 2) this._marqWrap.style.transform = `translateX(${opts.direction === "left" ? 0 : -1 * this._elWidth}px)`;
+                animationCss = `translateX(${opts.direction === "left" ? -1 * this._elWidth : 0}px)`;
+            } else if (opts.startVisible) {
+                // This loop moves the marquee out of the container
+                if (this._loopCount === 2) {
+                    // Adjust the css3 animation as well
+                    this._animStr = this._animationStr(this._animName, opts.duration / 1000, opts.delayBeforeStart / 1000);
+                    animationCss = `translateX(${opts.direction === "left" ? -1 * this._elWidth : this._contWidth}px)`;
+                    this._loopCount++;
+                } else if (this._loopCount === 3) {
+                    // Adjust the animation
+                    this._animName = `${this._animName}0`;
+                    this._animStr = this._animationStr(this._animName, opts.duration / 1000, 0, "infinite");
+                    this._repositionHor();
+                }
+            } else {
+                this._repositionHor();
+                animationCss = `translateX(${opts.direction === "left" ? -1 * this._elWidth : this._contWidth}px)`;
+            }
+        }
+        // fire event
+        this.el.dispatchEvent(new CustomEvent("beforeStarting"));
+        // Append animation
+        this._marqWrap.style.animation = this._animStr;
+        const keyFrameCss = `@keyframes ${this._animName} {
+        100% {
+          transform: ${animationCss};
+        }
+      }`, styles = queryAll("style", this._marqWrap);
+        if (styles.length) styles[styles.length - 1].innerHTML = keyFrameCss;
+        else if (byClass(`marq-wrap-style-${this._instance}`).length) byClass(`marq-wrap-style-${this._instance}`)[0].innerHTML = keyFrameCss;
+        else {
+            const styleEl = document.createElement("style");
+            addClass(styleEl, `marq-wrap-style-${this._instance}`);
+            styleEl.innerHTML = keyFrameCss;
+            query("head").appendChild(styleEl);
+        }
+        // Animation iteration event
+        addEvent(this._marqWrap, "animationiteration", this._animIter.bind(this), {
+            once: true
+        });
+        // Animation stopped
+        addEvent(this._marqWrap, "animationend", this._animEnd.bind(this), {
+            once: true
+        });
+        this._status = "running";
+        setAttr(this.el, "data-runningStatus", "resumed");
+    }
+    /**
+   * Event fired on Animation iteration
+   *
+   * @private
+   */ _animIter() {
+        this.el.dispatchEvent(new CustomEvent("finished"));
+    }
+    /**
+   * Reposition the Wrapper vertically
+   *
+   * @private
+   */ _repositionVert() {
+        this._marqWrap.style.transform = `translateY(${this._opts.direction === "up" ? this._contHeight : this._elHeight * -1}px)`;
+    }
+    /**
+   * Reposition the Wrapper horizontally
+   *
+   * @private
+   */ _repositionHor() {
+        this._marqWrap.style.transform = `translateX(${this._opts.direction === "left" ? this._contWidth : this._elWidth * -1}px)`;
+    }
+    /**
+   * Calculates the speed and the dimension of the marquee
+   *
+   * @private
+   */ _calcSizes() {
+        const el = this.el, opts = this._opts;
+        // If direction is up or down, get the height of main element
+        if (this._vertical) {
+            const contHeight = el.clientHeight;
+            this._contHeight = contHeight;
+            remAttr(this._marqWrap, "style");
+            el.style.clientHeight = `${contHeight}px`;
+            const marqs = byClass("js-marquee", el), marqNums = marqs.length - 1;
+            // Change the CSS for js-marquee element
+            forEachHTML(marqs, (currEl, ind)=>{
+                currEl.style.float = "none";
+                currEl.style.marginRight = "0px";
+                // Remove bottom margin from 2nd element if duplicated
+                if (opts.duplicated && ind === marqNums) currEl.style.marginBottom = "0px";
+                else currEl.style.marginBottom = `${opts.gap}px`;
+            });
+            const elHeight = parseInt(marqs[0].clientHeight + opts.gap);
+            this._elHeight = elHeight;
+            // adjust the animation duration according to the text length
+            if (opts.startVisible && !opts.duplicated) {
+                // Compute the complete animation duration and save it for later reference
+                // formula is to: (Height of the text node + height of the main container / Height of the main container) * duration;
+                this._completeDuration = (elHeight + contHeight) / parseInt(contHeight) * this._duration; // eslint-disable-line max-len
+                opts.duration = elHeight / parseInt(contHeight) * this._duration;
+            } else opts.duration = elHeight / parseInt(contHeight) / parseInt(contHeight) * this._duration;
+        } else {
+            // Save the width of the each element so we can use it in animation
+            const elWidth = parseInt(byClass("js-marquee", el)[0].clientWidth + opts.gap), contWidth = el.clientWidth;
+            this._contWidth = contWidth;
+            this._elWidth = elWidth;
+            // adjust the animation duration according to the text length
+            if (opts.startVisible && !opts.duplicated) {
+                // Compute the complete animation duration and save it for later reference
+                // formula is to: (Width of the text node + width of the main container / Width of the main container) * duration;
+                this._completeDuration = (elWidth + contWidth) / parseInt(contWidth) * this._duration;
+                // (Width of the text node / width of the main container) * duration
+                opts.duration = elWidth / parseInt(contWidth) * this._duration;
+            } else opts.duration = (elWidth + parseInt(contWidth)) / parseInt(contWidth) * this._duration; // eslint-disable-line max-len
+        }
+        // if duplicated then reduce the duration
+        if (opts.duplicated) opts.duration = opts.duration / 2;
+    }
+    /**
+   * Recalculates the dimensions and positon of the marquee on page resize
+   *
+   * @private
+   */ _recalcResize() {
+        this._calcSizes();
+        this._loopCount = 2;
+        this._animEnd();
+    }
+    /**
+   * Pause the animation
+   */ pause() {
+        this._marqWrap.style.animationPlayState = "paused";
+        this._status = "paused";
+        setAttr(this.el, "data-runningStatus", "paused");
+        this.el.dispatchEvent(new CustomEvent("paused"));
+    }
+    /**
+   * Resume the animation
+   */ resume() {
+        this._marqWrap.style.animationPlayState = "running";
+        this._status = "running";
+        setAttr(this.el, "data-runningStatus", "resumed");
+        this.el.dispatchEvent(new CustomEvent("resumed"));
+    }
+    /**
+   * Toggle animation playing status
+   */ toggle() {
+        if (this._status === "paused") this.resume();
+        else if (this._status === "running") this.pause();
+    }
+    /**
+   * Destorys the instance and removes events
+   */ destroy() {
+        removeEvent(this.el, "pause", this.pause.bind(this));
+        removeEvent(this.el, "resume", this.resume.bind(this));
+        if (this._opts.pauseOnHover) {
+            removeEvent(this.el, "mouseover", this.pause.bind(this));
+            removeEvent(this.el, "mouseout", this.resume.bind(this));
+        }
+        removeEvent(this._marqWrap, "animationiteration", this._animIter.bind(this), {
+            once: true
+        });
+        removeEvent(this._marqWrap, "animationend", this._animEnd.bind(this), {
+            once: true
+        });
+        if (this._opts.recalcResize) removeEvent(window, "resize", this._recalcResize.bind(this));
+    }
+    /**
+   * Forces a refresh (like recalcResize) but done manually
+   */ refresh() {
+        this._recalcResize();
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1vUc0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "formEntry", ()=>formEntry);
+const formEntry = (data)=>{
+    // Success entry
+    document.addEventListener("wpcf7mailsent", function(event) {
+        var obj = event.detail.inputs;
+        var result = Object.keys(obj).map((key)=>[
+                Number(key),
+                obj[key]
+            ]);
+        console.log("inputs = ", result);
+        saveSuccessEntry(obj);
+    }, false);
+    async function saveSuccessEntry(inputsData) {
+        let inputData = inputsData;
+        let data = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(inputData)
+        };
+        let response = await fetch(ajax_url.ajaxurl + "?action=form_entry_sucess", data);
+    // let serverResponse = await response.text();
+    }
+    //   Fail Entry
+    document.addEventListener("wpcf7mailfailed", function(event) {
+        var obj = event.detail.inputs;
+        var result = Object.keys(obj).map((key)=>[
+                Number(key),
+                obj[key]
+            ]);
+        saveFailEntry(obj);
+    }, false);
+    async function saveFailEntry(inputsData) {
+        let inputData = inputsData;
+        let data = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify(inputData)
+        };
+        let response = await fetch(ajax_url.ajaxurl + "?action=form_entry_fail", data);
+    // let serverResponse = await response.text();
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9maqa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "hoverOnButton", ()=>hoverOnButton);
+var _utils = require("./utils");
+const hoverOnButton = ()=>{
+    let constBtns = (0, _utils.getElements)(".btn.no-text");
+    if ((0, _utils.ifSelectorExist)(constBtns) && constBtns.length > 0) Array.from(constBtns).forEach((item)=>{
+        item.addEventListener("mouseover", ()=>{
+            let btnFadeIn = item.querySelector(".btn-fade-in");
+            if ((0, _utils.ifSelectorExist)(btnFadeIn)) {
+                btnFadeIn.classList.add("opacity-100");
+                btnFadeIn.classList.remove("opacity-0");
+                btnFadeIn.style.width = "28px";
+                btnFadeIn.style.marginLeft = "8px";
+            }
+        });
+        item.addEventListener("mouseout", ()=>{
+            let btnFadeIn = item.querySelector(".btn-fade-in");
+            if ((0, _utils.ifSelectorExist)(btnFadeIn)) {
+                btnFadeIn.classList.remove("opacity-100");
+                btnFadeIn.classList.add("opacity-0");
+                btnFadeIn.style.width = "0px";
+                btnFadeIn.style.marginLeft = "0px";
+            }
+        });
+    });
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dp06E":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "tocAnchor", ()=>tocAnchor);
+var _utils = require("./utils");
+const tocAnchor = ()=>{
+    let tocLinks = (0, _utils.getElements)(".table_of_content a");
+    if ((0, _utils.ifSelectorExist)(tocLinks)) Array.from(tocLinks).forEach((item)=>{
+        item.addEventListener("click", (e)=>{
+            e.preventDefault();
+            const selector = item.getAttribute("href");
+            const selectorItem = (0, _utils.getElement)(selector);
+            selectorItem.style.backgroundColor = "#e3e3e3";
+            selectorItem.style.transition = "0.5s all";
+            setTimeout(()=>{
+                selectorItem.style.backgroundColor = "transparent";
+            }, 700);
+            window.scrollTo({
+                top: document.querySelector(selector).offsetTop - document.querySelector("header").offsetHeight,
+                behavior: "smooth"
+            });
+        });
+    });
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bvTDu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "gclid", ()=>gclid);
+var _utils = require("./utils");
+const gclid = ()=>{
+    function getParam(p) {
+        var match = RegExp("[?&]" + p + "=([^&]*)").exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+    }
+    function getExpiryRecord(value) {
+        var expiryPeriod = 7776000000; // 90 days
+        var expiryDate = new Date().getTime() + expiryPeriod;
+        return {
+            value: value,
+            expiryDate: expiryDate
+        };
+    }
+    function addGclid() {
+        var gclidParam = getParam("gclid");
+        var gclidRecord = null;
+        var gclsrcParam = getParam("gclsrc");
+        var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf("aw") !== -1;
+        if (gclidParam && isGclsrcValid) {
+            gclidRecord = getExpiryRecord(gclidParam);
+            localStorage.setItem("gclid", JSON.stringify(gclidRecord));
+        }
+        var gclid = gclidRecord || JSON.parse(localStorage.getItem("gclid"));
+        var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+        if (isGclidValid) {
+            let formsSelector = (0, _utils.getElements)(".wpcf7-form");
+            if ((0, _utils.ifSelectorExist)(formsSelector)) Array.from(formsSelector).forEach((item)=>{
+                let itemSelector1 = (0, _utils.getElement)(".gclid_field", item);
+                if ((0, _utils.ifSelectorExist)(itemSelector1)) itemSelector1.value = gclid.value;
+                let itemSelector2 = (0, _utils.getElement)(".clixsy", item);
+                if ((0, _utils.ifSelectorExist)(itemSelector2)) itemSelector2.value = gclid.value;
+            });
+        }
+    }
+    window.addEventListener("load", addGclid);
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9IJ1s":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "sentNewMessage", ()=>sentNewMessage);
+var _utils = require("./utils");
+const sentNewMessage = (formContainerSelector)=>{
+    if ((0, _utils.ifSelectorExist)(document.querySelector(formContainerSelector))) {
+        let submitButton = (0, _utils.getElement)("button", document.querySelector(formContainerSelector));
+        submitButton.addEventListener("click", ()=>{
+            document.addEventListener("wpcf7mailsent", function(event) {
+                let contactSucessSelector = (0, _utils.getElement)(".contacts__success", document.querySelector(formContainerSelector));
+                let formSelector = event.target;
+                let disclaimerSelector = (0, _utils.getElement)(".disclaimer", document.querySelector(formContainerSelector));
+                let formResponseOutputSelector = (0, _utils.getElement)(".wpcf7-response-output", document.querySelector(formContainerSelector));
+                if (contactSucessSelector !== null && contactSucessSelector !== undefined) {
+                    contactSucessSelector.style.display = "flex";
+                    formSelector.style.display = "none";
+                    formResponseOutputSelector.classList.toggle("hidden");
+                    if ((0, _utils.ifSelectorExist)(disclaimerSelector)) disclaimerSelector.classList.add("hidden");
+                }
+            }, false);
+            const wpcf7Elm = document.querySelector(".wpcf7");
+            wpcf7Elm.addEventListener("wpcf7submit", function(event) {
+                let acceptanceCheckbox = (0, _utils.getElement)(".wpcf7-acceptance input", document.querySelector(formContainerSelector));
+                let acceptanceParent = (0, _utils.getElement)(".wpcf7-acceptance", document.querySelector(formContainerSelector));
+                let disclaimerSelector = (0, _utils.getElement)(".disclaimer", document.querySelector(formContainerSelector));
+                if ((0, _utils.ifSelectorExist)(acceptanceCheckbox)) {
+                    if (!acceptanceCheckbox.checked) {
+                        acceptanceParent.classList.add("acceptance-required");
+                        if ((0, _utils.ifSelectorExist)(disclaimerSelector)) disclaimerSelector.classList.remove("hidden");
+                    } else {
+                        acceptanceParent.classList.remove("acceptance-required");
+                        if ((0, _utils.ifSelectorExist)(disclaimerSelector)) disclaimerSelector.classList.add("hidden");
+                    }
+                }
+            }, false);
+            let acceptanceParent = (0, _utils.getElement)(".wpcf7-acceptance", document.querySelector(formContainerSelector));
+            if ((0, _utils.ifSelectorExist)(acceptanceParent)) acceptanceParent.addEventListener("click", ()=>{
+                acceptanceParent.classList.remove("acceptance-required");
+            });
+            let sentNewButtonSelector = (0, _utils.getElement)(".reset-form", document.querySelector(formContainerSelector));
+            if ((0, _utils.ifSelectorExist)(sentNewButtonSelector)) sentNewButtonSelector.addEventListener("click", ()=>{
+                let contactSucessSelector = (0, _utils.getElement)(".contacts__success", document.querySelector(formContainerSelector));
+                let formSelector = (0, _utils.getElement)(".wpcf7-form", document.querySelector(formContainerSelector));
+                let disclaimerSelector = (0, _utils.getElement)(".disclaimer", document.querySelector(formContainerSelector));
+                if ((0, _utils.ifSelectorExist)(disclaimerSelector)) disclaimerSelector.classList.toggle("hidden");
+                let formResponseOutputSelector = (0, _utils.getElement)(".wpcf7-response-output", document.querySelector(formContainerSelector));
+                if ((0, _utils.ifSelectorExist)(formResponseOutputSelector)) formResponseOutputSelector.classList.add("hidden");
+                if ((0, _utils.ifSelectorExist)(contactSucessSelector)) (0, _utils.slideUp)(contactSucessSelector);
+                if ((0, _utils.ifSelectorExist)(formSelector)) (0, _utils.slideDown)(formSelector);
+            });
+        });
+    }
+    // Redirect after form submit
+    document.addEventListener("wpcf7mailsent", function(event) {
+        // Function to handle form submission
+        function handleFormSubmission(formId) {
+            // Loop through the array to find a match
+            for(var i = 0; i < cf7RedirectToArray.length; i++)if (cf7RedirectToArray[i].select_form === formId) {
+                // Redirect to the corresponding link
+                window.location.href = cf7RedirectToArray[i].link_to_redirect_after_submit;
+                break; // Exit the loop once a match is found
+            }
+        }
+        var formId = event.detail.contactFormId;
+        handleFormSubmission(formId);
+    }, false);
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3V3c2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "aosAnimations", ()=>aosAnimations);
+var _aos = require("aos");
+var _aosDefault = parcelHelpers.interopDefault(_aos);
+const aosAnimations = ()=>{
+    (0, _aosDefault.default).init({
+        disable: false,
+        startEvent: "DOMContentLoaded",
+        initClassName: "aos-init",
+        animatedClassName: "aos-animate",
+        useClassNames: false,
+        disableMutationObserver: false,
+        debounceDelay: 50,
+        throttleDelay: 99,
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120,
+        delay: 500,
+        duration: 400,
+        easing: "ease",
+        once: false,
+        mirror: false,
+        anchorPlacement: "top-bottom"
+    });
+};
+
+},{"aos":"eRzTM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eRzTM":[function(require,module,exports) {
+var global = arguments[3];
+!function(e, t) {
+    module.exports = t();
+}(this, function() {
+    "use strict";
+    var e = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {}, t = "Expected a function", n = NaN, o = "[object Symbol]", i = /^\s+|\s+$/g, a = /^[-+]0x[0-9a-f]+$/i, r = /^0b[01]+$/i, c = /^0o[0-7]+$/i, s = parseInt, u = "object" == typeof e && e && e.Object === Object && e, d = "object" == typeof self && self && self.Object === Object && self, l = u || d || Function("return this")(), f = Object.prototype.toString, m = Math.max, p = Math.min, b = function() {
+        return l.Date.now();
+    };
+    function v(e, n, o) {
+        var i, a, r, c, s, u, d = 0, l = !1, f = !1, v = !0;
+        if ("function" != typeof e) throw new TypeError(t);
+        function y(t) {
+            var n = i, o = a;
+            return i = a = void 0, d = t, c = e.apply(o, n);
+        }
+        function h(e) {
+            var t = e - u;
+            return void 0 === u || t >= n || t < 0 || f && e - d >= r;
+        }
+        function k() {
+            var e = b();
+            if (h(e)) return x(e);
+            s = setTimeout(k, function(e) {
+                var t = n - (e - u);
+                return f ? p(t, r - (e - d)) : t;
+            }(e));
+        }
+        function x(e) {
+            return s = void 0, v && i ? y(e) : (i = a = void 0, c);
+        }
+        function O() {
+            var e = b(), t = h(e);
+            if (i = arguments, a = this, u = e, t) {
+                if (void 0 === s) return function(e) {
+                    return d = e, s = setTimeout(k, n), l ? y(e) : c;
+                }(u);
+                if (f) return s = setTimeout(k, n), y(u);
+            }
+            return void 0 === s && (s = setTimeout(k, n)), c;
+        }
+        return n = w(n) || 0, g(o) && (l = !!o.leading, r = (f = "maxWait" in o) ? m(w(o.maxWait) || 0, n) : r, v = "trailing" in o ? !!o.trailing : v), O.cancel = function() {
+            void 0 !== s && clearTimeout(s), d = 0, i = u = a = s = void 0;
+        }, O.flush = function() {
+            return void 0 === s ? c : x(b());
+        }, O;
+    }
+    function g(e) {
+        var t = typeof e;
+        return !!e && ("object" == t || "function" == t);
+    }
+    function w(e) {
+        if ("number" == typeof e) return e;
+        if (function(e) {
+            return "symbol" == typeof e || function(e) {
+                return !!e && "object" == typeof e;
+            }(e) && f.call(e) == o;
+        }(e)) return n;
+        if (g(e)) {
+            var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+            e = g(t) ? t + "" : t;
+        }
+        if ("string" != typeof e) return 0 === e ? e : +e;
+        e = e.replace(i, "");
+        var u = r.test(e);
+        return u || c.test(e) ? s(e.slice(2), u ? 2 : 8) : a.test(e) ? n : +e;
+    }
+    var y = function(e, n, o) {
+        var i = !0, a = !0;
+        if ("function" != typeof e) throw new TypeError(t);
+        return g(o) && (i = "leading" in o ? !!o.leading : i, a = "trailing" in o ? !!o.trailing : a), v(e, n, {
+            leading: i,
+            maxWait: n,
+            trailing: a
+        });
+    }, h = "Expected a function", k = NaN, x = "[object Symbol]", O = /^\s+|\s+$/g, j = /^[-+]0x[0-9a-f]+$/i, E = /^0b[01]+$/i, N = /^0o[0-7]+$/i, z = parseInt, C = "object" == typeof e && e && e.Object === Object && e, A = "object" == typeof self && self && self.Object === Object && self, q = C || A || Function("return this")(), L = Object.prototype.toString, T = Math.max, M = Math.min, S = function() {
+        return q.Date.now();
+    };
+    function D(e) {
+        var t = typeof e;
+        return !!e && ("object" == t || "function" == t);
+    }
+    function H(e) {
+        if ("number" == typeof e) return e;
+        if (function(e) {
+            return "symbol" == typeof e || function(e) {
+                return !!e && "object" == typeof e;
+            }(e) && L.call(e) == x;
+        }(e)) return k;
+        if (D(e)) {
+            var t = "function" == typeof e.valueOf ? e.valueOf() : e;
+            e = D(t) ? t + "" : t;
+        }
+        if ("string" != typeof e) return 0 === e ? e : +e;
+        e = e.replace(O, "");
+        var n = E.test(e);
+        return n || N.test(e) ? z(e.slice(2), n ? 2 : 8) : j.test(e) ? k : +e;
+    }
+    var $ = function(e, t, n) {
+        var o, i, a, r, c, s, u = 0, d = !1, l = !1, f = !0;
+        if ("function" != typeof e) throw new TypeError(h);
+        function m(t) {
+            var n = o, a = i;
+            return o = i = void 0, u = t, r = e.apply(a, n);
+        }
+        function p(e) {
+            var n = e - s;
+            return void 0 === s || n >= t || n < 0 || l && e - u >= a;
+        }
+        function b() {
+            var e = S();
+            if (p(e)) return v(e);
+            c = setTimeout(b, function(e) {
+                var n = t - (e - s);
+                return l ? M(n, a - (e - u)) : n;
+            }(e));
+        }
+        function v(e) {
+            return c = void 0, f && o ? m(e) : (o = i = void 0, r);
+        }
+        function g() {
+            var e = S(), n = p(e);
+            if (o = arguments, i = this, s = e, n) {
+                if (void 0 === c) return function(e) {
+                    return u = e, c = setTimeout(b, t), d ? m(e) : r;
+                }(s);
+                if (l) return c = setTimeout(b, t), m(s);
+            }
+            return void 0 === c && (c = setTimeout(b, t)), r;
+        }
+        return t = H(t) || 0, D(n) && (d = !!n.leading, a = (l = "maxWait" in n) ? T(H(n.maxWait) || 0, t) : a, f = "trailing" in n ? !!n.trailing : f), g.cancel = function() {
+            void 0 !== c && clearTimeout(c), u = 0, o = s = i = c = void 0;
+        }, g.flush = function() {
+            return void 0 === c ? r : v(S());
+        }, g;
+    }, W = function() {};
+    function P(e) {
+        e && e.forEach(function(e) {
+            var t = Array.prototype.slice.call(e.addedNodes), n = Array.prototype.slice.call(e.removedNodes);
+            if (function e(t) {
+                var n = void 0, o = void 0;
+                for(n = 0; n < t.length; n += 1){
+                    if ((o = t[n]).dataset && o.dataset.aos) return !0;
+                    if (o.children && e(o.children)) return !0;
+                }
+                return !1;
+            }(t.concat(n))) return W();
+        });
+    }
+    function Y() {
+        return window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+    }
+    var _ = {
+        isSupported: function() {
+            return !!Y();
+        },
+        ready: function(e, t) {
+            var n = window.document, o = new (Y())(P);
+            W = t, o.observe(n.documentElement, {
+                childList: !0,
+                subtree: !0,
+                removedNodes: !0
+            });
+        }
+    }, B = function(e, t) {
+        if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+    }, F = function() {
+        function e(e, t) {
+            for(var n = 0; n < t.length; n++){
+                var o = t[n];
+                o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, o.key, o);
+            }
+        }
+        return function(t, n, o) {
+            return n && e(t.prototype, n), o && e(t, o), t;
+        };
+    }(), I = Object.assign || function(e) {
+        for(var t = 1; t < arguments.length; t++){
+            var n = arguments[t];
+            for(var o in n)Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+        }
+        return e;
+    }, K = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i, G = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, J = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i, Q = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i;
+    function R() {
+        return navigator.userAgent || navigator.vendor || window.opera || "";
+    }
+    var U = new (function() {
+        function e() {
+            B(this, e);
+        }
+        return F(e, [
+            {
+                key: "phone",
+                value: function() {
+                    var e = R();
+                    return !(!K.test(e) && !G.test(e.substr(0, 4)));
+                }
+            },
+            {
+                key: "mobile",
+                value: function() {
+                    var e = R();
+                    return !(!J.test(e) && !Q.test(e.substr(0, 4)));
+                }
+            },
+            {
+                key: "tablet",
+                value: function() {
+                    return this.mobile() && !this.phone();
+                }
+            },
+            {
+                key: "ie11",
+                value: function() {
+                    return "-ms-scroll-limit" in document.documentElement.style && "-ms-ime-align" in document.documentElement.style;
+                }
+            }
+        ]), e;
+    }()), V = function(e, t) {
+        var n = void 0;
+        return U.ie11() ? (n = document.createEvent("CustomEvent")).initCustomEvent(e, !0, !0, {
+            detail: t
+        }) : n = new CustomEvent(e, {
+            detail: t
+        }), document.dispatchEvent(n);
+    }, X = function(e) {
+        return e.forEach(function(e, t) {
+            return function(e, t) {
+                var n = e.options, o = e.position, i = e.node, a = (e.data, function() {
+                    e.animated && (function(e, t) {
+                        t && t.forEach(function(t) {
+                            return e.classList.remove(t);
+                        });
+                    }(i, n.animatedClassNames), V("aos:out", i), e.options.id && V("aos:in:" + e.options.id, i), e.animated = !1);
+                });
+                n.mirror && t >= o.out && !n.once ? a() : t >= o.in ? e.animated || (function(e, t) {
+                    t && t.forEach(function(t) {
+                        return e.classList.add(t);
+                    });
+                }(i, n.animatedClassNames), V("aos:in", i), e.options.id && V("aos:in:" + e.options.id, i), e.animated = !0) : e.animated && !n.once && a();
+            }(e, window.pageYOffset);
+        });
+    }, Z = function(e) {
+        for(var t = 0, n = 0; e && !isNaN(e.offsetLeft) && !isNaN(e.offsetTop);)t += e.offsetLeft - ("BODY" != e.tagName ? e.scrollLeft : 0), n += e.offsetTop - ("BODY" != e.tagName ? e.scrollTop : 0), e = e.offsetParent;
+        return {
+            top: n,
+            left: t
+        };
+    }, ee = function(e, t, n) {
+        var o = e.getAttribute("data-aos-" + t);
+        if (void 0 !== o) {
+            if ("true" === o) return !0;
+            if ("false" === o) return !1;
+        }
+        return o || n;
+    }, te = function(e, t) {
+        return e.forEach(function(e, n) {
+            var o = ee(e.node, "mirror", t.mirror), i = ee(e.node, "once", t.once), a = ee(e.node, "id"), r = t.useClassNames && e.node.getAttribute("data-aos"), c = [
+                t.animatedClassName
+            ].concat(r ? r.split(" ") : []).filter(function(e) {
+                return "string" == typeof e;
+            });
+            t.initClassName && e.node.classList.add(t.initClassName), e.position = {
+                in: function(e, t, n) {
+                    var o = window.innerHeight, i = ee(e, "anchor"), a = ee(e, "anchor-placement"), r = Number(ee(e, "offset", a ? 0 : t)), c = a || n, s = e;
+                    i && document.querySelectorAll(i) && (s = document.querySelectorAll(i)[0]);
+                    var u = Z(s).top - o;
+                    switch(c){
+                        case "top-bottom":
+                            break;
+                        case "center-bottom":
+                            u += s.offsetHeight / 2;
+                            break;
+                        case "bottom-bottom":
+                            u += s.offsetHeight;
+                            break;
+                        case "top-center":
+                            u += o / 2;
+                            break;
+                        case "center-center":
+                            u += o / 2 + s.offsetHeight / 2;
+                            break;
+                        case "bottom-center":
+                            u += o / 2 + s.offsetHeight;
+                            break;
+                        case "top-top":
+                            u += o;
+                            break;
+                        case "bottom-top":
+                            u += o + s.offsetHeight;
+                            break;
+                        case "center-top":
+                            u += o + s.offsetHeight / 2;
+                    }
+                    return u + r;
+                }(e.node, t.offset, t.anchorPlacement),
+                out: o && function(e, t) {
+                    window.innerHeight;
+                    var n = ee(e, "anchor"), o = ee(e, "offset", t), i = e;
+                    return n && document.querySelectorAll(n) && (i = document.querySelectorAll(n)[0]), Z(i).top + i.offsetHeight - o;
+                }(e.node, t.offset)
+            }, e.options = {
+                once: i,
+                mirror: o,
+                animatedClassNames: c,
+                id: a
+            };
+        }), e;
+    }, ne = function() {
+        var e = document.querySelectorAll("[data-aos]");
+        return Array.prototype.map.call(e, function(e) {
+            return {
+                node: e
+            };
+        });
+    }, oe = [], ie = !1, ae = {
+        offset: 120,
+        delay: 0,
+        easing: "ease",
+        duration: 400,
+        disable: !1,
+        once: !1,
+        mirror: !1,
+        anchorPlacement: "top-bottom",
+        startEvent: "DOMContentLoaded",
+        animatedClassName: "aos-animate",
+        initClassName: "aos-init",
+        useClassNames: !1,
+        disableMutationObserver: !1,
+        throttleDelay: 99,
+        debounceDelay: 50
+    }, re = function() {
+        return document.all && !window.atob;
+    }, ce = function() {
+        arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ie = !0), ie && (oe = te(oe, ae), X(oe), window.addEventListener("scroll", y(function() {
+            X(oe, ae.once);
+        }, ae.throttleDelay)));
+    }, se = function() {
+        if (oe = ne(), de(ae.disable) || re()) return ue();
+        ce();
+    }, ue = function() {
+        oe.forEach(function(e, t) {
+            e.node.removeAttribute("data-aos"), e.node.removeAttribute("data-aos-easing"), e.node.removeAttribute("data-aos-duration"), e.node.removeAttribute("data-aos-delay"), ae.initClassName && e.node.classList.remove(ae.initClassName), ae.animatedClassName && e.node.classList.remove(ae.animatedClassName);
+        });
+    }, de = function(e) {
+        return !0 === e || "mobile" === e && U.mobile() || "phone" === e && U.phone() || "tablet" === e && U.tablet() || "function" == typeof e && !0 === e();
+    };
+    return {
+        init: function(e) {
+            return ae = I(ae, e), oe = ne(), ae.disableMutationObserver || _.isSupported() || (console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '), ae.disableMutationObserver = !0), ae.disableMutationObserver || _.ready("[data-aos]", se), de(ae.disable) || re() ? ue() : (document.querySelector("body").setAttribute("data-aos-easing", ae.easing), document.querySelector("body").setAttribute("data-aos-duration", ae.duration), document.querySelector("body").setAttribute("data-aos-delay", ae.delay), -1 === [
+                "DOMContentLoaded",
+                "load"
+            ].indexOf(ae.startEvent) ? document.addEventListener(ae.startEvent, function() {
+                ce(!0);
+            }) : window.addEventListener("load", function() {
+                ce(!0);
+            }), "DOMContentLoaded" === ae.startEvent && [
+                "complete",
+                "interactive"
+            ].indexOf(document.readyState) > -1 && ce(!0), window.addEventListener("resize", $(ce, ae.debounceDelay, !0)), window.addEventListener("orientationchange", $(ce, ae.debounceDelay, !0)), oe);
+        },
+        refresh: ce,
+        refreshHard: se
+    };
+});
+
+},{}],"adhDo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "smoothScrollFn", ()=>smoothScrollFn);
+const smoothScrollFn = ()=>{
+    //
+    // SmoothScroll for websites v1.4.10 (Balazs Galambosi)
+    // http://www.smoothscroll.net/
+    //
+    // Licensed under the terms of the MIT license.
+    //
+    // You may use it in your theme if you credit me.
+    // It is also free to use on any individual website.
+    //
+    // Exception:
+    // The only restriction is to not publish any
+    // extension for browsers or native application
+    // without getting a written permission first.
+    //
+    (function() {
+        // Scroll Variables (tweakable)
+        var defaultOptions = {
+            // Scrolling Core
+            frameRate: 150,
+            animationTime: 800,
+            stepSize: 90,
+            // Pulse (less tweakable)
+            // ratio of "tail" to "acceleration"
+            pulseAlgorithm: true,
+            pulseScale: 4,
+            pulseNormalize: 1,
+            // Acceleration
+            accelerationDelta: 50,
+            accelerationMax: 3,
+            // Keyboard Settings
+            keyboardSupport: true,
+            arrowScroll: 50,
+            // Other
+            fixedBackground: true,
+            excluded: ""
+        };
+        var options = defaultOptions;
+        // Other Variables
+        var isExcluded = false;
+        var isFrame = false;
+        var direction = {
+            x: 0,
+            y: 0
+        };
+        var initDone = false;
+        var root = document.documentElement;
+        var activeElement;
+        var observer;
+        var refreshSize;
+        var deltaBuffer = [];
+        var deltaBufferTimer;
+        var isMac = /^Mac/.test(navigator.platform);
+        var key = {
+            left: 37,
+            up: 38,
+            right: 39,
+            down: 40,
+            spacebar: 32,
+            pageup: 33,
+            pagedown: 34,
+            end: 35,
+            home: 36
+        };
+        var arrowKeys = {
+            37: 1,
+            38: 1,
+            39: 1,
+            40: 1
+        };
+        /***********************************************
+     * INITIALIZE
+     ***********************************************/ /**
+     * Tests if smooth scrolling is allowed. Shuts down everything if not.
+     */ function initTest() {
+            if (options.keyboardSupport) addEvent("keydown", keydown);
+        }
+        /**
+     * Sets up scrolls array, determines if frames are involved.
+     */ function init() {
+            if (initDone || !document.body) return;
+            initDone = true;
+            var body = document.body;
+            var html = document.documentElement;
+            var windowHeight = window.innerHeight;
+            var scrollHeight = body.scrollHeight;
+            // check compat mode for root element
+            root = document.compatMode.indexOf("CSS") >= 0 ? html : body;
+            activeElement = body;
+            initTest();
+            // Checks if this script is running in a frame
+            if (top != self) isFrame = true;
+            else if (isOldSafari && scrollHeight > windowHeight && (body.offsetHeight <= windowHeight || html.offsetHeight <= windowHeight)) {
+                /**
+       * Safari 10 fixed it, Chrome fixed it in v45:
+       * This fixes a bug where the areas left and right to
+       * the content does not trigger the onmousewheel event
+       * on some pages. e.g.: html, body { height: 100% }
+       */ var fullPageElem = document.createElement("div");
+                fullPageElem.style.cssText = "position:absolute; z-index:-10000; top:0; left:0; right:0; height:" + root.scrollHeight + "px";
+                document.body.appendChild(fullPageElem);
+                // DOM changed (throttled) to fix height
+                var pendingRefresh;
+                refreshSize = function() {
+                    if (pendingRefresh) return; // could also be: clearTimeout(pendingRefresh);
+                    pendingRefresh = setTimeout(function() {
+                        if (isExcluded) return; // could be running after cleanup
+                        fullPageElem.style.height = "0";
+                        fullPageElem.style.height = root.scrollHeight + "px";
+                        pendingRefresh = null;
+                    }, 500); // act rarely to stay fast
+                };
+                setTimeout(refreshSize, 10);
+                addEvent("resize", refreshSize);
+                // TODO: attributeFilter?
+                var config = {
+                    attributes: true,
+                    childList: true,
+                    characterData: false
+                };
+                observer = new MutationObserver(refreshSize);
+                observer.observe(body, config);
+                if (root.offsetHeight <= windowHeight) {
+                    var clearfix = document.createElement("div");
+                    clearfix.style.clear = "both";
+                    body.appendChild(clearfix);
+                }
+            }
+            // disable fixed background
+            if (!options.fixedBackground && !isExcluded) {
+                body.style.backgroundAttachment = "scroll";
+                html.style.backgroundAttachment = "scroll";
+            }
+        }
+        /**
+     * Removes event listeners and other traces left on the page.
+     */ function cleanup() {
+            observer && observer.disconnect();
+            removeEvent(wheelEvent, wheel);
+            removeEvent("mousedown", mousedown);
+            removeEvent("keydown", keydown);
+            removeEvent("resize", refreshSize);
+            removeEvent("load", init);
+        }
+        /************************************************
+     * SCROLLING
+     ************************************************/ var que = [];
+        var pending = false;
+        var lastScroll = Date.now();
+        /**
+     * Pushes scroll actions to the scrolling queue.
+     */ function scrollArray(elem, left, top1) {
+            directionCheck(left, top1);
+            if (options.accelerationMax != 1) {
+                var now = Date.now();
+                var elapsed = now - lastScroll;
+                if (elapsed < options.accelerationDelta) {
+                    var factor = (1 + 50 / elapsed) / 2;
+                    if (factor > 1) {
+                        factor = Math.min(factor, options.accelerationMax);
+                        left *= factor;
+                        top1 *= factor;
+                    }
+                }
+                lastScroll = Date.now();
+            }
+            // push a scroll command
+            que.push({
+                x: left,
+                y: top1,
+                lastX: left < 0 ? 0.99 : -0.99,
+                lastY: top1 < 0 ? 0.99 : -0.99,
+                start: Date.now()
+            });
+            // don't act if there's a pending queue
+            if (pending) return;
+            var scrollRoot = getScrollRoot();
+            var isWindowScroll = elem === scrollRoot || elem === document.body;
+            // if we haven't already fixed the behavior,
+            // and it needs fixing for this sesh
+            if (elem.$scrollBehavior == null && isScrollBehaviorSmooth(elem)) {
+                elem.$scrollBehavior = elem.style.scrollBehavior;
+                elem.style.scrollBehavior = "auto";
+            }
+            var step = function(time) {
+                var now = Date.now();
+                var scrollX = 0;
+                var scrollY = 0;
+                for(var i = 0; i < que.length; i++){
+                    var item = que[i];
+                    var elapsed = now - item.start;
+                    var finished = elapsed >= options.animationTime;
+                    // scroll position: [0, 1]
+                    var position = finished ? 1 : elapsed / options.animationTime;
+                    // easing [optional]
+                    if (options.pulseAlgorithm) position = pulse(position);
+                    // only need the difference
+                    var x = item.x * position - item.lastX >> 0;
+                    var y = item.y * position - item.lastY >> 0;
+                    // add this to the total scrolling
+                    scrollX += x;
+                    scrollY += y;
+                    // update last values
+                    item.lastX += x;
+                    item.lastY += y;
+                    // delete and step back if it's over
+                    if (finished) {
+                        que.splice(i, 1);
+                        i--;
+                    }
+                }
+                // scroll left and top
+                if (isWindowScroll) window.scrollBy(scrollX, scrollY);
+                else {
+                    if (scrollX) elem.scrollLeft += scrollX;
+                    if (scrollY) elem.scrollTop += scrollY;
+                }
+                // clean up if there's nothing left to do
+                if (!left && !top1) que = [];
+                if (que.length) requestFrame(step, elem, 1000 / options.frameRate + 1);
+                else {
+                    pending = false;
+                    // restore default behavior at the end of scrolling sesh
+                    if (elem.$scrollBehavior != null) {
+                        elem.style.scrollBehavior = elem.$scrollBehavior;
+                        elem.$scrollBehavior = null;
+                    }
+                }
+            };
+            // start a new queue of actions
+            requestFrame(step, elem, 0);
+            pending = true;
+        }
+        /***********************************************
+     * EVENTS
+     ***********************************************/ /**
+     * Mouse wheel handler.
+     * @param {Object} event
+     */ function wheel(event) {
+            if (!initDone) init();
+            var target = event.target;
+            // leave early if default action is prevented
+            // or it's a zooming event with CTRL
+            if (event.defaultPrevented || event.ctrlKey) return true;
+            // leave embedded content alone (flash & pdf)
+            if (isNodeName(activeElement, "embed") || isNodeName(target, "embed") && /\.pdf/i.test(target.src) || isNodeName(activeElement, "object") || target.shadowRoot) return true;
+            var deltaX = -event.wheelDeltaX || event.deltaX || 0;
+            var deltaY = -event.wheelDeltaY || event.deltaY || 0;
+            if (isMac) {
+                if (event.wheelDeltaX && isDivisible(event.wheelDeltaX, 120)) deltaX = -120 * (event.wheelDeltaX / Math.abs(event.wheelDeltaX));
+                if (event.wheelDeltaY && isDivisible(event.wheelDeltaY, 120)) deltaY = -120 * (event.wheelDeltaY / Math.abs(event.wheelDeltaY));
+            }
+            // use wheelDelta if deltaX/Y is not available
+            if (!deltaX && !deltaY) deltaY = -event.wheelDelta || 0;
+            // line based scrolling (Firefox mostly)
+            if (event.deltaMode === 1) {
+                deltaX *= 40;
+                deltaY *= 40;
+            }
+            var overflowing = overflowingAncestor(target);
+            // nothing to do if there's no element that's scrollable
+            if (!overflowing) {
+                // except Chrome iframes seem to eat wheel events, which we need to
+                // propagate up, if the iframe has nothing overflowing to scroll
+                if (isFrame && isChrome) {
+                    // change target to iframe element itself for the parent frame
+                    Object.defineProperty(event, "target", {
+                        value: window.frameElement
+                    });
+                    return parent.wheel(event);
+                }
+                return true;
+            }
+            // check if it's a touchpad scroll that should be ignored
+            if (isTouchpad(deltaY)) return true;
+            // scale by step size
+            // delta is 120 most of the time
+            // synaptics seems to send 1 sometimes
+            if (Math.abs(deltaX) > 1.2) deltaX *= options.stepSize / 120;
+            if (Math.abs(deltaY) > 1.2) deltaY *= options.stepSize / 120;
+            scrollArray(overflowing, deltaX, deltaY);
+            event.preventDefault();
+            scheduleClearCache();
+        }
+        /**
+     * Keydown event handler.
+     * @param {Object} event
+     */ function keydown(event) {
+            var target = event.target;
+            var modifier = event.ctrlKey || event.altKey || event.metaKey || event.shiftKey && event.keyCode !== key.spacebar;
+            // our own tracked active element could've been removed from the DOM
+            if (!document.body.contains(activeElement)) activeElement = document.activeElement;
+            // do nothing if user is editing text
+            // or using a modifier key (except shift)
+            // or in a dropdown
+            // or inside interactive elements
+            var inputNodeNames = /^(textarea|select|embed|object)$/i;
+            var buttonTypes = /^(button|submit|radio|checkbox|file|color|image)$/i;
+            if (event.defaultPrevented || inputNodeNames.test(target.nodeName) || isNodeName(target, "input") && !buttonTypes.test(target.type) || isNodeName(activeElement, "video") || isInsideYoutubeVideo(event) || target.isContentEditable || modifier) return true;
+            // [spacebar] should trigger button press, leave it alone
+            if ((isNodeName(target, "button") || isNodeName(target, "input") && buttonTypes.test(target.type)) && event.keyCode === key.spacebar) return true;
+            // [arrwow keys] on radio buttons should be left alone
+            if (isNodeName(target, "input") && target.type == "radio" && arrowKeys[event.keyCode]) return true;
+            var shift, x = 0, y = 0;
+            var overflowing = overflowingAncestor(activeElement);
+            if (!overflowing) // Chrome iframes seem to eat key events, which we need to
+            // propagate up, if the iframe has nothing overflowing to scroll
+            return isFrame && isChrome ? parent.keydown(event) : true;
+            var clientHeight = overflowing.clientHeight;
+            if (overflowing == document.body) clientHeight = window.innerHeight;
+            switch(event.keyCode){
+                case key.up:
+                    y = -options.arrowScroll;
+                    break;
+                case key.down:
+                    y = options.arrowScroll;
+                    break;
+                case key.spacebar:
+                    shift = event.shiftKey ? 1 : -1;
+                    y = -shift * clientHeight * 0.9;
+                    break;
+                case key.pageup:
+                    y = -clientHeight * 0.9;
+                    break;
+                case key.pagedown:
+                    y = clientHeight * 0.9;
+                    break;
+                case key.home:
+                    if (overflowing == document.body && document.scrollingElement) overflowing = document.scrollingElement;
+                    y = -overflowing.scrollTop;
+                    break;
+                case key.end:
+                    var scroll = overflowing.scrollHeight - overflowing.scrollTop;
+                    var scrollRemaining = scroll - clientHeight;
+                    y = scrollRemaining > 0 ? scrollRemaining + 10 : 0;
+                    break;
+                case key.left:
+                    x = -options.arrowScroll;
+                    break;
+                case key.right:
+                    x = options.arrowScroll;
+                    break;
+                default:
+                    return true; // a key we don't care about
+            }
+            scrollArray(overflowing, x, y);
+            event.preventDefault();
+            scheduleClearCache();
+        }
+        /**
+     * Mousedown event only for updating activeElement
+     */ function mousedown(event) {
+            activeElement = event.target;
+        }
+        /***********************************************
+     * OVERFLOW
+     ***********************************************/ var uniqueID = function() {
+            var i = 0;
+            return function(el) {
+                return el.uniqueID || (el.uniqueID = i++);
+            };
+        }();
+        var cacheX = {}; // cleared out after a scrolling session
+        var cacheY = {}; // cleared out after a scrolling session
+        var clearCacheTimer;
+        var smoothBehaviorForElement = {};
+        //setInterval(function () { cache = {}; }, 10 * 1000);
+        function scheduleClearCache() {
+            clearTimeout(clearCacheTimer);
+            clearCacheTimer = setInterval(function() {
+                cacheX = cacheY = smoothBehaviorForElement = {};
+            }, 1000);
+        }
+        function setCache(elems, overflowing, x) {
+            var cache = x ? cacheX : cacheY;
+            for(var i = elems.length; i--;)cache[uniqueID(elems[i])] = overflowing;
+            return overflowing;
+        }
+        function getCache(el, x) {
+            return (x ? cacheX : cacheY)[uniqueID(el)];
+        }
+        //  (body)                (root)
+        //         | hidden | visible | scroll |  auto  |
+        // hidden  |   no   |    no   |   YES  |   YES  |
+        // visible |   no   |   YES   |   YES  |   YES  |
+        // scroll  |   no   |   YES   |   YES  |   YES  |
+        // auto    |   no   |   YES   |   YES  |   YES  |
+        function overflowingAncestor(el) {
+            var elems = [];
+            var body = document.body;
+            var rootScrollHeight = root.scrollHeight;
+            do {
+                var cached = getCache(el, false);
+                if (cached) return setCache(elems, cached);
+                elems.push(el);
+                if (rootScrollHeight === el.scrollHeight) {
+                    var topOverflowsNotHidden = overflowNotHidden(root) && overflowNotHidden(body);
+                    var isOverflowCSS = topOverflowsNotHidden || overflowAutoOrScroll(root);
+                    if (isFrame && isContentOverflowing(root) || !isFrame && isOverflowCSS) return setCache(elems, getScrollRoot());
+                } else if (isContentOverflowing(el) && overflowAutoOrScroll(el)) return setCache(elems, el);
+            }while (el = el.parentElement);
+        }
+        function isContentOverflowing(el) {
+            return el.clientHeight + 10 < el.scrollHeight;
+        }
+        // typically for <body> and <html>
+        function overflowNotHidden(el) {
+            var overflow = getComputedStyle(el, "").getPropertyValue("overflow-y");
+            return overflow !== "hidden";
+        }
+        // for all other elements
+        function overflowAutoOrScroll(el) {
+            var overflow = getComputedStyle(el, "").getPropertyValue("overflow-y");
+            return overflow === "scroll" || overflow === "auto";
+        }
+        // for all other elements
+        function isScrollBehaviorSmooth(el) {
+            var id = uniqueID(el);
+            if (smoothBehaviorForElement[id] == null) {
+                var scrollBehavior = getComputedStyle(el, "")["scroll-behavior"];
+                smoothBehaviorForElement[id] = "smooth" == scrollBehavior;
+            }
+            return smoothBehaviorForElement[id];
+        }
+        /***********************************************
+     * HELPERS
+     ***********************************************/ function addEvent(type, fn, arg) {
+            window.addEventListener(type, fn, arg || false);
+        }
+        function removeEvent(type, fn, arg) {
+            window.removeEventListener(type, fn, arg || false);
+        }
+        function isNodeName(el, tag) {
+            return el && (el.nodeName || "").toLowerCase() === tag.toLowerCase();
+        }
+        function directionCheck(x, y) {
+            x = x > 0 ? 1 : -1;
+            y = y > 0 ? 1 : -1;
+            if (direction.x !== x || direction.y !== y) {
+                direction.x = x;
+                direction.y = y;
+                que = [];
+                lastScroll = 0;
+            }
+        }
+        if (window.localStorage && localStorage.SS_deltaBuffer) try {
+            // #46 Safari throws in private browsing for localStorage
+            deltaBuffer = localStorage.SS_deltaBuffer.split(",");
+        } catch (e) {}
+        function isTouchpad(deltaY) {
+            if (!deltaY) return;
+            if (!deltaBuffer.length) deltaBuffer = [
+                deltaY,
+                deltaY,
+                deltaY
+            ];
+            deltaY = Math.abs(deltaY);
+            deltaBuffer.push(deltaY);
+            deltaBuffer.shift();
+            clearTimeout(deltaBufferTimer);
+            deltaBufferTimer = setTimeout(function() {
+                try {
+                    // #46 Safari throws in private browsing for localStorage
+                    localStorage.SS_deltaBuffer = deltaBuffer.join(",");
+                } catch (e) {}
+            }, 1000);
+            var dpiScaledWheelDelta = deltaY > 120 && allDeltasDivisableBy(deltaY); // win64
+            var tp = !allDeltasDivisableBy(120) && !allDeltasDivisableBy(100) && !dpiScaledWheelDelta;
+            if (deltaY < 50) return true;
+            return tp;
+        }
+        function isDivisible(n, divisor) {
+            return Math.floor(n / divisor) == n / divisor;
+        }
+        function allDeltasDivisableBy(divisor) {
+            return isDivisible(deltaBuffer[0], divisor) && isDivisible(deltaBuffer[1], divisor) && isDivisible(deltaBuffer[2], divisor);
+        }
+        function isInsideYoutubeVideo(event) {
+            var elem = event.target;
+            var isControl = false;
+            if (document.URL.indexOf("www.youtube.com/watch") != -1) do {
+                isControl = elem.classList && elem.classList.contains("html5-video-controls");
+                if (isControl) break;
+            }while (elem = elem.parentNode);
+            return isControl;
+        }
+        var requestFrame = function() {
+            return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback, element, delay) {
+                window.setTimeout(callback, delay || 1000 / 60);
+            };
+        }();
+        var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+        var getScrollRoot = function() {
+            var SCROLL_ROOT = document.scrollingElement;
+            return function() {
+                if (!SCROLL_ROOT) {
+                    var dummy = document.createElement("div");
+                    dummy.style.cssText = "height:10000px;width:1px;";
+                    document.body.appendChild(dummy);
+                    var bodyScrollTop = document.body.scrollTop;
+                    var docElScrollTop = document.documentElement.scrollTop;
+                    window.scrollBy(0, 3);
+                    if (document.body.scrollTop != bodyScrollTop) SCROLL_ROOT = document.body;
+                    else SCROLL_ROOT = document.documentElement;
+                    window.scrollBy(0, -3);
+                    document.body.removeChild(dummy);
+                }
+                return SCROLL_ROOT;
+            };
+        }();
+        /***********************************************
+     * PULSE (by Michael Herf)
+     ***********************************************/ /**
+     * Viscous fluid with a pulse for part and decay for the rest.
+     * - Applies a fixed force over an interval (a damped acceleration), and
+     * - Lets the exponential bleed away the velocity over a longer interval
+     * - Michael Herf, http://stereopsis.com/stopping/
+     */ function pulse_(x) {
+            var val, start, expx;
+            // test
+            x = x * options.pulseScale;
+            if (x < 1) // acceleartion
+            val = x - (1 - Math.exp(-x));
+            else {
+                // tail
+                // the previous animation ended here:
+                start = Math.exp(-1);
+                // simple viscous drag
+                x -= 1;
+                expx = 1 - Math.exp(-x);
+                val = start + expx * (1 - start);
+            }
+            return val * options.pulseNormalize;
+        }
+        function pulse(x) {
+            if (x >= 1) return 1;
+            if (x <= 0) return 0;
+            if (options.pulseNormalize == 1) options.pulseNormalize /= pulse_(1);
+            return pulse_(x);
+        }
+        /***********************************************
+     * FIRST RUN
+     ***********************************************/ var userAgent = window.navigator.userAgent;
+        var isEdge = /Edge/.test(userAgent); // thank you MS
+        var isChrome = /chrome/i.test(userAgent) && !isEdge;
+        var isSafari = /safari/i.test(userAgent) && !isEdge;
+        var isMobile = /mobile/i.test(userAgent);
+        var isIEWin7 = /Windows NT 6.1/i.test(userAgent) && /rv:11/i.test(userAgent);
+        var isOldSafari = isSafari && (/Version\/8/i.test(userAgent) || /Version\/9/i.test(userAgent));
+        var isEnabledForBrowser = (isChrome || isSafari || isIEWin7) && !isMobile;
+        var supportsPassive = false;
+        try {
+            window.addEventListener("test", null, Object.defineProperty({}, "passive", {
+                get: function() {
+                    supportsPassive = true;
+                }
+            }));
+        } catch (e1) {}
+        var wheelOpt = supportsPassive ? {
+            passive: false
+        } : false;
+        var wheelEvent = "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+        if (wheelEvent && isEnabledForBrowser) {
+            addEvent(wheelEvent, wheel, wheelOpt);
+            addEvent("mousedown", mousedown);
+            addEvent("load", init);
+        }
+        /***********************************************
+     * PUBLIC INTERFACE
+     ***********************************************/ function SmoothScroll(optionsToSet) {
+            for(var key in optionsToSet)if (defaultOptions.hasOwnProperty(key)) options[key] = optionsToSet[key];
+        }
+        SmoothScroll.destroy = cleanup;
+        if (window.SmoothScrollOptions) // async API
+        SmoothScroll(window.SmoothScrollOptions);
+        if (typeof define === "function" && define.amd) define(function() {
+            return SmoothScroll;
+        });
+        else module.exports = SmoothScroll;
+    })();
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"axBGC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "modalDialog", ()=>modalDialog);
+parcelHelpers.export(exports, "formModal", ()=>formModal);
+var _a11YDialog = require("a11y-dialog");
+var _a11YDialogDefault = parcelHelpers.interopDefault(_a11YDialog);
+var _utils = require("./utils");
+const modalDialog = ()=>{
+    const dialogContainer = document.querySelector("#testimonialDialog");
+    // Variable to keep track of the currently active video iframe
+    let activeIframe = null;
+    if ((0, _utils.ifSelectorExist)(dialogContainer)) {
+        const videoReviewsDialog = new (0, _a11YDialogDefault.default)(dialogContainer);
+        let fireTestimonialModalSelector = (0, _utils.getElements)(".fireTestimonialModal");
+        if ((0, _utils.ifSelectorExist)(fireTestimonialModalSelector)) Array.from(fireTestimonialModalSelector).forEach((item)=>{
+            item.addEventListener("click", ()=>{
+                // Hide all modal videos
+                let modalVideos = (0, _utils.getElements)(".hytPlayerWrapOuter");
+                Array.from(modalVideos).forEach((item)=>{
+                    item.classList.add("hidden");
+                });
+                // Find the clicked video's container and set its iframe as the active iframe
+                let itemYtUrl = item.getAttribute("data-yt-url");
+                let container = document.querySelector(`.hytPlayerWrapOuter-${itemYtUrl}`);
+                if (container) {
+                    activeIframe = container.querySelector("iframe");
+                    container.classList.toggle("hidden");
+                }
+                // Manually show the modal after setting activeIframe
+                videoReviewsDialog.show();
+            });
+        });
+        videoReviewsDialog.on("hide", function(dialogEl, event) {
+            // Pause the active iframe
+            if (activeIframe && activeIframe.contentWindow) activeIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', "https://www.youtube.com");
+            // Reset activeIframe to prevent it from being played again when opening another video
+            activeIframe = null;
+        });
+        videoReviewsDialog.on("show", function(dialogEl, event) {
+            setTimeout(()=>{
+                activeIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "https://www.youtube.com");
+            }, 500); // 500ms delay
+        });
+    }
+};
+const formModal = ()=>{
+    let modalWindow = (0, _utils.getElement)(".form-modal-window");
+    let modalWindowOpen = (0, _utils.getElement)(".text-button-block.form-modal .btn");
+    // Functions
+    let openModal = ()=>{
+        modalWindow.classList.add("open");
+        document.body.style.overflow = "hidden";
+    };
+    let closeModal = ()=>{
+        modalWindow.classList.add("fade-out");
+        setTimeout(()=>{
+            modalWindow.classList.remove("open", "fade-out");
+            document.body.style.overflow = null;
+        }, 300);
+    };
+    if ((0, _utils.ifSelectorExist)(modalWindowOpen)) modalWindowOpen.addEventListener("click", ()=>{
+        openModal();
+    });
+    if ((0, _utils.ifSelectorExist)(modalWindow)) {
+        modalWindow.addEventListener("click", (e)=>{
+            if (e.target === modalWindow) closeModal();
+        });
+        window.onkeydown = (e)=>{
+            if (e.key === "Escape") closeModal();
+        };
+    }
+};
+
+},{"a11y-dialog":"6Wzpm","./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6Wzpm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>A11yDialog);
+var focusableSelectors = [
+    'a[href]:not([tabindex^="-"])',
+    'area[href]:not([tabindex^="-"])',
+    'input:not([type="hidden"]):not([type="radio"]):not([disabled]):not([tabindex^="-"])',
+    'input[type="radio"]:not([disabled]):not([tabindex^="-"])',
+    'select:not([disabled]):not([tabindex^="-"])',
+    'textarea:not([disabled]):not([tabindex^="-"])',
+    'button:not([disabled]):not([tabindex^="-"])',
+    'iframe:not([tabindex^="-"])',
+    'audio[controls]:not([tabindex^="-"])',
+    'video[controls]:not([tabindex^="-"])',
+    '[contenteditable]:not([tabindex^="-"])',
+    '[tabindex]:not([tabindex^="-"])', 
+];
+var TAB_KEY = "Tab";
+var ESCAPE_KEY = "Escape";
+/**
+ * Define the constructor to instantiate a dialog
+ *
+ * @constructor
+ * @param {Element} element
+ */ function A11yDialog(element) {
+    // Prebind the functions that will be bound in addEventListener and
+    // removeEventListener to avoid losing references
+    this._show = this.show.bind(this);
+    this._hide = this.hide.bind(this);
+    this._maintainFocus = this._maintainFocus.bind(this);
+    this._bindKeypress = this._bindKeypress.bind(this);
+    this.$el = element;
+    this.shown = false;
+    this._id = this.$el.getAttribute("data-a11y-dialog") || this.$el.id;
+    this._previouslyFocused = null;
+    this._listeners = {};
+    // Initialise everything needed for the dialog to work properly
+    this.create();
+}
+/**
+ * Set up everything necessary for the dialog to be functioning
+ *
+ * @param {(NodeList | Element | string)} targets
+ * @return {this}
+ */ A11yDialog.prototype.create = function() {
+    this.$el.setAttribute("aria-hidden", true);
+    this.$el.setAttribute("aria-modal", true);
+    this.$el.setAttribute("tabindex", -1);
+    if (!this.$el.hasAttribute("role")) this.$el.setAttribute("role", "dialog");
+    // Keep a collection of dialog openers, each of which will be bound a click
+    // event listener to open the dialog
+    this._openers = $$('[data-a11y-dialog-show="' + this._id + '"]');
+    this._openers.forEach((function(opener) {
+        opener.addEventListener("click", this._show);
+    }).bind(this));
+    // Keep a collection of dialog closers, each of which will be bound a click
+    // event listener to close the dialog
+    const $el = this.$el;
+    this._closers = $$("[data-a11y-dialog-hide]", this.$el)// This filter is necessary in case there are nested dialogs, so that
+    // only closers from the current dialog are retrieved and effective
+    .filter(function(closer) {
+        // Testing for `[aria-modal="true"]` is not enough since this attribute
+        // and the collect of closers is done at instantation time, when nested
+        // dialogs might not have yet been instantiated. Note that if the dialogs
+        // are manually instantiated, this could still fail because none of these
+        // selectors would match; this would cause closers to close all parent
+        // dialogs instead of just the current one
+        return closer.closest('[aria-modal="true"], [data-a11y-dialog]') === $el;
+    }).concat($$('[data-a11y-dialog-hide="' + this._id + '"]'));
+    this._closers.forEach((function(closer) {
+        closer.addEventListener("click", this._hide);
+    }).bind(this));
+    // Execute all callbacks registered for the `create` event
+    this._fire("create");
+    return this;
+};
+/**
+ * Show the dialog element, disable all the targets (siblings), trap the
+ * current focus within it, listen for some specific key presses and fire all
+ * registered callbacks for `show` event
+ *
+ * @param {CustomEvent} event
+ * @return {this}
+ */ A11yDialog.prototype.show = function(event) {
+    // If the dialog is already open, abort
+    if (this.shown) return this;
+    // Keep a reference to the currently focused element to be able to restore
+    // it later
+    this._previouslyFocused = document.activeElement;
+    this.$el.removeAttribute("aria-hidden");
+    this.shown = true;
+    // Set the focus to the dialog element
+    moveFocusToDialog(this.$el);
+    // Bind a focus event listener to the body element to make sure the focus
+    // stays trapped inside the dialog while open, and start listening for some
+    // specific key presses (TAB and ESC)
+    document.body.addEventListener("focus", this._maintainFocus, true);
+    document.addEventListener("keydown", this._bindKeypress);
+    // Execute all callbacks registered for the `show` event
+    this._fire("show", event);
+    return this;
+};
+/**
+ * Hide the dialog element, enable all the targets (siblings), restore the
+ * focus to the previously active element, stop listening for some specific
+ * key presses and fire all registered callbacks for `hide` event
+ *
+ * @param {CustomEvent} event
+ * @return {this}
+ */ A11yDialog.prototype.hide = function(event) {
+    // If the dialog is already closed, abort
+    if (!this.shown) return this;
+    this.shown = false;
+    this.$el.setAttribute("aria-hidden", "true");
+    // If there was a focused element before the dialog was opened (and it has a
+    // `focus` method), restore the focus back to it
+    // See: https://github.com/KittyGiraudel/a11y-dialog/issues/108
+    if (this._previouslyFocused && this._previouslyFocused.focus) this._previouslyFocused.focus();
+    // Remove the focus event listener to the body element and stop listening
+    // for specific key presses
+    document.body.removeEventListener("focus", this._maintainFocus, true);
+    document.removeEventListener("keydown", this._bindKeypress);
+    // Execute all callbacks registered for the `hide` event
+    this._fire("hide", event);
+    return this;
+};
+/**
+ * Destroy the current instance (after making sure the dialog has been hidden)
+ * and remove all associated listeners from dialog openers and closers
+ *
+ * @return {this}
+ */ A11yDialog.prototype.destroy = function() {
+    // Hide the dialog to avoid destroying an open instance
+    this.hide();
+    // Remove the click event listener from all dialog openers
+    this._openers.forEach((function(opener) {
+        opener.removeEventListener("click", this._show);
+    }).bind(this));
+    // Remove the click event listener from all dialog closers
+    this._closers.forEach((function(closer) {
+        closer.removeEventListener("click", this._hide);
+    }).bind(this));
+    // Execute all callbacks registered for the `destroy` event
+    this._fire("destroy");
+    // Keep an object of listener types mapped to callback functions
+    this._listeners = {};
+    return this;
+};
+/**
+ * Register a new callback for the given event type
+ *
+ * @param {string} type
+ * @param {Function} handler
+ */ A11yDialog.prototype.on = function(type, handler) {
+    if (typeof this._listeners[type] === "undefined") this._listeners[type] = [];
+    this._listeners[type].push(handler);
+    return this;
+};
+/**
+ * Unregister an existing callback for the given event type
+ *
+ * @param {string} type
+ * @param {Function} handler
+ */ A11yDialog.prototype.off = function(type, handler) {
+    var index = (this._listeners[type] || []).indexOf(handler);
+    if (index > -1) this._listeners[type].splice(index, 1);
+    return this;
+};
+/**
+ * Iterate over all registered handlers for given type and call them all with
+ * the dialog element as first argument, event as second argument (if any). Also
+ * dispatch a custom event on the DOM element itself to make it possible to
+ * react to the lifecycle of auto-instantiated dialogs.
+ *
+ * @access private
+ * @param {string} type
+ * @param {CustomEvent} event
+ */ A11yDialog.prototype._fire = function(type, event) {
+    var listeners = this._listeners[type] || [];
+    var domEvent = new CustomEvent(type, {
+        detail: event
+    });
+    this.$el.dispatchEvent(domEvent);
+    listeners.forEach((function(listener) {
+        listener(this.$el, event);
+    }).bind(this));
+};
+/**
+ * Private event handler used when listening to some specific key presses
+ * (namely ESCAPE and TAB)
+ *
+ * @access private
+ * @param {Event} event
+ */ A11yDialog.prototype._bindKeypress = function(event) {
+    // This is an escape hatch in case there are nested dialogs, so the keypresses
+    // are only reacted to for the most recent one
+    const focused = document.activeElement;
+    if (focused && focused.closest('[aria-modal="true"]') !== this.$el) return;
+    // If the dialog is shown and the ESCAPE key is being pressed, prevent any
+    // further effects from the ESCAPE key and hide the dialog, unless its role
+    // is 'alertdialog', which should be modal
+    if (this.shown && event.key === ESCAPE_KEY && this.$el.getAttribute("role") !== "alertdialog") {
+        event.preventDefault();
+        this.hide(event);
+    }
+    // If the dialog is shown and the TAB key is being pressed, make sure the
+    // focus stays trapped within the dialog element
+    if (this.shown && event.key === TAB_KEY) trapTabKey(this.$el, event);
+};
+/**
+ * Private event handler used when making sure the focus stays within the
+ * currently open dialog
+ *
+ * @access private
+ * @param {Event} event
+ */ A11yDialog.prototype._maintainFocus = function(event) {
+    // If the dialog is shown and the focus is not within a dialog element (either
+    // this one or another one in case of nested dialogs) or within an element
+    // with the `data-a11y-dialog-focus-trap-ignore` attribute, move it back to
+    // its first focusable child.
+    // See: https://github.com/KittyGiraudel/a11y-dialog/issues/177
+    if (this.shown && !event.target.closest('[aria-modal="true"]') && !event.target.closest("[data-a11y-dialog-ignore-focus-trap]")) moveFocusToDialog(this.$el);
+};
+/**
+ * Convert a NodeList into an array
+ *
+ * @param {NodeList} collection
+ * @return {Array<Element>}
+ */ function toArray(collection) {
+    return Array.prototype.slice.call(collection);
+}
+/**
+ * Query the DOM for nodes matching the given selector, scoped to context (or
+ * the whole document)
+ *
+ * @param {String} selector
+ * @param {Element} [context = document]
+ * @return {Array<Element>}
+ */ function $$(selector, context) {
+    return toArray((context || document).querySelectorAll(selector));
+}
+/**
+ * Set the focus to the first element with `autofocus` with the element or the
+ * element itself
+ *
+ * @param {Element} node
+ */ function moveFocusToDialog(node) {
+    var focused = node.querySelector("[autofocus]") || node;
+    focused.focus();
+}
+/**
+ * Get the focusable children of the given element
+ *
+ * @param {Element} node
+ * @return {Array<Element>}
+ */ function getFocusableChildren(node) {
+    return $$(focusableSelectors.join(","), node).filter(function(child) {
+        return !!(child.offsetWidth || child.offsetHeight || child.getClientRects().length);
+    });
+}
+/**
+ * Trap the focus inside the given element
+ *
+ * @param {Element} node
+ * @param {Event} event
+ */ function trapTabKey(node, event) {
+    var focusableChildren = getFocusableChildren(node);
+    var focusedItemIndex = focusableChildren.indexOf(document.activeElement);
+    // If the SHIFT key is being pressed while tabbing (moving backwards) and
+    // the currently focused item is the first one, move the focus to the last
+    // focusable item from the dialog element
+    if (event.shiftKey && focusedItemIndex === 0) {
+        focusableChildren[focusableChildren.length - 1].focus();
+        event.preventDefault();
+    // If the SHIFT key is not being pressed (moving forwards) and the currently
+    // focused item is the last one, move the focus to the first focusable item
+    // from the dialog element
+    } else if (!event.shiftKey && focusedItemIndex === focusableChildren.length - 1) {
+        focusableChildren[0].focus();
+        event.preventDefault();
+    }
+}
+function instantiateDialogs() {
+    $$("[data-a11y-dialog]").forEach(function(node) {
+        new A11yDialog(node);
+    });
+}
+if (typeof document !== "undefined") {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", instantiateDialogs);
+    else if (window.requestAnimationFrame) window.requestAnimationFrame(instantiateDialogs);
+    else window.setTimeout(instantiateDialogs, 16);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3NM30":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cf7Events", ()=>cf7Events);
+var _utils = require("./utils");
+const cf7Events = ()=>{
+    console.log("events");
+    // setup page id to the form
+    let containerPostFields = (0, _utils.getElements)('input[name="post_id"]');
+    if ((0, _utils.ifSelectorExist)(containerPostFields)) Array.from(containerPostFields).forEach((input)=>{
+        input.value = ajax_url.page_id;
+        console.log("page ID is == ", input.value);
+    });
+    var wpcf7Elm = (0, _utils.getElements)(".wpcf7");
+    if ((0, _utils.ifSelectorExist)(wpcf7Elm)) Array.from(wpcf7Elm).forEach((item)=>{
+        item.addEventListener("submit", (event)=>{
+            let formSpinner = (0, _utils.getElement)(".wpcf7-spinner", event.target);
+            let submitButton = (0, _utils.getElement)("button", event.target);
+            submitButton.disabled = true;
+            let submitButtonSpans = (0, _utils.getElements)("span", submitButton);
+            // if (ifSelectorExist(submitButtonSpans)) {
+            //   Array.from(submitButtonSpans).forEach(span => {
+            //     span.classList.add('!opacity-50');
+            //   })
+            // }
+            if ((0, _utils.ifSelectorExist)(formSpinner)) formSpinner.classList.add("active");
+        });
+        document.addEventListener("wpcf7invalid", function(event) {
+            unblockBtn(event.target);
+        }, false);
+        document.addEventListener("wpcf7spam", function(event) {
+            unblockBtn(event.target);
+        }, false);
+        document.addEventListener("wpcf7mailsent", function(event) {
+            unblockBtn(event.target);
+        }, false);
+        document.addEventListener("wpcf7mailfailed", function(event) {
+            unblockBtn(event.target);
+        }, false);
+    });
+    let unblockBtn = (form)=>{
+        let submitButton = (0, _utils.getElement)("button", form);
+        let formSpinner = (0, _utils.getElement)(".wpcf7-spinner", form);
+        // let submitButtonSpans = getElements('span', submitButton);
+        // if (ifSelectorExist(submitButtonSpans)) {
+        //   Array.from(submitButtonSpans).forEach(span => {
+        //     span.classList.remove('!opacity-50');
+        //   })
+        // }
+        submitButton.disabled = false;
+        if ((0, _utils.ifSelectorExist)(formSpinner)) formSpinner.classList.remove("active");
+    };
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dStXI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cf7MaskTelValidation", ()=>cf7MaskTelValidation);
+var _imask = require("imask");
+var _imaskDefault = parcelHelpers.interopDefault(_imask);
+var _utils = require("./utils");
+const cf7MaskTelValidation = ()=>{
+    let forms = (0, _utils.getElements)("form");
+    if ((0, _utils.ifSelectorExist)(forms)) Array.from(forms).forEach((form)=>{
+        let maskedPhoneInputs = (0, _utils.getElements)(".masked_phone", form);
+        let phoneMasks = new Map();
+        if ((0, _utils.ifSelectorExist)(maskedPhoneInputs)) {
+            Array.from(maskedPhoneInputs).forEach((element)=>{
+                let mask = (0, _imaskDefault.default)(element, {
+                    mask: "(000) 000-0000",
+                    prepare: (value, masked)=>{
+                        // Remove any non-numeric characters
+                        let onlyNums = value.replace(/\D/g, "");
+                        return onlyNums;
+                    },
+                    lazy: false,
+                    placeholderChar: "_"
+                });
+                // Event listener for user input
+                element.addEventListener("input", ()=>{
+                    if (!mask.masked.isComplete) element.style.border = ""; // Reset border if valid
+                    else {
+                        let phoneValue = mask.unmaskedValue;
+                        if (phoneValue.startsWith("0") || phoneValue.startsWith("1")) element.style.border = "2px solid red"; // Add red border if the first digit is 0 or 1
+                        else element.style.border = ""; // Reset border if valid
+                    }
+                });
+                phoneMasks.set(element.name, mask); // store the mask with the input's name
+            });
+            let submitButton = (0, _utils.getElement)(".btn_form", form);
+            if (submitButton) submitButton.addEventListener("click", function(event) {
+                let phoneInvalid = Array.from(maskedPhoneInputs).some((input)=>{
+                    let mask = phoneMasks.get(input.name); // get the mask for this input
+                    if (mask && !mask.masked.isComplete) {
+                        input.classList.add("invalid-phone-number");
+                        input.style.border = "2px solid red"; // Add red border
+                        return true;
+                    } else {
+                        let phoneValue = mask.unmaskedValue;
+                        if (phoneValue.startsWith("0") || phoneValue.startsWith("1")) {
+                            input.classList.add("invalid-phone-number");
+                            input.style.border = "2px solid red"; // Add red border
+                            return true;
+                        } else {
+                            input.style.border = ""; // Reset border
+                            input.classList.remove("invalid-phone-number");
+                            return false;
+                        }
+                    }
+                });
+                if (phoneInvalid) {
+                    event.preventDefault(); // Prevent form from submitting
+                    return false;
+                }
+            });
+        }
+    });
+};
+
+},{"imask":"aLznl","./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aLznl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "InputMask", ()=>(0, _inputJsDefault.default));
+parcelHelpers.export(exports, "HTMLContenteditableMaskElement", ()=>(0, _htmlContenteditableMaskElementJsDefault.default));
+parcelHelpers.export(exports, "HTMLInputMaskElement", ()=>(0, _htmlInputMaskElementJsDefault.default));
+parcelHelpers.export(exports, "HTMLMaskElement", ()=>(0, _htmlMaskElementJsDefault.default));
+parcelHelpers.export(exports, "MaskElement", ()=>(0, _maskElementJsDefault.default));
+parcelHelpers.export(exports, "ChangeDetails", ()=>(0, _changeDetailsJsDefault.default));
+parcelHelpers.export(exports, "DIRECTION", ()=>(0, _utilsJs.DIRECTION));
+parcelHelpers.export(exports, "forceDirection", ()=>(0, _utilsJs.forceDirection));
+parcelHelpers.export(exports, "Masked", ()=>(0, _baseJsDefault.default));
+parcelHelpers.export(exports, "MaskedDate", ()=>(0, _dateJsDefault.default));
+parcelHelpers.export(exports, "MaskedDynamic", ()=>(0, _dynamicJsDefault.default));
+parcelHelpers.export(exports, "MaskedEnum", ()=>(0, _enumJsDefault.default));
+parcelHelpers.export(exports, "createMask", ()=>(0, _factoryJsDefault.default));
+parcelHelpers.export(exports, "normalizeOpts", ()=>(0, _factoryJs.normalizeOpts));
+parcelHelpers.export(exports, "MaskedFunction", ()=>(0, _functionJsDefault.default));
+parcelHelpers.export(exports, "MaskedNumber", ()=>(0, _numberJsDefault.default));
+parcelHelpers.export(exports, "MaskedPattern", ()=>(0, _patternJsDefault.default));
+parcelHelpers.export(exports, "ChunksTailDetails", ()=>(0, _chunkTailDetailsJsDefault.default));
+parcelHelpers.export(exports, "PatternFixedDefinition", ()=>(0, _fixedDefinitionJsDefault.default));
+parcelHelpers.export(exports, "PatternInputDefinition", ()=>(0, _inputDefinitionJsDefault.default));
+parcelHelpers.export(exports, "PIPE_TYPE", ()=>(0, _pipeJs.PIPE_TYPE));
+parcelHelpers.export(exports, "createPipe", ()=>(0, _pipeJs.createPipe));
+parcelHelpers.export(exports, "pipe", ()=>(0, _pipeJs.pipe));
+parcelHelpers.export(exports, "MaskedRange", ()=>(0, _rangeJsDefault.default));
+parcelHelpers.export(exports, "MaskedRegExp", ()=>(0, _regexpJsDefault.default));
+parcelHelpers.export(exports, "default", ()=>(0, _holderJsDefault.default));
+var _holderJs = require("./core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _actionDetailsJs = require("./core/action-details.js");
+var _continuousTailDetailsJs = require("./core/continuous-tail-details.js");
+var _cursorJs = require("./masked/pattern/cursor.js");
+var _inputJs = require("./controls/input.js");
+var _inputJsDefault = parcelHelpers.interopDefault(_inputJs);
+var _htmlContenteditableMaskElementJs = require("./controls/html-contenteditable-mask-element.js");
+var _htmlContenteditableMaskElementJsDefault = parcelHelpers.interopDefault(_htmlContenteditableMaskElementJs);
+var _htmlInputMaskElementJs = require("./controls/html-input-mask-element.js");
+var _htmlInputMaskElementJsDefault = parcelHelpers.interopDefault(_htmlInputMaskElementJs);
+var _htmlMaskElementJs = require("./controls/html-mask-element.js");
+var _htmlMaskElementJsDefault = parcelHelpers.interopDefault(_htmlMaskElementJs);
+var _maskElementJs = require("./controls/mask-element.js");
+var _maskElementJsDefault = parcelHelpers.interopDefault(_maskElementJs);
+var _changeDetailsJs = require("./core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _utilsJs = require("./core/utils.js");
+var _baseJs = require("./masked/base.js");
+var _baseJsDefault = parcelHelpers.interopDefault(_baseJs);
+var _dateJs = require("./masked/date.js");
+var _dateJsDefault = parcelHelpers.interopDefault(_dateJs);
+var _dynamicJs = require("./masked/dynamic.js");
+var _dynamicJsDefault = parcelHelpers.interopDefault(_dynamicJs);
+var _enumJs = require("./masked/enum.js");
+var _enumJsDefault = parcelHelpers.interopDefault(_enumJs);
+var _factoryJs = require("./masked/factory.js");
+var _factoryJsDefault = parcelHelpers.interopDefault(_factoryJs);
+var _functionJs = require("./masked/function.js");
+var _functionJsDefault = parcelHelpers.interopDefault(_functionJs);
+var _numberJs = require("./masked/number.js");
+var _numberJsDefault = parcelHelpers.interopDefault(_numberJs);
+var _patternJs = require("./masked/pattern.js");
+var _patternJsDefault = parcelHelpers.interopDefault(_patternJs);
+var _chunkTailDetailsJs = require("./masked/pattern/chunk-tail-details.js");
+var _chunkTailDetailsJsDefault = parcelHelpers.interopDefault(_chunkTailDetailsJs);
+var _fixedDefinitionJs = require("./masked/pattern/fixed-definition.js");
+var _fixedDefinitionJsDefault = parcelHelpers.interopDefault(_fixedDefinitionJs);
+var _inputDefinitionJs = require("./masked/pattern/input-definition.js");
+var _inputDefinitionJsDefault = parcelHelpers.interopDefault(_inputDefinitionJs);
+var _pipeJs = require("./masked/pipe.js");
+var _rangeJs = require("./masked/range.js");
+var _rangeJsDefault = parcelHelpers.interopDefault(_rangeJs);
+var _regexpJs = require("./masked/regexp.js");
+var _regexpJsDefault = parcelHelpers.interopDefault(_regexpJs);
+try {
+    globalThis.IMask = (0, _holderJsDefault.default);
+} catch  {}
+
+},{"./core/holder.js":"fNs7n","./core/action-details.js":"cJg34","./core/continuous-tail-details.js":"5MbDY","./masked/pattern/cursor.js":"1K9Ff","./controls/input.js":"bZfiB","./controls/html-contenteditable-mask-element.js":"l1S15","./controls/html-input-mask-element.js":"2feR7","./controls/html-mask-element.js":"exheL","./controls/mask-element.js":"6dhyp","./core/change-details.js":"cDdFe","./core/utils.js":"hh2Rx","./masked/base.js":"i9dza","./masked/date.js":"1V3CB","./masked/dynamic.js":"kPiRi","./masked/enum.js":"dmeoh","./masked/factory.js":"4c29b","./masked/function.js":"64ffz","./masked/number.js":"gHi3R","./masked/pattern.js":"edg1G","./masked/pattern/chunk-tail-details.js":"a8Q24","./masked/pattern/fixed-definition.js":"fnLC7","./masked/pattern/input-definition.js":"lGvsS","./masked/pipe.js":"knGz0","./masked/range.js":"iHvQL","./masked/regexp.js":"7B25G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fNs7n":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>IMask);
+/** Applies mask on element */ function IMask(el, opts) {
+    // currently available only for input-like elements
+    return new IMask.InputMask(el, opts);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cJg34":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>ActionDetails);
+var _utilsJs = require("./utils.js");
+/** Provides details of changing input */ class ActionDetails {
+    /** Current input value */ /** Current cursor position */ /** Old input value */ /** Old selection */ constructor(opts){
+        Object.assign(this, opts);
+        // double check if left part was changed (autofilling, other non-standard input triggers)
+        while(this.value.slice(0, this.startChangePos) !== this.oldValue.slice(0, this.startChangePos))--this.oldSelection.start;
+    }
+    /** Start changing position */ get startChangePos() {
+        return Math.min(this.cursorPos, this.oldSelection.start);
+    }
+    /** Inserted symbols count */ get insertedCount() {
+        return this.cursorPos - this.startChangePos;
+    }
+    /** Inserted symbols */ get inserted() {
+        return this.value.substr(this.startChangePos, this.insertedCount);
+    }
+    /** Removed symbols count */ get removedCount() {
+        // Math.max for opposite operation
+        return Math.max(this.oldSelection.end - this.startChangePos || // for Delete
+        this.oldValue.length - this.value.length, 0);
+    }
+    /** Removed symbols */ get removed() {
+        return this.oldValue.substr(this.startChangePos, this.removedCount);
+    }
+    /** Unchanged head symbols */ get head() {
+        return this.value.substring(0, this.startChangePos);
+    }
+    /** Unchanged tail symbols */ get tail() {
+        return this.value.substring(this.startChangePos + this.insertedCount);
+    }
+    /** Remove direction */ get removeDirection() {
+        if (!this.removedCount || this.insertedCount) return (0, _utilsJs.DIRECTION).NONE;
+        // align right if delete at right
+        return (this.oldSelection.end === this.cursorPos || this.oldSelection.start === this.cursorPos) && // if not range removed (event with backspace)
+        this.oldSelection.end === this.oldSelection.start ? (0, _utilsJs.DIRECTION).RIGHT : (0, _utilsJs.DIRECTION).LEFT;
+    }
+}
+
+},{"./utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hh2Rx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/** Selection range */ parcelHelpers.export(exports, "DIRECTION", ()=>DIRECTION);
+parcelHelpers.export(exports, "escapeRegExp", ()=>escapeRegExp);
+parcelHelpers.export(exports, "forceDirection", ()=>forceDirection);
+parcelHelpers.export(exports, "isObject", ()=>isObject);
+parcelHelpers.export(exports, "isString", ()=>isString);
+parcelHelpers.export(exports, "objectIncludes", ()=>objectIncludes);
+parcelHelpers.export(exports, "pick", ()=>pick);
+/** Checks if value is string */ function isString(str) {
+    return typeof str === "string" || str instanceof String;
+}
+/** Checks if value is object */ function isObject(obj) {
+    var _obj$constructor;
+    return typeof obj === "object" && obj != null && (obj == null ? void 0 : (_obj$constructor = obj.constructor) == null ? void 0 : _obj$constructor.name) === "Object";
+}
+function pick(obj, keys) {
+    if (Array.isArray(keys)) return pick(obj, (_, k)=>keys.includes(k));
+    return Object.entries(obj).reduce((acc, _ref)=>{
+        let [k, v] = _ref;
+        if (keys(v, k)) acc[k] = v;
+        return acc;
+    }, {});
+}
+/** Direction */ const DIRECTION = {
+    NONE: "NONE",
+    LEFT: "LEFT",
+    FORCE_LEFT: "FORCE_LEFT",
+    RIGHT: "RIGHT",
+    FORCE_RIGHT: "FORCE_RIGHT"
+};
+/** Direction */ function forceDirection(direction) {
+    switch(direction){
+        case DIRECTION.LEFT:
+            return DIRECTION.FORCE_LEFT;
+        case DIRECTION.RIGHT:
+            return DIRECTION.FORCE_RIGHT;
+        default:
+            return direction;
+    }
+}
+/** Escapes regular expression control chars */ function escapeRegExp(str) {
+    return str.replace(/([.*+?^=!:${}()|[\]/\\])/g, "\\$1");
+}
+// cloned from https://github.com/epoberezkin/fast-deep-equal with small changes
+function objectIncludes(b, a) {
+    if (a === b) return true;
+    const arrA = Array.isArray(a), arrB = Array.isArray(b);
+    let i;
+    if (arrA && arrB) {
+        if (a.length != b.length) return false;
+        for(i = 0; i < a.length; i++)if (!objectIncludes(a[i], b[i])) return false;
+        return true;
+    }
+    if (arrA != arrB) return false;
+    if (a && b && typeof a === "object" && typeof b === "object") {
+        const dateA = a instanceof Date, dateB = b instanceof Date;
+        if (dateA && dateB) return a.getTime() == b.getTime();
+        if (dateA != dateB) return false;
+        const regexpA = a instanceof RegExp, regexpB = b instanceof RegExp;
+        if (regexpA && regexpB) return a.toString() == b.toString();
+        if (regexpA != regexpB) return false;
+        const keys = Object.keys(a);
+        // if (keys.length !== Object.keys(b).length) return false;
+        for(i = 0; i < keys.length; i++)if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
+        for(i = 0; i < keys.length; i++)if (!objectIncludes(b[keys[i]], a[keys[i]])) return false;
+        return true;
+    } else if (a && b && typeof a === "function" && typeof b === "function") return a.toString() === b.toString();
+    return false;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5MbDY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>ContinuousTailDetails);
+/** Provides details of continuous extracted tail */ class ContinuousTailDetails {
+    /** Tail value as string */ /** Tail start position */ /** Start position */ constructor(value, from, stop){
+        if (value === void 0) value = "";
+        if (from === void 0) from = 0;
+        this.value = value;
+        this.from = from;
+        this.stop = stop;
+    }
+    toString() {
+        return this.value;
+    }
+    extend(tail) {
+        this.value += String(tail);
+    }
+    appendTo(masked) {
+        return masked.append(this.toString(), {
+            tail: true
+        }).aggregate(masked._appendPlaceholder());
+    }
+    get state() {
+        return {
+            value: this.value,
+            from: this.from,
+            stop: this.stop
+        };
+    }
+    set state(state) {
+        Object.assign(this, state);
+    }
+    unshift(beforePos) {
+        if (!this.value.length || beforePos != null && this.from >= beforePos) return "";
+        const shiftChar = this.value[0];
+        this.value = this.value.slice(1);
+        return shiftChar;
+    }
+    shift() {
+        if (!this.value.length) return "";
+        const shiftChar = this.value[this.value.length - 1];
+        this.value = this.value.slice(0, -1);
+        return shiftChar;
+    }
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1K9Ff":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>PatternCursor);
+var _utilsJs = require("../../core/utils.js");
+class PatternCursor {
+    constructor(masked, pos){
+        this.masked = masked;
+        this._log = [];
+        const { offset , index  } = masked._mapPosToBlock(pos) || (pos < 0 ? // first
+        {
+            index: 0,
+            offset: 0
+        } : // last
+        {
+            index: this.masked._blocks.length,
+            offset: 0
+        });
+        this.offset = offset;
+        this.index = index;
+        this.ok = false;
+    }
+    get block() {
+        return this.masked._blocks[this.index];
+    }
+    get pos() {
+        return this.masked._blockStartPos(this.index) + this.offset;
+    }
+    get state() {
+        return {
+            index: this.index,
+            offset: this.offset,
+            ok: this.ok
+        };
+    }
+    set state(s) {
+        Object.assign(this, s);
+    }
+    pushState() {
+        this._log.push(this.state);
+    }
+    popState() {
+        const s = this._log.pop();
+        if (s) this.state = s;
+        return s;
+    }
+    bindBlock() {
+        if (this.block) return;
+        if (this.index < 0) {
+            this.index = 0;
+            this.offset = 0;
+        }
+        if (this.index >= this.masked._blocks.length) {
+            this.index = this.masked._blocks.length - 1;
+            this.offset = this.block.displayValue.length; // TODO this is stupid type error, `block` depends on index that was changed above
+        }
+    }
+    _pushLeft(fn) {
+        this.pushState();
+        for(this.bindBlock(); 0 <= this.index; --this.index, this.offset = ((_this$block = this.block) == null ? void 0 : _this$block.displayValue.length) || 0){
+            var _this$block;
+            if (fn()) return this.ok = true;
+        }
+        return this.ok = false;
+    }
+    _pushRight(fn) {
+        this.pushState();
+        for(this.bindBlock(); this.index < this.masked._blocks.length; ++this.index, this.offset = 0){
+            if (fn()) return this.ok = true;
+        }
+        return this.ok = false;
+    }
+    pushLeftBeforeFilled() {
+        return this._pushLeft(()=>{
+            if (this.block.isFixed || !this.block.value) return;
+            this.offset = this.block.nearestInputPos(this.offset, (0, _utilsJs.DIRECTION).FORCE_LEFT);
+            if (this.offset !== 0) return true;
+        });
+    }
+    pushLeftBeforeInput() {
+        // cases:
+        // filled input: 00|
+        // optional empty input: 00[]|
+        // nested block: XX<[]>|
+        return this._pushLeft(()=>{
+            if (this.block.isFixed) return;
+            this.offset = this.block.nearestInputPos(this.offset, (0, _utilsJs.DIRECTION).LEFT);
+            return true;
+        });
+    }
+    pushLeftBeforeRequired() {
+        return this._pushLeft(()=>{
+            if (this.block.isFixed || this.block.isOptional && !this.block.value) return;
+            this.offset = this.block.nearestInputPos(this.offset, (0, _utilsJs.DIRECTION).LEFT);
+            return true;
+        });
+    }
+    pushRightBeforeFilled() {
+        return this._pushRight(()=>{
+            if (this.block.isFixed || !this.block.value) return;
+            this.offset = this.block.nearestInputPos(this.offset, (0, _utilsJs.DIRECTION).FORCE_RIGHT);
+            if (this.offset !== this.block.value.length) return true;
+        });
+    }
+    pushRightBeforeInput() {
+        return this._pushRight(()=>{
+            if (this.block.isFixed) return;
+            // const o = this.offset;
+            this.offset = this.block.nearestInputPos(this.offset, (0, _utilsJs.DIRECTION).NONE);
+            // HACK cases like (STILL DOES NOT WORK FOR NESTED)
+            // aa|X
+            // aa<X|[]>X_    - this will not work
+            // if (o && o === this.offset && this.block instanceof PatternInputDefinition) continue;
+            return true;
+        });
+    }
+    pushRightBeforeRequired() {
+        return this._pushRight(()=>{
+            if (this.block.isFixed || this.block.isOptional && !this.block.value) return;
+            // TODO check |[*]XX_
+            this.offset = this.block.nearestInputPos(this.offset, (0, _utilsJs.DIRECTION).NONE);
+            return true;
+        });
+    }
+}
+
+},{"../../core/utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bZfiB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>InputMask);
+var _utilsJs = require("../core/utils.js");
+var _actionDetailsJs = require("../core/action-details.js");
+var _actionDetailsJsDefault = parcelHelpers.interopDefault(_actionDetailsJs);
+var _factoryJs = require("../masked/factory.js");
+var _factoryJsDefault = parcelHelpers.interopDefault(_factoryJs);
+var _maskElementJs = require("./mask-element.js");
+var _maskElementJsDefault = parcelHelpers.interopDefault(_maskElementJs);
+var _htmlInputMaskElementJs = require("./html-input-mask-element.js");
+var _htmlInputMaskElementJsDefault = parcelHelpers.interopDefault(_htmlInputMaskElementJs);
+var _htmlContenteditableMaskElementJs = require("./html-contenteditable-mask-element.js");
+var _htmlContenteditableMaskElementJsDefault = parcelHelpers.interopDefault(_htmlContenteditableMaskElementJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _htmlMaskElementJs = require("./html-mask-element.js");
+/** Listens to element events and controls changes between element and {@link Masked} */ class InputMask {
+    /**
+    View element
+  */ /** Internal {@link Masked} model */ constructor(el, opts){
+        this.el = el instanceof (0, _maskElementJsDefault.default) ? el : el.isContentEditable && el.tagName !== "INPUT" && el.tagName !== "TEXTAREA" ? new (0, _htmlContenteditableMaskElementJsDefault.default)(el) : new (0, _htmlInputMaskElementJsDefault.default)(el);
+        this.masked = (0, _factoryJsDefault.default)(opts);
+        this._listeners = {};
+        this._value = "";
+        this._unmaskedValue = "";
+        this._saveSelection = this._saveSelection.bind(this);
+        this._onInput = this._onInput.bind(this);
+        this._onChange = this._onChange.bind(this);
+        this._onDrop = this._onDrop.bind(this);
+        this._onFocus = this._onFocus.bind(this);
+        this._onClick = this._onClick.bind(this);
+        this.alignCursor = this.alignCursor.bind(this);
+        this.alignCursorFriendly = this.alignCursorFriendly.bind(this);
+        this._bindEvents();
+        // refresh
+        this.updateValue();
+        this._onChange();
+    }
+    maskEquals(mask) {
+        var _this$masked;
+        return mask == null || ((_this$masked = this.masked) == null ? void 0 : _this$masked.maskEquals(mask));
+    }
+    /** Masked */ get mask() {
+        return this.masked.mask;
+    }
+    set mask(mask) {
+        if (this.maskEquals(mask)) return;
+        if (!(mask instanceof (0, _holderJsDefault.default).Masked) && this.masked.constructor === (0, _factoryJs.maskedClass)(mask)) {
+            // TODO "any" no idea
+            this.masked.updateOptions({
+                mask
+            });
+            return;
+        }
+        const masked = mask instanceof (0, _holderJsDefault.default).Masked ? mask : (0, _factoryJsDefault.default)({
+            mask
+        });
+        masked.unmaskedValue = this.masked.unmaskedValue;
+        this.masked = masked;
+    }
+    /** Raw value */ get value() {
+        return this._value;
+    }
+    set value(str) {
+        if (this.value === str) return;
+        this.masked.value = str;
+        this.updateControl();
+        this.alignCursor();
+    }
+    /** Unmasked value */ get unmaskedValue() {
+        return this._unmaskedValue;
+    }
+    set unmaskedValue(str) {
+        if (this.unmaskedValue === str) return;
+        this.masked.unmaskedValue = str;
+        this.updateControl();
+        this.alignCursor();
+    }
+    /** Typed unmasked value */ get typedValue() {
+        return this.masked.typedValue;
+    }
+    set typedValue(val) {
+        if (this.masked.typedValueEquals(val)) return;
+        this.masked.typedValue = val;
+        this.updateControl();
+        this.alignCursor();
+    }
+    /** Display value */ get displayValue() {
+        return this.masked.displayValue;
+    }
+    /** Starts listening to element events */ _bindEvents() {
+        this.el.bindEvents({
+            selectionChange: this._saveSelection,
+            input: this._onInput,
+            drop: this._onDrop,
+            click: this._onClick,
+            focus: this._onFocus,
+            commit: this._onChange
+        });
+    }
+    /** Stops listening to element events */ _unbindEvents() {
+        if (this.el) this.el.unbindEvents();
+    }
+    /** Fires custom event */ _fireEvent(ev, e) {
+        const listeners = this._listeners[ev];
+        if (!listeners) return;
+        listeners.forEach((l)=>l(e));
+    }
+    /** Current selection start */ get selectionStart() {
+        return this._cursorChanging ? this._changingCursorPos : this.el.selectionStart;
+    }
+    /** Current cursor position */ get cursorPos() {
+        return this._cursorChanging ? this._changingCursorPos : this.el.selectionEnd;
+    }
+    set cursorPos(pos) {
+        if (!this.el || !this.el.isActive) return;
+        this.el.select(pos, pos);
+        this._saveSelection();
+    }
+    /** Stores current selection */ _saveSelection() {
+        if (this.displayValue !== this.el.value) console.warn("Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly."); // eslint-disable-line no-console
+        this._selection = {
+            start: this.selectionStart,
+            end: this.cursorPos
+        };
+    }
+    /** Syncronizes model value from view */ updateValue() {
+        this.masked.value = this.el.value;
+        this._value = this.masked.value;
+    }
+    /** Syncronizes view from model value, fires change events */ updateControl() {
+        const newUnmaskedValue = this.masked.unmaskedValue;
+        const newValue = this.masked.value;
+        const newDisplayValue = this.displayValue;
+        const isChanged = this.unmaskedValue !== newUnmaskedValue || this.value !== newValue;
+        this._unmaskedValue = newUnmaskedValue;
+        this._value = newValue;
+        if (this.el.value !== newDisplayValue) this.el.value = newDisplayValue;
+        if (isChanged) this._fireChangeEvents();
+    }
+    /** Updates options with deep equal check, recreates {@link Masked} model if mask type changes */ updateOptions(opts) {
+        const { mask , ...restOpts } = opts;
+        const updateMask = !this.maskEquals(mask);
+        const updateOpts = !(0, _utilsJs.objectIncludes)(this.masked, restOpts);
+        if (updateMask) this.mask = mask;
+        if (updateOpts) this.masked.updateOptions(restOpts); // TODO
+        if (updateMask || updateOpts) this.updateControl();
+    }
+    /** Updates cursor */ updateCursor(cursorPos) {
+        if (cursorPos == null) return;
+        this.cursorPos = cursorPos;
+        // also queue change cursor for mobile browsers
+        this._delayUpdateCursor(cursorPos);
+    }
+    /** Delays cursor update to support mobile browsers */ _delayUpdateCursor(cursorPos) {
+        this._abortUpdateCursor();
+        this._changingCursorPos = cursorPos;
+        this._cursorChanging = setTimeout(()=>{
+            if (!this.el) return; // if was destroyed
+            this.cursorPos = this._changingCursorPos;
+            this._abortUpdateCursor();
+        }, 10);
+    }
+    /** Fires custom events */ _fireChangeEvents() {
+        this._fireEvent("accept", this._inputEvent);
+        if (this.masked.isComplete) this._fireEvent("complete", this._inputEvent);
+    }
+    /** Aborts delayed cursor update */ _abortUpdateCursor() {
+        if (this._cursorChanging) {
+            clearTimeout(this._cursorChanging);
+            delete this._cursorChanging;
+        }
+    }
+    /** Aligns cursor to nearest available position */ alignCursor() {
+        this.cursorPos = this.masked.nearestInputPos(this.masked.nearestInputPos(this.cursorPos, (0, _utilsJs.DIRECTION).LEFT));
+    }
+    /** Aligns cursor only if selection is empty */ alignCursorFriendly() {
+        if (this.selectionStart !== this.cursorPos) return; // skip if range is selected
+        this.alignCursor();
+    }
+    /** Adds listener on custom event */ on(ev, handler) {
+        if (!this._listeners[ev]) this._listeners[ev] = [];
+        this._listeners[ev].push(handler);
+        return this;
+    }
+    /** Removes custom event listener */ off(ev, handler) {
+        if (!this._listeners[ev]) return this;
+        if (!handler) {
+            delete this._listeners[ev];
+            return this;
+        }
+        const hIndex = this._listeners[ev].indexOf(handler);
+        if (hIndex >= 0) this._listeners[ev].splice(hIndex, 1);
+        return this;
+    }
+    /** Handles view input event */ _onInput(e) {
+        this._inputEvent = e;
+        this._abortUpdateCursor();
+        // fix strange IE behavior
+        if (!this._selection) return this.updateValue();
+        const details = new (0, _actionDetailsJsDefault.default)({
+            // new state
+            value: this.el.value,
+            cursorPos: this.cursorPos,
+            // old state
+            oldValue: this.displayValue,
+            oldSelection: this._selection
+        });
+        const oldRawValue = this.masked.rawInputValue;
+        const offset = this.masked.splice(details.startChangePos, details.removed.length, details.inserted, details.removeDirection, {
+            input: true,
+            raw: true
+        }).offset;
+        // force align in remove direction only if no input chars were removed
+        // otherwise we still need to align with NONE (to get out from fixed symbols for instance)
+        const removeDirection = oldRawValue === this.masked.rawInputValue ? details.removeDirection : (0, _utilsJs.DIRECTION).NONE;
+        let cursorPos = this.masked.nearestInputPos(details.startChangePos + offset, removeDirection);
+        if (removeDirection !== (0, _utilsJs.DIRECTION).NONE) cursorPos = this.masked.nearestInputPos(cursorPos, (0, _utilsJs.DIRECTION).NONE);
+        this.updateControl();
+        this.updateCursor(cursorPos);
+        delete this._inputEvent;
+    }
+    /** Handles view change event and commits model value */ _onChange() {
+        if (this.displayValue !== this.el.value) this.updateValue();
+        this.masked.doCommit();
+        this.updateControl();
+        this._saveSelection();
+    }
+    /** Handles view drop event, prevents by default */ _onDrop(ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+    }
+    /** Restore last selection on focus */ _onFocus(ev) {
+        this.alignCursorFriendly();
+    }
+    /** Restore last selection on focus */ _onClick(ev) {
+        this.alignCursorFriendly();
+    }
+    /** Unbind view events and removes element reference */ destroy() {
+        this._unbindEvents();
+        this._listeners.length = 0;
+        delete this.el;
+    }
+}
+(0, _holderJsDefault.default).InputMask = InputMask;
+
+},{"../core/utils.js":"hh2Rx","../core/action-details.js":"cJg34","../masked/factory.js":"4c29b","./mask-element.js":"6dhyp","./html-input-mask-element.js":"2feR7","./html-contenteditable-mask-element.js":"l1S15","../core/holder.js":"fNs7n","./html-mask-element.js":"exheL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4c29b":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>createMask);
+parcelHelpers.export(exports, "maskedClass", ()=>maskedClass);
+parcelHelpers.export(exports, "normalizeOpts", ()=>normalizeOpts);
+var _utilsJs = require("../core/utils.js");
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+// TODO can't use overloads here because of https://github.com/microsoft/TypeScript/issues/50754
+// export function maskedClass(mask: string): typeof MaskedPattern;
+// export function maskedClass(mask: DateConstructor): typeof MaskedDate;
+// export function maskedClass(mask: NumberConstructor): typeof MaskedNumber;
+// export function maskedClass(mask: Array<any> | ArrayConstructor): typeof MaskedDynamic;
+// export function maskedClass(mask: MaskedDate): typeof MaskedDate;
+// export function maskedClass(mask: MaskedNumber): typeof MaskedNumber;
+// export function maskedClass(mask: MaskedEnum): typeof MaskedEnum;
+// export function maskedClass(mask: MaskedRange): typeof MaskedRange;
+// export function maskedClass(mask: MaskedRegExp): typeof MaskedRegExp;
+// export function maskedClass(mask: MaskedFunction): typeof MaskedFunction;
+// export function maskedClass(mask: MaskedPattern): typeof MaskedPattern;
+// export function maskedClass(mask: MaskedDynamic): typeof MaskedDynamic;
+// export function maskedClass(mask: Masked): typeof Masked;
+// export function maskedClass(mask: typeof Masked): typeof Masked;
+// export function maskedClass(mask: typeof MaskedDate): typeof MaskedDate;
+// export function maskedClass(mask: typeof MaskedNumber): typeof MaskedNumber;
+// export function maskedClass(mask: typeof MaskedEnum): typeof MaskedEnum;
+// export function maskedClass(mask: typeof MaskedRange): typeof MaskedRange;
+// export function maskedClass(mask: typeof MaskedRegExp): typeof MaskedRegExp;
+// export function maskedClass(mask: typeof MaskedFunction): typeof MaskedFunction;
+// export function maskedClass(mask: typeof MaskedPattern): typeof MaskedPattern;
+// export function maskedClass(mask: typeof MaskedDynamic): typeof MaskedDynamic;
+// export function maskedClass<Mask extends typeof Masked> (mask: Mask): Mask;
+// export function maskedClass(mask: RegExp): typeof MaskedRegExp;
+// export function maskedClass(mask: (value: string, ...args: any[]) => boolean): typeof MaskedFunction;
+/** Get Masked class by mask type */ function maskedClass(mask) /* TODO */ {
+    if (mask == null) throw new Error("mask property should be defined");
+    if (mask instanceof RegExp) return (0, _holderJsDefault.default).MaskedRegExp;
+    if ((0, _utilsJs.isString)(mask)) return (0, _holderJsDefault.default).MaskedPattern;
+    if (mask === Date) return (0, _holderJsDefault.default).MaskedDate;
+    if (mask === Number) return (0, _holderJsDefault.default).MaskedNumber;
+    if (Array.isArray(mask) || mask === Array) return (0, _holderJsDefault.default).MaskedDynamic;
+    if ((0, _holderJsDefault.default).Masked && mask.prototype instanceof (0, _holderJsDefault.default).Masked) return mask;
+    if ((0, _holderJsDefault.default).Masked && mask instanceof (0, _holderJsDefault.default).Masked) return mask.constructor;
+    if (mask instanceof Function) return (0, _holderJsDefault.default).MaskedFunction;
+    console.warn("Mask not found for mask", mask); // eslint-disable-line no-console
+    return (0, _holderJsDefault.default).Masked;
+}
+function normalizeOpts(opts) {
+    if (!opts) throw new Error("Options in not defined");
+    if ((0, _holderJsDefault.default).Masked) {
+        if (opts.prototype instanceof (0, _holderJsDefault.default).Masked) return {
+            mask: opts
+        };
+        /*
+      handle cases like:
+      1) opts = Masked
+      2) opts = { mask: Masked, ...instanceOpts }
+    */ const { mask , ...instanceOpts } = opts instanceof (0, _holderJsDefault.default).Masked ? {
+            mask: opts
+        } : (0, _utilsJs.isObject)(opts) && opts.mask instanceof (0, _holderJsDefault.default).Masked ? opts : {};
+        if (mask) {
+            const _mask = mask.mask;
+            return {
+                ...(0, _utilsJs.pick)(mask, (_, k)=>!k.startsWith("_")),
+                mask: mask.constructor,
+                _mask,
+                ...instanceOpts
+            };
+        }
+    }
+    if (!(0, _utilsJs.isObject)(opts)) return {
+        mask: opts
+    };
+    return {
+        ...opts
+    };
+}
+// TODO can't use overloads here because of https://github.com/microsoft/TypeScript/issues/50754
+// From masked
+// export default function createMask<Opts extends Masked, ReturnMasked=Opts> (opts: Opts): ReturnMasked;
+// // From masked class
+// export default function createMask<Opts extends MaskedOptions<typeof Masked>, ReturnMasked extends Masked=InstanceType<Opts['mask']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedDate>, ReturnMasked extends MaskedDate=MaskedDate<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedNumber>, ReturnMasked extends MaskedNumber=MaskedNumber<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedEnum>, ReturnMasked extends MaskedEnum=MaskedEnum<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedRange>, ReturnMasked extends MaskedRange=MaskedRange<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedRegExp>, ReturnMasked extends MaskedRegExp=MaskedRegExp<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedFunction>, ReturnMasked extends MaskedFunction=MaskedFunction<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedPattern>, ReturnMasked extends MaskedPattern=MaskedPattern<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<typeof MaskedDynamic>, ReturnMasked extends MaskedDynamic=MaskedDynamic<Opts['parent']>> (opts: Opts): ReturnMasked;
+// // From mask opts
+// export default function createMask<Opts extends MaskedOptions<Masked>, ReturnMasked=Opts extends MaskedOptions<infer M> ? M : never> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedNumberOptions, ReturnMasked extends MaskedNumber=MaskedNumber<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedDateFactoryOptions, ReturnMasked extends MaskedDate=MaskedDate<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedEnumOptions, ReturnMasked extends MaskedEnum=MaskedEnum<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedRangeOptions, ReturnMasked extends MaskedRange=MaskedRange<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedPatternOptions, ReturnMasked extends MaskedPattern=MaskedPattern<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedDynamicOptions, ReturnMasked extends MaskedDynamic=MaskedDynamic<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<RegExp>, ReturnMasked extends MaskedRegExp=MaskedRegExp<Opts['parent']>> (opts: Opts): ReturnMasked;
+// export default function createMask<Opts extends MaskedOptions<Function>, ReturnMasked extends MaskedFunction=MaskedFunction<Opts['parent']>> (opts: Opts): ReturnMasked;
+/** Creates new {@link Masked} depending on mask type */ function createMask(opts) {
+    if ((0, _holderJsDefault.default).Masked && opts instanceof (0, _holderJsDefault.default).Masked) return opts;
+    const nOpts = normalizeOpts(opts);
+    const MaskedClass = maskedClass(nOpts.mask);
+    if (!MaskedClass) throw new Error("Masked class is not found for provided mask, appropriate module needs to be imported manually before creating mask.");
+    if (nOpts.mask === MaskedClass) delete nOpts.mask;
+    if (nOpts._mask) {
+        nOpts.mask = nOpts._mask;
+        delete nOpts._mask;
+    }
+    return new MaskedClass(nOpts);
+}
+(0, _holderJsDefault.default).createMask = createMask;
+
+},{"../core/utils.js":"hh2Rx","../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6dhyp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskElement);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+/**  Generic element API to use with mask */ class MaskElement {
+    /** */ /** */ /** */ /** Safely returns selection start */ get selectionStart() {
+        let start;
+        try {
+            start = this._unsafeSelectionStart;
+        } catch  {}
+        return start != null ? start : this.value.length;
+    }
+    /** Safely returns selection end */ get selectionEnd() {
+        let end;
+        try {
+            end = this._unsafeSelectionEnd;
+        } catch  {}
+        return end != null ? end : this.value.length;
+    }
+    /** Safely sets element selection */ select(start, end) {
+        if (start == null || end == null || start === this.selectionStart && end === this.selectionEnd) return;
+        try {
+            this._unsafeSelect(start, end);
+        } catch  {}
+    }
+    /** */ get isActive() {
+        return false;
+    }
+}
+(0, _holderJsDefault.default).MaskElement = MaskElement;
+
+},{"../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2feR7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HTMLInputMaskElement);
+var _htmlMaskElementJs = require("./html-mask-element.js");
+var _htmlMaskElementJsDefault = parcelHelpers.interopDefault(_htmlMaskElementJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _maskElementJs = require("./mask-element.js");
+/** Bridge between InputElement and {@link Masked} */ class HTMLInputMaskElement extends (0, _htmlMaskElementJsDefault.default) {
+    /** InputElement to use mask on */ constructor(input){
+        super(input);
+        this.input = input;
+        this._handlers = {};
+    }
+    /** Returns InputElement selection start */ get _unsafeSelectionStart() {
+        return this.input.selectionStart != null ? this.input.selectionStart : this.value.length;
+    }
+    /** Returns InputElement selection end */ get _unsafeSelectionEnd() {
+        return this.input.selectionEnd;
+    }
+    /** Sets InputElement selection */ _unsafeSelect(start, end) {
+        this.input.setSelectionRange(start, end);
+    }
+    get value() {
+        return this.input.value;
+    }
+    set value(value) {
+        this.input.value = value;
+    }
+}
+(0, _holderJsDefault.default).HTMLMaskElement = (0, _htmlMaskElementJsDefault.default);
+
+},{"./html-mask-element.js":"exheL","../core/holder.js":"fNs7n","./mask-element.js":"6dhyp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"exheL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HTMLMaskElement);
+var _maskElementJs = require("./mask-element.js");
+var _maskElementJsDefault = parcelHelpers.interopDefault(_maskElementJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+/** Bridge between HTMLElement and {@link Masked} */ class HTMLMaskElement extends (0, _maskElementJsDefault.default) {
+    /** HTMLElement to use mask on */ constructor(input){
+        super();
+        this.input = input;
+        this._handlers = {};
+    }
+    get rootElement() {
+        var _this$input$getRootNo, _this$input$getRootNo2, _this$input;
+        return (_this$input$getRootNo = (_this$input$getRootNo2 = (_this$input = this.input).getRootNode) == null ? void 0 : _this$input$getRootNo2.call(_this$input)) != null ? _this$input$getRootNo : document;
+    }
+    /**
+    Is element in focus
+  */ get isActive() {
+        return this.input === this.rootElement.activeElement;
+    }
+    /**
+    Binds HTMLElement events to mask internal events
+  */ bindEvents(handlers) {
+        Object.keys(handlers).forEach((event)=>this._toggleEventHandler(HTMLMaskElement.EVENTS_MAP[event], handlers[event]));
+    }
+    /**
+    Unbinds HTMLElement events to mask internal events
+  */ unbindEvents() {
+        Object.keys(this._handlers).forEach((event)=>this._toggleEventHandler(event));
+    }
+    _toggleEventHandler(event, handler) {
+        if (this._handlers[event]) {
+            this.input.removeEventListener(event, this._handlers[event]);
+            delete this._handlers[event];
+        }
+        if (handler) {
+            this.input.addEventListener(event, handler);
+            this._handlers[event] = handler;
+        }
+    }
+}
+/** Mapping between HTMLElement events and mask internal events */ HTMLMaskElement.EVENTS_MAP = {
+    selectionChange: "keydown",
+    input: "input",
+    drop: "drop",
+    click: "click",
+    focus: "focus",
+    commit: "blur"
+};
+(0, _holderJsDefault.default).HTMLMaskElement = HTMLMaskElement;
+
+},{"./mask-element.js":"6dhyp","../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l1S15":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>HTMLContenteditableMaskElement);
+var _htmlMaskElementJs = require("./html-mask-element.js");
+var _htmlMaskElementJsDefault = parcelHelpers.interopDefault(_htmlMaskElementJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _maskElementJs = require("./mask-element.js");
+class HTMLContenteditableMaskElement extends (0, _htmlMaskElementJsDefault.default) {
+    /** Returns HTMLElement selection start */ get _unsafeSelectionStart() {
+        const root = this.rootElement;
+        const selection = root.getSelection && root.getSelection();
+        const anchorOffset = selection && selection.anchorOffset;
+        const focusOffset = selection && selection.focusOffset;
+        if (focusOffset == null || anchorOffset == null || anchorOffset < focusOffset) return anchorOffset;
+        return focusOffset;
+    }
+    /** Returns HTMLElement selection end */ get _unsafeSelectionEnd() {
+        const root = this.rootElement;
+        const selection = root.getSelection && root.getSelection();
+        const anchorOffset = selection && selection.anchorOffset;
+        const focusOffset = selection && selection.focusOffset;
+        if (focusOffset == null || anchorOffset == null || anchorOffset > focusOffset) return anchorOffset;
+        return focusOffset;
+    }
+    /** Sets HTMLElement selection */ _unsafeSelect(start, end) {
+        if (!this.rootElement.createRange) return;
+        const range = this.rootElement.createRange();
+        range.setStart(this.input.firstChild || this.input, start);
+        range.setEnd(this.input.lastChild || this.input, end);
+        const root = this.rootElement;
+        const selection = root.getSelection && root.getSelection();
+        if (selection) {
+            selection.removeAllRanges();
+            selection.addRange(range);
+        }
+    }
+    /** HTMLElement value */ get value() {
+        return this.input.textContent || "";
+    }
+    set value(value) {
+        this.input.textContent = value;
+    }
+}
+(0, _holderJsDefault.default).HTMLContenteditableMaskElement = HTMLContenteditableMaskElement;
+
+},{"./html-mask-element.js":"exheL","../core/holder.js":"fNs7n","./mask-element.js":"6dhyp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cDdFe":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>ChangeDetails);
+var _holderJs = require("./holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+/** Provides details of changing model value */ class ChangeDetails {
+    /** Inserted symbols */ /** Can skip chars */ /** Additional offset if any changes occurred before tail */ /** Raw inserted is used by dynamic mask */ static normalize(prep) {
+        return Array.isArray(prep) ? prep : [
+            prep,
+            new ChangeDetails()
+        ];
+    }
+    constructor(details){
+        Object.assign(this, {
+            inserted: "",
+            rawInserted: "",
+            skip: false,
+            tailShift: 0
+        }, details);
+    }
+    /** Aggregate changes */ aggregate(details) {
+        this.rawInserted += details.rawInserted;
+        this.skip = this.skip || details.skip;
+        this.inserted += details.inserted;
+        this.tailShift += details.tailShift;
+        return this;
+    }
+    /** Total offset considering all changes */ get offset() {
+        return this.tailShift + this.inserted.length;
+    }
+}
+(0, _holderJsDefault.default).ChangeDetails = ChangeDetails;
+
+},{"./holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i9dza":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Masked);
+var _changeDetailsJs = require("../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+var _continuousTailDetailsJsDefault = parcelHelpers.interopDefault(_continuousTailDetailsJs);
+var _utilsJs = require("../core/utils.js");
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+/** Append flags */ /** Extract flags */ // see https://github.com/microsoft/TypeScript/issues/6223
+/** Provides common masking stuff */ class Masked {
+    /** */ /** */ /** Transforms value before mask processing */ /** Transforms each char before mask processing */ /** Validates if value is acceptable */ /** Does additional processing at the end of editing */ /** Format typed value to string */ /** Parse string to get typed value */ /** Enable characters overwriting */ /** */ /** */ /** */ constructor(opts){
+        this._value = "";
+        this._update({
+            ...Masked.DEFAULTS,
+            ...opts
+        });
+        this._initialized = true;
+    }
+    /** Sets and applies new options */ updateOptions(opts) {
+        if (!Object.keys(opts).length) return;
+        this.withValueRefresh(this._update.bind(this, opts));
+    }
+    /** Sets new options */ _update(opts) {
+        Object.assign(this, opts);
+    }
+    /** Mask state */ get state() {
+        return {
+            _value: this.value,
+            _rawInputValue: this.rawInputValue
+        };
+    }
+    set state(state) {
+        this._value = state._value;
+    }
+    /** Resets value */ reset() {
+        this._value = "";
+    }
+    get value() {
+        return this._value;
+    }
+    set value(value) {
+        this.resolve(value, {
+            input: true
+        });
+    }
+    /** Resolve new value */ resolve(value, flags) {
+        if (flags === void 0) flags = {
+            input: true
+        };
+        this.reset();
+        this.append(value, flags, "");
+        this.doCommit();
+    }
+    get unmaskedValue() {
+        return this.value;
+    }
+    set unmaskedValue(value) {
+        this.resolve(value, {});
+    }
+    get typedValue() {
+        return this.parse ? this.parse(this.value, this) : this.unmaskedValue;
+    }
+    set typedValue(value) {
+        if (this.format) this.value = this.format(value, this);
+        else this.unmaskedValue = String(value);
+    }
+    /** Value that includes raw user input */ get rawInputValue() {
+        return this.extractInput(0, this.displayValue.length, {
+            raw: true
+        });
+    }
+    set rawInputValue(value) {
+        this.resolve(value, {
+            raw: true
+        });
+    }
+    get displayValue() {
+        return this.value;
+    }
+    get isComplete() {
+        return true;
+    }
+    get isFilled() {
+        return this.isComplete;
+    }
+    /** Finds nearest input position in direction */ nearestInputPos(cursorPos, direction) {
+        return cursorPos;
+    }
+    totalInputPositions(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        return Math.min(this.displayValue.length, toPos - fromPos);
+    }
+    /** Extracts value in range considering flags */ extractInput(fromPos, toPos, flags) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        return this.displayValue.slice(fromPos, toPos);
+    }
+    /** Extracts tail in range */ extractTail(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        return new (0, _continuousTailDetailsJsDefault.default)(this.extractInput(fromPos, toPos), fromPos);
+    }
+    /** Appends tail */ appendTail(tail) {
+        if ((0, _utilsJs.isString)(tail)) tail = new (0, _continuousTailDetailsJsDefault.default)(String(tail));
+        return tail.appendTo(this);
+    }
+    /** Appends char */ _appendCharRaw(ch, flags) {
+        if (!ch) return new (0, _changeDetailsJsDefault.default)();
+        this._value += ch;
+        return new (0, _changeDetailsJsDefault.default)({
+            inserted: ch,
+            rawInserted: ch
+        });
+    }
+    /** Appends char */ _appendChar(ch, flags, checkTail) {
+        if (flags === void 0) flags = {};
+        const consistentState = this.state;
+        let details;
+        [ch, details] = this.doPrepareChar(ch, flags);
+        details = details.aggregate(this._appendCharRaw(ch, flags));
+        if (details.inserted) {
+            let consistentTail;
+            let appended = this.doValidate(flags) !== false;
+            if (appended && checkTail != null) {
+                // validation ok, check tail
+                const beforeTailState = this.state;
+                if (this.overwrite === true) {
+                    consistentTail = checkTail.state;
+                    checkTail.unshift(this.displayValue.length - details.tailShift);
+                }
+                let tailDetails = this.appendTail(checkTail);
+                appended = tailDetails.rawInserted === checkTail.toString();
+                // not ok, try shift
+                if (!(appended && tailDetails.inserted) && this.overwrite === "shift") {
+                    this.state = beforeTailState;
+                    consistentTail = checkTail.state;
+                    checkTail.shift();
+                    tailDetails = this.appendTail(checkTail);
+                    appended = tailDetails.rawInserted === checkTail.toString();
+                }
+                // if ok, rollback state after tail
+                if (appended && tailDetails.inserted) this.state = beforeTailState;
+            }
+            // revert all if something went wrong
+            if (!appended) {
+                details = new (0, _changeDetailsJsDefault.default)();
+                this.state = consistentState;
+                if (checkTail && consistentTail) checkTail.state = consistentTail;
+            }
+        }
+        return details;
+    }
+    /** Appends optional placeholder at the end */ _appendPlaceholder() {
+        return new (0, _changeDetailsJsDefault.default)();
+    }
+    /** Appends optional eager placeholder at the end */ _appendEager() {
+        return new (0, _changeDetailsJsDefault.default)();
+    }
+    /** Appends symbols considering flags */ append(str, flags, tail) {
+        if (!(0, _utilsJs.isString)(str)) throw new Error("value should be string");
+        const checkTail = (0, _utilsJs.isString)(tail) ? new (0, _continuousTailDetailsJsDefault.default)(String(tail)) : tail;
+        if (flags != null && flags.tail) flags._beforeTailState = this.state;
+        let details;
+        [str, details] = this.doPrepare(str, flags);
+        for(let ci = 0; ci < str.length; ++ci){
+            const d = this._appendChar(str[ci], flags, checkTail);
+            if (!d.rawInserted && !this.doSkipInvalid(str[ci], flags, checkTail)) break;
+            details.aggregate(d);
+        }
+        if ((this.eager === true || this.eager === "append") && flags != null && flags.input && str) details.aggregate(this._appendEager());
+        // append tail but aggregate only tailShift
+        if (checkTail != null) details.tailShift += this.appendTail(checkTail).tailShift;
+        return details;
+    }
+    remove(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        this._value = this.displayValue.slice(0, fromPos) + this.displayValue.slice(toPos);
+        return new (0, _changeDetailsJsDefault.default)();
+    }
+    /** Calls function and reapplies current value */ withValueRefresh(fn) {
+        if (this._refreshing || !this._initialized) return fn();
+        this._refreshing = true;
+        const rawInput = this.rawInputValue;
+        const value = this.value;
+        const ret = fn();
+        this.rawInputValue = rawInput;
+        // append lost trailing chars at the end
+        if (this.value && this.value !== value && value.indexOf(this.value) === 0) this.append(value.slice(this.displayValue.length), {}, "");
+        delete this._refreshing;
+        return ret;
+    }
+    runIsolated(fn) {
+        if (this._isolated || !this._initialized) return fn(this);
+        this._isolated = true;
+        const state = this.state;
+        const ret = fn(this);
+        this.state = state;
+        delete this._isolated;
+        return ret;
+    }
+    doSkipInvalid(ch, flags, checkTail) {
+        return Boolean(this.skipInvalid);
+    }
+    /** Prepares string before mask processing */ doPrepare(str, flags) {
+        if (flags === void 0) flags = {};
+        return (0, _changeDetailsJsDefault.default).normalize(this.prepare ? this.prepare(str, this, flags) : str);
+    }
+    /** Prepares each char before mask processing */ doPrepareChar(str, flags) {
+        if (flags === void 0) flags = {};
+        return (0, _changeDetailsJsDefault.default).normalize(this.prepareChar ? this.prepareChar(str, this, flags) : str);
+    }
+    /** Validates if value is acceptable */ doValidate(flags) {
+        return (!this.validate || this.validate(this.value, this, flags)) && (!this.parent || this.parent.doValidate(flags));
+    }
+    /** Does additional processing at the end of editing */ doCommit() {
+        if (this.commit) this.commit(this.value, this);
+    }
+    splice(start, deleteCount, inserted, removeDirection, flags) {
+        if (removeDirection === void 0) removeDirection = (0, _utilsJs.DIRECTION).NONE;
+        if (flags === void 0) flags = {
+            input: true
+        };
+        const tailPos = start + deleteCount;
+        const tail = this.extractTail(tailPos);
+        const eagerRemove = this.eager === true || this.eager === "remove";
+        let oldRawValue;
+        if (eagerRemove) {
+            removeDirection = (0, _utilsJs.forceDirection)(removeDirection);
+            oldRawValue = this.extractInput(0, tailPos, {
+                raw: true
+            });
+        }
+        let startChangePos = start;
+        const details = new (0, _changeDetailsJsDefault.default)();
+        // if it is just deletion without insertion
+        if (removeDirection !== (0, _utilsJs.DIRECTION).NONE) {
+            startChangePos = this.nearestInputPos(start, deleteCount > 1 && start !== 0 && !eagerRemove ? (0, _utilsJs.DIRECTION).NONE : removeDirection);
+            // adjust tailShift if start was aligned
+            details.tailShift = startChangePos - start;
+        }
+        details.aggregate(this.remove(startChangePos));
+        if (eagerRemove && removeDirection !== (0, _utilsJs.DIRECTION).NONE && oldRawValue === this.rawInputValue) {
+            if (removeDirection === (0, _utilsJs.DIRECTION).FORCE_LEFT) {
+                let valLength;
+                while(oldRawValue === this.rawInputValue && (valLength = this.displayValue.length))details.aggregate(new (0, _changeDetailsJsDefault.default)({
+                    tailShift: -1
+                })).aggregate(this.remove(valLength - 1));
+            } else if (removeDirection === (0, _utilsJs.DIRECTION).FORCE_RIGHT) tail.unshift();
+        }
+        return details.aggregate(this.append(inserted, flags, tail));
+    }
+    maskEquals(mask) {
+        return this.mask === mask;
+    }
+    typedValueEquals(value) {
+        const tval = this.typedValue;
+        return value === tval || Masked.EMPTY_VALUES.includes(value) && Masked.EMPTY_VALUES.includes(tval) || (this.format ? this.format(value, this) === this.format(this.typedValue, this) : false);
+    }
+}
+Masked.DEFAULTS = {
+    skipInvalid: true
+};
+Masked.EMPTY_VALUES = [
+    undefined,
+    null,
+    ""
+];
+(0, _holderJsDefault.default).Masked = Masked;
+
+},{"../core/change-details.js":"cDdFe","../core/continuous-tail-details.js":"5MbDY","../core/utils.js":"hh2Rx","../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1V3CB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedDate);
+var _patternJs = require("./pattern.js");
+var _patternJsDefault = parcelHelpers.interopDefault(_patternJs);
+var _rangeJs = require("./range.js");
+var _rangeJsDefault = parcelHelpers.interopDefault(_rangeJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _utilsJs = require("../core/utils.js");
+var _changeDetailsJs = require("../core/change-details.js");
+var _baseJs = require("./base.js");
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+var _factoryJs = require("./factory.js");
+var _chunkTailDetailsJs = require("./pattern/chunk-tail-details.js");
+var _cursorJs = require("./pattern/cursor.js");
+var _fixedDefinitionJs = require("./pattern/fixed-definition.js");
+var _inputDefinitionJs = require("./pattern/input-definition.js");
+var _regexpJs = require("./regexp.js");
+/** Date mask */ class MaskedDate extends (0, _patternJsDefault.default) {
+    /** Pattern mask for date according to {@link MaskedDate#format} */ /** Start date */ /** End date */ /** */ /** Format typed value to string */ /** Parse string to get typed value */ constructor(opts){
+        const { mask , pattern , ...patternOpts } = {
+            ...MaskedDate.DEFAULTS,
+            ...opts
+        };
+        super({
+            ...patternOpts,
+            mask: (0, _utilsJs.isString)(mask) ? mask : pattern
+        });
+    }
+    updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        const { mask , pattern , blocks , ...patternOpts } = {
+            ...MaskedDate.DEFAULTS,
+            ...opts
+        };
+        const patternBlocks = Object.assign({}, MaskedDate.GET_DEFAULT_BLOCKS());
+        // adjust year block
+        if (opts.min) patternBlocks.Y.from = opts.min.getFullYear();
+        if (opts.max) patternBlocks.Y.to = opts.max.getFullYear();
+        if (opts.min && opts.max && patternBlocks.Y.from === patternBlocks.Y.to) {
+            patternBlocks.m.from = opts.min.getMonth() + 1;
+            patternBlocks.m.to = opts.max.getMonth() + 1;
+            if (patternBlocks.m.from === patternBlocks.m.to) {
+                patternBlocks.d.from = opts.min.getDate();
+                patternBlocks.d.to = opts.max.getDate();
+            }
+        }
+        Object.assign(patternBlocks, this.blocks, blocks);
+        // add autofix
+        Object.keys(patternBlocks).forEach((bk)=>{
+            const b = patternBlocks[bk];
+            if (!("autofix" in b) && "autofix" in opts) b.autofix = opts.autofix;
+        });
+        super._update({
+            ...patternOpts,
+            mask: (0, _utilsJs.isString)(mask) ? mask : pattern,
+            blocks: patternBlocks
+        });
+    }
+    doValidate(flags) {
+        const date = this.date;
+        return super.doValidate(flags) && (!this.isComplete || this.isDateExist(this.value) && date != null && (this.min == null || this.min <= date) && (this.max == null || date <= this.max));
+    }
+    /** Checks if date is exists */ isDateExist(str) {
+        return this.format(this.parse(str, this), this).indexOf(str) >= 0;
+    }
+    /** Parsed Date */ get date() {
+        return this.typedValue;
+    }
+    set date(date) {
+        this.typedValue = date;
+    }
+    get typedValue() {
+        return this.isComplete ? super.typedValue : null;
+    }
+    set typedValue(value) {
+        super.typedValue = value;
+    }
+    maskEquals(mask) {
+        return mask === Date || super.maskEquals(mask);
+    }
+}
+MaskedDate.GET_DEFAULT_BLOCKS = ()=>({
+        d: {
+            mask: (0, _rangeJsDefault.default),
+            from: 1,
+            to: 31,
+            maxLength: 2
+        },
+        m: {
+            mask: (0, _rangeJsDefault.default),
+            from: 1,
+            to: 12,
+            maxLength: 2
+        },
+        Y: {
+            mask: (0, _rangeJsDefault.default),
+            from: 1900,
+            to: 9999
+        }
+    });
+MaskedDate.DEFAULTS = {
+    mask: Date,
+    pattern: "d{.}`m{.}`Y",
+    format: (date, masked)=>{
+        if (!date) return "";
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const year = date.getFullYear();
+        return [
+            day,
+            month,
+            year
+        ].join(".");
+    },
+    parse: (str, masked)=>{
+        const [day, month, year] = str.split(".").map(Number);
+        return new Date(year, month - 1, day);
+    }
+};
+(0, _holderJsDefault.default).MaskedDate = MaskedDate;
+
+},{"./pattern.js":"edg1G","./range.js":"iHvQL","../core/holder.js":"fNs7n","../core/utils.js":"hh2Rx","../core/change-details.js":"cDdFe","./base.js":"i9dza","../core/continuous-tail-details.js":"5MbDY","./factory.js":"4c29b","./pattern/chunk-tail-details.js":"a8Q24","./pattern/cursor.js":"1K9Ff","./pattern/fixed-definition.js":"fnLC7","./pattern/input-definition.js":"lGvsS","./regexp.js":"7B25G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"edg1G":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedPattern);
+var _changeDetailsJs = require("../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _utilsJs = require("../core/utils.js");
+var _baseJs = require("./base.js");
+var _baseJsDefault = parcelHelpers.interopDefault(_baseJs);
+var _factoryJs = require("./factory.js");
+var _factoryJsDefault = parcelHelpers.interopDefault(_factoryJs);
+var _chunkTailDetailsJs = require("./pattern/chunk-tail-details.js");
+var _chunkTailDetailsJsDefault = parcelHelpers.interopDefault(_chunkTailDetailsJs);
+var _cursorJs = require("./pattern/cursor.js");
+var _cursorJsDefault = parcelHelpers.interopDefault(_cursorJs);
+var _fixedDefinitionJs = require("./pattern/fixed-definition.js");
+var _fixedDefinitionJsDefault = parcelHelpers.interopDefault(_fixedDefinitionJs);
+var _inputDefinitionJs = require("./pattern/input-definition.js");
+var _inputDefinitionJsDefault = parcelHelpers.interopDefault(_inputDefinitionJs);
+var _regexpJs = require("./regexp.js");
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+/** Pattern mask */ class MaskedPattern extends (0, _baseJsDefault.default) {
+    /** */ /** */ /** Single char for empty input */ /** Single char for filled input */ /** Show placeholder only when needed */ /** Enable characters overwriting */ /** */ /** */ constructor(opts){
+        super({
+            ...MaskedPattern.DEFAULTS,
+            ...opts,
+            definitions: Object.assign({}, (0, _inputDefinitionJsDefault.default).DEFAULT_DEFINITIONS, opts == null ? void 0 : opts.definitions)
+        });
+    }
+    updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        opts.definitions = Object.assign({}, this.definitions, opts.definitions);
+        super._update(opts);
+        this._rebuildMask();
+    }
+    _rebuildMask() {
+        const defs = this.definitions;
+        this._blocks = [];
+        this.exposeBlock = undefined;
+        this._stops = [];
+        this._maskedBlocks = {};
+        const pattern = this.mask;
+        if (!pattern || !defs) return;
+        let unmaskingBlock = false;
+        let optionalBlock = false;
+        for(let i = 0; i < pattern.length; ++i){
+            if (this.blocks) {
+                const p = pattern.slice(i);
+                const bNames = Object.keys(this.blocks).filter((bName)=>p.indexOf(bName) === 0);
+                // order by key length
+                bNames.sort((a, b)=>b.length - a.length);
+                // use block name with max length
+                const bName = bNames[0];
+                if (bName) {
+                    const { expose , ...blockOpts } = (0, _factoryJs.normalizeOpts)(this.blocks[bName]);
+                    const maskedBlock = (0, _factoryJsDefault.default)({
+                        lazy: this.lazy,
+                        eager: this.eager,
+                        placeholderChar: this.placeholderChar,
+                        displayChar: this.displayChar,
+                        overwrite: this.overwrite,
+                        ...blockOpts,
+                        parent: this
+                    });
+                    if (maskedBlock) {
+                        this._blocks.push(maskedBlock);
+                        if (expose) this.exposeBlock = maskedBlock;
+                        // store block index
+                        if (!this._maskedBlocks[bName]) this._maskedBlocks[bName] = [];
+                        this._maskedBlocks[bName].push(this._blocks.length - 1);
+                    }
+                    i += bName.length - 1;
+                    continue;
+                }
+            }
+            let char = pattern[i];
+            let isInput = char in defs;
+            if (char === MaskedPattern.STOP_CHAR) {
+                this._stops.push(this._blocks.length);
+                continue;
+            }
+            if (char === "{" || char === "}") {
+                unmaskingBlock = !unmaskingBlock;
+                continue;
+            }
+            if (char === "[" || char === "]") {
+                optionalBlock = !optionalBlock;
+                continue;
+            }
+            if (char === MaskedPattern.ESCAPE_CHAR) {
+                ++i;
+                char = pattern[i];
+                if (!char) break;
+                isInput = false;
+            }
+            const def = isInput ? new (0, _inputDefinitionJsDefault.default)({
+                isOptional: optionalBlock,
+                lazy: this.lazy,
+                eager: this.eager,
+                placeholderChar: this.placeholderChar,
+                displayChar: this.displayChar,
+                ...(0, _factoryJs.normalizeOpts)(defs[char]),
+                parent: this
+            }) : new (0, _fixedDefinitionJsDefault.default)({
+                char,
+                eager: this.eager,
+                isUnmasking: unmaskingBlock
+            });
+            this._blocks.push(def);
+        }
+    }
+    get state() {
+        return {
+            ...super.state,
+            _blocks: this._blocks.map((b)=>b.state)
+        };
+    }
+    set state(state) {
+        const { _blocks , ...maskedState } = state;
+        this._blocks.forEach((b, bi)=>b.state = _blocks[bi]);
+        super.state = maskedState;
+    }
+    reset() {
+        super.reset();
+        this._blocks.forEach((b)=>b.reset());
+    }
+    get isComplete() {
+        return this.exposeBlock ? this.exposeBlock.isComplete : this._blocks.every((b)=>b.isComplete);
+    }
+    get isFilled() {
+        return this._blocks.every((b)=>b.isFilled);
+    }
+    get isFixed() {
+        return this._blocks.every((b)=>b.isFixed);
+    }
+    get isOptional() {
+        return this._blocks.every((b)=>b.isOptional);
+    }
+    doCommit() {
+        this._blocks.forEach((b)=>b.doCommit());
+        super.doCommit();
+    }
+    get unmaskedValue() {
+        return this.exposeBlock ? this.exposeBlock.unmaskedValue : this._blocks.reduce((str, b)=>str += b.unmaskedValue, "");
+    }
+    set unmaskedValue(unmaskedValue) {
+        if (this.exposeBlock) {
+            const tail = this.extractTail(this._blockStartPos(this._blocks.indexOf(this.exposeBlock)) + this.exposeBlock.displayValue.length);
+            this.exposeBlock.unmaskedValue = unmaskedValue;
+            this.appendTail(tail);
+            this.doCommit();
+        } else super.unmaskedValue = unmaskedValue;
+    }
+    get value() {
+        return this.exposeBlock ? this.exposeBlock.value : // TODO return _value when not in change?
+        this._blocks.reduce((str, b)=>str += b.value, "");
+    }
+    set value(value) {
+        if (this.exposeBlock) {
+            const tail = this.extractTail(this._blockStartPos(this._blocks.indexOf(this.exposeBlock)) + this.exposeBlock.displayValue.length);
+            this.exposeBlock.value = value;
+            this.appendTail(tail);
+            this.doCommit();
+        } else super.value = value;
+    }
+    get typedValue() {
+        return this.exposeBlock ? this.exposeBlock.typedValue : super.typedValue;
+    }
+    set typedValue(value) {
+        if (this.exposeBlock) {
+            const tail = this.extractTail(this._blockStartPos(this._blocks.indexOf(this.exposeBlock)) + this.exposeBlock.displayValue.length);
+            this.exposeBlock.typedValue = value;
+            this.appendTail(tail);
+            this.doCommit();
+        } else super.typedValue = value;
+    }
+    get displayValue() {
+        return this._blocks.reduce((str, b)=>str += b.displayValue, "");
+    }
+    appendTail(tail) {
+        return super.appendTail(tail).aggregate(this._appendPlaceholder());
+    }
+    _appendEager() {
+        var _this$_mapPosToBlock;
+        const details = new (0, _changeDetailsJsDefault.default)();
+        let startBlockIndex = (_this$_mapPosToBlock = this._mapPosToBlock(this.displayValue.length)) == null ? void 0 : _this$_mapPosToBlock.index;
+        if (startBlockIndex == null) return details;
+        // TODO test if it works for nested pattern masks
+        if (this._blocks[startBlockIndex].isFilled) ++startBlockIndex;
+        for(let bi = startBlockIndex; bi < this._blocks.length; ++bi){
+            const d = this._blocks[bi]._appendEager();
+            if (!d.inserted) break;
+            details.aggregate(d);
+        }
+        return details;
+    }
+    _appendCharRaw(ch, flags) {
+        if (flags === void 0) flags = {};
+        const blockIter = this._mapPosToBlock(this.displayValue.length);
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (!blockIter) return details;
+        for(let bi = blockIter.index;; ++bi){
+            var _flags$_beforeTailSta, _flags$_beforeTailSta2;
+            const block = this._blocks[bi];
+            if (!block) break;
+            const blockDetails = block._appendChar(ch, {
+                ...flags,
+                _beforeTailState: (_flags$_beforeTailSta = flags._beforeTailState) == null ? void 0 : (_flags$_beforeTailSta2 = _flags$_beforeTailSta._blocks) == null ? void 0 : _flags$_beforeTailSta2[bi]
+            });
+            const skip = blockDetails.skip;
+            details.aggregate(blockDetails);
+            if (skip || blockDetails.rawInserted) break; // go next char
+        }
+        return details;
+    }
+    extractTail(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        const chunkTail = new (0, _chunkTailDetailsJsDefault.default)();
+        if (fromPos === toPos) return chunkTail;
+        this._forEachBlocksInRange(fromPos, toPos, (b, bi, bFromPos, bToPos)=>{
+            const blockChunk = b.extractTail(bFromPos, bToPos);
+            blockChunk.stop = this._findStopBefore(bi);
+            blockChunk.from = this._blockStartPos(bi);
+            if (blockChunk instanceof (0, _chunkTailDetailsJsDefault.default)) blockChunk.blockIndex = bi;
+            chunkTail.extend(blockChunk);
+        });
+        return chunkTail;
+    }
+    extractInput(fromPos, toPos, flags) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        if (flags === void 0) flags = {};
+        if (fromPos === toPos) return "";
+        let input = "";
+        this._forEachBlocksInRange(fromPos, toPos, (b, _, fromPos, toPos)=>{
+            input += b.extractInput(fromPos, toPos, flags);
+        });
+        return input;
+    }
+    _findStopBefore(blockIndex) {
+        let stopBefore;
+        for(let si = 0; si < this._stops.length; ++si){
+            const stop = this._stops[si];
+            if (stop <= blockIndex) stopBefore = stop;
+            else break;
+        }
+        return stopBefore;
+    }
+    /** Appends placeholder depending on laziness */ _appendPlaceholder(toBlockIndex) {
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (this.lazy && toBlockIndex == null) return details;
+        const startBlockIter = this._mapPosToBlock(this.displayValue.length);
+        if (!startBlockIter) return details;
+        const startBlockIndex = startBlockIter.index;
+        const endBlockIndex = toBlockIndex != null ? toBlockIndex : this._blocks.length;
+        this._blocks.slice(startBlockIndex, endBlockIndex).forEach((b)=>{
+            if (!b.lazy || toBlockIndex != null) {
+                var _blocks2;
+                const bDetails = b._appendPlaceholder((_blocks2 = b._blocks) == null ? void 0 : _blocks2.length);
+                this._value += bDetails.inserted;
+                details.aggregate(bDetails);
+            }
+        });
+        return details;
+    }
+    /** Finds block in pos */ _mapPosToBlock(pos) {
+        let accVal = "";
+        for(let bi = 0; bi < this._blocks.length; ++bi){
+            const block = this._blocks[bi];
+            const blockStartPos = accVal.length;
+            accVal += block.displayValue;
+            if (pos <= accVal.length) return {
+                index: bi,
+                offset: pos - blockStartPos
+            };
+        }
+    }
+    _blockStartPos(blockIndex) {
+        return this._blocks.slice(0, blockIndex).reduce((pos, b)=>pos += b.displayValue.length, 0);
+    }
+    _forEachBlocksInRange(fromPos, toPos, fn) {
+        if (toPos === void 0) toPos = this.displayValue.length;
+        const fromBlockIter = this._mapPosToBlock(fromPos);
+        if (fromBlockIter) {
+            const toBlockIter = this._mapPosToBlock(toPos);
+            // process first block
+            const isSameBlock = toBlockIter && fromBlockIter.index === toBlockIter.index;
+            const fromBlockStartPos = fromBlockIter.offset;
+            const fromBlockEndPos = toBlockIter && isSameBlock ? toBlockIter.offset : this._blocks[fromBlockIter.index].displayValue.length;
+            fn(this._blocks[fromBlockIter.index], fromBlockIter.index, fromBlockStartPos, fromBlockEndPos);
+            if (toBlockIter && !isSameBlock) {
+                // process intermediate blocks
+                for(let bi = fromBlockIter.index + 1; bi < toBlockIter.index; ++bi)fn(this._blocks[bi], bi, 0, this._blocks[bi].displayValue.length);
+                // process last block
+                fn(this._blocks[toBlockIter.index], toBlockIter.index, 0, toBlockIter.offset);
+            }
+        }
+    }
+    remove(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        const removeDetails = super.remove(fromPos, toPos);
+        this._forEachBlocksInRange(fromPos, toPos, (b, _, bFromPos, bToPos)=>{
+            removeDetails.aggregate(b.remove(bFromPos, bToPos));
+        });
+        return removeDetails;
+    }
+    nearestInputPos(cursorPos, direction) {
+        if (direction === void 0) direction = (0, _utilsJs.DIRECTION).NONE;
+        if (!this._blocks.length) return 0;
+        const cursor = new (0, _cursorJsDefault.default)(this, cursorPos);
+        if (direction === (0, _utilsJs.DIRECTION).NONE) {
+            // -------------------------------------------------
+            // NONE should only go out from fixed to the right!
+            // -------------------------------------------------
+            if (cursor.pushRightBeforeInput()) return cursor.pos;
+            cursor.popState();
+            if (cursor.pushLeftBeforeInput()) return cursor.pos;
+            return this.displayValue.length;
+        }
+        // FORCE is only about a|* otherwise is 0
+        if (direction === (0, _utilsJs.DIRECTION).LEFT || direction === (0, _utilsJs.DIRECTION).FORCE_LEFT) {
+            // try to break fast when *|a
+            if (direction === (0, _utilsJs.DIRECTION).LEFT) {
+                cursor.pushRightBeforeFilled();
+                if (cursor.ok && cursor.pos === cursorPos) return cursorPos;
+                cursor.popState();
+            }
+            // forward flow
+            cursor.pushLeftBeforeInput();
+            cursor.pushLeftBeforeRequired();
+            cursor.pushLeftBeforeFilled();
+            // backward flow
+            if (direction === (0, _utilsJs.DIRECTION).LEFT) {
+                cursor.pushRightBeforeInput();
+                cursor.pushRightBeforeRequired();
+                if (cursor.ok && cursor.pos <= cursorPos) return cursor.pos;
+                cursor.popState();
+                if (cursor.ok && cursor.pos <= cursorPos) return cursor.pos;
+                cursor.popState();
+            }
+            if (cursor.ok) return cursor.pos;
+            if (direction === (0, _utilsJs.DIRECTION).FORCE_LEFT) return 0;
+            cursor.popState();
+            if (cursor.ok) return cursor.pos;
+            cursor.popState();
+            if (cursor.ok) return cursor.pos;
+            return 0;
+        }
+        if (direction === (0, _utilsJs.DIRECTION).RIGHT || direction === (0, _utilsJs.DIRECTION).FORCE_RIGHT) {
+            // forward flow
+            cursor.pushRightBeforeInput();
+            cursor.pushRightBeforeRequired();
+            if (cursor.pushRightBeforeFilled()) return cursor.pos;
+            if (direction === (0, _utilsJs.DIRECTION).FORCE_RIGHT) return this.displayValue.length;
+            // backward flow
+            cursor.popState();
+            if (cursor.ok) return cursor.pos;
+            cursor.popState();
+            if (cursor.ok) return cursor.pos;
+            return this.nearestInputPos(cursorPos, (0, _utilsJs.DIRECTION).LEFT);
+        }
+        return cursorPos;
+    }
+    totalInputPositions(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        let total = 0;
+        this._forEachBlocksInRange(fromPos, toPos, (b, _, bFromPos, bToPos)=>{
+            total += b.totalInputPositions(bFromPos, bToPos);
+        });
+        return total;
+    }
+    /** Get block by name */ maskedBlock(name) {
+        return this.maskedBlocks(name)[0];
+    }
+    /** Get all blocks by name */ maskedBlocks(name) {
+        const indices = this._maskedBlocks[name];
+        if (!indices) return [];
+        return indices.map((gi)=>this._blocks[gi]);
+    }
+}
+MaskedPattern.DEFAULTS = {
+    lazy: true,
+    placeholderChar: "_"
+};
+MaskedPattern.STOP_CHAR = "`";
+MaskedPattern.ESCAPE_CHAR = "\\";
+MaskedPattern.InputDefinition = (0, _inputDefinitionJsDefault.default);
+MaskedPattern.FixedDefinition = (0, _fixedDefinitionJsDefault.default);
+(0, _holderJsDefault.default).MaskedPattern = MaskedPattern;
+
+},{"../core/change-details.js":"cDdFe","../core/holder.js":"fNs7n","../core/utils.js":"hh2Rx","./base.js":"i9dza","./factory.js":"4c29b","./pattern/chunk-tail-details.js":"a8Q24","./pattern/cursor.js":"1K9Ff","./pattern/fixed-definition.js":"fnLC7","./pattern/input-definition.js":"lGvsS","./regexp.js":"7B25G","../core/continuous-tail-details.js":"5MbDY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a8Q24":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>ChunksTailDetails);
+var _changeDetailsJs = require("../../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _utilsJs = require("../../core/utils.js");
+var _continuousTailDetailsJs = require("../../core/continuous-tail-details.js");
+var _continuousTailDetailsJsDefault = parcelHelpers.interopDefault(_continuousTailDetailsJs);
+var _holderJs = require("../../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+class ChunksTailDetails {
+    /** */ constructor(chunks, from){
+        if (chunks === void 0) chunks = [];
+        if (from === void 0) from = 0;
+        this.chunks = chunks;
+        this.from = from;
+    }
+    toString() {
+        return this.chunks.map(String).join("");
+    }
+    extend(tailChunk) {
+        if (!String(tailChunk)) return;
+        tailChunk = (0, _utilsJs.isString)(tailChunk) ? new (0, _continuousTailDetailsJsDefault.default)(String(tailChunk)) : tailChunk;
+        const lastChunk = this.chunks[this.chunks.length - 1];
+        const extendLast = lastChunk && // if stops are same or tail has no stop
+        (lastChunk.stop === tailChunk.stop || tailChunk.stop == null) && // if tail chunk goes just after last chunk
+        tailChunk.from === lastChunk.from + lastChunk.toString().length;
+        if (tailChunk instanceof (0, _continuousTailDetailsJsDefault.default)) {
+            // check the ability to extend previous chunk
+            if (extendLast) // extend previous chunk
+            lastChunk.extend(tailChunk.toString());
+            else // append new chunk
+            this.chunks.push(tailChunk);
+        } else if (tailChunk instanceof ChunksTailDetails) {
+            if (tailChunk.stop == null) {
+                // unwrap floating chunks to parent, keeping `from` pos
+                let firstTailChunk;
+                while(tailChunk.chunks.length && tailChunk.chunks[0].stop == null){
+                    firstTailChunk = tailChunk.chunks.shift(); // not possible to be `undefined` because length was checked above
+                    firstTailChunk.from += tailChunk.from;
+                    this.extend(firstTailChunk);
+                }
+            }
+            // if tail chunk still has value
+            if (tailChunk.toString()) {
+                // if chunks contains stops, then popup stop to container
+                tailChunk.stop = tailChunk.blockIndex;
+                this.chunks.push(tailChunk);
+            }
+        }
+    }
+    appendTo(masked) {
+        if (!(masked instanceof (0, _holderJsDefault.default).MaskedPattern)) {
+            const tail = new (0, _continuousTailDetailsJsDefault.default)(this.toString());
+            return tail.appendTo(masked);
+        }
+        const details = new (0, _changeDetailsJsDefault.default)();
+        for(let ci = 0; ci < this.chunks.length && !details.skip; ++ci){
+            const chunk = this.chunks[ci];
+            const lastBlockIter = masked._mapPosToBlock(masked.displayValue.length);
+            const stop = chunk.stop;
+            let chunkBlock;
+            if (stop != null && // if block not found or stop is behind lastBlock
+            (!lastBlockIter || lastBlockIter.index <= stop)) {
+                if (chunk instanceof ChunksTailDetails || // for continuous block also check if stop is exist
+                masked._stops.indexOf(stop) >= 0) {
+                    const phDetails = masked._appendPlaceholder(stop);
+                    details.aggregate(phDetails);
+                }
+                chunkBlock = chunk instanceof ChunksTailDetails && masked._blocks[stop];
+            }
+            if (chunkBlock) {
+                const tailDetails = chunkBlock.appendTail(chunk);
+                tailDetails.skip = false; // always ignore skip, it will be set on last
+                details.aggregate(tailDetails);
+                masked._value += tailDetails.inserted;
+                // get not inserted chars
+                const remainChars = chunk.toString().slice(tailDetails.rawInserted.length);
+                if (remainChars) details.aggregate(masked.append(remainChars, {
+                    tail: true
+                }));
+            } else details.aggregate(masked.append(chunk.toString(), {
+                tail: true
+            }));
+        }
+        return details;
+    }
+    get state() {
+        return {
+            chunks: this.chunks.map((c)=>c.state),
+            from: this.from,
+            stop: this.stop,
+            blockIndex: this.blockIndex
+        };
+    }
+    set state(state) {
+        const { chunks , ...props } = state;
+        Object.assign(this, props);
+        this.chunks = chunks.map((cstate)=>{
+            const chunk = "chunks" in cstate ? new ChunksTailDetails() : new (0, _continuousTailDetailsJsDefault.default)();
+            chunk.state = cstate;
+            return chunk;
+        });
+    }
+    unshift(beforePos) {
+        if (!this.chunks.length || beforePos != null && this.from >= beforePos) return "";
+        const chunkShiftPos = beforePos != null ? beforePos - this.from : beforePos;
+        let ci = 0;
+        while(ci < this.chunks.length){
+            const chunk = this.chunks[ci];
+            const shiftChar = chunk.unshift(chunkShiftPos);
+            if (chunk.toString()) {
+                // chunk still contains value
+                // but not shifted - means no more available chars to shift
+                if (!shiftChar) break;
+                ++ci;
+            } else // clean if chunk has no value
+            this.chunks.splice(ci, 1);
+            if (shiftChar) return shiftChar;
+        }
+        return "";
+    }
+    shift() {
+        if (!this.chunks.length) return "";
+        let ci = this.chunks.length - 1;
+        while(0 <= ci){
+            const chunk = this.chunks[ci];
+            const shiftChar = chunk.shift();
+            if (chunk.toString()) {
+                // chunk still contains value
+                // but not shifted - means no more available chars to shift
+                if (!shiftChar) break;
+                --ci;
+            } else // clean if chunk has no value
+            this.chunks.splice(ci, 1);
+            if (shiftChar) return shiftChar;
+        }
+        return "";
+    }
+}
+
+},{"../../core/change-details.js":"cDdFe","../../core/utils.js":"hh2Rx","../../core/continuous-tail-details.js":"5MbDY","../../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fnLC7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>PatternFixedDefinition);
+var _changeDetailsJs = require("../../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _utilsJs = require("../../core/utils.js");
+var _continuousTailDetailsJs = require("../../core/continuous-tail-details.js");
+var _continuousTailDetailsJsDefault = parcelHelpers.interopDefault(_continuousTailDetailsJs);
+var _holderJs = require("../../core/holder.js");
+class PatternFixedDefinition {
+    /** */ /** */ /** */ /** */ /** */ /** */ constructor(opts){
+        Object.assign(this, opts);
+        this._value = "";
+        this.isFixed = true;
+    }
+    get value() {
+        return this._value;
+    }
+    get unmaskedValue() {
+        return this.isUnmasking ? this.value : "";
+    }
+    get rawInputValue() {
+        return this._isRawInput ? this.value : "";
+    }
+    get displayValue() {
+        return this.value;
+    }
+    reset() {
+        this._isRawInput = false;
+        this._value = "";
+    }
+    remove(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this._value.length;
+        this._value = this._value.slice(0, fromPos) + this._value.slice(toPos);
+        if (!this._value) this._isRawInput = false;
+        return new (0, _changeDetailsJsDefault.default)();
+    }
+    nearestInputPos(cursorPos, direction) {
+        if (direction === void 0) direction = (0, _utilsJs.DIRECTION).NONE;
+        const minPos = 0;
+        const maxPos = this._value.length;
+        switch(direction){
+            case (0, _utilsJs.DIRECTION).LEFT:
+            case (0, _utilsJs.DIRECTION).FORCE_LEFT:
+                return minPos;
+            case (0, _utilsJs.DIRECTION).NONE:
+            case (0, _utilsJs.DIRECTION).RIGHT:
+            case (0, _utilsJs.DIRECTION).FORCE_RIGHT:
+            default:
+                return maxPos;
+        }
+    }
+    totalInputPositions(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this._value.length;
+        return this._isRawInput ? toPos - fromPos : 0;
+    }
+    extractInput(fromPos, toPos, flags) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this._value.length;
+        if (flags === void 0) flags = {};
+        return flags.raw && this._isRawInput && this._value.slice(fromPos, toPos) || "";
+    }
+    get isComplete() {
+        return true;
+    }
+    get isFilled() {
+        return Boolean(this._value);
+    }
+    _appendChar(ch, flags) {
+        if (flags === void 0) flags = {};
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (this.isFilled) return details;
+        const appendEager = this.eager === true || this.eager === "append";
+        const appended = this.char === ch;
+        const isResolved = appended && (this.isUnmasking || flags.input || flags.raw) && (!flags.raw || !appendEager) && !flags.tail;
+        if (isResolved) details.rawInserted = this.char;
+        this._value = details.inserted = this.char;
+        this._isRawInput = isResolved && (flags.raw || flags.input);
+        return details;
+    }
+    _appendEager() {
+        return this._appendChar(this.char, {
+            tail: true
+        });
+    }
+    _appendPlaceholder() {
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (this.isFilled) return details;
+        this._value = details.inserted = this.char;
+        return details;
+    }
+    extractTail() {
+        return new (0, _continuousTailDetailsJsDefault.default)("");
+    }
+    appendTail(tail) {
+        if ((0, _utilsJs.isString)(tail)) tail = new (0, _continuousTailDetailsJsDefault.default)(String(tail));
+        return tail.appendTo(this);
+    }
+    append(str, flags, tail) {
+        const details = this._appendChar(str[0], flags);
+        if (tail != null) details.tailShift += this.appendTail(tail).tailShift;
+        return details;
+    }
+    doCommit() {}
+    get state() {
+        return {
+            _value: this._value,
+            _rawInputValue: this.rawInputValue
+        };
+    }
+    set state(state) {
+        this._value = state._value;
+        this._isRawInput = Boolean(state._rawInputValue);
+    }
+}
+
+},{"../../core/change-details.js":"cDdFe","../../core/utils.js":"hh2Rx","../../core/continuous-tail-details.js":"5MbDY","../../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lGvsS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>PatternInputDefinition);
+var _factoryJs = require("../factory.js");
+var _factoryJsDefault = parcelHelpers.interopDefault(_factoryJs);
+var _changeDetailsJs = require("../../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _utilsJs = require("../../core/utils.js");
+var _holderJs = require("../../core/holder.js");
+class PatternInputDefinition {
+    /** */ /** */ /** */ /** */ /** */ /** */ /** */ /** */ constructor(opts){
+        const { parent , isOptional , placeholderChar , displayChar , lazy , eager , ...maskOpts } = opts;
+        this.masked = (0, _factoryJsDefault.default)(maskOpts);
+        Object.assign(this, {
+            parent,
+            isOptional,
+            placeholderChar,
+            displayChar,
+            lazy,
+            eager
+        });
+    }
+    reset() {
+        this.isFilled = false;
+        this.masked.reset();
+    }
+    remove(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.value.length;
+        if (fromPos === 0 && toPos >= 1) {
+            this.isFilled = false;
+            return this.masked.remove(fromPos, toPos);
+        }
+        return new (0, _changeDetailsJsDefault.default)();
+    }
+    get value() {
+        return this.masked.value || (this.isFilled && !this.isOptional ? this.placeholderChar : "");
+    }
+    get unmaskedValue() {
+        return this.masked.unmaskedValue;
+    }
+    get rawInputValue() {
+        return this.masked.rawInputValue;
+    }
+    get displayValue() {
+        return this.masked.value && this.displayChar || this.value;
+    }
+    get isComplete() {
+        return Boolean(this.masked.value) || this.isOptional;
+    }
+    _appendChar(ch, flags) {
+        if (flags === void 0) flags = {};
+        if (this.isFilled) return new (0, _changeDetailsJsDefault.default)();
+        const state = this.masked.state;
+        // simulate input
+        const details = this.masked._appendChar(ch, this.currentMaskFlags(flags));
+        if (details.inserted && this.doValidate(flags) === false) {
+            details.inserted = details.rawInserted = "";
+            this.masked.state = state;
+        }
+        if (!details.inserted && !this.isOptional && !this.lazy && !flags.input) details.inserted = this.placeholderChar;
+        details.skip = !details.inserted && !this.isOptional;
+        this.isFilled = Boolean(details.inserted);
+        return details;
+    }
+    append(str, flags, tail) {
+        // TODO probably should be done via _appendChar
+        return this.masked.append(str, this.currentMaskFlags(flags), tail);
+    }
+    _appendPlaceholder() {
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (this.isFilled || this.isOptional) return details;
+        this.isFilled = true;
+        details.inserted = this.placeholderChar;
+        return details;
+    }
+    _appendEager() {
+        return new (0, _changeDetailsJsDefault.default)();
+    }
+    extractTail(fromPos, toPos) {
+        return this.masked.extractTail(fromPos, toPos);
+    }
+    appendTail(tail) {
+        return this.masked.appendTail(tail);
+    }
+    extractInput(fromPos, toPos, flags) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.value.length;
+        return this.masked.extractInput(fromPos, toPos, flags);
+    }
+    nearestInputPos(cursorPos, direction) {
+        if (direction === void 0) direction = (0, _utilsJs.DIRECTION).NONE;
+        const minPos = 0;
+        const maxPos = this.value.length;
+        const boundPos = Math.min(Math.max(cursorPos, minPos), maxPos);
+        switch(direction){
+            case (0, _utilsJs.DIRECTION).LEFT:
+            case (0, _utilsJs.DIRECTION).FORCE_LEFT:
+                return this.isComplete ? boundPos : minPos;
+            case (0, _utilsJs.DIRECTION).RIGHT:
+            case (0, _utilsJs.DIRECTION).FORCE_RIGHT:
+                return this.isComplete ? boundPos : maxPos;
+            case (0, _utilsJs.DIRECTION).NONE:
+            default:
+                return boundPos;
+        }
+    }
+    totalInputPositions(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.value.length;
+        return this.value.slice(fromPos, toPos).length;
+    }
+    doValidate(flags) {
+        return this.masked.doValidate(this.currentMaskFlags(flags)) && (!this.parent || this.parent.doValidate(this.currentMaskFlags(flags)));
+    }
+    doCommit() {
+        this.masked.doCommit();
+    }
+    get state() {
+        return {
+            _value: this.value,
+            _rawInputValue: this.rawInputValue,
+            masked: this.masked.state,
+            isFilled: this.isFilled
+        };
+    }
+    set state(state) {
+        this.masked.state = state.masked;
+        this.isFilled = state.isFilled;
+    }
+    currentMaskFlags(flags) {
+        var _flags$_beforeTailSta;
+        return {
+            ...flags,
+            _beforeTailState: (flags == null ? void 0 : (_flags$_beforeTailSta = flags._beforeTailState) == null ? void 0 : _flags$_beforeTailSta.masked) || (flags == null ? void 0 : flags._beforeTailState)
+        };
+    }
+}
+PatternInputDefinition.DEFAULT_DEFINITIONS = {
+    "0": /\d/,
+    "a": /[\u0041-\u005A\u0061-\u007A\u00AA\u00B5\u00BA\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC]/,
+    // http://stackoverflow.com/a/22075070
+    "*": /./
+};
+
+},{"../factory.js":"4c29b","../../core/change-details.js":"cDdFe","../../core/utils.js":"hh2Rx","../../core/holder.js":"fNs7n","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7B25G":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedRegExp);
+var _baseJs = require("./base.js");
+var _baseJsDefault = parcelHelpers.interopDefault(_baseJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _changeDetailsJs = require("../core/change-details.js");
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+var _utilsJs = require("../core/utils.js");
+/** Masking by RegExp */ class MaskedRegExp extends (0, _baseJsDefault.default) {
+    /** */ /** Enable characters overwriting */ /** */ /** */ updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        const mask = opts.mask;
+        if (mask) opts.validate = (value)=>value.search(mask) >= 0;
+        super._update(opts);
+    }
+}
+(0, _holderJsDefault.default).MaskedRegExp = MaskedRegExp;
+
+},{"./base.js":"i9dza","../core/holder.js":"fNs7n","../core/change-details.js":"cDdFe","../core/continuous-tail-details.js":"5MbDY","../core/utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iHvQL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedRange);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _patternJs = require("./pattern.js");
+var _patternJsDefault = parcelHelpers.interopDefault(_patternJs);
+var _changeDetailsJs = require("../core/change-details.js");
+var _utilsJs = require("../core/utils.js");
+var _baseJs = require("./base.js");
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+var _factoryJs = require("./factory.js");
+var _chunkTailDetailsJs = require("./pattern/chunk-tail-details.js");
+var _cursorJs = require("./pattern/cursor.js");
+var _fixedDefinitionJs = require("./pattern/fixed-definition.js");
+var _inputDefinitionJs = require("./pattern/input-definition.js");
+var _regexpJs = require("./regexp.js");
+/** Pattern which accepts ranges */ class MaskedRange extends (0, _patternJsDefault.default) {
+    /**
+    Optionally sets max length of pattern.
+    Used when pattern length is longer then `to` param length. Pads zeros at start in this case.
+  */ /** Min bound */ /** Max bound */ /** */ get _matchFrom() {
+        return this.maxLength - String(this.from).length;
+    }
+    constructor(opts){
+        super(opts); // mask will be created in _update
+    }
+    updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        const { to =this.to || 0 , from =this.from || 0 , maxLength =this.maxLength || 0 , autofix =this.autofix , ...patternOpts } = opts;
+        this.to = to;
+        this.from = from;
+        this.maxLength = Math.max(String(to).length, maxLength);
+        this.autofix = autofix;
+        const fromStr = String(this.from).padStart(this.maxLength, "0");
+        const toStr = String(this.to).padStart(this.maxLength, "0");
+        let sameCharsCount = 0;
+        while(sameCharsCount < toStr.length && toStr[sameCharsCount] === fromStr[sameCharsCount])++sameCharsCount;
+        patternOpts.mask = toStr.slice(0, sameCharsCount).replace(/0/g, "\\0") + "0".repeat(this.maxLength - sameCharsCount);
+        super._update(patternOpts);
+    }
+    get isComplete() {
+        return super.isComplete && Boolean(this.value);
+    }
+    boundaries(str) {
+        let minstr = "";
+        let maxstr = "";
+        const [, placeholder, num] = str.match(/^(\D*)(\d*)(\D*)/) || [];
+        if (num) {
+            minstr = "0".repeat(placeholder.length) + num;
+            maxstr = "9".repeat(placeholder.length) + num;
+        }
+        minstr = minstr.padEnd(this.maxLength, "0");
+        maxstr = maxstr.padEnd(this.maxLength, "9");
+        return [
+            minstr,
+            maxstr
+        ];
+    }
+    doPrepareChar(ch, flags) {
+        if (flags === void 0) flags = {};
+        let details;
+        [ch, details] = super.doPrepareChar(ch.replace(/\D/g, ""), flags);
+        if (!this.autofix || !ch) return [
+            ch,
+            details
+        ];
+        const fromStr = String(this.from).padStart(this.maxLength, "0");
+        const toStr = String(this.to).padStart(this.maxLength, "0");
+        const nextVal = this.value + ch;
+        if (nextVal.length > this.maxLength) return [
+            "",
+            details
+        ];
+        const [minstr, maxstr] = this.boundaries(nextVal);
+        if (Number(maxstr) < this.from) return [
+            fromStr[nextVal.length - 1],
+            details
+        ];
+        if (Number(minstr) > this.to) {
+            if (this.autofix === "pad" && nextVal.length < this.maxLength) return [
+                "",
+                details.aggregate(this.append(fromStr[nextVal.length - 1] + ch, flags))
+            ];
+            return [
+                toStr[nextVal.length - 1],
+                details
+            ];
+        }
+        return [
+            ch,
+            details
+        ];
+    }
+    doValidate(flags) {
+        const str = this.value;
+        const firstNonZero = str.search(/[^0]/);
+        if (firstNonZero === -1 && str.length <= this._matchFrom) return true;
+        const [minstr, maxstr] = this.boundaries(str);
+        return this.from <= Number(maxstr) && Number(minstr) <= this.to && super.doValidate(flags);
+    }
+}
+(0, _holderJsDefault.default).MaskedRange = MaskedRange;
+
+},{"../core/holder.js":"fNs7n","./pattern.js":"edg1G","../core/change-details.js":"cDdFe","../core/utils.js":"hh2Rx","./base.js":"i9dza","../core/continuous-tail-details.js":"5MbDY","./factory.js":"4c29b","./pattern/chunk-tail-details.js":"a8Q24","./pattern/cursor.js":"1K9Ff","./pattern/fixed-definition.js":"fnLC7","./pattern/input-definition.js":"lGvsS","./regexp.js":"7B25G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kPiRi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedDynamic);
+var _utilsJs = require("../core/utils.js");
+var _changeDetailsJs = require("../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _factoryJs = require("./factory.js");
+var _factoryJsDefault = parcelHelpers.interopDefault(_factoryJs);
+var _baseJs = require("./base.js");
+var _baseJsDefault = parcelHelpers.interopDefault(_baseJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+/** Dynamic mask for choosing appropriate mask in run-time */ class MaskedDynamic extends (0, _baseJsDefault.default) {
+    /** Currently chosen mask */ /** Currently chosen mask */ /** Compliled {@link Masked} options */ /** Chooses {@link Masked} depending on input value */ constructor(opts){
+        super({
+            ...MaskedDynamic.DEFAULTS,
+            ...opts
+        });
+        this.currentMask = undefined;
+    }
+    updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        super._update(opts);
+        if ("mask" in opts) {
+            this.exposeMask = undefined;
+            // mask could be totally dynamic with only `dispatch` option
+            this.compiledMasks = Array.isArray(opts.mask) ? opts.mask.map((m)=>{
+                const { expose , ...maskOpts } = (0, _factoryJs.normalizeOpts)(m);
+                const masked = (0, _factoryJsDefault.default)({
+                    overwrite: this._overwrite,
+                    eager: this._eager,
+                    skipInvalid: this._skipInvalid,
+                    ...maskOpts
+                });
+                if (expose) this.exposeMask = masked;
+                return masked;
+            }) : [];
+        // this.currentMask = this.doDispatch(''); // probably not needed but lets see
+        }
+    }
+    _appendCharRaw(ch, flags) {
+        if (flags === void 0) flags = {};
+        const details = this._applyDispatch(ch, flags);
+        if (this.currentMask) details.aggregate(this.currentMask._appendChar(ch, this.currentMaskFlags(flags)));
+        return details;
+    }
+    _applyDispatch(appended, flags, tail) {
+        if (appended === void 0) appended = "";
+        if (flags === void 0) flags = {};
+        if (tail === void 0) tail = "";
+        const prevValueBeforeTail = flags.tail && flags._beforeTailState != null ? flags._beforeTailState._value : this.value;
+        const inputValue = this.rawInputValue;
+        const insertValue = flags.tail && flags._beforeTailState != null ? flags._beforeTailState._rawInputValue : inputValue;
+        const tailValue = inputValue.slice(insertValue.length);
+        const prevMask = this.currentMask;
+        const details = new (0, _changeDetailsJsDefault.default)();
+        const prevMaskState = prevMask == null ? void 0 : prevMask.state;
+        // clone flags to prevent overwriting `_beforeTailState`
+        this.currentMask = this.doDispatch(appended, {
+            ...flags
+        }, tail);
+        // restore state after dispatch
+        if (this.currentMask) {
+            if (this.currentMask !== prevMask) {
+                // if mask changed reapply input
+                this.currentMask.reset();
+                if (insertValue) {
+                    const d = this.currentMask.append(insertValue, {
+                        raw: true
+                    });
+                    details.tailShift = d.inserted.length - prevValueBeforeTail.length;
+                }
+                if (tailValue) details.tailShift += this.currentMask.append(tailValue, {
+                    raw: true,
+                    tail: true
+                }).tailShift;
+            } else if (prevMaskState) // Dispatch can do something bad with state, so
+            // restore prev mask state
+            this.currentMask.state = prevMaskState;
+        }
+        return details;
+    }
+    _appendPlaceholder() {
+        const details = this._applyDispatch();
+        if (this.currentMask) details.aggregate(this.currentMask._appendPlaceholder());
+        return details;
+    }
+    _appendEager() {
+        const details = this._applyDispatch();
+        if (this.currentMask) details.aggregate(this.currentMask._appendEager());
+        return details;
+    }
+    appendTail(tail) {
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (tail) details.aggregate(this._applyDispatch("", {}, tail));
+        return details.aggregate(this.currentMask ? this.currentMask.appendTail(tail) : super.appendTail(tail));
+    }
+    currentMaskFlags(flags) {
+        var _flags$_beforeTailSta, _flags$_beforeTailSta2;
+        return {
+            ...flags,
+            _beforeTailState: ((_flags$_beforeTailSta = flags._beforeTailState) == null ? void 0 : _flags$_beforeTailSta.currentMaskRef) === this.currentMask && ((_flags$_beforeTailSta2 = flags._beforeTailState) == null ? void 0 : _flags$_beforeTailSta2.currentMask) || flags._beforeTailState
+        };
+    }
+    doDispatch(appended, flags, tail) {
+        if (flags === void 0) flags = {};
+        if (tail === void 0) tail = "";
+        return this.dispatch(appended, this, flags, tail);
+    }
+    doValidate(flags) {
+        return super.doValidate(flags) && (!this.currentMask || this.currentMask.doValidate(this.currentMaskFlags(flags)));
+    }
+    doPrepare(str, flags) {
+        if (flags === void 0) flags = {};
+        let [s, details] = super.doPrepare(str, flags);
+        if (this.currentMask) {
+            let currentDetails;
+            [s, currentDetails] = super.doPrepare(s, this.currentMaskFlags(flags));
+            details = details.aggregate(currentDetails);
+        }
+        return [
+            s,
+            details
+        ];
+    }
+    doPrepareChar(str, flags) {
+        if (flags === void 0) flags = {};
+        let [s, details] = super.doPrepareChar(str, flags);
+        if (this.currentMask) {
+            let currentDetails;
+            [s, currentDetails] = super.doPrepareChar(s, this.currentMaskFlags(flags));
+            details = details.aggregate(currentDetails);
+        }
+        return [
+            s,
+            details
+        ];
+    }
+    reset() {
+        var _this$currentMask;
+        (_this$currentMask = this.currentMask) == null || _this$currentMask.reset();
+        this.compiledMasks.forEach((m)=>m.reset());
+    }
+    get value() {
+        return this.exposeMask ? this.exposeMask.value : this.currentMask ? this.currentMask.value : "";
+    }
+    set value(value) {
+        if (this.exposeMask) {
+            this.exposeMask.value = value;
+            this.currentMask = this.exposeMask;
+            this._applyDispatch();
+        } else super.value = value;
+    }
+    get unmaskedValue() {
+        return this.exposeMask ? this.exposeMask.unmaskedValue : this.currentMask ? this.currentMask.unmaskedValue : "";
+    }
+    set unmaskedValue(unmaskedValue) {
+        if (this.exposeMask) {
+            this.exposeMask.unmaskedValue = unmaskedValue;
+            this.currentMask = this.exposeMask;
+            this._applyDispatch();
+        } else super.unmaskedValue = unmaskedValue;
+    }
+    get typedValue() {
+        return this.exposeMask ? this.exposeMask.typedValue : this.currentMask ? this.currentMask.typedValue : "";
+    }
+    set typedValue(typedValue) {
+        if (this.exposeMask) {
+            this.exposeMask.typedValue = typedValue;
+            this.currentMask = this.exposeMask;
+            this._applyDispatch();
+            return;
+        }
+        let unmaskedValue = String(typedValue);
+        // double check it
+        if (this.currentMask) {
+            this.currentMask.typedValue = typedValue;
+            unmaskedValue = this.currentMask.unmaskedValue;
+        }
+        this.unmaskedValue = unmaskedValue;
+    }
+    get displayValue() {
+        return this.currentMask ? this.currentMask.displayValue : "";
+    }
+    get isComplete() {
+        var _this$currentMask2;
+        return Boolean((_this$currentMask2 = this.currentMask) == null ? void 0 : _this$currentMask2.isComplete);
+    }
+    get isFilled() {
+        var _this$currentMask3;
+        return Boolean((_this$currentMask3 = this.currentMask) == null ? void 0 : _this$currentMask3.isFilled);
+    }
+    remove(fromPos, toPos) {
+        const details = new (0, _changeDetailsJsDefault.default)();
+        if (this.currentMask) details.aggregate(this.currentMask.remove(fromPos, toPos))// update with dispatch
+        .aggregate(this._applyDispatch());
+        return details;
+    }
+    get state() {
+        var _this$currentMask4;
+        return {
+            ...super.state,
+            _rawInputValue: this.rawInputValue,
+            compiledMasks: this.compiledMasks.map((m)=>m.state),
+            currentMaskRef: this.currentMask,
+            currentMask: (_this$currentMask4 = this.currentMask) == null ? void 0 : _this$currentMask4.state
+        };
+    }
+    set state(state) {
+        const { compiledMasks , currentMaskRef , currentMask , ...maskedState } = state;
+        if (compiledMasks) this.compiledMasks.forEach((m, mi)=>m.state = compiledMasks[mi]);
+        if (currentMaskRef != null) {
+            this.currentMask = currentMaskRef;
+            this.currentMask.state = currentMask;
+        }
+        super.state = maskedState;
+    }
+    extractInput(fromPos, toPos, flags) {
+        return this.currentMask ? this.currentMask.extractInput(fromPos, toPos, flags) : "";
+    }
+    extractTail(fromPos, toPos) {
+        return this.currentMask ? this.currentMask.extractTail(fromPos, toPos) : super.extractTail(fromPos, toPos);
+    }
+    doCommit() {
+        if (this.currentMask) this.currentMask.doCommit();
+        super.doCommit();
+    }
+    nearestInputPos(cursorPos, direction) {
+        return this.currentMask ? this.currentMask.nearestInputPos(cursorPos, direction) : super.nearestInputPos(cursorPos, direction);
+    }
+    get overwrite() {
+        return this.currentMask ? this.currentMask.overwrite : this._overwrite;
+    }
+    set overwrite(overwrite) {
+        this._overwrite = overwrite;
+    }
+    get eager() {
+        return this.currentMask ? this.currentMask.eager : this._eager;
+    }
+    set eager(eager) {
+        this._eager = eager;
+    }
+    get skipInvalid() {
+        return this.currentMask ? this.currentMask.skipInvalid : this._skipInvalid;
+    }
+    set skipInvalid(skipInvalid) {
+        this._skipInvalid = skipInvalid;
+    }
+    maskEquals(mask) {
+        return Array.isArray(mask) ? this.compiledMasks.every((m, mi)=>{
+            if (!mask[mi]) return;
+            const { mask: oldMask , ...restOpts } = mask[mi];
+            return (0, _utilsJs.objectIncludes)(m, restOpts) && m.maskEquals(oldMask);
+        }) : super.maskEquals(mask);
+    }
+    typedValueEquals(value) {
+        var _this$currentMask5;
+        return Boolean((_this$currentMask5 = this.currentMask) == null ? void 0 : _this$currentMask5.typedValueEquals(value));
+    }
+}
+MaskedDynamic.DEFAULTS = void 0;
+MaskedDynamic.DEFAULTS = {
+    dispatch: (appended, masked, flags, tail)=>{
+        if (!masked.compiledMasks.length) return;
+        const inputValue = masked.rawInputValue;
+        // simulate input
+        const inputs = masked.compiledMasks.map((m, index)=>{
+            const isCurrent = masked.currentMask === m;
+            const startInputPos = isCurrent ? m.displayValue.length : m.nearestInputPos(m.displayValue.length, (0, _utilsJs.DIRECTION).FORCE_LEFT);
+            if (m.rawInputValue !== inputValue) {
+                m.reset();
+                m.append(inputValue, {
+                    raw: true
+                });
+            } else if (!isCurrent) m.remove(startInputPos);
+            m.append(appended, masked.currentMaskFlags(flags));
+            m.appendTail(tail);
+            return {
+                index,
+                weight: m.rawInputValue.length,
+                totalInputPositions: m.totalInputPositions(0, Math.max(startInputPos, m.nearestInputPos(m.displayValue.length, (0, _utilsJs.DIRECTION).FORCE_LEFT)))
+            };
+        });
+        // pop masks with longer values first
+        inputs.sort((i1, i2)=>i2.weight - i1.weight || i2.totalInputPositions - i1.totalInputPositions);
+        return masked.compiledMasks[inputs[0].index];
+    }
+};
+(0, _holderJsDefault.default).MaskedDynamic = MaskedDynamic;
+
+},{"../core/utils.js":"hh2Rx","../core/change-details.js":"cDdFe","./factory.js":"4c29b","./base.js":"i9dza","../core/holder.js":"fNs7n","../core/continuous-tail-details.js":"5MbDY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dmeoh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedEnum);
+var _patternJs = require("./pattern.js");
+var _patternJsDefault = parcelHelpers.interopDefault(_patternJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _changeDetailsJs = require("../core/change-details.js");
+var _utilsJs = require("../core/utils.js");
+var _baseJs = require("./base.js");
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+var _factoryJs = require("./factory.js");
+var _chunkTailDetailsJs = require("./pattern/chunk-tail-details.js");
+var _cursorJs = require("./pattern/cursor.js");
+var _fixedDefinitionJs = require("./pattern/fixed-definition.js");
+var _inputDefinitionJs = require("./pattern/input-definition.js");
+var _regexpJs = require("./regexp.js");
+/** Pattern which validates enum values */ class MaskedEnum extends (0, _patternJsDefault.default) {
+    updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        const { enum: _enum , ...eopts } = opts;
+        if (_enum) {
+            eopts.mask = "*".repeat(_enum[0].length);
+            this.enum = _enum;
+        }
+        super._update(eopts);
+    }
+    doValidate(flags) {
+        return this.enum.some((e)=>e.indexOf(this.unmaskedValue) >= 0) && super.doValidate(flags);
+    }
+}
+(0, _holderJsDefault.default).MaskedEnum = MaskedEnum;
+
+},{"./pattern.js":"edg1G","../core/holder.js":"fNs7n","../core/change-details.js":"cDdFe","../core/utils.js":"hh2Rx","./base.js":"i9dza","../core/continuous-tail-details.js":"5MbDY","./factory.js":"4c29b","./pattern/chunk-tail-details.js":"a8Q24","./pattern/cursor.js":"1K9Ff","./pattern/fixed-definition.js":"fnLC7","./pattern/input-definition.js":"lGvsS","./regexp.js":"7B25G","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"64ffz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedFunction);
+var _baseJs = require("./base.js");
+var _baseJsDefault = parcelHelpers.interopDefault(_baseJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _changeDetailsJs = require("../core/change-details.js");
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+var _utilsJs = require("../core/utils.js");
+/** Masking by custom Function */ class MaskedFunction extends (0, _baseJsDefault.default) {
+    /** */ /** Enable characters overwriting */ /** */ /** */ updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        super._update({
+            ...opts,
+            validate: opts.mask
+        });
+    }
+}
+(0, _holderJsDefault.default).MaskedFunction = MaskedFunction;
+
+},{"./base.js":"i9dza","../core/holder.js":"fNs7n","../core/change-details.js":"cDdFe","../core/continuous-tail-details.js":"5MbDY","../core/utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gHi3R":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>MaskedNumber);
+var _utilsJs = require("../core/utils.js");
+var _changeDetailsJs = require("../core/change-details.js");
+var _changeDetailsJsDefault = parcelHelpers.interopDefault(_changeDetailsJs);
+var _baseJs = require("./base.js");
+var _baseJsDefault = parcelHelpers.interopDefault(_baseJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _continuousTailDetailsJs = require("../core/continuous-tail-details.js");
+/**
+  Number mask
+*/ class MaskedNumber extends (0, _baseJsDefault.default) {
+    /** Single char */ /** Single char */ /** Array of single chars */ /** */ /** */ /** Digits after point */ /** Flag to remove leading and trailing zeros in the end of editing */ /** Flag to pad trailing zeros after point in the end of editing */ /** Enable characters overwriting */ /** */ /** */ /** Format typed value to string */ /** Parse string to get typed value */ constructor(opts){
+        super({
+            ...MaskedNumber.DEFAULTS,
+            ...opts
+        });
+    }
+    updateOptions(opts) {
+        super.updateOptions(opts);
+    }
+    _update(opts) {
+        super._update(opts);
+        this._updateRegExps();
+    }
+    _updateRegExps() {
+        const start = "^" + (this.allowNegative ? "[+|\\-]?" : "");
+        const mid = "\\d*";
+        const end = (this.scale ? "(" + (0, _utilsJs.escapeRegExp)(this.radix) + "\\d{0," + this.scale + "})?" : "") + "$";
+        this._numberRegExp = new RegExp(start + mid + end);
+        this._mapToRadixRegExp = new RegExp("[" + this.mapToRadix.map((0, _utilsJs.escapeRegExp)).join("") + "]", "g");
+        this._thousandsSeparatorRegExp = new RegExp((0, _utilsJs.escapeRegExp)(this.thousandsSeparator), "g");
+    }
+    _removeThousandsSeparators(value) {
+        return value.replace(this._thousandsSeparatorRegExp, "");
+    }
+    _insertThousandsSeparators(value) {
+        // https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+        const parts = value.split(this.radix);
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, this.thousandsSeparator);
+        return parts.join(this.radix);
+    }
+    doPrepareChar(ch, flags) {
+        if (flags === void 0) flags = {};
+        ch = this._removeThousandsSeparators(this.scale && this.mapToRadix.length && /*
+      radix should be mapped when
+      1) input is done from keyboard = flags.input && flags.raw
+      2) unmasked value is set = !flags.input && !flags.raw
+      and should not be mapped when
+      1) value is set = flags.input && !flags.raw
+      2) raw value is set = !flags.input && flags.raw
+    */ (flags.input && flags.raw || !flags.input && !flags.raw) ? ch.replace(this._mapToRadixRegExp, this.radix) : ch);
+        const [prepCh, details] = super.doPrepareChar(ch, flags);
+        if (ch && !prepCh) details.skip = true;
+        if (prepCh && !this.allowPositive && !this.value && prepCh !== "-") details.aggregate(this._appendChar("-"));
+        return [
+            prepCh,
+            details
+        ];
+    }
+    _separatorsCount(to, extendOnSeparators) {
+        if (extendOnSeparators === void 0) extendOnSeparators = false;
+        let count = 0;
+        for(let pos = 0; pos < to; ++pos)if (this._value.indexOf(this.thousandsSeparator, pos) === pos) {
+            ++count;
+            if (extendOnSeparators) to += this.thousandsSeparator.length;
+        }
+        return count;
+    }
+    _separatorsCountFromSlice(slice) {
+        if (slice === void 0) slice = this._value;
+        return this._separatorsCount(this._removeThousandsSeparators(slice).length, true);
+    }
+    extractInput(fromPos, toPos, flags) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        [fromPos, toPos] = this._adjustRangeWithSeparators(fromPos, toPos);
+        return this._removeThousandsSeparators(super.extractInput(fromPos, toPos, flags));
+    }
+    _appendCharRaw(ch, flags) {
+        if (flags === void 0) flags = {};
+        if (!this.thousandsSeparator) return super._appendCharRaw(ch, flags);
+        const prevBeforeTailValue = flags.tail && flags._beforeTailState ? flags._beforeTailState._value : this._value;
+        const prevBeforeTailSeparatorsCount = this._separatorsCountFromSlice(prevBeforeTailValue);
+        this._value = this._removeThousandsSeparators(this.value);
+        const appendDetails = super._appendCharRaw(ch, flags);
+        this._value = this._insertThousandsSeparators(this._value);
+        const beforeTailValue = flags.tail && flags._beforeTailState ? flags._beforeTailState._value : this._value;
+        const beforeTailSeparatorsCount = this._separatorsCountFromSlice(beforeTailValue);
+        appendDetails.tailShift += (beforeTailSeparatorsCount - prevBeforeTailSeparatorsCount) * this.thousandsSeparator.length;
+        appendDetails.skip = !appendDetails.rawInserted && ch === this.thousandsSeparator;
+        return appendDetails;
+    }
+    _findSeparatorAround(pos) {
+        if (this.thousandsSeparator) {
+            const searchFrom = pos - this.thousandsSeparator.length + 1;
+            const separatorPos = this.value.indexOf(this.thousandsSeparator, searchFrom);
+            if (separatorPos <= pos) return separatorPos;
+        }
+        return -1;
+    }
+    _adjustRangeWithSeparators(from, to) {
+        const separatorAroundFromPos = this._findSeparatorAround(from);
+        if (separatorAroundFromPos >= 0) from = separatorAroundFromPos;
+        const separatorAroundToPos = this._findSeparatorAround(to);
+        if (separatorAroundToPos >= 0) to = separatorAroundToPos + this.thousandsSeparator.length;
+        return [
+            from,
+            to
+        ];
+    }
+    remove(fromPos, toPos) {
+        if (fromPos === void 0) fromPos = 0;
+        if (toPos === void 0) toPos = this.displayValue.length;
+        [fromPos, toPos] = this._adjustRangeWithSeparators(fromPos, toPos);
+        const valueBeforePos = this.value.slice(0, fromPos);
+        const valueAfterPos = this.value.slice(toPos);
+        const prevBeforeTailSeparatorsCount = this._separatorsCount(valueBeforePos.length);
+        this._value = this._insertThousandsSeparators(this._removeThousandsSeparators(valueBeforePos + valueAfterPos));
+        const beforeTailSeparatorsCount = this._separatorsCountFromSlice(valueBeforePos);
+        return new (0, _changeDetailsJsDefault.default)({
+            tailShift: (beforeTailSeparatorsCount - prevBeforeTailSeparatorsCount) * this.thousandsSeparator.length
+        });
+    }
+    nearestInputPos(cursorPos, direction) {
+        if (!this.thousandsSeparator) return cursorPos;
+        switch(direction){
+            case (0, _utilsJs.DIRECTION).NONE:
+            case (0, _utilsJs.DIRECTION).LEFT:
+            case (0, _utilsJs.DIRECTION).FORCE_LEFT:
+                {
+                    const separatorAtLeftPos = this._findSeparatorAround(cursorPos - 1);
+                    if (separatorAtLeftPos >= 0) {
+                        const separatorAtLeftEndPos = separatorAtLeftPos + this.thousandsSeparator.length;
+                        if (cursorPos < separatorAtLeftEndPos || this.value.length <= separatorAtLeftEndPos || direction === (0, _utilsJs.DIRECTION).FORCE_LEFT) return separatorAtLeftPos;
+                    }
+                    break;
+                }
+            case (0, _utilsJs.DIRECTION).RIGHT:
+            case (0, _utilsJs.DIRECTION).FORCE_RIGHT:
+                {
+                    const separatorAtRightPos = this._findSeparatorAround(cursorPos);
+                    if (separatorAtRightPos >= 0) return separatorAtRightPos + this.thousandsSeparator.length;
+                }
+        }
+        return cursorPos;
+    }
+    doValidate(flags) {
+        // validate as string
+        let valid = Boolean(this._removeThousandsSeparators(this.value).match(this._numberRegExp));
+        if (valid) {
+            // validate as number
+            const number = this.number;
+            valid = valid && !isNaN(number) && // check min bound for negative values
+            (this.min == null || this.min >= 0 || this.min <= this.number) && // check max bound for positive values
+            (this.max == null || this.max <= 0 || this.number <= this.max);
+        }
+        return valid && super.doValidate(flags);
+    }
+    doCommit() {
+        if (this.value) {
+            const number = this.number;
+            let validnum = number;
+            // check bounds
+            if (this.min != null) validnum = Math.max(validnum, this.min);
+            if (this.max != null) validnum = Math.min(validnum, this.max);
+            if (validnum !== number) this.unmaskedValue = this.format(validnum, this);
+            let formatted = this.value;
+            if (this.normalizeZeros) formatted = this._normalizeZeros(formatted);
+            if (this.padFractionalZeros && this.scale > 0) formatted = this._padFractionalZeros(formatted);
+            this._value = formatted;
+        }
+        super.doCommit();
+    }
+    _normalizeZeros(value) {
+        const parts = this._removeThousandsSeparators(value).split(this.radix);
+        // remove leading zeros
+        parts[0] = parts[0].replace(/^(\D*)(0*)(\d*)/, (match, sign, zeros, num)=>sign + num);
+        // add leading zero
+        if (value.length && !/\d$/.test(parts[0])) parts[0] = parts[0] + "0";
+        if (parts.length > 1) {
+            parts[1] = parts[1].replace(/0*$/, ""); // remove trailing zeros
+            if (!parts[1].length) parts.length = 1; // remove fractional
+        }
+        return this._insertThousandsSeparators(parts.join(this.radix));
+    }
+    _padFractionalZeros(value) {
+        if (!value) return value;
+        const parts = value.split(this.radix);
+        if (parts.length < 2) parts.push("");
+        parts[1] = parts[1].padEnd(this.scale, "0");
+        return parts.join(this.radix);
+    }
+    doSkipInvalid(ch, flags, checkTail) {
+        if (flags === void 0) flags = {};
+        const dropFractional = this.scale === 0 && ch !== this.thousandsSeparator && (ch === this.radix || ch === MaskedNumber.UNMASKED_RADIX || this.mapToRadix.includes(ch));
+        return super.doSkipInvalid(ch, flags, checkTail) && !dropFractional;
+    }
+    get unmaskedValue() {
+        return this._removeThousandsSeparators(this._normalizeZeros(this.value)).replace(this.radix, MaskedNumber.UNMASKED_RADIX);
+    }
+    set unmaskedValue(unmaskedValue) {
+        super.unmaskedValue = unmaskedValue;
+    }
+    get typedValue() {
+        return this.parse(this.unmaskedValue, this);
+    }
+    set typedValue(n) {
+        this.rawInputValue = this.format(n, this).replace(MaskedNumber.UNMASKED_RADIX, this.radix);
+    }
+    /** Parsed Number */ get number() {
+        return this.typedValue;
+    }
+    set number(number) {
+        this.typedValue = number;
+    }
+    /**
+    Is negative allowed
+  */ get allowNegative() {
+        return this.min != null && this.min < 0 || this.max != null && this.max < 0;
+    }
+    /**
+    Is positive allowed
+  */ get allowPositive() {
+        return this.min != null && this.min > 0 || this.max != null && this.max > 0;
+    }
+    typedValueEquals(value) {
+        // handle  0 -> '' case (typed = 0 even if value = '')
+        // for details see https://github.com/uNmAnNeR/imaskjs/issues/134
+        return (super.typedValueEquals(value) || MaskedNumber.EMPTY_VALUES.includes(value) && MaskedNumber.EMPTY_VALUES.includes(this.typedValue)) && !(value === 0 && this.value === "");
+    }
+}
+MaskedNumber.UNMASKED_RADIX = ".";
+MaskedNumber.EMPTY_VALUES = [
+    ...(0, _baseJsDefault.default).EMPTY_VALUES,
+    0
+];
+MaskedNumber.DEFAULTS = {
+    mask: Number,
+    radix: ",",
+    thousandsSeparator: "",
+    mapToRadix: [
+        MaskedNumber.UNMASKED_RADIX
+    ],
+    min: Number.MIN_SAFE_INTEGER,
+    max: Number.MAX_SAFE_INTEGER,
+    scale: 2,
+    normalizeZeros: true,
+    padFractionalZeros: false,
+    parse: Number,
+    format: (n)=>n.toLocaleString("en-US", {
+            useGrouping: false,
+            maximumFractionDigits: 20
+        })
+};
+(0, _holderJsDefault.default).MaskedNumber = MaskedNumber;
+
+},{"../core/utils.js":"hh2Rx","../core/change-details.js":"cDdFe","./base.js":"i9dza","../core/holder.js":"fNs7n","../core/continuous-tail-details.js":"5MbDY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"knGz0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "PIPE_TYPE", ()=>PIPE_TYPE);
+parcelHelpers.export(exports, "createPipe", ()=>createPipe);
+parcelHelpers.export(exports, "pipe", ()=>pipe);
+var _factoryJs = require("./factory.js");
+var _factoryJsDefault = parcelHelpers.interopDefault(_factoryJs);
+var _holderJs = require("../core/holder.js");
+var _holderJsDefault = parcelHelpers.interopDefault(_holderJs);
+var _utilsJs = require("../core/utils.js");
+/** Mask pipe source and destination types */ const PIPE_TYPE = {
+    MASKED: "value",
+    UNMASKED: "unmaskedValue",
+    TYPED: "typedValue"
+};
+/** Creates new pipe function depending on mask type, source and destination options */ function createPipe(arg, from, to) {
+    if (from === void 0) from = PIPE_TYPE.MASKED;
+    if (to === void 0) to = PIPE_TYPE.MASKED;
+    const masked = (0, _factoryJsDefault.default)(arg);
+    return (value)=>masked.runIsolated((m)=>{
+            m[from] = value;
+            return m[to];
+        });
+}
+/** Pipes value through mask depending on mask type, source and destination options */ function pipe(value, mask, from, to) {
+    return createPipe(mask, from, to)(value);
+}
+(0, _holderJsDefault.default).PIPE_TYPE = PIPE_TYPE;
+(0, _holderJsDefault.default).createPipe = createPipe;
+(0, _holderJsDefault.default).pipe = pipe;
+
+},{"./factory.js":"4c29b","../core/holder.js":"fNs7n","../core/utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"keO6v":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "coCounselForm", ()=>coCounselForm);
+var _utils = require("./utils");
+let coCounselForm = ()=>{
+    let forms = (0, _utils.getElements)(".co-counsel-form");
+    if ((0, _utils.ifSelectorExist)(forms)) Array.from(forms).forEach((element)=>{
+        let disciplinaryActions = (0, _utils.getElements)('.trigger_input input[name="disciplinary_action"]');
+        if ((0, _utils.ifSelectorExist)(disciplinaryActions)) Array.from(disciplinaryActions).forEach((item)=>{
+            let hiddenInput = document.querySelector(".conditional_input_disciplinary");
+            if ((0, _utils.ifSelectorExist)(hiddenInput)) item.addEventListener("click", (e)=>{
+                if (e.target.value === "Yes") hiddenInput.classList.remove("hidden_label");
+                else if (e.target.value === "No") hiddenInput.classList.add("hidden_label");
+            });
+        });
+        let staffed = (0, _utils.getElements)('.trigger_input input[name="staffed"]');
+        if ((0, _utils.ifSelectorExist)(staffed)) Array.from(staffed).forEach((item)=>{
+            let hiddenInput = document.querySelector(".conditional_input_staffed");
+            if ((0, _utils.ifSelectorExist)(hiddenInput)) item.addEventListener("click", (e)=>{
+                if (e.target.value === "No") hiddenInput.classList.remove("hidden_label");
+                else if (e.target.value === "Yes") hiddenInput.classList.add("hidden_label");
+            });
+        });
+    });
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8gVxI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "refferalForm", ()=>refferalForm);
+var _utils = require("./utils");
+const refferalForm = ()=>{
+    const addSFieldsButton = (0, _utils.getElement)("#add-field-button");
+    let count = 1;
+    if ((0, _utils.ifSelectorExist)(addSFieldsButton)) addSFieldsButton.addEventListener("click", function() {
+        count++;
+        const addButton = this;
+        const form = (0, _utils.getElement)(".wpcf7-form");
+        if ((0, _utils.ifSelectorExist)(form)) {
+            const newField = document.createElement("div");
+            newField.innerHTML = `<div class="fields">
+                        <label for="" class="">
+                            <span class="wpcf7-form-control-wrap" data-name="person_first_name_${count}"><input type="text" name="person_first_name_${count}" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="First Initial"></span>
+                        </label>
+                        <label for="" class="">
+                            <span class="wpcf7-form-control-wrap" data-name="person_last_name_${count}"><input type="text" name="person_last_name_${count}" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Last Name"></span>
+                        </label>
+                    </div>`;
+            form.insertBefore(newField, addButton);
+        }
+        if (count == 3) addSFieldsButton.remove();
+    });
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+
 //# sourceMappingURL=main.js.map

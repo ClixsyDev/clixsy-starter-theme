@@ -1659,15 +1659,53 @@ h4 span {
   font-weight: 700;
 }
 
+.banner-form #add-field-button {
+  width: max-content;
+}
+
+.banner-form #add-field-button:hover {
+  cursor: pointer;
+}
+
+.banner-form .disclaimer {
+  margin-top: 2rem;
+}
+
 .banner-form .disclaimer.cols p {
   margin-top: .25rem;
   margin-bottom: .25rem;
+  font-size: 17px;
 }
 
 @media (max-width: 992px) {
   .banner-form .disclaimer.cols p {
     text-align: left;
     font-size: .875rem;
+  }
+}
+
+.banner-form .disclaimer.cols ul {
+  padding-top: .75rem;
+  padding-left: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .banner-form .disclaimer.cols ul {
+    padding-left: 1.5rem;
+  }
+}
+
+.banner-form .disclaimer.cols ul li {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  padding-bottom: .375rem;
+  font-size: 17px;
+}
+
+@media (max-width: 992px) {
+  .banner-form .disclaimer.cols ul li {
+    text-align: left;
+    font-size: 14px;
   }
 }
 

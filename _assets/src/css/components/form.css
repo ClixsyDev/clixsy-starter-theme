@@ -306,10 +306,24 @@
         }
     }
 
+    #add-field-button {
+        @apply w-max hover:cursor-pointer;
+    }
+
     .disclaimer {
+        @apply mt-8;
+
         &.cols {
             p {
-                @apply mdt:text-left mdt:text-tiny my-1;
+                @apply text-[17px] mdt:text-left mdt:text-tiny my-1;
+            }
+
+            ul {
+                @apply pl-16 pt-3 lg:pl-6;
+
+                li {
+                    @apply text-white text-[17px] pb-1.5 mdt:text-left mdt:text-[14px];
+                }
             }
         }
     }
