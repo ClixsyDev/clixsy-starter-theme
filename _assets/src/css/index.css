@@ -279,7 +279,7 @@ html {
 
 p {
     a {
-        @apply text-[#0000EE] hover:underline;
+        @apply text-accent hover:underline;
     }
 }
 
