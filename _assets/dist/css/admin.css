@@ -1684,6 +1684,12 @@ h4 span {
   }
 }
 
+.banner-form .disclaimer.cols p a {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
 .banner-form .disclaimer.cols ul {
   padding-top: .75rem;
   padding-left: 4rem;

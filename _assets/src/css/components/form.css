@@ -316,6 +316,10 @@
         &.cols {
             p {
                 @apply text-[17px] mdt:text-left mdt:text-tiny my-1;
+
+                a {
+                    @apply text-white underline;
+                }
             }
 
             ul {
