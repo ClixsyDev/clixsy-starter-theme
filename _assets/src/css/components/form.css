@@ -198,6 +198,10 @@
 
     p {
         @apply text-base w-4/5 mx-auto;
+
+        a {
+            @apply text-white underline;
+        }
     }
 
     label {

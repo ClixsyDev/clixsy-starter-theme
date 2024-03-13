@@ -1469,6 +1469,12 @@ h4 span {
   font-size: 1rem;
 }
 
+.form p a {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
 .form label {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
