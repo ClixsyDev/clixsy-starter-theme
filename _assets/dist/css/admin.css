@@ -3952,6 +3952,26 @@ html body .edit-post-visual-editor__content-area .-right-96 {
   right: -24rem;
 }
 
+html body .edit-post-visual-editor__content-area .left-6 {
+  left: 1.5rem;
+}
+
+html body .edit-post-visual-editor__content-area .right-1\/2 {
+  right: 50%;
+}
+
+html body .edit-post-visual-editor__content-area .left-10 {
+  left: 2.5rem;
+}
+
+html body .edit-post-visual-editor__content-area .bottom-10 {
+  bottom: 2.5rem;
+}
+
+html body .edit-post-visual-editor__content-area .top-10 {
+  top: 2.5rem;
+}
+
 html body .edit-post-visual-editor__content-area .z-50 {
   z-index: 50;
 }
@@ -4355,6 +4375,14 @@ html body .edit-post-visual-editor__content-area .\!mb-0 {
   margin-bottom: 0 !important;
 }
 
+html body .edit-post-visual-editor__content-area .mr-16 {
+  margin-right: 4rem;
+}
+
+html body .edit-post-visual-editor__content-area .mr-8 {
+  margin-right: 2rem;
+}
+
 html body .edit-post-visual-editor__content-area .block {
   display: block;
 }
@@ -4568,6 +4596,10 @@ html body .edit-post-visual-editor__content-area .\!max-h-24 {
   max-height: 6rem !important;
 }
 
+html body .edit-post-visual-editor__content-area .max-h-full {
+  max-height: 100%;
+}
+
 html body .edit-post-visual-editor__content-area .min-h-\[500px\] {
   min-height: 500px;
 }
@@ -4598,6 +4630,22 @@ html body .edit-post-visual-editor__content-area .min-h-\[300px\] {
 
 html body .edit-post-visual-editor__content-area .min-h-\[510px\] {
   min-height: 510px;
+}
+
+html body .edit-post-visual-editor__content-area .min-h-\[150\%\] {
+  min-height: 150%;
+}
+
+html body .edit-post-visual-editor__content-area .min-h-\[165\%\] {
+  min-height: 165%;
+}
+
+html body .edit-post-visual-editor__content-area .min-h-\[160\%\] {
+  min-height: 160%;
+}
+
+html body .edit-post-visual-editor__content-area .min-h-full {
+  min-height: 100%;
 }
 
 html body .edit-post-visual-editor__content-area .w-14\/24 {
@@ -4910,6 +4958,10 @@ html body .edit-post-visual-editor__content-area .min-w-\[240px\] {
 
 html body .edit-post-visual-editor__content-area .min-w-\[460px\] {
   min-width: 460px;
+}
+
+html body .edit-post-visual-editor__content-area .min-w-full {
+  min-width: 100%;
 }
 
 html body .edit-post-visual-editor__content-area .max-w-\[460px\] {
@@ -5488,6 +5540,16 @@ html body .edit-post-visual-editor__content-area .bg-\[\#707070\] {
 html body .edit-post-visual-editor__content-area .bg-\[\#393939\] {
   --tw-bg-opacity: 1;
   background-color: rgb(57 57 57 / var(--tw-bg-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+html body .edit-post-visual-editor__content-area .bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 html body .edit-post-visual-editor__content-area .bg-opacity-60 {
@@ -6805,6 +6867,10 @@ html :where(.wp-block) {
     right: 5%;
   }
 
+  .\32 xl\:-bottom-20 {
+    bottom: -5rem;
+  }
+
   .\32 xl\:m-auto {
     margin: auto;
   }
@@ -6827,6 +6893,18 @@ html :where(.wp-block) {
     margin-left: .75rem;
   }
 
+  .\32 xl\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .\32 xl\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .\32 xl\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .\32 xl\:h-64 {
     height: 16rem;
   }
@@ -6845,6 +6923,10 @@ html :where(.wp-block) {
 
   .\32 xl\:min-h-\[300px\] {
     min-height: 300px;
+  }
+
+  .\32 xl\:min-h-\[150\%\] {
+    min-height: 150%;
   }
 
   .\32 xl\:w-\[65\%\] {
@@ -6904,6 +6986,14 @@ html :where(.wp-block) {
 
   .\32 xl\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .\32 xl\:gap-8 {
+    gap: 2rem;
+  }
+
+  .\32 xl\:gap-3 {
+    gap: .75rem;
   }
 
   .\32 xl\:gap-y-32 {
