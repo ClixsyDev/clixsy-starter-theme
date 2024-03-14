@@ -4,13 +4,13 @@ use App\Template;
 
 $archive_blog_title = get_field('archive_blog_title', 'options');
 $archive_blog_description = get_field('archive_blog_description', 'options');
+$thumbnail_url = get_the_post_thumbnail_url();
 $thumbnail_placeholder = get_stylesheet_directory_uri() . '/_assets/src/img/banner-blog-bg.png';
 ?>
 
-
 <?php get_header(); ?>
 <main>
-    <section class="bg-cover pb-32 pt-11 relative" style="background-image:url('<?php echo $thumbnail_placeholder?>');">
+    <section class="bg-cover pb-32 pt-11 relative" style="background-image:url('<?php echo $thumbnail_url?>');">
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10">
 
