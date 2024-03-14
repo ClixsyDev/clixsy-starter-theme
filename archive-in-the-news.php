@@ -9,15 +9,21 @@ $text_form_design_two__form_select = get_field('select_form', 'options');
 
 <!-- Main Content -->
 <main>
-   <div class="mb-6 bg-headings_second bg-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/_assets/src/img/news-title-bg.jpg')">
-      <div class="overlay">
-         <div class="container pt-24 pb-12 xl:pt-12 xl:pb-6">
-            <div class="blog-article__title-wrapper">
-               <h1 class="font-bold  text-6xl xl:text-5xl lg:text-4xl sm:text-2xl text-white mb-3">News / Media</h1>
-            </div>
-         </div>
+
+   <section class="bg-cover pb-32 pt-11 relative" style="background-image: url('<?php echo get_template_directory_uri(); ?>/_assets/src/img/news-title-bg.jpg')">
+      <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
+      <div class="container relative z-10">
+         <h1 class="hero_heading_h1 uppercase mb-5 text-13xl md:text-12xl sm:text-10xl leading-none text-accent lg:pb-2">News / Media</h1>
+         <a href="/contact/" class="btn hover:bg-white relative transform items-center group bigauto_red hover_accent  mx-auto uppercase min-w-[460px]">
+            <span class="btn_text_1 group-hover:opacity-0 absolute block transform transition-opacity duration-300">
+               FREE CASE REVIEW </span>
+            <span class="btn_text_2 opacity-0 group-hover:opacity-100 transform transition-opacity duration-300">
+               FREE CASE REVIEW <span class="btn_arrow">⟶</span>
+            </span>
+         </a>
       </div>
-   </div>
+      <div class="dots-bg h-20 absolute w-full bottom-0 left-0"></div>
+   </section>
 
 
 
@@ -43,8 +49,8 @@ $text_form_design_two__form_select = get_field('select_form', 'options');
             <?php endif; ?>
 
 
-           
-            
+
+
          </div>
 
          <div class="form w-10/24 h-fit bg-accent px-9 py-5 lg:w-2/4 lg:py-9  mdt:max-h-full mdt:w-full xs:p-6 form_elements_design_one">
@@ -61,15 +67,15 @@ $text_form_design_two__form_select = get_field('select_form', 'options');
          </div>
       </div>
       <?php $count_posts = wp_count_posts();
-            $published_posts = $count_posts->publish;
+      $published_posts = $count_posts->publish;
 
-            if ($published_posts > get_query_var('posts_per_page')) { ?>
-               <div class="flex w-full justify-center py-12">
-                  <?php if (function_exists("pagination")) {
-                     pagination();
-                  } ?>
-               </div>
-            <?php } ?>
+      if ($published_posts > get_query_var('posts_per_page')) { ?>
+         <div class="flex w-full justify-center py-12">
+            <?php if (function_exists("pagination")) {
+               pagination();
+            } ?>
+         </div>
+      <?php } ?>
    </div>
 </main>
 

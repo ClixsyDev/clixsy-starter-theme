@@ -4,18 +4,16 @@ use App\Template;
 
 $archive_blog_title = get_field('archive_blog_title', 'options');
 $archive_blog_description = get_field('archive_blog_description', 'options');
-$thumbnail_url = get_the_post_thumbnail_url();
-$thumbnail_placeholder = get_stylesheet_directory_uri() . '/_assets/src/img/banner-blog-bg.png';
 ?>
 
 <?php get_header(); ?>
 <main>
-    <section class="bg-cover pb-32 pt-11 relative" style="background-image:url('<?php echo $thumbnail_url?>');">
+    <section class="bg-cover pb-32 pt-11 relative" style="background-image: url('<?php echo get_template_directory_uri(); ?>/_assets/src/img/news-title-bg.jpg')">
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10">
 
             <?php if ($archive_blog_title) { ?>
-                <h1 class="hero_heading_h1 uppercase text-13xl md:text-12xl sm:text-10xl leading-none text-accent lg:pb-2"><?php echo $archive_blog_title ?></h1>
+                <h1 class="hero_heading_h1 uppercase mb-5 text-13xl md:text-12xl sm:text-10xl leading-none text-accent lg:pb-2"><?php echo $archive_blog_title ?></h1>
             <?php } ?>
             <a href="/contact/" class="btn hover:bg-white relative transform items-center group bigauto_red hover_accent  mx-auto uppercase min-w-[460px]">
                 <span class="btn_text_1 group-hover:opacity-0 absolute block transform transition-opacity duration-300">
