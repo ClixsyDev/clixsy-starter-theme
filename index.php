@@ -4,27 +4,43 @@ use App\Template;
 
 $archive_blog_title = get_field('archive_blog_title', 'options');
 $archive_blog_description = get_field('archive_blog_description', 'options');
+$thumbnail_placeholder = get_stylesheet_directory_uri() . '/_assets/src/img/banner-blog-bg.png';
 ?>
+
 
 <?php get_header(); ?>
 <main>
-    <div class="max-w-[1190px] m-auto xl:container pt-20 pb-24">
-        <?php if ($archive_blog_title) { ?>
-            <h1 class="heading_default_color text-5xl sm:text-3xl"><?php echo $archive_blog_title ?></h1>
-        <?php } ?>
+    <section class="bg-cover pb-32 pt-11 relative" style="background-image:url('<?php echo $thumbnail_placeholder?>');">
+        <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
+        <div class="container relative z-10">
 
+            <?php if ($archive_blog_title) { ?>
+                <h1 class="hero_heading_h1 uppercase text-13xl md:text-12xl sm:text-10xl leading-none text-accent lg:pb-2"><?php echo $archive_blog_title ?></h1>
+            <?php } ?>
+            <a href="/contact/" class="btn hover:bg-white relative transform items-center group bigauto_red hover_accent  mx-auto uppercase min-w-[460px]">
+                <span class="btn_text_1 group-hover:opacity-0 absolute block transform transition-opacity duration-300">
+                    FREE CASE REVIEW </span>
+                <span class="btn_text_2 opacity-0 group-hover:opacity-100 transform transition-opacity duration-300">
+                    FREE CASE REVIEW <span class="btn_arrow">⟶</span>
+                </span>
+            </a>
+        </div>
+        <div class="dots-bg h-20 absolute w-full bottom-0 left-0"></div>
+    </section>
+
+    <div class="max-w-[1190px] m-auto xl:container pt-20 pb-24">
         <?php
-            $last_post_query = "SELECT * FROM wp_posts WHERE post_type='post' AND post_status='publish' ORDER BY post_date DESC LIMIT 1";
-            $last_post_sql = $wpdb->get_results($last_post_query);
+        $last_post_query = "SELECT * FROM wp_posts WHERE post_type='post' AND post_status='publish' ORDER BY post_date DESC LIMIT 1";
+        $last_post_sql = $wpdb->get_results($last_post_query);
         ?>
 
         <div class="pt-9 pb-20 sm:pt-5 sm:pb-8">
             <article class="h-full">
-                <a class="relative p-32 group min-h-[500px] lg:min-h-auto h-full flex bg-cover xl:min-h-full lg:p-14 sm:p-5" style="background-image: url(<?php echo get_the_post_thumbnail_url($last_post_sql[0] -> ID) ?: $thumbnail_placeholder ?>);" href="<?= get_permalink($post) ?>">
+                <a class="relative p-32 group min-h-[500px] lg:min-h-auto h-full flex bg-cover xl:min-h-full lg:p-14 sm:p-5" style="background-image: url(<?php echo get_the_post_thumbnail_url($last_post_sql[0]->ID) ?: $thumbnail_placeholder ?>);" href="<?= get_permalink($post) ?>">
                     <div class="bg-black bg-opacity-60 absolute z-20 w-full h-full top-0 left-0"></div>
                     <div class="z-30 w-full max-w-[830px]">
                         <div class="text-white font-second text-5xl leading-tight mb-3 xl:text-4xl sm:text-2xl">
-                            <?php echo get_the_title($last_post_sql[0] -> ID); ?>
+                            <?php echo get_the_title($last_post_sql[0]->ID); ?>
                         </div>
                         <?php $cat = get_the_category($last_post_sql[0]->ID); ?>
                         <div class="mb-3 text-white text-lg uppercase sm:text-sm">
@@ -32,7 +48,7 @@ $archive_blog_description = get_field('archive_blog_description', 'options');
                             <span>| <?php echo get_the_date('F d, Y') ?></span>
                         </div>
                         <div class="font-libre text-2xl text-white mb-2 mr-9 sm:text-sm sm:mr-0">
-                            <?php echo get_the_excerpt($last_post_sql[0] -> ID) ?>
+                            <?php echo get_the_excerpt($last_post_sql[0]->ID) ?>
                         </div>
                         <div class="chevron_link absolute right-4 bottom-4 hidden group-hover:block">
                             <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
@@ -56,7 +72,7 @@ $archive_blog_description = get_field('archive_blog_description', 'options');
                     <?php if (have_posts()) : ?>
                         <!-- The Loop -->
                         <?php while (have_posts()) : the_post(); ?>
-                            <?php if( $wp_query->current_post !== 0 ) : ?>
+                            <?php if ($wp_query->current_post !== 0) : ?>
                                 <?php include(Template::locate('_template-parts/archive/_entry__archive--blog.php')); ?>
                             <?php endif; ?>
                         <?php endwhile; ?>
@@ -73,7 +89,7 @@ $archive_blog_description = get_field('archive_blog_description', 'options');
 
         if ($published_posts > get_query_var('posts_per_page')) { ?>
             <div class="flex justify-center pt-24">
-                <?php 
+                <?php
                 if (function_exists("pagination")) {
 
                     echo pagination();
