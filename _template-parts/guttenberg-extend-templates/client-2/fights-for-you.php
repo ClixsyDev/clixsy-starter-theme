@@ -39,7 +39,7 @@ if ($is_preview && !empty($previewImage)) {
         <div class="container">
             <div class="flex gap-16 justify-start items-start xl:gap-8 mdt:mb-44 mdt:flex-col-reverse  ">
                 <?php if ($fights_for_you__singleattorney_image) { ?>
-                    <a href="<?php echo $fights_for_you__attorney_link['url'] ?>"><?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => 'mdt:hidden h-[376px] w-[376px] object-contain']) ?></a>
+                    <a href="<?php echo $fights_for_you__attorney_link['url'] ?>"><?php echo wp_get_attachment_image($fights_for_you__singleattorney_image, 'full', '', ['class' => 'mdt:hidden h-[376px] w-[376px] min-w-[376px]  object-contain']) ?></a>
                 <?php } ?>
                 <div class="flex xl:flex-col xl:gap-5 2xl:items-center xl:items-baseline mdt:!flex-row mdt:w-full mdt:justify-between">
                     <div class="flex items-center flex-col xl:!items-start md:w-full md:gap-6 md:!items-center md:mb-9">
@@ -61,7 +61,7 @@ if ($is_preview && !empty($previewImage)) {
                             <?php echo wp_get_attachment_image($fights_for_you__rating_image, 'full', '', ['class' => 'object-contain h-full pt-10 ml-32 2xl:ml-3 xl:!ml-0 xl:!pt-0 xl:w-16/24 2xl:!pt-12 md:w-12/24 xs:w-14/24']) ?>
                         <?php } ?>
                     </div>
-                    <div class="hidden shadow-siteWide px-3 w-5/12 h-full font-main gap-3 py-4 !items-center rounded-2xl text-white xl:w-6/24 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!flex md:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
+                    <div class="hidden shadow-siteWide px-3 w-5/12 h-full font-main gap-3 py-4 !items-center rounded-2xl text-white xl:w-6/24 xl:!items-end xl:mr-0 xl:justify-center lg:flex-col sm:w-full mdt:!flex md:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                         <div class="flex flex-col">
                             <p class="text-xl text-right font-light br-remove"><?php echo $fights_for_you__text_available ?></p>
                         </div>
@@ -71,12 +71,12 @@ if ($is_preview && !empty($previewImage)) {
                     </div>
                 </div>
             </div>
-            <div class="px-20 pt-3 rounded-md rounded-tl-none pb-10 xl:pt-7 mdt:px-7 sm:px-4  2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
+            <div class="px-20 pt-3 rounded-md rounded-tl-none pb-10 xl:pt-7 2xl:px-10 mdt:px-7 sm:px-4  2xl:pt-0" style="background-color: <?php echo $fights_for_you__color ?: ''  ?> ;">
 
                 <div class="flex items-center md:-mt-44 md:justify-center">
                     <div class="flex flex-col">
                         <?php if ($fights_for_you__attorney_link) { ?>
-                            <a href="<?php echo $fights_for_you__attorney_link['url'] ?>" class="flex flex-col  text-white mdt:!hidden">
+                            <a href="<?php echo $fights_for_you__attorney_link['url'] ?>" class="flex flex-col  text-white xl:pr-3 mdt:!hidden">
                                 <div class="font-third font-bold text-2xl xl:text-xl ">
                                     <?php echo $fights_for_you__attorney_link['title'] ?>
                                 </div>
@@ -89,21 +89,21 @@ if ($is_preview && !empty($previewImage)) {
                         <?php } ?>
 
                         <?php if ($fights_for_you__text_available || $fights_for_you__time_available) { ?>
-                            <div class="flex items-center shadow-siteWide pl-10 pr-12 w-full h-full mt-2.5 font-main gap-3 py-1 rounded-l-2xl -mr-1 text-white xl:px-5 xl:flex-col xl:w-6/24 xl:gap-1 xl:py-2 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
+                            <div class="flex items-center shadow-siteWide pl-10 pr-12 w-full h-full mt-2.5 font-main gap-3 py-1 rounded-l-2xl -mr-1 text-white 2xl:px-5   xl:py-2 xl:!items-end xl:mr-0 xl:justify-center sm:w-full mdt:!hidden" style="background-color: <?php echo $fights_for_you__color_available ?: ''  ?> ;">
                                 <div class="flex flex-col">
                                     <p class="text-xl text-right font-light leading-6"><?php echo $fights_for_you__text_available ?></p>
                                 </div>
                                 <?php if ($fights_for_you__time_available) { ?>
-                                    <p class="font-second text-6xl leading-[77px] xl:!text-3xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
+                                    <p class="font-second text-6xl leading-[77px] xl:!text-5xl xl:leading-none font-bold xs:!text-5xl"><?php echo $fights_for_you__time_available ?></p>
                                 <?php } ?>
                             </div>
                         <?php } ?>
                     </div>
 
                     <?php if ($fights_for_you__benefits) { ?>
-                        <div class="flex gap-14 -mt-24  2xl:gap-7 xl:gap-11 mdt:gap-4 md:flex-col md:items-center md:gap-28 md:mt-12">
+                        <div class="flex gap-14 -mt-24  2xl:gap-7 xl:w-[80%] lg:w-full mdt:gap-4 md:flex-col md:items-center md:gap-28 md:mt-12">
                             <?php foreach ($fights_for_you__benefits as $item) { ?>
-                                <div class="bg-black w-72 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-7/24 xl:min-h-[250px] mdt:w-full mdt:min-h-[280px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
+                                <div class="bg-black w-72 rounded-md px-6 pb-7 h-max 2xl:h-full 2xl:px-4 2xl:min-h-[300px] xl:w-8/24 xl:min-h-[250px] mdt:w-full mdt:min-h-[280px] md:min-h-[170px] md:w-9/12 md:pt-10 md:px-7 md:text-left sm:w-full">
                                     <?php if ($item['icon']) { ?>
                                         <?php echo wp_get_attachment_image($item['icon'], 'full', '', ['class' => '-mt-16 mb-7 !max-h-24 xl:min-h-[120px] xl:min-w-[120px] xl:-mt-20 md:m-auto md:-mt-32']) ?>
                                     <?php } ?>
