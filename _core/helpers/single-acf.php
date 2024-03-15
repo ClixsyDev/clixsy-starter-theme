@@ -6,6 +6,18 @@ acf_add_local_field_group(array(
 	'title' => 'Single page fields',
 	'fields' => array(
 		array(
+			'key' => 'title_main_hero_section',
+			'name' => 'title_main_hero_section',
+			'type' => 'text',
+			'label' => 'Title in Hero section',
+	  	),
+		array(
+			'key' => 'title_h2_before_table',
+			'name' => 'title_h2_before_table',
+			'type' => 'text',
+			'label' => 'Title before table of content',
+	  	),
+		array(
 			'key' => 'field_6375571b5f83f',
 			'label' => 'Remove title',
 			'name' => 'remove_title',
