@@ -1,6 +1,6 @@
 <?php extract($args) ?>
 <?php if (empty($args['text_hover'])) { ?>
-    <a href="<?php echo $args['link'] ?>" class="btn hover:bg-white relative transform items-center group <?php echo !empty($args['classes']) ? $args['classes'] : '' ?>">
+    <a href="<?php echo $args['link'] ?>" <?php echo isset($args['attributes']) ? $args['attributes'] : '' ?> class="btn hover:bg-white relative transform items-center group <?php echo !empty($args['classes']) ? $args['classes'] : '' ?>">
         <span class="btn_text_1 group-hover:opacity-0 absolute block transform transition-opacity duration-300">
             <?php echo $args['text'] ?>
         </span>
