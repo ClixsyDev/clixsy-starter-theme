@@ -40,7 +40,7 @@ global $post;
         </div>
 
     <?php } ?>
-    <div class="container grid grid-cols-5 mdt:grid-cols-1">
+    <div class="container grid grid-cols-5 mdt:grid-cols-1 break-all">
         <div class="py-6 pr-6 md:pr-0 col-span-3">
             <?php if ($title_h2_before_table) { ?>
                 <h2 class="mt-2 mb-5 text-4xl text-green font-semibold leading-snug"><?php echo $title_h2_before_table ?></h2>
