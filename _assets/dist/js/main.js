@@ -551,6 +551,8 @@ var _modals = require("./modals");
 // import { gaEventsCF7 } from './ga-events-cf7';
 var _cf7Events = require("./cf7-events");
 var _cf7MaskForTel = require("./cf7-mask-for-tel");
+var _coCounselForm = require("./co-counsel-form");
+var _refferalForm = require("./refferal-form");
 /* FAQ start */ const initFAQ = ()=>{
     const acc = (0, _utils.getElements)(".faq__header");
     if (acc && acc.length) for(let i = 0; i < acc.length; i++)acc[i].addEventListener("click", function() {
@@ -684,7 +686,7 @@ const preventRelatedVideoYT = ()=>{
         onYouTubeIframeAPIReadyCallbacks.push(function() {
             player = new YT.Player(playerFrame, {
                 events: {
-                    "onStateChange": onPlayerStateChange
+                    onStateChange: onPlayerStateChange
                 }
             });
         });
@@ -698,17 +700,6 @@ const preventRelatedVideoYT = ()=>{
         for (let callback of onYouTubeIframeAPIReadyCallbacks)callback();
     };
     window.hideYTActivated = true;
-};
-const toggleAnimation = ()=>{
-    const repeatAnimation = (0, _utils.getElements)(".repeat-animation");
-    if ((0, _utils.ifSelectorExist)(repeatAnimation)) Array.from(repeatAnimation).forEach((item)=>{
-        setInterval(function() {
-            item.classList.add("aos-animate");
-            setTimeout(function() {
-                item.classList.remove("aos-animate");
-            }, 7000); // stay on screen for 7 seconds
-        }, 8500); // trigger the same animation after 1.5 seconds
-    });
 };
 const showDisclaimerMultiStepForm = ()=>{
     const nextStepBtn = (0, _utils.getElement)(".next_step");
@@ -744,11 +735,13 @@ const showDisclaimerMultiStepForm = ()=>{
     // gaEventsCF7();
     (0, _sliders.initSliders)();
     preventRelatedVideoYT();
-    toggleAnimation();
     showDisclaimerMultiStepForm();
+    (0, _coCounselForm.coCounselForm)();
+    (0, _modals.formModal)();
+    (0, _refferalForm.refferalForm)();
 });
 
-},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./gclid":"bvTDu","./thank-you-messages":"9IJ1s","./aos-animations":"3V3c2","./smooth-site-scrolling":"adhDo","./modals":"axBGC","./cf7-events":"3NM30","./cf7-mask-for-tel":"dStXI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
+},{"./menu":"2uPGB","./header":"9ZRJh","./utils":"blFj3","./sliders":"8pa5Q","./form_entry":"1vUc0","./button-hover":"9maqa","./toc":"dp06E","./gclid":"bvTDu","./thank-you-messages":"9IJ1s","./aos-animations":"3V3c2","./smooth-site-scrolling":"adhDo","./modals":"axBGC","./cf7-events":"3NM30","./cf7-mask-for-tel":"dStXI","./co-counsel-form":"keO6v","./refferal-form":"8gVxI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2uPGB":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mainMenu", ()=>mainMenu);
@@ -9339,6 +9332,61 @@ var _utilsJs = require("../core/utils.js");
 (0, _holderJsDefault.default).createPipe = createPipe;
 (0, _holderJsDefault.default).pipe = pipe;
 
-},{"./factory.js":"4c29b","../core/holder.js":"fNs7n","../core/utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
+},{"./factory.js":"4c29b","../core/holder.js":"fNs7n","../core/utils.js":"hh2Rx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"keO6v":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "coCounselForm", ()=>coCounselForm);
+var _utils = require("./utils");
+let coCounselForm = ()=>{
+    let forms = (0, _utils.getElements)(".co-counsel-form");
+    if ((0, _utils.ifSelectorExist)(forms)) Array.from(forms).forEach((element)=>{
+        let disciplinaryActions = (0, _utils.getElements)('.trigger_input input[name="disciplinary_action"]');
+        if ((0, _utils.ifSelectorExist)(disciplinaryActions)) Array.from(disciplinaryActions).forEach((item)=>{
+            let hiddenInput = document.querySelector(".conditional_input_disciplinary");
+            if ((0, _utils.ifSelectorExist)(hiddenInput)) item.addEventListener("click", (e)=>{
+                if (e.target.value === "Yes") hiddenInput.classList.remove("hidden_label");
+                else if (e.target.value === "No") hiddenInput.classList.add("hidden_label");
+            });
+        });
+        let staffed = (0, _utils.getElements)('.trigger_input input[name="staffed"]');
+        if ((0, _utils.ifSelectorExist)(staffed)) Array.from(staffed).forEach((item)=>{
+            let hiddenInput = document.querySelector(".conditional_input_staffed");
+            if ((0, _utils.ifSelectorExist)(hiddenInput)) item.addEventListener("click", (e)=>{
+                if (e.target.value === "No") hiddenInput.classList.remove("hidden_label");
+                else if (e.target.value === "Yes") hiddenInput.classList.add("hidden_label");
+            });
+        });
+    });
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8gVxI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "refferalForm", ()=>refferalForm);
+var _utils = require("./utils");
+const refferalForm = ()=>{
+    const addSFieldsButton = (0, _utils.getElement)("#add-field-button");
+    let count = 1;
+    if ((0, _utils.ifSelectorExist)(addSFieldsButton)) addSFieldsButton.addEventListener("click", function() {
+        count++;
+        const addButton = this;
+        const form = (0, _utils.getElement)(".wpcf7-form");
+        if ((0, _utils.ifSelectorExist)(form)) {
+            const newField = document.createElement("div");
+            newField.innerHTML = `<div class="fields">
+                        <label for="" class="">
+                            <span class="wpcf7-form-control-wrap" data-name="person_first_name_${count}"><input type="text" name="person_first_name_${count}" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="First Initial"></span>
+                        </label>
+                        <label for="" class="">
+                            <span class="wpcf7-form-control-wrap" data-name="person_last_name_${count}"><input type="text" name="person_last_name_${count}" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Last Name"></span>
+                        </label>
+                    </div>`;
+            form.insertBefore(newField, addButton);
+        }
+        if (count == 3) addSFieldsButton.remove();
+    });
+};
+
+},{"./utils":"blFj3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cljb4","4R5xk"], "4R5xk", "parcelRequiree407")
 
 //# sourceMappingURL=main.js.map

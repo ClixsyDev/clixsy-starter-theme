@@ -5313,8 +5313,8 @@ html body .edit-post-visual-editor__content-area .truncate {
   overflow: hidden;
 }
 
-html body .edit-post-visual-editor__content-area .break-all {
-  word-break: break-all;
+html body .edit-post-visual-editor__content-area .break-words {
+  overflow-wrap: break-word;
 }
 
 html body .edit-post-visual-editor__content-area .rounded-lg {
@@ -10142,11 +10142,6 @@ html :where(.wp-block) {
     padding: 0 !important;
   }
 
-  .sm\:py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   .sm\:px-9 {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
@@ -10227,8 +10222,8 @@ html :where(.wp-block) {
     text-align: center;
   }
 
-  .sm\:text-10xl {
-    font-size: 100px;
+  .sm\:text-8xl {
+    font-size: 80px;
   }
 
   .sm\:text-base {
@@ -10774,11 +10769,6 @@ html :where(.wp-block) {
 
   .xs\:p-4 {
     padding: 1rem;
-  }
-
-  .xs\:py-0 {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 
   .xs\:px-7 {

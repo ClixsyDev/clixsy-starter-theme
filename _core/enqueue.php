@@ -35,6 +35,13 @@ function starter_scripts() {
     $scripts_version_main = filemtime($scripts_path_main);
     wp_enqueue_script('starter-script', $scripts_url_main, false, $scripts_version_main);
 
+
+    // Main Script
+    $nitropack_exclude_path_main = get_template_directory() . '/_assets/dist/js/nitropack-excluded.js';
+    $nitropack_exclude_url_main = get_template_directory_uri() . '/_assets/dist/js/nitropack-excluded.js';
+    $nitropack_exclude_version_main = filemtime($nitropack_exclude_path_main);
+    wp_enqueue_script('nitropack-excluded', $nitropack_exclude_url_main, false, $nitropack_exclude_version_main);
+
     wp_localize_script('starter-script', 'ajax_url', [
         'ajaxurl' => admin_url('admin-ajax.php'),
         'page_id' => get_the_ID(),
