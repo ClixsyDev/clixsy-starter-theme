@@ -38,7 +38,7 @@ if ($is_preview && !empty($previewImage)) {
             </div>
             <div class="flex flex-col">
                 <?php foreach ($auto_accident_resources__items as $item) { ?>
-                    <div id="<?php echo $item['auto_accident_resources__faq_title'] ?>" class="mb-8">
+                    <div id="<?php echo $item['auto_accident_resources__faq_title'] ?>" class="mb-8 break-all">
                         <div class="text-3xl font-fourth mb-4">
                             <h3 class=""><?php echo $item['auto_accident_resources__faq_title'] ?></h3>
                         </div>

@@ -18,7 +18,7 @@ global $post;
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10">
 
-            <h1 class="hero_heading_h1 uppercase mb-5 text-13xl md:text-12xl sm:text-10xl leading-none text-accent lg:pb-2 repeat-animation" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="700">
+            <h1 class="hero_heading_h1 uppercase mb-5 text-13xl md:text-12xl sm:text-8xl leading-none text-accent lg:pb-2 repeat-animation" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="700">
                 <?php echo $title_main_hero_section ? $title_main_hero_section : the_title() ?>
             </h1>
             <a href="/contact/" class="btn hover:bg-white relative transform items-center group bigauto_red hover_accent  mx-auto uppercase min-w-[460px] repeat-animation" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1000">
