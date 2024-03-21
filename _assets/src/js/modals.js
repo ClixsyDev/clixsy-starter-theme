@@ -98,3 +98,43 @@ export const formModal = () => {
         };
     }
 };
+
+
+export const formModalBanner = () => {
+    let modalWindowBtn = getElement('.form-modal-window-banner');
+    let modalWindowOpenBanner = getElement('.form-modal-banner .btn');
+
+    // Functions
+    let openModal = () => {
+        modalWindowBtn.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+
+    let closeModal = () => {
+        modalWindowBtn.classList.add('fade-out');
+        setTimeout(() => {
+            modalWindowBtn.classList.remove('open', 'fade-out');
+            document.body.style.overflow = null;
+        }, 300);
+    };
+
+    if (ifSelectorExist(modalWindowOpenBanner)) {
+        modalWindowOpenBanner.addEventListener('click', () => {
+            openModal();
+        });
+    }
+
+    if (ifSelectorExist(modalWindowBtn)) {
+        modalWindowBtn.addEventListener('click', e => {
+            if (e.target === modalWindowBtn) {
+                closeModal();
+            }
+        });
+
+        window.onkeydown = e => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        };
+    }
+};

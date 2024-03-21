@@ -75,7 +75,8 @@
 
 /* Form Modal Window */
 
-.form-modal-window {
+.form-modal-window,
+.form-modal-window-banner{
     @apply hidden fixed px-3 py-20 top-0 left-0 z-[1050] w-full h-full overflow-hidden mdt:py-20;
     background-color: rgba(0, 0, 0, 0.5);
 

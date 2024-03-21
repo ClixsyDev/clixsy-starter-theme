@@ -11,10 +11,13 @@ if ($is_preview && !empty($previewImage)) {
 } else {
     $welcome_banner__meet_the_team_bg = get_field('welcome_banner__meet_the_team_bg');
     $welcome_banner__meet_the_team_title = get_field('welcome_banner__meet_the_team_title');
-    $welcome_banner__meet_the_team_link = get_field('welcome_banner__meet_the_team_link'); ?>
+    $welcome_banner__meet_the_team_link = get_field('welcome_banner__meet_the_team_link'); 
+    $welcome_banner__meet_the_team_form_select = get_field('welcome_banner__meet_the_team_form_select');
+    $welcome_banner__meet_the_team_form_title = get_field('welcome_banner__meet_the_team_form_title');
+     ?>
 
 
-    <section class="bg-cover pb-32 pt-11 relative" style="background-image:url('<?php echo !empty($welcome_banner__meet_the_team_bg) ? wp_get_attachment_image_url($welcome_banner__meet_the_team_bg, 'full') : ''; ?>');">
+    <section class="bg-cover pb-32 pt-11 relative <?php echo $welcome_banner__meet_the_team_form_select ? 'form-modal-banner' : '' ?>" style="background-image:url('<?php echo !empty($welcome_banner__meet_the_team_bg) ? wp_get_attachment_image_url($welcome_banner__meet_the_team_bg, 'full') : ''; ?>');">
         <div class="bg-white !bg-opacity-80 absolute w-full h-full top-0 left-0"></div>
         <div class="container relative z-10">
             <?php if ($welcome_banner__meet_the_team_title) { ?>
@@ -33,6 +36,24 @@ if ($is_preview && !empty($previewImage)) {
             <?php } ?>
         </div>
         <div class="dots-bg h-20 absolute w-full bottom-0 left-0"></div>
+
+        <?php if ($welcome_banner__meet_the_team_form_select) { ?>
+            <div class="form-modal-window-banner">
+                <div class="form-modal-window-wrapper">
+                    <div class="form banner-form w-full my-0 big-auto-footer-form p-10 xl:p-7 bg-accent font-main 2xl:w-full mx-auto 2xl:mx-0 mdt:text-center">
+                        <?php if ($welcome_banner__meet_the_team_form_title) { ?>
+                            <div class="text-white text-center font-second font-bold uppercase leading-[1] pb-5 text-[3.5rem] 2xl:!text-[50px] xs:!text-3xl "><?php echo $welcome_banner__meet_the_team_form_title ?></div>
+                        <?php } ?>
+                        <?php echo $welcome_banner__meet_the_team_form_select ? do_shortcode('[contact-form-7 id="' . $welcome_banner__meet_the_team_form_select['0'] . '" title=""]') : '' ?>
+                        <?php
+                        Template::load('_template-parts/components/thank-you-message-homepage.php', [
+                            'classes_disclaimer' => 'text-white',
+                            'classes_thankyou' => 'text-white'
+                        ]); ?>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
     </section>
 
 <?php }

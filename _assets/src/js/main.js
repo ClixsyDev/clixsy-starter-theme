@@ -15,7 +15,7 @@ import { gclid } from './gclid';
 import { sentNewMessage } from './thank-you-messages';
 import { aosAnimations } from './aos-animations';
 import { smoothScrollFn } from './smooth-site-scrolling';
-import { modalDialog, formModal } from './modals';
+import { modalDialog, formModal , formModalBanner} from './modals';
 // import { gaEventsCF7 } from './ga-events-cf7';
 import { cf7Events } from './cf7-events';
 import { cf7MaskTelValidation } from './cf7-mask-for-tel';
@@ -286,5 +286,6 @@ ready(() => {
     showDisclaimerMultiStepForm();
     coCounselForm();
     formModal();
+    formModalBanner();
     refferalForm();
 });
